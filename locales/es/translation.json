@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto",
+    "disclaimer": "Aviso Legal",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "dmca": "DMCA"
+  },
+  "result": {
+    "title": "Únete a Nosotros 👋",
+    "desc": "Nos encantaría escuchar tus sugerencias",
+    "download_video": "Descargar Video (MP4)",
+    "download_audio": "Descargar Audio (MP3)"
+  },
+  "hero": {
+    "title": "Descargar Videos de TikTok Sin Marca de Agua",
+    "subtitle": "Guarda TikToks en Calidad HD (MP4)",
+    "desc": "La herramienta más rápida para descargar videos de TikTok sin marca de agua y totalmente gratis."
+  },
+  "downloader": {
+    "placeholder": "Pega el enlace del video aquí...",
+    "btn_download": "Descargar",
+    "processing": "Procesando...",
+    "video_download": "Descargar Video (Sin Marca)",
+    "music_download": "Descargar Audio (MP3)",
+    "errors": {
+      "empty": "Por favor, pega un enlace primero",
+      "not_found": "Video no encontrado. Verifica el enlace.",
+      "connection": "Error de conexión. Inténtalo de nuevo."
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "¡Estamos aquí para ayudar! Escríbenos a través del formulario",
+    "form": {
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "subject": "Asunto",
+      "message": "Tu Message",
+      "btn_send": "Enviar Mensaje",
+      "options": {
+        "select": "Selecciona un asunto",
+        "support": "Soporte Técnico",
+        "suggestion": "Sugerencia",
+        "bug": "Reportar Error",
+        "business": "Consulta Comercial"
+      }
+    }
+  },
+  "about": {
+    "page_title": "Sobre Snaptiks",
+    "hero": {
+      "title": "Quiénes Somos",
+      "subtitle": "Conoce nuestra historia y cómo ayudamos a millones"
+    },
+    "intro": {
+      "title": "🎯 Nuestra Misión",
+      "p1": "Snaptiks es la plataforma líder para descargar videos de TikTok sin marca de agua. Fundada en 2024 para facilitar el guardado de contenido.",
+      "p2": "Creemos que el contenido creativo merece ser guardado en alta calidad sin logos molestos."
+    },
+    "stats": {
+      "downloads": "Videos Descargados",
+      "users": "Usuarios Activos",
+      "success": "Tasa de Éxito",
+      "support": "Soporte 24/7"
+    },
+    "features": {
+      "title": "✨ Características",
+      "list": {
+        "no_watermark": "Sin Marca de Agua",
+        "hd": "Calidad HD",
+        "fast": "Rápido y Seguro",
+        "free": "100% Gratis",
+        "no_login": "Sin Registro",
+        "devices": "Funciona en Móvil/PC"
+      }
+    },
+    "steps": {
+      "title": "📖 ¿Cómo Funciona?",
+      "step1": { "title": "Copiar", "desc": "Copia el enlace del video de TikTok" },
+      "step2": { "title": "Pegar", "desc": "Pega el enlace en la caja de arriba" },
+      "step3": { "title": "Descargar", "desc": "Haz clic en descargar y espera" },
+      "step4": { "title": "Guardar", "desc": "Guarda el video sin logo en HD" }
+    },
+    "legal": {
+      "title": "⚖️ Cumplimiento Legal",
+      "desc": "Respetamos los derechos de propiedad intelectual. Esta herramienta es solo para uso personal."
+    },
+    "join": {
+      "title": "🤝 Únete a Nosotros",
+      "desc": "¿Tienes sugerencias? ¡Nos encantaría escucharte!"
+    }
+  },
+  "footer": {
+    "desc": "El mejor descargador de videos de TikTok sin marca de agua en HD.",
+    "rights": "© 2026 Snaptiks. Todos los derechos reservados."
+  },
+  "faq": {
+    "title": "Preguntas الفئات",
+    "q1": "¿Cómo descargar videos de TikTok sin marca de agua?",
+    "a1": "Simplemente copia el enlace del video, pégalo en la caja de arriba y pulsa Descargar.",
+    "q2": "¿Es gratis?",
+    "a2": "Sí, nuestro servicio es 100% gratuito y no requiere suscripción.",
+    "q3": "¿Dónde se guardan los videos?",
+    "a3": "Los videos generalmente se guardan en la carpeta 'Descargas' de tu dispositivo."
+  },
+  "meta": {
+    "title": "Descargar Video TikTok Sin Marca de Agua (HD & MP4)",
+    "description": "El mejor descargador de TikTok 2026. Guarda videos sin marca de agua en calidad HD. Gratis, rápido e ilimitado."
+  },
+  "pages": {
+    "privacy": {
+      "title": "Política de Privacidad",
+      "intro": "En Snaptiks, la privacidad de nuestros visitantes es muy importante.",
+      "content": "No almacenamos datos personales. Los registros se eliminan automáticamente."
+    },
+    "terms": {
+      "title": "Términos de Uso",
+      "intro": "Al usar nuestro sitio, aceptas nuestros términos y condiciones.",
+      "content": "Esta herramienta es solo para uso personal. Prohibido su uso para material con derechos de autor."
+    },
+    "dmca": {
+      "title": "Cumplimiento DMCA",
+      "intro": "Respetamos los derechos de propiedad intelectual de otros.",
+      "content": "Si crees que se han violado tus derechos, contáctanos."
+    },
+    "disclaimer": {
+      "title": "Descargo de Responsabilidad",
+      "content": "Snaptiks no está afiliado, asociado ni autorizado por TikTok Inc."
+    }
+  }
+}

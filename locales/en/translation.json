@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "disclaimer": "Disclaimer",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "dmca": "DMCA"
+  },
+  "result": {
+    "title": "Join Us 👋",
+    "desc": "We would love to hear your suggestions",
+    "download_video": "Download Video (MP4)",
+    "download_audio": "Download Audio (MP3)"
+  },
+  "hero": {
+    "title": "TikTok Downloader - No Watermark",
+    "subtitle": "Download TikTok Videos in HD (MP4)",
+    "desc": "The fastest tool to save TikTok videos without watermark for free."
+  },
+  "downloader": {
+    "placeholder": "Paste video link here...",
+    "btn_download": "Download",
+    "processing": "Processing...",
+    "video_download": "Download Video",
+    "music_download": "Download Audio (MP3)",
+    "errors": {
+      "empty": "Please paste a link first",
+      "not_found": "Video not found. Check the link.",
+      "connection": "Connection error. Please try again."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to help! Reach out to us via the form below",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "btn_send": "Send Message",
+      "options": {
+        "select": "Select Subject",
+        "support": "Technical Support",
+        "suggestion": "Suggestion",
+        "bug": "Report a Bug",
+        "business": "Business Inquiry"
+      }
+    }
+  },
+  "about": {
+    "page_title": "About Snaptiks - Learn More",
+    "hero": {
+      "title": "About Snaptiks",
+      "subtitle": "Learn about our story and how we help millions"
+    },
+    "intro": {
+      "title": "🎯 Who We Are",
+      "p1": "Snaptiks is a leading platform for downloading TikTok videos without watermark. Established in 2024 to make saving content easier.",
+      "p2": "We believe that TikTok content deserves to be saved in high quality without watermarks."
+    },
+    "stats": {
+      "downloads": "Videos Downloaded",
+      "users": "Active Users",
+      "success": "Success Rate",
+      "support": "Support 24/7"
+    },
+    "features": {
+      "title": "✨ Our Features",
+      "list": {
+        "no_watermark": "No Watermark",
+        "hd": "High Quality HD",
+        "fast": "Fast & Reliable",
+        "free": "100% Free",
+        "no_login": "No Login Required",
+        "devices": "Works on All Devices"
+      }
+    },
+    "steps": {
+      "title": "📖 How It Works",
+      "step1": { "title": "Copy Link", "desc": "Copy video link from TikTok app" },
+      "step2": { "title": "Paste Link", "desc": "Paste link in the input box" },
+      "step3": { "title": "Download", "desc": "Click download and wait" },
+      "step4": { "title": "Save Video", "desc": "Save without watermark" }
+    },
+    "legal": {
+      "title": "⚖️ Legal Compliance",
+      "desc": "We respect intellectual property rights. Our tool is for personal use only."
+    },
+    "join": {
+      "title": "🤝 Join Us",
+      "desc": "Have suggestions or feedback? We'd love to hear from you!"
+    }
+  },
+  "footer": {
+    "desc": "The best tool to download TikTok videos without watermark.",
+    "rights": "© 2026 Snaptiks. All rights reserved."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How to download TikTok video without watermark?",
+    "a1": "Simply copy the video link from TikTok, paste it in the box above and click Download.",
+    "q2": "Is it free?",
+    "a2": "Yes, our service is 100% free and requires no subscription.",
+    "q3": "Where are videos saved?",
+    "a3": "Videos are usually saved in the 'Downloads' folder on your device."
+  },
+  "meta": {
+    "title": "Download TikTok Video Without Watermark (Fast & HD)",
+    "description": "Best TikTok Downloader 2026. Save TikTok videos without watermark in MP4 HD quality. Free, fast, and unlimited downloads."
+  },
+  "pages": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "At Snaptiks, the privacy of our visitors is of extreme importance to us.",
+      "content": "We do not store any personal data. Logs are deleted automatically."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "intro": "By using our website, you hereby consent to our terms and agree to its conditions.",
+      "content": "This tool is for personal use only. Usage for copyrighted material is prohibited."
+    },
+    "dmca": {
+      "title": "DMCA Compliance",
+      "intro": "We respect the intellectual property rights of others.",
+      "content": "If you believe your copyright has been infringed, please contact us."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content": "Snaptiks is not affiliated, associated, authorized, endorsed by, or in any way officially connected with TikTok Inc."
+    }
+  }
+}

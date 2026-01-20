@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "title": "Baixar Vídeo do TikTok Sem Marca d'Água - Grátis & HD (2026)",
+    "description": "O melhor baixador de vídeos do TikTok sem marca d'água 2026. Salve vídeos do TikTok rápido em alta qualidade HD (MP4). 100% grátis, seguro e sem registro!"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "contact": "Contato",
+    "disclaimer": "Aviso Legal",
+    "terms": "Termos",
+    "privacy": "Privacidade",
+    "dmca": "DMCA",
+    "sitemap": "Mapa do Site"
+  },
+  "hero": {
+    "title": "Baixador de Vídeos do TikTok",
+    "desc": "Baixe sem marca d'água - Rápido e Gratuito",
+    "subtitle": "Baixe Vídeos do TikTok em HD (MP4)"
+  },
+  "downloader": {
+    "placeholder": "Cole o link do vídeo aqui...",
+    "btn_download": "Baixar Agora"
+  },
+  "status": {
+    "processing": "Processando..."
+  },
+  "error": {
+    "empty_url": "Por favor, cole um link primeiro",
+    "not_found": "Vídeo não encontrado. Verifique o link.",
+    "connection": "Erro de conexão. Tente novamente."
+  },
+  "result": {
+    "download_video": "Baixar Vídeo",
+    "download_audio": "Baixar Áudio"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes sobre Download no TikTok",
+    "q1": "Como baixar vídeo do TikTok sem marca d'água?",
+    "a1": "Basta copiar o link do vídeo no app do TikTok, colá-lo na caixa acima e clicar em Baixar Agora. O Snaptiks processará o link e fornecerá o vídeo sem o logo.",
+    "q2": "O Snaptiks é gratuito para usar?",
+    "a2": "Sim, nosso serviço é 100% gratuito e ilimitado. Você pode baixar qualquer número de vídeos em qualidade HD.",
+    "q3": "Posso baixar apenas o áudio (MP3) do TikTok?",
+    "a3": "Com certeza! Após colar o link, o site oferecerá a opção 'Baixar Áudio', permitindo que você salve a música ou áudio em formato MP3 de alta qualidade."
+  },
+  "about": {
+    "page_title": "Sobre Nós - Snaptiks",
+    "hero": {
+      "title": "Sobre o Snaptiks",
+      "subtitle": "Conheça nossa história e como ajudamos milhões de pessoas",
+      "titl": "Sobre o Snaptiks"
+    },
+    "intro": {
+      "title": "🎯 Quem Somos",
+      "p1": "O Snaptiks é uma plataforma líder para baixar vídeos do TikTok sem marca d'água. Fundada em 2024 para tornar o salvamento de conteúdo mais simples e rápido.",
+      "p2": "Acreditamos que o conteúdo do TikTok merece ser salvo em alta qualidade, sem marcas d'água, para entretenimento pessoal."
+    },
+    "features": {
+      "title": "✨ Nossos Recursos",
+      "list": {
+        "no_watermark": "Sem Marca d'Água",
+        "hd": "Qualidade HD",
+        "free": "Grátis",
+        "fast": "Muito Rápido"
+      }
+    },
+    "stats": {
+      "downloads": "Downloads",
+      "users": "Usuários Ativos",
+      "success": "Taxa de Sucesso",
+      "support": "Suporte 24/7"
+    },
+    "steps": {
+      "title": "Como Funciona?",
+      "step1": { "desc": "Copie o link do vídeo no TikTok" },
+      "step2": { "desc": "Cole o link na caixa acima" },
+      "step3": { "desc": "Clique em baixar e salve sem marca d'água" }
+    }
+  },
+  "contact": {
+    "title": "Contate-nos",
+    "subtitle": "Estamos aqui para ajudar! Entre em contato através do formulário abaixo",
+    "form": {
+      "name": "Nome Completo",
+      "email": "Endereço de E-mail",
+      "subject": "Assunto",
+      "options": {
+        "select": "Selecione o Assunto",
+        "support": "Suporte Técnico",
+        "suggestion": "Sugestão",
+        "bug": "Relatar um Erro",
+        "business": "Inquérito Comercial"
+      },
+      "message": "Mensagem",
+      "btn_send": "Enviar Mensagem"
+    }
+  },
+  "footer": {
+    "terms": "Termos",
+    "privacy": "Privacidade",
+    "rights": "© 2026 Snaptiks. Todos os direitos reservados.",
+    "sitemap": "Mapa do Site"
+  },
+  "pages": {
+    "disclaimer": {
+      "title": "Isenção de Responsabilidade",
+      "content": "O Snaptiks não é afiliado, associado, autorizado ou de qualquer forma oficialmente conectado ao TikTok Inc."
+    },
+    "terms": {
+      "title": "Termos de Uso",
+      "intro": "Ao usar nosso site, você aceita nossos termos e condições.",
+      "content": "Esta ferramenta é apenas para uso pessoal. O uso para material protegido por direitos autorais é proibido."
+    },
+    "privacy": {
+      "title": "Política de Privacidade",
+      "intro": "No Snaptiks, a privacidade dos nossos visitantes é extremamente importante.",
+      "content": "Não armazenamos dados pessoais. Os registros são excluídos automaticamente."
+    },
+    "dmca": {
+      "title": "Conformidade DMCA",
+      "intro": "Respeitamos os direitos de propriedade intelectual de terceiros.",
+      "content": "Se você acredita que seu direito autoral foi violado, entre em contato conosco."
+    }
+  }
+}

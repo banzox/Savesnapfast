@@ -1,0 +1,8 @@
+{
+  "nav": { "home": "Strona główna", "about": "O nas", "contact": "Kontakt", "disclaimer": "Zrzeczenie się", "terms": "Warunki", "privacy": "Prywatność", "dmca": "DMCA" },
+  "hero": { "title": "Pobieranie z TikTok", "subtitle": "Bez znaku wodnego", "desc": "Pobieraj filmy z TikToka w HD bez logo za darmo." },
+  "downloader": { "placeholder": "Wklej link tutaj...", "btn_download": "Pobierz", "processing": "Przetwarzanie...", "video_download": "Pobierz Wideo", "music_download": "Pobierz Audio" },
+  "faq": { "title": "FAQ", "q1": "Jak pobrać bez logo?", "a1": "Wklej link powyżej i kliknij Pobierz.", "q2": "Czy to darmowe?", "a2": "Tak, w 100% za darmo.", "q3": "Czy mogę pobrać MP3?", "a3": "Tak, możesz zapisać dźwięk." },
+  "footer": { "rights": "© 2026 Snaptiks. Wszelkie prawa zastrzeżone." },
+  "meta": { "title": "Pobierz filmy z TikToka bez znaku wodnego", "description": "Najlepszy downloader TikTok 2026. Zapisz wideo bez logo." }
+}
