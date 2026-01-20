@@ -1,0 +1,92 @@
+{
+  "ar": {
+    "meta": { "title": "تحميل فيديو تيك توك بدون علامة مائية" },
+    "nav": { "home": "الرئيسية", "about": "حول", "contact": "تواصل", "disclaimer": "إخلاء المسؤولية" },
+    "footer": { "terms": "الشروط", "privacy": "الخصوصية", "rights": "جميع الحقوق محفوظة" }
+  },
+  "en": {
+    "meta": { "title": "TikTok Downloader - No Watermark" },
+    "nav": { "home": "Home", "about": "About", "contact": "Contact", "disclaimer": "Disclaimer" },
+    "footer": { "terms": "Terms", "privacy": "Privacy", "rights": "All rights reserved" }
+  },
+  "vi": {
+    "meta": { "title": "Tải video TikTok không logo" },
+    "nav": { "home": "Trang chủ", "about": "Giới thiệu", "contact": "Liên hệ", "disclaimer": "Tuyên bố từ chối" },
+    "footer": { "terms": "Điều khoản", "privacy": "Quyền riêng tư", "rights": "Đã đăng ký Bản quyền" }
+  },
+  "fr": {
+    "meta": { "title": "Télécharger vidéo TikTok sans filigrane" },
+    "nav": { "home": "Accueil", "about": "À propos", "contact": "Contact", "disclaimer": "Mentions légales" },
+    "footer": { "terms": "Conditions", "privacy": "Confidentialité", "rights": "Tous droits réservés" }
+  },
+  "de": {
+    "meta": { "title": "TikTok Downloader ohne Wasserzeichen" },
+    "nav": { "home": "Startseite", "about": "Über uns", "contact": "Kontakt", "disclaimer": "Haftungsausschluss" },
+    "footer": { "terms": "Nutzungsbedingungen", "privacy": "Datenschutz", "rights": "Alle Rechte vorbehalten" }
+  },
+  "es": {
+    "meta": { "title": "Descargar videos de TikTok sin marca de agua" },
+    "nav": { "home": "Inicio", "about": "Nosotros", "contact": "Contacto", "disclaimer": "Descargo de responsabilidad" },
+    "footer": { "terms": "Términos", "privacy": "Privacidad", "rights": "Todos los derechos reservados" }
+  },
+  "it": {
+    "meta": { "title": "Scaricare video TikTok senza filigrana" },
+    "nav": { "home": "Home", "about": "Chi siamo", "contact": "Contatti", "disclaimer": "Disclaimer" },
+    "footer": { "terms": "Termini", "privacy": "Privacy", "rights": "Tutti i diritti riservati" }
+  },
+  "ru": {
+    "meta": { "title": "Скачать видео Тик Ток без водяного знака" },
+    "nav": { "home": "Главная", "about": "О нас", "contact": "Контакт", "disclaimer": "Отказ от ответственности" },
+    "footer": { "terms": "Условия", "privacy": "Конфиденциальность", "rights": "Все права защищены" }
+  },
+  "tr": {
+    "meta": { "title": "TikTok Filigransız Video İndir" },
+    "nav": { "home": "Ana Sayfa", "about": "Hakkımızda", "contact": "İletişim", "disclaimer": "Sorumluluk Reddi" },
+    "footer": { "terms": "Şartlar", "privacy": "Gizlilik", "rights": "Tüm hakları saklıdır" }
+  },
+  "pt": {
+    "meta": { "title": "Baixar vídeo do TikTok sem marca d'água" },
+    "nav": { "home": "Início", "about": "Sobre", "contact": "Contato", "disclaimer": "Aviso legal" },
+    "footer": { "terms": "Termos", "privacy": "Privacidade", "rights": "Todos os direitos reservados" }
+  },
+  "id": {
+    "meta": { "title": "Download Video TikTok Tanpa Watermark" },
+    "nav": { "home": "Beranda", "about": "Tentang", "contact": "Kontak", "disclaimer": "Penafian" },
+    "footer": { "terms": "Ketentuan", "privacy": "Privasi", "rights": "Hak cipta dilindungi" }
+  },
+  "hi": {
+    "meta": { "title": "बिना वॉटरमार्क के टिकटॉक वीडियो डाउनलोड करें" },
+    "nav": { "home": "होम", "about": "के बारे में", "contact": "संपर्क", "disclaimer": "अस्वीकरण" },
+    "footer": { "terms": "नियम", "privacy": "गोपनीयता", "rights": "सर्वाधिकार सुरक्षित" }
+  },
+  "ja": {
+    "meta": { "title": "TikTok動画をロゴなしでダウンロード" },
+    "nav": { "home": "ホーム", "about": "私たちについて", "contact": "お問い合わせ", "disclaimer": "免責事項" },
+    "footer": { "terms": "利用規約", "privacy": "プライバシー", "rights": "全著作権所有" }
+  },
+  "ko": {
+    "meta": { "title": "워터마크 없는 틱톡 영상 다운로드" },
+    "nav": { "home": "홈", "about": "정보", "contact": "문의", "disclaimer": "면책 조항" },
+    "footer": { "terms": "이용약관", "privacy": "개인정보", "rights": "모든 권리 보유" }
+  },
+  "nl": {
+    "meta": { "title": "TikTok video downloaden zonder watermerk" },
+    "nav": { "home": "Home", "about": "Over ons", "contact": "Contact", "disclaimer": "Disclaimer" },
+    "footer": { "terms": "Voorwaarden", "privacy": "Privacy", "rights": "Alle rechten voorbehouden" }
+  },
+  "pl": {
+    "meta": { "title": "Pobierz wideo z TikTok bez znaku wodnego" },
+    "nav": { "home": "Strona główna", "about": "O nas", "contact": "Kontakt", "disclaimer": "Zastrzeżenie" },
+    "footer": { "terms": "Warunki", "privacy": "Prywatność", "rights": "Wszelkie prawa zastrzeżone" }
+  },
+  "th": {
+    "meta": { "title": "ดาวน์โหลดวิดีโอ TikTok ไม่มีลายน้ำ" },
+    "nav": { "home": "หน้าแรก", "about": "เกี่ยวกับ", "contact": "ติดต่อ", "disclaimer": "ข้อสงวนสิทธิ์" },
+    "footer": { "terms": "ข้อกำหนด", "privacy": "ความเป็นส่วนตัว", "rights": "สงวนลิขสิทธิ์" }
+  },
+  "zh": {
+    "meta": { "title": "下载无水印的 TikTok 视频" },
+    "nav": { "home": "首页", "about": "关于我们", "contact": "联系我们", "disclaimer": "免责声明" },
+    "footer": { "terms": "条款", "privacy": "隐私", "rights": "版权所有" }
+  }
+}
