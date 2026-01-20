@@ -6,36 +6,14 @@
     "downloader": { "placeholder": "الصق رابط تيك توك هنا...", "btn_download": "تحميل الآن" },
     "status": { "processing": "جاري معالجة الفيديو..." },
     "result": { "download_video": "تحميل الفيديو", "download_audio": "تحميل MP3" },
-    "faq": { "title": "الأسئلة الشائعة", "q1": "كيفية التحميل؟", "a1": "انسخ رابط الفيديو، الصقه هنا، واضغط تحميل.", "q2": "هل هو مجاني؟", "a2": "نعم، الموقع مجاني تماماً وغير محدود.", "q3": "هل يمكن تحميل الصوت فقط؟", "a3": "نعم، نوفر خيار تحميل MP3." },
+    "faq": { "title": "الأسئلة الشائعة", "q1": "كيفية التحميل؟", "a1": "انسخ رابط الفيديو، الصقه هنا، واضغط تحميل.", "q2": "هل هو مجاني؟", "a2": "نعم، الموقع مجاني تماماً وغير محدود." },
     "footer": { "rights": "جميع الحقوق محفوظة", "terms": "الشروط", "privacy": "الخصوصية" },
     "pages": {
       "about": { "title": "من نحن", "content": "Snaptiks هو تطبيق ويب متطور يساعدك على حفظ فيديوهات تيك توك المفضلة لديك بدون علامة مائية وبجودة أصلية." },
       "privacy": { "title": "سياسة الخصوصية", "content": "نحن نقدر خصوصيتك؛ لا نقوم بتخزين أي فيديوهات أو بيانات شخصية للمستخدمين على خوادمنا." },
       "terms": { "title": "شروط الاستخدام", "content": "يُسمح باستخدام هذه الأداة للأغراض الشخصية فقط. نحن غير مسؤولين عن سوء استخدام المحتوى المحمل." },
       "dmca": { "title": "حقوق الملكية DMCA", "content": "نحن نحترم حقوق الطبع والنشر. إذا وجد محتوى ينتهك حقوقك، يرجى مراسلتنا فوراً." },
-      "disclaimer": { "title": "إخلاء المسؤولية", "content": "هذا الموقع أداة مستقلة ولا ينتمي رسمياً لشركة TikTok أو ByteDance." },
-      "contact": { "title": "اتصل بنا", "content": "لأي استفسار يرجى مراسلتنا عبر البريد الإلكتروني." }
-    },
-    "about": {
-      "intro": {
-        "p1": "Snaptiks هي واحدة من أفضل أدوات تحميل التيك توك المتاحة عبر الإنترنت لتحميل فيديوهات TikTok بدون علامة مائية.",
-        "p2": "لست بحاجة لتثبيت أي برنامج على جهاز الكمبيوتر أو الهاتف المحمول، كل ما تحتاجه هو رابط فيديو TikTok."
-      },
-      "steps": {
-        "title": "كيف يعمل؟",
-        "step1": { "desc": "انسخ رابط الفيديو من تيك توك" },
-        "step2": { "desc": "الصق الرابط في الخانة بالأعلى" },
-        "step3": { "desc": "اضغط تحميل واحفظ الفيديو" }
-      },
-      "features": {
-        "title": "المميزات",
-        "list": {
-          "no_watermark": "بدون علامة مائية",
-          "hd": "جودة HD",
-          "free": "مجاني تماماً",
-          "fast": "سريع جداً"
-        }
-      }
+      "disclaimer": { "title": "إخلاء المسؤولية", "content": "هذا الموقع أداة مستقلة ولا ينتمي رسمياً لشركة TikTok أو ByteDance." }
     }
   },
   "en": {
@@ -45,36 +23,14 @@
     "downloader": { "placeholder": "Paste TikTok link here...", "btn_download": "Download Now" },
     "status": { "processing": "Processing your video..." },
     "result": { "download_video": "Download Video", "download_audio": "Download MP3" },
-    "faq": { "title": "FAQ", "q1": "How to download?", "a1": "Copy the video link, paste it here, and click download.", "q2": "Is it free?", "a2": "Yes, our service is 100% free and unlimited.", "q3": "Can I download Audio?", "a3": "Yes, we support MP3 download." },
-    "footer": { "rights": "All rights reserved", "terms": "Terms", "privacy": "Privacy" },
+    "faq": { "title": "FAQ", "q1": "How to download?", "a1": "Copy the video link, paste it here, and click download.", "q2": "Is it free?", "a2": "Yes, our service is 100% free and unlimited." },
+    "footer": { "rights": "All rights reserved" },
     "pages": {
       "about": { "title": "About Us", "content": "Snaptiks is a powerful web application designed to help you download and save your favorite TikTok content easily." },
       "privacy": { "title": "Privacy Policy", "content": "We respect your privacy. No user data or video content is stored on our servers." },
       "terms": { "title": "Terms of Service", "content": "Usage is for personal purposes only. We are not responsible for how you use the downloaded content." },
       "dmca": { "title": "DMCA Policy", "content": "We respect intellectual property. Contact us for any copyright concerns." },
-      "disclaimer": { "title": "Disclaimer", "content": "This site is an independent tool and not affiliated with TikTok or ByteDance." },
-      "contact": { "title": "Contact Us", "content": "Feel free to reach out via email." }
-    },
-    "about": {
-      "intro": {
-        "p1": "Snaptiks is one of the best TikTok Downloaders available online to download TikTok videos without a watermark.",
-        "p2": "You are not required to install any software on your computer or mobile phone, all that you need is a TikTok video link."
-      },
-      "steps": {
-        "title": "How it works?",
-        "step1": { "desc": "Copy video link from TikTok" },
-        "step2": { "desc": "Paste the link above" },
-        "step3": { "desc": "Click Download & Save" }
-      },
-      "features": {
-        "title": "Features",
-        "list": {
-          "no_watermark": "No Watermark",
-          "hd": "HD Quality",
-          "free": "Free Forever",
-          "fast": "Super Fast"
-        }
-      }
+      "disclaimer": { "title": "Disclaimer", "content": "This site is an independent tool and not affiliated with TikTok or ByteDance." }
     }
   },
   "fr": { "nav": { "home": "Accueil", "about": "À propos", "terms": "Conditions" }, "hero": { "title": "Téléchargeur TikTok", "desc": "Sans filigrane - Rapide et gratuit" }, "pages": { "about": { "title": "À propos", "content": "Snaptiks vous aide à sauvegarder des vidéos TikTok sans logo." } } },
