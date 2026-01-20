@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 supportedLngs: supportedLanguages,
                 backend: {
                     loadPath: './all-langs.json', 
-                    queryStringParams: { v: '1.7.0' } // تغيير النسخة لكسر الكاش
+                    queryStringParams: { v: '1.8.0' } // تغيير النسخة لكسر الكاش
                 },
                 detection: { 
                     order: ['path', 'localStorage', 'navigator'], 
@@ -28,13 +28,24 @@ function updateContent() {
     const lang = i18next.language;
     document.documentElement.dir = ['ar', 'fa', 'he', 'ur'].includes(lang) ? 'rtl' : 'ltr';
     document.documentElement.lang = lang;
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        el.innerHTML = i18next.t(key);
+        let key = el.getAttribute('data-i18n');
+        
+        // التحقق مما إذا كانت الترجمة موجهة لخاصية مثل [content] أو [placeholder]
+        const attributeMatch = key.match(/^\[(.*)\](.*)/);
+        
+        if (attributeMatch) {
+            const attr = attributeMatch[1]; // مثلاً: content
+            const actualKey = attributeMatch[2]; // مثلاً: meta.description
+            el.setAttribute(attr, i18next.t(actualKey));
+        } else {
+            el.innerHTML = i18next.t(key);
+        }
     });
+
     if (i18next.exists('meta.title')) {
         document.title = i18next.t('meta.title');
     }
 }
 
-window.changeLanguage = (lang) => i18next.changeLanguage(lang);
