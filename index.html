@@ -53,6 +53,17 @@
     <script src="js/i18n-setup.js"></script>
 
     <style>
+.paste-btn {
+    background: var(--secondary-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: var(--bg-dark);
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --primary-color: #ff0050;
@@ -204,6 +215,10 @@
     <div class="container">
         
         <div class="input-group">
+<button onclick="pasteLink()" class="paste-btn">
+    <i class="fas fa-paste"></i> Paste
+</button>
+
             <input type="text" id="urlInput" data-i18n="[placeholder]downloader.placeholder" placeholder="الصق الرابط هنا..." oninput="checkInput()">
             <span class="clear-btn" id="clearBtn" onclick="clearInput()">×</span>
         </div>
@@ -429,6 +444,21 @@
                 el.style.display = 'block';
             }
         }
+async function pasteLink() {
+    try {
+        // قراءة النص المنسوخ من الحافظة
+        const text = await navigator.clipboard.readText();
+        const input = document.getElementById('urlInput');
+        if (input) {
+            input.value = text;
+            // تشغيل دالة الفحص لإظهار علامة الـ X إذا لزم الأمر
+            if (typeof checkInput === "function") checkInput();
+        }
+    } catch (err) {
+        console.error('فشل الوصول للحافظة:', err);
+    }
+}
+
     </script>
 </body>
 </html>
