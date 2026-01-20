@@ -1,66 +1,43 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<script>
-    function toggleMenu() {
-        const nav = document.querySelector('.nav-links');
-        if(nav) nav.classList.toggle('active');
-    }
-</script>
-
-
-<link rel="icon" type="image/png" href="favicon.png">
-
     <meta charset="UTF-8">
-<base href="/">
-
-<meta name="referrer" content="no-referrer">
-
-<link rel="canonical" href="https://savetik-fast.xyz/" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Snaptiks - TikTok Downloader 2026",
-  "operatingSystem": "Windows, macOS, Android, iOS",
-  "applicationCategory": "MultimediaApplication",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "1250"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-
-
+    <base href="/">
+    <meta name="referrer" content="no-referrer">
+    <link rel="canonical" href="https://savetik-fast.xyz/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="meta.title">Snaptiks - تحميل فيديو تيك توك بدون علامة مائية HD</title>
-    <meta name="description" data-i18n="[content]meta.description" content="أسرع أداة تحميل فيديو تيك توك بدون علامة مائية. قم بحفظ فيديوهات TikTok بجودة عالية HD وتحويلها إلى MP3 مجاناً عبر Snaptiks.">
     
+    <title data-i18n="meta.title">Snaptiks - تحميل فيديو تيك توك بدون علامة مائية HD</title>
+    <meta name="description" data-i18n="[content]meta.description" content="أسرع أداة تحميل فيديو تيك توك بدون علامة مائية.">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
-    
     <script src="js/i18n-setup.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Snaptiks - TikTok Downloader 2026",
+      "operatingSystem": "Windows, macOS, Android, iOS",
+      "applicationCategory": "MultimediaApplication",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "1250" },
+      "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" }
+    }
+    </script>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --primary-color: #ff0050;
-            --secondary-color: #00f2ea;
+            --primary-color: #ff0050; --secondary-color: #00f2ea;
             --bg-dark: #0f0c29; --bg-mid: #302b63; --bg-light: #24243e;
             --text-white: #ffffff; --text-gray: #b8b8b8;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.05); --glass-border: rgba(255, 255, 255, 0.1);
         }
         body {
             font-family: 'Tajawal', 'Inter', sans-serif;
@@ -68,16 +45,14 @@
             min-height: 100vh; color: var(--text-white); overflow-x: hidden; line-height: 1.6;
         }
         header {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--glass-border); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000;
         }
         nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
         .logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
         .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; position: relative; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--secondary-color); }
-        
         .mobile-menu { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
         .mobile-menu span { width: 25px; height: 3px; background: white; border-radius: 2px; }
 
@@ -85,32 +60,12 @@
         .page-header h1 { font-size: 3rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
         
-        .downloader-box {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px); border-radius: 25px;
-            padding: 3rem; border: 1px solid var(--glass-border); text-align: center;
-        }
-        
         .input-group { position: relative; margin-bottom: 1.5rem; display: flex; align-items: center; }
         .input-group input {
             width: 100%; padding: 1.2rem; padding-left: 3rem; border-radius: 15px; border: 2px solid var(--glass-border);
             background: rgba(255,255,255,0.05); color: white; font-size: 1.1rem; outline: none; text-align: left;
         }
-        
-        .clear-btn {
-            position: absolute; 
-            right: 15px; 
-            top: 50%; 
-            transform: translateY(-50%); 
-            cursor: pointer; 
-            color: rgba(255, 255, 255, 0.5); 
-            font-size: 1.4rem; 
-            display: none; 
-            z-index: 10; 
-            line-height: 1;
-            transition: color 0.3s;
-        }
-        .clear-btn:hover { color: #fff; }
+        .clear-btn { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: rgba(255, 255, 255, 0.5); font-size: 1.4rem; display: none; z-index: 10; }
         html[dir="rtl"] .clear-btn { left: 15px; right: auto; }
 
         .submit-btn {
@@ -118,34 +73,14 @@
             background: linear-gradient(45deg, var(--primary-color), #ff4081);
             color: white; font-size: 1.2rem; font-weight: bold; cursor: pointer;
         }
-
         .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
 
-        /* --- ADS STYLES (DO NOT TOUCH) --- */
-        .native-ad-slot { 
-            margin: 25px auto; width: 100%; display: flex; justify-content: center; align-items: center;
-            min-height: 120px; overflow: hidden;
-        }
-        /* -------------------------------- */
-
+        .native-ad-slot { margin: 25px auto; width: 100%; display: flex; justify-content: center; align-items: center; min-height: 120px; overflow: hidden; }
+        
         #loading { display: none; margin-top: 20px; font-size: 1.2rem; color: var(--secondary-color); }
         #error-msg { display: none; margin-top: 20px; color: #ff4444; background: rgba(255,0,0,0.1); padding: 10px; border-radius: 10px; }
-        
-        #result-area { 
-            display: none; 
-            margin-top: 30px; 
-            animation: fadeIn 0.5s; 
-            text-align: center; 
-        }
-
-        .video-thumb { 
-            max-width: 200px; 
-            border-radius: 15px; 
-            margin: 0 auto 15px auto; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
-            display: block;
-        }
-
+        #result-area { display: none; margin-top: 30px; animation: fadeIn 0.5s; text-align: center; }
+        .video-thumb { max-width: 200px; border-radius: 15px; margin: 0 auto 15px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.3); display: block; }
         .download-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 15px; }
         .dl-btn { padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; }
         .dl-video { background: var(--secondary-color); color: var(--bg-dark); }
@@ -156,16 +91,11 @@
         .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 15px; margin-bottom: 10px; overflow: hidden; }
         .faq-question { width: 100%; padding: 20px; text-align: right; background: none; border: none; color: white; font-size: 1.1rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         html[dir="ltr"] .faq-question { text-align: left; }
-        .faq-question i { transition: 0.3s; }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: rgba(255,255,255,0.02); }
         .faq-answer p { padding: 20px; color: var(--text-gray); }
         .faq-item.active .faq-answer { max-height: 500px; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); }
 
-        footer {
-            background: rgba(0, 0, 0, 0.3); padding: 3rem 2rem 2rem; margin-top: 4rem;
-            border-top: 1px solid var(--glass-border); text-align: center;
-        }
+        footer { background: rgba(0, 0, 0, 0.3); padding: 3rem 2rem 2rem; margin-top: 4rem; border-top: 1px solid var(--glass-border); text-align: center; }
         .footer-logo { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
         .footer-links a { color: var(--text-white); text-decoration: none; opacity: 0.8; transition: all 0.3s ease; }
@@ -220,19 +150,13 @@
         <div id="loading"><i class="fas fa-spinner fa-spin"></i> <span data-i18n="status.processing">جاري المعالجة...</span></div>
         <div id="error-msg"></div>
 
-        <div id="result-area" style="display: none; margin-top: 30px; animation: fadeIn 0.5s;">
+        <div id="result-area">
             <img id="video-cover" src="" class="video-thumb">
             <h3 id="video-title" style="font-size:1rem; margin-bottom:10px;"></h3>
             
             <div class="download-links">
                 <a id="dl-video" href="#" target="_blank" class="dl-btn dl-video"><i class="fas fa-video"></i> <span data-i18n="result.download_video">تحميل فيديو</span></a>
                 <a id="dl-music" href="#" target="_blank" class="dl-btn dl-music"><i class="fas fa-music"></i> <span data-i18n="result.download_audio">تحميل صوت</span></a>
-            </div>
-
-            <div style="margin-top: 15px; width: 100%; text-align: center;">
-                <a href="https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308" target="_blank" class="dl-btn" style="background: #28a745; display: inline-flex; justify-content: center; width: 80%; max-width: 300px; color: white; margin: 0 auto; border: 2px solid #218838;">
-                    <i class="fas fa-download"></i> Download 2
-                </a>
             </div>
 
             <div class="native-ad-slot">
@@ -243,62 +167,26 @@
     </div>
 
     <section class="faq-section">
-        <h2 data-i18n="faq.title">الأسئلة الشائعة حول تحميل فيديوهات تيك توك</h2>
+        <h2 data-i18n="faq.title">الأسئلة الشائعة</h2>
         
         <div class="faq-item">
-            <button class="faq-question"><span data-i18n="faq.q1">كيف يمكنني تحميل فيديو تيك توك بدون علامة مائية؟</span> <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p data-i18n="faq.a1">ببساطة، انسخ رابط الفيديو من تطبيق TikTok، ثم الصقه في المربع أعلاه واضغط على "تحميل الآن". سيقوم Snaptiks بمعالجة الرابط وتوفير روابط تحميل مباشرة بدون الشعار.</p>
-            </div>
+            <button class="faq-question"><span data-i18n="faq.q1">كيفية التحميل؟</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p data-i18n="faq.a1">انسخ الرابط والصقه واضغط تحميل.</p></div>
         </div>
-
         <div class="faq-item">
-            <button class="faq-question"><span data-i18n="faq.q2">هل أداة Snaptiks مجانية للاستخدام؟</span> <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p data-i18n="faq.a2">نعم، خدمة تحميل فيديوهات تيك توك عبر موقعنا مجانية تماماً وغير محدودة. يمكنك تحميل أي عدد من الفيديوهات بجودة HD.</p>
-            </div>
+            <button class="faq-question"><span data-i18n="faq.q2">هل هو مجاني؟</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p data-i18n="faq.a2">نعم، مجاني تماماً.</p></div>
         </div>
-
         <div class="faq-item">
-            <button class="faq-question"><span data-i18n="faq.q3">هل يمكن تحميل الصوت فقط (MP3) من تيك توك؟</span> <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p data-i18n="faq.a3">بالتأكيد! بعد وضع الرابط، سيعطيك الموقع خيار "تحميل صوت"، مما يتيح لك حفظ الموسيقى أو الأوديو الخاص بالفيديو بصيغة MP3 عالية الجودة.</p>
-            </div>
+            <button class="faq-question"><span data-i18n="faq.q3">تحميل صوت؟</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p data-i18n="faq.a3">نعم، نوفر خيار MP3.</p></div>
         </div>
     </section>
 
-    <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            
-            <div style="background: var(--glass-bg); backdrop-filter: blur(10px); padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border);">
-                <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">
-                    <i class="fas fa-info-circle"></i> <span data-i18n="about.steps.title">كيف يعمل؟</span>
-                </h3>
-                <ul style="list-style: none; opacity: 0.9;">
-                    <li style="margin-bottom: 10px;">1️⃣ <span data-i18n="about.steps.step1.desc">انسخ رابط الفيديو من تيك توك</span></li>
-                    <li style="margin-bottom: 10px;">2️⃣ <span data-i18n="about.steps.step2.desc">الصق الرابط في الخانة بالأعلى</span></li>
-                    <li>3️⃣ <span data-i18n="about.steps.step3.desc">اضغط تحميل واحفظ الفيديو بدون علامة</span></li>
-                </ul>
-            </div>
-
-            <div style="background: var(--glass-bg); backdrop-filter: blur(10px); padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border);">
-                <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">
-                    <i class="fas fa-star"></i> <span data-i18n="about.features.title">المميزات</span>
-                </h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; opacity: 0.9;">
-                    <span>✅ <span data-i18n="about.features.list.no_watermark">بدون علامة</span></span>
-                    <span>✅ <span data-i18n="about.features.list.hd">جودة HD</span></span>
-                    <span>✅ <span data-i18n="about.features.list.free">مجاني</span></span>
-                    <span>✅ <span data-i18n="about.features.list.fast">سريع جداً</span></span>
-                </div>
-            </div>
-
-        </div>
-
-        <div style="background: var(--glass-bg); backdrop-filter: blur(10px); padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); margin-top: 2rem; text-align: center;">
+    <div class="container" style="margin-top: 50px;">
+        <div style="background: var(--glass-bg); backdrop-filter: blur(10px); padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); text-align: center;">
             <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-white);" data-i18n="hero.title"></h2>
-            <p style="line-height: 1.8; opacity: 0.8; max-width: 900px; margin: 0 auto;" data-i18n="about.intro.p1"></p>
-            <p style="line-height: 1.8; opacity: 0.8; max-width: 900px; margin: 10px auto 0;" data-i18n="about.intro.p2"></p>
+            <p style="opacity: 0.8;" data-i18n="about.intro.p1"></p>
         </div>
     </div>
 
@@ -309,44 +197,49 @@
                 <a href="index.html" data-i18n="nav.home">الرئيسية</a>
                 <a href="about.html" data-i18n="nav.about">حول</a>
                 <a href="contact.html" data-i18n="nav.contact">تواصل</a>
-                <a href="disclaimer.html" data-i18n="nav.disclaimer">إخلاء المسؤولية</a>
                 <a href="terms.html" data-i18n="footer.terms">الشروط</a>
                 <a href="privacy.html" data-i18n="footer.privacy">الخصوصية</a>
-                <a href="dmca.html">DMCA</a>
             </div>
 
-            <select aria-label="Language Selector" onchange="window.location.href=this.value" style="padding: 8px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #444;">
+            <select id="lang-selector-footer" aria-label="Language Selector" onchange="i18next.changeLanguage(this.value)" style="padding: 8px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #444; outline: none; cursor: pointer;">
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="pt">Português</option>
+                <option value="ru">Русский</option>
+                <option value="tr">Türkçe</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="hi">हिन्दी</option>
+                <option value="nl">Nederlands</option>
+                <option value="ko">한국어</option>
+                <option value="th">ไทย</option>
+                <option value="pl">Polski</option>
+                <option value="uk">Українська</option>
+                <option value="el">Ελληνικά</option>
+                <option value="sv">Svenska</option>
+                <option value="no">Norsk</option>
+                <option value="da">Dansk</option>
+                <option value="fi">Suomi</option>
+                <option value="cs">Čeština</option>
+                <option value="hu">Magyar</option>
+                <option value="ro">Română</option>
+                <option value="sk">Slovenčina</option>
+                <option value="bg">Български</option>
+                <option value="he">עברית</option>
+            </select>
 
-                    <option value="" disabled selected>🌍 Change Language / تغيير اللغة</option>
-                    <option value="/ar/">العربية</option>
-                    <option value="/en/">English</option>
-                    <option value="/ja/">日本語 (اليابان)</option>
-                    <option value="/nl/">Nederlands (هولندا)</option>
-                    <option value="/it/">Italiano</option>
-                    <option value="/ru/">Русский</option>
-                    <option value="/tr/">Türkçe</option>
-                    <option value="/es/">Español</option>
-                    <option value="/fr/">Français</option>
-                    <option value="/de/">Deutsch</option>
-                    <option value="/ko/">한국어</option>
-                    <option value="/pl/">Polski</option>
-                    <option value="/th/">ไทย</option>
-                    <option value="/hi/">हिन्दी</option>
-                    <option value="/zh/">中文</option>
-                    <option value="/uk/">Українська</option>
-                    <option value="/el/">Ελληνικά</option>
-                    <option value="/id/">Bahasa Indonesia</option>
-                    <option value="/pt/">Português</option>
-                    <option value="/vi/">Tiếng Việt</option>
-                </select>
-            </div>
-
-            <p>&copy; 2024 Snaptiks. <span data-i18n="footer.rights">جميع الحقوق محفوظة.</span></p>
+            <p style="margin-top: 15px;">&copy; 2026 Snaptiks. <span data-i18n="footer.rights">جميع الحقوق محفوظة.</span></p>
         </div>
     </footer>
 
-                <script>
-        // Priority 1: Activate FAQ immediately (moved to top)
+    <script>
+        // إعداد القائمة والأسئلة الشائعة
         document.addEventListener('DOMContentLoaded', () => {
             const faqButtons = document.querySelectorAll('.faq-question');
             if(faqButtons){
@@ -357,35 +250,32 @@
                     });
                 });
             }
+            // ضبط القائمة على اللغة الحالية
+            setTimeout(() => {
+                const selector = document.getElementById('lang-selector-footer');
+                if (typeof i18next !== 'undefined' && selector) {
+                    selector.value = i18next.language || 'ar';
+                    i18next.on('languageChanged', (lng) => selector.value = lng);
+                }
+            }, 500);
         });
 
-        // Main Variables
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            if(nav) nav.classList.toggle('active');
+        }
+
         const urlInput = document.getElementById('urlInput');
         const clearBtn = document.getElementById('clearBtn');
         const resultArea = document.getElementById('result-area');
 
-        // Input Logic
-        function checkInput() { 
-            if(urlInput && clearBtn) {
-                clearBtn.style.display = urlInput.value ? 'block' : 'none'; 
-            }
-        }
-
-        function clearInput() { 
-            if(urlInput) {
-                urlInput.value = ''; 
-                checkInput(); 
-                urlInput.focus(); 
-            }
-        }
-
-        // Ad Logic
+        function checkInput() { if(urlInput && clearBtn) clearBtn.style.display = urlInput.value ? 'block' : 'none'; }
+        function clearInput() { if(urlInput) { urlInput.value = ''; checkInput(); urlInput.focus(); } }
+        
         function openAd() { 
-            // فتح الرابط في نافذة جديدة
             window.open('https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308', '_blank'); 
         }
 
-        // Fetch Logic
         async function fetchVideo() {
             const loading = document.getElementById('loading');
             const errorMsg = document.getElementById('error-msg');
@@ -424,10 +314,7 @@
 
         function showError(msg) {
             const el = document.getElementById('error-msg');
-            if(el) {
-                el.innerText = msg;
-                el.style.display = 'block';
-            }
+            if(el) { el.innerText = msg; el.style.display = 'block'; }
         }
     </script>
 </body>
