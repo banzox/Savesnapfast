@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pages.privacy.title">Privacy Policy - Snaptiks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n-setup.js"></script>
+
+    <style>
+        /* نفس التنسيقات الموحدة */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #ff0050; --secondary-color: #00f2ea;
+            --bg-dark: #0f0c29; --bg-mid: #302b63; --bg-light: #24243e;
+            --text-white: #ffffff; --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+        body {
+            font-family: 'Tajawal', 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-mid) 50%, var(--bg-light) 100%);
+            min-height: 100vh; color: var(--text-white); overflow-x: hidden; line-height: 1.8;
+            display: flex; flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border); padding: 1rem 0;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+        }
+        nav {
+            max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.8rem; font-weight: 800; color: var(--text-white); text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { color: var(--text-white); text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--secondary-color); }
+        
+        .mobile-menu { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .mobile-menu span { width: 25px; height: 3px; background: white; border-radius: 2px; }
+
+        /* Page Content */
+        .page-header { margin-top: 100px; padding: 4rem 2rem 2rem; text-align: center; }
+        .page-header h1 {
+            font-size: 3rem; font-weight: 800; margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; width: 100%; flex: 1; }
+        .content-section {
+            background: var(--glass-bg); backdrop-filter: blur(12px); border-radius: 20px;
+            padding: 3rem; border: 1px solid var(--glass-border); margin-bottom: 2rem;
+        }
+        .content-section p { font-size: 1.1rem; opacity: 0.9; line-height: 1.8; white-space: pre-line; }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3); padding: 3rem 2rem 2rem; margin-top: auto;
+            border-top: 1px solid var(--glass-border); text-align: center;
+        }
+        .footer-logo { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-white); text-decoration: none; opacity: 0.8; transition: 0.3s; }
+        .footer-links a:hover { color: var(--secondary-color); opacity: 1; }
+
+        .lang-switcher { display: flex; gap: 5px; }
+        .lang-btn {
+            background: rgba(255,255,255,0.1); border: 1px solid var(--glass-border);
+            color: #fff; padding: 5px 10px; border-radius: 8px; cursor: pointer; font-size: 0.8rem;
+        }
+        .lang-btn:hover, .lang-btn.active { background: var(--secondary-color); color: #000; border-color: var(--secondary-color); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: fixed; top: 70px; left: 0; width: 100%; height: 100vh; background: #0f0c29; flex-direction: column; padding-top: 2rem; z-index: 999; }
+            .nav-links.active { display: flex; }
+            .mobile-menu { display: flex; }
+            .lang-switcher { margin-top: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="about.html" data-i18n="nav.about">حول</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">تواصل</a></li>
+                <li><a href="disclaimer.html" data-i18n="nav.disclaimer">إخلاء المسؤولية</a></li>
+                
+                <li id="lang-switcher-container" class="lang-switcher"></li>
+
+
+            </ul>
+            <div class="mobile-menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1 data-i18n="pages.privacy.title"></h1>
+        <p data-i18n="pages.privacy.intro" style="margin-top: 10px; opacity: 0.8;"></p>
+    </section>
+
+    <div class="container">
+        <div class="content-section">
+            <p data-i18n="pages.privacy.content"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Snaptiks</div>
+            <p style="margin-bottom: 1rem; opacity: 0.8;" data-i18n="hero.desc">أفضل أداة لتحميل فيديوهات TikTok</p>
+            <div class="footer-links">
+                <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+                <a href="about.html" data-i18n="nav.about">حول</a>
+                <a href="contact.html" data-i18n="nav.contact">تواصل</a>
+                <a href="disclaimer.html" data-i18n="nav.disclaimer">إخلاء المسؤولية</a>
+                <a href="terms.html" data-i18n="nav.terms">الشروط</a>
+                <a href="privacy.html" class="active" data-i18n="nav.privacy">الخصوصية</a>
+                <a href="dmca.html" data-i18n="nav.dmca">DMCA</a>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 2rem; opacity: 0.6;">
+                <p data-i18n="footer.rights">© 2026 Snaptiks. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n-setup.js"></script>
+
+</body>
+</html>
