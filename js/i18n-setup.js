@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 load: 'languageOnly', // هام جداً: يحول en-US إلى en ويحول pt-BR إلى pt
                 backend: {
                     loadPath: './locales/{{lng}}/translation.json',
-                    queryStringParams: { v: '1.0.7' } // تحديث الكاش
-                },
+                    queryStringParams: { v: '1.1.0' }٫
                 detection: { 
                     // الترتيب الذهبي: الرابط > الذاكرة > لغة الجهاز
                     order: ['path', 'localStorage', 'navigator'], 
