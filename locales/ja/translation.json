@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "私たちについて",
+    "contact": "お問い合わせ",
+    "disclaimer": "免責事項",
+    "terms": "利用規約",
+    "privacy": "プライバシー",
+    "dmca": "DMCA"
+  },
+  "hero": {
+    "title": "TikTok動画ダウンローダー - 透かしなし",
+    "subtitle": "TikTok動画をHD画質(MP4)でダウンロード",
+    "desc": "ロゴなしでTikTok動画を保存するための最速ツール。完全無料。"
+  },
+  "downloader": {
+    "placeholder": "ここにリンクを貼り付け...",
+    "btn_download": "ダウンロード",
+    "processing": "処理中...",
+    "video_download": "動画をダウンロード (MP4)",
+    "music_download": "音声をダウンロード (MP3)",
+    "errors": {
+      "empty": "リンクを貼り付けてください",
+      "not_found": "動画が見つかりません",
+      "connection": "接続エラー"
+    }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "q1": "ロゴなしでTikTok動画をダウンロードするには？",
+    "a1": "TikTokからリンクをコピーし、上のボックスに貼り付けてダウンロードボタンを押すだけです。",
+    "q2": "無料ですか？",
+    "a2": "はい、完全無料です。",
+    "q3": "MP3を保存できますか？",
+    "a3": "はい、音声のみをMP3として保存可能です。"
+  },
+  "footer": {
+    "rights": "© 2026 Snaptiks. 全著作権所有。"
+  },
+  "meta": {
+    "title": "TikTok動画保存 - 透かしなし (高速 & HD)",
+    "description": "TikTokの動画をロゴなしでダウンロード。Snaptiksなら高画質で保存可能。"
+  }
+}

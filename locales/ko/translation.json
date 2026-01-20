@@ -1,0 +1,8 @@
+{
+  "nav": { "home": "홈", "about": "소개", "contact": "문의하기", "disclaimer": "면책 조항", "terms": "이용 약관", "privacy": "개인정보처리방침", "dmca": "DMCA" },
+  "hero": { "title": "TikTok 비디오 다운로더", "subtitle": "워터마크 없음 (HD)", "desc": "로고 없이 틱톡 영상을 무료로 저장하세요." },
+  "downloader": { "placeholder": "링크를 여기에 붙여넣기...", "btn_download": "다운로드", "processing": "처리 중...", "video_download": "비디오 다운로드", "music_download": "오디오 다운로드" },
+  "faq": { "title": "자주 묻는 질문", "q1": "워터마크 없이 어떻게 다운로드하나요?", "a1": "링크를 복사하여 위에 붙여넣고 다운로드를 누르세요.", "q2": "무료인가요?", "a2": "네, 100% 무료입니다.", "q3": "MP3도 가능한가요?", "a3": "네, 오디오만 추출 가능합니다." },
+  "footer": { "rights": "© 2026 Snaptiks. 판권 소유." },
+  "meta": { "title": "틱톡 영상 다운로드 (워터마크 없음)", "description": "고화질 틱톡 영상 저장. 로고 없는 무료 다운로더." }
+}

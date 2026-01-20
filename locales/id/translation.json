@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "TikTok Downloader Tanpa Watermark - Gratis & HD (2026)",
+    "description": "Pengunduh video TikTok terbaik tanpa watermark 2026. Simpan video TikTok cepat dalam kualitas HD (MP4). 100% gratis, aman, dan tanpa pendaftaran!"
+  },
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "disclaimer": "Sanggahan",
+    "terms": "Ketentuan",
+    "privacy": "Privasi",
+    "dmca": "DMCA",
+    "sitemap": "Peta Situs (Sitemap)"
+  },
+  "hero": {
+    "title": "Pengunduh Video TikTok",
+    "subtitle": "Unduh Video TikTok dalam HD (MP4)",
+    "desc": "Alat tercepat untuk menyimpan video TikTok tanpa watermark secara gratis."
+  },
+  "downloader": {
+    "placeholder": "Tempel tautan video di sini...",
+    "btn_download": "Unduh Sekarang",
+    "processing": "Memproses...",
+    "video_download": "Unduh Video",
+    "music_download": "Unduh Audio (MP3)",
+    "errors": {
+      "empty": "Harap tempelkan tautan terlebih dahulu",
+      "not_found": "Video tidak ditemukan. Periksa tautannya.",
+      "connection": "Kesalahan koneksi. Silakan coba lagi."
+    }
+  },
+  "status": {
+    "processing": "Memproses..."
+  },
+  "error": {
+    "empty_url": "Harap tempelkan tautan terlebih dahulu",
+    "not_found": "Video tidak ditemukan. Periksa tautannya.",
+    "connection": "Kesalahan koneksi. Silakan coba lagi."
+  },
+  "result": {
+    "download_video": "Unduh Video",
+    "download_audio": "Unduh Audio"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Kami di sini untuk membantu! Hubungi kami melalui formulir di bawah ini",
+    "form": {
+      "name": "Nama Lengkap",
+      "email": "Alamat Email",
+      "subject": "Subjek",
+      "message": "Pesan Anda",
+      "btn_send": "Kirim Pesan",
+      "options": {
+        "select": "Pilih Subjek",
+        "support": "Dukungan Teknis",
+        "suggestion": "Saran",
+        "bug": "Laporkan Bug",
+        "business": "Pertanyaan Bisnis"
+      }
+    }
+  },
+  "about": {
+    "page_title": "Tentang Snaptiks - Pelajari Lebih Lanjut",
+    "hero": {
+      "title": "Tentang Snaptiks",
+      "subtitle": "Pelajari kisah kami dan bagaimana kami membantu jutaan orang",
+      "titl": "Tentang Snaptiks"
+    },
+    "intro": {
+      "title": "🎯 Siapa Kami",
+      "p1": "Snaptiks adalah platform terkemuka untuk mengunduh video TikTok tanpa watermark. Didirikan pada tahun 2024 untuk mempermudah penyimpanan konten.",
+      "p2": "Kami percaya bahwa konten TikTok layak untuk disimpan dalam kualitas tinggi tanpa watermark."
+    },
+    "stats": {
+      "downloads": "Video Diunduh",
+      "users": "Pengguna Aktif",
+      "success": "Tingkat Keberhasilan",
+      "support": "Dukungan 24/7"
+    },
+    "features": {
+      "title": "✨ Fitur Kami",
+      "list": {
+        "no_watermark": "Tanpa Watermark",
+        "hd": "Kualitas Tinggi HD",
+        "fast": "Cepat & Andal",
+        "free": "100% Gratis",
+        "no_login": "Tidak Perlu Login",
+        "devices": "Bekerja di Semua Perangkat"
+      }
+    },
+    "steps": {
+      "title": "📖 Cara Kerjanya",
+      "step1": { "title": "Salin Tautan", "desc": "Salin tautan video dari aplikasi TikTok" },
+      "step2": { "title": "Tempel Tautan", "desc": "Tempel tautan di kotak input" },
+      "step3": { "title": "Unduh", "desc": "Klik unduh dan tunggu" },
+      "step4": { "title": "Simpan Video", "desc": "Simpan tanpa watermark" }
+    },
+    "legal": {
+      "title": "⚖️ Kepatuhan Hukum",
+      "desc": "Kami menghormati hak kekayaan intelektual. Alat kami hanya untuk penggunaan pribadi."
+    },
+    "join": {
+      "title": "🤝 Bergabunglah dengan Kami",
+      "desc": "Punya saran atau masukan? Kami ingin mendengar dari Anda!"
+    }
+  },
+  "footer": {
+    "desc": "Alat terbaik untuk mengunduh video TikTok tanpa watermark.",
+    "rights": "© 2026 Snaptiks. Semua hak dilindungi undang-undang.",
+    "terms": "Ketentuan",
+    "privacy": "Privasi",
+    "sitemap": "Peta Situs (Sitemap)"
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "q1": "Bagaimana cara mengunduh video TikTok tanpa watermark?",
+    "a1": "Cukup salin tautan video dari TikTok, tempelkan di kotak di atas dan klik Unduh Sekarang.",
+    "q2": "Apakah ini gratis?",
+    "a2": "Ya, layanan kami 100% gratis dan tidak memerlukan langganan.",
+    "q3": "Di mana video disimpan?",
+    "a3": "Video biasanya disimpan di folder 'Unduhan' di perangkat Anda."
+  },
+  "pages": {
+    "privacy": {
+      "title": "Kebijakan Privasi",
+      "intro": "Di Snaptiks, privasi pengunjung kami sangat penting bagi kami.",
+      "content": "Kami tidak menyimpan data pribadi apa pun. Log dihapus secara otomatis."
+    },
+    "terms": {
+      "title": "Ketentuan Layanan",
+      "intro": "Dengan menggunakan situs web kami, Anda dengan ini menyetujui persyaratan kami dan menyetujui ketentuannya.",
+      "content": "Alat ini hanya untuk penggunaan pribadi. Penggunaan untuk materi berhak cipta dilarang."
+    },
+    "dmca": {
+      "title": "Kepatuhan DMCA",
+      "intro": "Kami menghormati hak kekayaan intelektual orang lain.",
+      "content": "Jika Anda yakin hak cipta Anda telah dilanggar, silakan hubungi kami."
+    },
+    "disclaimer": {
+      "title": "Sanggahan",
+      "content": "Snaptiks tidak berafiliasi, dikaitkan, diizinkan, didukung oleh, atau dengan cara apa pun terhubung secara resmi dengan TikTok Inc."
+    }
+  }
+}

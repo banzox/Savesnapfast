@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "disclaimer": "Haftungsausschluss",
+    "terms": "AGB",
+    "privacy": "Datenschutz",
+    "dmca": "DMCA"
+  },
+  "result": {
+    "title": "Mach mit 👋",
+    "desc": "Wir würden gerne Ihre Meinung hören",
+    "download_video": "Video herunterladen (MP4)",
+    "download_audio": "Audio herunterladen (MP3)"
+  },
+  "hero": {
+    "title": "TikTok Video Downloader - Ohne Wasserzeichen",
+    "subtitle": "TikTok Videos in HD speichern (MP4)",
+    "desc": "Das schnellste Tool zum kostenlosen Herunterladen von TikTok-Videos ohne Wasserzeichen."
+  },
+  "downloader": {
+    "placeholder": "Video-Link hier einfügen...",
+    "btn_download": "Herunterladen",
+    "processing": "Verarbeitung...",
+    "video_download": "Video Herunterladen (Ohne Wasserzeichen)",
+    "music_download": "Audio Herunterladen (MP3)",
+    "errors": {
+      "empty": "Bitte zuerst einen Link einfügen",
+      "not_found": "Video nicht gefunden. Link überprüfen.",
+      "connection": "Verbindungsfehler. Bitte erneut versuchen."
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir sind hier, um zu helfen! Füllen Sie das Formular unten aus",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht",
+      "btn_send": "Nachricht senden",
+      "options": {
+        "select": "Betreff auswählen",
+        "support": "Technischer Support",
+        "suggestion": "Vorschlag",
+        "bug": "Fehler melden",
+        "business": "Geschäftsanfrage"
+      }
+    }
+  },
+  "about": {
+    "page_title": "Über Snaptiks",
+    "hero": {
+      "title": "Wer wir sind",
+      "subtitle": "Erfahren Sie mehr über unsere Geschichte"
+    },
+    "intro": {
+      "title": "🎯 Unsere Mission",
+      "p1": "Snaptiks ist die führende Plattform zum Herunterladen von TikTok-Videos ohne Wasserzeichen.",
+      "p2": "Wir glauben, dass kreative Inhalte in hoher Qualität ohne störende Logos gespeichert werden sollten."
+    },
+    "stats": {
+      "downloads": "Videos heruntergeladen",
+      "users": "Aktive Nutzer",
+      "success": "Erfolgsrate",
+      "support": "Support 24/7"
+    },
+    "features": {
+      "title": "✨ Unsere Vorteile",
+      "list": {
+        "no_watermark": "Ohne Wasserzeichen",
+        "hd": "HD Qualität",
+        "fast": "Schnell & Sicher",
+        "free": "100% Kostenlos",
+        "no_login": "Keine Anmeldung",
+        "devices": "Für Handy & PC"
+      }
+    },
+    "steps": {
+      "title": "📖 Wie funktioniert es?",
+      "step1": { "title": "Kopieren", "desc": "TikTok-Link kopieren" },
+      "step2": { "title": "Einfügen", "desc": "Link oben einfügen" },
+      "step3": { "title": "Laden", "desc": "Klicken Sie auf Herunterladen" },
+      "step4": { "title": "Speichern", "desc": "Video ohne Logo speichern" }
+    },
+    "legal": {
+      "title": "⚖️ Rechtliches",
+      "desc": "Wir respektieren das geistige Eigentum. Nur für den persönlichen Gebrauch."
+    },
+    "join": {
+      "title": "🤝 Mach mit",
+      "desc": "Haben Sie Vorschläge? Schreiben Sie uns!"
+    }
+  },
+  "footer": {
+    "desc": "Der beste TikTok Downloader ohne Wasserzeichen in HD.",
+    "rights": "© 2026 Snaptiks. Alle Rechte vorbehalten."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie lade ich TikTok-Videos ohne Wasserzeichen herunter?",
+    "a1": "Kopieren Sie einfach den Videolink, fügen Sie ihn oben ein und klicken Sie auf Herunterladen.",
+    "q2": "Ist es kostenlos?",
+    "a2": "Ja, unser Service ist zu 100% kostenlos.",
+    "q3": "Wo werden die Videos gespeichert?",
+    "a3": "Videos werden normalerweise im Ordner 'Downloads' gespeichert."
+  },
+  "meta": {
+    "title": "TikTok Video Downloader Ohne Wasserzeichen (Kostenlos & HD)",
+    "description": "TikTok Videos ohne Wasserzeichen kostenlos herunterladen. Speichern Sie TikToks in MP4-Qualität schnell and einfach (2026)."
+  },
+  "pages": {
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "intro": "Datenschutz ist uns wichtig.",
+      "content": "Wir speichern keine persönlichen Daten."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "intro": "Durch die Nutzung stimmen Sie unseren Bedingungen zu.",
+      "content": "Nur für den persönlichen Gebrauch."
+    },
+    "dmca": {
+      "title": "DMCA-Richtlinie",
+      "intro": "Wir respektieren Urheberrechte.",
+      "content": "Bei Verstößen kontaktieren Sie uns bitte."
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "content": "Snaptiks ist nicht mit TikTok Inc. verbunden."
+    }
+  }
+}

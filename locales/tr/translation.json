@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Snaptiks - TikTok Video İndir Filigransız HD",
+    "description": "En hızlı TikTok video indirici. TikTok videolarını filigransız HD olarak kaydedin ve Snaptiks ile ücretsiz MP3'e dönüştürün."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "contact": "İletişim",
+    "disclaimer": "Feragatname"
+  },
+  "hero": {
+    "title": "TikTok Video İndir",
+    "desc": "Filigransız - Hızlı ve Ücretsiz"
+  },
+  "downloader": {
+    "placeholder": "Video bağlantısını buraya yapıştırın...",
+    "btn_download": "Şimdi İndir"
+  },
+  "status": {
+    "processing": "İşleniyor..."
+  },
+  "error": {
+    "empty_url": "Lütfen bir video bağlantısı yapıştırın!",
+    "not_found": "Video bulunamadı. Lütfen bağlantıyı kontrol edin.",
+    "connection": "Sunucu bağlantı hatası."
+  },
+  "result": {
+    "download_video": "Videoyu İndir",
+    "download_audio": "Sesi İndir"
+  },
+  "faq": {
+    "title": "TikTok Video İndirme Hakkında Sıkça Sorulan Sorular",
+    "q1": "TikTok videoları filigransız nasıl indirilir?",
+    "a1": "Basitçe TikTok uygulamasından video bağlantısını kopyalayın, yukarıdaki kutuya yapıştırın ve 'Şimdi İndir'e tıklayın. Snaptiks bağlantıyı işleyecek ve logosuz indirme bağlantılarını sağlayacaktır.",
+    "q2": "Snaptiks aracının kullanımı ücretsiz mi?",
+    "a2": "Evet, sitemiz üzerinden TikTok video indirme hizmeti tamamen ücretsiz ve sınırsızdır. İstediğiniz sayıda videoyu HD kalitesinde indirebilirsiniz.",
+    "q3": "TikTok'tan sadece ses (MP3) indirilebilir mi?",
+    "a3": "Kesinlikle! Bağlantıyı koyduktan sonra site size 'Sesi İndir' seçeneği sunacaktır, bu da videonun müziğini veya sesini yüksek kaliteli MP3 formatında kaydetmenize olanak tanır."
+  },
+  "about": {
+    "steps": {
+      "title": "Nasıl Çalışır?",
+      "step1": { "desc": "TikTok'tan video bağlantısını kopyalayın" },
+      "step2": { "desc": "Bağlantıyı yukarıdaki kutuya yapıştırın" },
+      "step3": { "desc": "İndir'e basın ve videoyu filigransız kaydedin" }
+    },
+    "features": {
+      "title": "Özellikler",
+      "list": {
+        "no_watermark": "Filigransız",
+        "hd": "HD Kalite",
+        "free": "Ücretsiz",
+        "fast": "Çok Hızlı"
+      }
+    },
+    "intro": {
+      "p1": "Snaptiks, TikTok videolarını filigransız kaydetmek için en iyi çevrimiçi araçtır.",
+      "p2": "Hizmetimiz tüm cihazlarda (Android, iOS, Windows, macOS) çalışır ve ek yazılım kurulumu gerektirmez."
+    }
+  },
+  "footer": {
+    "terms": "Şartlar",
+    "privacy": "Gizlilik",
+    "rights": "Tüm hakları saklıdır."
+  }
+}
