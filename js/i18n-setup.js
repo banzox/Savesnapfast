@@ -1,6 +1,5 @@
 const supportedLanguages = ['ar', 'en', 'fr', 'es', 'de', 'id', 'pt', 'ru', 'tr', 'it', 'ja', 'zh', 'vi', 'hi', 'nl', 'ko', 'th', 'pl'];
 
-
 document.addEventListener('DOMContentLoaded', async () => {
     if (typeof i18next === 'undefined') return;
     try {
@@ -12,8 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 supportedLngs: supportedLanguages,
                 backend: {
                     loadPath: './all-langs.json', 
-                    queryStringParams: { v: '1.4.1' }
-
+                    queryStringParams: { v: '1.5.0' } // تغيير النسخة لكسر الكاش
                 },
                 detection: { 
                     order: ['path', 'localStorage', 'navigator'], 
@@ -34,7 +32,9 @@ function updateContent() {
         const key = el.getAttribute('data-i18n');
         el.innerHTML = i18next.t(key);
     });
-    document.title = i18next.t('meta.title');
+    if (i18next.exists('meta.title')) {
+        document.title = i18next.t('meta.title');
+    }
 }
 
 window.changeLanguage = (lang) => i18next.changeLanguage(lang);
