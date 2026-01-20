@@ -1,42 +1,132 @@
 {
   "ar": {
-    "meta": { "title": "تحميل فيديو تيك توك بدون علامة مائية" },
-    "nav": { "home": "الرئيسية", "about": "حول", "contact": "تواصل", "disclaimer": "إخلاء المسؤولية" },
-    "hero": { "title": "تحميل فيديو تيك توك", "desc": "تحميل بدون علامة مائية - سريع ومجاني" },
-    "downloader": { "placeholder": "الصق الرابط هنا...", "btn_download": "تحميل الآن" },
-    "status": { "processing": "جاري المعالجة..." },
-    "result": { "download_video": "تحميل فيديو", "download_audio": "تحميل صوت" },
-    "faq": {
-      "title": "الأسئلة الشائعة",
-      "q1": "كيف يمكنني تحميل فيديو تيك توك بدون علامة مائية؟",
-      "a1": "انسخ رابط الفيديو من تيك توك، ثم الصقه في المربع أعلاه واضغط على 'تحميل الآن'.",
-      "q2": "هل أداة Snaptiks مجانية؟",
-      "a2": "نعم، خدمة تحميل فيديوهات تيك توك عبر موقعنا مجانية تماماً وغير محدودة.",
-      "q3": "هل يمكن تحميل الصوت فقط (MP3)؟",
-      "a3": "بالتأكيد! بعد وضع الرابط، سيعطيك الموقع خيار 'تحميل صوت' بجودة عالية."
+    "meta": {
+      "title": "تحميل فيديو تيك توك بدون علامة مائية HD",
+      "description": "أسرع أداة تحميل فيديو تيك توك بدون علامة مائية. قم بحفظ فيديوهات TikTok بجودة عالية HD وتحويلها إلى MP3 مجاناً عبر Snaptiks."
     },
-    "footer": { "terms": "الشروط", "privacy": "الخصوصية", "rights": "جميع الحقوق محفوظة" }
+    "nav": {
+      "home": "الرئيسية",
+      "about": "حول",
+      "contact": "تواصل",
+      "disclaimer": "إخلاء المسؤولية"
+    },
+    "hero": {
+      "title": "تحميل فيديو تيك توك",
+      "desc": "تحميل بدون علامة مائية - سريع ومجاني"
+    },
+    "downloader": {
+      "placeholder": "الصق الرابط هنا...",
+      "btn_download": "تحميل الآن"
+    },
+    "status": {
+      "processing": "جاري المعالجة..."
+    },
+    "result": {
+      "download_video": "تحميل فيديو",
+      "download_audio": "تحميل صوت"
+    },
+    "faq": {
+      "title": "الأسئلة الشائعة حول تحميل فيديوهات تيك توك",
+      "q1": "كيف يمكنني تحميل فيديو تيك توك بدون علامة مائية؟",
+      "a1": "ببساطة، انسخ رابط الفيديو من تطبيق TikTok، ثم الصقه في المربع أعلاه واضغط على 'تحميل الآن'. سيقوم Snaptiks بمعالجة الرابط وتوفير روابط تحميل مباشرة بدون الشعار.",
+      "q2": "هل أداة Snaptiks مجانية للاستخدام؟",
+      "a2": "نعم، خدمة تحميل فيديوهات تيك توك عبر موقعنا مجانية تماماً وغير محدودة. يمكنك تحميل أي عدد من الفيديوهات بجودة HD.",
+      "q3": "هل يمكن تحميل الصوت فقط (MP3) من تيك توك؟",
+      "a3": "بالتأكيد! بعد وضع الرابط، سيعطيك الموقع خيار 'تحميل صوت'، مما يتيح لك حفظ الموسيقى أو الأوديو الخاص بالفيديو بصيغة MP3 عالية الجودة."
+    },
+    "about": {
+      "intro": {
+        "p1": "Snaptiks هو أفضل أداة لتحميل فيديوهات تيك توك بدون علامة مائية أونلاين.",
+        "p2": "خدمتنا سريعة، مجانية، وتعمل على جميع الأجهزة."
+      },
+      "steps": {
+        "title": "كيف يعمل؟",
+        "step1": { "desc": "انسخ رابط الفيديو من تيك توك" },
+        "step2": { "desc": "الصق الرابط في الخانة بالأعلى" },
+        "step3": { "desc": "اضغط تحميل واحفظ الفيديو بدون علامة" }
+      },
+      "features": {
+        "title": "المميزات",
+        "list": {
+          "no_watermark": "بدون علامة",
+          "hd": "جودة HD",
+          "free": "مجاني",
+          "fast": "سريع جداً"
+        }
+      }
+    },
+    "footer": {
+      "terms": "الشروط",
+      "privacy": "الخصوصية",
+      "rights": "جميع الحقوق محفوظة"
+    }
   },
   "en": {
-    "meta": { "title": "TikTok Downloader - No Watermark" },
-    "nav": { "home": "Home", "about": "About", "contact": "Contact", "disclaimer": "Disclaimer" },
-    "hero": { "title": "TikTok Downloader", "desc": "Download without watermark - Fast & Free" },
-    "downloader": { "placeholder": "Paste link here...", "btn_download": "Download Now" },
-    "status": { "processing": "Processing..." },
-    "result": { "download_video": "Download Video", "download_audio": "Download MP3" },
+    "meta": {
+      "title": "TikTok Downloader - No Watermark HD",
+      "description": "Fastest TikTok video downloader without watermark. Save TikTok videos in high quality HD and convert to MP3 for free via Snaptiks."
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
+      "disclaimer": "Disclaimer"
+    },
+    "hero": {
+      "title": "TikTok Downloader",
+      "desc": "Download without watermark - Fast & Free"
+    },
+    "downloader": {
+      "placeholder": "Paste link here...",
+      "btn_download": "Download Now"
+    },
+    "status": {
+      "processing": "Processing..."
+    },
+    "result": {
+      "download_video": "Download Video",
+      "download_audio": "Download MP3"
+    },
     "faq": {
       "title": "Frequently Asked Questions",
       "q1": "How to download TikTok videos without watermark?",
-      "a1": "Copy the video link from TikTok, paste it above, and click 'Download Now'.",
+      "a1": "Simply copy the video link from TikTok, paste it in the box above, and click 'Download Now'. Snaptiks will process the link and provide direct download links without logo.",
       "q2": "Is Snaptiks free to use?",
-      "a2": "Yes, our TikTok downloader service is completely free and unlimited.",
-      "q3": "Can I download only audio (MP3)?",
-      "a3": "Yes! After pasting the link, you will see a 'Download Audio' option for high-quality MP3."
+      "a2": "Yes, our TikTok download service is completely free and unlimited. You can download any number of videos in HD quality.",
+      "q3": "Can I download only audio (MP3) from TikTok?",
+      "a3": "Certainly! After placing the link, the site will give you the option to 'Download Audio', allowing you to save the music or audio in high quality MP3."},
+    "about": {
+      "intro": {
+        "p1": "Snaptiks is the best tool to download TikTok videos without watermark online.",
+        "p2": "Our service is fast, free, and works on all devices."
+      },
+      "steps": {
+        "title": "How it works?",
+        "step1": { "desc": "Copy video link from TikTok" },
+        "step2": { "desc": "Paste link in the box above" },
+        "step3": { "desc": "Click download and save" }
+      },
+      "features": {
+        "title": "Features",
+        "list": {
+          "no_watermark": "No Watermark",
+          "hd": "HD Quality",
+          "free": "Free",
+          "fast": "Fast"
+        }
+      }
     },
-    "footer": { "terms": "Terms", "privacy": "Privacy", "rights": "All rights reserved" }
+    "footer": {
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "rights": "All rights reserved"
+    }
   },
   "vi": {
-    "meta": { "title": "Tải video TikTok không logo" },
+    "meta": {
+      "title": "Tải video TikTok không logo HD",
+      "description": "Công cụ tải video TikTok không logo nhanh nhất. Lưu video TikTok chất lượng cao HD và chuyển sang MP3 miễn phí qua Snaptiks."
+    },
     "nav": { "home": "Trang chủ", "about": "Giới thiệu", "contact": "Liên hệ", "disclaimer": "Tuyên bố từ chối" },
     "hero": { "title": "Tải video TikTok", "desc": "Tải xuống không có logo - Nhanh chóng & Miễn phí" },
     "downloader": { "placeholder": "Dán liên kết vào đây...", "btn_download": "Tải xuống ngay" },
@@ -44,282 +134,242 @@
     "result": { "download_video": "Tải xuống Video", "download_audio": "Tải xuống MP3" },
     "faq": {
       "title": "Câu hỏi thường gặp",
-      "q1": "Làm cách nào để tải video TikTok không logo?",
-      "a1": "Sao chép liên kết video từ TikTok, dán vào ô trên và nhấn 'Tải xuống ngay'.",
+      "q1": "Làm thế nào để tải video TikTok không logo?",
+      "a1": "Chỉ cần sao chép liên kết từ TikTok, dán vào ô trên và nhấn 'Tải xuống ngay'.",
       "q2": "Snaptiks có miễn phí không?",
-      "a2": "Có, dịch vụ tải video TikTok của chúng tôi hoàn toàn miễn phí và không giới hạn.",
-      "q3": "Tôi có thể tải xuống âm thanh (MP3) không?",
-      "a3": "Có! Sau khi dán liên kết, bạn sẽ thấy tùy chọn 'Tải xuống âm thanh' chất lượng cao."
+      "a2": "Có, dịch vụ của chúng tôi hoàn toàn miễn phí và không giới hạn.",
+      "q3": "Có thể tải xuống MP3 không?",
+      "a3": "Chắc chắn rồi! Bạn có thể chọn tải xuống âm thanh chất lượng cao."
     },
-    "footer": { "terms": "Điều khoản", "privacy": "Quyền riêng tư", "rights": "Đã đăng ký Bản quyền" }
+    "about": {
+      "intro": { "p1": "Snaptiks là công cụ tốt nhất để tải video TikTok không logo.", "p2": "Dịch vụ của chúng tôi nhanh chóng và miễn phí." },
+      "steps": { "title": "Nó hoạt động như thế nào?", "step1": { "desc": "Sao chép liên kết" }, "step2": { "desc": "Dán liên kết" }, "step3": { "desc": "Tải xuống" } },
+      "features": { "title": "Đặc trưng", "list": { "no_watermark": "Không logo", "hd": "HD", "free": "Miễn phí", "fast": "Nhanh" } }
+    },
+    "footer": { "terms": "Điều khoản", "privacy": "Riêng tư", "rights": "Đã đăng ký bản quyền" }
   },
   "fr": {
-    "meta": { "title": "Télécharger vidéo TikTok sans filigrane" },
+    "meta": { "title": "Télécharger vidéo TikTok sans filigrane", "description": "Téléchargez des vidéos TikTok sans logo HD gratuitement." },
     "nav": { "home": "Accueil", "about": "À propos", "contact": "Contact", "disclaimer": "Mentions légales" },
-    "hero": { "title": "Téléchargeur TikTok", "desc": "Télécharger sans filigrane - Rapide & Gratuit" },
-    "downloader": { "placeholder": "Collez le lien ici...", "btn_download": "Télécharger maintenant" },
-    "status": { "processing": "Traitement en cours..." },
-    "result": { "download_video": "Télécharger Vidéo", "download_audio": "Télécharger MP3" },
-    "faq": {
-      "title": "Foire aux questions",
-      "q1": "Comment télécharger des vidéos TikTok sans filigrane ?",
-      "a1": "Copiez le lien de la vidéo depuis TikTok, collez-le ci-dessus et cliquez sur 'Télécharger maintenant'.",
-      "q2": "Snaptiks est-il gratuit ?",
-      "a2": "Oui, notre service de téléchargement TikTok est totalement gratuit et illimité.",
-      "q3": "Puis-je télécharger uniquement l'audio (MP3) ?",
-      "a3": "Oui ! Après avoir collé le lien, vous verrez une option 'Télécharger l'audio' en haute qualité."
+    "hero": { "title": "Téléchargeur TikTok", "desc": "Sans filigrane - Rapide & Gratuit" },
+    "downloader": { "placeholder": "Collez le lien ici...", "btn_download": "Télécharger" },
+    "status": { "processing": "Traitement..." },
+    "result": { "download_video": "Vidéo", "download_audio": "MP3" },
+    "faq": { "title": "FAQ", "q1": "Comment télécharger?", "a1": "Copiez le lien et collez-le ici.", "q2": "Est-ce gratuit?", "a2": "Oui, totalement gratuit.", "q3": "Puis-je télécharger du MP3?", "a3": "Oui, l'option audio est disponible." },
+    "about": {
+      "intro": { "p1": "Meilleur outil pour TikTok.", "p2": "Service rapide et gratuit." },
+      "steps": { "title": "Comment ça marche?", "step1": { "desc": "Copier" }, "step2": { "desc": "Coller" }, "step3": { "desc": "Enregistrer" } },
+      "features": { "title": "Fonctionnalités", "list": { "no_watermark": "Sans logo", "hd": "HD", "free": "Gratuit", "fast": "Rapide" } }
     },
     "footer": { "terms": "Conditions", "privacy": "Confidentialité", "rights": "Tous droits réservés" }
   },
   "es": {
-    "meta": { "title": "Descargar videos de TikTok sin marca de agua" },
-    "nav": { "home": "Inicio", "about": "Nosotros", "contact": "Contacto", "disclaimer": "Descargo de responsabilidad" },
-    "hero": { "title": "Descargador de TikTok", "desc": "Descarga sin marca de agua - Rápido y Gratis" },
-    "downloader": { "placeholder": "Pegue el enlace aquí...", "btn_download": "Descargar ahora" },
+    "meta": { "title": "Descargar videos de TikTok sin marca de agua", "description": "Descarga videos de TikTok sin logo HD gratis." },
+    "nav": { "home": "Inicio", "about": "Nosotros", "contact": "Contacto", "disclaimer": "Aviso legal" },
+    "hero": { "title": "Descargador TikTok", "desc": "Sin marca de agua - Rápido y Gratis" },
+    "downloader": { "placeholder": "Pega el enlace aquí...", "btn_download": "Descargar" },
     "status": { "processing": "Procesando..." },
     "result": { "download_video": "Descargar Video", "download_audio": "Descargar MP3" },
-    "faq": {
-      "title": "Preguntas frecuentes",
-      "q1": "¿Cómo descargar videos de TikTok sin marca de agua?",
-      "a1": "Copia el enlace del video de TikTok, pégalo arriba y haz clic en 'Descargar ahora'.",
-      "q2": "¿Es Snaptiks gratuito?",
-      "a2": "Sí, nuestro servicio de descarga de TikTok es completamente gratuito e ilimitado.",
-      "q3": "¿Puedo descargar solo el audio (MP3)?",
-      "a3": "¡Sí! Después de pegar el enlace, verás una opción de 'Descargar audio' de alta calidad."
+    "faq": { "title": "Preguntas Frecuentes", "q1": "¿Cómo descargar?", "a1": "Copia el link y pégalo aquí.", "q2": "¿Es gratis?", "a2": "Sí, es totalmente gratis.", "q3": "¿Puedo bajar MP3?", "a3": "Sí, puedes bajar solo el audio." },
+    "about": {
+      "intro": { "p1": "La mejor herramienta para TikTok.", "p2": "Servicio rápido y gratuito." },
+      "steps": { "title": "¿Cómo funciona?", "step1": { "desc": "Copiar" }, "step2": { "desc": "Pegar" }, "step3": { "desc": "Bajar" } },
+      "features": { "title": "Características", "list": { "no_watermark": "Sin logo", "hd": "HD", "free": "Gratis", "fast": "Rápido" } }
     },
-    "footer": { "terms": "Términos", "privacy": "Privacidad", "rights": "Todos los derechos reservados" }
+    "footer": { "terms": "Términos", "privacy": "Privacidad", "rights": "Derechos reservados" }
   },
   "de": {
-    "meta": { "title": "TikTok Downloader ohne Wasserzeichen" },
-    "nav": { "home": "Startseite", "about": "Über uns", "contact": "Kontakt", "disclaimer": "Haftungsausschluss" },
-    "hero": { "title": "TikTok Downloader", "desc": "Ohne Wasserzeichen herunterladen - Schnell & Kostenlos" },
-    "downloader": { "placeholder": "Link hier einfügen...", "btn_download": "Jetzt herunterladen" },
-    "status": { "processing": "In Verarbeitung..." },
-    "result": { "download_video": "Video herunterladen", "download_audio": "MP3 herunterladen" },
-    "faq": {
-      "title": "Häufig gestellte Fragen",
-      "q1": "Wie lade ich TikTok-Videos ohne Wasserzeichen herunter?",
-      "a1": "Kopieren Sie den Videolink von TikTok, fügen Sie ihn oben ein und klicken Sie auf 'Jetzt herunterladen'.",
-      "q2": "Ist Snaptiks kostenlos?",
-      "a2": "Ja, unser TikTok-Downloader-Service ist völlig kostenlos und unbegrenzt.",
-      "q3": "Kann ich nur Audio (MP3) herunterladen?",
-      "a3": "Ja! Nach dem Einfügen des Links wird eine Option zum Herunterladen von Audio in hoher Qualität angezeigt."
+"meta": { "title": "TikTok Downloader ohne Wasserzeichen", "description": "TikTok Videos kostenlos ohne Logo in HD speichern." },
+    "nav": { "home": "Start", "about": "Über uns", "contact": "Kontakt", "disclaimer": "Haftungsausschluss" },
+    "hero": { "title": "TikTok Downloader", "desc": "Ohne Wasserzeichen - Schnell & Gratis" },
+    "downloader": { "placeholder": "Link hier einfügen...", "btn_download": "Laden" },
+    "status": { "processing": "Verarbeitung..." },
+    "result": { "download_video": "Video laden", "download_audio": "MP3 laden" },
+    "faq": { "title": "FAQ", "q1": "Wie laden?", "a1": "Link kopieren und hier einfügen.", "q2": "Ist es gratis?", "a2": "Ja, absolut kostenlos.", "q3": "Geht MP3?", "a3": "Ja, Audio-Download ist möglich." },
+    "about": {
+      "intro": { "p1": "Bestes Tool für TikTok.", "p2": "Schnell und kostenlos." },
+      "steps": { "title": "Wie geht das?", "step1": { "desc": "Kopieren" }, "step2": { "desc": "Einfügen" }, "step3": { "desc": "Speichern" } },
+      "features": { "title": "Funktionen", "list": { "no_watermark": "Ohne Logo", "hd": "HD", "free": "Gratis", "fast": "Schnell" } }
     },
-    "footer": { "terms": "Nutzungsbedingungen", "privacy": "Datenschutz", "rights": "Alle Rechte vorbehalten" }
+    "footer": { "terms": "Bedingungen", "privacy": "Datenschutz", "rights": "Alle Rechte vorbehalten" }
   },
   "id": {
-    "meta": { "title": "Download Video TikTok Tanpa Watermark" },
+    "meta": { "title": "Download Video TikTok Tanpa Watermark", "description": "Unduh video TikTok tanpa logo HD gratis." },
     "nav": { "home": "Beranda", "about": "Tentang", "contact": "Kontak", "disclaimer": "Penafian" },
-    "hero": { "title": "Pengunduh TikTok", "desc": "Unduh tanpa tanda air - Cepat & Gratis" },
-    "downloader": { "placeholder": "Tempel tautan di sini...", "btn_download": "Unduh Sekarang" },
-    "status": { "processing": "Sedang diproses..." },
+    "hero": { "title": "Pengunduh TikTok", "desc": "Tanpa Watermark - Cepat & Gratis" },
+    "downloader": { "placeholder": "Tempel tautan di sini...", "btn_download": "Unduh" },
+    "status": { "processing": "Memproses..." },
     "result": { "download_video": "Unduh Video", "download_audio": "Unduh MP3" },
-    "faq": {
-      "title": "Pertanyaan yang Sering Diajukan",
-      "q1": "Bagaimana cara mengunduh video TikTok tanpa tanda air?",
-      "a1": "Salin tautan video dari TikTok, tempel di atas, dan klik 'Unduh Sekarang'.",
-      "q2": "Apakah Snaptiks gratis?",
-      "a2": "Ya, layanan pengunduh TikTok kami sepenuhnya gratis dan tidak terbatas.",
-      "q3": "Bisakah saya mengunduh audionya saja (MP3)?",
-      "a3": "Ya! Setelah menempelkan tautan, Anda akan melihat opsi 'Unduh Audio' berkualitas tinggi."
+    "faq": { "title": "FAQ", "q1": "Cara unduh?", "a1": "Salin link dan tempel di sini.", "q2": "Gratis?", "a2": "Ya, 100% gratis.", "q3": "Bisa MP3?", "a3": "Ya, bisa unduh audionya saja." },
+    "about": {
+      "intro": { "p1": "Alat TikTok terbaik.", "p2": "Layanan cepat dan gratis." },
+      "steps": { "title": "Cara kerja?", "step1": { "desc": "Salin" }, "step2": { "desc": "Tempel" }, "step3": { "desc": "Simpan" } },
+      "features": { "title": "Fitur", "list": { "no_watermark": "Tanpa logo", "hd": "HD", "free": "Gratis", "fast": "Cepat" } }
     },
-    "footer": { "terms": "Ketentuan", "privacy": "Privasi", "rights": "Hak cipta dilindungi" }
+    "footer": { "terms": "Syarat", "privacy": "Privasi", "rights": "Hak cipta dilindungi" }
   },
   "pt": {
-    "meta": { "title": "Baixar vídeo do TikTok sem marca d'água" },
+    "meta": { "title": "Baixar vídeo do TikTok sem marca d'água", "description": "Baixe vídeos do TikTok sem logo em HD grátis." },
     "nav": { "home": "Início", "about": "Sobre", "contact": "Contato", "disclaimer": "Aviso legal" },
-    "hero": { "title": "Baixador de TikTok", "desc": "Baixe sem marca d'água - Rápido e Grátis" },
-    "downloader": { "placeholder": "Cole o link aqui...", "btn_download": "Baixar agora" },
+    "hero": { "title": "Baixador TikTok", "desc": "Sem marca d'água - Rápido e Grátis" },
+    "downloader": { "placeholder": "Cole o link aqui...", "btn_download": "Baixar" },
     "status": { "processing": "Processando..." },
     "result": { "download_video": "Baixar Vídeo", "download_audio": "Baixar MP3" },
-    "faq": {
-      "title": "Perguntas frequentes",
-      "q1": "Como baixar vídeos do TikTok sem marca d'água?",
-      "a1": "Copie o link do vídeo do TikTok, cole-o acima e clique em 'Baixar agora'.",
-      "q2": "O Snaptiks é gratuito?",
-      "a2": "Sim, nosso serviço de download do TikTok é totalmente gratuito e ilimitado.",
-      "q3": "Posso baixar apenas o áudio (MP3)?",
-      "a3": "Sim! Depois de colar o link, você verá uma opção de 'Baixar áudio' de alta qualidade."
+    "faq": { "title": "FAQ", "q1": "Como baixar?", "a1": "Copie o link e cole aqui.", "q2": "É grátis?", "a2": "Sim, totalmente grátis.", "q3": "Dá para baixar MP3?", "a3": "Sim, opção de áudio disponível." },
+    "about": {
+      "intro": { "p1": "A melhor ferramenta TikTok.", "p2": "Serviço rápido e gratuito." },
+      "steps": { "title": "Como funciona?", "step1": { "desc": "Copiar" }, "step2": { "desc": "Colar" }, "step3": { "desc": "Salvar" } },
+      "features": { "title": "Recursos", "list": { "no_watermark": "Sem logo", "hd": "HD", "free": "Grátis", "fast": "Rápido" } }
     },
-    "footer": { "terms": "Termos", "privacy": "Privacidade", "rights": "Todos os direitos reservados" }
+    "footer": { "terms": "Termos", "privacy": "Privacidade", "rights": "Direitos reservados" }
   },
   "ru": {
-    "meta": { "title": "Скачать видео Тик Ток без водяного знака" },
-    "nav": { "home": "Главная", "about": "О нас", "contact": "Контакт", "disclaimer": "Отказ от ответственности" },
-    "hero": { "title": "Тик Ток Загрузчик", "desc": "Скачать без водяных знаков - Быстро и Бесплатно" },
-    "downloader": { "placeholder": "Вставьте ссылку здесь...", "btn_download": "Скачать сейчас" },
+    "meta": { "title": "Скачать видео Тик Ток без водяного знака", "description": "Скачать видео TikTok без логотипа в HD бесплатно." },
+    "nav": { "home": "Главная", "about": "О нас", "contact": "Контакт", "disclaimer": "Отказ" },
+    "hero": { "title": "Загрузчик TikTok", "desc": "Без водяного знака - Быстро и Бесплатно" },
+    "downloader": { "placeholder": "Вставьте ссылку здесь...", "btn_download": "Скачать" },
     "status": { "processing": "Обработка..." },
     "result": { "download_video": "Скачать видео", "download_audio": "Скачать MP3" },
-    "faq": {
-      "title": "Часто задаваемые вопросы",
-      "q1": "Как скачать видео из Тик Тока без водяного знака?",
-      "a1": "Скопируйте ссылку на видео из TikTok, вставьте ее выше и нажмите «Скачать сейчас».",
-      "q2": "Является ли Snaptiks бесплатным?",
-      "a2": "Да, наш сервис для скачивания TikTok полностью бесплатен и не ограничен.",
-      "q3": "Можно ли скачать только аудио (MP3)?",
-      "a3": "Да! После вставки ссылки вы увидите вариант «Скачать аудио» в высоком качестве."
+    "faq": { "title": "FAQ", "q1": "Как скачать?", "a1": "Скопируйте ссылку и вставьте здесь.", "q2": "Бесплатно?", "a2": "Да, абсолютно бесплатно.", "q3": "Можно MP3?", "a3": "Да, можно скачать только звук." },
+    "about": {
+      "intro": { "p1": "Лучший инструмент для TikTok.", "p2": "Быстро и бесплатно." },
+      "steps": { "title": "Как это работает?", "step1": { "desc": "Копировать" }, "step2": { "desc": "Вставить" }, "step3": { "desc": "Скачать" } },
+      "features": { "title": "Функции", "list": { "no_watermark": "Без лого", "hd": "HD", "free": "Бесплатно", "fast": "Быстро" } }
     },
-    "footer": { "terms": "Условия", "privacy": "Конфиденциальность", "rights": "Все права защищены" }
+    "footer": { "terms": "Условия", "privacy": "Приватность", "rights": "Права защищены" }
   },
   "tr": {
-    "meta": { "title": "TikTok Filigransız Video İndir" },
-    "nav": { "home": "Ana Sayfa", "about": "Hakkımızda", "contact": "İletişim", "disclaimer": "Sorumluluk Reddi" },
-    "hero": { "title": "TikTok İndirici", "desc": "Filigransız indir - Hızlı ve Ücretsiz" },
-    "downloader": { "placeholder": "Bağlantıyı buraya yapıştırın...", "btn_download": "Şimdi İndir" },
+    "meta": { "title": "TikTok Filigransız Video İndir", "description": "TikTok videolarını logosuz HD olarak ücretsiz indir." },
+    "nav": { "home": "Anasayfa", "about": "Hakkında", "contact": "İletişim", "disclaimer": "Feragatname" },
+    "hero": { "title": "TikTok İndirici", "desc": "Filigransız - Hızlı & Ücretsiz" },
+    "downloader": { "placeholder": "Bağlantıyı buraya yapıştır...", "btn_download": "İndir" },
     "status": { "processing": "İşleniyor..." },
     "result": { "download_video": "Videoyu İndir", "download_audio": "MP3 İndir" },
-    "faq": {
-      "title": "Sıkça Sorulan Sorular",
-      "q1": "TikTok videoları filigransız nasıl indirilir?",
-      "a1": "TikTok'tan video bağlantısını kopyalayın, yukarıya yapıştırın ve 'Şimdi İndir'e tıklayın.",
-      "q2": "Snaptiks ücretsiz mi?",
-      "a2": "Evet, TikTok indirme hizmetimiz tamamen ücretsiz ve sınırsızdır.",
-      "q3": "Sadece ses (MP3) indirebilir miyim?",
-      "a3": "Evet! Bağlantıyı yapıştırdıktan sonra yüksek kaliteli MP3 için 'Sesi İndir' seçeneğini göreceksiniz."
+    "faq": { "title": "FAQ", "q1": "Nasıl indirilir?", "a1": "Linki kopyala ve buraya yapıştır.", "q2": "Ücretsiz mi?", "a2": "Evet, tamamen ücretsiz.", "q3": "MP3 olur mu?", "a3": "Evet, sadece ses indirilebilir." },
+    "about": {
+      "intro": { "p1": "En iyi TikTok aracı.", "p2": "Hızlı ve ücretsiz servis." },
+      "steps": { "title": "Nasıl çalışır?", "step1": { "desc": "Kopyala" }, "step2": { "desc": "Yapıştır" }, "step3": { "desc": "Kaydet" } },
+      "features": { "title": "Özellikler", "list": { "no_watermark": "Logosuz", "hd": "HD", "free": "Ücretsiz", "fast": "Hızlı" } }
     },
     "footer": { "terms": "Şartlar", "privacy": "Gizlilik", "rights": "Tüm hakları saklıdır" }
   },
   "it": {
-    "meta": { "title": "Scaricare video TikTok senza filigrana" },
-    "nav": { "home": "Home", "about": "Chi siamo", "contact": "Contatti", "disclaimer": "Disclaimer" },
-    "hero": { "title": "TikTok Downloader", "desc": "Scarica senza filigrana - Veloce e gratuito" },
-    "downloader": { "placeholder": "Incolla il link qui...", "btn_download": "Scarica ora" },
-    "status": { "processing": "Elaborazione in corso..." },
+    "meta": { "title": "Scaricare video TikTok senza filigrana", "description": "Scarica video TikTok senza logo in HD gratis." },
+    "nav": { "home": "Home", "about": "Info", "contact": "Contatti", "disclaimer": "Disclaimer" },
+    "hero": { "title": "TikTok Downloader", "desc": "Senza filigrana - Veloce e Gratis" },
+    "downloader": { "placeholder": "Incolla il link qui...", "btn_download": "Scarica" },
+    "status": { "processing": "Elaborazione..." },
     "result": { "download_video": "Scarica Video", "download_audio": "Scarica MP3" },
-    "faq": {
-      "title": "Domande frequenti",
-      "q1": "Come scaricare video TikTok senza filigrana?",
-      "a1": "Copia il link del video da TikTok, incollalo sopra e clicca su 'Scarica ora'.",
-      "q2": "Snaptiks è gratuito?",
-      "a2": "Sì, il nostro servizio di download TikTok è completamente gratuito e illimitato.",
-      "q3": "Posso scaricare solo l'audio (MP3)?",
-      "a3": "Sì! Dopo aver incollato il link, vedrai l'opzione 'Scarica audio' ad alta qualità."
+    "faq": { "title": "FAQ", "q1": "Come scaricare?", "a1": "Copia il link e incollalo qui.", "q2": "È gratis?", "a2": "Sì, totalmente gratuito.", "q3": "Si può MP3?", "a3": "Sì, opzione audio disponibile." },
+    "about": {
+      "intro": { "p1": "Miglior tool per TikTok.", "p2": "Servizio veloce e gratis." },
+      "steps": { "title": "Come funziona?", "step1": { "desc": "Copia" }, "step2": { "desc": "Incolla" }, "step3": { "desc": "Salva" } },
+      "features": { "title": "Funzioni", "list": { "no_watermark": "Senza logo", "hd": "HD", "free": "Gratis", "fast": "Veloce" } }
     },
-    "footer": { "terms": "Termini", "privacy": "Privacy", "rights": "Tutti i diritti riservati" }
+    "footer": { "terms": "Termini", "privacy": "Privacy", "rights": "Diritti riservati" }
   },
   "ja": {
-    "meta": { "title": "TikTok動画をロゴなしでダウンロード" },
-    "nav": { "home": "ホーム", "about": "私たちについて", "contact": "お問い合わせ", "disclaimer": "免責事項" },
-    "hero": { "title": "TikTok保存", "desc": "ロゴなしでダウンロード - 高速・無料" },
-    "downloader": { "placeholder": "ここにリンクを貼り付け...", "btn_download": "今すぐダウンロード" },
+    "meta": { "title": "TikTok動画をロゴなしでダウンロード", "description": "TikTok動画をロゴなしHDで無料保存。" },
+    "nav": { "home": "ホーム", "about": "紹介", "contact": "連絡", "disclaimer": "免責事項" },
+    "hero": { "title": "TikTok保存", "desc": "ロゴなし - 高速・無料" },
+    "downloader": { "placeholder": "ここにリンクを貼り付け...", "btn_download": "保存" },
     "status": { "processing": "処理中..." },
-    "result": { "download_video": "動画を保存", "download_audio": "MP3を保存" },
-    "faq": {
-      "title": "よくある質問",
-      "q1": "ロゴなしでTikTok動画を保存するには？",
-      "a1": "TikTokからリンクをコピーし、上に貼り付けて「今すぐダウンロード」をクリックします。",
-      "q2": "Snaptiksは無料ですか？",
-      "a2": "はい、私たちのサービスは完全に無料で、制限なく利用できます。",
-      "q3": "音声（MP3）のみを保存できますか？",
-      "a3": "はい！リンクを貼り付けると、高品質MP3の「音声を保存」オプションが表示されます。"
+    "result": { "download_video": "動画保存", "download_audio": "音声保存" },
+    "faq": { "title": "よくある質問", "q1": "保存方法は？", "a1": "リンクをコピーして貼り付けるだけ。", "q2": "無料？", "a2": "はい、完全無料です。", "q3": "MP3は？", "a3": "はい、音声のみ保存可能です。" },
+    "about": {
+      "intro": { "p1": "最高の保存ツール。", "p2": "高速・無料サービス。" },
+      "steps": { "title": "使い方は？", "step1": { "desc": "コピー" }, "step2": { "desc": "貼り付け" }, "step3": { "desc": "保存" } },
+      "features": { "title": "特徴", "list": { "no_watermark": "ロゴなし", "hd": "HD", "free": "無料", "fast": "高速" } }
     },
-    "footer": { "terms": "利用規約", "privacy": "プライバシー", "rights": "全著作権所有" }
+    "footer": { "terms": "規約", "privacy": "個人情報", "rights": "著作権所有" }
   },
   "ko": {
-    "meta": { "title": "워터마크 없는 틱톡 영상 다운로드" },
+    "meta": { "title": "워터마크 없는 틱톡 영상 다운로드", "description": "틱톡 영상을 로고 없이 HD로 무료 저장하세요." },
     "nav": { "home": "홈", "about": "정보", "contact": "문의", "disclaimer": "면책 조항" },
-    "hero": { "title": "틱톡 다운로더", "desc": "워터마크 없이 다운로드 - 빠르고 무료" },
-    "downloader": { "placeholder": "여기에 링크 붙여넣기...", "btn_download": "지금 다운로드" },
+    "hero": { "title": "틱톡 다운로더", "desc": "워터마크 없음 - 빠르고 무료" },
+    "downloader": { "placeholder": "여기에 링크 붙여넣기...", "btn_download": "다운로드" },
     "status": { "processing": "처리 중..." },
-    "result": { "download_video": "비디오 다운로드", "download_audio": "MP3 다운로드" },
-    "faq": {
-      "title": "자주 묻는 질문",
-      "q1": "워터마크 없이 틱톡 영상을 다운로드하는 방법은 무엇입니까?",
-      "a1": "틱톡에서 영상 링크를 복사하여 위에 붙여넣고 '지금 다운로드'를 클릭하세요.",
-      "q2": "Snaptiks는 무료입니까?",
-      "a2": "네, 저희 틱톡 다운로더 서비스는 완전히 무료이며 무제한입니다.",
-      "q3": "오디오(MP3)만 다운로드할 수 있습니까?",
-      "a3": "네! 링크를 붙여넣으면 고음질 MP3를 위한 '오디오 다운로드' 옵션이 나타납니다."
+    "result": { "download_video": "비디오 저장", "download_audio": "음성 저장" },
+    "faq": { "title": "자주 묻는 질문", "q1": "방법은?", "a1": "링크 복사 후 여기에 붙여넣기.", "q2": "무료인가요?", "a2": "네, 완전 무료입니다.", "q3": "MP3는?", "a3": "네, 오디오만 저장 가능합니다." },
+    "about": {
+      "intro": { "p1": "최고의 틱톡 도구.", "p2": "빠르고 무료인 서비스." },
+      "steps": { "title": "작동 방식?", "step1": { "desc": "복사" }, "step2": { "desc": "붙여넣기" }, "step3": { "desc": "저장" } },
+      "features": { "title": "특징", "list": { "no_watermark": "로고 없음", "hd": "HD", "free": "무료", "fast": "빠름" } }
     },
-    "footer": { "terms": "이용약관", "privacy": "개인정보", "rights": "모든 권리 보유" }
+    "footer": { "terms": "약관", "privacy": "개인정보", "rights": "권리 보유" }
   },
   "nl": {
-    "meta": { "title": "TikTok video downloaden zonder watermerk" },
-    "nav": { "home": "Home", "about": "Over ons", "contact": "Contact", "disclaimer": "Disclaimer" },
-    "hero": { "title": "TikTok Downloader", "desc": "Downloaden zonder watermerk - Snel & Gratis" },
-    "downloader": { "placeholder": "Plak link hier...", "btn_download": "Nu downloaden" },
+    "meta": { "title": "TikTok video downloaden zonder watermerk", "description": "Download TikTok-video's zonder logo gratis in HD." },
+    "nav": { "home": "Home", "about": "Over", "contact": "Contact", "disclaimer": "Disclaimer" },
+    "hero": { "title": "TikTok Downloader", "desc": "Zonder watermerk - Snel & Gratis" },
+    "downloader": { "placeholder": "Plak link hier...", "btn_download": "Download" },
     "status": { "processing": "Verwerken..." },
-    "result": { "download_video": "Video downloaden", "download_audio": "MP3 downloaden" },
-    "faq": {
-      "title": "Veelgestelde vragen",
-      "q1": "Hoe TikTok-video's downloaden zonder watermerk?",
-      "a1": "Kopieer de videolink van TikTok, plak deze hierboven en klik op 'Nu downloaden'.",
-      "q2": "Is Snaptiks gratis?",
-      "a2": "Ja, onze TikTok-downloader is volledig gratis en onbeperkt te gebruiken.",
-      "q3": "Kan ik alleen audio (MP3) downloaden?",
-      "a3": "Ja! Na het plakken van de link zie je een optie 'Audio downloaden' in hoge kwaliteit."
+    "result": { "download_video": "Video", "download_audio": "MP3" },
+    "faq": { "title": "FAQ", "q1": "Hoe downloaden?", "a1": "Link kopiëren en hier plakken.", "q2": "Gratis?", "a2": "Ja, helemaal gratis.", "q3": "Kan MP3?", "a3": "Ja, audio is mogelijk." },
+    "about": {
+      "intro": { "p1": "Beste TikTok tool.", "p2": "Snel en gratis." },
+      "steps": { "title": "Hoe werkt het?", "step1": { "desc": "Kopiëren" }, "step2": { "desc": "Plakken" }, "step3": { "desc": "Opslaan" } },
+      "features": { "title": "Kenmerken", "list": { "no_watermark": "Zonder logo", "hd": "HD", "free": "Gratis", "fast": "Snel" } }
     },
-    "footer": { "terms": "Voorwaarden", "privacy": "Privacy", "rights": "Alle rechten voorbehouden" }
+"footer": { "terms": "Voorwaarden", "privacy": "Privacy", "rights": "Alle rechten voorbehouden" }
   },
   "hi": {
-    "meta": { "title": "बिना वॉटरमार्क के टिकटॉक वीडियो डाउनलोड करें" },
-    "nav": { "home": "होम", "about": "के बारे में", "contact": "संपर्क", "disclaimer": "अस्वीकरण" },
-    "hero": { "title": "टिकटॉक डाउनलोडर", "desc": "बिना वॉटरमार्क के डाउनलोड करें - तेज़ और मुफ़्त" },
-    "downloader": { "placeholder": "यहाँ लिंक पेस्ट करें...", "btn_download": "अभी डाउनलोड करें" },
+    "meta": { "title": "बिना वॉटरमार्क के टिकटॉक वीडियो डाउनलोड", "description": "टिकटॉक वीडियो बिना लोगो के HD में मुफ्त डाउनलोड करें।" },
+    "nav": { "home": "होम", "about": "बारे में", "contact": "संपर्क", "disclaimer": "अस्वीकरण" },
+    "hero": { "title": "टिकटॉक डाउनलोडर", "desc": "बिना वॉटरमार्क - तेज़ और मुफ़्त" },
+    "downloader": { "placeholder": "यहाँ लिंक पेस्ट करें...", "btn_download": "डाउनलोड" },
     "status": { "processing": "प्रसंस्करण..." },
-    "result": { "download_video": "वीडियो डाउनलोड करें", "download_audio": "MP3 डाउनलोड करें" },
-    "faq": {
-      "title": "अक्सर पूछे जाने वाले प्रश्न",
-      "q1": "बिना वॉटरमार्क के टिकटॉक वीडियो कैसे डाउनलोड करें?",
-      "a1": "टिकटॉक से वीडियो लिंक कॉपी करें, उसे ऊपर पेस्ट करें और 'अभी डाउनलोड करें' पर क्लिक करें।",
-      "q2": "क्या Snaptiks मुफ़्त है?",
-      "a2": "हाँ, हमारी टिकटॉक डाउनलोडर सेवा पूरी तरह से मुफ़्त और असीमित है।",
-      "q3": "क्या मैं केवल ऑडियो (MP3) डाउनलोड कर सकता हूँ?",
-      "a3": "हाँ! लिंक पेस्ट करने के बाद, आपको उच्च गुणवत्ता वाले MP3 के लिए 'ऑडियो डाउनलोड' विकल्प दिखाई देगा।"
+    "result": { "download_video": "वीडियो डाउनलोड", "download_audio": "MP3 डाउनलोड" },
+    "faq": { "title": "सामान्य प्रश्न", "q1": "कैसे डाउनलोड करें?", "a1": "लिंक कॉपी करें और यहाँ पेस्ट करें।", "q2": "मुफ्त है?", "a2": "हाँ, बिल्कुल मुफ्त।", "q3": "MP3 होगा?", "a3": "हाँ, ऑडियो डाउनलोड संभव है।" },
+    "about": {
+      "intro": { "p1": "सबसे अच्छा टिकटॉक टूल।", "p2": "तेज़ और मुफ्त सेवा।" },
+      "steps": { "title": "कैसे काम करता है?", "step1": { "desc": "कॉपी" }, "step2": { "desc": "पेस्ट" }, "step3": { "desc": "सेव" } },
+      "features": { "title": "विशेषताएं", "list": { "no_watermark": "बिना लोगो", "hd": "HD", "free": "मुफ्त", "fast": "तेज़" } }
     },
     "footer": { "terms": "नियम", "privacy": "गोपनीयता", "rights": "सर्वाधिकार सुरक्षित" }
   },
   "pl": {
-    "meta": { "title": "Pobierz wideo z TikTok bez znaku wodnego" },
-    "nav": { "home": "Strona główna", "about": "O nas", "contact": "Kontakt", "disclaimer": "Zastrzeżenie" },
-    "hero": { "title": "Pobieracz TikTok", "desc": "Pobierz bez znaku wodnego - Szybko i Za darmo" },
-    "downloader": { "placeholder": "Wklej link tutaj...", "btn_download": "Pobierz teraz" },
+    "meta": { "title": "Pobierz wideo z TikTok bez znaku wodnego", "description": "Pobieraj filmy z TikToka bez logo w HD za darmo." },
+    "nav": { "home": "Start", "about": "O nas", "contact": "Kontakt", "disclaimer": "Zastrzeżenie" },
+    "hero": { "title": "Pobieracz TikTok", "desc": "Bez znaku wodnego - Szybko i Gratis" },
+    "downloader": { "placeholder": "Wklej link tutaj...", "btn_download": "Pobierz" },
     "status": { "processing": "Przetwarzanie..." },
-    "result": { "download_video": "Pobierz Wideo", "download_audio": "Pobierz MP3" },
-    "faq": {
-      "title": "Często zadawane pytania",
-      "q1": "Jak pobrać filmy z TikToka bez znaku wodnego?",
-      "a1": "Skopiuj link do filmu z TikToka, wklej go powyżej i kliknij 'Pobierz teraz'.",
-      "q2": "Czy Snaptiks jest darmowy?",
-      "a2": "Tak, nasza usługa pobierania z TikToka jest całkowicie darmowa i nieograniczona.",
-      "q3": "Czy mogę pobrać tylko dźwięk (MP3)?",
-      "a3": "Tak! Po wklejeniu linku zobaczysz opcję 'Pobierz dźwięk' w wysokiej jakości."
+    "result": { "download_video": "Pobierz Video", "download_audio": "Pobierz MP3" },
+    "faq": { "title": "FAQ", "q1": "Jak pobrać?", "a1": "Skopiuj link i wklej go tutaj.", "q2": "Darmowe?", "a2": "Tak, całkowicie darmowe.", "q3": "Można MP3?", "a3": "Tak, dostępna opcja audio." },
+    "about": {
+      "intro": { "p1": "Najlepsze narzędzie TikTok.", "p2": "Szybki i darmowy serwis." },
+      "steps": { "title": "Jak to działa?", "step1": { "desc": "Kopiuj" }, "step2": { "desc": "Wklej" }, "step3": { "desc": "Zapisz" } },
+      "features": { "title": "Funkcje", "list": { "no_watermark": "Bez logo", "hd": "HD", "free": "Gratis", "fast": "Szybko" } }
     },
-    "footer": { "terms": "Warunki", "privacy": "Prywatność", "rights": "Wszelkie prawa zastrzeżone" }
+    "footer": { "terms": "Warunki", "privacy": "Prywatność", "rights": "Prawa zastrzeżone" }
   },
   "th": {
-    "meta": { "title": "ดาวน์โหลดวิดีโอ TikTok ไม่มีลายน้ำ" },
+    "meta": { "title": "ดาวน์โหลดวิดีโอ TikTok ไม่มีลายน้ำ", "description": "ดาวน์โหลดวิดีโอ TikTok ไม่มีโลโก้ HD ฟรี" },
     "nav": { "home": "หน้าแรก", "about": "เกี่ยวกับ", "contact": "ติดต่อ", "disclaimer": "ข้อสงวนสิทธิ์" },
-    "hero": { "title": "ดาวน์โหลด TikTok", "desc": "ดาวน์โหลดแบบไม่มีลายน้ำ - รวดเร็วและฟรี" },
-    "downloader": { "placeholder": "วางลิงก์ที่นี่...", "btn_download": "ดาวน์โหลดทันที" },
+    "hero": { "title": "ดาวน์โหลด TikTok", "desc": "ไม่มีลายน้ำ - เร็ว & ฟรี" },
+    "downloader": { "placeholder": "วางลิงก์ที่นี่...", "btn_download": "โหลดเลย" },
     "status": { "processing": "กำลังประมวลผล..." },
-    "result": { "download_video": "ดาวน์โหลดวิดีโอ", "download_audio": "ดาวน์โหลด MP3" },
-    "faq": {
-      "title": "คำถามที่พบบ่อย",
-      "q1": "วิธีดาวน์โหลดวิดีโอ TikTok แบบไม่มีลายน้ำ?",
-      "a1": "คัดลอกลิงก์วิดีโอจาก TikTok วางลงในช่องด้านบนแล้วคลิก 'ดาวน์โหลดทันที'",
-      "q2": "Snaptiks ใช้งานฟรีหรือไม่?",
-      "a2": "ใช่ บริการดาวน์โหลด TikTok ของเราฟรีและไม่จำกัดจำนวนครั้ง",
-      "q3": "ดาวน์โหลดเฉพาะเสียง (MP3) ได้หรือไม่?",
-      "a3": "ได้! หลังจากวางลิงก์ คุณจะเห็นตัวเลือก 'ดาวน์โหลดเสียง' คุณภาพสูง"
+    "result": { "download_video": "โหลดวิดีโอ", "download_audio": "โหลด MP3" },
+    "faq": { "title": "คำถามที่พบบ่อย", "q1": "โหลดยังไง?", "a1": "คัดลอกลิงก์แล้วมาวางที่นี่", "q2": "ฟรีไหม?", "a2": "ใช่ ฟรีแน่นอน", "q3": "โหลด MP3 ได้ไหม?", "a3": "ได้ สามารถโหลดแค่เสียงได้" },
+    "about": {
+      "intro": { "p1": "เครื่องมือ TikTok ที่ดีที่สุด", "p2": "บริการเร็วและฟรี" },
+      "steps": { "title": "ทำงานยังไง?", "step1": { "desc": "ก๊อปปี้" }, "step2": { "desc": "วาง" }, "step3": { "desc": "บันทึก" } },
+      "features": { "title": "คุณสมบัติ", "list": { "no_watermark": "ไม่มีโลโก้", "hd": "HD", "free": "ฟรี", "fast": "เร็ว" } }
     },
-    "footer": { "terms": "ข้อกำหนด", "privacy": "ความเป็นส่วนตัว", "rights": "สงวนลิขสิทธิ์" }
+    "footer": { "terms": "ข้อกำหนด", "privacy": "ส่วนตัว", "rights": "สงวนลิขสิทธิ์" }
   },
   "zh": {
-    "meta": { "title": "下载无水印的 TikTok 视频" },
-    "nav": { "home": "首页", "about": "关于我们", "contact": "联系我们", "disclaimer": "免责声明" },
-    "hero": { "title": "TikTok 下载器", "desc": "无水印下载 - 快速且免费" },
-    "downloader": { "placeholder": "在此处粘贴链接...", "btn_download": "立即下载" },
+    "meta": { "title": "下载无水印的 TikTok 视频", "description": "免费下载高清无水印 TikTok 视频。" },
+    "nav": { "home": "首页", "about": "关于", "contact": "联系", "disclaimer": "免责声明" },
+    "hero": { "title": "TikTok 下载器", "desc": "无水印 - 快速免费" },
+    "downloader": { "placeholder": "在此粘贴链接...", "btn_download": "下载" },
     "status": { "processing": "处理中..." },
     "result": { "download_video": "下载视频", "download_audio": "下载 MP3" },
-    "faq": {
-      "title": "常见问题",
-      "q1": "如何下载无水印的 TikTok 视频？",
-      "a1": "从 TikTok 复制视频链接，将其粘贴在上方，然后点击“立即下载”。",
-      "q2": "Snaptiks 是免费的吗？",
-      "a2": "是的，我们的 TikTok 下载服务完全免费且无限制。",
-      "q3": "我可以只下载音频 (MP3) 吗？",
-      "a3": "可以！粘贴链接后，您将看到高质量 MP3 的“下载音频”选项。"
+    "faq": { "title": "常见问题", "q1": "如何下载？", "a1": "复制链接并在此处粘贴。", "q2": "免费吗？", "a2": "是的，完全免费。", "q3": "可以下载 MP3 吗？", "a3": "可以，支持音频下载。" },
+    "about": {
+      "intro": { "p1": "最好的 TikTok 工具。", "p2": "快速免费的服务。" },
+      "steps": { "title": "如何运作？", "step1": { "desc": "复制" }, "step2": { "desc": "粘贴" }, "step3": { "desc": "保存" } },
+      "features": { "title": "功能", "list": { "no_watermark": "无水印", "hd": "高清", "free": "免费", "fast": "快速" } }
     },
     "footer": { "terms": "条款", "privacy": "隐私", "rights": "版权所有" }
   }
