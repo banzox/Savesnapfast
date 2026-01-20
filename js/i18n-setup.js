@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 supportedLngs: supportedLanguages,
                 backend: {
                     loadPath: './all-langs.json', 
-                    queryStringParams: { v: '1.5.0' } // تغيير النسخة لكسر الكاش
+                    queryStringParams: { v: '1.6.0' } // تغيير النسخة لكسر الكاش
                 },
                 detection: { 
                     order: ['path', 'localStorage', 'navigator'], 
