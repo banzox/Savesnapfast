@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             supportedLngs: supportedLanguages.map(l => l.code),
             backend: { 
                 loadPath: '/all-langs.json', // تصحيح المسار ليكون عالمياً
-                queryStringParams: { v: '10.1.0' } 
+                queryStringParams: { v: '50.0.0' } 
             },
             detection: { order: ['localStorage', 'navigator'], caches: ['localStorage'] }
         });
