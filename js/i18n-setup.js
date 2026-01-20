@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 supportedLngs: supportedLanguages,
                 backend: {
                     loadPath: './all-langs.json', 
-                    queryStringParams: { v: '1.2.0' } 
+                    queryStringParams: { v: '1.3.0' }
                 },
                 detection: { 
                     order: ['path', 'localStorage', 'navigator'], 
