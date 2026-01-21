@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultArea = document.getElementById('result-area');
     const pasteBtn = document.getElementById('paste-btn');
 
-    // 🚀 الرابط الخاص بمحركك الجديد
+    // 🚀 رابط المحرك الخاص بك
     const WORKER_URL = "https://misty-violet-50ef.banzox9595.workers.dev";
 
     // 💰 رابط الإعلان الذكي (Smart Link)
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pasteBtn && urlInput) {
         pasteBtn.addEventListener('click', async () => {
             try {
-                const text = await navigator.clipboard.readText(); //
+                const text = await navigator.clipboard.readText(); 
                 urlInput.value = text;
                 urlInput.focus(); 
             } catch (err) {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ...';
             btnElement.style.pointerEvents = 'none';
 
-            // ✅ الإضافة الوحيدة: تمرير الرابط عبر المحرك الخاص بك لكسر الحماية وضمان التحميل
+            // ✅ تمرير الرابط عبر المحرك لكسر الحماية وضمان التحميل
             const proxiedUrl = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
             
             const response = await fetch(proxiedUrl);
@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btnElement.style.pointerEvents = 'auto';
         } catch (error) {
             console.warn('Fallback to direct link:', error);
-            // إذا فشل الـ Fetch، نفتح الرابط عبر المحرك في نافذة جديدة
             window.open(`${WORKER_URL}/?url=${encodeURIComponent(url)}`, '_blank');
             btnElement.innerHTML = originalHTML;
             btnElement.style.pointerEvents = 'auto';
@@ -108,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(requestUrl);
             const data = await response.json();
             if(apiUrl.includes("tikwm") && data.code === 0) {
-                renderResult(data.data); //
+                renderResult(data.data);
                 return true;
             }
             return false; 
@@ -125,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
         const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
 
-        // تعديل الأزرار لاستدعاء دالة التحميل المباشر
         const html = `
             <div class="result-card fade-in" style="background:#1e1e1e; padding:20px; border-radius:15px; margin-top:20px; display:flex; gap:20px; flex-wrap:wrap; border:1px solid #333; text-align:center;">
                 
