@@ -12,18 +12,14 @@ const supportedLanguages = [
 document.addEventListener('DOMContentLoaded', async () => {
     if (typeof i18next === 'undefined') return;
     
-    // تحديد المسار الصحيح للملف بناءً على مكان الصفحة
-    // إذا كنا في الصفحة الرئيسية، الملف يكون all-langs.json
-    // إذا كنا في مجلد فرعي، قد نحتاج للرجوع للخلف، لكن موقعك كله في الجذر، لذا ./ هو الأفضل
-    const jsonPath = window.location.pathname.includes('/js/') ? '../all-langs.json' : './all-langs.json';
-
     try {
         await i18next.use(i18nextHttpBackend).use(i18nextBrowserLanguageDetector).init({
             fallbackLng: 'en',
             supportedLngs: supportedLanguages.map(l => l.code),
             backend: { 
-                loadPath: jsonPath, 
-                queryStringParams: { v: '500.0.0' } // تغيير الإصدار لفرض التحديث
+                // السر هنا: الشرطة المائلة / في البداية تجبر المتصفح على جلب الملف الصحيح
+                loadPath: '/all-langs.json', 
+                queryStringParams: { v: '999.0.0' } // رقم جديد لفرض التحديث
             },
             detection: { 
                 order: ['localStorage', 'navigator'], 
