@@ -1,5 +1,5 @@
 // ============================================================
-// الحل الجذري: دمج قاعدة بيانات الترجمة كاملة (30 لغة) هنا
+// الحل الجذري الشامل: دمج قاعدة بيانات الترجمة (30 لغة)
 // ============================================================
 
 const resources = {
@@ -83,7 +83,6 @@ const resources = {
   he: { translation: { "nav": { "home": "בית", "about": "אודות", "terms": "תנאים" }, "hero": { "title": "הורדת טיקטוק", "desc": "ללא סימן מים - מהיר ובחינם" }, "pages": { "about": { "title": "אודותינו", "content": "Snaptiks עוזר לך לשמור סרטוני טיקטוק ללא לוגו." } } } }
 };
 
-// 2. قائمة اللغات المعروضة
 const supportedLanguages = [
     { code: 'ar', name: 'العربية' }, { code: 'en', name: 'English' }, { code: 'fr', name: 'Français' }, { code: 'es', name: 'Español' },
     { code: 'de', name: 'Deutsch' }, { code: 'id', name: 'Bahasa Indonesia' }, { code: 'pt', name: 'Português' }, { code: 'ru', name: 'Русский' },
@@ -102,7 +101,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         await i18next.use(i18nextBrowserLanguageDetector).init({
             fallbackLng: 'en',
             debug: false,
-            resources: resources, // استخدام الترجمة المدمجة مباشرة
+            resources: resources, // 🔥 هنا يكمن الحل: استخدام الموارد المدمجة
             detection: { 
                 order: ['localStorage', 'navigator'], 
                 caches: ['localStorage'] 
@@ -118,7 +117,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 // -----------------------------------------------------------
-// بقية الدوال البرمجية (لم تتغير)
+// بقية الدوال البرمجية (للهيدر والفوتر والستايل)
 // -----------------------------------------------------------
 
 function injectStylesForSubpages() {
