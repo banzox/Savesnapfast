@@ -1,165 +1,208 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. تعريف عناصر الواجهة
+
+    /* =========================
+       1. عناصر الواجهة
+    ========================== */
     const downloadBtn = document.getElementById('download-btn');
     const urlInput = document.getElementById('url-input');
     const resultArea = document.getElementById('result-area');
     const pasteBtn = document.getElementById('paste-btn');
 
-    // 🚀 رابط المحرك الخاص بك
+    // 🚀 الإضافة: رابط المحرك الخاص بك
     const WORKER_URL = "https://misty-violet-50ef.banzox9595.workers.dev";
-
-    // 💰 رابط الإعلان الذكي (Smart Link)
+    
+    // 💰 رابط الإعلان الذكي (Adsterra)
     const MY_SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
-    // 2. تفعيل وظيفة زر اللصق (Paste Button)
+    /* =========================
+       2. تفعيل وظيفة زر اللصق
+    ========================== */
     if (pasteBtn && urlInput) {
         pasteBtn.addEventListener('click', async () => {
             try {
-                const text = await navigator.clipboard.readText(); 
+                const text = await navigator.clipboard.readText();
                 urlInput.value = text;
-                urlInput.focus(); 
-            } catch (err) {
-                console.error('فشل الوصول إلى الحافظة:', err);
+                urlInput.focus();
+            } catch (e) {
+                console.error('Clipboard access denied');
             }
         });
     }
 
-    // 3. دالة التحميل المباشر (إجبار المتصفح على التنزيل)
-    window.downloadFile = async function(url, fileName, btnElement) {
-        const originalHTML = btnElement.innerHTML;
+    /* =========================
+       3. دالة التحميل المباشر (عبر المحرك)
+    ========================== */
+    window.downloadFile = async (rawUrl, fileName, btn) => {
+        const url = decodeURIComponent(rawUrl);
+        const originalHTML = btn.innerHTML;
+
         try {
+            // فتح الإعلان للربح أولاً
+            window.open(MY_SMART_LINK, '_blank');
+
             // إظهار حالة جاري التحميل داخل الزر
-            btnElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ...';
-            btnElement.style.pointerEvents = 'none';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            btn.style.pointerEvents = 'none';
 
-            // ✅ تمرير الرابط عبر المحرك لكسر الحماية وضمان التحميل
-            const proxiedUrl = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
-            
-            const response = await fetch(proxiedUrl);
-            if (!response.ok) throw new Error('Network error');
-            
-            const blob = await response.blob();
-            const blobUrl = window.URL.createObjectURL(blob);
-            
-            const link = document.createElement('a');
-            link.href = blobUrl;
-            link.download = fileName || 'tiktok-video.mp4';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(blobUrl);
+            // استخدام المحرك لكسر حماية تيك توك وإجبار التحميل
+            const proxied = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
+            const res = await fetch(proxied);
+            if (!res.ok) throw new Error('Fetch failed');
 
-            btnElement.innerHTML = originalHTML;
-            btnElement.style.pointerEvents = 'auto';
-        } catch (error) {
-            console.warn('Fallback to direct link:', error);
-            window.open(`${WORKER_URL}/?url=${encodeURIComponent(url)}`, '_blank');
-            btnElement.innerHTML = originalHTML;
-            btnElement.style.pointerEvents = 'auto';
+            const blob = await res.blob();
+            const blobUrl = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = fileName || 'video.mp4';
+            document.body.appendChild(a);
+            a.click();
+
+            URL.revokeObjectURL(blobUrl);
+            document.body.removeChild(a);
+
+        } catch (e) {
+            // Fallback: التوجه للمحرك مباشرة في حال فشل المتصفح
+            window.location.href = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
+        } finally {
+            btn.innerHTML = originalHTML;
+            btn.style.pointerEvents = 'auto';
         }
     };
 
-    // 4. روابط السيرفرات الأساسية
+    /* =========================
+       4. السيرفرات (APIs)
+    ========================== */
     const apiEndpoints = [
-        "https://www.tikwm.com/api/", 
-        "https://api.tikmate.app/api/lookup",
+        { name: 'tikwm', url: 'https://www.tikwm.com/api/' },
+        { name: 'tikmate', url: 'https://api.tikmate.app/api/lookup' }
     ];
 
-    // 5. تفعيل عملية التحميل
+    /* =========================
+       5. زر التحميل الأساسي
+    ========================== */
     if (downloadBtn) {
         downloadBtn.addEventListener('click', () => {
             const url = urlInput.value.trim();
             if (!url) {
-                const placeholder = (typeof i18next !== 'undefined') ? i18next.t('downloader.placeholder') : 'Please paste a link first';
-                alert(placeholder);
+                const msg = (typeof i18next !== 'undefined') ? i18next.t('downloader.placeholder') : 'Please paste a TikTok link';
+                alert(msg);
                 return;
             }
-            startDownloadProcess(url);
+            startProcess(url);
         });
     }
 
-    async function startDownloadProcess(videoUrl) {
-        const processingTxt = (typeof i18next !== 'undefined') ? i18next.t('downloader.processing') : 'Processing...';
-        
+    /* =========================
+       6. بدء المعالجة
+    ========================== */
+    async function startProcess(videoUrl) {
+        const procTxt = (typeof i18next !== 'undefined') ? i18next.t('downloader.processing') : 'Processing...';
         resultArea.innerHTML = `
-            <div class="loader-container" style="text-align:center; padding:30px;">
-                <i class="fas fa-circle-notch fa-spin" style="font-size:2.5rem; color:#00f2ea;"></i>
-                <p style="margin-top:15px; font-weight:bold;">${processingTxt}</p>
+            <div style="text-align:center;padding:30px">
+                <i class="fas fa-circle-notch fa-spin" style="font-size:2.5rem;color:#00f2ea"></i>
+                <p style="margin-top:15px;font-weight:bold;color:white">${procTxt}</p>
             </div>
         `;
 
-        for (let i = 0; i < apiEndpoints.length; i++) {
+        for (const api of apiEndpoints) {
             try {
-                const success = await fetchFromApi(apiEndpoints[i], videoUrl);
-                if (success) return;
-            } catch (e) { 
-                console.log(`Server ${i+1} failed...`); 
-            }
+                const ok = await fetchFromApi(api, videoUrl);
+                if (ok) return;
+            } catch {}
         }
 
-        const errorMsg = (typeof i18next !== 'undefined') ? i18next.t('downloader.error_busy') : 'Service busy. Please try again later.';
-        resultArea.innerHTML = `<div style="text-align:center; color:#ff4444; padding:20px; background:rgba(255,0,0,0.1); border-radius:10px;">${errorMsg}</div>`;
+        const errTxt = (typeof i18next !== 'undefined') ? i18next.t('downloader.error_busy') : 'Service busy, try again later';
+        resultArea.innerHTML = `<div style="color:#ff4444;text-align:center;padding:20px">${errTxt}</div>`;
     }
 
-    async function fetchFromApi(apiUrl, videoUrl) {
-        let requestUrl = apiUrl.includes("tikwm") ? `${apiUrl}?url=${encodeURIComponent(videoUrl)}` : `${apiUrl}?url=${videoUrl}`;
-        try {
-            const response = await fetch(requestUrl);
-            const data = await response.json();
-            if(apiUrl.includes("tikwm") && data.code === 0) {
-                renderResult(data.data);
-                return true;
-            }
-            return false; 
-        } catch (error) { 
-            return false; 
+    /* =========================
+       7. جلب البيانات
+    ========================== */
+    async function fetchFromApi(api, videoUrl) {
+        const req = api.name === 'tikwm'
+                ? `${api.url}?url=${encodeURIComponent(videoUrl)}`
+                : `${api.url}?url=${videoUrl}`;
+
+        const res = await fetch(req);
+        const data = await res.json();
+
+        if (api.name === 'tikwm' && data.code === 0) {
+            renderResult(normalizeTikwm(data.data));
+            return true;
         }
+        if (api.name === 'tikmate' && data.success) {
+            renderResult(normalizeTikmate(data.result));
+            return true;
+        }
+        return false;
     }
 
-    function renderResult(videoData) {
-        const { cover, play, hdplay, music, title, author } = videoData;
-        const hdLink = hdplay || play; 
+    /* =========================
+       8. توحيد البيانات
+    ========================== */
+    function normalizeTikwm(d) {
+        return {
+            cover: d.cover,
+            play: d.play,
+            hd: d.hdplay || d.play,
+            music: d.music,
+            title: d.title || 'TikTok Video',
+            author: d.author?.nickname || 'unknown'
+        };
+    }
 
+    function normalizeTikmate(d) {
+        return {
+            cover: d.cover,
+            play: d.video,
+            hd: d.video,
+            music: d.music,
+            title: d.title || 'TikTok Video',
+            author: d.author || 'unknown'
+        };
+    }
+
+    /* =========================
+       9. عرض النتيجة النهائية
+    ========================== */
+    function renderResult(v) {
+        const displayTitle = v.title.length > 60 ? v.title.substring(0, 60) + '…' : v.title;
         const t_vid = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_video') : 'Download Video';
         const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
         const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
 
-        const html = `
-            <div class="result-card fade-in" style="background:#1e1e1e; padding:20px; border-radius:15px; margin-top:20px; display:flex; gap:20px; flex-wrap:wrap; border:1px solid #333; text-align:center;">
-                
-                <div class="video-thumb" style="flex:1; min-width:150px;">
-                    <img src="${cover}" alt="Cover" style="width:100%; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
-                </div>
+        resultArea.innerHTML = `
+            <div class="result-card fade-in" style="background:#1e1e1e;padding:20px;border-radius:15px;border:1px solid #333;display:flex;gap:20px;flex-wrap:wrap;color:white">
+                <img src="${v.cover}" style="width:160px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5)">
+                <div style="flex:1;min-width:250px">
+                    <h3 style="margin-bottom:5px">${displayTitle}</h3>
+                    <p style="color:#aaa;margin-bottom:15px">@${v.author}</p>
 
-                <div class="video-info" style="flex:2; min-width:250px; display:flex; flex-direction:column; justify-content:center;">
-                    <h3 style="margin-bottom:5px; font-size:1.1rem; color:white;">${title ? title.substring(0, 60) : 'TikTok Video'}...</h3>
-                    <p style="color:#aaa; margin-bottom:20px; font-size:0.9rem;">@${author.nickname}</p>
-                    
-                    <button onclick="downloadFile('${play}', 'video_server1.mp4', this)" style="
-                        background: #333; color: white; padding: 12px; border: 1px solid #444; 
-                        text-align: center; border-radius: 8px; margin-bottom: 10px; cursor: pointer;
-                        font-weight: bold; width: 100%;">
-                        <i class="fas fa-video"></i> ${t_vid} (Server 1)
+                    <button class="btn-dl video-action" data-url="${encodeURIComponent(v.play)}" data-name="video.mp4" 
+                        style="background:#333;width:100%;padding:12px;border-radius:8px;margin-bottom:10px;color:white;cursor:pointer;border:1px solid #444;font-weight:bold">
+                        <i class="fas fa-video"></i> ${t_vid}
                     </button>
-                    
-                    <button onclick="window.open('${MY_SMART_LINK}', '_blank'); downloadFile('${hdLink}', 'video_hd.mp4', this)" style="
-                        background: linear-gradient(90deg, #00f2ea 0%, #ff0050 100%); 
-                        color: white; padding: 15px; border: none; text-align: center; 
-                        border-radius: 8px; margin-bottom: 10px; cursor: pointer; font-weight: 800; 
-                        box-shadow: 0 4px 20px rgba(255, 0, 80, 0.4); width: 100%;">
+
+                    <button class="btn-dl hd-action" data-url="${encodeURIComponent(v.hd)}" data-name="video_hd.mp4" 
+                        style="background:linear-gradient(90deg,#00f2ea,#ff0050);width:100%;padding:15px;border-radius:8px;margin-bottom:10px;color:white;cursor:pointer;border:none;font-weight:800;box-shadow:0 4px 15px rgba(255,0,80,0.3)">
                         <i class="fas fa-high-definition"></i> ${t_vid} (${t_hd})
                     </button>
 
-                    ${music ? `
-                    <button onclick="downloadFile('${music}', 'audio.mp3', this)" style="
-                        background: transparent; color: #00f2ea; padding: 10px; border: 1px dashed #00f2ea;
-                        text-align: center; border-radius: 8px; cursor: pointer; font-size: 0.9rem; width: 100%;">
+                    ${v.music ? `
+                    <button class="btn-dl audio-action" data-url="${encodeURIComponent(v.music)}" data-name="audio.mp3" 
+                        style="background:transparent;width:100%;padding:10px;border-radius:8px;color:#00f2ea;cursor:pointer;border:1px dashed #00f2ea">
                         <i class="fas fa-music"></i> ${t_aud}
                     </button>` : ''}
-
                 </div>
             </div>
         `;
-        resultArea.innerHTML = html;
+
+        // ربط الأحداث بالأزرار الجديدة
+        resultArea.querySelectorAll('.btn-dl').forEach(btn => {
+            btn.addEventListener('click', () => {
+                downloadFile(btn.dataset.url, btn.dataset.name, btn);
+            });
+        });
     }
 });
