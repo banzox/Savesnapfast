@@ -1,8 +1,8 @@
-# 1. تحويل الروابط "النظيفة" إلى روابط البرمجة (301 Redirect)
+# توجيه اللغات الـ 30 باستخدام 301 (توجيه دائم وآمن)
 /ar    /?lang=ar    301
 /en    /?lang=en    301
-/id    /?lang=id    301
 /tr    /?lang=tr    301
+/id    /?lang=id    301
 /fr    /?lang=fr    301
 /es    /?lang=es    301
 /de    /?lang=de    301
@@ -30,13 +30,5 @@
 /ms    /?lang=ms    301
 /he    /?lang=he    301
 
-# 2. قاعدة تشغيل الصفحات القانونية
-/about     /about.html    200
-/contact   /contact.html  200
-/terms     /terms.html    200
-/privacy   /privacy.html  200
-/dmca      /dmca.html     200
-
-# 3. القاعدة الذهبية لمنع الـ 404 نهائياً (توضع في آخر الملف)
+# [span_0](start_span)قاعدة الـ SPA الشاملة لمنع أخطاء 404 (توضع في النهاية)[span_0](end_span)
 /* /index.html    200
-
