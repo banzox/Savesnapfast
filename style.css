@@ -1,132 +1,213 @@
-/* الألوان الأساسية - هوية Snaptiks الموحدة */
+/* 1. المتغيرات والأساسيات */
 :root {
-    --primary: #ff0050; 
-    --secondary: #00f2ea;
-    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
-    --glass: rgba(255, 255, 255, 0.08);
-    --border: rgba(255, 255, 255, 0.15);
-    --transition: all 0.3s ease;
+    --primary: #ff0050;    /* أحمر تيك توك */
+    --secondary: #00f2ea;  /* فيروزي تيك توك */
+    --bg-dark: #0f0c29;
+    --bg-gradient: radial-gradient(circle at top, #1a1a2e 0%, #0f0c29 100%);
+    --glass: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     background: var(--bg-gradient);
-    font-family: 'Inter', 'Tajawal', 'Segoe UI', sans-serif;
-    color: white;
-    min-height: 100vh;
-    margin: 0;
+    color: #fff;
+    font-family: 'Inter', 'Tajawal', sans-serif;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
-/* صندوق التحميل الزجاجي - محسن للسيو والأداء */
+/* 2. الهيدر المطور (Header & Logo) */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(15, 12, 41, 0.85);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i { color: var(--primary); font-size: 28px; }
+
+/* زر اختيار اللغة الأنيق */
+.lang-select {
+    background: var(--glass);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    outline: none;
+    transition: var(--transition);
+    box-shadow: 0 0 10px rgba(0, 242, 234, 0.1);
+}
+
+.lang-select:hover { background: rgba(0, 242, 234, 0.1); transform: translateY(-2px); }
+
+/* 3. قسم الهيرو وصندوق التحميل */
+.hero-section {
+    padding: 140px 20px 60px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #fff, var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .downloader-box {
     background: var(--glass);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 24px;
+    padding: 10px;
+    border-radius: 20px;
     border: 1px solid var(--border);
-    padding: 25px;
-    max-width: 650px;
-    margin: 2rem auto;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    gap: 10px;
+    margin-top: 30px;
+    box-shadow: var(--shadow);
 }
 
 .input-wrapper {
-    position: relative;
-    width: 100%;
+    flex: 1;
     display: flex;
-    align-items: center;
+    background: rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 5px 15px;
 }
 
 #url-input {
-    width: 100%;
-    /* استخدام padding-inline للتعامل مع اللغات الـ 30 تلقائياً */
-    padding-block: 18px;
-    padding-inline: 15px 135px; 
-    border-radius: 15px;
-    border: 1px solid var(--border);
-    background: rgba(255,255,255,0.05);
-    color: white;
-    font-size: 1rem;
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 12px;
     outline: none;
-    transition: var(--transition);
+    font-size: 16px;
 }
 
-#url-input:focus {
-    border-color: var(--secondary);
-    background: rgba(255,255,255,0.1);
-    box-shadow: 0 0 15px rgba(0, 242, 234, 0.2);
-}
-
-/* زر اللصق - يدعم جميع الاتجاهات برمجياً */
 #paste-btn {
-    position: absolute;
-    /* يوضع في النهاية حسب اتجاه اللغة (يمين للإنجليزية، يسار للعربية) */
-    inset-inline-end: 10px;
-    background: var(--secondary);
-    color: #000;
+    background: transparent;
+    color: var(--secondary);
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: 700;
     cursor: pointer;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    white-space: nowrap; /* يمنع انكسار الكلمة في اللغات الطويلة */
-}
-
-#paste-btn:hover {
-    filter: brightness(1.1);
-    transform: scale(1.02);
-}
-
-/* زر التحميل الرئيسي */
-#download-btn {
-    width: 100%;
-    padding: 18px;
-    border-radius: 15px;
-    background: linear-gradient(45deg, var(--primary), #ff4081);
-    color: white;
-    font-weight: 800;
     font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+#download-btn {
+    background: linear-gradient(45deg, var(--primary), #ff4d89);
+    color: white;
     border: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-weight: 800;
     cursor: pointer;
-    box-shadow: 0 5px 20px rgba(255, 0, 80, 0.4);
     transition: var(--transition);
 }
 
-#download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 0, 80, 0.5);
+#download-btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+/* 4. الأسئلة الشائعة (Accordion) - إصلاح الفتح والغلق */
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+
+.faq-item {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: var(--transition);
 }
 
-#download-btn:active {
-    transform: translateY(0);
+.faq-question {
+    padding: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    background: rgba(255,255,255,0.02);
 }
 
-/* حاوية الإعلانات - محجوزة مسبقاً لمنع انزياح المحتوى CLS */
+.faq-question i { color: var(--secondary); transition: 0.4s; }
+
+.faq-answer {
+    max-height: 0;
+    padding: 0 22px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background: rgba(0,0,0,0.1);
+}
+
+.faq-item.active { border-color: var(--secondary); background: rgba(0, 242, 234, 0.03); }
+.faq-item.active .faq-answer { max-height: 500px; padding: 20px 22px; opacity: 1; }
+.faq-item.active .faq-question i { transform: rotate(180deg); }
+
+/* 5. الإعلانات والفوتر */
 .ad-container {
-    margin: 30px auto;
-    min-height: 150px; /* حجز المساحة لسكور سيو أفضل */
+    margin: 40px auto;
+    min-height: 250px;
+    border-radius: 20px;
+    border: 1px dashed var(--border);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255,255,255,0.02);
-    border-radius: 15px;
-    border: 1px dashed rgba(255,255,255,0.1);
 }
 
-/* تحسينات إضافية لنتائج البحث */
-.result-card {
-    animation: fadeIn 0.5s ease-out;
+footer {
+    background: rgba(0,0,0,0.3);
+    padding: 60px 20px 30px;
+    margin-top: 80px;
+    text-align: center;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.footer-links a:hover { color: var(--secondary); }
+
+/* تحسينات الموبايل */
+@media (max-width: 768px) {
+    .downloader-box { flex-direction: column; padding: 15px; }
+    .hero-section h1 { font-size: 2rem; }
+    .nav-container { padding: 10px 15px; }
+    .logo { font-size: 20px; }
 }
