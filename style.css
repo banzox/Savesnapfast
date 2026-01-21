@@ -1,132 +1,44 @@
-/* =========================================
-   1. المتغيرات والألوان (هوية Snaptiks الفاخرة)
-   ========================================= */
+/* تنسيق Snaptiks الاحترافي - المظهر الزجاجي */
 :root {
-    --primary-color: #ff0050;    /* الوردي المتوهج */
-    --secondary-color: #00f2ea;  /* الفيروزي المشع */
+    --primary: #ff0050; --secondary: #00f2ea;
     --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-    --glass-bg: rgba(255, 255, 255, 0.08);
-    --glass-border: rgba(255, 255, 255, 0.15);
-    --text-white: #ffffff;
-    --text-gray: #b8b8b8;
+    --glass: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.15);
 }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: 'Tajawal', 'Inter', sans-serif;
-    background: var(--bg-gradient);
-    min-height: 100vh;
-    color: var(--text-white);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* دعم الاتجاهات RTL/LTR */
-html[dir="rtl"] { direction: rtl; text-align: right; }
-html[dir="ltr"] { direction: ltr; text-align: left; }
-
-/* =========================================
-   2. الهيدر (Header) بلمسة زجاجية
-   ========================================= */
-nav {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1rem 5%; background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border);
-    position: sticky; top: 0; z-index: 1000;
-}
-.logo { font-size: 1.8rem; font-weight: 800; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-.logo i { color: var(--secondary-color); text-shadow: 0 0 10px var(--secondary-color); }
-
-.nav-links { list-style: none; display: flex; gap: 20px; align-items: center; }
-.nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; cursor: pointer; }
-.nav-links a:hover { color: var(--secondary-color); }
-
-/* =========================================
-   3. منطقة التحميل (Downloader) - تحسين المساحات
-   ========================================= */
-.hero-section { text-align: center; padding: 5rem 1rem 3rem; }
-.hero-section h1 { 
-    font-size: 3rem; margin-bottom: 1rem; 
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 10px rgba(255,0,80,0.3));
+    background: var(--bg-gradient); font-family: 'Tajawal', sans-serif;
+    color: white; min-height: 100vh; margin: 0;
 }
 
 .downloader-box {
-    max-width: 650px; margin: 2rem auto;
-    background: var(--glass-bg); padding: 30px;
-    border-radius: 24px; border: 1px solid var(--glass-border);
-    backdrop-filter: blur(20px); box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background: var(--glass); backdrop-filter: blur(20px);
+    border-radius: 24px; border: 1px solid var(--border);
+    padding: 30px; max-width: 650px; margin: 3rem auto;
 }
 
-.input-wrapper {
-    position: relative; width: 100%; margin-bottom: 20px;
-    display: flex; align-items: center;
-}
+.input-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
 
 #url-input {
-    width: 100%; padding: 20px;
-    padding-right: 120px !important; /* حجز مساحة دائمة للزر لمنع التداخل */
-    border-radius: 15px; border: 2px solid var(--glass-border);
-    background: rgba(0, 0, 0, 0.3) !important;
-    color: white !important; font-size: 1rem; outline: none; transition: 0.3s;
+    width: 100%; padding: 18px; 
+    padding-right: 130px !important; /* مساحة محجوزة لزر اللصق */
+    border-radius: 12px; border: 1px solid var(--border);
+    background: rgba(0,0,0,0.4) !important; color: white !important;
 }
-#url-input:focus { border-color: var(--secondary-color); background: rgba(0, 0, 0, 0.5) !important; }
 
-/* زر اللصق - أنيق ومدمج كما في الصور القديمة */
 #paste-btn {
-    position: absolute; right: 10px; top: 50%;
-    transform: translateY(-50%);
-    background: var(--secondary-color); color: #0f0c29;
-    border: none; padding: 10px 18px; border-radius: 10px;
-    font-weight: 700; cursor: pointer; transition: 0.3s;
-    display: flex; align-items: center; gap: 6px; z-index: 10;
+    position: absolute; right: 10px; background: var(--secondary);
+    color: #000; border: none; padding: 10px 18px;
+    border-radius: 10px; font-weight: bold; cursor: pointer;
 }
-#paste-btn:hover { opacity: 0.9; transform: translateY(-50%) scale(1.05); }
 
-/* تعديل الاتجاه للغة العربية */
-html[dir="rtl"] #url-input { padding-right: 20px !important; padding-left: 120px !important; }
+/* إصلاح الاتجاه للغة العربية */
+html[dir="rtl"] #url-input { padding-right: 18px !important; padding-left: 130px !important; }
 html[dir="rtl"] #paste-btn { right: auto; left: 10px; }
 
 #download-btn {
-    width: 100%; padding: 18px; border-radius: 15px; border: none;
-    background: linear-gradient(45deg, var(--primary-color), #ff4081);
-    color: white; font-size: 1.25rem; font-weight: 800; cursor: pointer;
-    box-shadow: 0 10px 20px rgba(255, 0, 80, 0.3); transition: 0.3s;
+    width: 100%; padding: 18px; margin-top: 15px;
+    background: linear-gradient(45deg, var(--primary), #ff4081);
+    border: none; border-radius: 12px; color: white;
+    font-weight: 800; cursor: pointer;
 }
-#download-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 0, 80, 0.5); }
-
-/* =========================================
-   4. الإعلانات والأسئلة الشائعة
-   ========================================= */
-.ad-container { 
-    margin: 25px auto; text-align: center; 
-    max-width: 100%; overflow: hidden; max-height: 180px; 
-    border-radius: 15px;
-}
-
-.faq-section h2 { text-align: center; margin-bottom: 30px; color: var(--secondary-color); }
-.faq-item { 
-    background: var(--glass-bg); border: 1px solid var(--glass-border); 
-    border-radius: 15px; margin-bottom: 12px; transition: 0.3s;
-}
-.faq-question { 
-    width: 100%; padding: 20px; background: none; border: none; 
-    color: white; font-size: 1.1rem; font-weight: 700; cursor: pointer; 
-    display: flex; justify-content: space-between; align-items: center; 
-}
-.faq-answer { max-height: 0; overflow: hidden; transition: 0.3s; color: var(--text-gray); }
-.faq-item.active .faq-answer { max-height: 500px; padding: 0 20px 20px; }
-.faq-item.active { background: rgba(255, 255, 255, 0.12); }
-
-/* =========================================
-   5. نتائج التحميل (Result Card)
-   ========================================= */
-.result-card {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid var(--glass-border) !important;
-    backdrop-filter: blur(10px);
-}
-
-footer { background: rgba(0, 0, 0, 0.4); padding: 3rem 1rem; text-align: center; border-top: 1px solid var(--glass-border); }
