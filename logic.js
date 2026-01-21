@@ -1,36 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. تعريف عناصر الواجهة بناءً على ملف index.html
+    // 1. تعريف عناصر الواجهة
     const downloadBtn = document.getElementById('download-btn');
     const urlInput = document.getElementById('url-input');
     const resultArea = document.getElementById('result-area');
     const pasteBtn = document.getElementById('paste-btn');
 
-    // 💰 رابط الإعلان الذكي (Smart Link) الخاص بك
-    const MY_SMART_LINK = "https://www.effectivegatecpm.com/bbwwxr11?key=af511c5cb9de4464ac015b23ff514099";
+    // 💰 رابط الإعلان الذكي (Smart Link) المحدث الخاص بك
+    const MY_SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
-    // 2. تفعيل وظيفة زر اللصق (Paste Button) - مضافة الآن
-    if (pasteBtn) {
+    // 2. تفعيل وظيفة زر اللصق (Paste Button)
+    if (pasteBtn && urlInput) {
         pasteBtn.addEventListener('click', async () => {
             try {
                 const text = await navigator.clipboard.readText();
-                if (urlInput) {
-                    urlInput.value = text;
-                    urlInput.focus(); // تركيز المؤشر داخل الحقل بعد اللصق
-                }
+                urlInput.value = text;
+                urlInput.focus(); 
             } catch (err) {
                 console.error('فشل الوصول إلى الحافظة:', err);
-                // تنبيه بديل في حال رفض المستخدم إذن الوصول للحافظة
+                // التنبيه بلغة المستخدم إذا كانت المكتبة جاهزة
+                const msg = (typeof i18next !== 'undefined') ? i18next.t('downloader.paste_error') : 'Please allow clipboard access';
+                console.warn(msg);
             }
         });
     }
 
-    // 3. روابط السيرفرات البديلة
+    // 3. روابط السيرفرات الأساسية
     const apiEndpoints = [
         "https://www.tikwm.com/api/", 
         "https://api.tikmate.app/api/lookup",
     ];
 
-    // 4. تفعيل عملية التحميل عند الضغط على الزر الرئيسي
+    // 4. تفعيل عملية التحميل
     if (downloadBtn) {
         downloadBtn.addEventListener('click', () => {
             const url = urlInput.value.trim();
@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function startDownloadProcess(videoUrl) {
         const processingTxt = (typeof i18next !== 'undefined') ? i18next.t('downloader.processing') : 'Processing...';
+        
+        // إظهار مؤشر التحميل
         resultArea.innerHTML = `
             <div class="loader-container" style="text-align:center; padding:30px;">
                 <i class="fas fa-circle-notch fa-spin" style="font-size:2.5rem; color:#00f2ea;"></i>
@@ -52,14 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
+        // محاولة جلب البيانات من السيرفرات المتاحة
         for (let i = 0; i < apiEndpoints.length; i++) {
             try {
                 const success = await fetchFromApi(apiEndpoints[i], videoUrl);
                 if (success) return;
-            } catch (e) { console.log(`Server ${i+1} failed...`); }
+            } catch (e) { 
+                console.log(`Server ${i+1} failed...`); 
+            }
         }
 
-        resultArea.innerHTML = `<div style="text-align:center; color:#ff4444; padding:20px; background:rgba(255,0,0,0.1); border-radius:10px;">Service busy. Please try again later.</div>`;
+        const errorMsg = (typeof i18next !== 'undefined') ? i18next.t('downloader.error_busy') : 'Service busy. Please try again later.';
+        resultArea.innerHTML = `<div style="text-align:center; color:#ff4444; padding:20px; background:rgba(255,0,0,0.1); border-radius:10px;">${errorMsg}</div>`;
     }
 
     async function fetchFromApi(apiUrl, videoUrl) {
@@ -72,15 +78,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 return true;
             }
             return false; 
-        } catch (error) { return false; }
+        } catch (error) { 
+            return false; 
+        }
     }
 
     function renderResult(videoData) {
         const { cover, play, hdplay, music, title, author } = videoData;
-        const hdLink = hdplay || play; // استخدام الرابط العادي كبديل في حال عدم توفر HD
+        const hdLink = hdplay || play; 
 
+        // نصوص الأزرار المترجمة
         const t_vid = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_video') : 'Download Video';
         const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
+        const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
 
         const html = `
             <div class="result-card fade-in" style="background:#1e1e1e; padding:20px; border-radius:15px; margin-top:20px; display:flex; gap:20px; flex-wrap:wrap; border:1px solid #333; text-align:center;">
@@ -108,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         color: white; padding: 15px; text-decoration: none; text-align: center; 
                         border-radius: 8px; margin-bottom: 10px; display: block; font-weight: 800; 
                         box-shadow: 0 4px 20px rgba(255, 0, 80, 0.4); transform: scale(1.02); transition: 0.3s;">
-                        <i class="fas fa-high-definition"></i> ${t_vid} (HD Quality)
+                        <i class="fas fa-high-definition"></i> ${t_vid} (${t_hd})
                     </a>
 
                     ${music ? `

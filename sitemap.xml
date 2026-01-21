@@ -1,22 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
     <loc>https://savetik-fast.xyz/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://savetik-fast.xyz/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://savetik-fast.xyz/?lang=id" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://savetik-fast.xyz/?lang=tr" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://savetik-fast.xyz/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://savetik-fast.xyz/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://savetik-fast.xyz/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://savetik-fast.xyz/?lang=pt" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://savetik-fast.xyz/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://savetik-fast.xyz/?lang=it" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://savetik-fast.xyz/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://savetik-fast.xyz/?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://savetik-fast.xyz/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://savetik-fast.xyz/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://savetik-fast.xyz/?lang=nl" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://savetik-fast.xyz/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="th" href="https://savetik-fast.xyz/?lang=th" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://savetik-fast.xyz/?lang=pl" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://savetik-fast.xyz/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://savetik-fast.xyz/?lang=el" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://savetik-fast.xyz/?lang=sv" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://savetik-fast.xyz/?lang=no" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://savetik-fast.xyz/?lang=da" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://savetik-fast.xyz/?lang=fi" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://savetik-fast.xyz/?lang=cs" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://savetik-fast.xyz/?lang=hu" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://savetik-fast.xyz/?lang=ro" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://savetik-fast.xyz/?lang=sk" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://savetik-fast.xyz/?lang=ms" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://savetik-fast.xyz/?lang=he" />
     <lastmod>2026-01-21</lastmod>
     <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>https://savetik-fast.xyz/index.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://savetik-fast.xyz/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://savetik-fast.xyz/about.html?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/about.html?lang=en" />
     <lastmod>2026-01-21</lastmod>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
@@ -26,27 +54,15 @@
   </url>
 
   <url>
-    <loc>https://savetik-fast.xyz/terms.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
     <loc>https://savetik-fast.xyz/privacy.html</loc>
     <lastmod>2026-01-21</lastmod>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://savetik-fast.xyz/dmca.html</loc>
+    <loc>https://savetik-fast.xyz/terms.html</loc>
     <lastmod>2026-01-21</lastmod>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://savetik-fast.xyz/disclaimer.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
 </urlset>

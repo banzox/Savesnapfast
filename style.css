@@ -1,42 +1,132 @@
-/* التنسيق الزجاجي الفاخر والمستقر */
+/* الألوان الأساسية - هوية Snaptiks الموحدة */
 :root {
-    --primary: #ff0050; --secondary: #00f2ea;
-    --bg: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
+    --primary: #ff0050; 
+    --secondary: #00f2ea;
+    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
     --glass: rgba(255, 255, 255, 0.08);
     --border: rgba(255, 255, 255, 0.15);
+    --transition: all 0.3s ease;
 }
 
-body { background: var(--bg); font-family: 'Segoe UI', sans-serif; color: white; min-height: 100vh; margin: 0; }
+body {
+    background: var(--bg-gradient);
+    font-family: 'Inter', 'Tajawal', 'Segoe UI', sans-serif;
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
 
+/* صندوق التحميل الزجاجي - محسن للسيو والأداء */
 .downloader-box {
-    background: var(--glass); backdrop-filter: blur(20px);
-    border-radius: 24px; border: 1px solid var(--border);
-    padding: 30px; max-width: 650px; margin: 3rem auto;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    padding: 25px;
+    max-width: 650px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.input-wrapper { position: relative; width: 100%; display: flex; align-items: center; margin-bottom: 20px; }
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
 #url-input {
-    width: 100%; padding: 20px; padding-right: 120px !important;
-    border-radius: 15px; border: 2px solid var(--border);
-    background: rgba(255,255,255,0.05) !important; color: white !important; font-size: 1rem;
+    width: 100%;
+    /* استخدام padding-inline للتعامل مع اللغات الـ 30 تلقائياً */
+    padding-block: 18px;
+    padding-inline: 15px 135px; 
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
 }
 
+#url-input:focus {
+    border-color: var(--secondary);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 15px rgba(0, 242, 234, 0.2);
+}
+
+/* زر اللصق - يدعم جميع الاتجاهات برمجياً */
 #paste-btn {
-    position: absolute; right: 10px; background: var(--secondary);
-    color: #000; border: none; padding: 10px 18px;
-    border-radius: 10px; font-weight: 800; cursor: pointer;
+    position: absolute;
+    /* يوضع في النهاية حسب اتجاه اللغة (يمين للإنجليزية، يسار للعربية) */
+    inset-inline-end: 10px;
+    background: var(--secondary);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap; /* يمنع انكسار الكلمة في اللغات الطويلة */
 }
 
-/* إصلاح الاتجاه للغة العربية */
-html[dir="rtl"] #url-input { padding-right: 20px !important; padding-left: 120px !important; }
-html[dir="rtl"] #paste-btn { right: auto; left: 10px; }
+#paste-btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
 
+/* زر التحميل الرئيسي */
 #download-btn {
-    width: 100%; padding: 18px; border: none; border-radius: 15px;
+    width: 100%;
+    padding: 18px;
+    border-radius: 15px;
     background: linear-gradient(45deg, var(--primary), #ff4081);
-    color: white; font-weight: 800; font-size: 1.2rem; cursor: pointer;
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255, 0, 80, 0.4);
+    transition: var(--transition);
 }
 
-.ad-container { margin: 25px auto; max-height: 180px; overflow: hidden; border-radius: 15px; text-align: center; }
+#download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 0, 80, 0.5);
+}
+
+#download-btn:active {
+    transform: translateY(0);
+}
+
+/* حاوية الإعلانات - محجوزة مسبقاً لمنع انزياح المحتوى CLS */
+.ad-container {
+    margin: 30px auto;
+    min-height: 150px; /* حجز المساحة لسكور سيو أفضل */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.02);
+    border-radius: 15px;
+    border: 1px dashed rgba(255,255,255,0.1);
+}
+
+/* تحسينات إضافية لنتائج البحث */
+.result-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
