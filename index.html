@@ -2,10 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <base href="/">
     <meta name="referrer" content="no-referrer">
-    <link rel="canonical" href="https://savetik-fast.xyz/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://savetik-fast.xyz/" />
     
     <title data-i18n="meta.title">Snaptiks - تحميل فيديو تيك توك بدون علامة مائية HD</title>
     <meta name="description" data-i18n="[content]meta.description" content="أسرع أداة تحميل فيديو تيك توك بدون علامة مائية.">
@@ -23,10 +22,9 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Snaptiks - TikTok Downloader 2026",
-      "operatingSystem": "Windows, macOS, Android, iOS",
+      "name": "Snaptiks",
+      "operatingSystem": "Web",
       "applicationCategory": "MultimediaApplication",
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "1250" },
       "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" }
     }
     </script>
@@ -118,7 +116,7 @@
                 <li><a href="index.html" class="active" data-i18n="nav.home">الرئيسية</a></li>
                 <li><a href="about.html" data-i18n="nav.about">حول</a></li>
                 <li><a href="contact.html" data-i18n="nav.contact">تواصل</a></li>
-                <li><a href="disclaimer.html" data-i18n="nav.disclaimer">إخلاء المسؤولية</a></li>
+                <li><a href="terms.html" data-i18n="footer.terms">الشروط</a></li>
             </ul>
             <div class="mobile-menu" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
@@ -176,10 +174,6 @@
         <div class="faq-item">
             <button class="faq-question"><span data-i18n="faq.q2">هل هو مجاني؟</span> <i class="fas fa-chevron-down"></i></button>
             <div class="faq-answer"><p data-i18n="faq.a2">نعم، مجاني تماماً.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question"><span data-i18n="faq.q3">تحميل صوت؟</span> <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer"><p data-i18n="faq.a3">نعم، نوفر خيار MP3.</p></div>
         </div>
     </section>
 
@@ -250,7 +244,8 @@
                     });
                 });
             }
-            // ضبط القائمة على اللغة الحالية
+            
+            // تأخير بسيط لضمان تحميل المكتبة
             setTimeout(() => {
                 const selector = document.getElementById('lang-selector-footer');
                 if (typeof i18next !== 'undefined' && selector) {
