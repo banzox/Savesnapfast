@@ -15,19 +15,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         await i18next
             .use(i18nextHttpBackend)
             .use(i18nextBrowserLanguageDetector)
-            .init({
+                        .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
                 debug: false,
                 partialBundledLanguages: true,
                 backend: {
-                    loadPath: '/locales/{{lng}}.json',
-                    queryStringParams: { v: '7.0.0-PRO' } // تحديث الكاش
+                    loadPath: './locales/{{lng}}.json', // النقطة هنا مهمة جداً للمسار
                 },
                 detection: {
-                    order: ['path', 'localStorage', 'navigator'],
-                    caches: ['localStorage'],
-                    lookupFromPathIndex: 0
+                    // تم حذف 'path' نهائياً لمنع ظهور صفحة "عذراً" في GitHub
+                    order: ['localStorage', 'navigator', 'querystring'],
+                    caches: ['localStorage']
                 }
             });
 
