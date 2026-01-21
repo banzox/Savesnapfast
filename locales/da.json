@@ -75,16 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Alle rettigheder forbeholdes."
   }
-  ,
-  "features": {
-    "fast": { "title": "Superhurtig download", "desc": "Download TikTok-videoer på få sekunder med vores højhastighedsservere." },
-    "safe": { "title": "Sikker og privat", "desc": "Vi gemmer ikke dine videoer eller sporer dine personlige data." },
-    "unlimited": { "title": "Ubegrænset brug", "desc": "Download lige så mange videoer, du vil, uden begrænsninger." }
-  },
-  "how_to": {
-    "title": "Sådan downloader du TikTok-videoer uden vandmærke",
-    "step1": "Kopier det TikTok-videolink, du vil gemme.",
-    "step2": "Indsæt linket i downloadboksen øverst på denne side.",
-    "step3": "Klik på knappen 'Download', og din video gemmes med det samme."
-  }
-
+}

@@ -75,25 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Todos os direitos reservados."
   }
-  ,
-  "features": {
-    "fast": {
-      "title": "Download Super Rápido",
-      "desc": "Baixe vídeos do TikTok em segundos com nossos servidores de alta velocidade."
-    },
-    "safe": {
-      "title": "Seguro e Privado",
-      "desc": "Não armazenamos seus vídeos nem rastreamos seus dados pessoais."
-    },
-    "unlimited": {
-      "title": "Uso Ilimitado",
-      "desc": "Baixe quantos vídeos quiser, sem restrições."
-    }
-  },
-  "how_to": {
-    "title": "Como baixar vídeos do TikTok sem marca d'água",
-    "step1": "Copie o link do vídeo do TikTok que você deseja salvar.",
-    "step2": "Cole o link na caixa de download no topo desta página.",
-    "step3": "Clique no botão 'Download' e seu vídeo será salvo imediatamente."
-  }
-
+}

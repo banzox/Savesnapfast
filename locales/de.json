@@ -75,25 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Alle Rechte vorbehalten."
   }
-  ,
-  "features": {
-    "fast": {
-      "title": "Superschneller Download",
-      "desc": "Laden Sie TikTok-Videos in Sekundenschnelle mit unseren Hochgeschwindigkeitsservern herunter."
-    },
-    "safe": {
-      "title": "Sicher & Privat",
-      "desc": "Wir speichern Ihre Videos nicht und verfolgen Ihre persönlichen Daten nicht."
-    },
-    "unlimited": {
-      "title": "Unbegrenzte Nutzung",
-      "desc": "Laden Sie so viele Videos herunter, wie Sie möchten, ohne Einschränkungen."
-    }
-  },
-  "how_to": {
-    "title": "So laden Sie TikTok-Videos ohne Wasserzeichen herunter",
-    "step1": "Kopieren Sie den TikTok-Videolink, den Sie speichern möchten.",
-    "step2": "Fügen Sie den Link in das Download-Feld oben auf dieser Seite ein.",
-    "step3": "Klicken Sie auf die Schaltfläche 'Download' und Ihr Video wird sofort gespeichert."
-  }
-
+}

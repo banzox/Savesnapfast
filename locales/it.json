@@ -75,25 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Tutti i diritti riservati."
   }
-  ,
-  "features": {
-    "fast": {
-      "title": "Download Super Veloce",
-      "desc": "Scarica video TikTok in pochi secondi grazie ai nostri server ad alta velocità."
-    },
-    "safe": {
-      "title": "Sicuro e Privato",
-      "desc": "Non memorizziamo i tuoi video né tracciamo i tuoi dati personali."
-    },
-    "unlimited": {
-      "title": "Utilizzo Illimitato",
-      "desc": "Scarica tutti i video che vuoi senza alcuna restrizione."
-    }
-  },
-  "how_to": {
-    "title": "Come scaricare video TikTok senza filigrana",
-    "step1": "Copia il link del video TikTok che desideri salvare.",
-    "step2": "Incolla il link nella casella di download in alto in questa pagina.",
-    "step3": "Fai clic sul pulsante 'Download' e il tuo video verrà salvato immediatamente."
-  }
-
+}

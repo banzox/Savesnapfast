@@ -75,16 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Alla rättigheter förbehållna."
   }
-  ,
-  "features": {
-    "fast": { "title": "Supersnabb nedladdning", "desc": "Ladda ner TikTok-videor på några sekunder med våra höghastighetsservrar." },
-    "safe": { "title": "Säker och privat", "desc": "Vi lagrar inte dina videor eller spårar dina personuppgifter." },
-    "unlimited": { "title": "Obegränsad användning", "desc": "Ladda ner så många videor du vill utan några begränsningar." }
-  },
-  "how_to": {
-    "title": "Hur man laddar ner TikTok-videor utan vattenstämpel",
-    "step1": "Kopiera länken till TikTok-videon du vill spara.",
-    "step2": "Klistra in länken i nedladdningsrutan högst upp på denna sida.",
-    "step3": "Klicka på knappen 'Ladda ner' så sparas din video omedelbart."
-  }
-
+}

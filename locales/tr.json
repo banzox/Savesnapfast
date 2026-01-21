@@ -75,25 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Tüm Hakları Saklıdır."
   }
-  ,
-  "features": {
-    "fast": {
-      "title": "Süper Hızlı İndirme",
-      "desc": "Gelişmiş sunucularımızla TikTok videolarını saniyeler içinde indirin."
-    },
-    "safe": {
-      "title": "Güvenli ve Gizli",
-      "desc": "Videolarınızı asla saklamıyoruz ve kişisel verilerinizi izlemiyoruz."
-    },
-    "unlimited": {
-      "title": "Sınırsız Kullanım",
-      "desc": "Günde istediğiniz kadar videoyu kısıtlama olmadan indirin."
-    }
-  },
-  "how_to": {
-    "title": "Filigransız TikTok Videosu Nasıl İndirilir?",
-    "step1": "Kaydetmek istediğiniz TikTok videosunun bağlantısını kopyalayın.",
-    "step2": "Bağlantıyı bu sayفن صفحة التحميل في الأعلى.",
-    "step3": "'İndir' butonuna tıklayın, videonuz anında cihazınıza kaydedilecektir."
-  }
-
+}

@@ -75,25 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Bảo lưu mọi quyền."
   }
-  ,
-  "features": {
-    "fast": {
-      "title": "Tải xuống cực nhanh",
-      "desc": "Tải video TikTok trong vài giây với máy chủ tốc độ cao của chúng tôi."
-    },
-    "safe": {
-      "title": "An toàn & Riêng tư",
-      "desc": "Chúng tôi không lưu trữ video hoặc theo dõi dữ liệu cá nhân của bạn."
-    },
-    "unlimited": {
-      "title": "Sử dụng không giới hạn",
-      "desc": "Tải xuống bao nhiêu video tùy thích mà không có bất kỳ hạn chế nào."
-    }
-  },
-  "how_to": {
-    "title": "Cách tải video TikTok không có hình mờ",
-    "step1": "Sao chép liên kết video TikTok mà bạn muốn lưu.",
-    "step2": "Dán liên kết vào hộp tải xuống ở đầu trang này.",
-    "step3": "Nhấp vào nút 'Tải xuống' và video của bạn sẽ được lưu ngay lập tức."
-  }
-
+}

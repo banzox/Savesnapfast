@@ -75,16 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Všetky práva vyhradené."
   }
-  ,
-  "features": {
-    "fast": { "title": "Super rýchle sťahovanie", "desc": "Sťahujte videá z TikToku za pár sekúnd vďaka našim vysokorýchlostným serverom." },
-    "safe": { "title": "Bezpečné a súkromné", "desc": "Vaše videá neukladáme ani nesledujeme vaše osobné údaje." },
-    "unlimited": { "title": "Neobmedzené použitie", "desc": "Sťahujte toľko videí, koľko chcete, bez akýchkoľvek obmedzení." }
-  },
-  "how_to": {
-    "title": "Ako sťahovať videá z TikToku bez vodoznaku",
-    "step1": "Skopírujte odkaz na video TikTok, ktoré chcete uložiť.",
-    "step2": "Vložte odkaz do poľa na sťahovanie v hornej časti tejto stránky.",
-    "step3": "Kliknite na tlačidlo „Stiahnuť“ a vaše video sa okamžite uloží."
-  }
-
+}

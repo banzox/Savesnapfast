@@ -75,25 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. All Rights Reserved."
   }
-  ,
-  "features": {
-    "fast": {
-      "title": "Fast Download",
-      "desc": "Download TikTok videos in seconds with our high-speed servers."
-    },
-    "safe": {
-      "title": "Safe & Private",
-      "desc": "We don't store your videos or track your personal data."
-    },
-    "unlimited": {
-      "title": "Unlimited Usage",
-      "desc": "Download as many videos as you want without restrictions."
-    }
-  },
-  "how_to": {
-    "title": "How to Download TikTok Videos Without Watermark",
-    "step1": "Copy the TikTok video link you want to save.",
-    "step2": "Paste the link into the download box at the top of this page.",
-    "step3": "Click the 'Download' button and your video will be saved immediately."
-  }
-
+}

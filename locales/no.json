@@ -75,16 +75,4 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Alle rettigheter forbeholdt."
   }
-  ,
-  "features": {
-    "fast": { "title": "Superrask nedlasting", "desc": "Last ned TikTok-videoer på sekunder med våre høyhastighetsservere." },
-    "safe": { "title": "Sikker og privat", "desc": "Vi lagrer ikke videoene dine eller sporer personopplysningene dine." },
-    "unlimited": { "title": "Ubegrenset bruk", "desc": "Last ned så mange videoer du vil uten begrensninger." }
-  },
-  "how_to": {
-    "title": "Hvordan laste ned TikTok-videoer uten vannmerke",
-    "step1": "Kopier TikTok-videolenken du vil lagre.",
-    "step2": "Lim inn lenken i nedlastingsfeltet øverst på denne siden.",
-    "step3": "Klikk på 'Last ned'-knappen og videoen din blir lagret umiddelbart."
-  }
-
+}
