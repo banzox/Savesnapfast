@@ -1,4 +1,4 @@
-// 1. القائمة المعتمدة للغات (30 لغة كما في ملف sitemap)
+// 1. القائمة المعتمدة للغات (30 لغة متوافقة مع sitemap و _redirects)
 const supportedLanguages = ['en', 'ar', 'id', 'tr', 'fr', 'es', 'de', 'pt', 'ru', 'it', 'ja', 'zh', 'vi', 'hi', 'nl', 'ko', 'th', 'pl', 'uk', 'el', 'sv', 'no', 'da', 'fi', 'cs', 'hu', 'ro', 'sk', 'ms', 'he'];
 
 const languageNames = {
@@ -20,22 +20,24 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                backend: { loadPath: './locales/{{lng}}.json' }, // مسار ملفات JSON المرفوعة
+                // تعديل جوهري: استخدام مسار مطلق / لضمان جلب ملفات اللغة من أي مكان
+                backend: { loadPath: '/locales/{{lng}}.json' }, 
                 detection: { 
-                    order: ['querystring', 'localStorage', 'navigator'], 
+                    // تعديل جوهري: إعطاء الأولوية للـ 'path' لقراءة روابط مثل /ja أو /ar
+                    order: ['path', 'querystring', 'localStorage', 'navigator'], 
+                    lookupFromPathIndex: 0,
                     lookupQuerystring: 'lang',
                     caches: ['localStorage'] 
                 }
             });
 
-        injectMasterLayout(); // بناء الهيدر والفوتر
-        updateContent();      // ترجمة النصوص الأساسية
-        renderHomeFAQ();      // بناء الأسئلة الشائعة الـ 10
+        injectMasterLayout(); 
+        updateContent();      
+        renderHomeFAQ();      
     } catch (error) {
         console.error('I18n Init Error:', error);
     }
 
-    // تحديث الموقع فور تغيير اللغة
     i18next.on('languageChanged', (lng) => {
         updateContent();
         renderHomeFAQ();
@@ -44,11 +46,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
-// وظيفة ترجمة العناصر وضبط الاتجاه (RTL/LTR)
 function updateContent() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        // دعم ترجمة السمات مثل placeholder
         const attrMatch = key.match(/^\[(.*)\](.*)/);
         if (attrMatch) {
             const translated = i18next.t(attrMatch[2]);
@@ -61,20 +61,15 @@ function updateContent() {
 
     const currentLng = i18next.language;
     document.documentElement.lang = currentLng;
-    // ضبط اتجاه الصفحة للغات العربية والعبرية
     document.documentElement.dir = ['ar', 'he'].includes(currentLng) ? 'rtl' : 'ltr';
-    
-    // تحديث الميتا تاق للسيو
     document.title = i18next.t('meta.title');
 }
 
-// بناء نظام الأسئلة الشائعة التفاعلي (فتح وغلق)
 function renderHomeFAQ() {
     const container = document.getElementById('home-faq-list');
     if (!container) return;
     
     let html = '';
-    // سحب الأسئلة من q1 إلى q10 من ملفات الـ JSON
     for (let i = 1; i <= 10; i++) {
         const q = i18next.t(`faq.q${i}`);
         const a = i18next.t(`faq.a${i}`);
@@ -93,20 +88,13 @@ function renderHomeFAQ() {
     container.innerHTML = html;
 }
 
-// وظيفة الفتح والغلق (Toggle Logic)
 function toggleFAQ(element) {
     const item = element.parentElement;
     const isActive = item.classList.contains('active');
-    
-    // إغلاق أي سؤال مفتوح آخر (اختياري لجعل الشكل أرتب)
     document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-    
-    if (!isActive) {
-        item.classList.add('active');
-    }
+    if (!isActive) item.classList.add('active');
 }
 
-// حقن الهيدر والفوتر لضمان توحيد التصميم في كل الصفحات
 function injectMasterLayout() {
     const header = document.getElementById('main-header');
     const footer = document.getElementById('main-footer');
@@ -125,30 +113,51 @@ function injectMasterLayout() {
         <div class="footer-content" style="text-align:center; padding: 40px 20px; border-top: 1px solid var(--border);">
             <p data-i18n="footer.rights"></p>
             <div class="footer-links" style="margin-top:20px; display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-                <a href="about.html" data-i18n="nav.about"></a>
-                <a href="terms.html" data-i18n="nav.terms"></a>
-                <a href="privacy.html" data-i18n="nav.privacy"></a>
-                <a href="dmca.html" data-i18n="nav.dmca"></a>
-                <a href="contact.html" data-i18n="nav.contact"></a>
+                <a href="/about.html" data-i18n="nav.about"></a>
+                <a href="/terms.html" data-i18n="nav.terms"></a>
+                <a href="/privacy.html" data-i18n="nav.privacy"></a>
+                <a href="/dmca.html" data-i18n="nav.dmca"></a>
+                <a href="/contact.html" data-i18n="nav.contact"></a>
             </div>
         </div>`;
-        updateContent(); // ترجمة الروابط التي تم حقنها للتو
+        updateContent();
     }
 }
 
 function createPicker(slotId) {
     const slot = document.getElementById(slotId);
     if (!slot) return;
-    const sel = document.createElement('select');
-    sel.className = 'lang-select';
-    sel.onchange = (e) => i18next.changeLanguage(e.target.value);
     
-    supportedLanguages.forEach(code => {
-        const opt = document.createElement('option');
-        opt.value = code;
-        opt.text = languageNames[code] || code.toUpperCase();
-        if (code === i18next.language) opt.selected = true;
-        sel.add(opt);
-    });
-    slot.appendChild(sel);
+    const currentLng = i18next.language || 'en';
+    const currentName = languageNames[currentLng] || currentLng.toUpperCase();
+
+    slot.innerHTML = `
+        <div class="custom-dropdown">
+            <button class="dropdown-trigger" onclick="document.querySelector('.dropdown-options').classList.toggle('show')">
+                <i class="fas fa-globe"></i> <span>${currentName}</span> <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-options">
+                ${supportedLanguages.map(code => `
+                    <div class="option-item ${code === currentLng ? 'active' : ''}" 
+                         onclick="changeLanguageAndClose('${code}')">
+                        ${languageNames[code]}
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+// تعديل جوهري: استخدام التنقل الحقيقي بين المسارات لدعم الروابط النظيفة
+function changeLanguageAndClose(lng) {
+    window.location.href = `/${lng}`;
+}
+
+window.onclick = function(event) {
+    if (!event.target.closest('.custom-dropdown')) {
+        const dropdowns = document.getElementsByClassName("dropdown-options");
+        for (let i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].classList.remove('show');
+        }
+    }
 }
