@@ -1,44 +1,42 @@
-/* تنسيق Snaptiks الاحترافي - المظهر الزجاجي */
+/* التنسيق الزجاجي الفاخر والمستقر */
 :root {
     --primary: #ff0050; --secondary: #00f2ea;
-    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    --bg: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
     --glass: rgba(255, 255, 255, 0.08);
     --border: rgba(255, 255, 255, 0.15);
 }
 
-body {
-    background: var(--bg-gradient); font-family: 'Tajawal', sans-serif;
-    color: white; min-height: 100vh; margin: 0;
-}
+body { background: var(--bg); font-family: 'Segoe UI', sans-serif; color: white; min-height: 100vh; margin: 0; }
 
 .downloader-box {
     background: var(--glass); backdrop-filter: blur(20px);
     border-radius: 24px; border: 1px solid var(--border);
     padding: 30px; max-width: 650px; margin: 3rem auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-.input-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
+.input-wrapper { position: relative; width: 100%; display: flex; align-items: center; margin-bottom: 20px; }
 
 #url-input {
-    width: 100%; padding: 18px; 
-    padding-right: 130px !important; /* مساحة محجوزة لزر اللصق */
-    border-radius: 12px; border: 1px solid var(--border);
-    background: rgba(0,0,0,0.4) !important; color: white !important;
+    width: 100%; padding: 20px; padding-right: 120px !important;
+    border-radius: 15px; border: 2px solid var(--border);
+    background: rgba(255,255,255,0.05) !important; color: white !important; font-size: 1rem;
 }
 
 #paste-btn {
     position: absolute; right: 10px; background: var(--secondary);
     color: #000; border: none; padding: 10px 18px;
-    border-radius: 10px; font-weight: bold; cursor: pointer;
+    border-radius: 10px; font-weight: 800; cursor: pointer;
 }
 
 /* إصلاح الاتجاه للغة العربية */
-html[dir="rtl"] #url-input { padding-right: 18px !important; padding-left: 130px !important; }
+html[dir="rtl"] #url-input { padding-right: 20px !important; padding-left: 120px !important; }
 html[dir="rtl"] #paste-btn { right: auto; left: 10px; }
 
 #download-btn {
-    width: 100%; padding: 18px; margin-top: 15px;
+    width: 100%; padding: 18px; border: none; border-radius: 15px;
     background: linear-gradient(45deg, var(--primary), #ff4081);
-    border: none; border-radius: 12px; color: white;
-    font-weight: 800; cursor: pointer;
+    color: white; font-weight: 800; font-size: 1.2rem; cursor: pointer;
 }
+
+.ad-container { margin: 25px auto; max-height: 180px; overflow: hidden; border-radius: 15px; text-align: center; }
