@@ -5,8 +5,8 @@
   <url>
     <loc>https://savetik-fast.xyz/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/?lang=en" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://savetik-fast.xyz/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/?lang=en" />
     <xhtml:link rel="alternate" hreflang="id" href="https://savetik-fast.xyz/?lang=id" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://savetik-fast.xyz/?lang=tr" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://savetik-fast.xyz/?lang=fr" />
@@ -41,16 +41,14 @@
 
   <url>
     <loc>https://savetik-fast.xyz/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://savetik-fast.xyz/about.html?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/about.html?lang=en" />
     <lastmod>2026-01-21</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://savetik-fast.xyz/contact.html</loc>
     <lastmod>2026-01-21</lastmod>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
@@ -58,9 +56,18 @@
     <lastmod>2026-01-21</lastmod>
     <priority>0.4</priority>
   </url>
-
   <url>
     <loc>https://savetik-fast.xyz/terms.html</loc>
+    <lastmod>2026-01-21</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://savetik-fast.xyz/dmca.html</loc>
+    <lastmod>2026-01-21</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://savetik-fast.xyz/disclaimer.html</loc>
     <lastmod>2026-01-21</lastmod>
     <priority>0.4</priority>
   </url>
