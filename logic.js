@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultArea = document.getElementById('result-area');
     const pasteBtn = document.getElementById('paste-btn');
 
-    // 🚀 رابط المحرك (Worker) الخاص بك
+    // 🚀 الرابط الخاص بمحركك الجديد
     const WORKER_URL = "https://misty-violet-50ef.banzox9595.workers.dev";
 
     // 💰 رابط الإعلان الذكي (Smart Link)
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pasteBtn && urlInput) {
         pasteBtn.addEventListener('click', async () => {
             try {
-                const text = await navigator.clipboard.readText();
+                const text = await navigator.clipboard.readText(); //
                 urlInput.value = text;
                 urlInput.focus(); 
             } catch (err) {
@@ -24,15 +24,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. دالة التحميل المباشر (تعديل احترافي للهواتف)
-    window.downloadFile = function(url, fileName, btnElement) {
-        // أ. فتح الإعلان للربح
-        window.open(MY_SMART_LINK, '_blank');
+    // 3. دالة التحميل المباشر (إجبار المتصفح على التنزيل)
+    window.downloadFile = async function(url, fileName, btnElement) {
+        const originalHTML = btnElement.innerHTML;
+        try {
+            // إظهار حالة جاري التحميل داخل الزر
+            btnElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ...';
+            btnElement.style.pointerEvents = 'none';
 
-        // ب. توجيه المستخدم للمحرك مع أمر التحميل الإجباري
-        // هذه الطريقة تضمن عدم فتح "الصفحة السوداء" في هواتف أندرويد وآيفون
-        const finalDownloadUrl = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
-        window.location.href = finalDownloadUrl; 
+            // ✅ الإضافة الوحيدة: تمرير الرابط عبر المحرك الخاص بك لكسر الحماية وضمان التحميل
+            const proxiedUrl = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
+            
+            const response = await fetch(proxiedUrl);
+            if (!response.ok) throw new Error('Network error');
+            
+            const blob = await response.blob();
+            const blobUrl = window.URL.createObjectURL(blob);
+            
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = fileName || 'tiktok-video.mp4';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(blobUrl);
+
+            btnElement.innerHTML = originalHTML;
+            btnElement.style.pointerEvents = 'auto';
+        } catch (error) {
+            console.warn('Fallback to direct link:', error);
+            // إذا فشل الـ Fetch، نفتح الرابط عبر المحرك في نافذة جديدة
+            window.open(`${WORKER_URL}/?url=${encodeURIComponent(url)}`, '_blank');
+            btnElement.innerHTML = originalHTML;
+            btnElement.style.pointerEvents = 'auto';
+        }
     };
 
     // 4. روابط السيرفرات الأساسية
@@ -83,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(requestUrl);
             const data = await response.json();
             if(apiUrl.includes("tikwm") && data.code === 0) {
-                renderResult(data.data);
+                renderResult(data.data); //
                 return true;
             }
             return false; 
@@ -100,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
         const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
 
+        // تعديل الأزرار لاستدعاء دالة التحميل المباشر
         const html = `
             <div class="result-card fade-in" style="background:#1e1e1e; padding:20px; border-radius:15px; margin-top:20px; display:flex; gap:20px; flex-wrap:wrap; border:1px solid #333; text-align:center;">
                 
@@ -118,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <i class="fas fa-video"></i> ${t_vid} (Server 1)
                     </button>
                     
-                    <button onclick="downloadFile('${hdLink}', 'video_hd.mp4', this)" style="
+                    <button onclick="window.open('${MY_SMART_LINK}', '_blank'); downloadFile('${hdLink}', 'video_hd.mp4', this)" style="
                         background: linear-gradient(90deg, #00f2ea 0%, #ff0050 100%); 
                         color: white; padding: 15px; border: none; text-align: center; 
                         border-radius: 8px; margin-bottom: 10px; cursor: pointer; font-weight: 800; 
