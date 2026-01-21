@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultArea = document.getElementById('result-area');
     const pasteBtn = document.getElementById('paste-btn');
 
+    // 🚀 الإضافة: رابط المحرك الجديد الخاص بك
+    const WORKER_URL = "https://misty-violet-50ef.banzox9595.workers.dev";
+
     // 💰 رابط الإعلان الذكي (Smart Link)
     const MY_SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
@@ -21,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. دالة التحميل المباشر (إجبار المتصفح على التنزيل)
+    // 3. دالة التحميل المباشر (إجبار المتصفح على التنزيل) - تم ربطها بالمحرك
     window.downloadFile = async function(url, fileName, btnElement) {
         const originalHTML = btnElement.innerHTML;
         try {
@@ -29,7 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
             btnElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ...';
             btnElement.style.pointerEvents = 'none';
 
-            const response = await fetch(url);
+            // استخدام المحرك الجديد لتخطي حماية CORS وضمان التحميل
+            const proxiedUrl = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
+            
+            const response = await fetch(proxiedUrl);
             if (!response.ok) throw new Error('Network error');
             
             const blob = await response.blob();
@@ -47,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             btnElement.style.pointerEvents = 'auto';
         } catch (error) {
             console.warn('Fallback to direct link:', error);
-            // إذا فشل الـ Fetch (بسبب CORS)، نفتح الرابط في نافذة جديدة كحل أخير
-            window.open(url, '_blank');
+            // إذا فشل الـ Fetch، نفتح رابط المحرك مباشرة كحل أخير
+            window.open(`${WORKER_URL}/?url=${encodeURIComponent(url)}`, '_blank');
             btnElement.innerHTML = originalHTML;
             btnElement.style.pointerEvents = 'auto';
         }
