@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             supportedLngs: supportedLanguages.map(l => l.code),
             backend: { 
                 loadPath: 'all-langs.json', 
-                queryStringParams: { v: '390.0.0' } 
+                queryStringParams: { v: '400.0.0' } 
             },
             detection: { 
                 order: ['localStorage', 'navigator'], 
