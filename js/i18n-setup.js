@@ -1,3 +1,77 @@
+// 1. تعريف اللغات والنصوص مباشرة هنا (لإلغاء الحاجة لملف خارجي)
+const resources = {
+  ar: {
+    translation: {
+      "meta": { "title": "تحميل فيديو تيك توك بدون علامة مائية HD - Snaptiks 2026", "description": "أسرع أداة تحميل فيديوهات تيك توك بدون علامة مائية بجودة عالية HD." },
+      "nav": { "home": "الرئيسية", "about": "حول", "contact": "تواصل", "disclaimer": "إخلاء المسؤولية", "terms": "الشروط", "privacy": "الخصوصية", "dmca": "DMCA" },
+      "hero": { "title": "تحميل فيديو تيك توك", "desc": "أداة سريعة ومجانية لتحميل فيديوهات تيك توك بدون علامة مائية وبجودة عالية." },
+      "downloader": { "placeholder": "الصق رابط تيك توك هنا...", "btn_download": "تحميل الآن" },
+      "status": { "processing": "جاري معالجة الفيديو..." },
+      "result": { "download_video": "تحميل الفيديو", "download_audio": "تحميل MP3" },
+      "faq": { "title": "الأسئلة الشائعة", "q1": "كيفية التحميل؟", "a1": "انسخ رابط الفيديو، الصقه هنا، واضغط تحميل.", "q2": "هل هو مجاني؟", "a2": "نعم، الموقع مجاني تماماً وغير محدود.", "q3": "هل يمكن تحميل الصوت فقط؟", "a3": "نعم، نوفر خيار تحميل MP3." },
+      "footer": { "rights": "جميع الحقوق محفوظة", "terms": "الشروط", "privacy": "الخصوصية" },
+      "pages": {
+        "about": { "title": "من نحن", "content": "Snaptiks هو تطبيق ويب متطور يساعدك على حفظ فيديوهات تيك توك المفضلة لديك بدون علامة مائية." },
+        "privacy": { "title": "سياسة الخصوصية", "content": "نحن نقدر خصوصيتك؛ لا نقوم بتخزين أي فيديوهات أو بيانات شخصية." },
+        "terms": { "title": "شروط الاستخدام", "content": "يُسمح باستخدام هذه الأداة للأغراض الشخصية فقط." },
+        "dmca": { "title": "حقوق الملكية DMCA", "content": "نحن نحترم حقوق الطبع والنشر." },
+        "disclaimer": { "title": "إخلاء المسؤولية", "content": "هذا الموقع أداة مستقلة ولا ينتمي رسمياً لشركة TikTok." },
+        "contact": { "title": "اتصل بنا", "content": "لأي استفسار يرجى مراسلتنا عبر البريد الإلكتروني." }
+      },
+      "about": { "intro": { "p1": "Snaptiks هي واحدة من أفضل أدوات تحميل التيك توك.", "p2": "لست بحاجة لتثبيت أي برنامج." }, "steps": { "title": "كيف يعمل؟", "step1": { "desc": "انسخ الرابط" }, "step2": { "desc": "الصق الرابط" }, "step3": { "desc": "حمل الفيديو" } }, "features": { "title": "المميزات", "list": { "no_watermark": "بدون علامة", "hd": "جودة HD", "free": "مجاني", "fast": "سريع" } } }
+    }
+  },
+  en: {
+    translation: {
+      "meta": { "title": "TikTok Downloader Without Watermark HD - Snaptiks 2026", "description": "Download TikTok videos without watermark for free in HD quality." },
+      "nav": { "home": "Home", "about": "About", "contact": "Contact", "disclaimer": "Disclaimer", "terms": "Terms", "privacy": "Privacy", "dmca": "DMCA" },
+      "hero": { "title": "TikTok Video Downloader", "desc": "Fast, free, and easy way to save TikTok videos without watermark in HD quality." },
+      "downloader": { "placeholder": "Paste TikTok link here...", "btn_download": "Download Now" },
+      "status": { "processing": "Processing your video..." },
+      "result": { "download_video": "Download Video", "download_audio": "Download MP3" },
+      "faq": { "title": "FAQ", "q1": "How to download?", "a1": "Copy the video link, paste it here, and click download.", "q2": "Is it free?", "a2": "Yes, 100% free.", "q3": "Can I download Audio?", "a3": "Yes, MP3 supported." },
+      "footer": { "rights": "All rights reserved" },
+      "pages": {
+        "about": { "title": "About Us", "content": "Snaptiks is a powerful web application designed to help you download TikTok content." },
+        "privacy": { "title": "Privacy Policy", "content": "We respect your privacy. No user data is stored." },
+        "terms": { "title": "Terms of Service", "content": "Usage is for personal purposes only." },
+        "dmca": { "title": "DMCA Policy", "content": "We respect intellectual property." },
+        "disclaimer": { "title": "Disclaimer", "content": "This site is not affiliated with TikTok." },
+        "contact": { "title": "Contact Us", "content": "Feel free to reach out." }
+      },
+      "about": { "intro": { "p1": "Snaptiks is the best TikTok Downloader.", "p2": "No software installation needed." }, "steps": { "title": "How it works?", "step1": { "desc": "Copy link" }, "step2": { "desc": "Paste link" }, "step3": { "desc": "Download" } }, "features": { "title": "Features", "list": { "no_watermark": "No Watermark", "hd": "HD Quality", "free": "Free", "fast": "Super Fast" } } }
+    }
+  },
+  fr: { translation: { "nav": { "home": "Accueil", "about": "À propos" }, "hero": { "title": "Téléchargeur TikTok", "desc": "Sans filigrane - Rapide et gratuit" } } },
+  es: { translation: { "nav": { "home": "Inicio", "about": "Nosotros" }, "hero": { "title": "Descargador TikTok", "desc": "Sin marca de agua - Gratis y rápido" } } },
+  de: { translation: { "nav": { "home": "Start", "about": "Über uns" }, "hero": { "title": "TikTok Downloader", "desc": "Ohne Wasserzeichen - Schnell & Kostenlos" } } },
+  id: { translation: { "nav": { "home": "Beranda", "about": "Tentang" }, "hero": { "title": "Pengunduh TikTok", "desc": "Tanpa Watermark - Cepat & Gratis" } } },
+  pt: { translation: { "nav": { "home": "Início", "about": "Sobre" }, "hero": { "title": "Baixador TikTok", "desc": "Sem marca d'água - Rápido e grátis" } } },
+  ru: { translation: { "nav": { "home": "Главная", "about": "О нас" }, "hero": { "title": "Загрузчик TikTok", "desc": "Без водяного знака - Быстро и бесплатно" } } },
+  tr: { translation: { "nav": { "home": "Anasayfa", "about": "Hakkında" }, "hero": { "title": "TikTok İndirici", "desc": "Filigransız - Hızlı ve Ücretsiz" } } },
+  it: { translation: { "nav": { "home": "Home", "about": "Chi siamo" }, "hero": { "title": "TikTok Downloader", "desc": "Senza filigrana - Veloce e gratuito" } } },
+  ja: { translation: { "nav": { "home": "ホーム", "about": "紹介" }, "hero": { "title": "TikTok保存", "desc": "ロゴなし - 高速・無料" } } },
+  zh: { translation: { "nav": { "home": "首页", "about": "关于" }, "hero": { "title": "TikTok 下载器", "desc": "无水印 - 快速免费" } } },
+  vi: { translation: { "nav": { "home": "Trang chủ", "about": "Giới thiệu" }, "hero": { "title": "Tải TikTok", "desc": "Không logo - Nhanh và miễn phí" } } },
+  hi: { translation: { "nav": { "home": "होम", "about": "बारे में" }, "hero": { "title": "टिकटॉक डाउनलोडर", "desc": "बिना वॉटरमार्क - तेज़ और मुफ़्त" } } },
+  nl: { translation: { "nav": { "home": "Home", "about": "Over" }, "hero": { "title": "TikTok Downloader", "desc": "Zonder watermerk - Snel & Gratis" } } },
+  ko: { translation: { "nav": { "home": "홈", "about": "정보" }, "hero": { "title": "틱톡 다운로더", "desc": "워터마크 없음 - 빠르고 무료" } } },
+  th: { translation: { "nav": { "home": "หน้าแรก", "about": "เกี่ยวกับ" }, "hero": { "title": "ดาวน์โหลด TikTok", "desc": "ไม่มีลายน้ำ - เร็วและฟรี" } } },
+  pl: { translation: { "nav": { "home": "Start", "about": "O nas" }, "hero": { "title": "Pobieracz TikTok", "desc": "Bez znaku wodnego - Szybko i bezpłatnie" } } },
+  uk: { translation: { "nav": { "home": "Головна", "about": "Про нас" }, "hero": { "title": "Завантажувач TikTok", "desc": "Без водяного знака - Швидко і безкоштовно" } } },
+  el: { translation: { "nav": { "home": "Αρχική", "about": "Σχετικά" }, "hero": { "title": "TikTok Downloader", "desc": "Χωρίς υδατογράφημα - Γρήγορα και δωρεάν" } } },
+  sv: { translation: { "nav": { "home": "Hem", "about": "Om" }, "hero": { "title": "TikTok Downloader", "desc": "Utan vattenstämpel - Snabb & Gratis" } } },
+  no: { translation: { "nav": { "home": "Hjem", "about": "Om" }, "hero": { "title": "TikTok Downloader", "desc": "Uten vannmerke - Rask og gratis" } } },
+  da: { translation: { "nav": { "home": "Hjem", "about": "Om" }, "hero": { "title": "TikTok Downloader", "desc": "Uden vandmærke - Hurtig og gratis" } } },
+  fi: { translation: { "nav": { "home": "Koti", "about": "Tietoa" }, "hero": { "title": "TikTok Downloader", "desc": "Ilman vesileimaa - Nopea ja ilmainen" } } },
+  cs: { translation: { "nav": { "home": "Domů", "about": "O nás" }, "hero": { "title": "TikTok Downloader", "desc": "Bez vodoznaku - Rychle a zdarma" } } },
+  hu: { translation: { "nav": { "home": "Főoldal", "about": "Rólunk" }, "hero": { "title": "TikTok Downloader", "desc": "Vízjel nélkül - Gyors és ingyenes" } } },
+  ro: { translation: { "nav": { "home": "Acasă", "about": "Despre" }, "hero": { "title": "TikTok Downloader", "desc": "Fără watermark - Rapid și gratuit" } } },
+  sk: { translation: { "nav": { "home": "Domov", "about": "O nás" }, "hero": { "title": "TikTok Downloader", "desc": "Bez vodoznaku - Rýchlo a zadarmo" } } },
+  bg: { translation: { "nav": { "home": "Начало", "about": "За нас" }, "hero": { "title": "TikTok Downloader", "desc": "Без воден знак - Бързо и безплатно" } } },
+  he: { translation: { "nav": { "home": "בית", "about": "אודות" }, "hero": { "title": "הורדת טיקטוק", "desc": "ללא סימן מים - מהיר ובחינם" } } }
+};
+
 const supportedLanguages = [
     { code: 'ar', name: 'العربية' }, { code: 'en', name: 'English' }, { code: 'fr', name: 'Français' }, { code: 'es', name: 'Español' },
     { code: 'de', name: 'Deutsch' }, { code: 'id', name: 'Indonesia' }, { code: 'pt', name: 'Português' }, { code: 'ru', name: 'Русский' },
@@ -13,14 +87,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof i18next === 'undefined') return;
     
     try {
-        await i18next.use(i18nextHttpBackend).use(i18nextBrowserLanguageDetector).init({
+        // تهيئة i18next باستخدام المتغير resources مباشرة
+        // هذا يلغي الحاجة لـ HttpBackend تماماً
+        await i18next.use(i18nextBrowserLanguageDetector).init({
             fallbackLng: 'en',
-            supportedLngs: supportedLanguages.map(l => l.code),
-            backend: { 
-                // السر هنا: الشرطة المائلة / في البداية تجبر المتصفح على جلب الملف الصحيح
-                loadPath: '/all-langs.json', 
-                queryStringParams: { v: '999.0.0' } // رقم جديد لفرض التحديث
-            },
+            debug: true,
+            resources: resources, // هنا وضعنا الترجمة المدمجة
             detection: { 
                 order: ['localStorage', 'navigator'], 
                 caches: ['localStorage'] 
@@ -35,6 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     i18next.on('languageChanged', () => applyTranslations());
 });
 
+// باقي الكود كما هو (التصميم والقوائم)
 function injectStylesForSubpages() {
     if (!document.getElementById('main-header')) return; 
 
