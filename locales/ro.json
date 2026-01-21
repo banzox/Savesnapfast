@@ -75,4 +75,16 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Toate drepturile rezervate."
   }
-}
+  ,
+  "features": {
+    "fast": { "title": "Descărcare super rapidă", "desc": "Descărcați videoclipuri TikTok în câteva secunde cu serverele noastre de mare viteză." },
+    "safe": { "title": "Sigur și privat", "desc": "Nu stocăm videoclipurile dvs. și nu vă urmărim datele personale." },
+    "unlimited": { "title": "Utilizare nelimitată", "desc": "Descărcați oricâte videoclipuri doriți, fără nicio restricție." }
+  },
+  "how_to": {
+    "title": "Cum să descărcați videoclipuri TikTok fără filigran",
+    "step1": "Copiați linkul videoclipului TikTok pe care doriți să îl salvați.",
+    "step2": "Lipiți linkul în caseta de descărcare din partea de sus a acestei pagini.",
+    "step3": "Faceți clic på butonul „Descărcare” și videoclipul va fi salvat imediat."
+  }
+

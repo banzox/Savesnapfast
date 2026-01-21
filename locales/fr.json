@@ -75,4 +75,25 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Tous droits réservés."
   }
-}
+  ,
+  "features": {
+    "fast": {
+      "title": "Téléchargement Rapide",
+      "desc": "Téléchargez des vidéos TikTok en quelques secondes grâce à nos serveurs haute vitesse."
+    },
+    "safe": {
+      "title": "Sûr et Privé",
+      "desc": "Nous ne stockons pas vos vidéos et ne suivons pas vos données personnelles."
+    },
+    "unlimited": {
+      "title": "Utilisation Illimitée",
+      "desc": "Téléchargez autant de vidéos que vous le souhaitez sans aucune restriction."
+    }
+  },
+  "how_to": {
+    "title": "Comment télécharger des vidéos TikTok sans filigrane",
+    "step1": "Copiez le lien de la vidéo TikTok que vous souhaitez enregistrer.",
+    "step2": "Collez le lien dans la zone de téléchargement en haut de cette page.",
+    "step3": "Cliquez sur le bouton 'Télécharger' et votre vidéo sera enregistrée immédiatement."
+  }
+

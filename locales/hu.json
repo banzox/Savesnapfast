@@ -75,4 +75,16 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Minden jog fenntartva."
   }
-}
+  ,
+  "features": {
+    "fast": { "title": "Szupergyors letöltés", "desc": "Töltsön le TikTok videókat másodpercek alatt nagy sebességű szervereinkkel." },
+    "safe": { "title": "Biztonságos és privát", "desc": "Nem tároljuk videóit, és nem követjük nyomon személyes adatait." },
+    "unlimited": { "title": "Korlátlan használat", "desc": "Töltsön le annyi videót, amennyit csak akar, korlátozások nélkül." }
+  },
+  "how_to": {
+    "title": "TikTok videók letöltése vízjel nélkül",
+    "step1": "Másolja ki a menteni kívánt TikTok videó linkjét.",
+    "step2": "Illessze be a linket az oldal tetején található letöltési mezőbe.",
+    "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül."
+  }
+

@@ -75,4 +75,16 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Hak cipta terpelihara."
   }
-}
+  ,
+  "features": {
+    "fast": { "title": "Muat Turun Sangat Pantas", "desc": "Muat turun video TikTok dalam beberapa saat dengan pelayan berkelajuan tinggi kami." },
+    "safe": { "title": "Selamat & Peribadi", "desc": "Kami tidak menyimpan video anda atau menjejak data peribadi anda." },
+    "unlimited": { "title": "Penggunaan Tanpa Had", "desc": "Muat turun seberapa banyak video yang anda mahu tanpa sebarang sekatan." }
+  },
+  "how_to": {
+    "title": "Cara Memuat Turun Video TikTok Tanpa Tanda Air",
+    "step1": "Salin pautan video TikTok yang ingin anda simpan.",
+    "step2": "Tampal pautan ke dalam kotak muat turun di bahagian atas halaman ini.",
+    "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta."
+  }
+

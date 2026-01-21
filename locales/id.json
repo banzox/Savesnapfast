@@ -75,4 +75,25 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Hak cipta dilindungi undang-undang."
   }
-}
+  ,
+  "features": {
+    "fast": {
+      "title": "Unduhan Super Cepat",
+      "desc": "Unduh video TikTok dalam hitungan detik dengan server berkecepatan tinggi kami."
+    },
+    "safe": {
+      "title": "Aman & Pribadi",
+      "desc": "Kami tidak menyimpan video Anda atau melacak data pribadi Anda."
+    },
+    "unlimited": {
+      "title": "Penggunaan Tanpa Batas",
+      "desc": "Unduh video sebanyak yang Anda inginkan tanpa batasan apa pun."
+    }
+  },
+  "how_to": {
+    "title": "Cara Mengunduh Video TikTok Tanpa Watermark",
+    "step1": "Salin tautan video TikTok yang ingin Anda simpan.",
+    "step2": "Tempel tautan ke kotak unduhan di bagian atas halaman ini.",
+    "step3": "Klik tombol 'Unduh' dan video Anda akan segera disimpan."
+  }
+

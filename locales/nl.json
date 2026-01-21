@@ -75,4 +75,16 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Alle rechten voorbehouden."
   }
-}
+  ,
+  "features": {
+    "fast": { "title": "Supersnel downloaden", "desc": "Download TikTok-video's in enkele seconden met onze hogesnelheidsservers." },
+    "safe": { "title": "Veilig & Privé", "desc": "We slaan uw video's niet op en volgen uw persoonlijke gegevens niet." },
+    "unlimited": { "title": "Onbeperkt gebruik", "desc": "Download zoveel video's als je wilt zonder enige beperkingen." }
+  },
+  "how_to": {
+    "title": "TikTok-video's downloaden zonder watermerk",
+    "step1": "Kopieer de link van de TikTok-video die je wilt opslaan.",
+    "step2": "Plak de link in het downloadvak bovenaan deze pagina.",
+    "step3": "Klik op de knop 'Downloaden' en je video wordt direct opgeslagen."
+  }
+

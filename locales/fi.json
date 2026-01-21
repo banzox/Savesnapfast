@@ -75,4 +75,16 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Kaikki oikeudet pidätetään."
   }
-}
+  ,
+  "features": {
+    "fast": { "title": "Erittäin nopea lataus", "desc": "Lataa TikTok-videoita sekunneissa nopeilla palvelimillamme." },
+    "safe": { "title": "Turvallinen ja yksityinen", "desc": "Emme tallenna videoitasi tai seuraa henkilötietojasi." },
+    "unlimited": { "title": "Rajoittamaton käyttö", "desc": "Lataa niin monta videota kuin haluat ilman rajoituksia." }
+  },
+  "how_to": {
+    "title": "Kuinka ladata TikTok-videoita ilman vesileimaa",
+    "step1": "Kopioi tallennettavan TikTok-videon linkki.",
+    "step2": "Liitä linkki tämän sivun yläreunassa olevaan latauskenttään.",
+    "step3": "Napsauta 'Lataa'-painiketta, niin videosi tallennεται välittömästi."
+  }
+
