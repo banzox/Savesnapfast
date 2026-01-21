@@ -9,42 +9,37 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                debug: false,
-                backend: {
-                    loadPath: './locales/{{lng}}.json', 
-                },
-                detection: {
-                    order: ['localStorage', 'navigator', 'querystring'], // لا يوجد path هنا لمنع الـ 404
-                    caches: ['localStorage']
-                }
+                backend: { loadPath: './locales/{{lng}}.json' },
+                detection: { order: ['localStorage', 'navigator'], caches: ['localStorage'] }
             });
+        
         injectMasterLayout(); 
-        handleRouting();
+        handleRouting(); // الدالة المفقودة تم إضافتها بالأسفل
     } catch (error) { console.error('Error:', error); }
 
-    i18next.on('languageChanged', (lng) => {
-        document.documentElement.lang = lng;
-        document.documentElement.dir = ['ar', 'he'].includes(lng) ? 'rtl' : 'ltr';
-        updateContent('home');
+    i18next.on('languageChanged', () => {
+        updateContent();
         renderHomeFAQ();
     });
 });
 
 function handleRouting() {
+    // عرض المشهد الرئيسي دائماً عند البداية
     const homeView = document.getElementById('home-view');
     if(homeView) homeView.style.display = 'block';
-    updateContent('home');
+    updateContent();
     renderHomeFAQ();
 }
 
-function updateContent(page) {
+function updateContent() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const attrMatch = key.match(/^\[(.*)\](.*)/);
         if (attrMatch) el.setAttribute(attrMatch[1], i18next.t(attrMatch[2]));
         else el.innerHTML = i18next.t(key);
     });
-    document.title = i18next.t('meta.title');
+    document.documentElement.lang = i18next.language;
+    document.documentElement.dir = ['ar', 'he'].includes(i18next.language) ? 'rtl' : 'ltr';
 }
 
 function renderHomeFAQ() {
@@ -53,8 +48,7 @@ function renderHomeFAQ() {
     let html = '';
     for(let i=1; i<=10; i++) {
         if(i18next.exists(`faq.q${i}`)) {
-            html += `
-            <div class="faq-item" onclick="this.classList.toggle('active')">
+            html += `<div class="faq-item" onclick="this.classList.toggle('active')">
                 <div class="faq-question"><span>${i18next.t(`faq.q${i}`)}</span><i class="fas fa-chevron-down"></i></div>
                 <div class="faq-answer"><p>${i18next.t(`faq.a${i}`)}</p></div>
             </div>`;
@@ -65,21 +59,9 @@ function renderHomeFAQ() {
 
 function injectMasterLayout() {
     const header = document.getElementById('main-header');
-    const footer = document.getElementById('main-footer');
     if (header) {
-        header.innerHTML = `
-        <nav><a href="/" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
-            <ul class="nav-links">
-                <li><a data-i18n="nav.home">Home</a></li>
-                <li id="lang-picker-slot"></li>
-            </ul>
-        </nav>`;
+        header.innerHTML = `<nav><a href="/" class="logo">Snaptiks</a><div id="lang-picker-slot"></div></nav>`;
         createPicker('lang-picker-slot');
-    }
-    if (footer) {
-        footer.innerHTML = `<div class="container"><div class="footer-links">
-            <a data-i18n="nav.terms">Terms</a><a data-i18n="nav.privacy">Privacy</a>
-        </div><p>&copy; 2026 Snaptiks. <span data-i18n="footer.rights">All rights reserved.</span></p></div>`;
     }
 }
 
