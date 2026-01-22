@@ -22,7 +22,8 @@
       "processing": "Đang xử lý...",
       "download_video": "Tải Video",
       "download_audio": "Tải MP3",
-      "hd_quality": "Không có logo"
+      "hd_quality": "Không có logo",
+      "error_busy": "Dịch vụ đang bận, vui lòng thử lại sau."
     },
 
   "faq": {
@@ -99,3 +100,4 @@
     "step3": "Nhấp vào nút 'Tải xuống' và video của bạn sẽ được lưu ngay lập tức."
   }
 
+}

@@ -22,7 +22,8 @@
       "processing": "Bearbetar...",
       "download_video": "Ladda ner video",
       "download_audio": "Ladda ner MP3",
-      "hd_quality": "Utan vattenstämpel"
+      "hd_quality": "Utan vattenstämpel",
+      "error_busy": "Tjänsten är upptagen, försök igen senare."
     },
 
   "faq": {
@@ -90,3 +91,4 @@
     "step3": "Klicka på knappen 'Ladda ner' så sparas din video omedelbart."
   }
 
+}

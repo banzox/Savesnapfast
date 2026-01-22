@@ -22,7 +22,8 @@
       "processing": "Se procesează...",
       "download_video": "Descarcă Video",
       "download_audio": "Descarcă MP3",
-      "hd_quality": "Fără watermark"
+      "hd_quality": "Fără watermark",
+      "error_busy": "Serviciu ocupat, încercați din nou mai târziu."
     },
 
   "faq": {
@@ -90,3 +91,4 @@
     "step3": "Faceți clic på butonul „Descărcare” și videoclipul va fi salvat imediat."
   }
 
+}

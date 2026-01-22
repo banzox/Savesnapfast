@@ -22,7 +22,8 @@
       "processing": "Behandler...",
       "download_video": "Last ned video",
       "download_audio": "Last ned MP3",
-      "hd_quality": "Uten vannmerke"
+      "hd_quality": "Uten vannmerke",
+      "error_busy": "Tjenesten er opptatt, prøv igjen senere."
     },
 
   "faq": {
@@ -90,3 +91,4 @@
     "step3": "Klikk på 'Last ned'-knappen og videoen din blir lagret umiddelbart."
   }
 
+}

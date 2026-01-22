@@ -22,7 +22,8 @@
     "processing": "Traitement...",
     "download_video": "Télécharger Vidéo",
     "download_audio": "Télécharger MP3",
-    "hd_quality": "Sans filigrane"
+    "hd_quality": "Sans filigrane",
+    "error_busy": "Service occupé, veuillez réessayer plus tard."
   },
 
   "faq": {
@@ -99,3 +100,4 @@
     "step3": "Cliquez sur le bouton 'Télécharger' et votre vidéo sera enregistrée immédiatement."
   }
 
+}

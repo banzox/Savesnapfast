@@ -22,7 +22,8 @@
       "processing": "Behandler...",
       "download_video": "Download video",
       "download_audio": "Download MP3",
-      "hd_quality": "Uden vandmærke"
+      "hd_quality": "Uden vandmærke",
+      "error_busy": "Tjenesten er optaget, prøv igen senere."
     },
 
   "faq": {
@@ -90,3 +91,4 @@
     "step3": "Klik på knappen 'Download', og din video gemmes med det samme."
   }
 
+}
