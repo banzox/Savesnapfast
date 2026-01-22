@@ -16,7 +16,7 @@
     "title": "TikTok Video İndirici",
     "desc": "Filigransız TikTok videoları indir. Hızlı, Ücretsiz ve Sınırsız HD Kalite."
   },
-    "downloader": {
+  "downloader": {
     "placeholder": "TikTok bağlantısını buraya yapıştırın...",
     "btn_download": "İndir",
     "processing": "İşleniyor...",
@@ -24,7 +24,6 @@
     "download_audio": "MP3 İndir",
     "hd_quality": "Filigransız"
   },
-
   "faq": {
     "title": "Sıkça Sorulan Sorular (SSS)",
     "q1": "Filigransız TikTok videosu nasıl indirilir 2026?",
@@ -76,8 +75,7 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Tüm Hakları Saklıdır."
-  }
-  ,
+  },
   "features": {
     "fast": {
       "title": "Süper Hızlı İndirme",
@@ -98,4 +96,4 @@
     "step2": "Bağlantıyı bu sayفن صفحة التحميل في الأعلى.",
     "step3": "'İndir' butonuna tıklayın, videonuz anında cihazınıza kaydedilecektir."
   }
-
+}

@@ -16,15 +16,14 @@
     "title": "TikTok 影片下載器",
     "desc": "下載無浮水印的 TikTok 影片。快速、免費且無限量 HD 畫質。"
   },
-      "downloader": {
-      "placeholder": "在此处粘贴 TikTok 链接...",
-      "btn_download": "立即下载",
-      "processing": "正在处理...",
-      "download_video": "下载视频",
-      "download_audio": "下载 MP3",
-      "hd_quality": "无水印"
-    },
-
+  "downloader": {
+    "placeholder": "在此处粘贴 TikTok 链接...",
+    "btn_download": "立即下载",
+    "processing": "正在处理...",
+    "download_video": "下载视频",
+    "download_audio": "下载 MP3",
+    "hd_quality": "无水印"
+  },
   "faq": {
     "title": "常見問題 (FAQ)",
     "q1": "如何在 2026 年下載無浮水印的 TikTok 影片？",
@@ -76,8 +75,7 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. 保留所有權利。"
-  }
-  ,
+  },
   "features": {
     "fast": {
       "title": "极速下载",
@@ -98,4 +96,4 @@
     "step2": "将链接粘贴到页面顶部的下载框中。",
     "step3": "点击“下载”按钮，您的视频将立即保存。"
   }
-
+}

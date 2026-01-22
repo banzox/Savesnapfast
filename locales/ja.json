@@ -16,7 +16,7 @@
     "title": "TikTok動画ダウンローダー",
     "desc": "透かしなしでTikTok動画を保存。高速、無料、無制限のHD画質。"
   },
-    "downloader": {
+  "downloader": {
     "placeholder": "ここにTikTokリンクを貼り付け...",
     "btn_download": "今すぐダウンロード",
     "processing": "処理中...",
@@ -24,7 +24,6 @@
     "download_audio": "MP3をダウンロード",
     "hd_quality": "ウォーターマークなし"
   },
-
   "faq": {
     "title": "よくある質問 (FAQ)",
     "q1": "2026年にTikTok動画を透かしなしでダウンロードする方法は？",
@@ -76,8 +75,7 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. 全著作権所有."
-  }
-  ,
+  },
   "features": {
     "fast": {
       "title": "超高速ダウンロード",
@@ -98,4 +96,4 @@
     "step2": "このページ上部の入力ボックスにリンクを貼り付けます。",
     "step3": "「ダウンロード」ボタンをクリックすると、すぐに保存されます。"
   }
-
+}

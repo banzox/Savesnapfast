@@ -16,15 +16,14 @@
     "title": "Sťahovač TikTok videí",
     "desc": "Sťahujte videá z TikToku bez vodoznaku. Rýchlo, zadarmo a v neobmedzenej HD kvalite."
   },
-      "downloader": {
-      "placeholder": "Sem prilepte odkaz na TikTok...",
-      "btn_download": "Stiahnuť teraz",
-      "processing": "Spracováva sa...",
-      "download_video": "Stiahnuť video",
-      "download_audio": "Stiahnuť MP3",
-      "hd_quality": "Bez vodoznaku"
-    },
-
+  "downloader": {
+    "placeholder": "Sem prilepte odkaz na TikTok...",
+    "btn_download": "Stiahnuť teraz",
+    "processing": "Spracováva sa...",
+    "download_video": "Stiahnuť video",
+    "download_audio": "Stiahnuť MP3",
+    "hd_quality": "Bez vodoznaku"
+  },
   "faq": {
     "title": "Často kladené otázky (FAQ)",
     "q1": "Ako stiahnuť video z TikToku bez vodoznaku v roku 2026?",
@@ -76,12 +75,20 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Všetky práva vyhradené."
-  }
-  ,
+  },
   "features": {
-    "fast": { "title": "Super rýchle sťahovanie", "desc": "Sťahujte videá z TikToku za pár sekúnd vďaka našim vysokorýchlostným serverom." },
-    "safe": { "title": "Bezpečné a súkromné", "desc": "Vaše videá neukladáme ani nesledujeme vaše osobné údaje." },
-    "unlimited": { "title": "Neobmedzené použitie", "desc": "Sťahujte toľko videí, koľko chcete, bez akýchkoľvek obmedzení." }
+    "fast": {
+      "title": "Super rýchle sťahovanie",
+      "desc": "Sťahujte videá z TikToku za pár sekúnd vďaka našim vysokorýchlostným serverom."
+    },
+    "safe": {
+      "title": "Bezpečné a súkromné",
+      "desc": "Vaše videá neukladáme ani nesledujeme vaše osobné údaje."
+    },
+    "unlimited": {
+      "title": "Neobmedzené použitie",
+      "desc": "Sťahujte toľko videí, koľko chcete, bez akýchkoľvek obmedzení."
+    }
   },
   "how_to": {
     "title": "Ako sťahovať videá z TikToku bez vodoznaku",
@@ -89,4 +96,4 @@
     "step2": "Vložte odkaz do poľa na sťahovanie v hornej časti tejto stránky.",
     "step3": "Kliknite na tlačidlo „Stiahnuť“ a vaše video sa okamžite uloží."
   }
-
+}

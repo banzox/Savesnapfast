@@ -16,7 +16,7 @@
     "title": "Téléchargeur TikTok",
     "desc": "Téléchargez des vidéos TikTok sans filigrane. Rapide, Gratuit et Qualité HD illimitée."
   },
-    "downloader": {
+  "downloader": {
     "placeholder": "Coller le lien TikTok ici...",
     "btn_download": "Télécharger",
     "processing": "Traitement...",
@@ -24,7 +24,6 @@
     "download_audio": "Télécharger MP3",
     "hd_quality": "Sans filigrane"
   },
-
   "faq": {
     "title": "Foire Aux Questions (FAQ)",
     "q1": "Comment télécharger une vidéo TikTok sans filigrane en 2026 ?",
@@ -76,8 +75,7 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Tous droits réservés."
-  }
-  ,
+  },
   "features": {
     "fast": {
       "title": "Téléchargement Rapide",
@@ -98,4 +96,4 @@
     "step2": "Collez le lien dans la zone de téléchargement en haut de cette page.",
     "step3": "Cliquez sur le bouton 'Télécharger' et votre vidéo sera enregistrée immédiatement."
   }
-
+}

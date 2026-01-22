@@ -16,7 +16,7 @@
     "title": "Pobieracz wideo TikTok",
     "desc": "Pobieraj filmy TikTok bez znaku wodnego. Szybko, za darmo i w nieograniczonej jakości HD."
   },
-      "downloader": {
+  "downloader": {
     "placeholder": "Wklej link z TikToka tutaj...",
     "btn_download": "Pobierz teraz",
     "processing": "Przetwarzanie...",
@@ -24,8 +24,6 @@
     "download_audio": "Pobierz MP3",
     "hd_quality": "Bez znaku wodnego"
   },
-
-
   "faq": {
     "title": "Często zadawane pytania (FAQ)",
     "q1": "Jak pobrać wideo z TikToka bez znaku wodnego w 2026 roku?",
@@ -77,12 +75,20 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Wszelkie prawa zastrzeżone."
-  }
-  ,
+  },
   "features": {
-    "fast": { "title": "Superszybkie pobieranie", "desc": "Pobieraj filmy z TikToka w kilka sekund dzięki naszym szybkim serwerom." },
-    "safe": { "title": "Bezpieczne i prywatne", "desc": "Nie przechowujemy Twoich filmów ani nie śledzimy Twoich danych osobowych." },
-    "unlimited": { "title": "Nieograniczone korzystanie", "desc": "Pobieraj tyle filmów, ile chcesz, bez żadnych ograniczeń." }
+    "fast": {
+      "title": "Superszybkie pobieranie",
+      "desc": "Pobieraj filmy z TikToka w kilka sekund dzięki naszym szybkim serwerom."
+    },
+    "safe": {
+      "title": "Bezpieczne i prywatne",
+      "desc": "Nie przechowujemy Twoich filmów ani nie śledzimy Twoich danych osobowych."
+    },
+    "unlimited": {
+      "title": "Nieograniczone korzystanie",
+      "desc": "Pobieraj tyle filmów, ile chcesz, bez żadnych ograniczeń."
+    }
   },
   "how_to": {
     "title": "Jak pobierać filmy z TikToka bez znaku wodnego",
@@ -90,4 +96,4 @@
     "step2": "Wklej link do pola pobierania u góry tej strony.",
     "step3": "Kliknij przycisk „Pobierz”, a Twój film zostanie natychmiast zapisany."
   }
-
+}

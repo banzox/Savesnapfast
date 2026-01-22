@@ -16,15 +16,14 @@
     "title": "Pengunduh Video TikTok",
     "desc": "Download video TikTok tanpa watermark. Cepat, Gratis, dan Kualitas HD Tak Terbatas."
   },
-      "downloader": {
-      "placeholder": "Tempel tautan TikTok di sini...",
-      "btn_download": "Unduh sekarang",
-      "processing": "Memproses...",
-      "download_video": "Unduh Video",
-      "download_audio": "Unduh MP3",
-      "hd_quality": "Tanpa tanda air"
-    },
-
+  "downloader": {
+    "placeholder": "Tempel tautan TikTok di sini...",
+    "btn_download": "Unduh sekarang",
+    "processing": "Memproses...",
+    "download_video": "Unduh Video",
+    "download_audio": "Unduh MP3",
+    "hd_quality": "Tanpa tanda air"
+  },
   "faq": {
     "title": "Pertanyaan Umum (FAQ)",
     "q1": "Bagaimana cara download video TikTok tanpa watermark 2026?",
@@ -76,8 +75,7 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Hak cipta dilindungi undang-undang."
-  }
-  ,
+  },
   "features": {
     "fast": {
       "title": "Unduhan Super Cepat",
@@ -98,4 +96,4 @@
     "step2": "Tempel tautan ke kotak unduhan di bagian atas halaman ini.",
     "step3": "Klik tombol 'Unduh' dan video Anda akan segera disimpan."
   }
-
+}

@@ -16,15 +16,14 @@
     "title": "TikTok Video Downloader",
     "desc": "Download TikTok-videoer uden vandmærke. Hurtigt, gratis og ubegrænset HD-kvalitet."
   },
-      "downloader": {
-      "placeholder": "Indsæt TikTok-link her...",
-      "btn_download": "Download nu",
-      "processing": "Behandler...",
-      "download_video": "Download video",
-      "download_audio": "Download MP3",
-      "hd_quality": "Uden vandmærke"
-    },
-
+  "downloader": {
+    "placeholder": "Indsæt TikTok-link her...",
+    "btn_download": "Download nu",
+    "processing": "Behandler...",
+    "download_video": "Download video",
+    "download_audio": "Download MP3",
+    "hd_quality": "Uden vandmærke"
+  },
   "faq": {
     "title": "Ofte stillede spørgsmål (FAQ)",
     "q1": "Hvordan downloader man TikTok-video uden vandmærke i 2026?",
@@ -76,12 +75,20 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Alle rettigheder forbeholdes."
-  }
-  ,
+  },
   "features": {
-    "fast": { "title": "Superhurtig download", "desc": "Download TikTok-videoer på få sekunder med vores højhastighedsservere." },
-    "safe": { "title": "Sikker og privat", "desc": "Vi gemmer ikke dine videoer eller sporer dine personlige data." },
-    "unlimited": { "title": "Ubegrænset brug", "desc": "Download lige så mange videoer, du vil, uden begrænsninger." }
+    "fast": {
+      "title": "Superhurtig download",
+      "desc": "Download TikTok-videoer på få sekunder med vores højhastighedsservere."
+    },
+    "safe": {
+      "title": "Sikker og privat",
+      "desc": "Vi gemmer ikke dine videoer eller sporer dine personlige data."
+    },
+    "unlimited": {
+      "title": "Ubegrænset brug",
+      "desc": "Download lige så mange videoer, du vil, uden begrænsninger."
+    }
   },
   "how_to": {
     "title": "Sådan downloader du TikTok-videoer uden vandmærke",
@@ -89,4 +96,4 @@
     "step2": "Indsæt linket i downloadboksen øverst på denne side.",
     "step3": "Klik på knappen 'Download', og din video gemmes med det samme."
   }
-
+}

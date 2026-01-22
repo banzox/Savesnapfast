@@ -16,15 +16,14 @@
     "title": "Trình Tải Video TikTok",
     "desc": "Tải video TikTok không logo. Nhanh chóng, Miễn phí và Chất lượng HD không giới hạn."
   },
-      "downloader": {
-      "placeholder": "Dán liên kết TikTok vào đây...",
-      "btn_download": "Tải ngay",
-      "processing": "Đang xử lý...",
-      "download_video": "Tải Video",
-      "download_audio": "Tải MP3",
-      "hd_quality": "Không có logo"
-    },
-
+  "downloader": {
+    "placeholder": "Dán liên kết TikTok vào đây...",
+    "btn_download": "Tải ngay",
+    "processing": "Đang xử lý...",
+    "download_video": "Tải Video",
+    "download_audio": "Tải MP3",
+    "hd_quality": "Không có logo"
+  },
   "faq": {
     "title": "Câu hỏi thường gặp (FAQ)",
     "q1": "Làm thế nào để tải video TikTok không logo năm 2026?",
@@ -76,8 +75,7 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Bảo lưu mọi quyền."
-  }
-  ,
+  },
   "features": {
     "fast": {
       "title": "Tải xuống cực nhanh",
@@ -98,4 +96,4 @@
     "step2": "Dán liên kết vào hộp tải xuống ở đầu trang này.",
     "step3": "Nhấp vào nút 'Tải xuống' và video của bạn sẽ được lưu ngay lập tức."
   }
-
+}

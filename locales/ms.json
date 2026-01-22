@@ -16,15 +16,14 @@
     "title": "Pemuat Turun Video TikTok",
     "desc": "Muat turun video TikTok tanpa tanda air. Pantas, Percuma dan Kualiti HD Tanpa Had."
   },
-      "downloader": {
-      "placeholder": "Tampal pautan TikTok di sini...",
-      "btn_download": "Muat turun sekarang",
-      "processing": "Sedang diproses...",
-      "download_video": "Muat Turun Video",
-      "download_audio": "Muat Turun MP3",
-      "hd_quality": "Tanpa tanda air"
-    },
-
+  "downloader": {
+    "placeholder": "Tampal pautan TikTok di sini...",
+    "btn_download": "Muat turun sekarang",
+    "processing": "Sedang diproses...",
+    "download_video": "Muat Turun Video",
+    "download_audio": "Muat Turun MP3",
+    "hd_quality": "Tanpa tanda air"
+  },
   "faq": {
     "title": "Soalan Lazim (FAQ)",
     "q1": "Bagaimana cara memuat turun video TikTok tanpa tanda air pada tahun 2026?",
@@ -76,12 +75,20 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Hak cipta terpelihara."
-  }
-  ,
+  },
   "features": {
-    "fast": { "title": "Muat Turun Sangat Pantas", "desc": "Muat turun video TikTok dalam beberapa saat dengan pelayan berkelajuan tinggi kami." },
-    "safe": { "title": "Selamat & Peribadi", "desc": "Kami tidak menyimpan video anda atau menjejak data peribadi anda." },
-    "unlimited": { "title": "Penggunaan Tanpa Had", "desc": "Muat turun seberapa banyak video yang anda mahu tanpa sebarang sekatan." }
+    "fast": {
+      "title": "Muat Turun Sangat Pantas",
+      "desc": "Muat turun video TikTok dalam beberapa saat dengan pelayan berkelajuan tinggi kami."
+    },
+    "safe": {
+      "title": "Selamat & Peribadi",
+      "desc": "Kami tidak menyimpan video anda atau menjejak data peribadi anda."
+    },
+    "unlimited": {
+      "title": "Penggunaan Tanpa Had",
+      "desc": "Muat turun seberapa banyak video yang anda mahu tanpa sebarang sekatan."
+    }
   },
   "how_to": {
     "title": "Cara Memuat Turun Video TikTok Tanpa Tanda Air",
@@ -89,4 +96,4 @@
     "step2": "Tampal pautan ke dalam kotak muat turun di bahagian atas halaman ini.",
     "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta."
   }
-
+}
