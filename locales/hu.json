@@ -16,13 +16,16 @@
     "title": "TikTok Videó Letöltő",
     "desc": "Tölts le TikTok videókat vízjel nélkül. Gyors, ingyenes és korlátlan HD minőség."
   },
-  "downloader": {
-    "placeholder": "Illeszd be a TikTok linket ide...",
-    "btn_download": "Letöltés",
-    "processing": "Feldolgozás...",
-    "download_video": "Videó letöltése (Logo nélkül)",
-    "download_audio": "Hang letöltése (MP3)"
-  },
+          "downloader": {
+      "placeholder": "הדבק כאן קישור טיקטוק...",
+      "btn_download": "הורד עכשיו",
+      "processing": "מעבד...",
+      "download_video": "הורד סרטון",
+      "download_audio": "הורד MP3",
+      "hd_quality": "ללא סימן מים"
+    },
+
+
   "faq": {
     "title": "Gyakran Ismételt Kérdések (GYIK)",
     "q1": "Hogyan tölthetek le TikTok videót vízjel nélkül 2026-ban?",
@@ -75,4 +78,16 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Minden jog fenntartva."
   }
-}
+  ,
+  "features": {
+    "fast": { "title": "Szupergyors letöltés", "desc": "Töltsön le TikTok videókat másodpercek alatt nagy sebességű szervereinkkel." },
+    "safe": { "title": "Biztonságos és privát", "desc": "Nem tároljuk videóit, és nem követjük nyomon személyes adatait." },
+    "unlimited": { "title": "Korlátlan használat", "desc": "Töltsön le annyi videót, amennyit csak akar, korlátozások nélkül." }
+  },
+  "how_to": {
+    "title": "TikTok videók letöltése vízjel nélkül",
+    "step1": "Másolja ki a menteni kívánt TikTok videó linkjét.",
+    "step2": "Illessze be a linket az oldal tetején található letöltési mezőbe.",
+    "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül."
+  }
+

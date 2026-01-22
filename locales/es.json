@@ -16,13 +16,15 @@
     "title": "Descargador de TikTok",
     "desc": "Descargar videos de TikTok sin marca de agua. Rápido, Gratis y Calidad HD Ilimitada."
   },
-  "downloader": {
-    "placeholder": "Pega el enlace de TikTok aquí...",
+    "downloader": {
+    "placeholder": "Pegue el enlace de TikTok aquí...",
     "btn_download": "Descargar",
     "processing": "Procesando...",
-    "download_video": "Descargar Video (Sin Marca)",
-    "download_audio": "Descargar Audio (MP3)"
+    "download_video": "Descargar Video",
+    "download_audio": "Descargar MP3",
+    "hd_quality": "Sin marca de agua"
   },
+
   "faq": {
     "title": "Preguntas Frecuentes (FAQ)",
     "q1": "¿Cómo descargar videos de TikTok sin marca de agua en 2026?",
@@ -75,4 +77,25 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Todos los derechos reservados."
   }
-}
+  ,
+  "features": {
+    "fast": {
+      "title": "Descarga Súper Rápida",
+      "desc": "Descarga videos de TikTok en segundos con nuestros servidores de alta velocidad."
+    },
+    "safe": {
+      "title": "Seguro y Privado",
+      "desc": "No almacenamos sus videos ni rastreamos sus datos personales."
+    },
+    "unlimited": {
+      "title": "Uso Ilimitado",
+      "desc": "Descarga tantos videos como quieras sin ninguna restricción."
+    }
+  },
+  "how_to": {
+    "title": "Cómo Descargar Videos de TikTok Sin Marca de Agua",
+    "step1": "Copia el enlace del video de TikTok que quieres guardar.",
+    "step2": "Pega el enlace en el cuadro de descarga en la parte superior.",
+    "step3": "Haz clic en el botón 'Descargar' y tu video se guardará inmediatamente."
+  }
+

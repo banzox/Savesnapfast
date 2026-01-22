@@ -16,13 +16,15 @@
     "title": "Downloader TikTok",
     "desc": "Scarica video TikTok senza logo. Veloce, Gratis e Qualità HD illimitata."
   },
-  "downloader": {
-    "placeholder": "Incolla il link di TikTok qui...",
-    "btn_download": "Scarica",
-    "processing": "Elaborazione...",
-    "download_video": "Scarica Video (No Logo)",
-    "download_audio": "Scarica Audio (MP3)"
-  },
+      "downloader": {
+      "placeholder": "Incolla qui il link di TikTok...",
+      "btn_download": "Scarica ora",
+      "processing": "Elaborazione...",
+      "download_video": "Scarica Video",
+      "download_audio": "Scarica MP3",
+      "hd_quality": "Senza filigrana"
+    },
+
   "faq": {
     "title": "Domande Frequenti (FAQ)",
     "q1": "Come scaricare video TikTok senza filigrana nel 2026?",
@@ -75,4 +77,25 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Tutti i diritti riservati."
   }
-}
+  ,
+  "features": {
+    "fast": {
+      "title": "Download Super Veloce",
+      "desc": "Scarica video TikTok in pochi secondi grazie ai nostri server ad alta velocità."
+    },
+    "safe": {
+      "title": "Sicuro e Privato",
+      "desc": "Non memorizziamo i tuoi video né tracciamo i tuoi dati personali."
+    },
+    "unlimited": {
+      "title": "Utilizzo Illimitato",
+      "desc": "Scarica tutti i video che vuoi senza alcuna restrizione."
+    }
+  },
+  "how_to": {
+    "title": "Come scaricare video TikTok senza filigrana",
+    "step1": "Copia il link del video TikTok che desideri salvare.",
+    "step2": "Incolla il link nella casella di download in alto in questa pagina.",
+    "step3": "Fai clic sul pulsante 'Download' e il tuo video verrà salvato immediatamente."
+  }
+

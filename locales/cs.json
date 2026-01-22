@@ -16,13 +16,15 @@
     "title": "Stahovač TikTok videí",
     "desc": "Stahujte videa z TikToku bez vodoznaku. Rychle, zdarma a v neomezené HD kvalitě."
   },
-  "downloader": {
-    "placeholder": "Vložte odkaz na TikTok zde...",
-    "btn_download": "Stáhnout",
-    "processing": "Zpracování...",
-    "download_video": "Stáhnout video (Bez loga)",
-    "download_audio": "Stáhnout zvuk (MP3)"
-  },
+      "downloader": {
+      "placeholder": "Vložte odkaz na TikTok zde...",
+      "btn_download": "Stáhnout nyní",
+      "processing": "Zpracovávání...",
+      "download_video": "Stáhnout video",
+      "download_audio": "Stáhnout MP3",
+      "hd_quality": "Bez vodoznaku"
+    },
+
   "faq": {
     "title": "Často kladené otázky (FAQ)",
     "q1": "Jak stáhnout video z TikToku bez vodoznaku v roce 2026?",
@@ -75,4 +77,16 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Všechna práva vyhrazena."
   }
-}
+  ,
+  "features": {
+    "fast": { "title": "Super rychlé stahování", "desc": "Stahujte videa z TikToku během několika sekund díky našim vysokorychlostním serverům." },
+    "safe": { "title": "Bezpečné a soukromé", "desc": "Vaše videa neukládáme ani nesledujeme vaše osobní údaje." },
+    "unlimited": { "title": "Neomezené použití", "desc": "Stahujte tolik videí, kolik chcete, bez jakýchkoli omezení." }
+  },
+  "how_to": {
+    "title": "Jak stahovat videa z TikToku bez vodoznaku",
+    "step1": "Zkopírujte odkaz na video TikTok, které chcete uložit.",
+    "step2": "Vložte odkaz do pole pro stahování v horní části této stránky.",
+    "step3": "Klikněte na tlačítko „Stáhnout“ a vaše video se okamžitě uloží."
+  }
+

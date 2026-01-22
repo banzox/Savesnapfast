@@ -16,13 +16,15 @@
     "title": "TikTok Video Downloader",
     "desc": "TikTok Videos ohne Wasserzeichen herunterladen. Schnell, kostenlos und unbegrenzte HD-Qualität."
   },
-  "downloader": {
-    "placeholder": "Füge den TikTok-Link hier ein...",
-    "btn_download": "Herunterladen",
-    "processing": "Verarbeitung...",
-    "download_video": "Video herunterladen (Ohne Zeichen)",
-    "download_audio": "Audio herunterladen (MP3)"
-  },
+      "downloader": {
+      "placeholder": "TikTok-Link hier einfügen...",
+      "btn_download": "Herunterladen",
+      "processing": "Wird bearbeitet...",
+      "download_video": "Video herunterladen",
+      "download_audio": "MP3 herunterladen",
+      "hd_quality": "Ohne Wasserzeichen"
+    },
+
   "faq": {
     "title": "Häufig gestellte Fragen (FAQ)",
     "q1": "Wie lade ich TikTok Videos ohne Wasserzeichen 2026 herunter?",
@@ -75,4 +77,25 @@
   "footer": {
     "rights": "© 2026 Snaptiks. Alle Rechte vorbehalten."
   }
-}
+  ,
+  "features": {
+    "fast": {
+      "title": "Superschneller Download",
+      "desc": "Laden Sie TikTok-Videos in Sekundenschnelle mit unseren Hochgeschwindigkeitsservern herunter."
+    },
+    "safe": {
+      "title": "Sicher & Privat",
+      "desc": "Wir speichern Ihre Videos nicht und verfolgen Ihre persönlichen Daten nicht."
+    },
+    "unlimited": {
+      "title": "Unbegrenzte Nutzung",
+      "desc": "Laden Sie so viele Videos herunter, wie Sie möchten, ohne Einschränkungen."
+    }
+  },
+  "how_to": {
+    "title": "So laden Sie TikTok-Videos ohne Wasserzeichen herunter",
+    "step1": "Kopieren Sie den TikTok-Videolink, den Sie speichern möchten.",
+    "step2": "Fügen Sie den Link in das Download-Feld oben auf dieser Seite ein.",
+    "step3": "Klicken Sie auf die Schaltfläche 'Download' und Ihr Video wird sofort gespeichert."
+  }
+

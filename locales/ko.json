@@ -16,13 +16,15 @@
     "title": "틱톡 비디오 다운로더",
     "desc": "워터마크 없이 틱톡 영상을 저장하세요. 빠르고, 무료이며, 무제한 HD 화질."
   },
-  "downloader": {
-    "placeholder": "틱톡 링크를 여기에 붙여넣으세요...",
-    "btn_download": "다운로드",
-    "processing": "처리 중...",
-    "download_video": "영상 다운로드 (워터마크 없음)",
-    "download_audio": "오디오 다운로드 (MP3)"
-  },
+      "downloader": {
+      "placeholder": "여기에 TikTok 링크를 붙여넣으세요...",
+      "btn_download": "지금 다운로드",
+      "processing": "처리 중...",
+      "download_video": "비디오 다운로드",
+      "download_audio": "MP3 다운로드",
+      "hd_quality": "워터마크 없음"
+    },
+
   "faq": {
     "title": "자주 묻는 질문 (FAQ)",
     "q1": "2026년에 워터마크 없이 틱톡 영상을 다운로드하는 방법은?",
@@ -75,4 +77,25 @@
   "footer": {
     "rights": "© 2026 Snaptiks. All rights reserved."
   }
-}
+  ,
+  "features": {
+    "fast": {
+      "title": "초고속 다운로드",
+      "desc": "고속 서버를 통해 몇 초 만에 TikTok 동영상을 다운로드하세요."
+    },
+    "safe": {
+      "title": "안전 및 개인 정보 보호",
+      "desc": "당사는 귀하의 동영상을 저장하거나 개인 데이터를 추적하지 않습니다."
+    },
+    "unlimited": {
+      "title": "무제한 사용",
+      "desc": "제한 없이 원하는 만큼 동영상을 다운로드하세요."
+    }
+  },
+  "how_to": {
+    "title": "워터마크 없이 TikTok 동영상을 다운로드하는 방법",
+    "step1": "저장하려는 TikTok 동영상 링크를 복사합니다.",
+    "step2": "이 페이지 상단의 다운로드 상자에 링크를 붙여넣습니다.",
+    "step3": "'다운로드' 버튼을 클릭하면 동영상이 즉시 저장됩니다."
+  }
+
