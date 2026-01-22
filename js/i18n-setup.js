@@ -1,13 +1,14 @@
 // 1. القائمة المعتمدة للغات
-const supportedLanguages = ['en', 'ar', 'id', 'tr', 'fr', 'es', 'de', 'pt', 'ru', 'it', 'ja', 'zh', 'vi', 'hi', 'nl', 'ko', 'th', 'pl', 'uk', 'el', 'sv', 'no', 'da', 'fi', 'cs', 'hu', 'ro', 'sk', 'ms', 'he'];
+const supportedLanguages = ['en', 'ar', 'bg', 'cs', 'da', 'de', 'el', 'es', 'fi', 'fr', 'he', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'ms', 'nl', 'no', 'pl', 'pt', 'ro', 'ru', 'sk', 'sv', 'th', 'tr', 'uk', 'vi', 'zh'];
 
 const languageNames = {
-    en: "English", ar: "العربية", id: "Bahasa Indonesia", tr: "Türkçe", fr: "Français",
-    es: "Español", de: "Deutsch", pt: "Português", ru: "Русский", it: "Italiano",
-    ja: "日本語", zh: "简体中文", vi: "Tiếng Việt", hi: "हिन्दी", nl: "Nederlands",
-    ko: "한국어", th: "ไทย", pl: "Polski", uk: "Українська", el: "Ελληνικά",
-    sv: "Svenska", no: "Norsk", da: "Dansk", fi: "Suomi", cs: "Čeština",
-    hu: "Magyar", ro: "Română", sk: "Slovenčina", ms: "Bahasa Melayu", he: "עبرى"
+    en: "English", ar: "العربية", bg: "Български", cs: "Čeština", da: "Dansk",
+    de: "Deutsch", el: "Ελληνικά", es: "Español", fi: "Suomi", fr: "Français",
+    he: "עברית", hi: "हिन्दी", hu: "Magyar", id: "Bahasa Indonesia", it: "Italiano",
+    ja: "日本語", ko: "한국어", ms: "Bahasa Melayu", nl: "Nederlands", no: "Norsk",
+    pl: "Polski", pt: "Português", ro: "Română", ru: "Русский", sk: "Slovenčina",
+    sv: "Svenska", th: "ไทย", tr: "Türkçe", uk: "Українська", vi: "Tiếng Việt",
+    zh: "简体中文"
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -24,13 +25,31 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                // هذا الكود يضيف توقيت اللحظة الحالية للرابط، فيجبر المتصفح على تحميل الجديد دائماً
-                backend: { loadPath: '/locales/{{lng}}.json?v=' + new Date().getTime() },
+                load: 'languageOnly',
+                debug: false,
+                
+                // Backend configuration
+                backend: { 
+                    loadPath: '/locales/{{lng}}.json?v=' + new Date().getTime(),
+                    crossDomain: false,
+                    withCredentials: false
+                },
 
                 detection: { 
                     order: ['querystring', 'localStorage', 'navigator'],
                     lookupQuerystring: 'lang',
                     caches: ['localStorage'] 
+                },
+
+                // Missing key handling
+                saveMissing: false,
+                missingKeyHandler: (lngs, ns, key, fallbackValue) => {
+                    console.warn(`Missing translation key: ${key} for language: ${lngs[0]}`);
+                },
+
+                // Interpolation options
+                interpolation: {
+                    escapeValue: false
                 }
             });
 
@@ -39,7 +58,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderHomeFAQ();      
     } catch (error) {
         console.error('I18n Init Error:', error);
+        // Fallback to English if initialization fails
+        document.documentElement.lang = 'en';
     }
+
+    // Handle missing translations during runtime
+    i18next.on('missingKey', (lngs, namespace, key, res) => {
+        console.warn(`Missing key "${key}" in language "${lngs[0]}"`);
+    });
+
+    // Handle failed backend loads
+    i18next.on('failedLoading', (lng, ns, msg) => {
+        console.error(`Failed loading language "${lng}": ${msg}`);
+    });
 
     i18next.on('languageChanged', (lng) => {
         updateContent();
