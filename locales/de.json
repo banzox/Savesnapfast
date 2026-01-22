@@ -22,7 +22,8 @@
     "processing": "Wird bearbeitet...",
     "download_video": "Video herunterladen",
     "download_audio": "MP3 herunterladen",
-    "hd_quality": "Ohne Wasserzeichen"
+    "hd_quality": "Ohne Wasserzeichen",
+    "error_busy": "Service ist ausgelastet, versuchen Sie es später erneut"
   },
   "faq": {
     "title": "Häufig gestellte Fragen (FAQ)",

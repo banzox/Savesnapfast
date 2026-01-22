@@ -22,7 +22,8 @@
     "processing": "Elaborazione...",
     "download_video": "Scarica Video",
     "download_audio": "Scarica MP3",
-    "hd_quality": "Senza filigrana"
+    "hd_quality": "Senza filigrana",
+    "error_busy": "Servizio occupato, riprova più tardi"
   },
   "faq": {
     "title": "Domande Frequenti (FAQ)",

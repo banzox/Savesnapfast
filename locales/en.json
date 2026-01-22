@@ -22,7 +22,8 @@
     "processing": "Processing...",
     "download_video": "Download Video",
     "download_audio": "Download MP3",
-    "hd_quality": "No Watermark"
+    "hd_quality": "No Watermark",
+    "error_busy": "Service busy, try again later"
   },
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",

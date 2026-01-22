@@ -22,7 +22,8 @@
     "processing": "処理中...",
     "download_video": "ビデオをダウンロード",
     "download_audio": "MP3をダウンロード",
-    "hd_quality": "ウォーターマークなし"
+    "hd_quality": "ウォーターマークなし",
+    "error_busy": "サービスが混雑しています。後でもう一度お試しください"
   },
   "faq": {
     "title": "よくある質問 (FAQ)",

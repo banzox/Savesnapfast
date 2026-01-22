@@ -22,7 +22,8 @@
     "processing": "Spracováva sa...",
     "download_video": "Stiahnuť video",
     "download_audio": "Stiahnuť MP3",
-    "hd_quality": "Bez vodoznaku"
+    "hd_quality": "Bez vodoznaku",
+    "error_busy": "Služba je zaneprázdnená, skúste to znova neskôr"
   },
   "faq": {
     "title": "Často kladené otázky (FAQ)",

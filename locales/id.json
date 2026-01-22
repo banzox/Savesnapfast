@@ -22,7 +22,8 @@
     "processing": "Memproses...",
     "download_video": "Unduh Video",
     "download_audio": "Unduh MP3",
-    "hd_quality": "Tanpa tanda air"
+    "hd_quality": "Tanpa tanda air",
+    "error_busy": "Layanan sibuk, coba lagi nanti"
   },
   "faq": {
     "title": "Pertanyaan Umum (FAQ)",

@@ -16,16 +16,15 @@
     "title": "TikTok Video Downloader",
     "desc": "TikTok video bina watermark ke download karein. Tez, Muft aur Unlimited HD Quality."
   },
-          "downloader": {
-      "placeholder": "टिकटॉक लिंक यहाँ पेस्ट करें...",
-      "btn_download": "अभी डाउनलोड करें",
-      "processing": "प्रसंस्करण हो रहा है...",
-      "download_video": "वीडियो डाउनलोड करें",
-      "download_audio": "MP3 डाउनलोड करें",
-      "hd_quality": "बिना वॉटरमार्क के"
-    },
-
-
+  "downloader": {
+    "placeholder": "टिकटॉक लिंक यहाँ पेस्ट करें...",
+    "btn_download": "अभी डाउनलोड करें",
+    "processing": "प्रसंस्करण हो रहा है...",
+    "download_video": "वीडियो डाउनलोड करें",
+    "download_audio": "MP3 डाउनलोड करें",
+    "hd_quality": "बिना वॉटरमार्क के",
+    "error_busy": "सेवा व्यस्त है, बाद में पुनः प्रयास करें"
+  },
   "faq": {
     "title": "Aksar Puche Jane Wale Sawal (FAQ)",
     "q1": "2026 mein bina watermark ke TikTok video kaise download karein?",
@@ -77,8 +76,7 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. Sabhi adhikar surakshit hain."
-  }
-  ,
+  },
   "features": {
     "fast": {
       "title": "सुपर फास्ट डाउनलोड",
@@ -100,4 +98,3 @@
     "step3": "'डाउनलोड' बटन पर क्लिक करें और आपका वीडियो तुरंत सेव हो जाएगा।"
   }
 }
-

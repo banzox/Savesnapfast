@@ -22,7 +22,8 @@
     "processing": "İşleniyor...",
     "download_video": "Videoyu İndir",
     "download_audio": "MP3 İndir",
-    "hd_quality": "Filigransız"
+    "hd_quality": "Filigransız",
+    "error_busy": "Servis meşgul, lütfen daha sonra tekrar deneyin"
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular (SSS)",

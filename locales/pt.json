@@ -22,7 +22,8 @@
     "processing": "Processando...",
     "download_video": "Baixar Vídeo",
     "download_audio": "Baixar MP3",
-    "hd_quality": "Sem marca d'água"
+    "hd_quality": "Sem marca d'água",
+    "error_busy": "Serviço ocupado, tente novamente mais tarde"
   },
   "faq": {
     "title": "Perguntas Frequentes (FAQ)",

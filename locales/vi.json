@@ -22,7 +22,8 @@
     "processing": "Đang xử lý...",
     "download_video": "Tải Video",
     "download_audio": "Tải MP3",
-    "hd_quality": "Không có logo"
+    "hd_quality": "Không có logo",
+    "error_busy": "Dịch vụ bận, vui lòng thử lại sau"
   },
   "faq": {
     "title": "Câu hỏi thường gặp (FAQ)",

@@ -22,7 +22,8 @@
     "processing": "Käsitellään...",
     "download_video": "Lataa video",
     "download_audio": "Lataa MP3",
-    "hd_quality": "Ilman vesileimaa"
+    "hd_quality": "Ilman vesileimaa",
+    "error_busy": "Palvelu on varattu, yritä myöhemmin uudelleen"
   },
   "faq": {
     "title": "Usein kysytyt kysymykset (FAQ)",

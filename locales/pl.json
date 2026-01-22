@@ -22,7 +22,8 @@
     "processing": "Przetwarzanie...",
     "download_video": "Pobierz wideo",
     "download_audio": "Pobierz MP3",
-    "hd_quality": "Bez znaku wodnego"
+    "hd_quality": "Bez znaku wodnego",
+    "error_busy": "Usługa zajęta, spróbuj ponownie później"
   },
   "faq": {
     "title": "Często zadawane pytania (FAQ)",

@@ -22,7 +22,8 @@
     "processing": "Feldolgozás...",
     "download_video": "Videó letöltése",
     "download_audio": "MP3 letöltése",
-    "hd_quality": "Vízjel nélkül"
+    "hd_quality": "Vízjel nélkül",
+    "error_busy": "A szolgáltatás foglalt, próbálja újra később"
   },
   "faq": {
     "title": "Gyakran Ismételt Kérdések (GYIK)",

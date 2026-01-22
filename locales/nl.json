@@ -22,7 +22,8 @@
     "processing": "Verwerken...",
     "download_video": "Video downloaden",
     "download_audio": "MP3 downloaden",
-    "hd_quality": "Zonder watermerk"
+    "hd_quality": "Zonder watermerk",
+    "error_busy": "Service bezet, probeer het later opnieuw"
   },
   "faq": {
     "title": "Veelgestelde Vragen (FAQ)",
