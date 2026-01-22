@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
                 // 🔥 التعديل هنا: أضفنا ?v=6 لكسر الكاش وإصلاح اللغة العبرية
-                backend: { loadPath: '/locales/{{lng}}.json?v=20' }, 
+                backend: { loadPath: '/locales/{{lng}}.json?v=25' }, 
                 detection: { 
                     order: ['querystring', 'localStorage', 'navigator'],
                     lookupQuerystring: 'lang',
