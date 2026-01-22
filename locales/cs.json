@@ -22,7 +22,8 @@
       "processing": "Zpracovávání...",
       "download_video": "Stáhnout video",
       "download_audio": "Stáhnout MP3",
-      "hd_quality": "Bez vodoznaku"
+      "hd_quality": "Bez vodoznaku",
+      "error_busy": "Služba je zaneprázdněna, zkuste to prosím později."
     },
 
   "faq": {
@@ -90,3 +91,4 @@
     "step3": "Klikněte na tlačítko „Stáhnout“ a vaše video se okamžitě uloží."
   }
 
+}

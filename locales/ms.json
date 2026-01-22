@@ -22,7 +22,8 @@
       "processing": "Sedang diproses...",
       "download_video": "Muat Turun Video",
       "download_audio": "Muat Turun MP3",
-      "hd_quality": "Tanpa tanda air"
+      "hd_quality": "Tanpa tanda air",
+      "error_busy": "Perkhidmatan sibuk, sila cuba lagi kemudian."
     },
 
   "faq": {
@@ -90,3 +91,4 @@
     "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta."
   }
 
+}

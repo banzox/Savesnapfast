@@ -22,7 +22,8 @@
       "processing": "Wird bearbeitet...",
       "download_video": "Video herunterladen",
       "download_audio": "MP3 herunterladen",
-      "hd_quality": "Ohne Wasserzeichen"
+      "hd_quality": "Ohne Wasserzeichen",
+      "error_busy": "Dienst beschäftigt, bitte später erneut versuchen."
     },
 
   "faq": {
@@ -99,3 +100,4 @@
     "step3": "Klicken Sie auf die Schaltfläche 'Download' und Ihr Video wird sofort gespeichert."
   }
 
+}

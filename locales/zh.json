@@ -22,7 +22,8 @@
       "processing": "正在处理...",
       "download_video": "下载视频",
       "download_audio": "下载 MP3",
-      "hd_quality": "无水印"
+      "hd_quality": "无水印",
+      "error_busy": "服务繁忙，请稍后再试。"
     },
 
   "faq": {
@@ -99,3 +100,4 @@
     "step3": "点击“下载”按钮，您的视频将立即保存。"
   }
 
+}

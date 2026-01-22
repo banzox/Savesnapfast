@@ -22,7 +22,8 @@
     "processing": "מעבד...",
     "download_video": "הורד סרטון",
     "download_audio": "הורד MP3",
-    "hd_quality": "ללא סימן מים"
+    "hd_quality": "ללא סימן מים",
+    "error_busy": "השירות עסוק, נסה שוב מאוחר יותר."
   },
   "faq": {
     "title": "שאלות נפוצות (FAQ)",
@@ -49,6 +50,32 @@
   },
   "footer": {
     "rights": "© 2026 Snaptiks. כל הזכויות שמורות."
+  },
+  "pages": {
+    "about": {
+      "title": "אודותינו",
+      "content": "ברוכים הבאים ל-Snaptiks, הכלי המוביל להורדת סרטוני TikTok לשנת 2026.\n\nבנינו את Snaptiks עם מטרה אחת: לספק את הדרך המהירה, הבטוחה והאמינה ביותר לשמור סרטוני TikTok ללא סימני מים. בניגוד לכלים אחרים, אנו נותנים עדיפות לחוויית המשתמש - ללא חלונות קופצים מעצבנים, ללא הרשמה ללא צורך בהתקנת תוכנה.\n\nהטכנולוגיה שלנו מבטיחה שתקבל את האיכות המקורית של הסרטון (עד 4K) תוך הסרת הלוגו המכסה."
+    },
+    "contact": {
+      "title": "צור קשר",
+      "content": "אנו מעריכים את המשוב שלך ואנחנו כאן כדי לעזור.\n\nאם אתה נתקל בבעיות טכניות, יש לך הצעות לשיפור או פניות עסקיות, אנא צור קשר עם צוות התמיכה שלנו:\n\n📧 אימייל: support@savetik-fast.xyz\n\nאנו שואפים להגיב לכל הפניות תוך 24 שעות."
+    },
+    "terms": {
+      "title": "תנאי שימוש",
+      "content": "על ידי שימוש ב-Snaptiks, אתה מסכים לתנאים הבאים:\n\n1. שימוש אישי בלבד:\nהשירות שלנו מיועד לשימוש אישי ולא מסחרי. אתה רשאי להוריד סרטונים לצפייה אופליין ולארכוב.\n\n2. קניין רוחני:\nאיננו הבעלים של התוכן שהורד באמצעות הכלי שלנו. כל הזכויות שייכות ליוצרים המקוריים ב-TikTok. אתה מסכים לא להשתמש בתוכן באופן המפר את חוקי זכויות היוצרים.\n\n3. אחריות:\nSnaptiks אינו אחראי לאופן שבו אתה משתמש בחומר שהורדת. המשתמש נושא באחריות מלאה לכל הפרת זכויות יוצרים או שימוש לרעה.\n\n4. שינויים:\nאנו שומרים לעצמנו את הזכות לשנות או להפסיק את השירותים בכל עת."
+    },
+    "privacy": {
+      "title": "מדיניות פרטיות",
+      "content": "הפרטיות שלך חשובה לנו.\n\nאיסוף נתונים:\nאיננו אוספים מידע אישי כמו שמות, אימיילים או מספרי טלפון. אנו עשויים להשתמש בניתוח אנונימי (כמו עוגיות) כדי לשפר את ביצועי האתר וחוויית המשתמש.\n\nללא אחסון סרטונים:\nSnaptiks לא מארח או מאחסן סרטונים בשרתים שלו. כל עיבוד הקבצים נעשה באופן מיידי ולא נשמר היסטוריית ההורדות שלך.\n\nאבטחה:\nהאתר שלנו משתמש בהצפנת SSL כדי להבטיח חיבור מאובטח בזמן גלישה והורדה."
+    },
+    "dmca": {
+      "title": "מדיניות DMCA",
+      "content": "Snaptiks מכבד את זכויות הקניין הרוחני של אחרים.\n\nאנו פועלים כספק שירות טכני ולא מארחים תוכן המוגן בזכויות יוצרים. כל הסרטונים מוגשים ישירות משרתי צד שלישי (TikTok).\n\nאם אתה מאמין שעבודה המוגנת בזכויות יוצרים שלך הוצגה בשירות שלנו ללא אישור, אנא שלח הודעת DMCA רשמית ל:\n\nאימייל: support@savetik-fast.xyz\n\nנקבל פעולה מיידית להסרת הגישה לתוכן המדובר."
+    },
+    "disclaimer": {
+      "title": "הצהרת סודיות",
+      "content": "1. אי-השתייכות:\nSnaptiks הוא כלי שירות עצמאי ואינו קשור, משויך, מורשה, מאושר או מחובר באופן רשמי ל-TikTok Inc., ByteDance Ltd., או לכל אחת מהחברות הבנות שלהם.\n\n2. סימנים מסחריים:\nהשמות 'TikTok' והלוגואים שלו הם סימנים מסחריים רשומים של הבעלים המתאימים שלהם. אנו משתמשים בהם אך ורק למטרות זיהוי ותיאור.\n\n3. אחריות תוכן:\nאין לנו שליטה על התוכן המאוחסן בשרתי TikTok ואיננו נושאים באחריות לסרטונים שהורדו על ידי משתמשים."
+    }
   },
   "features": {
     "fast": { "title": "הורדה מהירה במיוחד", "desc": "הורד סרטוני טיקטוק תוך שניות בודדות הודות לשרתים המהירים שלנו." },

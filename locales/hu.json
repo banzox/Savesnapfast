@@ -22,7 +22,8 @@
       "processing": "Feldolgozás...",
       "download_video": "Videó letöltése",
       "download_audio": "MP3 letöltése",
-      "hd_quality": "Vízjel nélkül"
+      "hd_quality": "Vízjel nélkül",
+      "error_busy": "A szolgáltatás foglalt, próbáld újra később."
     },
 
 
@@ -91,3 +92,4 @@
     "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül."
   }
 
+}

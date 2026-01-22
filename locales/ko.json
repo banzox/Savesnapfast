@@ -22,7 +22,8 @@
       "processing": "처리 중...",
       "download_video": "비디오 다운로드",
       "download_audio": "MP3 다운로드",
-      "hd_quality": "워터마크 없음"
+      "hd_quality": "워터마크 없음",
+      "error_busy": "서비스가 바쁩니다. 나중에 다시 시도해 주세요."
     },
 
   "faq": {
@@ -99,3 +100,4 @@
     "step3": "'다운로드' 버튼을 클릭하면 동영상이 즉시 저장됩니다."
   }
 
+}

@@ -22,7 +22,8 @@
     "processing": "Processing...",
     "download_video": "Download Video",
     "download_audio": "Download MP3",
-    "hd_quality": "No Watermark"
+    "hd_quality": "No Watermark",
+    "error_busy": "Service busy, please try again later."
   },
 
   "faq": {
@@ -98,4 +99,5 @@
     "step2": "Paste the link into the download box at the top of this page.",
     "step3": "Click the 'Download' button and your video will be saved immediately."
   }
+}
 
