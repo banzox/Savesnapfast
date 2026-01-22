@@ -24,8 +24,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                // 🔥 التعديل هنا: أضفنا ?v=6 لكسر الكاش وإصلاح اللغة العبرية
-                backend: { loadPath: '/locales/{{lng}}.json?v=50' }, 
+                //  
+
+                // هذا الكود يضيف توقيت اللحظة الحالية للرابط، فيجبر المتصفح على تحميل الجديد دائماً
+backend: { loadPath: '/locales/{{lng}}.json?v=' + new Date().getTime() },
+
                 detection: { 
                     order: ['querystring', 'localStorage', 'navigator'],
                     lookupQuerystring: 'lang',
