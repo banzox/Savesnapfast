@@ -475,9 +475,9 @@
         <div class="container">
             <!-- Tool Tabs -->
             <div class="tools-tabs">
-                <button class="tab-btn active" onclick="switchTool('compressor')" data-i18n="tools.tabs.compressor">Image Compressor</button>
-                <button class="tab-btn" onclick="switchTool('converter')" data-i18n="tools.tabs.converter">Image Converter</button>
-                <button class="tab-btn" onclick="switchTool('qrcode')" data-i18n="tools.tabs.qrcode">QR Code Generator</button>
+                <button class="tab-btn active" onclick="switchTool('compressor', event)" data-i18n="tools.tabs.compressor">Image Compressor</button>
+                <button class="tab-btn" onclick="switchTool('converter', event)" data-i18n="tools.tabs.converter">Image Converter</button>
+                <button class="tab-btn" onclick="switchTool('qrcode', event)" data-i18n="tools.tabs.qrcode">QR Code Generator</button>
             </div>
 
             <!-- IMAGE COMPRESSOR TOOL -->
@@ -881,22 +881,35 @@
         let originalFile = null;
 
         // Tab switching
-        function switchTool(toolName) {
+        function switchTool(toolName, event) {
             // Update tabs
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            } else {
+                // Fallback: find button by toolName
+                const buttons = document.querySelectorAll('.tab-btn');
+                buttons.forEach((btn, index) => {
+                    const tools = ['compressor', 'converter', 'qrcode'];
+                    if (tools[index] === toolName) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
 
             // Update content
             document.querySelectorAll('.tool-content').forEach(content => content.classList.remove('active'));
             document.getElementById('tool-' + toolName).classList.add('active');
 
-            // Update meta title dynamically
-            const titles = {
-                'compressor': i18next.t('tools.compressor.title'),
-                'converter': i18next.t('tools.converter.title'),
-                'qrcode': i18next.t('tools.qrcode.title')
-            };
-            document.title = titles[toolName] + ' - Snaptiks Tools';
+            // Update meta title dynamically if i18next is available
+            if (typeof i18next !== 'undefined') {
+                const titles = {
+                    'compressor': i18next.t('tools.compressor.title'),
+                    'converter': i18next.t('tools.converter.title'),
+                    'qrcode': i18next.t('tools.qrcode.title')
+                };
+                document.title = titles[toolName] + ' - Snaptiks Tools';
+            }
         }
 
         // FAQ toggle
