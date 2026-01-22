@@ -13,7 +13,6 @@ const languageNames = {
 document.addEventListener('DOMContentLoaded', async () => {
     if (typeof i18next === 'undefined') return;
 
-    // استعادة وضع الثيم المفضل
     if (localStorage.getItem('theme') === 'light') {
         document.body.classList.add('light-mode');
     }
@@ -25,10 +24,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                // تحميل ملفات الترجمة من مجلد locales
-                backend: { loadPath: '/locales/{{lng}}.json' }, 
+                // 🔥 التعديل هنا: أضفنا ?v=6 لكسر الكاش وإصلاح اللغة العبرية
+                backend: { loadPath: '/locales/{{lng}}.json?v=6' }, 
                 detection: { 
-                    // الترتيب: الرابط (?lang=) -> الذاكرة -> المتصفح
                     order: ['querystring', 'localStorage', 'navigator'],
                     lookupQuerystring: 'lang',
                     caches: ['localStorage'] 
@@ -45,12 +43,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     i18next.on('languageChanged', (lng) => {
         updateContent();
         renderHomeFAQ();
-        
-        // تحديث اتجاه الصفحة (RTL/LTR)
         document.documentElement.dir = ['ar', 'he'].includes(lng) ? 'rtl' : 'ltr';
         document.documentElement.lang = lng;
         
-        // تحديث اسم اللغة في القائمة
         const currentName = languageNames[lng] || lng.toUpperCase();
         const triggerSpan = document.querySelector('.dropdown-trigger span');
         if (triggerSpan) triggerSpan.textContent = currentName;
@@ -173,12 +168,9 @@ function createPicker(slotId) {
     `;
 }
 
-// ✅ التعديل الحاسم: استخدام ?lang=en بدلاً من /en
-// هذا يضمن أن المتصفح لن يضيع ولن يبحث عن مجلدات غير موجودة
 function changeLanguageAndClose(lng) {
     localStorage.setItem('i18nextLng', lng);
-    // توجيه لرابط نظيف في الصفحة الرئيسية
-    window.location.href = '/?lang=' + lng;
+    window.location.search = '?lang=' + lng;
 }
 
 window.onclick = function(event) {
