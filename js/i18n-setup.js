@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                // تحميل ملفات اللغة من المسار الجذري دائماً
+                // تحميل ملفات الترجمة من المسار الصحيح
                 backend: { loadPath: 'locales/{{lng}}.json' }, 
                 detection: { 
-                    // الاعتماد على الرابط (?lang=) ثم التخزين المحلي
+                    // نلغي الاعتماد على المسار (path) ونعتمد فقط على الرابط (?lang)
                     order: ['querystring', 'localStorage', 'navigator'],
                     lookupQuerystring: 'lang',
                     caches: ['localStorage'] 
@@ -45,12 +45,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     i18next.on('languageChanged', (lng) => {
         updateContent();
         renderHomeFAQ();
-        const sel = document.querySelector('.lang-select');
-        if (sel) sel.value = lng;
         
-        // تعديل اتجاه الصفحة فوراً عند التغيير
+        // تحديث اتجاه الصفحة
         document.documentElement.dir = ['ar', 'he'].includes(lng) ? 'rtl' : 'ltr';
         document.documentElement.lang = lng;
+        
+        // تحديث القائمة المنسدلة
+        const currentName = languageNames[lng] || lng.toUpperCase();
+        const triggerSpan = document.querySelector('.dropdown-trigger span');
+        if (triggerSpan) triggerSpan.textContent = currentName;
     });
 });
 
@@ -66,10 +69,6 @@ function updateContent() {
             if (translated && translated !== key) el.innerHTML = translated;
         }
     });
-
-    const currentLng = i18next.language;
-    document.documentElement.lang = currentLng;
-    document.documentElement.dir = ['ar', 'he'].includes(currentLng) ? 'rtl' : 'ltr';
     document.title = i18next.t('meta.title');
 }
 
@@ -116,16 +115,13 @@ function injectMasterLayout() {
                 <button id="theme-toggle" class="theme-btn" title="Toggle Mode">
                     <i class="fas ${document.body.classList.contains('light-mode') ? 'fa-sun' : 'fa-moon'}"></i>
                 </button>
-                
                 <span style="width: 1px; height: 20px; background: rgba(255,255,255,0.1);"></span>
-
                 <div id="lang-picker-slot"></div>
             </div>
         </nav>`;
         
         createPicker('lang-picker-slot');
         
-        // تفعيل زر الثيم
         const themeBtn = document.getElementById('theme-toggle');
         if(themeBtn){
             themeBtn.addEventListener('click', () => {
@@ -177,13 +173,14 @@ function createPicker(slotId) {
     `;
 }
 
-// 🔥 التعديل الأهم هنا: استخدام ?lang= بدلاً من /lang
+// ✅✅ الإصلاح النهائي هنا ✅✅
 function changeLanguageAndClose(lng) {
-    // تحديث الرابط بنفس الصفحة مع متغير اللغة فقط
-    // هذا يمنع اختفاء ملفات الـ CSS
-    const url = new URL(window.location);
-    url.searchParams.set('lang', lng);
-    window.location.href = url.toString();
+    // 1. حفظ اللغة في الذاكرة
+    localStorage.setItem('i18nextLng', lng);
+    
+    // 2. تحديث الرابط في نفس الصفحة (Query Param) بدون الذهاب لمسار وهمي
+    // سيصبح الرابط: ?lang=en بدلاً من /en
+    window.location.search = '?lang=' + lng;
 }
 
 window.onclick = function(event) {
