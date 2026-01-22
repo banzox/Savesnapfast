@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 backend: { loadPath: '/locales/{{lng}}.json' }, 
                 detection: { 
                     // تعديل جوهري: إعطاء الأولوية للـ 'path' لقراءة روابط مثل /ja أو /ar
-                    order: ['path', 'querystring', 'localStorage', 'navigator'], 
+                    order: ['querystring', 'path', 'localStorage', 'navigator'],
                     lookupFromPathIndex: 0,
                     lookupQuerystring: 'lang',
                     caches: ['localStorage'] 
@@ -150,8 +150,13 @@ function createPicker(slotId) {
 
 // تعديل جوهري: استخدام التنقل الحقيقي بين المسارات لدعم الروابط النظيفة
 function changeLanguageAndClose(lng) {
-    window.location.href = `/${lng}`;
+    // 1. حذف الذاكرة القديمة لفك أي "تعليق" للغة في الهاتف
+    localStorage.removeItem('i18nextLng');
+    
+    // 2. التوجه للرابط الجديد مع إضافة параметр اللغة للإجبار
+    window.location.href = '/' + lng + '?lang=' + lng;
 }
+
 
 window.onclick = function(event) {
     if (!event.target.closest('.custom-dropdown')) {
