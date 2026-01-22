@@ -108,6 +108,10 @@ function injectMasterLayout() {
             <a href="/" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
             
             <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <a href="/tools/" class="nav-link" style="color: var(--secondary); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 25px; border: 1px solid var(--border); background: var(--glass); transition: 0.3s;">
+                    <i class="fas fa-tools"></i>
+                    <span data-i18n="nav.tools">Tools</span>
+                </a>
                 <button id="theme-toggle" class="theme-btn" title="Toggle Mode">
                     <i class="fas ${document.body.classList.contains('light-mode') ? 'fa-sun' : 'fa-moon'}"></i>
                 </button>
@@ -134,6 +138,7 @@ function injectMasterLayout() {
         <div class="footer-content" style="text-align:center; padding: 40px 20px; border-top: 1px solid var(--border);">
             <p data-i18n="footer.rights"></p>
             <div class="footer-links" style="margin-top:20px; display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+                <a href="/tools/" data-i18n="nav.tools"></a>
                 <a href="about.html" data-i18n="nav.about"></a>
                 <a href="terms.html" data-i18n="nav.terms"></a>
                 <a href="privacy.html" data-i18n="nav.privacy"></a>
