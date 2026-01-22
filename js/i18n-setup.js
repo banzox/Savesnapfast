@@ -25,10 +25,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                backend: { loadPath: '/locales/{{lng}}.json' }, 
+                // تحميل ملفات اللغة من المسار الجذري دائماً
+                backend: { loadPath: 'locales/{{lng}}.json' }, 
                 detection: { 
-                    order: ['querystring', 'path', 'localStorage', 'navigator'],
-                    lookupFromPathIndex: 0,
+                    // الاعتماد على الرابط (?lang=) ثم التخزين المحلي
+                    order: ['querystring', 'localStorage', 'navigator'],
                     lookupQuerystring: 'lang',
                     caches: ['localStorage'] 
                 }
@@ -46,6 +47,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderHomeFAQ();
         const sel = document.querySelector('.lang-select');
         if (sel) sel.value = lng;
+        
+        // تعديل اتجاه الصفحة فوراً عند التغيير
+        document.documentElement.dir = ['ar', 'he'].includes(lng) ? 'rtl' : 'ltr';
+        document.documentElement.lang = lng;
     });
 });
 
@@ -98,7 +103,6 @@ function toggleFAQ(element) {
     if (!isActive) item.classList.add('active');
 }
 
-// تعديل هام: إضافة زر الثيم هنا لأنه يتم حقنه ديناميكياً
 function injectMasterLayout() {
     const header = document.getElementById('main-header');
     const footer = document.getElementById('main-footer');
@@ -121,18 +125,16 @@ function injectMasterLayout() {
         
         createPicker('lang-picker-slot');
         
-        // تفعيل منطق زر الثيم
+        // تفعيل زر الثيم
         const themeBtn = document.getElementById('theme-toggle');
-        themeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            const isLight = document.body.classList.contains('light-mode');
-            
-            // تغيير الأيقونة
-            themeBtn.querySelector('i').className = isLight ? 'fas fa-sun' : 'fas fa-moon';
-            
-            // حفظ التفضيل
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        });
+        if(themeBtn){
+            themeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                const isLight = document.body.classList.contains('light-mode');
+                themeBtn.querySelector('i').className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            });
+        }
     }
 
     if (footer) {
@@ -140,11 +142,11 @@ function injectMasterLayout() {
         <div class="footer-content" style="text-align:center; padding: 40px 20px; border-top: 1px solid var(--border);">
             <p data-i18n="footer.rights"></p>
             <div class="footer-links" style="margin-top:20px; display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-                <a href="/about.html" data-i18n="nav.about"></a>
-                <a href="/terms.html" data-i18n="nav.terms"></a>
-                <a href="/privacy.html" data-i18n="nav.privacy"></a>
-                <a href="/dmca.html" data-i18n="nav.dmca"></a>
-                <a href="/contact.html" data-i18n="nav.contact"></a>
+                <a href="about.html" data-i18n="nav.about"></a>
+                <a href="terms.html" data-i18n="nav.terms"></a>
+                <a href="privacy.html" data-i18n="nav.privacy"></a>
+                <a href="dmca.html" data-i18n="nav.dmca"></a>
+                <a href="contact.html" data-i18n="nav.contact"></a>
             </div>
         </div>`;
         updateContent();
@@ -175,9 +177,13 @@ function createPicker(slotId) {
     `;
 }
 
+// 🔥 التعديل الأهم هنا: استخدام ?lang= بدلاً من /lang
 function changeLanguageAndClose(lng) {
-    localStorage.removeItem('i18nextLng');
-    window.location.href = '/' + lng + '?lang=' + lng;
+    // تحديث الرابط بنفس الصفحة مع متغير اللغة فقط
+    // هذا يمنع اختفاء ملفات الـ CSS
+    const url = new URL(window.location);
+    url.searchParams.set('lang', lng);
+    window.location.href = url.toString();
 }
 
 window.onclick = function(event) {
