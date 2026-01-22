@@ -1,4 +1,4 @@
-// 1. القائمة المعتمدة للغات (30 لغة متوافقة مع sitemap و _redirects)
+// 1. القائمة المعتمدة للغات
 const supportedLanguages = ['en', 'ar', 'id', 'tr', 'fr', 'es', 'de', 'pt', 'ru', 'it', 'ja', 'zh', 'vi', 'hi', 'nl', 'ko', 'th', 'pl', 'uk', 'el', 'sv', 'no', 'da', 'fi', 'cs', 'hu', 'ro', 'sk', 'ms', 'he'];
 
 const languageNames = {
@@ -13,6 +13,11 @@ const languageNames = {
 document.addEventListener('DOMContentLoaded', async () => {
     if (typeof i18next === 'undefined') return;
 
+    // استعادة وضع الثيم المفضل
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-mode');
+    }
+
     try {
         await i18next
             .use(i18nextHttpBackend)
@@ -20,10 +25,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                // تعديل جوهري: استخدام مسار مطلق / لضمان جلب ملفات اللغة من أي مكان
                 backend: { loadPath: '/locales/{{lng}}.json' }, 
                 detection: { 
-                    // تعديل جوهري: إعطاء الأولوية للـ 'path' لقراءة روابط مثل /ja أو /ar
                     order: ['querystring', 'path', 'localStorage', 'navigator'],
                     lookupFromPathIndex: 0,
                     lookupQuerystring: 'lang',
@@ -95,6 +98,7 @@ function toggleFAQ(element) {
     if (!isActive) item.classList.add('active');
 }
 
+// تعديل هام: إضافة زر الثيم هنا لأنه يتم حقنه ديناميكياً
 function injectMasterLayout() {
     const header = document.getElementById('main-header');
     const footer = document.getElementById('main-footer');
@@ -103,9 +107,32 @@ function injectMasterLayout() {
         header.innerHTML = `
         <nav class="nav-container">
             <a href="/" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
-            <div id="lang-picker-slot"></div>
+            
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <button id="theme-toggle" class="theme-btn" title="Toggle Mode">
+                    <i class="fas ${document.body.classList.contains('light-mode') ? 'fa-sun' : 'fa-moon'}"></i>
+                </button>
+                
+                <span style="width: 1px; height: 20px; background: rgba(255,255,255,0.1);"></span>
+
+                <div id="lang-picker-slot"></div>
+            </div>
         </nav>`;
+        
         createPicker('lang-picker-slot');
+        
+        // تفعيل منطق زر الثيم
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            
+            // تغيير الأيقونة
+            themeBtn.querySelector('i').className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+            
+            // حفظ التفضيل
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
     }
 
     if (footer) {
@@ -148,15 +175,10 @@ function createPicker(slotId) {
     `;
 }
 
-// تعديل جوهري: استخدام التنقل الحقيقي بين المسارات لدعم الروابط النظيفة
 function changeLanguageAndClose(lng) {
-    // 1. حذف الذاكرة القديمة لفك أي "تعليق" للغة في الهاتف
     localStorage.removeItem('i18nextLng');
-    
-    // 2. التوجه للرابط الجديد مع إضافة параметр اللغة للإجبار
     window.location.href = '/' + lng + '?lang=' + lng;
 }
-
 
 window.onclick = function(event) {
     if (!event.target.closest('.custom-dropdown')) {
