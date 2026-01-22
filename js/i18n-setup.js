@@ -185,7 +185,7 @@ function createPicker(slotId) {
                     aria-label="Select language"
                     aria-haspopup="listbox"
                     aria-expanded="false"
-                    onclick="const dropdown = document.querySelector('.dropdown-options'); const isExpanded = dropdown.classList.toggle('show'); this.setAttribute('aria-expanded', isExpanded);">
+                    onclick="toggleLanguageDropdown(this)">
                 <i class="fas fa-globe" aria-hidden="true"></i> 
                 <span>${currentName}</span> 
                 <i class="fas fa-chevron-down" aria-hidden="true"></i>
@@ -204,6 +204,15 @@ function createPicker(slotId) {
         </div>
     `;
 }
+
+// Toggle language dropdown with accessibility
+window.toggleLanguageDropdown = function(triggerElement) {
+    const dropdown = document.querySelector('.dropdown-options');
+    if (!dropdown) return;
+    
+    const isExpanded = dropdown.classList.toggle('show');
+    triggerElement.setAttribute('aria-expanded', isExpanded);
+};
 
 // Instant language change WITHOUT page reload
 window.changeLanguageInstant = function(lng) {
