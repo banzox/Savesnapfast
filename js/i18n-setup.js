@@ -149,7 +149,9 @@ function injectMasterLayout() {
             themeBtn.addEventListener('click', () => {
                 document.body.classList.toggle('light-mode');
                 const isLight = document.body.classList.contains('light-mode');
-                themeBtn.querySelector('i').className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+                const icon = themeBtn.querySelector('i');
+                icon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+                icon.setAttribute('aria-hidden', 'true');
                 localStorage.setItem('theme', isLight ? 'light' : 'dark');
             });
         }
