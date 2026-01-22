@@ -167,42 +167,44 @@ document.addEventListener('DOMContentLoaded', () => {
        9. عرض النتيجة النهائية
     ========================== */
     function renderResult(v) {
-        const displayTitle = v.title.length > 60 ? v.title.substring(0, 60) + '…' : v.title;
-        const t_vid = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_video') : 'Download Video';
-        const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
-        const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
+    const displayTitle = v.title.length > 60 ? v.title.substring(0, 60) + '…' : v.title;
+    const t_vid = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_video') : 'Download Video';
+    const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
+    const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
 
-        resultArea.innerHTML = `
-            <div class="result-card fade-in" style="background:#1e1e1e;padding:20px;border-radius:15px;border:1px solid #333;display:flex;gap:20px;flex-wrap:wrap;color:white">
-                <img src="${v.cover}" style="width:160px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5)">
-                <div style="flex:1;min-width:250px">
-                    <h3 style="margin-bottom:5px">${displayTitle}</h3>
-                    <p style="color:#aaa;margin-bottom:15px">@${v.author}</p>
+    // التوسيط باستخدام column و align-items:center
+    resultArea.innerHTML = `
+        <div class="result-card fade-in" style="background:#1e1e1e; padding:20px; border-radius:15px; border:1px solid #333; display:flex; flex-direction:column; align-items:center; text-align:center; max-width:500px; margin:20px auto; color:white; width:100%">
+            <img src="${v.cover}" style="width:180px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.5); margin-bottom:15px">
+            <div style="width:100%">
+                <h3 style="margin-bottom:8px; font-size:1.1rem">${displayTitle}</h3>
+                <p style="color:#aaa; margin-bottom:20px">@${v.author}</p>
 
-                    <button class="btn-dl video-action" data-url="${encodeURIComponent(v.play)}" data-name="video.mp4" 
-                        style="background:#333;width:100%;padding:12px;border-radius:8px;margin-bottom:10px;color:white;cursor:pointer;border:1px solid #444;font-weight:bold">
-                        <i class="fas fa-video"></i> ${t_vid}
-                    </button>
+                <button class="btn-dl video-action" data-url="${encodeURIComponent(v.play)}" data-name="video.mp4" 
+                    style="background:#333; width:100%; padding:14px; border-radius:10px; margin-bottom:12px; color:white; cursor:pointer; border:1px solid #444; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:8px">
+                    <i class="fas fa-video"></i> ${t_vid}
+                </button>
 
-                    <button class="btn-dl hd-action" data-url="${encodeURIComponent(v.hd)}" data-name="video_hd.mp4" 
-                        style="background:linear-gradient(90deg,#00f2ea,#ff0050);width:100%;padding:15px;border-radius:8px;margin-bottom:10px;color:white;cursor:pointer;border:none;font-weight:800;box-shadow:0 4px 15px rgba(255,0,80,0.3)">
-                        <i class="fas fa-high-definition"></i> ${t_vid} (${t_hd})
-                    </button>
+                <button class="btn-dl hd-action" data-url="${encodeURIComponent(v.hd)}" data-name="video_hd.mp4" 
+                    style="background:linear-gradient(45deg, #00f2ea, #ff0050); width:100%; padding:16px; border-radius:10px; margin-bottom:12px; color:white; cursor:pointer; border:none; font-weight:800; box-shadow:0 4px 15px rgba(255,0,80,0.3); display:flex; align-items:center; justify-content:center; gap:8px">
+                    <i class="fas fa-certificate"></i> ${t_vid} (${t_hd})
+                </button>
 
-                    ${v.music ? `
-                    <button class="btn-dl audio-action" data-url="${encodeURIComponent(v.music)}" data-name="audio.mp3" 
-                        style="background:transparent;width:100%;padding:10px;border-radius:8px;color:#00f2ea;cursor:pointer;border:1px dashed #00f2ea">
-                        <i class="fas fa-music"></i> ${t_aud}
-                    </button>` : ''}
-                </div>
+                ${v.music ? `
+                <button class="btn-dl audio-action" data-url="${encodeURIComponent(v.music)}" data-name="audio.mp3" 
+                    style="background:transparent; width:100%; padding:12px; border-radius:10px; color:#00f2ea; cursor:pointer; border:1.5px dashed #00f2ea; display:flex; align-items:center; justify-content:center; gap:8px">
+                    <i class="fas fa-music"></i> ${t_aud}
+                </button>` : ''}
             </div>
-        `;
+        </div>
+    `;
 
-        // ربط الأحداث بالأزرار الجديدة
-        resultArea.querySelectorAll('.btn-dl').forEach(btn => {
-            btn.addEventListener('click', () => {
-                downloadFile(btn.dataset.url, btn.dataset.name, btn);
-            });
+    // ربط الأزرار بالتحميل
+    resultArea.querySelectorAll('.btn-dl').forEach(btn => {
+        btn.addEventListener('click', () => {
+            downloadFile(btn.dataset.url, btn.dataset.name, btn);
         });
-    }
+    });
+}
+
 });
