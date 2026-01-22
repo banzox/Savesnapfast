@@ -25,10 +25,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                // تحميل ملفات الترجمة من المسار الصحيح
                 backend: { loadPath: 'locales/{{lng}}.json' }, 
                 detection: { 
-                    // نلغي الاعتماد على المسار (path) ونعتمد فقط على الرابط (?lang)
+                    // الترتيب هنا مهم جداً: البحث في الرابط أولاً
                     order: ['querystring', 'localStorage', 'navigator'],
                     lookupQuerystring: 'lang',
                     caches: ['localStorage'] 
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.documentElement.dir = ['ar', 'he'].includes(lng) ? 'rtl' : 'ltr';
         document.documentElement.lang = lng;
         
-        // تحديث القائمة المنسدلة
+        // تحديث اسم اللغة في الزر
         const currentName = languageNames[lng] || lng.toUpperCase();
         const triggerSpan = document.querySelector('.dropdown-trigger span');
         if (triggerSpan) triggerSpan.textContent = currentName;
@@ -173,13 +172,13 @@ function createPicker(slotId) {
     `;
 }
 
-// ✅✅ الإصلاح النهائي هنا ✅✅
+// ⚠️⚠️ هذا هو التعديل الجذري ⚠️⚠️
+// قمنا بإلغاء تغيير المسار (Path) واستخدمنا تغيير المعامل (Query Param)
 function changeLanguageAndClose(lng) {
-    // 1. حفظ اللغة في الذاكرة
     localStorage.setItem('i18nextLng', lng);
     
-    // 2. تحديث الرابط في نفس الصفحة (Query Param) بدون الذهاب لمسار وهمي
-    // سيصبح الرابط: ?lang=en بدلاً من /en
+    // هذا السطر يجبر المتصفح على البقاء في نفس الصفحة مع إضافة ?lang=en
+    // لن يذهب إلى /en ولن يخرب التصميم
     window.location.search = '?lang=' + lng;
 }
 
