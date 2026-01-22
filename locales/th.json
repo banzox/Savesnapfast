@@ -16,13 +16,15 @@
     "title": "เครื่องมือดาวน์โหลด TikTok",
     "desc": "โหลดวิดีโอ TikTok ไม่มีลายน้ำ รวดเร็ว ฟรี และคุณภาพ HD ไม่จำกัด"
   },
-  "downloader": {
+    "downloader": {
     "placeholder": "วางลิงก์ TikTok ที่นี่...",
-    "btn_download": "ดาวน์โหลด",
+    "btn_download": "ดาวน์โหลดทันที",
     "processing": "กำลังประมวลผล...",
-    "download_video": "ดาวน์โหลดวิดีโอ (ไม่มีลายน้ำ)",
-    "download_audio": "ดาวน์โหลดเสียง (MP3)"
+    "download_video": "ดาวน์โหลดวิดีโอ",
+    "download_audio": "ดาวน์โหลด MP3",
+    "hd_quality": "ไม่มีลายน้ำ"
   },
+
   "faq": {
     "title": "คำถามที่พบบ่อย (FAQ)",
     "q1": "จะดาวน์โหลดวิดีโอ TikTok แบบไม่มีลายน้ำในปี 2026 ได้อย่างไร?",

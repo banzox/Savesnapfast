@@ -16,13 +16,13 @@
     "title": "TikTok Videó Letöltő",
     "desc": "Tölts le TikTok videókat vízjel nélkül. Gyors, ingyenes és korlátlan HD minőség."
   },
-          "downloader": {
-      "placeholder": "הדבק כאן קישור טיקטוק...",
-      "btn_download": "הורד עכשיו",
-      "processing": "מעבד...",
-      "download_video": "הורד סרטון",
-      "download_audio": "הורד MP3",
-      "hd_quality": "ללא סימן מים"
+                          "downloader": {
+      "placeholder": "Illessze be a TikTok linket ide...",
+      "btn_download": "Letöltés most",
+      "processing": "Feldolgozás...",
+      "download_video": "Videó letöltése",
+      "download_audio": "MP3 letöltése",
+      "hd_quality": "Vízjel nélkül"
     },
 
 

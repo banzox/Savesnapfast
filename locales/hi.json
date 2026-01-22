@@ -16,14 +16,15 @@
     "title": "TikTok Video Downloader",
     "desc": "TikTok video bina watermark ke download karein. Tez, Muft aur Unlimited HD Quality."
   },
-      "downloader": {
+          "downloader": {
       "placeholder": "टिकटॉक लिंक यहाँ पेस्ट करें...",
-      "btn_download": "डाउनलोड करें",
+      "btn_download": "अभी डाउनलोड करें",
       "processing": "प्रसंस्करण हो रहा है...",
       "download_video": "वीडियो डाउनलोड करें",
       "download_audio": "MP3 डाउनलोड करें",
       "hd_quality": "बिना वॉटरमार्क के"
     },
+
 
   "faq": {
     "title": "Aksar Puche Jane Wale Sawal (FAQ)",

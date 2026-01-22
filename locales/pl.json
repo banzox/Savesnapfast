@@ -16,13 +16,16 @@
     "title": "Pobieracz wideo TikTok",
     "desc": "Pobieraj filmy TikTok bez znaku wodnego. Szybko, za darmo i w nieograniczonej jakości HD."
   },
-  "downloader": {
+      "downloader": {
     "placeholder": "Wklej link z TikToka tutaj...",
-    "btn_download": "Pobierz",
+    "btn_download": "Pobierz teraz",
     "processing": "Przetwarzanie...",
-    "download_video": "Pobierz wideo (Bez znaku)",
-    "download_audio": "Pobierz audio (MP3)"
+    "download_video": "Pobierz wideo",
+    "download_audio": "Pobierz MP3",
+    "hd_quality": "Bez znaku wodnego"
   },
+
+
   "faq": {
     "title": "Często zadawane pytania (FAQ)",
     "q1": "Jak pobrać wideo z TikToka bez znaku wodnego w 2026 roku?",
