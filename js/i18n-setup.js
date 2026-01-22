@@ -184,6 +184,7 @@ function createPicker(slotId) {
             <div class="dropdown-options">
                 ${supportedLanguages.map(code => `
                     <div class="option-item ${code === currentLng ? 'active' : ''}" 
+                         data-lang="${code}"
                          onclick="changeLanguageInstant('${code}')">
                         ${languageNames[code]}
                     </div>
@@ -217,13 +218,12 @@ window.changeLanguageInstant = function(lng) {
     // Update active state in dropdown
     document.querySelectorAll('.option-item').forEach(item => {
         item.classList.remove('active');
+        // Add active class to the newly selected language using data attribute
+        if (item.dataset.lang === lng) {
+            item.classList.add('active');
+        }
     });
 };
-
-function changeLanguageAndClose(lng) {
-    localStorage.setItem('i18nextLng', lng);
-    window.location.search = '?lang=' + lng;
-}
 
 window.onclick = function(event) {
     if (!event.target.closest('.custom-dropdown')) {
