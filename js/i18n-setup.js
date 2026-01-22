@@ -123,16 +123,19 @@ function injectMasterLayout() {
 
     if (header) {
         header.innerHTML = `
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <nav class="nav-container">
             <a href="${getLocalizedUrl('/')}" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
             
             <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
-                <a href="${getLocalizedUrl('/tools/')}" class="nav-link" style="color: var(--secondary); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 25px; border: 1px solid var(--border); background: var(--glass); transition: 0.3s;">
-                    <i class="fas fa-tools"></i>
+                <a href="${getLocalizedUrl('/tools/')}" class="nav-link" aria-label="Tools Hub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
                     <span data-i18n="nav.tools">Tools</span>
                 </a>
-                <button id="theme-toggle" class="theme-btn" title="Toggle Mode">
-                    <i class="fas ${document.body.classList.contains('light-mode') ? 'fa-sun' : 'fa-moon'}"></i>
+                <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Mode">
+                    <i class="fas ${document.body.classList.contains('light-mode') ? 'fa-sun' : 'fa-moon'}" aria-hidden="true"></i>
                 </button>
                 <span class="nav-separator"></span>
                 <div id="lang-picker-slot"></div>
@@ -178,12 +181,20 @@ function createPicker(slotId) {
 
     slot.innerHTML = `
         <div class="custom-dropdown">
-            <button class="dropdown-trigger" onclick="document.querySelector('.dropdown-options').classList.toggle('show')">
-                <i class="fas fa-globe"></i> <span>${currentName}</span> <i class="fas fa-chevron-down"></i>
+            <button class="dropdown-trigger" 
+                    aria-label="Select language"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    onclick="const dropdown = document.querySelector('.dropdown-options'); const isExpanded = dropdown.classList.toggle('show'); this.setAttribute('aria-expanded', isExpanded);">
+                <i class="fas fa-globe" aria-hidden="true"></i> 
+                <span>${currentName}</span> 
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </button>
-            <div class="dropdown-options">
+            <div class="dropdown-options" role="listbox" aria-label="Available languages">
                 ${supportedLanguages.map(code => `
                     <div class="option-item ${code === currentLng ? 'active' : ''}" 
+                         role="option"
+                         aria-selected="${code === currentLng}"
                          data-lang="${code}"
                          onclick="changeLanguageInstant('${code}')">
                         ${languageNames[code]}
@@ -198,15 +209,21 @@ function createPicker(slotId) {
 window.changeLanguageInstant = function(lng) {
     // Close dropdown
     const dropdown = document.querySelector('.dropdown-options');
-    if (dropdown) dropdown.classList.remove('show');
+    const trigger = document.querySelector('.dropdown-trigger');
+    if (dropdown) {
+        dropdown.classList.remove('show');
+    }
+    if (trigger) {
+        trigger.setAttribute('aria-expanded', 'false');
+    }
     
     // Save to localStorage
     localStorage.setItem('i18nextLng', lng);
     
-    // Change language - triggers 'languageChanged' event
+    // Change language - triggers 'languageChanged' event for instant UI update
     i18next.changeLanguage(lng);
     
-    // Update URL without reload (for bookmarking/sharing)
+    // Update URL without reload
     const url = new URL(window.location);
     if (lng === 'en') {
         url.searchParams.delete('lang');
@@ -215,13 +232,11 @@ window.changeLanguageInstant = function(lng) {
     }
     window.history.replaceState({}, '', url);
     
-    // Update active state in dropdown
+    // Update active state
     document.querySelectorAll('.option-item').forEach(item => {
-        item.classList.remove('active');
-        // Add active class to the newly selected language using data attribute
-        if (item.dataset.lang === lng) {
-            item.classList.add('active');
-        }
+        const isSelected = item.dataset.lang === lng;
+        item.classList.toggle('active', isSelected);
+        item.setAttribute('aria-selected', isSelected);
     });
 };
 

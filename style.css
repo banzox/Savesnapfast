@@ -216,7 +216,8 @@ footer {
 .custom-dropdown {
     position: relative;
     display: inline-block;
-    flex-shrink: 0;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .dropdown-trigger {
@@ -230,15 +231,22 @@ footer {
     display: flex;
     align-items: center;
     gap: 6px;
-    transition: 0.3s;
-    flex-shrink: 0;
+    transition: var(--transition);
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .dropdown-trigger span {
-    max-width: 80px;
+    max-width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-shrink: 1;
+}
+
+.dropdown-trigger i,
+.dropdown-trigger svg {
+    flex-shrink: 0;
 }
 
 .dropdown-options {
@@ -389,7 +397,7 @@ body.light-mode .nav-link:hover {
     }
     
     .dropdown-trigger span {
-        max-width: 60px;
+        max-width: 70px;
         font-size: 12px;
     }
     
@@ -530,5 +538,68 @@ body.light-mode .tool-card {
     background: #ffffff;
     border-color: #e0e0e0;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Light Mode - Language Dropdown */
+body.light-mode .dropdown-trigger {
+    background: #f5f5f5;
+    border-color: #00b8b0;
+    color: #1a1a2e !important;
+}
+
+body.light-mode .dropdown-trigger i,
+body.light-mode .dropdown-trigger svg {
+    color: #00b8b0 !important;
+}
+
+body.light-mode .dropdown-trigger span {
+    color: #1a1a2e !important;
+}
+
+body.light-mode .dropdown-options {
+    background: #ffffff;
+    border-color: #ddd;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+body.light-mode .option-item {
+    color: #1a1a2e;
+}
+
+body.light-mode .option-item:hover {
+    background: rgba(0, 242, 234, 0.1);
+    color: #00b8b0;
+}
+
+body.light-mode .option-item.active {
+    color: #00b8b0;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
