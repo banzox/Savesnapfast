@@ -7,8 +7,27 @@ const languageNames = {
     ja: "日本語", zh: "简体中文", vi: "Tiếng Việt", hi: "हिन्दी", nl: "Nederlands",
     ko: "한국어", th: "ไทย", pl: "Polski", uk: "Українська", el: "Ελληνικά",
     sv: "Svenska", no: "Norsk", da: "Dansk", fi: "Suomi", cs: "Čeština",
-    hu: "Magyar", ro: "Română", sk: "Slovenčina", ms: "Bahasa Melayu", he: "עبرى"
+    hu: "Magyar", ro: "Română", sk: "Slovenčina", ms: "Bahasa Melayu", he: "עבرى"
 };
+
+// Global function for "Back" button navigation with language preservation
+window.navigateWithLang = function(basePath) {
+    const currentLng = i18next?.language || localStorage.getItem('i18nextLng') || 'en';
+    if (currentLng === 'en') {
+        window.location.href = basePath;
+    } else {
+        window.location.href = basePath + '?lang=' + currentLng;
+    }
+};
+
+// Helper function to preserve language in URLs
+function getLocalizedUrl(path) {
+    const currentLng = i18next?.language || localStorage.getItem('i18nextLng') || 'en';
+    if (currentLng === 'en') {
+        return path;
+    }
+    return path + '?lang=' + currentLng;
+}
 
 document.addEventListener('DOMContentLoaded', async () => {
     if (typeof i18next === 'undefined') return;
@@ -105,17 +124,17 @@ function injectMasterLayout() {
     if (header) {
         header.innerHTML = `
         <nav class="nav-container">
-            <a href="/" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
+            <a href="${getLocalizedUrl('/')}" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
             
             <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
-                <a href="/tools/" class="nav-link" style="color: var(--secondary); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 25px; border: 1px solid var(--border); background: var(--glass); transition: 0.3s;">
+                <a href="${getLocalizedUrl('/tools/')}" class="nav-link" style="color: var(--secondary); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 25px; border: 1px solid var(--border); background: var(--glass); transition: 0.3s;">
                     <i class="fas fa-tools"></i>
                     <span data-i18n="nav.tools">Tools</span>
                 </a>
                 <button id="theme-toggle" class="theme-btn" title="Toggle Mode">
                     <i class="fas ${document.body.classList.contains('light-mode') ? 'fa-sun' : 'fa-moon'}"></i>
                 </button>
-                <span style="width: 1px; height: 20px; background: rgba(255,255,255,0.1);"></span>
+                <span class="nav-separator"></span>
                 <div id="lang-picker-slot"></div>
             </div>
         </nav>`;
@@ -138,12 +157,12 @@ function injectMasterLayout() {
         <div class="footer-content" style="text-align:center; padding: 40px 20px; border-top: 1px solid var(--border);">
             <p data-i18n="footer.rights"></p>
             <div class="footer-links" style="margin-top:20px; display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-                <a href="/tools/" data-i18n="nav.tools"></a>
-                <a href="about.html" data-i18n="nav.about"></a>
-                <a href="terms.html" data-i18n="nav.terms"></a>
-                <a href="privacy.html" data-i18n="nav.privacy"></a>
-                <a href="dmca.html" data-i18n="nav.dmca"></a>
-                <a href="contact.html" data-i18n="nav.contact"></a>
+                <a href="${getLocalizedUrl('/tools/')}" data-i18n="nav.tools"></a>
+                <a href="${getLocalizedUrl('about.html')}" data-i18n="nav.about"></a>
+                <a href="${getLocalizedUrl('terms.html')}" data-i18n="nav.terms"></a>
+                <a href="${getLocalizedUrl('privacy.html')}" data-i18n="nav.privacy"></a>
+                <a href="${getLocalizedUrl('dmca.html')}" data-i18n="nav.dmca"></a>
+                <a href="${getLocalizedUrl('contact.html')}" data-i18n="nav.contact"></a>
             </div>
         </div>`;
         updateContent();
@@ -165,7 +184,8 @@ function createPicker(slotId) {
             <div class="dropdown-options">
                 ${supportedLanguages.map(code => `
                     <div class="option-item ${code === currentLng ? 'active' : ''}" 
-                         onclick="changeLanguageAndClose('${code}')">
+                         data-lang="${code}"
+                         onclick="changeLanguageInstant('${code}')">
                         ${languageNames[code]}
                     </div>
                 `).join('')}
@@ -174,10 +194,36 @@ function createPicker(slotId) {
     `;
 }
 
-function changeLanguageAndClose(lng) {
+// Instant language change WITHOUT page reload
+window.changeLanguageInstant = function(lng) {
+    // Close dropdown
+    const dropdown = document.querySelector('.dropdown-options');
+    if (dropdown) dropdown.classList.remove('show');
+    
+    // Save to localStorage
     localStorage.setItem('i18nextLng', lng);
-    window.location.search = '?lang=' + lng;
-}
+    
+    // Change language - triggers 'languageChanged' event
+    i18next.changeLanguage(lng);
+    
+    // Update URL without reload (for bookmarking/sharing)
+    const url = new URL(window.location);
+    if (lng === 'en') {
+        url.searchParams.delete('lang');
+    } else {
+        url.searchParams.set('lang', lng);
+    }
+    window.history.replaceState({}, '', url);
+    
+    // Update active state in dropdown
+    document.querySelectorAll('.option-item').forEach(item => {
+        item.classList.remove('active');
+        // Add active class to the newly selected language using data attribute
+        if (item.dataset.lang === lng) {
+            item.classList.add('active');
+        }
+    });
+};
 
 window.onclick = function(event) {
     if (!event.target.closest('.custom-dropdown')) {
