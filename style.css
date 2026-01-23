@@ -936,7 +936,7 @@ body {
 
 /* ============================================
    TASK 2: Tools Icon with "Tool All in One" Text
-   Elegant styling that adapts to screen size
+   Fluid Responsive - NEVER hide, always visible
    ============================================ */
 
 /* Tools Link Container - Flex wrapper for icon + text */
@@ -944,11 +944,14 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
-/* Tools text styling with beautiful gradient */
+/* Tools text styling with beautiful gradient - Desktop default */
 .tools-text {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     background: linear-gradient(90deg, var(--secondary), #ffffff);
     -webkit-background-clip: text;
@@ -956,9 +959,11 @@ body {
     background-clip: text;
     white-space: nowrap;
     letter-spacing: 0.3px;
+    flex-shrink: 0;
+    transition: font-size 0.2s ease, letter-spacing 0.2s ease;
 }
 
-/* Light mode variant - different gradient for visibility */
+/* Light mode variant */
 body.light-mode .tools-text {
     background: linear-gradient(90deg, #00b8b0, #ff0050);
     -webkit-background-clip: text;
@@ -966,21 +971,93 @@ body.light-mode .tools-text {
     background-clip: text;
 }
 
-/* Tablets & smaller: Hide the text, keep icon */
-@media (max-width: 768px) {
+/* Large Tablets & Small Desktops (769px - 1024px) */
+@media (max-width: 1024px) {
+    .nav-link.tools-link {
+        gap: 6px;
+    }
     .tools-text {
-        display: none;
+        font-size: 12px;
+        letter-spacing: 0.2px;
     }
 }
 
-/* Very small screens (iPhone SE, etc.): Compact icon only */
+/* Tablets (481px - 768px) */
+@media (max-width: 768px) {
+    .nav-link.tools-link {
+        gap: 5px;
+    }
+    .tools-text {
+        font-size: 11px;
+        letter-spacing: 0.1px;
+    }
+    .nav-link.tools-link svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Large Phones (371px - 480px) */
+@media (max-width: 480px) {
+    .nav-link.tools-link {
+        gap: 4px;
+    }
+    .tools-text {
+        font-size: 10px;
+        /* Increase font-weight to maintain readability at smaller sizes */
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+    .nav-link.tools-link svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Small Phones - iPhone SE, etc. (321px - 370px) */
 @media (max-width: 370px) {
     .nav-link.tools-link {
-        padding: 8px !important;
+        gap: 3px;
+        padding: 6px 8px !important;
     }
-    
     .tools-text {
-        display: none !important;
+        font-size: 9px;
+        font-weight: 700;
+    }
+    .nav-link.tools-link svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Extremely Small Screens - Galaxy Fold outer screen (281px - 320px) */
+@media (max-width: 320px) {
+    .nav-link.tools-link {
+        gap: 2px;
+        padding: 5px 6px !important;
+        /* Scale down by 5% to fit tighter spaces while maintaining readability */
+        transform: scale(0.95);
+        transform-origin: center;
+    }
+    .tools-text {
+        font-size: 8px;
+        font-weight: 800;
+        letter-spacing: -0.2px;
+    }
+    .nav-link.tools-link svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Ultra-small screens (< 280px) - Galaxy Fold closed */
+@media (max-width: 280px) {
+    .nav-link.tools-link {
+        /* Scale down by 10% as final safety net for extreme cases */
+        transform: scale(0.9);
+    }
+    .tools-text {
+        font-size: 7px;
     }
 }
 
