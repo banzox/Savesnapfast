@@ -886,3 +886,101 @@ body {
     height: 300px;
 }
 
+/* ============================================
+   TASK 1: Mobile Dropdown Fix - Critical
+   Locks language menu inside mobile screen
+   ============================================ */
+
+/* Ensure custom-dropdown parent has relative positioning */
+.custom-dropdown {
+    position: relative;
+}
+
+/* Mobile-specific dropdown fix */
+@media (max-width: 768px) {
+    .dropdown-options {
+        position: absolute !important;
+        top: 120%;
+        inset-inline-end: 0 !important;
+        inset-inline-start: auto !important;
+        width: 200px;
+        max-width: 90vw;
+        min-width: unset;
+        transform: none !important;
+        z-index: 1001;
+    }
+    
+    /* RTL-specific fix for mobile */
+    [dir="rtl"] .dropdown-options {
+        inset-inline-end: 0 !important;
+        inset-inline-start: auto !important;
+        transform: none !important;
+    }
+}
+
+/* Extra small screens - Ensure dropdown stays inside viewport */
+@media (max-width: 370px) {
+    .nav-actions {
+        position: relative;
+    }
+    
+    .dropdown-options {
+        position: absolute !important;
+        inset-inline-end: 0 !important;
+        inset-inline-start: auto !important;
+        width: 180px;
+        max-width: 85vw;
+        transform: none !important;
+    }
+}
+
+/* ============================================
+   TASK 2: Tools Icon with "Tool All in One" Text
+   Elegant styling that adapts to screen size
+   ============================================ */
+
+/* Tools Link Container - Flex wrapper for icon + text */
+.nav-link.tools-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tools text styling with beautiful gradient */
+.tools-text {
+    font-size: 13px;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--secondary), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+}
+
+/* Light mode variant - different gradient for visibility */
+body.light-mode .tools-text {
+    background: linear-gradient(90deg, #00b8b0, #ff0050);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Tablets & smaller: Hide the text, keep icon */
+@media (max-width: 768px) {
+    .tools-text {
+        display: none;
+    }
+}
+
+/* Very small screens (iPhone SE, etc.): Compact icon only */
+@media (max-width: 370px) {
+    .nav-link.tools-link {
+        padding: 8px !important;
+    }
+    
+    .tools-text {
+        display: none !important;
+    }
+}
+

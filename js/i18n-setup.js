@@ -150,11 +150,11 @@ function injectMasterLayout() {
             <a href="${getLocalizedUrl('/')}" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
             
             <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
-                <a href="${getLocalizedUrl('/tools/')}" class="nav-link" aria-label="Tools Hub">
+                <a href="${getLocalizedUrl('/tools/')}" class="nav-link tools-link" aria-label="Tools Hub">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                     </svg>
-                    <span data-i18n="nav.tools">Tools</span>
+                    <span class="tools-text">Tool All in One</span>
                 </a>
                 <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Mode">
                     <i class="fas ${document.body.classList.contains('light-mode') ? 'fa-sun' : 'fa-moon'}" aria-hidden="true"></i>
