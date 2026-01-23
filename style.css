@@ -700,10 +700,6 @@ body {
     contain: layout style;
 }
 
-@font-face {
-    font-display: swap;
-}
-
 body {
     text-rendering: optimizeSpeed;
 }
