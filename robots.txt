@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Allow: /*?lang=
+Disallow: /js/vendor/
+Disallow: /*.json$
+Disallow: /locales/
 
 Sitemap: https://savetik-fast.xyz/sitemap.xml

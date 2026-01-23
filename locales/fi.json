@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Snaptiks 2026 - Lataa TikTok-video ilman vesileimaa (HD & 4K)",
+    "title": "SaveTikFast 2026 - Lataa TikTok-video ilman vesileimaa (HD & 4K)",
     "description": "Lataa TikTok-videoita ilman vesileimaa ilmaiseksi Ultra HD/4K -laadulla. Vuoden 2026 nopein lataaja. Tallenna MP4 & MP3 muodossa iPhoneen, Androidiin ja PC:lle."
   },
   "nav": {
@@ -30,29 +30,29 @@
     "title": "Usein kysytyt kysymykset (FAQ)",
     "q1": "Miten ladata TikTok-video ilman vesileimaa vuonna 2026?",
     "a1": "Se on hyvin yksinkertaista: 1. Avaa TikTok-sovellus ja valitse video. 2. Napauta 'Jaa' ja sitten 'Kopioi linkki'. 3. Liitä linkki yllä olevaan kenttään ja paina 'Lataa'. Video tallennetaan ilman logoa.",
-    "q2": "Onko Snaptiks täysin ilmainen?",
-    "a2": "Kyllä, Snaptiks on 100% ilmainen ja tulee aina olemaan. Emme vaadi tilauksia, rekisteröintiä tai piilotettuja maksuja suosikkisisältösi lataamiseen.",
+    "q2": "Onko SaveTikFast täysin ilmainen?",
+    "a2": "Kyllä, SaveTikFast on 100% ilmainen ja tulee aina olemaan. Emme vaadi tilauksia, rekisteröintiä tai piilotettuja maksuja suosikkisisältösi lataamiseen.",
     "q3": "Toimiiko se iPhonella (iOS) ja Androidilla?",
-    "a3": "Ehdottomasti! Työkalumme on optimoitu kaikille laitteille. Käytitpä sitten iPhonea, iPadia, Android-älypuhelinta tai PC/Mac-tietokonetta, Snaptiks toimii täydellisesti selaimessasi.",
+    "a3": "Ehdottomasti! Työkalumme on optimoitu kaikille laitteille. Käytitpä sitten iPhonea, iPadia, Android-älypuhelinta tai PC/Mac-tietokonetta, SaveTikFast toimii täydellisesti selaimessasi.",
     "q4": "Voinko ladata videoita 4K- tai HD-laadulla?",
     "a4": "Kyllä, edistynyt algoritmimme etsii automaattisesti korkeimman saatavilla olevan resoluution (HD, Full HD tai 4K) suoraan lähdepalvelimelta ja tarjoaa sen sinulle.",
     "q5": "Voinko tallentaa vain musiikin/äänen (MP3)?",
     "a5": "Kyllä, tarjoamme erityisen 'Lataa ääni (MP3)' -toiminnon. Liitä vain videolinkki, niin näet vaihtoehdon äänitiedoston purkamiseen ja tallentamiseen korkealaatuisena.",
     "q6": "Minne videot tallennetaan laitteellani?",
     "a6": "Tiedostot tallennetaan yleensä selaimesi oletusarvoiseen 'Lataukset' (Downloads) -kansioon. Mobiililaitteilla löydät ne myös tiedostonhallinnasta tai galleriasta.",
-    "q7": "Tallentaako Snaptiks kopion videoistani?",
+    "q7": "Tallentaako SaveTikFast kopion videoistani?",
     "a7": "Ei koskaan. Kunnioitamme yksityisyyttäsi. Emme isännöi videoita palvelimillamme emmekä tallenna lataushistoriaasi. Kaikki on anonyymiä.",
     "q8": "Miksi latauslinkki ei joskus toimi?",
     "a8": "Varmista, että TikTok-tili, jolta yrität ladata, on 'Julkinen' eikä 'Yksityinen'. Tarkista myös, että olet kopioinut oikean videolinkin.",
     "q9": "Täytyykö minun asentaa sovellus tai laajennus?",
-    "a9": "Asennusta ei tarvita. Snaptiks on verkkopohjainen työkalu. Tarvitset vain verkkoselaimen (Chrome, Safari jne.) ja internetyhteyden.",
+    "a9": "Asennusta ei tarvita. SaveTikFast on verkkopohjainen työkalu. Tarvitset vain verkkoselaimen (Chrome, Safari jne.) ja internetyhteyden.",
     "q10": "Onko tämän lataajan käyttö laillista?",
     "a10": "Kyllä, kunhan käytät ladattua sisältöä henkilökohtaisiin, ei-kaupallisiin tarkoituksiin (kuten offline-katseluun). Kunnioita sisällöntuottajien tekijänoikeuksia."
   },
   "pages": {
     "about": {
       "title": "Meistä",
-      "content": "Tervetuloa Snaptiksiin, vuoden 2026 johtavaan TikTok-lataajaan.\n\nRakensimme Snaptiksin yhdellä tavoitteella: tarjota nopein, turvallisin ja luotettavin tapa tallentaa TikTok-videoita ilman vesileimoja. Toisin kuin muut työkalut, asetamme käyttökokemuksen etusijalle: ei ärsyttäviä mainoksia, ei rekisteröintiä eikä ohjelmistojen asennusta.\n\nTeknologiamme takaa, että saat videon alkuperäisen laadun (jopa 4K) samalla kun päällekkäiset logot poistetaan."
+      "content": "Tervetuloa SaveTikFastiin, vuoden 2026 johtavaan TikTok-lataajaan.\n\nRakensimme SaveTikFastin yhdellä tavoitteella: tarjota nopein, turvallisin ja luotettavin tapa tallentaa TikTok-videoita ilman vesileimoja. Toisin kuin muut työkalut, asetamme käyttökokemuksen etusijalle: ei ärsyttäviä mainoksia, ei rekisteröintiä eikä ohjelmistojen asennusta.\n\nTeknologiamme takaa, että saat videon alkuperäisen laadun (jopa 4K) samalla kun päällekkäiset logot poistetaan."
     },
     "contact": {
       "title": "Ota yhteyttä",
@@ -60,23 +60,23 @@
     },
     "terms": {
       "title": "Käyttöehdot",
-      "content": "Käyttämällä Snaptiksia hyväksyt seuraavat ehdot:\n\n1. Henkilökohtainen käyttö:\nPalvelumme on tarkoitettu henkilökohtaiseen ja ei-kaupalliseen käyttöön. Voit ladata videoita offline-katselua varten.\n\n2. Immateriaalioikeudet:\nEmme omista ladattua sisältöä. Kaikki oikeudet kuuluvat alkuperäisille tekijöille TikTokissa. Sitoudut olemaan käyttämättä sisältöä tavalla, joka loukkaa tekijänoikeuksia.\n\n3. Vastuu:\nSnaptiks ei ole vastuussa siitä, miten käytät ladattua materiaalia. Käyttäjä on täysin vastuussa mahdollisista tekijänoikeusloukkauksista."
+      "content": "Käyttämällä SaveTikFastia hyväksyt seuraavat ehdot:\n\n1. Henkilökohtainen käyttö:\nPalvelumme on tarkoitettu henkilökohtaiseen ja ei-kaupalliseen käyttöön. Voit ladata videoita offline-katselua varten.\n\n2. Immateriaalioikeudet:\nEmme omista ladattua sisältöä. Kaikki oikeudet kuuluvat alkuperäisille tekijöille TikTokissa. Sitoudut olemaan käyttämättä sisältöä tavalla, joka loukkaa tekijänoikeuksia.\n\n3. Vastuu:\nSaveTikFast ei ole vastuussa siitä, miten käytät ladattua materiaalia. Käyttäjä on täysin vastuussa mahdollisista tekijänoikeusloukkauksista."
     },
     "privacy": {
       "title": "Tietosuojakäytäntö",
-      "content": "Yksityisyytesi on meille kriittistä.\n\nTietojen kerääminen:\nEmme kerää henkilökohtaisia tietoja, kuten nimiä tai sähköpostiosoitteita. Voimme käyttää anonyymiä analytiikkaa (kuten evästeitä) sivuston suorituskyvyn parantamiseksi.\n\nEi videoiden tallennusta:\nSnaptiks ei isännöi tai tallenna videoita palvelimilleen. Kaikki tiedostojen käsittely tapahtuu välittömästi."
+      "content": "Yksityisyytesi on meille kriittistä.\n\nTietojen kerääminen:\nEmme kerää henkilökohtaisia tietoja, kuten nimiä tai sähköpostiosoitteita. Voimme käyttää anonyymiä analytiikkaa (kuten evästeitä) sivuston suorituskyvyn parantamiseksi.\n\nEi videoiden tallennusta:\nSaveTikFast ei isännöi tai tallenna videoita palvelimilleen. Kaikki tiedostojen käsittely tapahtuu välittömästi."
     },
     "dmca": {
       "title": "DMCA-käytäntö",
-      "content": "Snaptiks kunnioittaa muiden immateriaalioikeuksia.\n\nToimimme teknisenä palveluntarjoajana emmekä isännöi tekijänoikeudella suojattua sisältöä. Kaikki videot tarjotaan suoraan kolmannen osapuolen palvelimilta (TikTok).\n\nJos uskot, että tekijänoikeudella suojattu teoksesi on näytetty palvelussamme ilman lupaa, lähetä virallinen DMCA-ilmoitus osoitteeseen: support@savetik-fast.xyz."
+      "content": "SaveTikFast kunnioittaa muiden immateriaalioikeuksia.\n\nToimimme teknisenä palveluntarjoajana emmekä isännöi tekijänoikeudella suojattua sisältöä. Kaikki videot tarjotaan suoraan kolmannen osapuolen palvelimilta (TikTok).\n\nJos uskot, että tekijänoikeudella suojattu teoksesi on näytetty palvelussamme ilman lupaa, lähetä virallinen DMCA-ilmoitus osoitteeseen: support@savetik-fast.xyz."
     },
     "disclaimer": {
       "title": "Vastuuvapauslauseke",
-      "content": "1. Ei kytköksiä:\nSnaptiks on itsenäinen työkalu EIKÄ ole sidoksissa, liitännäinen, valtuutettu, tuettu tai millään tavalla virallisesti yhteydessä TikTok Inc.:iin tai ByteDance Ltd.:iin.\n\n2. Tavaramerkit:\nNimet 'TikTok' ja sen logot ovat omistajiensa rekisteröityjä tavaramerkkejä.\n\n3. Sisältö:\nMeillä ei ole määräysvaltaa TikTokin palvelimilla isännöityyn sisältöön."
+      "content": "1. Ei kytköksiä:\nSaveTikFast on itsenäinen työkalu EIKÄ ole sidoksissa, liitännäinen, valtuutettu, tuettu tai millään tavalla virallisesti yhteydessä TikTok Inc.:iin tai ByteDance Ltd.:iin.\n\n2. Tavaramerkit:\nNimet 'TikTok' ja sen logot ovat omistajiensa rekisteröityjä tavaramerkkejä.\n\n3. Sisältö:\nMeillä ei ole määräysvaltaa TikTokin palvelimilla isännöityyn sisältöön."
     }
   },
   "footer": {
-    "rights": "© 2026 Snaptiks. Kaikki oikeudet pidätetään."
+    "rights": "© 2026 SaveTikFast. Kaikki oikeudet pidätetään."
   }
   ,
   "features": {

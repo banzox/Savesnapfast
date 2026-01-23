@@ -9,7 +9,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://unpkg.com">
-    <title data-i18n="nav.contact">Contact Us - Snaptiks</title>
+    <title data-i18n="nav.contact">Contact Us - SaveTikFast</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://savetik-fast.xyz/contact.html" id="canonical-link">
+
+    <!-- Hreflang Tags for International SEO -->
+    <link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/contact.html">
+    <link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/contact.html?lang=en">
+    <link rel="alternate" hreflang="ar" href="https://savetik-fast.xyz/contact.html?lang=ar">
+    <link rel="alternate" hreflang="es" href="https://savetik-fast.xyz/contact.html?lang=es">
+    <link rel="alternate" hreflang="fr" href="https://savetik-fast.xyz/contact.html?lang=fr">
+    <link rel="alternate" hreflang="de" href="https://savetik-fast.xyz/contact.html?lang=de">
+    <link rel="alternate" hreflang="ru" href="https://savetik-fast.xyz/contact.html?lang=ru">
+    <link rel="alternate" hreflang="zh" href="https://savetik-fast.xyz/contact.html?lang=zh">
+    <link rel="alternate" hreflang="pt" href="https://savetik-fast.xyz/contact.html?lang=pt">
+    <link rel="alternate" hreflang="ja" href="https://savetik-fast.xyz/contact.html?lang=ja">
+    <link rel="alternate" hreflang="ko" href="https://savetik-fast.xyz/contact.html?lang=ko">
+    <link rel="alternate" hreflang="it" href="https://savetik-fast.xyz/contact.html?lang=it">
+    <link rel="alternate" hreflang="nl" href="https://savetik-fast.xyz/contact.html?lang=nl">
+    <link rel="alternate" hreflang="pl" href="https://savetik-fast.xyz/contact.html?lang=pl">
+    <link rel="alternate" hreflang="tr" href="https://savetik-fast.xyz/contact.html?lang=tr">
+    <link rel="alternate" hreflang="vi" href="https://savetik-fast.xyz/contact.html?lang=vi">
+    <link rel="alternate" hreflang="th" href="https://savetik-fast.xyz/contact.html?lang=th">
+    <link rel="alternate" hreflang="id" href="https://savetik-fast.xyz/contact.html?lang=id">
+    <link rel="alternate" hreflang="hi" href="https://savetik-fast.xyz/contact.html?lang=hi">
+    <link rel="alternate" hreflang="uk" href="https://savetik-fast.xyz/contact.html?lang=uk">
+    <link rel="alternate" hreflang="el" href="https://savetik-fast.xyz/contact.html?lang=el">
+    <link rel="alternate" hreflang="sv" href="https://savetik-fast.xyz/contact.html?lang=sv">
+    <link rel="alternate" hreflang="no" href="https://savetik-fast.xyz/contact.html?lang=no">
+    <link rel="alternate" hreflang="da" href="https://savetik-fast.xyz/contact.html?lang=da">
+    <link rel="alternate" hreflang="fi" href="https://savetik-fast.xyz/contact.html?lang=fi">
+    <link rel="alternate" hreflang="cs" href="https://savetik-fast.xyz/contact.html?lang=cs">
+    <link rel="alternate" hreflang="hu" href="https://savetik-fast.xyz/contact.html?lang=hu">
+    <link rel="alternate" hreflang="ro" href="https://savetik-fast.xyz/contact.html?lang=ro">
+    <link rel="alternate" hreflang="sk" href="https://savetik-fast.xyz/contact.html?lang=sk">
+    <link rel="alternate" hreflang="ms" href="https://savetik-fast.xyz/contact.html?lang=ms">
+    <link rel="alternate" hreflang="he" href="https://savetik-fast.xyz/contact.html?lang=he">
+
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
@@ -17,6 +54,24 @@
     <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="/js/i18n-setup.js" defer></script>
+
+    <!-- Dynamic Canonical and Hreflang Script -->
+    <script>
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang');
+        const pagePath = window.location.pathname;
+        const baseUrl = 'https://savetik-fast.xyz';
+        const canonicalLink = document.getElementById('canonical-link');
+        if (canonicalLink) {
+            canonicalLink.href = lang ? baseUrl + pagePath + '?lang=' + lang : baseUrl + pagePath;
+        }
+        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => {
+            const hreflang = link.getAttribute('hreflang');
+            link.href = hreflang === 'x-default' ? baseUrl + pagePath : baseUrl + pagePath + '?lang=' + hreflang;
+        });
+    })();
+    </script>
 </head>
 <body>
     <header id="main-header"></header>
