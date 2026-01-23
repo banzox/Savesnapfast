@@ -1004,6 +1004,7 @@ body.light-mode .tools-text {
     }
     .tools-text {
         font-size: 10px;
+        /* Increase font-weight to maintain readability at smaller sizes */
         font-weight: 700;
         letter-spacing: 0;
     }
@@ -1034,6 +1035,7 @@ body.light-mode .tools-text {
     .nav-link.tools-link {
         gap: 2px;
         padding: 5px 6px !important;
+        /* Scale down by 5% to fit tighter spaces while maintaining readability */
         transform: scale(0.95);
         transform-origin: center;
     }
@@ -1051,6 +1053,7 @@ body.light-mode .tools-text {
 /* Ultra-small screens (< 280px) - Galaxy Fold closed */
 @media (max-width: 280px) {
     .nav-link.tools-link {
+        /* Scale down by 10% as final safety net for extreme cases */
         transform: scale(0.9);
     }
     .tools-text {
