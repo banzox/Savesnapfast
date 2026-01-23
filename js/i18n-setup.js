@@ -53,6 +53,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
 
+        // Set initial RTL direction based on detected language
+        const initialLng = i18next.language;
+        document.documentElement.dir = ['ar', 'he'].includes(initialLng) ? 'rtl' : 'ltr';
+        document.documentElement.lang = initialLng;
+
         injectMasterLayout(); 
         updateContent();      
         renderHomeFAQ();      
