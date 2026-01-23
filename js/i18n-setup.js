@@ -1,6 +1,9 @@
 // 1. القائمة المعتمدة للغات
 const supportedLanguages = ['en', 'ar', 'id', 'tr', 'fr', 'es', 'de', 'pt', 'ru', 'it', 'ja', 'zh', 'vi', 'hi', 'nl', 'ko', 'th', 'pl', 'uk', 'el', 'sv', 'no', 'da', 'fi', 'cs', 'hu', 'ro', 'sk', 'ms', 'he'];
 
+// RTL Languages list
+const RTL_LANGUAGES = ['ar', 'he'];
+
 const languageNames = {
     en: "English", ar: "العربية", id: "Bahasa Indonesia", tr: "Türkçe", fr: "Français",
     es: "Español", de: "Deutsch", pt: "Português", ru: "Русский", it: "Italiano",
@@ -9,6 +12,22 @@ const languageNames = {
     sv: "Svenska", no: "Norsk", da: "Dansk", fi: "Suomi", cs: "Čeština",
     hu: "Magyar", ro: "Română", sk: "Slovenčina", ms: "Bahasa Melayu", he: "עבرى"
 };
+
+/**
+ * Apply RTL/LTR direction based on language
+ */
+function applyDirection(lng) {
+    const isRTL = RTL_LANGUAGES.includes(lng);
+    const direction = isRTL ? 'rtl' : 'ltr';
+    
+    document.documentElement.dir = direction;
+    document.documentElement.lang = lng;
+    document.body.dir = direction;
+    
+    window.dispatchEvent(new CustomEvent('directionChanged', { 
+        detail: { direction, language: lng, isRTL } 
+    }));
+}
 
 // Global function for "Back" button navigation with language preservation
 window.navigateWithLang = function(basePath) {
@@ -55,8 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Set initial RTL direction based on detected language
         const initialLng = i18next.language;
-        document.documentElement.dir = ['ar', 'he'].includes(initialLng) ? 'rtl' : 'ltr';
-        document.documentElement.lang = initialLng;
+        applyDirection(initialLng);
 
         injectMasterLayout(); 
         updateContent();      
@@ -68,8 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     i18next.on('languageChanged', (lng) => {
         updateContent();
         renderHomeFAQ();
-        document.documentElement.dir = ['ar', 'he'].includes(lng) ? 'rtl' : 'ltr';
-        document.documentElement.lang = lng;
+        applyDirection(lng);
         
         const currentName = languageNames[lng] || lng.toUpperCase();
         const triggerSpan = document.querySelector('.dropdown-trigger span');
