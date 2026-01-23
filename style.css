@@ -11,7 +11,8 @@
     --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.3);
     --shadow-button: 0 4px 15px rgba(255, 0, 80, 0.3);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+    /* تحسين: تقليل عدد الخصائص المتحركة لتحسين الأداء */
+    --transition-smooth: transform 0.3s ease, opacity 0.3s ease;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -320,6 +321,108 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Performance optimizations: Button loading states */
+.btn-dl {
+    background: #333;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #444;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.btn-dl.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.btn-dl.video-action {
+    background: #333;
+}
+
+.btn-dl.hd-action {
+    background: linear-gradient(45deg, #00f2ea, #ff0050);
+    border: none;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+    padding: 16px;
+}
+
+.btn-dl.audio-action {
+    background: transparent;
+    color: #00f2ea;
+    border: 1.5px dashed #00f2ea;
+    padding: 12px;
+}
+
+/* Result card styles */
+.result-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto;
+    color: white;
+    width: 100%;
+}
+
+.result-card img {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.result-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.result-card .author {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.result-card .buttons-container {
+    width: 100%;
+}
+
+/* Processing/Error states */
+.processing-state {
+    text-align: center;
+    padding: 30px;
+}
+
+.processing-state i {
+    font-size: 2.5rem;
+    color: #00f2ea;
+}
+
+.processing-state p {
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.error-state {
+    color: #ff4444;
+    text-align: center;
+    padding: 20px;
 }
 /* --- ألوان الوضع الصبحي (Light Mode) --- */
 body.light-mode {

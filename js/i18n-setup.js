@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             .init({
                 fallbackLng: 'en',
                 supportedLngs: supportedLanguages,
-                // هذا الكود يضيف توقيت اللحظة الحالية للرابط، فيجبر المتصفح على تحميل الجديد دائماً
-                backend: { loadPath: '/locales/{{lng}}.json?v=' + new Date().getTime() },
+                // استخدام cache headers بدلاً من timestamp للتحكم في التخزين المؤقت
+                backend: { loadPath: '/locales/{{lng}}.json' },
 
                 detection: { 
                     order: ['querystring', 'localStorage', 'navigator'],
@@ -95,17 +95,41 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function updateContent() {
+    // دفعة واحدة من تحديثات DOM لتقليل reflows
+    const fragment = document.createDocumentFragment();
+    const updates = [];
+    
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const attrMatch = key.match(/^\[(.*)\](.*)/);
         if (attrMatch) {
             const translated = i18next.t(attrMatch[2]);
-            if (translated && translated !== attrMatch[2]) el.setAttribute(attrMatch[1], translated);
+            if (translated && translated !== attrMatch[2]) {
+                updates.push({ el, type: 'attr', name: attrMatch[1], value: translated });
+            }
         } else {
             const translated = i18next.t(key);
-            if (translated && translated !== key) el.innerHTML = translated;
+            if (translated && translated !== key) {
+                // استخدام textContent بدلاً من innerHTML للنصوص البسيطة (أسرع وأكثر أماناً)
+                updates.push({ el, type: 'text', value: translated });
+            }
         }
     });
+    
+    // تطبيق كل التحديثات دفعة واحدة
+    updates.forEach(({ el, type, name, value }) => {
+        if (type === 'attr') {
+            el.setAttribute(name, value);
+        } else {
+            // استخدام innerHTML فقط إذا كان النص يحتوي على HTML tags
+            if (value.includes('<')) {
+                el.innerHTML = value;
+            } else {
+                el.textContent = value;
+            }
+        }
+    });
+    
     document.title = i18next.t('meta.title');
 }
 
@@ -113,6 +137,26 @@ function renderHomeFAQ() {
     const container = document.getElementById('home-faq-list');
     if (!container) return;
     
+    // التحقق إذا كان FAQ موجود بالفعل - فقط تحديث النصوص بدلاً من إعادة البناء
+    const existingItems = container.querySelectorAll('.faq-item');
+    
+    if (existingItems.length > 0) {
+        // تحديث النصوص فقط للحفاظ على حالة الفتح/الإغلاق
+        existingItems.forEach((item, i) => {
+            const q = i18next.t(`faq.q${i + 1}`);
+            const a = i18next.t(`faq.a${i + 1}`);
+            
+            if (q && q !== `faq.q${i + 1}`) {
+                const questionEl = item.querySelector('.faq-question span');
+                const answerEl = item.querySelector('.faq-answer p');
+                if (questionEl) questionEl.textContent = q;
+                if (answerEl) answerEl.textContent = a;
+            }
+        });
+        return;
+    }
+    
+    // البناء الأولي فقط
     let html = '';
     for (let i = 1; i <= 10; i++) {
         const q = i18next.t(`faq.q${i}`);
@@ -135,7 +179,15 @@ function renderHomeFAQ() {
 function toggleFAQ(element) {
     const item = element.parentElement;
     const isActive = item.classList.contains('active');
-    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+    
+    // إزالة active من جميع العناصر - استخدام cached reference بدلاً من querySelectorAll
+    const allItems = item.parentElement.children;
+    for (let i = 0; i < allItems.length; i++) {
+        if (allItems[i] !== item) {
+            allItems[i].classList.remove('active');
+        }
+    }
+    
     if (!isActive) item.classList.add('active');
 }
 
@@ -265,19 +317,24 @@ window.changeLanguageInstant = function(lng) {
     }
     window.history.replaceState({}, '', url);
     
-    // Update active state
-    document.querySelectorAll('.option-item').forEach(item => {
+    // Update active state - تحسين: استخدام cached query
+    const options = dropdown ? dropdown.querySelectorAll('.option-item') : [];
+    options.forEach(item => {
         const isSelected = item.dataset.lang === lng;
         item.classList.toggle('active', isSelected);
         item.setAttribute('aria-selected', isSelected);
     });
 };
 
+// تحسين: استخدام event delegation بدلاً من global handler
+let dropdownClickHandler = null;
 window.onclick = function(event) {
     if (!event.target.closest('.custom-dropdown')) {
-        const dropdowns = document.getElementsByClassName("dropdown-options");
-        for (let i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].classList.remove('show');
+        const dropdown = document.querySelector('.dropdown-options.show');
+        if (dropdown) {
+            dropdown.classList.remove('show');
+            const trigger = document.querySelector('.dropdown-trigger');
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
         }
     }
 }

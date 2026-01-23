@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // فتح الإعلان للربح أولاً
             window.open(MY_SMART_LINK, '_blank');
 
-            // إظهار حالة جاري التحميل داخل الزر
+            // إظهار حالة جاري التحميل داخل الزر - استخدام CSS class بدلاً من inline styles
+            btn.classList.add('loading');
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-            btn.style.pointerEvents = 'none';
 
             // استخدام المحرك لكسر حماية تيك توك وإجبار التحميل
             const proxied = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fallback: التوجه للمحرك مباشرة في حال فشل المتصفح
             window.location.href = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
         } finally {
+            btn.classList.remove('loading');
             btn.innerHTML = originalHTML;
-            btn.style.pointerEvents = 'auto';
         }
     };
 
@@ -81,14 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =========================
        5. زر التحميل الأساسي
     ========================== */
+    let downloadTimeout = null; // للـ debouncing
     if (downloadBtn) {
         downloadBtn.addEventListener('click', () => {
+            // منع الضغط المتكرر السريع (debouncing)
+            if (downloadTimeout) return;
+            
             const url = urlInput.value.trim();
             if (!url) {
                 const msg = (typeof i18next !== 'undefined') ? i18next.t('downloader.placeholder') : 'Please paste a TikTok link';
                 alert(msg);
                 return;
             }
+            
+            // تعطيل الزر لمدة ثانية واحدة لمنع الضغط المتكرر
+            downloadTimeout = setTimeout(() => {
+                downloadTimeout = null;
+            }, 1000);
+            
             startProcess(url);
         });
     }
@@ -99,9 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
     async function startProcess(videoUrl) {
         const procTxt = (typeof i18next !== 'undefined') ? i18next.t('downloader.processing') : 'Processing...';
         resultArea.innerHTML = `
-            <div style="text-align:center;padding:30px">
-                <i class="fas fa-circle-notch fa-spin" style="font-size:2.5rem;color:#00f2ea"></i>
-                <p style="margin-top:15px;font-weight:bold;color:white">${procTxt}</p>
+            <div class="processing-state">
+                <i class="fas fa-circle-notch fa-spin"></i>
+                <p>${procTxt}</p>
             </div>
         `;
 
@@ -113,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const errTxt = (typeof i18next !== 'undefined') ? i18next.t('downloader.error_busy') : 'Service busy, try again later';
-        resultArea.innerHTML = `<div style="color:#ff4444;text-align:center;padding:20px">${errTxt}</div>`;
+        resultArea.innerHTML = `<div class="error-state">${errTxt}</div>`;
     }
 
     /* =========================
@@ -167,44 +177,47 @@ document.addEventListener('DOMContentLoaded', () => {
        9. عرض النتيجة النهائية
     ========================== */
     function renderResult(v) {
-    const displayTitle = v.title.length > 60 ? v.title.substring(0, 60) + '…' : v.title;
-    const t_vid = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_video') : 'Download Video';
-    const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
-    const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
+        const displayTitle = v.title.length > 60 ? v.title.substring(0, 60) + '…' : v.title;
+        const t_vid = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_video') : 'Download Video';
+        const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
+        const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
 
-    // التوسيط باستخدام column و align-items:center
-    resultArea.innerHTML = `
-        <div class="result-card fade-in" style="background:#1e1e1e; padding:20px; border-radius:15px; border:1px solid #333; display:flex; flex-direction:column; align-items:center; text-align:center; max-width:500px; margin:20px auto; color:white; width:100%">
-            <img src="${v.cover}" style="width:180px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.5); margin-bottom:15px">
-            <div style="width:100%">
-                <h3 style="margin-bottom:8px; font-size:1.1rem">${displayTitle}</h3>
-                <p style="color:#aaa; margin-bottom:20px">@${v.author}</p>
+        // استخدام CSS classes بدلاً من inline styles
+        resultArea.innerHTML = `
+            <div class="result-card fade-in">
+                <img src="${v.cover}" alt="Video thumbnail">
+                <div class="buttons-container">
+                    <h3>${displayTitle}</h3>
+                    <p class="author">@${v.author}</p>
 
-                <button class="btn-dl video-action" data-url="${encodeURIComponent(v.play)}" data-name="video.mp4" 
-                    style="background:#333; width:100%; padding:14px; border-radius:10px; margin-bottom:12px; color:white; cursor:pointer; border:1px solid #444; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:8px">
-                    <i class="fas fa-video"></i> ${t_vid}
-                </button>
+                    <button class="btn-dl video-action" data-url="${encodeURIComponent(v.play)}" data-name="video.mp4">
+                        <i class="fas fa-video"></i> ${t_vid}
+                    </button>
 
-                <button class="btn-dl hd-action" data-url="${encodeURIComponent(v.hd)}" data-name="video_hd.mp4" 
-                    style="background:linear-gradient(45deg, #00f2ea, #ff0050); width:100%; padding:16px; border-radius:10px; margin-bottom:12px; color:white; cursor:pointer; border:none; font-weight:800; box-shadow:0 4px 15px rgba(255,0,80,0.3); display:flex; align-items:center; justify-content:center; gap:8px">
-                    <i class="fas fa-certificate"></i> ${t_vid} (${t_hd})
-                </button>
+                    <button class="btn-dl hd-action" data-url="${encodeURIComponent(v.hd)}" data-name="video_hd.mp4">
+                        <i class="fas fa-certificate"></i> ${t_vid} (${t_hd})
+                    </button>
 
-                ${v.music ? `
-                <button class="btn-dl audio-action" data-url="${encodeURIComponent(v.music)}" data-name="audio.mp3" 
-                    style="background:transparent; width:100%; padding:12px; border-radius:10px; color:#00f2ea; cursor:pointer; border:1.5px dashed #00f2ea; display:flex; align-items:center; justify-content:center; gap:8px">
-                    <i class="fas fa-music"></i> ${t_aud}
-                </button>` : ''}
+                    ${v.music ? `
+                    <button class="btn-dl audio-action" data-url="${encodeURIComponent(v.music)}" data-name="audio.mp3">
+                        <i class="fas fa-music"></i> ${t_aud}
+                    </button>` : ''}
+                </div>
             </div>
-        </div>
-    `;
+        `;
 
-    // ربط الأزرار بالتحميل
-    resultArea.querySelectorAll('.btn-dl').forEach(btn => {
-        btn.addEventListener('click', () => {
-            downloadFile(btn.dataset.url, btn.dataset.name, btn);
-        });
-    });
-}
+        // استخدام event delegation بدلاً من إضافة listener لكل زر
+        // هذا يحسن الأداء ويمنع memory leaks
+        resultArea.addEventListener('click', handleDownloadClick);
+    }
+
+    // دالة واحدة للتعامل مع جميع أزرار التحميل (event delegation)
+    function handleDownloadClick(e) {
+        const btn = e.target.closest('.btn-dl');
+        if (!btn) return;
+        
+        e.preventDefault();
+        downloadFile(btn.dataset.url, btn.dataset.name, btn);
+    }
 
 });
