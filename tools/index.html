@@ -939,9 +939,10 @@
         // FAQ toggle
         function toggleFAQ(element) {
             const item = element.parentElement;
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
+            
+            // Simply toggle the clicked item's active state
+            // This allows multiple items to be open simultaneously
+            item.classList.toggle('active');
         }
 
         // Format file size
