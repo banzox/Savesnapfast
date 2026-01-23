@@ -192,7 +192,7 @@ function injectMasterLayout() {
         header.innerHTML = `
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <nav class="nav-container">
-            <a href="${getLocalizedUrl('/')}" class="logo"><i class="fab fa-tiktok"></i> Snaptiks</a>
+            <a href="${getLocalizedUrl('/')}" class="logo"><i class="fab fa-tiktok"></i> SaveTikFast</a>
             
             <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
                 <a href="${getLocalizedUrl('/tools/')}" class="nav-link tools-link" aria-label="Tools Hub">
