@@ -178,17 +178,10 @@ function renderHomeFAQ() {
 
 function toggleFAQ(element) {
     const item = element.parentElement;
-    const isActive = item.classList.contains('active');
     
-    // إزالة active من جميع العناصر - استخدام cached reference بدلاً من querySelectorAll
-    const allItems = item.parentElement.children;
-    for (let i = 0; i < allItems.length; i++) {
-        if (allItems[i] !== item) {
-            allItems[i].classList.remove('active');
-        }
-    }
-    
-    if (!isActive) item.classList.add('active');
+    // Simply toggle the clicked item's active state
+    // This allows multiple items to be open simultaneously
+    item.classList.toggle('active');
 }
 
 function injectMasterLayout() {
