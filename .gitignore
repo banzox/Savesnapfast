@@ -2,8 +2,8 @@
 node_modules/
 package-lock.json
 
-# Keep vendor directory (self-hosted libraries)
-!js/vendor/
+# Keep vendor JavaScript files (self-hosted libraries)
+!js/vendor/*.js
 
 # Logs
 *.log
