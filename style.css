@@ -971,6 +971,60 @@ body.light-mode .tools-text {
     background-clip: text;
 }
 
+/* ============================================
+   CRITICAL FIX: Force tools-text visibility on ALL screens
+   Overrides the generic .nav-link span { display: none } rule
+   ============================================ */
+.nav-link.tools-link .tools-text {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    max-width: none !important;
+    overflow: visible !important;
+    position: static !important;
+    /* Ensure the text color is visible (fallback for gradient) */
+    color: #00f2ea;
+}
+
+/* Mobile override - ensure text is NEVER hidden */
+@media (max-width: 768px) {
+    .nav-link.tools-link .tools-text {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 11px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link.tools-link .tools-text {
+        display: inline-block !important;
+        visibility: visible !important;
+        font-size: 10px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 370px) {
+    .nav-link.tools-link .tools-text {
+        display: inline-block !important;
+        visibility: visible !important;
+        font-size: 9px;
+        font-weight: 800;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-link.tools-link .tools-text {
+        display: inline-block !important;
+        visibility: visible !important;
+        font-size: 8px;
+        font-weight: 800;
+    }
+}
+
 /* Large Tablets & Small Desktops (769px - 1024px) */
 @media (max-width: 1024px) {
     .nav-link.tools-link {
