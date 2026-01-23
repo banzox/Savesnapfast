@@ -6,4 +6,3 @@ Disallow: /*.json$
 Disallow: /locales/
 
 Sitemap: https://savetik-fast.xyz/sitemap.xml
-Host: https://savetik-fast.xyz
