@@ -2,7 +2,7 @@
 const supportedLanguages = ['en', 'ar', 'id', 'tr', 'fr', 'es', 'de', 'pt', 'ru', 'it', 'ja', 'zh', 'vi', 'hi', 'nl', 'ko', 'th', 'pl', 'uk', 'el', 'sv', 'no', 'da', 'fi', 'cs', 'hu', 'ro', 'sk', 'ms', 'he'];
 
 // RTL Languages list
-const RTL_LANGUAGES = ['ar', 'he', 'fa', 'ur'];
+const RTL_LANGUAGES = ['ar', 'he'];
 
 const languageNames = {
     en: "English", ar: "العربية", id: "Bahasa Indonesia", tr: "Türkçe", fr: "Français",
