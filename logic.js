@@ -14,6 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // 💰 رابط الإعلان الذكي (Adsterra)
     const MY_SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
+    // تحسين: استخدام event delegation واحد فقط على resultArea بدلاً من إضافة listeners متعددة
+    if (resultArea) {
+        resultArea.addEventListener('click', handleDownloadClick);
+    }
+
+    // دالة واحدة للتعامل مع جميع أزرار التحميل (event delegation)
+    function handleDownloadClick(e) {
+        const btn = e.target.closest('.btn-dl');
+        if (!btn) return;
+        
+        e.preventDefault();
+        downloadFile(btn.dataset.url, btn.dataset.name, btn);
+    }
+
     /* =========================
        2. تفعيل وظيفة زر اللصق
     ========================== */
@@ -205,19 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `;
-
-        // استخدام event delegation بدلاً من إضافة listener لكل زر
-        // هذا يحسن الأداء ويمنع memory leaks
-        resultArea.addEventListener('click', handleDownloadClick);
-    }
-
-    // دالة واحدة للتعامل مع جميع أزرار التحميل (event delegation)
-    function handleDownloadClick(e) {
-        const btn = e.target.closest('.btn-dl');
-        if (!btn) return;
         
-        e.preventDefault();
-        downloadFile(btn.dataset.url, btn.dataset.name, btn);
+        // Event delegation تم إعداده مسبقاً في بداية الملف - لا حاجة لإضافة listener هنا
     }
 
 });
