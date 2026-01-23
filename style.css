@@ -260,7 +260,9 @@ footer {
     background: #1a1a2e; /* لون داكن عميق */
     border: 1px solid var(--border);
     border-radius: 15px;
-    width: 200px;
+    width: max-content;
+    min-width: 200px;
+    max-width: 90vw;
     max-height: 300px;
     overflow-y: auto;
     display: none; /* مخفية افتراضياً */
@@ -639,9 +641,7 @@ body {
 }
 
 /* Dropdown Menu - Expands inward using logical properties */
-.dropdown-options {
-    max-width: calc(100vw - 20px);
-}
+/* Viewport safety is handled in main .dropdown-options rule */
 
 /* Back Button - Auto-flipping Arrow */
 [dir="rtl"] .back-btn i.fa-arrow-left {
@@ -667,9 +667,7 @@ body {
 
 /* Mobile Responsive - Enhanced for RTL */
 @media (max-width: 768px) {
-    .dropdown-options {
-        max-width: calc(100vw - 24px);
-    }
+    /* Dropdown max-width handled by main rule (90vw) */
 }
 
 @media (max-width: 480px) {
