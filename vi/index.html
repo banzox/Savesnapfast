@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <title data-i18n="meta.title">SaveTikFast - TikTok Downloader</title>
+    <meta name="description" data-i18n="[content]meta.description" content="">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://savetik-fast.xyz/vi/">
+
+    <!-- Hreflang Tags for International SEO -->
+    <link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/">
+    <link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/?lang=en">
+    <link rel="alternate" hreflang="ar" href="https://savetik-fast.xyz/?lang=ar">
+    <link rel="alternate" hreflang="es" href="https://savetik-fast.xyz/?lang=es">
+    <link rel="alternate" hreflang="fr" href="https://savetik-fast.xyz/?lang=fr">
+    <link rel="alternate" hreflang="de" href="https://savetik-fast.xyz/?lang=de">
+    <link rel="alternate" hreflang="ru" href="https://savetik-fast.xyz/?lang=ru">
+    <link rel="alternate" hreflang="zh" href="https://savetik-fast.xyz/?lang=zh">
+    <link rel="alternate" hreflang="pt" href="https://savetik-fast.xyz/?lang=pt">
+    <link rel="alternate" hreflang="ja" href="https://savetik-fast.xyz/?lang=ja">
+    <link rel="alternate" hreflang="ko" href="https://savetik-fast.xyz/?lang=ko">
+    <link rel="alternate" hreflang="it" href="https://savetik-fast.xyz/?lang=it">
+    <link rel="alternate" hreflang="nl" href="https://savetik-fast.xyz/?lang=nl">
+    <link rel="alternate" hreflang="pl" href="https://savetik-fast.xyz/?lang=pl">
+    <link rel="alternate" hreflang="tr" href="https://savetik-fast.xyz/?lang=tr">
+    <link rel="alternate" hreflang="vi" href="https://savetik-fast.xyz/?lang=vi">
+    <link rel="alternate" hreflang="th" href="https://savetik-fast.xyz/?lang=th">
+    <link rel="alternate" hreflang="id" href="https://savetik-fast.xyz/?lang=id">
+    <link rel="alternate" hreflang="hi" href="https://savetik-fast.xyz/?lang=hi">
+    <link rel="alternate" hreflang="uk" href="https://savetik-fast.xyz/?lang=uk">
+    <link rel="alternate" hreflang="el" href="https://savetik-fast.xyz/?lang=el">
+    <link rel="alternate" hreflang="sv" href="https://savetik-fast.xyz/?lang=sv">
+    <link rel="alternate" hreflang="no" href="https://savetik-fast.xyz/?lang=no">
+    <link rel="alternate" hreflang="da" href="https://savetik-fast.xyz/?lang=da">
+    <link rel="alternate" hreflang="fi" href="https://savetik-fast.xyz/?lang=fi">
+    <link rel="alternate" hreflang="cs" href="https://savetik-fast.xyz/?lang=cs">
+    <link rel="alternate" hreflang="hu" href="https://savetik-fast.xyz/?lang=hu">
+    <link rel="alternate" hreflang="ro" href="https://savetik-fast.xyz/?lang=ro">
+    <link rel="alternate" hreflang="sk" href="https://savetik-fast.xyz/?lang=sk">
+    <link rel="alternate" hreflang="ms" href="https://savetik-fast.xyz/?lang=ms">
+    <link rel="alternate" hreflang="he" href="https://savetik-fast.xyz/?lang=he">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- تحسين: تحميل الخطوط غير المهمة بشكل غير متزامن -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- i18next - Self-hosted for reliability (no CDN dependency) -->
+    <script src="/js/vendor/i18next.min.js"></script>
+    <script src="/js/vendor/i18nextHttpBackend.min.js"></script>
+    <script src="/js/vendor/i18nextBrowserLanguageDetector.min.js"></script>
+
+    <!-- Dynamic Canonical and Hreflang Script -->
+    <script>
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang');
+        const pagePath = window.location.pathname;
+        const baseUrl = 'https://savetik-fast.xyz';
+        const canonicalLink = document.getElementById('canonical-link');
+        if (canonicalLink) {
+            canonicalLink.href = lang ? baseUrl + pagePath + '?lang=' + lang : baseUrl + pagePath;
+        }
+        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => {
+            const hreflang = link.getAttribute('hreflang');
+            link.href = hreflang === 'x-default' ? baseUrl + pagePath : baseUrl + pagePath + '?lang=' + hreflang;
+        });
+    })();
+    </script>
+<script>localStorage.setItem('i18nextLng', 'vi');</script>
+</head>
+<body>
+
+    <header id="main-header">
+        </header>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <h1 data-i18n="hero.title"></h1>
+            <p data-i18n="hero.desc"></p>
+
+            <div class="downloader-box">
+                <div class="input-wrapper">
+                    <input type="text" id="url-input" data-i18n="[placeholder]downloader.placeholder" placeholder="Paste link here...">
+                    <button id="paste-btn" type="button" title="Paste Link">
+                        <i class="fas fa-paste"></i>
+                    </button>
+                </div>
+                <button id="download-btn" data-i18n="downloader.btn_download">Download</button>
+            </div>
+
+            <div id="result-area"></div>
+        </section>
+
+        <div class="ad-container">
+            <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
+        </div>
+
+        <section class="container shadow-box">
+            <div class="content-box">
+                <h2 data-i18n="pages.about.title"></h2>
+                <p data-i18n="pages.about.content"></p>
+            </div>
+        </section>
+        <section class="container features-grid">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3 data-i18n="features.fast.title">Fast Download</h3>
+                <p data-i18n="features.fast.desc">Download TikTok videos in seconds with our high-speed servers.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3 data-i18n="features.safe.title">Safe & Private</h3>
+                <p data-i18n="features.safe.desc">We don't store your videos or track your personal data.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-infinity"></i>
+                <h3 data-i18n="features.unlimited.title">Unlimited Usage</h3>
+                <p data-i18n="features.unlimited.desc">Download as many videos as you want without restrictions.</p>
+            </div>
+        </section>
+
+        <section class="container how-to-box shadow-box">
+            <h2 data-i18n="how_to.title" style="text-align: center; margin-bottom: 30px;">How to Download TikTok Videos</h2>
+            <div class="steps-wrapper">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <p data-i18n="how_to.step1">Copy the TikTok video link you want to save.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <p data-i18n="how_to.step2">Paste the link into the box at the top of this page.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <p data-i18n="how_to.step3">Click the "Download" button to save your video.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 data-i18n="faq.title" class="section-title"></h2>
+            <div id="home-faq-list" class="faq-wrapper">
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        </footer>
+
+    <script src="/js/i18n-setup.js?v=2000"></script>
+    <script src="/logic.js?v=2000"></script>
+
+    <script src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js" async></script>
+    <script async="async" data-cfasync="false" src="https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"></script>
+
+</body>
+</html>
