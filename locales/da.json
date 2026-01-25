@@ -16,16 +16,15 @@
     "title": "TikTok Video Downloader",
     "desc": "Download TikTok-videoer uden vandmærke. Hurtigt, gratis og ubegrænset HD-kvalitet."
   },
-      "downloader": {
-      "placeholder": "Indsæt TikTok-link her...",
-      "btn_download": "Download nu",
-      "processing": "Behandler...",
-      "download_video": "Download video",
-      "download_audio": "Download MP3",
-      "hd_quality": "Uden vandmærke",
-      "error_busy": "Tjenesten er optaget, prøv igen senere."
-    },
-
+  "downloader": {
+    "placeholder": "Indsæt TikTok-link her...",
+    "btn_download": "Download nu",
+    "processing": "Behandler...",
+    "download_video": "Download video",
+    "download_audio": "Download MP3",
+    "hd_quality": "Uden vandmærke",
+    "error_busy": "Tjenesten er optaget, prøv igen senere."
+  },
   "faq": {
     "title": "Ofte stillede spørgsmål (FAQ)",
     "q1": "Hvordan downloader man TikTok-video uden vandmærke i 2026?",
@@ -77,18 +76,197 @@
   },
   "footer": {
     "rights": "© 2026 SaveTikFast. Alle rettigheder forbeholdes."
-  }
-  ,
+  },
   "features": {
-    "fast": { "title": "Superhurtig download", "desc": "Download TikTok-videoer på få sekunder med vores højhastighedsservere." },
-    "safe": { "title": "Sikker og privat", "desc": "Vi gemmer ikke dine videoer eller sporer dine personlige data." },
-    "unlimited": { "title": "Ubegrænset brug", "desc": "Download lige så mange videoer, du vil, uden begrænsninger." }
+    "fast": {
+      "title": "Superhurtig download",
+      "desc": "Download TikTok-videoer på få sekunder med vores højhastighedsservere."
+    },
+    "safe": {
+      "title": "Sikker og privat",
+      "desc": "Vi gemmer ikke dine videoer eller sporer dine personlige data."
+    },
+    "unlimited": {
+      "title": "Ubegrænset brug",
+      "desc": "Download lige så mange videoer, du vil, uden begrænsninger."
+    }
   },
   "how_to": {
     "title": "Sådan downloader du TikTok-videoer uden vandmærke",
     "step1": "Kopier det TikTok-videolink, du vil gemme.",
     "step2": "Indsæt linket i downloadboksen øverst på denne side.",
     "step3": "Klik på knappen 'Download', og din video gemmes med det samme."
+  },
+  "tools": {
+    "backToDownloader": "Back to TikTok Downloader",
+    "meta": {
+      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
+      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+    },
+    "hero": {
+      "title": "Free Online Image & QR Tools",
+      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+    },
+    "tabs": {
+      "compressor": "Image Compressor",
+      "converter": "Image Converter",
+      "qrcode": "QR Code Generator"
+    },
+    "dropzone": {
+      "text": "Drag & drop your image here",
+      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
+      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "compressor": {
+      "title": "Image Compressor",
+      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
+      "quality": "Compression Quality",
+      "maxWidth": "Max Width (px)",
+      "btn": "Compress Image",
+      "howto": {
+        "title": "How to Compress Images Online",
+        "step1": {
+          "title": "Upload Image",
+          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+        },
+        "step2": {
+          "title": "Adjust Settings",
+          "desc": "Set your desired quality level (10-100%) and maximum width."
+        },
+        "step3": {
+          "title": "Download",
+          "desc": "Click compress and download your optimized image instantly."
+        }
+      },
+      "seo": {
+        "title": "Why Compress Images?",
+        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
+        "p2": "Benefits of image compression include:",
+        "benefit1": "Faster website loading speeds (improves SEO)",
+        "benefit2": "Reduced storage and bandwidth costs",
+        "benefit3": "Better user experience on mobile devices",
+        "benefit4": "Optimized images for social media sharing",
+        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "Is my image uploaded to a server?",
+        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
+        "q2": "What file formats are supported?",
+        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
+        "q3": "How much can I reduce file size?",
+        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+      }
+    },
+    "converter": {
+      "title": "Image Format Converter",
+      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
+      "output": "Output Format",
+      "quality": "Output Quality",
+      "btn": "Convert Image",
+      "howto": {
+        "title": "How to Convert Image Formats",
+        "step1": {
+          "title": "Select Image",
+          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+        },
+        "step2": {
+          "title": "Choose Format",
+          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+        },
+        "step3": {
+          "title": "Convert & Save",
+          "desc": "Click convert and download your new image instantly."
+        }
+      },
+      "seo": {
+        "title": "Understanding Image Formats",
+        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
+        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
+        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
+        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
+        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "Why convert to WebP?",
+        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
+        "q2": "Will I lose image quality?",
+        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
+        "q3": "Can I convert animated GIFs?",
+        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+      }
+    },
+    "qrcode": {
+      "title": "QR Code Generator",
+      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
+      "input": "Text or URL",
+      "placeholder": "https://example.com or any text",
+      "size": "QR Code Size",
+      "color": "QR Color",
+      "btn": "Generate QR Code",
+      "howto": {
+        "title": "How to Generate QR Codes",
+        "step1": {
+          "title": "Enter Content",
+          "desc": "Type your URL, text, phone number, or any content you want to encode."
+        },
+        "step2": {
+          "title": "Customize",
+          "desc": "Choose your preferred size and color for the QR code."
+        },
+        "step3": {
+          "title": "Generate & Download",
+          "desc": "Click generate and download your high-resolution QR code as PNG."
+        }
+      },
+      "seo": {
+        "title": "QR Code Use Cases",
+        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
+        "use1": "Website URLs - Direct users to your website instantly",
+        "use2": "Business cards - Share contact information digitally",
+        "use3": "Product packaging - Link to manuals or support pages",
+        "use4": "Marketing materials - Track campaign engagement",
+        "use5": "Restaurant menus - Contactless menu access",
+        "use6": "Event tickets - Fast entry verification",
+        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What can I encode in a QR code?",
+        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
+        "q2": "What size should I choose?",
+        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
+        "q3": "Do QR codes expire?",
+        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+      }
+    },
+    "progress": {
+      "compressing": "Compressing image...",
+      "converting": "Converting image..."
+    },
+    "result": {
+      "success": "Compression Complete!",
+      "converted": "Conversion Complete!",
+      "qrReady": "Your QR Code is Ready!"
+    },
+    "stats": {
+      "original": "Original Size",
+      "compressed": "Compressed Size",
+      "saved": "Saved",
+      "originalFormat": "Original Format",
+      "newFormat": "New Format",
+      "newSize": "New Size"
+    },
+    "preview": {
+      "before": "Before",
+      "after": "After",
+      "original": "Original",
+      "converted": "Converted"
+    },
+    "btn": {
+      "download": "Download",
+      "downloadPng": "Download PNG"
+    }
   }
-
 }
