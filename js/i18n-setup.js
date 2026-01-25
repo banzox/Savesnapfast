@@ -13,39 +13,87 @@ const languageNames = {
     hu: "Magyar", ro: "Română", sk: "Slovenčina", ms: "Bahasa Melayu", he: "עבرى"
 };
 
+// ===============================
+// Folder-based Language Detection Utilities
+// ===============================
+
+/**
+ * Get current language from URL path (e.g., /ar/about.html -> 'ar')
+ * Returns 'en' if no language folder is detected (root = English)
+ */
+function getCurrentLanguageFromPath() {
+    const path = window.location.pathname;
+    // Match pattern like /ar/, /tr/, /fr/ at the start of path
+    const match = path.match(/^\/([a-z]{2})(\/|$)/);
+
+    if (match && supportedLanguages.includes(match[1])) {
+        return match[1];
+    }
+    return 'en'; // Default: root is English
+}
+
+/**
+ * Get the current page path without the language prefix
+ * Example: /ar/about.html -> /about.html
+ * Example: /about.html -> /about.html
+ * Example: /tr/ -> /
+ */
+function getPagePathWithoutLang() {
+    const path = window.location.pathname;
+    const match = path.match(/^\/([a-z]{2})(\/.*)?$/);
+
+    if (match && supportedLanguages.includes(match[1])) {
+        // Return the path after language code, or '/' if none
+        return match[2] || '/';
+    }
+    return path; // No language prefix, return as is
+}
+
+/**
+ * Build URL for a specific language (folder-based)
+ * @param {string} targetLang - Target language code
+ * @param {string} pagePath - Page path (e.g., '/about.html' or '/')
+ * @returns {string} Full URL path
+ */
+function buildLanguageUrl(targetLang, pagePath = null) {
+    const currentPagePath = pagePath || getPagePathWithoutLang();
+
+    if (targetLang === 'en') {
+        // English is at root
+        return currentPagePath;
+    }
+    // Other languages are in subfolders
+    // Ensure path starts with /
+    const cleanPath = currentPagePath.startsWith('/') ? currentPagePath : '/' + currentPagePath;
+    return '/' + targetLang + cleanPath;
+}
+
 /**
  * Apply RTL/LTR direction based on language
  */
 function applyDirection(lng) {
     const isRTL = RTL_LANGUAGES.includes(lng);
     const direction = isRTL ? 'rtl' : 'ltr';
-    
+
     document.documentElement.dir = direction;
     document.documentElement.lang = lng;
     document.body.dir = direction;
-    
-    window.dispatchEvent(new CustomEvent('directionChanged', { 
-        detail: { direction, language: lng, isRTL } 
+
+    window.dispatchEvent(new CustomEvent('directionChanged', {
+        detail: { direction, language: lng, isRTL }
     }));
 }
 
 // Global function for "Back" button navigation with language preservation
-window.navigateWithLang = function(basePath) {
-    const currentLng = i18next?.language || localStorage.getItem('i18nextLng') || 'en';
-    if (currentLng === 'en') {
-        window.location.href = basePath;
-    } else {
-        window.location.href = basePath + '?lang=' + currentLng;
-    }
+window.navigateWithLang = function (basePath) {
+    const currentLng = getCurrentLanguageFromPath();
+    window.location.href = buildLanguageUrl(currentLng, basePath);
 };
 
-// Helper function to preserve language in URLs
+// Helper function to preserve language in URLs (folder-based)
 function getLocalizedUrl(path) {
-    const currentLng = i18next?.language || localStorage.getItem('i18nextLng') || 'en';
-    if (currentLng === 'en') {
-        return path;
-    }
-    return path + '?lang=' + currentLng;
+    const currentLng = getCurrentLanguageFromPath();
+    return buildLanguageUrl(currentLng, path);
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -65,10 +113,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // استخدام cache headers بدلاً من timestamp للتحكم في التخزين المؤقت
                 backend: { loadPath: '/locales/{{lng}}.json' },
 
-                detection: { 
-                    order: ['querystring', 'localStorage', 'navigator'],
-                    lookupQuerystring: 'lang',
-                    caches: ['localStorage'] 
+                // Use custom detection: path-based first, then localStorage
+                lng: getCurrentLanguageFromPath(), // Force use path-based detection
+                detection: {
+                    order: ['localStorage', 'navigator'], // Fallback only
+                    caches: ['localStorage']
                 }
             });
 
@@ -76,9 +125,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const initialLng = i18next.language;
         applyDirection(initialLng);
 
-        injectMasterLayout(); 
-        updateContent();      
-        renderHomeFAQ();      
+        injectMasterLayout();
+        updateContent();
+        renderHomeFAQ();
     } catch (error) {
         console.error('I18n Init Error:', error);
     }
@@ -87,7 +136,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateContent();
         renderHomeFAQ();
         applyDirection(lng);
-        
+
         const currentName = languageNames[lng] || lng.toUpperCase();
         const triggerSpan = document.querySelector('.dropdown-trigger span');
         if (triggerSpan) triggerSpan.textContent = currentName;
@@ -98,7 +147,7 @@ function updateContent() {
     // دفعة واحدة من تحديثات DOM لتقليل reflows
     const fragment = document.createDocumentFragment();
     const updates = [];
-    
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const attrMatch = key.match(/^\[(.*)\](.*)/);
@@ -115,7 +164,7 @@ function updateContent() {
             }
         }
     });
-    
+
     // تطبيق كل التحديثات دفعة واحدة
     updates.forEach(({ el, type, name, value }) => {
         if (type === 'attr') {
@@ -129,23 +178,23 @@ function updateContent() {
             }
         }
     });
-    
+
     document.title = i18next.t('meta.title');
 }
 
 function renderHomeFAQ() {
     const container = document.getElementById('home-faq-list');
     if (!container) return;
-    
+
     // التحقق إذا كان FAQ موجود بالفعل - فقط تحديث النصوص بدلاً من إعادة البناء
     const existingItems = container.querySelectorAll('.faq-item');
-    
+
     if (existingItems.length > 0) {
         // تحديث النصوص فقط للحفاظ على حالة الفتح/الإغلاق
         existingItems.forEach((item, i) => {
             const q = i18next.t(`faq.q${i + 1}`);
             const a = i18next.t(`faq.a${i + 1}`);
-            
+
             if (q && q !== `faq.q${i + 1}`) {
                 const questionEl = item.querySelector('.faq-question span');
                 const answerEl = item.querySelector('.faq-answer p');
@@ -155,13 +204,13 @@ function renderHomeFAQ() {
         });
         return;
     }
-    
+
     // البناء الأولي فقط
     let html = '';
     for (let i = 1; i <= 10; i++) {
         const q = i18next.t(`faq.q${i}`);
         const a = i18next.t(`faq.a${i}`);
-        
+
         if (q && q !== `faq.q${i}`) {
             html += `
             <div class="faq-item">
@@ -178,7 +227,7 @@ function renderHomeFAQ() {
 
 function toggleFAQ(element) {
     const item = element.parentElement;
-    
+
     // Simply toggle the clicked item's active state
     // This allows multiple items to be open simultaneously
     item.classList.toggle('active');
@@ -208,11 +257,11 @@ function injectMasterLayout() {
                 <div id="lang-picker-slot"></div>
             </div>
         </nav>`;
-        
+
         createPicker('lang-picker-slot');
-        
+
         const themeBtn = document.getElementById('theme-toggle');
-        if(themeBtn){
+        if (themeBtn) {
             themeBtn.addEventListener('click', () => {
                 document.body.classList.toggle('light-mode');
                 const isLight = document.body.classList.contains('light-mode');
@@ -244,7 +293,7 @@ function injectMasterLayout() {
 function createPicker(slotId) {
     const slot = document.getElementById(slotId);
     if (!slot) return;
-    
+
     const currentLng = i18next.language || 'en';
     const currentName = languageNames[currentLng] || currentLng.toUpperCase();
 
@@ -275,17 +324,17 @@ function createPicker(slotId) {
 }
 
 // Toggle language dropdown with accessibility
-window.toggleLanguageDropdown = function(triggerElement) {
+window.toggleLanguageDropdown = function (triggerElement) {
     const dropdown = document.querySelector('.dropdown-options');
     if (!dropdown) return;
-    
+
     const isExpanded = dropdown.classList.toggle('show');
     triggerElement.setAttribute('aria-expanded', isExpanded);
 };
 
-// Instant language change WITHOUT page reload
-window.changeLanguageInstant = function(lng) {
-    // Close dropdown
+// Language change with HARD REDIRECT to language folder
+window.changeLanguageInstant = function (lng) {
+    // Close dropdown first for visual feedback
     const dropdown = document.querySelector('.dropdown-options');
     const trigger = document.querySelector('.dropdown-trigger');
     if (dropdown) {
@@ -294,34 +343,31 @@ window.changeLanguageInstant = function(lng) {
     if (trigger) {
         trigger.setAttribute('aria-expanded', 'false');
     }
-    
-    // Save to localStorage
-    localStorage.setItem('i18nextLng', lng);
-    
-    // Change language - triggers 'languageChanged' event for instant UI update
-    i18next.changeLanguage(lng);
-    
-    // Update URL without reload
-    const url = new URL(window.location);
-    if (lng === 'en') {
-        url.searchParams.delete('lang');
-    } else {
-        url.searchParams.set('lang', lng);
+
+    // Get current language from path
+    const currentLng = getCurrentLanguageFromPath();
+
+    // Prevent infinite loop: don't redirect if already in correct folder
+    if (lng === currentLng) {
+        console.log('Already in language folder:', lng);
+        return;
     }
-    window.history.replaceState({}, '', url);
-    
-    // Update active state - تحسين: استخدام cached query
-    const options = dropdown ? dropdown.querySelectorAll('.option-item') : [];
-    options.forEach(item => {
-        const isSelected = item.dataset.lang === lng;
-        item.classList.toggle('active', isSelected);
-        item.setAttribute('aria-selected', isSelected);
-    });
+
+    // Save to localStorage for future visits
+    localStorage.setItem('i18nextLng', lng);
+
+    // Build the new URL with language folder
+    const newUrl = buildLanguageUrl(lng);
+
+    console.log('Redirecting to language folder:', newUrl);
+
+    // Hard redirect to the new language folder
+    window.location.href = newUrl;
 };
 
 // تحسين: استخدام event delegation بدلاً من global handler
 let dropdownClickHandler = null;
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.closest('.custom-dropdown')) {
         const dropdown = document.querySelector('.dropdown-options.show');
         if (dropdown) {
