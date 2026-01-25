@@ -1,226 +1,441 @@
-document.addEventListener('DOMContentLoaded', () => {
+/**
+ * SaveTikFast - TikTok Downloader Logic
+ * =====================================
+ * Main JavaScript file for handling video downloads
+ * with viral naming and ad monetization.
+ * 
+ * @author SaveTikFast Team
+ * @version 2.0.0
+ */
 
-    /* =========================
-       1. عناصر الواجهة
-    ========================== */
-    const downloadBtn = document.getElementById('download-btn');
-    const urlInput = document.getElementById('url-input');
-    const resultArea = document.getElementById('result-area');
-    const pasteBtn = document.getElementById('paste-btn');
+// ==================== CONSTANTS ====================
 
-    // 🚀 الإضافة: رابط المحرك الخاص بك
-    const WORKER_URL = "https://misty-violet-50ef.banzox9595.workers.dev";
-    
-    // 💰 رابط الإعلان الذكي (Adsterra)
-    const MY_SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
+/**
+ * Smart Link for ad monetization (opens on every download)
+ */
+const SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
-    // تحسين: استخدام event delegation واحد فقط على resultArea بدلاً من إضافة listeners متعددة
-    if (resultArea) {
-        resultArea.addEventListener('click', handleDownloadClick);
+/**
+ * Cloudflare Worker URL for proxying video downloads (CORS bypass)
+ */
+const WORKER_URL = "https://misty-violet-50ef.banzox9595.workers.dev";
+
+// ==================== DOM ELEMENTS ====================
+
+const urlInput = document.getElementById('url-input');
+const downloadBtn = document.getElementById('download-btn');
+const pasteBtn = document.getElementById('paste-btn');
+const resultArea = document.getElementById('result-area');
+
+// ==================== UTILITY FUNCTIONS ====================
+
+/**
+ * Sanitize username/author name for use in filename
+ * Removes special characters, emojis, and keeps only alphanumeric + underscore
+ * @param {string} name - Raw author name
+ * @returns {string} - Cleaned name safe for filenames
+ */
+function sanitizeFileName(name) {
+    if (!name) return 'TikTok';
+
+    // Remove emojis and special characters, keep letters, numbers, underscore
+    return name
+        .replace(/[^\w\s-]/gi, '') // Remove non-word characters except space and dash
+        .replace(/\s+/g, '_')       // Replace spaces with underscores
+        .replace(/_+/g, '_')        // Remove multiple underscores
+        .replace(/^_|_$/g, '')      // Remove leading/trailing underscores
+        .substring(0, 30)           // Limit length
+        || 'TikTok';                // Fallback if empty
+}
+
+/**
+ * Generate a random alphanumeric string
+ * @param {number} length - Length of random string
+ * @returns {string} - Random string
+ */
+function generateRandomId(length = 6) {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
+    return result;
+}
 
-    // دالة واحدة للتعامل مع جميع أزرار التحميل (event delegation)
-    function handleDownloadClick(e) {
-        const btn = e.target.closest('.btn-dl');
-        if (!btn) return;
-        
-        e.preventDefault();
-        downloadFile(btn.dataset.url, btn.dataset.name, btn);
-    }
+/**
+ * Generate viral filename for downloaded video
+ * Format: SaveTikFast_[AuthorName]_[RandomID].mp4
+ * @param {string} authorName - TikTok author username
+ * @param {string} extension - File extension (mp4, mp3)
+ * @returns {string} - Viral filename
+ */
+function generateViralFileName(authorName, extension = 'mp4') {
+    const cleanName = sanitizeFileName(authorName);
+    const randomId = generateRandomId(6);
+    return `SaveTikFast_${cleanName}_${randomId}.${extension}`;
+}
 
-    /* =========================
-       2. تفعيل وظيفة زر اللصق
-    ========================== */
-    if (pasteBtn && urlInput) {
-        pasteBtn.addEventListener('click', async () => {
-            try {
-                const text = await navigator.clipboard.readText();
-                urlInput.value = text;
-                urlInput.focus();
-            } catch (e) {
-                console.error('Clipboard access denied');
-            }
-        });
-    }
+/**
+ * Validate TikTok URL
+ * @param {string} url - URL to validate
+ * @returns {boolean} - True if valid TikTok URL
+ */
+function isValidTikTokUrl(url) {
+    if (!url) return false;
 
-    /* =========================
-       3. دالة التحميل المباشر (عبر المحرك)
-    ========================== */
-    window.downloadFile = async (rawUrl, fileName, btn) => {
-        const url = decodeURIComponent(rawUrl);
-        const originalHTML = btn.innerHTML;
-
-        try {
-            // فتح الإعلان للربح أولاً
-            window.open(MY_SMART_LINK, '_blank');
-
-            // إظهار حالة جاري التحميل داخل الزر - استخدام CSS class بدلاً من inline styles
-            btn.classList.add('loading');
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-
-            // استخدام المحرك لكسر حماية تيك توك وإجبار التحميل
-            const proxied = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
-            const res = await fetch(proxied);
-            if (!res.ok) throw new Error('Fetch failed');
-
-            const blob = await res.blob();
-            const blobUrl = URL.createObjectURL(blob);
-
-            const a = document.createElement('a');
-            a.href = blobUrl;
-            a.download = fileName || 'video.mp4';
-            document.body.appendChild(a);
-            a.click();
-
-            URL.revokeObjectURL(blobUrl);
-            document.body.removeChild(a);
-
-        } catch (e) {
-            // Fallback: التوجه للمحرك مباشرة في حال فشل المتصفح
-            window.location.href = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
-        } finally {
-            btn.classList.remove('loading');
-            btn.innerHTML = originalHTML;
-        }
-    };
-
-    /* =========================
-       4. السيرفرات (APIs)
-    ========================== */
-    const apiEndpoints = [
-        { name: 'tikwm', url: 'https://www.tikwm.com/api/' },
-        { name: 'tikmate', url: 'https://api.tikmate.app/api/lookup' }
+    const patterns = [
+        /tiktok\.com\/@[\w.-]+\/video\/\d+/i,
+        /tiktok\.com\/t\/[\w]+/i,
+        /vm\.tiktok\.com\/[\w]+/i,
+        /vt\.tiktok\.com\/[\w]+/i,
+        /tiktok\.com\/[\w]+\/video\/\d+/i
     ];
 
-    /* =========================
-       5. زر التحميل الأساسي
-    ========================== */
-    let downloadTimeout = null; // للـ debouncing
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', () => {
-            // منع الضغط المتكرر السريع (debouncing)
-            if (downloadTimeout) return;
+    return patterns.some(pattern => pattern.test(url));
+}
+
+/**
+ * Show loading state in result area
+ */
+function showLoading() {
+    const loadingText = typeof i18next !== 'undefined'
+        ? i18next.t('downloader.processing')
+        : 'Processing...';
+
+    resultArea.innerHTML = `
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin fa-3x"></i>
+            <p>${loadingText}</p>
+        </div>
+    `;
+}
+
+/**
+ * Show error message in result area
+ * @param {string} message - Error message to display
+ */
+function showError(message) {
+    resultArea.innerHTML = `
+        <div class="error-message">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>${message}</p>
+        </div>
+    `;
+}
+
+/**
+ * Clear result area
+ */
+function clearResult() {
+    resultArea.innerHTML = '';
+}
+
+// ==================== MAIN FUNCTIONS ====================
+
+/**
+ * Render video result with download buttons
+ * @param {Object} data - Video data from API
+ */
+function renderResult(data) {
+    if (!data) {
+        showError('No data received from server.');
+        return;
+    }
+
+    // Extract author name for viral filename
+    const authorName = data.author?.nickname
+        || data.author?.unique_id
+        || data.author?.username
+        || data.authorName
+        || 'TikTok';
+
+    // Generate viral filenames
+    const videoFileName = generateViralFileName(authorName, 'mp4');
+    const audioFileName = generateViralFileName(authorName, 'mp3');
+
+    // Get video URLs (handle different API response formats)
+    const videoUrl = data.video?.noWatermark
+        || data.video?.playAddr
+        || data.hdplay
+        || data.play
+        || data.wmplay
+        || '';
+
+    const audioUrl = data.music?.playUrl
+        || data.music_info?.play
+        || data.music
+        || '';
+
+    // Get thumbnail
+    const thumbnail = data.video?.cover
+        || data.cover
+        || data.origin_cover
+        || '';
+
+    // Get video description
+    const description = data.desc
+        || data.title
+        || data.video?.desc
+        || '';
+
+    // Translated button texts
+    const downloadVideoText = typeof i18next !== 'undefined'
+        ? i18next.t('downloader.download_video')
+        : 'Download Video';
+
+    const downloadAudioText = typeof i18next !== 'undefined'
+        ? i18next.t('downloader.download_audio')
+        : 'Download MP3';
+
+    const hdQualityText = typeof i18next !== 'undefined'
+        ? i18next.t('downloader.hd_quality')
+        : 'No Watermark';
+
+    // Build result HTML
+    resultArea.innerHTML = `
+        <div class="result-card">
+            ${thumbnail ? `
+                <div class="result-thumbnail">
+                    <img src="${thumbnail}" alt="TikTok Video Thumbnail" loading="lazy">
+                    <div class="play-overlay">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+            ` : ''}
             
-            const url = urlInput.value.trim();
-            if (!url) {
-                const msg = (typeof i18next !== 'undefined') ? i18next.t('downloader.placeholder') : 'Please paste a TikTok link';
-                alert(msg);
-                return;
-            }
-            
-            // تعطيل الزر لمدة ثانية واحدة لمنع الضغط المتكرر
-            downloadTimeout = setTimeout(() => {
-                downloadTimeout = null;
-            }, 1000);
-            
-            startProcess(url);
-        });
-    }
-
-    /* =========================
-       6. بدء المعالجة
-    ========================== */
-    async function startProcess(videoUrl) {
-        const procTxt = (typeof i18next !== 'undefined') ? i18next.t('downloader.processing') : 'Processing...';
-        resultArea.innerHTML = `
-            <div class="processing-state">
-                <i class="fas fa-circle-notch fa-spin"></i>
-                <p>${procTxt}</p>
-            </div>
-        `;
-
-        for (const api of apiEndpoints) {
-            try {
-                const ok = await fetchFromApi(api, videoUrl);
-                if (ok) return;
-            } catch {}
-        }
-
-        const errTxt = (typeof i18next !== 'undefined') ? i18next.t('downloader.error_busy') : 'Service busy, try again later';
-        resultArea.innerHTML = `<div class="error-state">${errTxt}</div>`;
-    }
-
-    /* =========================
-       7. جلب البيانات
-    ========================== */
-    async function fetchFromApi(api, videoUrl) {
-        const req = api.name === 'tikwm'
-                ? `${api.url}?url=${encodeURIComponent(videoUrl)}`
-                : `${api.url}?url=${videoUrl}`;
-
-        const res = await fetch(req);
-        const data = await res.json();
-
-        if (api.name === 'tikwm' && data.code === 0) {
-            renderResult(normalizeTikwm(data.data));
-            return true;
-        }
-        if (api.name === 'tikmate' && data.success) {
-            renderResult(normalizeTikmate(data.result));
-            return true;
-        }
-        return false;
-    }
-
-    /* =========================
-       8. توحيد البيانات
-    ========================== */
-    function normalizeTikwm(d) {
-        return {
-            cover: d.cover,
-            play: d.play,
-            hd: d.hdplay || d.play,
-            music: d.music,
-            title: d.title || 'TikTok Video',
-            author: d.author?.nickname || 'unknown'
-        };
-    }
-
-    function normalizeTikmate(d) {
-        return {
-            cover: d.cover,
-            play: d.video,
-            hd: d.video,
-            music: d.music,
-            title: d.title || 'TikTok Video',
-            author: d.author || 'unknown'
-        };
-    }
-
-    /* =========================
-       9. عرض النتيجة النهائية
-    ========================== */
-    function renderResult(v) {
-        const displayTitle = v.title.length > 60 ? v.title.substring(0, 60) + '…' : v.title;
-        const t_vid = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_video') : 'Download Video';
-        const t_aud = (typeof i18next !== 'undefined') ? i18next.t('downloader.download_audio') : 'Download MP3';
-        const t_hd = (typeof i18next !== 'undefined') ? i18next.t('downloader.hd_quality') : 'HD Quality';
-
-        // استخدام CSS classes بدلاً من inline styles
-        resultArea.innerHTML = `
-            <div class="result-card fade-in">
-                <img src="${v.cover}" alt="Video thumbnail">
-                <div class="buttons-container">
-                    <h3>${displayTitle}</h3>
-                    <p class="author">@${v.author}</p>
-
-                    <button class="btn-dl video-action" data-url="${encodeURIComponent(v.play)}" data-name="video.mp4">
-                        <i class="fas fa-video"></i> ${t_vid}
-                    </button>
-
-                    <button class="btn-dl hd-action" data-url="${encodeURIComponent(v.hd)}" data-name="video_hd.mp4">
-                        <i class="fas fa-certificate"></i> ${t_vid} (${t_hd})
-                    </button>
-
-                    ${v.music ? `
-                    <button class="btn-dl audio-action" data-url="${encodeURIComponent(v.music)}" data-name="audio.mp3">
-                        <i class="fas fa-music"></i> ${t_aud}
-                    </button>` : ''}
+            <div class="result-info">
+                <h3 class="result-author">
+                    <i class="fab fa-tiktok"></i> @${sanitizeFileName(authorName)}
+                </h3>
+                ${description ? `<p class="result-desc">${description.substring(0, 100)}${description.length > 100 ? '...' : ''}</p>` : ''}
+                
+                <div class="result-buttons">
+                    ${videoUrl ? `
+                        <button 
+                            class="btn-download btn-video" 
+                            onclick="downloadFile('${videoUrl}', '${videoFileName}')"
+                            data-url="${videoUrl}"
+                            data-name="${videoFileName}"
+                        >
+                            <i class="fas fa-video"></i> ${downloadVideoText}
+                            <span class="badge">${hdQualityText}</span>
+                        </button>
+                    ` : ''}
+                    
+                    ${audioUrl ? `
+                        <button 
+                            class="btn-download btn-audio" 
+                            onclick="downloadFile('${audioUrl}', '${audioFileName}')"
+                            data-url="${audioUrl}"
+                            data-name="${audioFileName}"
+                        >
+                            <i class="fas fa-music"></i> ${downloadAudioText}
+                        </button>
+                    ` : ''}
                 </div>
             </div>
-        `;
-        
-        // Event delegation تم إعداده مسبقاً في بداية الملف - لا حاجة لإضافة listener هنا
+        </div>
+    `;
+}
+
+/**
+ * Download file with ad monetization
+ * Opens Smart Link first, then downloads the file via Worker proxy
+ * @param {string} url - Direct URL to the file
+ * @param {string} fileName - Viral filename to save as
+ */
+async function downloadFile(url, fileName) {
+    // ========== MANDATORY: Open Smart Link Ad First ==========
+    window.open(SMART_LINK, '_blank');
+
+    // ========== Download Process ==========
+    try {
+        // Show download progress
+        const btn = document.querySelector(`[data-url="${url}"]`);
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
+        }
+
+        // Fetch video through Worker (CORS bypass)
+        const proxyUrl = `${WORKER_URL}?url=${encodeURIComponent(url)}`;
+
+        const response = await fetch(proxyUrl, {
+            method: 'GET',
+            headers: {
+                'Accept': '*/*'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`Download failed: ${response.status}`);
+        }
+
+        // Convert response to Blob
+        const blob = await response.blob();
+
+        // Create download link
+        const downloadUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = downloadUrl;
+        a.download = fileName; // Viral filename
+        a.style.display = 'none';
+
+        // Append, click, and cleanup
+        document.body.appendChild(a);
+        a.click();
+
+        // Cleanup after short delay
+        setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(downloadUrl);
+        }, 1000);
+
+        // Reset button
+        if (btn) {
+            btn.disabled = false;
+            const isAudio = fileName.endsWith('.mp3');
+            btn.innerHTML = isAudio
+                ? '<i class="fas fa-music"></i> Download MP3'
+                : '<i class="fas fa-video"></i> Download Video <span class="badge">No Watermark</span>';
+        }
+
+    } catch (error) {
+        console.error('Download error:', error);
+
+        // Fallback: Direct download (some browsers may block)
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = fileName;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        // Reset button on error
+        const btn = document.querySelector(`[data-url="${url}"]`);
+        if (btn) {
+            btn.disabled = false;
+        }
+    }
+}
+
+/**
+ * Fetch video data from TikTok API
+ * @param {string} url - TikTok video URL
+ */
+async function fetchVideoData(url) {
+    showLoading();
+
+    try {
+        // API endpoint (using RapidAPI or similar service)
+        const apiUrl = `${WORKER_URL}/api/tiktok?url=${encodeURIComponent(url)}`;
+
+        const response = await fetch(apiUrl, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`API Error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data.error) {
+            throw new Error(data.error);
+        }
+
+        // Render the result
+        renderResult(data);
+
+    } catch (error) {
+        console.error('Fetch error:', error);
+
+        const errorText = typeof i18next !== 'undefined'
+            ? i18next.t('downloader.error_busy')
+            : 'Service is busy. Please try again later.';
+
+        showError(errorText);
+    }
+}
+
+/**
+ * Handle download button click
+ */
+function handleDownload() {
+    const url = urlInput.value.trim();
+
+    if (!url) {
+        urlInput.focus();
+        urlInput.classList.add('shake');
+        setTimeout(() => urlInput.classList.remove('shake'), 500);
+        return;
     }
 
-});
+    if (!isValidTikTokUrl(url)) {
+        showError('Please enter a valid TikTok video URL.');
+        return;
+    }
+
+    fetchVideoData(url);
+}
+
+/**
+ * Handle paste button click
+ */
+async function handlePaste() {
+    try {
+        const text = await navigator.clipboard.readText();
+        if (text) {
+            urlInput.value = text;
+            urlInput.focus();
+
+            // Auto-submit if valid URL
+            if (isValidTikTokUrl(text)) {
+                handleDownload();
+            }
+        }
+    } catch (error) {
+        console.error('Clipboard access denied:', error);
+        // Fallback: Focus on input for manual paste
+        urlInput.focus();
+    }
+}
+
+// ==================== EVENT LISTENERS ====================
+
+// Download button click
+if (downloadBtn) {
+    downloadBtn.addEventListener('click', handleDownload);
+}
+
+// Paste button click
+if (pasteBtn) {
+    pasteBtn.addEventListener('click', handlePaste);
+}
+
+// Enter key in input field
+if (urlInput) {
+    urlInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            handleDownload();
+        }
+    });
+
+    // Clear error state on input
+    urlInput.addEventListener('input', () => {
+        urlInput.classList.remove('shake');
+    });
+}
+
+// ==================== EXPORTS (for global access) ====================
+
+// Make downloadFile globally accessible (used in onclick handlers)
+window.downloadFile = downloadFile;
+
+// Debug: Log initialization
+console.log('SaveTikFast Logic v2.0 loaded successfully.');
