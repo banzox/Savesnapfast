@@ -82,27 +82,41 @@ def parse_i18n_attribute(attr_value):
     return (None, attr_value)
 
 
-def discover_root_html_files():
+def discover_html_files():
     """
-    Discover all HTML files in ROOT directory only.
+    Discover all HTML files in ROOT and allowed subdirectories.
     Excludes: language folders, locales, special directories.
+    Includes: tools/ and other content subdirectories.
     
     Returns:
-        list of tuples: [(filename, absolute_path), ...]
+        list of tuples: [(relative_path, absolute_path), ...]
+        Example: [("index.html", "C:/site/index.html"), 
+                  ("tools/index.html", "C:/site/tools/index.html")]
     """
     html_files = []
     
-    # Get list of directories to exclude (language codes + special dirs)
-    excluded_dirs = LANGUAGE_CODES | {'locales', 'js', 'css', 'node_modules', '.git'}
+    # Directories to exclude (language codes + system dirs)
+    excluded_dirs = LANGUAGE_CODES | {'locales', 'js', 'css', 'node_modules', '.git', '.github', '__pycache__'}
     
-    for item in os.listdir(BASE_DIR):
-        item_path = os.path.join(BASE_DIR, item)
+    for root, dirs, files in os.walk(BASE_DIR):
+        # Calculate relative path from BASE_DIR
+        rel_root = os.path.relpath(root, BASE_DIR)
         
-        # Only process files (not directories)
-        if os.path.isfile(item_path):
-            # Only process .html files
-            if item.endswith('.html') and item not in EXCLUDED_FILES:
-                html_files.append((item, item_path))
+        # Skip excluded directories - modify dirs in-place
+        dirs[:] = [d for d in dirs if d not in excluded_dirs]
+        
+        # Find HTML files
+        for filename in files:
+            if filename.endswith('.html') and filename not in EXCLUDED_FILES:
+                abs_path = os.path.join(root, filename)
+                
+                # Build relative path
+                if rel_root == '.':
+                    rel_path = filename
+                else:
+                    rel_path = os.path.join(rel_root, filename).replace('\\', '/')
+                
+                html_files.append((rel_path, abs_path))
     
     return sorted(html_files)
 
@@ -165,8 +179,13 @@ def process_html_for_language(html_content, translations, lang_code, filename):
     # 5. Update Canonical URL
     canonical_link = soup.find("link", attrs={"rel": "canonical"})
     if canonical_link:
+        # Handle paths like "index.html", "about.html", "tools/index.html"
         if filename == "index.html":
             canonical_path = f"/{lang_code}/"
+        elif filename.endswith("/index.html"):
+            # e.g., tools/index.html -> /tr/tools/
+            folder = filename.replace("/index.html", "")
+            canonical_path = f"/{lang_code}/{folder}/"
         else:
             canonical_path = f"/{lang_code}/{filename}"
         canonical_link["href"] = f"{BASE_URL}{canonical_path}"
@@ -174,11 +193,18 @@ def process_html_for_language(html_content, translations, lang_code, filename):
     # 6. Update Hreflang links
     for link in soup.find_all("link", attrs={"rel": "alternate", "hreflang": True}):
         hreflang = link.get("hreflang")
+        
         if filename == "index.html":
             if hreflang == "x-default":
                 link["href"] = f"{BASE_URL}/"
             else:
                 link["href"] = f"{BASE_URL}/{hreflang}/"
+        elif filename.endswith("/index.html"):
+            folder = filename.replace("/index.html", "")
+            if hreflang == "x-default":
+                link["href"] = f"{BASE_URL}/{folder}/"
+            else:
+                link["href"] = f"{BASE_URL}/{hreflang}/{folder}/"
         else:
             if hreflang == "x-default":
                 link["href"] = f"{BASE_URL}/{filename}"
@@ -249,12 +275,12 @@ def main():
     print("🚀 Static Site Generator for i18n - v3.0 (Multi-Page + Sitemap)")
     print("=" * 70)
     
-    # 1. Discover HTML files in ROOT only
-    print("\n📂 Scanning ROOT directory for HTML files...")
-    html_files = discover_root_html_files()
+    # 1. Discover HTML files (root + subdirectories like tools/)
+    print("\n📂 Scanning for HTML files...")
+    html_files = discover_html_files()
     
     if not html_files:
-        print("❌ No HTML files found in root directory!")
+        print("❌ No HTML files found!")
         return
     
     print(f"   Found {len(html_files)} HTML file(s):")
@@ -279,11 +305,14 @@ def main():
     error_count = 0
     
     # Add root URLs (English default)
-    for filename, _ in html_files:
-        if filename == "index.html":
+    for rel_path, _ in html_files:
+        if rel_path == "index.html":
             all_urls.append(f"{BASE_URL}/")
+        elif rel_path.endswith("/index.html"):
+            folder = rel_path.replace("/index.html", "")
+            all_urls.append(f"{BASE_URL}/{folder}/")
         else:
-            all_urls.append(f"{BASE_URL}/{filename}")
+            all_urls.append(f"{BASE_URL}/{rel_path}")
     
     for lang_code in languages:
         try:
@@ -298,30 +327,40 @@ def main():
             print(f"\n📁 {lang_code}{rtl_indicator}:")
             
             # Process each HTML file
-            for filename, abs_path in html_files:
+            for rel_path, abs_path in html_files:
                 try:
                     with open(abs_path, "r", encoding="utf-8") as f:
                         html_content = f.read()
                     
                     processed_html = process_html_for_language(
-                        html_content, translations, lang_code, filename
+                        html_content, translations, lang_code, rel_path
                     )
                     
-                    output_path = os.path.join(lang_dir, filename)
+                    # Create subdirectory if needed (e.g., tr/tools/)
+                    output_rel_dir = os.path.dirname(rel_path)
+                    if output_rel_dir:
+                        output_subdir = os.path.join(lang_dir, output_rel_dir)
+                        os.makedirs(output_subdir, exist_ok=True)
+                    
+                    # Save file
+                    output_path = os.path.join(lang_dir, rel_path.replace('/', os.sep))
                     with open(output_path, "w", encoding="utf-8") as f:
                         f.write(processed_html)
                     
                     # Add to sitemap URLs
-                    if filename == "index.html":
+                    if rel_path == "index.html":
                         all_urls.append(f"{BASE_URL}/{lang_code}/")
+                    elif rel_path.endswith("/index.html"):
+                        folder = rel_path.replace("/index.html", "")
+                        all_urls.append(f"{BASE_URL}/{lang_code}/{folder}/")
                     else:
-                        all_urls.append(f"{BASE_URL}/{lang_code}/{filename}")
+                        all_urls.append(f"{BASE_URL}/{lang_code}/{rel_path}")
                     
-                    print(f"   ✅ {filename}")
+                    print(f"   ✅ {rel_path}")
                     success_count += 1
                     
                 except Exception as e:
-                    print(f"   ❌ {filename}: {e}")
+                    print(f"   ❌ {rel_path}: {e}")
                     error_count += 1
                     
         except Exception as e:
