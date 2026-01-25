@@ -98,19 +98,19 @@
     "step3": "Натисніть кнопку «Завантажити», і ваше відео буде негайно збережено."
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "Назад до завантажувача",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "Інструменти для зображень та QR",
+      "description": "Стискання, конвертація та створення QR-кодів."
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "Інструменти для фото та QR",
+      "desc": "Обробка в браузері. Швидко та приватно."
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "Стискання",
+      "converter": "Конвертер",
+      "qrcode": "QR-код"
     },
     "dropzone": {
       "text": "Drag & drop your image here",
@@ -265,7 +265,7 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "Завантажити",
       "downloadPng": "Download PNG"
     }
   }

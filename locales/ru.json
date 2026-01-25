@@ -113,8 +113,8 @@
       "qrcode": "QR-код"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
+      "text": "Перетащите изображение сюда",
+      "hint": "или нажмите для выбора",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
     },
     "compressor": {

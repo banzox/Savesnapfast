@@ -98,23 +98,23 @@
     "step3": "לחץ על כפתור 'הורד' והסרטון שלך יישמר מיד."
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "חזור להורדה",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "כלים לתמונות ו-QR",
+      "description": "דחיסת תמונות, המרת פורמטים ויצירת קוד QR אונליין."
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "כלים לתמונות ו-QR",
+      "desc": "דחיסה, המרה ויצירת קוד QR - הכל בדפדפן שלך."
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "דחיסת תמונות",
+      "converter": "ממיר פורמטים",
+      "qrcode": "יוצר QR"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
+      "text": "גרור תמונה לכאן",
+      "hint": "או לחץ לבחירה",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
     },
     "compressor": {
@@ -265,7 +265,7 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "הורד",
       "downloadPng": "Download PNG"
     }
   }

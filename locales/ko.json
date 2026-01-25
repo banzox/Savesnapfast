@@ -98,23 +98,23 @@
     "step3": "'다운로드' 버튼을 클릭하면 동영상이 즉시 저장됩니다."
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "다운로더로 돌아가기",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "무료 이미지 및 QR 도구",
+      "description": "이미지 압축, 형식 변환 및 QR 코드 생성을 위한 무료 도구."
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "이미지 및 QR 도구",
+      "desc": "브라우저에서 직접 압축, 변환 및 QR 코드를 생성하세요."
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "이미지 압축",
+      "converter": "변환기",
+      "qrcode": "QR 생성기"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
+      "text": "이미지를 여기로 드래그",
+      "hint": "또는 클릭하여 선택",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
     },
     "compressor": {
@@ -265,7 +265,7 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "다운로드",
       "downloadPng": "Download PNG"
     }
   }

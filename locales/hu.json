@@ -98,19 +98,19 @@
     "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül."
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "Vissza a letöltőhöz",
     "meta": {
       "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
       "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "Kép és QR Eszközök",
+      "desc": "Tömörítés, átalakítás és QR kód készítés helyben."
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "Tömörítő",
+      "converter": "Átalakító",
+      "qrcode": "QR Generáló"
     },
     "dropzone": {
       "text": "Drag & drop your image here",
@@ -265,7 +265,7 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "Letöltés",
       "downloadPng": "Download PNG"
     }
   }

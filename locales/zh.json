@@ -98,23 +98,23 @@
     "step3": "点击“下载”按钮，您的视频将立即保存。"
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "返回下载器",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "免费图片和QR工具",
+      "description": "在线压缩图片，转换格式和生成二维码。"
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "免费图片和QR工具",
+      "desc": "在浏览器中本地处理。快速且隐私安全。"
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "压缩工具",
+      "converter": "转换工具",
+      "qrcode": "QR生成器"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
+      "text": "将图片拖放到此处",
+      "hint": "或点击选择",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
     },
     "compressor": {
@@ -265,7 +265,7 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "下载",
       "downloadPng": "Download PNG"
     }
   }

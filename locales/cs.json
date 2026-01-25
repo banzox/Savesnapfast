@@ -98,23 +98,23 @@
     "step3": "Klikněte na tlačítko „Stáhnout“ a vaše video se okamžitě uloží."
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "Zpět na stahovač",
     "meta": {
       "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
       "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "Online nástroje pro obrázky a QR",
+      "desc": "Komprimujte, převádějte a generujte QR kódy lokálně."
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "Komprese",
+      "converter": "Konvertor",
+      "qrcode": "QR Generátor"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
+      "text": "Přetáhněte obrázek sem",
+      "hint": "nebo klikněte pro výběr",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
     },
     "compressor": {
@@ -265,8 +265,9 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "Stáhnout",
       "downloadPng": "Download PNG"
-    }
+    },
+    "intro": "Online nástroje zdarma"
   }
 }

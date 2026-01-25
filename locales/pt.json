@@ -100,12 +100,12 @@
   "tools": {
     "backToDownloader": "Voltar ao Baixador",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "Ferramentas de Imagem e QR",
+      "description": "Comprimir, converter e gerar QR codes grátis."
     },
     "hero": {
       "title": "Ferramentas de Imagem e QR",
-      "desc": "Comprima e converta imagens online grátis."
+      "desc": "Processamento local no seu navegador."
     },
     "tabs": {
       "compressor": "Compressor",
@@ -113,8 +113,8 @@
       "qrcode": "Gerador QR"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
+      "text": "Arraste sua imagem aqui",
+      "hint": "ou clique para selecionar",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
     },
     "compressor": {

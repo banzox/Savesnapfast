@@ -98,19 +98,19 @@
     "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta."
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "Kembali ke Pemuat Turun",
     "meta": {
       "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
       "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "Alat Imej & QR",
+      "desc": "Mampatkan, tukar format dan jana kod QR."
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "Pemampat",
+      "converter": "Penukar",
+      "qrcode": "Penjana QR"
     },
     "dropzone": {
       "text": "Drag & drop your image here",
@@ -265,7 +265,7 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "Muat Turun",
       "downloadPng": "Download PNG"
     }
   }

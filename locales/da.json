@@ -98,23 +98,23 @@
     "step3": "Klik på knappen 'Download', og din video gemmes med det samme."
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "Tilbage til downloader",
     "meta": {
       "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
       "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "Gratis Billede & QR Værktøjer",
+      "desc": "Komprimer, konverter og generer QR-koder lokalt."
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "Kompressor",
+      "converter": "Konverter",
+      "qrcode": "QR-generator"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
+      "text": "Træk og slip billede her",
+      "hint": "eller klik for at vælge",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
     },
     "compressor": {
@@ -265,7 +265,7 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "Hent",
       "downloadPng": "Download PNG"
     }
   }

@@ -98,19 +98,19 @@
     "step3": "Klikk på 'Last ned'-knappen og videoen din blir lagret umiddelbart."
   },
   "tools": {
-    "backToDownloader": "Back to TikTok Downloader",
+    "backToDownloader": "Tilbake til laster",
     "meta": {
       "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
       "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
     },
     "hero": {
-      "title": "Free Online Image & QR Tools",
-      "desc": "Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads."
+      "title": "Bilde og QR Verktøy",
+      "desc": "Komprimer, konverter og lag QR-koder."
     },
     "tabs": {
-      "compressor": "Image Compressor",
-      "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "compressor": "Kompressor",
+      "converter": "Konverter",
+      "qrcode": "QR-generator"
     },
     "dropzone": {
       "text": "Drag & drop your image here",
@@ -265,7 +265,7 @@
       "converted": "Converted"
     },
     "btn": {
-      "download": "Download",
+      "download": "Last ned",
       "downloadPng": "Download PNG"
     }
   }
