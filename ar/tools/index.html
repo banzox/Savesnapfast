@@ -166,7 +166,8 @@
             margin: 20px 0;
         }
 
-        .dropzone:hover, .dropzone.dragover {
+        .dropzone:hover,
+        .dropzone.dragover {
             border-color: var(--secondary);
             background: rgba(0, 242, 234, 0.05);
         }
@@ -391,8 +392,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Light mode adjustments */
@@ -466,23 +472,6 @@
             }
         }
     </style>
-<!-- Dynamic Canonical and Hreflang Script -->
-<script>
-    (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang');
-        const pagePath = window.location.pathname;
-        const baseUrl = 'https://savetik-fast.xyz';
-        const canonicalLink = document.getElementById('canonical-link');
-        if (canonicalLink) {
-            canonicalLink.href = lang ? baseUrl + pagePath + '?lang=' + lang : baseUrl + pagePath;
-        }
-        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => {
-            const hreflang = link.getAttribute('hreflang');
-            link.href = hreflang === 'x-default' ? baseUrl + pagePath : baseUrl + pagePath + '?lang=' + hreflang;
-        });
-    })();
-    </script>
 <script>localStorage.setItem('i18nextLng', 'ar');</script></head>
 <body>
 <header id="main-header"></header>
@@ -938,7 +927,7 @@
         // FAQ toggle
         function toggleFAQ(element) {
             const item = element.parentElement;
-            
+
             // Simply toggle the clicked item's active state
             // This allows multiple items to be open simultaneously
             item.classList.toggle('active');

@@ -166,7 +166,8 @@
             margin: 20px 0;
         }
 
-        .dropzone:hover, .dropzone.dragover {
+        .dropzone:hover,
+        .dropzone.dragover {
             border-color: var(--secondary);
             background: rgba(0, 242, 234, 0.05);
         }
@@ -391,8 +392,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Light mode adjustments */
@@ -466,23 +472,6 @@
             }
         }
     </style>
-<!-- Dynamic Canonical and Hreflang Script -->
-<script>
-    (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang');
-        const pagePath = window.location.pathname;
-        const baseUrl = 'https://savetik-fast.xyz';
-        const canonicalLink = document.getElementById('canonical-link');
-        if (canonicalLink) {
-            canonicalLink.href = lang ? baseUrl + pagePath + '?lang=' + lang : baseUrl + pagePath;
-        }
-        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => {
-            const hreflang = link.getAttribute('hreflang');
-            link.href = hreflang === 'x-default' ? baseUrl + pagePath : baseUrl + pagePath + '?lang=' + hreflang;
-        });
-    })();
-    </script>
 <script>localStorage.setItem('i18nextLng', 'it');</script></head>
 <body>
 <header id="main-header"></header>
@@ -493,7 +482,8 @@
 <span>Back to TikTok Downloader</span>
 </a>
 <h1>Free Online Image &amp; QR Tools</h1>
-<p>Compress images, convert formats, and generate QR codes - all processed locally in your browser. 100% private, zero uploads.</p>
+<p>Compress images, convert formats, and generate QR codes - all processed
+                locally in your browser. 100% private, zero uploads.</p>
 </section>
 <!-- Adsterra Native Banner -->
 <div class="ad-container">
@@ -546,7 +536,8 @@
 <div class="tool-content active" id="tool-compressor">
 <div class="tool-card">
 <h2>Image Compressor</h2>
-<p>Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.</p>
+<p>Reduce image file size without losing quality. Supports JPG,
+                        PNG, and WebP up to 15MB.</p>
 <div class="dropzone" id="compressor-dropzone" onclick="document.getElementById('compressor-file').click()">
 <i class="fas fa-cloud-upload-alt"></i>
 <div>Drag &amp; drop your image here</div>
@@ -566,7 +557,8 @@
 <div class="spinner"></div>
 <p>Compressing image...</p>
 </div>
-<button class="btn-primary" disabled="" id="compress-btn">Compress Image</button>
+<button class="btn-primary" disabled="" id="compress-btn">Compress
+                        Image</button>
 <div class="result-container" id="compress-result">
 <h3>Compression Complete!</h3>
 <div class="stats-grid">
@@ -603,17 +595,20 @@
 <div class="step-card">
 <div class="step-number">1</div>
 <div class="step-title">Upload Image</div>
-<p>Drag &amp; drop or click to select your JPG, PNG, or WebP image (up to 15MB).</p>
+<p>Drag &amp; drop or click to select your JPG,
+                                PNG, or WebP image (up to 15MB).</p>
 </div>
 <div class="step-card">
 <div class="step-number">2</div>
 <div class="step-title">Adjust Settings</div>
-<p>Set your desired quality level (10-100%) and maximum width.</p>
+<p>Set your desired quality level (10-100%)
+                                and maximum width.</p>
 </div>
 <div class="step-card">
 <div class="step-number">3</div>
 <div class="step-title">Download</div>
-<p>Click compress and download your optimized image instantly.</p>
+<p>Click compress and download your optimized
+                                image instantly.</p>
 </div>
 </div>
 </div>
@@ -621,15 +616,19 @@
 <div class="seo-section">
 <h3>Why Compress Images?</h3>
 <div class="seo-content">
-<p>Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.</p>
+<p>Image compression is essential for website performance,
+                            faster loading times, and reduced bandwidth usage. Our free online image compressor uses
+                            advanced algorithms to reduce file sizes while maintaining visual quality.</p>
 <p>Benefits of image compression include:</p>
 <ul>
-<li>Faster website loading speeds (improves SEO)</li>
+<li>Faster website loading speeds (improves SEO)
+                            </li>
 <li>Reduced storage and bandwidth costs</li>
 <li>Better user experience on mobile devices</li>
 <li>Optimized images for social media sharing</li>
 </ul>
-<p>All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security.</p>
+<p>All processing happens in your browser using Web Workers
+                            - your images are never uploaded to any server, ensuring complete privacy and security.</p>
 </div>
 </div>
 <!-- FAQ Section -->
@@ -642,7 +641,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.</p>
+<p>No! All compression happens directly in your
+                                    browser. Your images never leave your device, ensuring complete privacy.</p>
 </div>
 </div>
 <div class="faq-item">
@@ -651,7 +651,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.</p>
+<p>We support JPG/JPEG, PNG, and WebP formats up to
+                                    15MB file size.</p>
 </div>
 </div>
 <div class="faq-item">
@@ -660,7 +661,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>Typically 50-80% reduction depending on the original image and quality settings chosen.</p>
+<p>Typically 50-80% reduction depending on the
+                                    original image and quality settings chosen.</p>
 </div>
 </div>
 </div>
@@ -670,11 +672,13 @@
 <div class="tool-content" id="tool-converter">
 <div class="tool-card">
 <h2>Image Format Converter</h2>
-<p>Convert images between JPG, PNG, and WebP formats instantly in your browser.</p>
+<p>Convert images between JPG, PNG, and WebP formats instantly in
+                        your browser.</p>
 <div class="dropzone" id="converter-dropzone" onclick="document.getElementById('converter-file').click()">
 <i class="fas fa-exchange-alt"></i>
 <div>Drag &amp; drop your image here</div>
-<small>or click to browse (JPG, PNG, WebP, GIF, BMP)</small>
+<small>or click to browse (JPG, PNG, WebP, GIF,
+                            BMP)</small>
 <input accept="image/*" id="converter-file" style="display: none;" type="file"/>
 </div>
 <div class="form-group">
@@ -694,7 +698,8 @@
 <div class="spinner"></div>
 <p>Converting image...</p>
 </div>
-<button class="btn-primary" disabled="" id="convert-btn">Convert Image</button>
+<button class="btn-primary" disabled="" id="convert-btn">Convert
+                        Image</button>
 <div class="result-container" id="convert-result">
 <h3>Conversion Complete!</h3>
 <div class="stats-grid">
@@ -731,17 +736,20 @@
 <div class="step-card">
 <div class="step-number">1</div>
 <div class="step-title">Select Image</div>
-<p>Upload any image file (JPG, PNG, WebP, GIF, BMP supported).</p>
+<p>Upload any image file (JPG, PNG, WebP, GIF,
+                                BMP supported).</p>
 </div>
 <div class="step-card">
 <div class="step-number">2</div>
 <div class="step-title">Choose Format</div>
-<p>Select your desired output format (WebP, JPG, or PNG).</p>
+<p>Select your desired output format (WebP,
+                                JPG, or PNG).</p>
 </div>
 <div class="step-card">
 <div class="step-number">3</div>
 <div class="step-title">Convert &amp; Save</div>
-<p>Click convert and download your new image instantly.</p>
+<p>Click convert and download your new image
+                                instantly.</p>
 </div>
 </div>
 </div>
@@ -749,13 +757,20 @@
 <div class="seo-section">
 <h3>Understanding Image Formats</h3>
 <div class="seo-content">
-<p>Choosing the right image format is crucial for web performance and quality. Here's a comparison:</p>
+<p>Choosing the right image format is crucial for web
+                            performance and quality. Here's a comparison:</p>
 <ul>
-<li><strong>WebP:</strong> <span>Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.</span></li>
-<li><strong>JPG/JPEG:</strong> <span>Ideal for photographs and complex images with many colors. Uses lossy compression.</span></li>
-<li><strong>PNG:</strong> <span>Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.</span></li>
+<li><strong>WebP:</strong> <span>Modern format by
+                                    Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best
+                                    for web use.</span></li>
+<li><strong>JPG/JPEG:</strong> <span>Ideal for
+                                    photographs and complex images with many colors. Uses lossy compression.</span></li>
+<li><strong>PNG:</strong> <span>Perfect for images
+                                    requiring transparency or sharp edges (logos, graphics). Uses lossless
+                                    compression.</span></li>
 </ul>
-<p>Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device.</p>
+<p>Our converter uses HTML5 Canvas API for instant,
+                            client-side conversion. Your images never leave your device.</p>
 </div>
 </div>
 <!-- FAQ Section -->
@@ -768,7 +783,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.</p>
+<p>WebP offers 25-35% smaller file sizes than JPG/PNG
+                                    with similar quality, making your website load faster.</p>
 </div>
 </div>
 <div class="faq-item">
@@ -777,7 +793,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>You control the quality slider. Higher values preserve more quality but result in larger files.</p>
+<p>You control the quality slider. Higher values
+                                    preserve more quality but result in larger files.</p>
 </div>
 </div>
 <div class="faq-item">
@@ -786,7 +803,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>Currently, animated GIFs will be converted to a static image (first frame).</p>
+<p>Currently, animated GIFs will be converted to a
+                                    static image (first frame).</p>
 </div>
 </div>
 </div>
@@ -796,7 +814,8 @@
 <div class="tool-content" id="tool-qrcode">
 <div class="tool-card">
 <h2>QR Code Generator</h2>
-<p>Generate high-resolution QR codes for URLs, text, or any content instantly.</p>
+<p>Generate high-resolution QR codes for URLs, text, or any content
+                        instantly.</p>
 <div class="form-group">
 <label>Text or URL</label>
 <input id="qr-input" placeholder="https://example.com or any text" type="text"/>
@@ -813,13 +832,15 @@
 <label>QR Color</label>
 <input id="qr-color" type="color" value="#000000"/>
 </div>
-<button class="btn-primary" id="generate-qr-btn">Generate QR Code</button>
+<button class="btn-primary" id="generate-qr-btn">Generate QR
+                        Code</button>
 <div class="result-container" id="qr-result">
 <h3>Your QR Code is Ready!</h3>
 <div class="qr-preview">
 <canvas id="qr-canvas"></canvas>
 </div>
-<button class="btn-primary" id="download-qr">Download PNG</button>
+<button class="btn-primary" id="download-qr">Download
+                            PNG</button>
 </div>
 </div>
 <!-- How To Section -->
@@ -829,17 +850,20 @@
 <div class="step-card">
 <div class="step-number">1</div>
 <div class="step-title">Enter Content</div>
-<p>Type your URL, text, phone number, or any content you want to encode.</p>
+<p>Type your URL, text, phone number, or any
+                                content you want to encode.</p>
 </div>
 <div class="step-card">
 <div class="step-number">2</div>
 <div class="step-title">Customize</div>
-<p>Choose your preferred size and color for the QR code.</p>
+<p>Choose your preferred size and color for the QR
+                                code.</p>
 </div>
 <div class="step-card">
 <div class="step-number">3</div>
 <div class="step-title">Generate &amp; Download</div>
-<p>Click generate and download your high-resolution QR code as PNG.</p>
+<p>Click generate and download your
+                                high-resolution QR code as PNG.</p>
 </div>
 </div>
 </div>
@@ -847,16 +871,21 @@
 <div class="seo-section">
 <h3>QR Code Use Cases</h3>
 <div class="seo-content">
-<p>QR codes have become essential for businesses and individuals. Common use cases include:</p>
+<p>QR codes have become essential for businesses and
+                            individuals. Common use cases include:</p>
 <ul>
-<li>Website URLs - Direct users to your website instantly</li>
-<li>Business cards - Share contact information digitally</li>
-<li>Product packaging - Link to manuals or support pages</li>
+<li>Website URLs - Direct users to your website instantly
+                            </li>
+<li>Business cards - Share contact information digitally
+                            </li>
+<li>Product packaging - Link to manuals or support pages
+                            </li>
 <li>Marketing materials - Track campaign engagement</li>
 <li>Restaurant menus - Contactless menu access</li>
 <li>Event tickets - Fast entry verification</li>
 </ul>
-<p>Our QR generator creates high-resolution codes that scan reliably on any device.</p>
+<p>Our QR generator creates high-resolution codes that scan
+                            reliably on any device.</p>
 </div>
 </div>
 <!-- FAQ Section -->
@@ -869,7 +898,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.</p>
+<p>URLs, plain text, phone numbers, email addresses,
+                                    WiFi credentials, and more.</p>
 </div>
 </div>
 <div class="faq-item">
@@ -878,7 +908,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>256px is good for digital use. Choose 512px or 1024px for print materials.</p>
+<p>256px is good for digital use. Choose 512px or 1024px
+                                    for print materials.</p>
 </div>
 </div>
 <div class="faq-item">
@@ -887,7 +918,8 @@
 <i class="fas fa-chevron-down"></i>
 </div>
 <div class="faq-answer">
-<p>No! QR codes generated here are static and never expire. They contain the data directly.</p>
+<p>No! QR codes generated here are static and never
+                                    expire. They contain the data directly.</p>
 </div>
 </div>
 </div>
@@ -938,7 +970,7 @@
         // FAQ toggle
         function toggleFAQ(element) {
             const item = element.parentElement;
-            
+
             // Simply toggle the clicked item's active state
             // This allows multiple items to be open simultaneously
             item.classList.toggle('active');
