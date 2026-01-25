@@ -1,24 +1,28 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Static Site Generator for i18n (Internationalization)
-======================================================
-هذا السكربت يقوم بتوليد صفحات HTML ثابتة مع الترجمات "محفورة" بداخلها
-بدلاً من الاعتماد على JavaScript للترجمة (Client-side Rendering).
+Static Site Generator for i18n (Internationalization) - v2.0
+=============================================================
+Auto-Discovery Version: Processes ALL HTML files automatically.
 
-هذا أفضل بكثير للـ SEO لأن محركات البحث ترى المحتوى المترجم مباشرة.
+Features:
+- Auto-discovers all .html files in root directory
+- Recursively finds HTML in subdirectories (like tools/)
+- Excludes language folders to prevent reprocessing
+- Generates translated versions with proper canonical URLs
 
-المتطلبات:
+Requirements:
 - pip install beautifulsoup4
 
-الكاتب: Claude AI Assistant
-التاريخ: 2026-01-25
+Author: Claude AI Assistant
+Date: 2026-01-25
 """
 
 import os
 import sys
 import json
 import re
+import glob
 from bs4 import BeautifulSoup
 
 # Fix Windows console encoding for Arabic/Unicode output
@@ -26,46 +30,60 @@ if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
 # ===============================
-# الإعدادات الأساسية (Configuration)
+# Configuration
 # ===============================
 
-# الملف القالب الأساسي
-TEMPLATE_FILE = "index.html"
+# Base directory (where the script is located)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# مجلد ملفات الترجمة
-LOCALES_DIR = "locales"
+# Locales directory containing JSON translation files
+LOCALES_DIR = os.path.join(BASE_DIR, "locales")
 
-# الرابط الأساسي للموقع
+# Base URL of the website
 BASE_URL = "https://savetik-fast.xyz"
 
-# اللغات التي تكتب من اليمين لليسار (RTL)
+# RTL (Right-to-Left) languages
 RTL_LANGUAGES = ['ar', 'he']
+
+# Directories to EXCLUDE from scanning (won't be searched for source HTML)
+# These are the output language folders + other non-source directories
+EXCLUDED_DIRS = {
+    'locales', 'js', 'css', 'images', 'assets', 'node_modules', 
+    '.git', '.github', '__pycache__', 'vendor'
+}
+
+# Files to EXCLUDE from processing
+EXCLUDED_FILES = {'404.html'}
+
+
+def get_language_codes():
+    """
+    Get all language codes from the locales directory.
+    Returns a set of 2-letter language codes.
+    """
+    codes = set()
+    if os.path.exists(LOCALES_DIR):
+        for filename in os.listdir(LOCALES_DIR):
+            if filename.endswith('.json'):
+                codes.add(filename.replace('.json', ''))
+    return codes
+
+
+# Add language folder codes to excluded dirs
+LANGUAGE_CODES = get_language_codes()
+EXCLUDED_DIRS.update(LANGUAGE_CODES)
 
 
 def load_json_file(filepath):
-    """
-    تحميل ملف JSON وإرجاع محتواه كـ dictionary.
-    
-    Args:
-        filepath: مسار ملف JSON
-        
-    Returns:
-        dict: محتوى الملف
-    """
+    """Load JSON file and return as dictionary."""
     with open(filepath, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def get_nested_value(data, key_path):
     """
-    استخراج قيمة متداخلة من dictionary باستخدام مسار مفتاح (مثل "hero.title").
-    
-    Args:
-        data: الـ dictionary الأساسي
-        key_path: مسار المفتاح (مثل "meta.title" أو "features.fast.title")
-        
-    Returns:
-        str أو None: القيمة المطلوبة أو None إذا لم توجد
+    Get nested value from dictionary using dot notation.
+    Example: get_nested_value(data, "hero.title") -> data["hero"]["title"]
     """
     keys = key_path.split(".")
     value = data
@@ -81,172 +99,186 @@ def get_nested_value(data, key_path):
 
 def parse_i18n_attribute(attr_value):
     """
-    تحليل قيمة سمة data-i18n.
+    Parse data-i18n attribute value.
     
-    الصيغ الممكنة:
-    - "hero.title" → استبدال محتوى العنصر
-    - "[placeholder]downloader.placeholder" → استبدال سمة placeholder
-    - "[content]meta.description" → استبدال سمة content
-    
-    Args:
-        attr_value: قيمة سمة data-i18n
-        
-    Returns:
-        tuple: (اسم_السمة أو None, مفتاح_الترجمة)
+    Formats:
+    - "hero.title" -> (None, "hero.title") -> replace element text
+    - "[placeholder]key" -> ("placeholder", "key") -> replace attribute
+    - "[content]meta.description" -> ("content", "meta.description")
     """
-    # التحقق من وجود نمط السمات [attribute]key
     match = re.match(r'\[([^\]]+)\](.+)', attr_value)
     
     if match:
-        attribute_name = match.group(1)
-        translation_key = match.group(2)
-        return (attribute_name, translation_key)
+        return (match.group(1), match.group(2))
     else:
-        # لا توجد سمة محددة، استبدال محتوى العنصر
         return (None, attr_value)
 
 
-def process_html_for_language(html_content, translations, lang_code):
+def discover_html_files():
     """
-    معالجة ملف HTML وتطبيق الترجمات عليه.
+    Auto-discover all HTML files that should be processed.
+    
+    Returns:
+        list of tuples: [(relative_path, absolute_path), ...]
+        Example: [("index.html", "C:/site/index.html"), 
+                  ("about.html", "C:/site/about.html"),
+                  ("tools/index.html", "C:/site/tools/index.html")]
+    """
+    html_files = []
+    
+    for root, dirs, files in os.walk(BASE_DIR):
+        # Calculate relative path from BASE_DIR
+        rel_root = os.path.relpath(root, BASE_DIR)
+        
+        # Skip excluded directories
+        # Modify dirs in-place to prevent os.walk from descending into them
+        dirs[:] = [d for d in dirs if d not in EXCLUDED_DIRS]
+        
+        # Find HTML files in current directory
+        for filename in files:
+            if filename.endswith('.html') and filename not in EXCLUDED_FILES:
+                abs_path = os.path.join(root, filename)
+                
+                # Build relative path
+                if rel_root == '.':
+                    rel_path = filename
+                else:
+                    rel_path = os.path.join(rel_root, filename).replace('\\', '/')
+                
+                html_files.append((rel_path, abs_path))
+    
+    return sorted(html_files)
+
+
+def process_html_for_language(html_content, translations, lang_code, relative_path):
+    """
+    Process HTML content and apply translations.
     
     Args:
-        html_content: محتوى HTML الأصلي
-        translations: dictionary الترجمات
-        lang_code: كود اللغة (مثل 'ar', 'tr')
-        
+        html_content: Original HTML string
+        translations: Dictionary of translations from JSON
+        lang_code: Language code (e.g., 'ar', 'tr')
+        relative_path: Relative path of the file (e.g., 'tools/index.html')
+    
     Returns:
-        str: محتوى HTML المترجم
+        str: Translated HTML content
     """
-    # استخدام html.parser للحفاظ على هيكل HTML
     soup = BeautifulSoup(html_content, 'html.parser')
     
     # ===============================
-    # 1. معالجة جميع العناصر ذات data-i18n
+    # 1. Process all data-i18n elements
     # ===============================
     elements_with_i18n = soup.find_all(attrs={"data-i18n": True})
     
     for element in elements_with_i18n:
         i18n_value = element.get("data-i18n")
-        
         if not i18n_value:
             continue
         
-        # تحليل قيمة data-i18n
         attr_name, key = parse_i18n_attribute(i18n_value)
-        
-        # البحث عن الترجمة
         translation = get_nested_value(translations, key)
         
         if translation:
             if attr_name:
-                # تحديث سمة معينة (مثل placeholder, content)
                 element[attr_name] = translation
             else:
-                # استبدال محتوى العنصر النصي
                 element.string = translation
         
-        # حذف سمة data-i18n (لأننا لم نعد بحاجة إليها)
+        # Remove data-i18n attribute (no longer needed)
         del element["data-i18n"]
     
     # ===============================
-    # 2. حقن الـ SEO - تحديث <html lang>
+    # 2. Update <html lang> attribute
     # ===============================
     html_tag = soup.find("html")
     if html_tag:
         html_tag["lang"] = lang_code
         
-        # إضافة دعم RTL للغات العربية والعبرية
         if lang_code in RTL_LANGUAGES:
             html_tag["dir"] = "rtl"
-        else:
-            # التأكد من إزالة dir إذا لم تكن اللغة RTL
-            if html_tag.get("dir"):
-                del html_tag["dir"]
+        elif html_tag.get("dir"):
+            del html_tag["dir"]
     
     # ===============================
-    # 3. حقن الـ SEO - تحديث <title>
+    # 3. Update <title> tag
     # ===============================
     title_tag = soup.find("title")
     if title_tag:
         meta_title = get_nested_value(translations, "meta.title")
         if meta_title:
             title_tag.string = meta_title
-        # حذف data-i18n من title إذا وجدت (تم حذفها بالفعل في الخطوة 1)
     
     # ===============================
-    # 4. حقن الـ SEO - تحديث <meta description>
+    # 4. Update <meta description>
     # ===============================
     meta_desc = soup.find("meta", attrs={"name": "description"})
     if meta_desc:
         meta_description = get_nested_value(translations, "meta.description")
         if meta_description:
             meta_desc["content"] = meta_description
-        # حذف data-i18n من meta إذا وجدت (تم حذفها بالفعل في الخطوة 1)
     
     # ===============================
-    # 5. حقن الـ SEO - تحديث Canonical URL
+    # 5. Update Canonical URL (with correct path)
     # ===============================
     canonical_link = soup.find("link", attrs={"rel": "canonical"})
     if canonical_link:
-        # تحديث الـ href ليشير للمجلد الفرعي للغة
-        canonical_link["href"] = f"{BASE_URL}/{lang_code}/"
+        # Build correct canonical path
+        # Example: tools/index.html in 'tr' folder -> /tr/tools/
+        if relative_path == "index.html":
+            canonical_path = f"/{lang_code}/"
+        elif relative_path.endswith("/index.html"):
+            # e.g., tools/index.html -> /tr/tools/
+            folder_path = relative_path.replace("/index.html", "").replace("\\", "/")
+            canonical_path = f"/{lang_code}/{folder_path}/"
+        else:
+            # e.g., about.html -> /tr/about.html
+            canonical_path = f"/{lang_code}/{relative_path}"
+        
+        canonical_link["href"] = f"{BASE_URL}{canonical_path}"
     
     # ===============================
-    # 6. تحديث روابط Hreflang (اختياري)
+    # 6. Update Hreflang links (folder-based)
     # ===============================
-    # تحويل الروابط من ?lang=xx إلى /xx/ للمجلدات الفرعية
     hreflang_links = soup.find_all("link", attrs={"rel": "alternate", "hreflang": True})
     for link in hreflang_links:
         hreflang = link.get("hreflang")
-        if hreflang == "x-default":
-            link["href"] = f"{BASE_URL}/"
+        
+        # Build the correct path for each language
+        if relative_path == "index.html":
+            if hreflang == "x-default":
+                link["href"] = f"{BASE_URL}/"
+            else:
+                link["href"] = f"{BASE_URL}/{hreflang}/"
+        elif relative_path.endswith("/index.html"):
+            folder_path = relative_path.replace("/index.html", "").replace("\\", "/")
+            if hreflang == "x-default":
+                link["href"] = f"{BASE_URL}/{folder_path}/"
+            else:
+                link["href"] = f"{BASE_URL}/{hreflang}/{folder_path}/"
         else:
-            link["href"] = f"{BASE_URL}/{hreflang}/"
+            if hreflang == "x-default":
+                link["href"] = f"{BASE_URL}/{relative_path}"
+            else:
+                link["href"] = f"{BASE_URL}/{hreflang}/{relative_path}"
     
     # ===============================
-    # 7. تحديث base href للمسارات النسبية
-    # ===============================
-    base_tag = soup.find("base")
-    if base_tag:
-        # تحديث base href للإشارة للجذر
-        base_tag["href"] = "/"
-    
-    # ===============================
-    # 8. إزالة سكربت تحديد اللغة الديناميكي (اختياري)
-    # ===============================
-    # يمكنك تفعيل هذا إذا أردت إزالة السكربتات غير الضرورية
-    # script_to_remove = soup.find("script", string=re.compile("localStorage.setItem"))
-    # if script_to_remove:
-    #     script_to_remove.decompose()
-    
-    # ===============================
-    # 9. إضافة سكربت لضبط اللغة في localStorage
+    # 7. Add language script to head
     # ===============================
     head = soup.find("head")
     if head:
-        # إنشاء سكربت لضبط اللغة
         lang_script = soup.new_tag("script")
         lang_script.string = f"localStorage.setItem('i18nextLng', '{lang_code}');"
-        
-        # إضافته قبل نهاية head
         head.append(lang_script)
     
-    # إرجاع HTML كنص
     return str(soup)
 
 
 def get_available_languages():
-    """
-    الحصول على قائمة اللغات المتاحة من مجلد locales.
-    
-    Returns:
-        list: قائمة بأكواد اللغات (مثل ['ar', 'en', 'tr'])
-    """
+    """Get list of available languages from locales folder."""
     languages = []
     
     if not os.path.exists(LOCALES_DIR):
-        print(f"⚠️  تحذير: مجلد {LOCALES_DIR} غير موجود!")
+        print(f"⚠️  Warning: Locales directory '{LOCALES_DIR}' not found!")
         return languages
     
     for filename in os.listdir(LOCALES_DIR):
@@ -258,101 +290,121 @@ def get_available_languages():
 
 
 def main():
-    """
-    الدالة الرئيسية لتشغيل Static Site Generator.
-    """
-    print("=" * 60)
-    print("🚀 Static Site Generator for i18n")
-    print("=" * 60)
+    """Main function to run the Static Site Generator."""
+    print("=" * 70)
+    print("🚀 Static Site Generator for i18n - v2.0 (Auto-Discovery)")
+    print("=" * 70)
     
     # ===============================
-    # 1. التحقق من وجود الملفات المطلوبة
+    # 1. Discover all source HTML files
     # ===============================
-    if not os.path.exists(TEMPLATE_FILE):
-        print(f"❌ خطأ: ملف القالب '{TEMPLATE_FILE}' غير موجود!")
+    print("\n📂 Scanning for HTML files...")
+    html_files = discover_html_files()
+    
+    if not html_files:
+        print("❌ No HTML files found to process!")
         return
     
-    if not os.path.exists(LOCALES_DIR):
-        print(f"❌ خطأ: مجلد الترجمات '{LOCALES_DIR}' غير موجود!")
-        return
+    print(f"   Found {len(html_files)} HTML file(s):")
+    for rel_path, _ in html_files:
+        print(f"      • {rel_path}")
     
     # ===============================
-    # 2. قراءة ملف القالب الأساسي
-    # ===============================
-    print(f"\n📖 قراءة ملف القالب: {TEMPLATE_FILE}")
-    with open(TEMPLATE_FILE, "r", encoding="utf-8") as f:
-        template_content = f.read()
-    
-    # ===============================
-    # 3. الحصول على اللغات المتاحة
+    # 2. Get available languages
     # ===============================
     languages = get_available_languages()
     
     if not languages:
-        print("❌ لا توجد ملفات ترجمة في مجلد locales!")
+        print("\n❌ No translation files found in locales folder!")
         return
     
-    print(f"\n🌍 اللغات المكتشفة ({len(languages)}): {', '.join(languages)}")
+    print(f"\n🌍 Languages detected ({len(languages)}): {', '.join(languages)}")
     
     # ===============================
-    # 4. معالجة كل لغة
+    # 3. Process each language
     # ===============================
-    print("\n" + "-" * 60)
-    print("🔄 بدء المعالجة...")
-    print("-" * 60)
+    print("\n" + "-" * 70)
+    print("🔄 Processing...")
+    print("-" * 70)
     
+    total_files = 0
     success_count = 0
     error_count = 0
     
     for lang_code in languages:
         try:
-            # تحميل ملف الترجمة
+            # Load translation file
             json_path = os.path.join(LOCALES_DIR, f"{lang_code}.json")
             translations = load_json_file(json_path)
             
-            # معالجة HTML
-            processed_html = process_html_for_language(
-                template_content, 
-                translations, 
-                lang_code
-            )
+            # Create language folder
+            lang_dir = os.path.join(BASE_DIR, lang_code)
+            os.makedirs(lang_dir, exist_ok=True)
             
-            # إنشاء مجلد اللغة إذا لم يكن موجوداً
-            output_dir = lang_code
-            os.makedirs(output_dir, exist_ok=True)
-            
-            # حفظ الملف
-            output_file = os.path.join(output_dir, "index.html")
-            with open(output_file, "w", encoding="utf-8") as f:
-                f.write(processed_html)
-            
-            # الحصول على معلومات إضافية للعرض
-            title = get_nested_value(translations, "meta.title") or "N/A"
             rtl_indicator = " (RTL)" if lang_code in RTL_LANGUAGES else ""
+            print(f"\n📁 {lang_code}{rtl_indicator}:")
             
-            print(f"  ✅ {lang_code}{rtl_indicator}: {output_file}")
-            success_count += 1
+            # Process each HTML file
+            for rel_path, abs_path in html_files:
+                try:
+                    # Read source file
+                    with open(abs_path, "r", encoding="utf-8") as f:
+                        html_content = f.read()
+                    
+                    # Process HTML
+                    processed_html = process_html_for_language(
+                        html_content, 
+                        translations, 
+                        lang_code,
+                        rel_path
+                    )
+                    
+                    # Create subdirectory if needed (e.g., tools/)
+                    output_rel_dir = os.path.dirname(rel_path)
+                    if output_rel_dir:
+                        output_dir = os.path.join(lang_dir, output_rel_dir)
+                        os.makedirs(output_dir, exist_ok=True)
+                    
+                    # Save translated file
+                    output_path = os.path.join(lang_dir, rel_path.replace('/', os.sep))
+                    with open(output_path, "w", encoding="utf-8") as f:
+                        f.write(processed_html)
+                    
+                    print(f"   ✅ {rel_path}")
+                    success_count += 1
+                    total_files += 1
+                    
+                except Exception as e:
+                    print(f"   ❌ {rel_path}: {e}")
+                    error_count += 1
+                    total_files += 1
             
         except FileNotFoundError:
-            print(f"  ❌ {lang_code}: ملف الترجمة غير موجود!")
+            print(f"\n❌ {lang_code}: Translation file not found!")
             error_count += 1
         except json.JSONDecodeError as e:
-            print(f"  ❌ {lang_code}: خطأ في قراءة JSON - {e}")
+            print(f"\n❌ {lang_code}: JSON parse error - {e}")
             error_count += 1
         except Exception as e:
-            print(f"  ❌ {lang_code}: خطأ غير متوقع - {e}")
+            print(f"\n❌ {lang_code}: Unexpected error - {e}")
             error_count += 1
     
     # ===============================
-    # 5. ملخص النتائج
+    # 4. Summary
     # ===============================
-    print("\n" + "=" * 60)
-    print("📊 ملخص النتائج:")
-    print("=" * 60)
-    print(f"  ✅ نجح: {success_count} لغة")
-    print(f"  ❌ فشل: {error_count} لغة")
-    print(f"  📁 المجلدات المُنشأة: {success_count}")
-    print("\n🎉 اكتمل التوليد بنجاح!" if error_count == 0 else "\n⚠️ اكتمل مع بعض الأخطاء!")
+    print("\n" + "=" * 70)
+    print("📊 Summary:")
+    print("=" * 70)
+    print(f"   📄 Source files:     {len(html_files)}")
+    print(f"   🌍 Languages:        {len(languages)}")
+    print(f"   📁 Total generated:  {success_count}")
+    print(f"   ✅ Successful:       {success_count}")
+    print(f"   ❌ Errors:           {error_count}")
+    
+    if error_count == 0:
+        print("\n🎉 All files generated successfully!")
+    else:
+        print(f"\n⚠️ Completed with {error_count} error(s).")
 
 
 if __name__ == "__main__":
