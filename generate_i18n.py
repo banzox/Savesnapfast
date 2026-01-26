@@ -367,6 +367,32 @@ def main():
             print(f"\n❌ {lang_code}: {e}")
             error_count += 1
     
+    # 3.5. Add pre-generated pages (MP3, Story) to sitemap
+    print("\n🔍 Scanning for pre-generated pages (mp3, story)...")
+    for extra_folder in ['mp3', 'story']:
+        folder_path = os.path.join(BASE_DIR, extra_folder)
+        if os.path.exists(folder_path):
+            count = 0
+            for root, dirs, files in os.walk(folder_path):
+                for file in files:
+                    if file == 'index.html':
+                        # Get relative path
+                        rel_path = os.path.relpath(os.path.join(root, file), BASE_DIR)
+                        # Normalize path for URL
+                        url_path = rel_path.replace('\\', '/')
+                        
+                        # Create full URL
+                        if url_path.endswith('index.html'):
+                            url_path = url_path[:-10] # remove 'index.html'
+                            
+                        full_url = f"{BASE_URL}/{url_path}"
+                        
+                        # Add if not already present (avoid duplicates)
+                        if full_url not in all_urls:
+                            all_urls.append(full_url)
+                            count += 1
+            print(f"   ➕ Added {count} URLs from {extra_folder}/")
+
     # 4. Generate Sitemap
     print("\n" + "-" * 70)
     print("🗺️  Generating sitemap.xml...")
