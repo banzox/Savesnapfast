@@ -152,14 +152,21 @@ function renderResult(data) {
 
     // Generate viral filenames
     const videoFileName = generateViralFileName(authorName, 'mp4');
+    const hdVideoFileName = generateViralFileName(authorName + '_HD', 'mp4');
     const audioFileName = generateViralFileName(authorName, 'mp3');
 
     // Get video URLs (handle different API response formats)
-    const videoUrl = data.video?.noWatermark
+    // Standard quality video URL
+    const videoUrl = data.play
         || data.video?.playAddr
-        || data.hdplay
-        || data.play
         || data.wmplay
+        || '';
+
+    // HD quality video URL (highest quality available)
+    const hdVideoUrl = data.hdplay
+        || data.video?.noWatermark
+        || data.video?.playAddr
+        || videoUrl
         || '';
 
     const audioUrl = data.music?.playUrl
@@ -179,20 +186,7 @@ function renderResult(data) {
         || data.video?.desc
         || '';
 
-    // Translated button texts
-    const downloadVideoText = typeof i18next !== 'undefined'
-        ? i18next.t('downloader.download_video')
-        : 'Download Video';
-
-    const downloadAudioText = typeof i18next !== 'undefined'
-        ? i18next.t('downloader.download_audio')
-        : 'Download MP3';
-
-    const hdQualityText = typeof i18next !== 'undefined'
-        ? i18next.t('downloader.hd_quality')
-        : 'No Watermark';
-
-    // Build result HTML
+    // Build result HTML with two download buttons
     resultArea.innerHTML = `
         <div class="result-card">
             ${thumbnail ? `
@@ -218,8 +212,20 @@ function renderResult(data) {
                             data-url="${videoUrl}"
                             data-name="${videoFileName}"
                         >
-                            <i class="fas fa-video"></i> ${downloadVideoText}
-                            <span class="badge">${hdQualityText}</span>
+                            <i class="fas fa-download"></i> Download
+                            <span class="badge">No Watermark</span>
+                        </button>
+                    ` : ''}
+                    
+                    ${hdVideoUrl ? `
+                        <button 
+                            class="btn-download btn-hd" 
+                            onclick="downloadFile('${hdVideoUrl}', '${hdVideoFileName}')"
+                            data-url="${hdVideoUrl}"
+                            data-name="${hdVideoFileName}"
+                        >
+                            <i class="fas fa-film"></i> Download HD
+                            <span class="badge badge-hd">1080p</span>
                         </button>
                     ` : ''}
                     
@@ -230,7 +236,7 @@ function renderResult(data) {
                             data-url="${audioUrl}"
                             data-name="${audioFileName}"
                         >
-                            <i class="fas fa-music"></i> ${downloadAudioText}
+                            <i class="fas fa-music"></i> Download MP3
                         </button>
                     ` : ''}
                 </div>
