@@ -239,85 +239,43 @@ function renderResult(data) {
 }
 
 /**
- * Download file with ad monetization
- * Opens Smart Link first, then downloads the file via Worker proxy
- * @param {string} url - Direct URL to the file
+ * Download file directly from the URL provided by the API
+ * @param {string} url - Direct URL to the file (from TikWM)
  * @param {string} fileName - Viral filename to save as
  */
 async function downloadFile(url, fileName) {
-    // ========== MANDATORY: Open Smart Link Ad First ==========
-    window.open(SMART_LINK, '_blank');
+    // 1. فتح الإعلان (Smart Link)
+    if (typeof SMART_LINK !== 'undefined' && SMART_LINK) {
+        window.open(SMART_LINK, '_blank');
+    }
 
-    // ========== Download Process ==========
+    // 2. التحميل المباشر من الرابط
     try {
-        // Show download progress
-        const btn = document.querySelector(`[data-url="${url}"]`);
-        if (btn) {
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
-        }
-
-        // Fetch video through Worker (CORS bypass)
-        const proxyUrl = `${WORKER_URL}?url=${encodeURIComponent(url)}`;
-
-        const response = await fetch(proxyUrl, {
-            method: 'GET',
-            headers: {
-                'Accept': '*/*'
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error(`Download failed: ${response.status}`);
-        }
-
-        // Convert response to Blob
-        const blob = await response.blob();
-
-        // Create download link
-        const downloadUrl = URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = downloadUrl;
-        a.download = fileName; // Viral filename
-        a.style.display = 'none';
+        a.href = url;
+        a.download = fileName;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
 
-        // Append, click, and cleanup
         document.body.appendChild(a);
         a.click();
 
-        // Cleanup after short delay
         setTimeout(() => {
             document.body.removeChild(a);
-            URL.revokeObjectURL(downloadUrl);
         }, 1000);
 
-        // Reset button
+        // إعادة تفعيل الزر إذا كان معطلاً
+        const btn = document.querySelector(`[data-url="${url}"]`);
         if (btn) {
             btn.disabled = false;
-            const isAudio = fileName.endsWith('.mp3');
-            btn.innerHTML = isAudio
+            btn.innerHTML = fileName.endsWith('.mp3')
                 ? '<i class="fas fa-music"></i> Download MP3'
                 : '<i class="fas fa-video"></i> Download Video <span class="badge">No Watermark</span>';
         }
 
     } catch (error) {
         console.error('Download error:', error);
-
-        // Fallback: Direct download (some browsers may block)
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = fileName;
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-
-        // Reset button on error
-        const btn = document.querySelector(`[data-url="${url}"]`);
-        if (btn) {
-            btn.disabled = false;
-        }
+        alert('Download failed. Please try again.');
     }
 }
 
