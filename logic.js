@@ -172,60 +172,115 @@ function renderResult(data) {
     // Check if this is a photo slideshow
     const images = data.images || [];
 
-    // Build result HTML with two download buttons
+    // Context Detection
+    const currentPath = window.location.pathname;
+    const isMp3Page = currentPath.includes('/mp3/');
+    const isStoryPage = currentPath.includes('/story/');
+
+    // Build Slideshow HTML
+    let contentHtml = '';
+    if (images.length > 0) {
+        contentHtml += '<div class="slideshow-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 15px;">';
+        images.forEach((img, index) => {
+            const fileName = generateViralFileName(`${authorName}_slide_${index + 1}`, 'jpg');
+            contentHtml += `
+                <div class="slide-item" style="position: relative;">
+                    <img src="${img}" style="width: 100%; border-radius: 8px; aspect-ratio: 9/16; object-fit: cover;" loading="lazy">
+                    <button class="btn-download btn-sm" 
+                            style="font-size: 0.8rem; padding: 5px; margin-top: 5px; width: 100%;"
+                            onclick="downloadFile('${img}', '${fileName}')">
+                        <i class="fas fa-download"></i> Save
+                    </button>
+                </div>`;
+        });
+        contentHtml += '</div>';
+
+        // If it's a slideshow, we might also have audio
+        if (audioUrl) {
+            contentHtml += `
+                <div style="margin-top: 15px;">
+                     <button class="btn-download btn-audio" onclick="downloadFile('${audioUrl}', '${audioFileName}')">
+                        <i class="fas fa-music"></i> Download Slideshow Music
+                    </button>
+                </div>
+            `;
+        }
+    }
+
+    // Build Buttons HTML based on Context
+    let buttonsHtml = '';
+
+    if (images.length === 0) {
+        // Video Content
+        if (isMp3Page) {
+            // MP3 Page: Show MP3 Button ONLY
+            if (audioUrl) {
+                buttonsHtml += `
+                    <button class="btn-download btn-audio" onclick="downloadFile('${audioUrl}', '${audioFileName}')">
+                        <i class="fas fa-music"></i> Download MP3 Audio
+                    </button>
+                `;
+            } else {
+                buttonsHtml += `<p class="error-text">No audio found for this video.</p>`;
+            }
+        } else if (isStoryPage) {
+            // Story Page: Show Video Button (optimized for story)
+            if (videoUrl) {
+                buttonsHtml += `
+                     <button class="btn-download btn-video" onclick="downloadFile('${videoUrl}', '${videoFileName}')">
+                        <i class="fas fa-images"></i> Download Story Video
+                    </button>
+                `;
+            }
+        } else {
+            // Home Page (Default): Show All Options
+            if (videoUrl) {
+                buttonsHtml += `
+                    <button class="btn-download btn-video" onclick="downloadFile('${videoUrl}', '${videoFileName}')">
+                        <i class="fas fa-download"></i> Download
+                        <span class="badge">No Watermark</span>
+                    </button>
+                `;
+            }
+            if (hdVideoUrl && hdVideoUrl !== videoUrl) {
+                buttonsHtml += `
+                    <button class="btn-download btn-hd" onclick="downloadFile('${hdVideoUrl}', '${hdVideoFileName}')">
+                        <i class="fas fa-film"></i> Download HD
+                        <span class="badge badge-hd">1080p</span>
+                    </button>
+                `;
+            }
+            if (audioUrl) {
+                buttonsHtml += `
+                    <button class="btn-download btn-audio" onclick="downloadFile('${audioUrl}', '${audioFileName}')">
+                        <i class="fas fa-music"></i> Download MP3
+                    </button>
+                `;
+            }
+        }
+    }
+
+    // Build result HTML
     resultArea.innerHTML = `
         <div class="result-card">
-            ${thumbnail ? `
+            ${thumbnail && images.length === 0 ? `
                 <div class="result-thumbnail">
-                    <img src="${thumbnail}" alt="TikTok Video Thumbnail" loading="lazy">
-                    <div class="play-overlay">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
+                    <img src="${thumbnail}" alt="TikTok Thumbnail" loading="lazy">
+                    <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
                 </div>
             ` : ''}
             
-            <div class="result-info">
+            <div class="result-info" style="width: 100%;">
                 <h3 class="result-author">
                     <i class="fab fa-tiktok"></i> @${sanitizeFileName(authorName)}
                 </h3>
                 ${description ? `<p class="result-desc">${description.substring(0, 100)}${description.length > 100 ? '...' : ''}</p>` : ''}
                 
                 <div class="result-buttons">
-                    ${videoUrl ? `
-                        <button 
-                            class="btn-download btn-video" 
-                            onclick="downloadFile('${videoUrl}', '${videoFileName}')"
-                            data-url="${videoUrl}"
-                            data-name="${videoFileName}"
-                        >
-                            <i class="fas fa-download"></i> Download
-                            <span class="badge">No Watermark</span>
-                        </button>
-                    ` : ''}
-                    
-                    ${hdVideoUrl ? `
-                        <button 
-                            class="btn-download btn-hd" 
-                            onclick="downloadFile('${hdVideoUrl}', '${hdVideoFileName}')"
-                            data-url="${hdVideoUrl}"
-                            data-name="${hdVideoFileName}"
-                        >
-                            <i class="fas fa-film"></i> Download HD
-                            <span class="badge badge-hd">1080p</span>
-                        </button>
-                    ` : ''}
-                    
-                    ${audioUrl ? `
-                        <button 
-                            class="btn-download btn-audio" 
-                            onclick="downloadFile('${audioUrl}', '${audioFileName}')"
-                            data-url="${audioUrl}"
-                            data-name="${audioFileName}"
-                        >
-                            <i class="fas fa-music"></i> Download MP3
-                        </button>
-                    ` : ''}
+                    ${buttonsHtml}
                 </div>
+                
+                ${contentHtml} <!-- Slideshow loop -->
             </div>
         </div>
     `;
