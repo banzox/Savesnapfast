@@ -122,9 +122,9 @@ function generateHTML(lang, langData) {
     <header id="main-header"></header>
     
     <nav class="nav-menu" aria-label="Download Types">
-        <a href="/${lang}/" title="Video"><i class="fas fa-video"></i> Video</a>
-        <a href="/mp3/${lang}/" class="active" title="MP3"><i class="fas fa-music"></i> MP3</a>
-        <a href="/${lang}/story.html" title="Stories"><i class="fas fa-images"></i> Stories</a>
+        <a href="/${lang}/" title="Video" data-i18n="nav_menu.video"><i class="fas fa-video"></i> Video</a>
+        <a href="/mp3/${lang}/" class="active" title="MP3" data-i18n="nav_menu.mp3"><i class="fas fa-music"></i> MP3</a>
+        <a href="/story/${lang}/" title="Stories" data-i18n="nav_menu.stories"><i class="fas fa-images"></i> Stories</a>
     </nav>
 
     <main id="main-content">
