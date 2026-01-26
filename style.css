@@ -317,6 +317,54 @@ body {
     left: 100%;
 }
 
+/* --- Premium Download Buttons (Result Area) --- */
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+/* Video Button (TikTok Colors) */
+.btn-video {
+    background: linear-gradient(135deg, #00f2ea 0%, #ff0050 100%);
+    box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+}
+
+.btn-video:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 0, 80, 0.5);
+}
+
+/* Audio Button (Music Colors) */
+.btn-audio {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+}
+
+.btn-audio:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
+}
+
+.btn-download i {
+    font-size: 1.2rem;
+}
+
 /* 4. الأسئلة الشائعة (Accordion) - إصلاح الفتح والغلق */
 .container {
     max-width: 950px;

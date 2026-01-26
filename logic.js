@@ -280,20 +280,19 @@ function renderResult(data) {
                     ${buttonsHtml}
                 </div>
                 
-                <!-- Excellent Ad Strategy: High Visibility Result Ad -->
-                <div class="result-ad-container" style="margin-top: 20px; text-align: center; min-height: 250px; background: rgba(0,0,0,0.05); border-radius: 8px; padding: 10px;">
-                     <p style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 5px;">Advertisement</p>
-                     <!-- Ad Code Placeholder -->
+                <!-- Ad Strategy: Result Ad -->
+                <div class="result-ad-container">
+                     <!-- Ad Code -->
                      <script type="text/javascript">
                         atOptions = {
-                            'key' : 'd767025cc7e5239dd2334794b7167308', // Using Smart Link Key or similar as placeholder
+                            'key' : 'd767025cc7e5239dd2334794b7167308',
                             'format' : 'iframe',
                             'height' : 250,
                             'width' : 300,
                             'params' : {}
                         };
                      </script>
-                     <!-- Social Bar / Native Ad Script can go here -->
+                     <!-- Social Bar / Native Ad Script fallback -->
                      <div id="result-native-ad"></div>
                 </div>
                 
