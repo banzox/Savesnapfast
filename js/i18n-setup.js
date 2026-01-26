@@ -34,38 +34,54 @@ function getCurrentLanguageFromPath() {
 
 /**
  * Get the current page path without the language prefix
- * Example: /ar/about.html -> /about.html
- * Example: /about.html -> /about.html
- * Example: /tr/ -> /
+ * Supports standard /ar/ and deep /mp3/ar/ paths
  */
 function getPagePathWithoutLang() {
     const path = window.location.pathname;
-    const match = path.match(/^\/([a-z]{2})(\/.*)?$/);
 
+    // Check for /mp3/xx/ or /story/xx/ (Deep Structure)
+    const deepMatch = path.match(/^\/(mp3|story)\/([a-z]{2})(\/.*)?$/);
+    if (deepMatch && supportedLanguages.includes(deepMatch[2])) {
+        // Return /mp3/ + suffix
+        return '/' + deepMatch[1] + (deepMatch[3] || '/');
+    }
+
+    // Standard detection /ar/...
+    const match = path.match(/^\/([a-z]{2})(\/.*)?$/);
     if (match && supportedLanguages.includes(match[1])) {
-        // Return the path after language code, or '/' if none
         return match[2] || '/';
     }
-    return path; // No language prefix, return as is
+    return path;
 }
 
 /**
- * Build URL for a specific language (folder-based)
- * @param {string} targetLang - Target language code
- * @param {string} pagePath - Page path (e.g., '/about.html' or '/')
- * @returns {string} Full URL path
+ * Build URL for a specific language
+ * Handles both Root structure (en=root) and Deep structure (mp3/en exists)
  */
 function buildLanguageUrl(targetLang, pagePath = null) {
-    const currentPagePath = pagePath || getPagePathWithoutLang();
+    let currentPagePath = pagePath || getPagePathWithoutLang();
 
+    // Clean path formatting
+    if (!currentPagePath.startsWith('/')) currentPagePath = '/' + currentPagePath;
+
+    // Special handling for MP3/Story paths (Always use /{type}/{lang}/)
+    const deepMatch = currentPagePath.match(/^\/(mp3|story)(\/|$)/);
+    if (deepMatch) {
+        const type = deepMatch[1];
+        // Remove /mp3/ or /story/ from start to get the suffix
+        const suffix = currentPagePath.replace(/^\/(mp3|story)/, '');
+        // Construct: /mp3/ar/suffix
+        return `/${type}/${targetLang}${suffix || '/'}`;
+    }
+
+    // Standard Structure (Root)
     if (targetLang === 'en') {
         // English is at root
-        return currentPagePath;
+        return currentPagePath; // e.g., /about.html
     }
+
     // Other languages are in subfolders
-    // Ensure path starts with /
-    const cleanPath = currentPagePath.startsWith('/') ? currentPagePath : '/' + currentPagePath;
-    return '/' + targetLang + cleanPath;
+    return '/' + targetLang + currentPagePath;
 }
 
 /**
@@ -84,15 +100,16 @@ function applyDirection(lng) {
     }));
 }
 
-// Global function for "Back" button navigation with language preservation
+// Global function for "Back" button navigation
 window.navigateWithLang = function (basePath) {
     const currentLng = getCurrentLanguageFromPath();
+    // Use i18next logic for correct routing
     window.location.href = buildLanguageUrl(currentLng, basePath);
 };
 
-// Helper function to preserve language in URLs (folder-based)
+// Helper function to preserve language in URLs
 function getLocalizedUrl(path) {
-    const currentLng = getCurrentLanguageFromPath();
+    const currentLng = i18next.language || getCurrentLanguageFromPath();
     return buildLanguageUrl(currentLng, path);
 }
 
