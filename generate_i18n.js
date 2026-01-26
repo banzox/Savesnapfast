@@ -57,13 +57,45 @@ function scanFiles(dir, fileList = []) {
 function processHtml(html, translations, langCode, filename) {
     const $ = cheerio.load(html);
 
+    // Calculate Relative Prefix
+    let depth = 0;
+    if (filename !== 'index.html') {
+        const parts = filename.split('/');
+        depth = parts.length - 1; // index.html is root (0)
+        if (filename.endsWith('/index.html')) {
+            // e.g. tools/index.html -> depth 1
+            // parts = ['tools', 'index.html'] -> length 2 -> depth 1. Correct.
+        } else {
+            // e.g. about.html -> length 1 -> depth 0. Correct.
+            // Wait. parts=['about.html']. length=1. depth=0. Correct.
+            // about.html is in root.
+        }
+    }
+    // If we are outputting to /ar/about.html (Source: about.html)
+    // The output file is at depth 1 (ar).
+    // The SOURCE file depth calculation above is for source structure.
+    // BUT the output structure puts EVERYTHING inside /langCode/ folder.
+    // So /langCode/about.html -> depth 1. prefix = '../'
+
+    // Logic:
+    // Source: index.html -> Out: /ar/index.html. Depth 1. Prefix '../'
+    // Source: tools/index.html -> Out: /ar/tools/index.html. Depth 2. Prefix '../../'
+
+    // We need to calculate depth of OUTPUT file relative to Root.
+    // Output path is langCode/filename.
+    // e.g. ar/index.html
+    const outputPath = `${langCode}/${filename}`;
+    const outputParts = outputPath.split('/');
+    const outputDepth = outputParts.length - 1;
+
+    const relPrefix = '../'.repeat(outputDepth);
+
     // A. Update Text (data-i18n)
     $('[data-i18n]').each((i, el) => {
         const attrRaw = $(el).attr('data-i18n');
         let targetAttr = null;
         let key = attrRaw;
 
-        // Handle [attr]key syntax
         const match = attrRaw.match(/^\[([^\]]+)\](.+)$/);
         if (match) {
             targetAttr = match[1];
@@ -76,8 +108,6 @@ function processHtml(html, translations, langCode, filename) {
                 $(el).attr(targetAttr, val);
             } else {
                 $(el).text(val);
-                // If text is HTML safe? Cheerio escapes by default.
-                // If bold needed, use .html() - typically text is safer.
             }
         }
         $(el).removeAttr('data-i18n');
@@ -88,86 +118,83 @@ function processHtml(html, translations, langCode, filename) {
     const dir = RTL_LANGUAGES.includes(langCode) ? 'rtl' : 'ltr';
     $('html').attr('dir', dir);
 
-    // C. Update Title
+    // C. Update Meta
     const metaTitle = getNestedValue(translations, 'meta.title');
     if (metaTitle) $('title').text(metaTitle);
 
-    // D. Update Description
     const metaDesc = getNestedValue(translations, 'meta.description');
     if (metaDesc) $('meta[name="description"]').attr('content', metaDesc);
 
-    // E. Canonical URL
-    let canonicalPath;
-    if (filename === 'index.html') {
-        canonicalPath = `/${langCode}/`;
-    } else if (filename.endsWith('/index.html')) {
-        const folder = filename.replace('/index.html', '');
-        canonicalPath = `/${langCode}/${folder}/`;
-    } else {
-        canonicalPath = `/${langCode}/${filename}`;
-    }
-    const fullCanonical = `${BASE_URL}${canonicalPath}`;
+    // D. Canonical and Hreflang (ABSOLUTE URLS for SEO)
+    let canonicalSuffix;
+    if (filename === 'index.html') canonicalSuffix = '';
+    else if (filename.endsWith('/index.html')) canonicalSuffix = filename.replace('/index.html', '') + '/';
+    else canonicalSuffix = filename;
 
-    // Remove existing canonical
+    const fullCanonical = `${BASE_URL}/${langCode}/${canonicalSuffix}`;
     $('link[rel="canonical"]').remove();
-    // Add new
     $('head').append(`<link rel="canonical" href="${fullCanonical}">\n    `);
 
-    // F. Inject Hreflang (Dynamic)
-    $('link[rel="alternate"][hreflang]').remove(); // Cleanup
-
-    // Prepare Hreflang Tags
-    let suffix = '';
-    if (filename === 'index.html') suffix = '';
-    else if (filename.endsWith('/index.html')) suffix = filename.replace('/index.html', '') + '/';
-    else suffix = filename;
-
-    // x-default
-    $('head').append(`<link rel="alternate" hreflang="x-default" href="${BASE_URL}/${suffix}">\n    `);
-
-    // All languages
+    // Hreflang
+    $('link[rel="alternate"][hreflang]').remove();
+    $('head').append(`<link rel="alternate" hreflang="x-default" href="${BASE_URL}/${canonicalSuffix}">\n    `);
     LANGUAGE_CODES.sort().forEach(code => {
-        $('head').append(`<link rel="alternate" hreflang="${code}" href="${BASE_URL}/${code}/${suffix}">\n    `);
+        $('head').append(`<link rel="alternate" hreflang="${code}" href="${BASE_URL}/${code}/${canonicalSuffix}">\n    `);
     });
 
-    // G. Inject Manifest
-    // Remove if exists
-    $('link[rel="manifest"]').remove();
-    $('head').append(`<link rel="manifest" href="/manifest.json">\n    `);
+    // E. Relative Assets Injection
+    // Fix existing /style.css -> ../style.css
+    $('link[rel="stylesheet"]').each((i, el) => {
+        const href = $(el).attr('href');
+        if (href && href.startsWith('/')) {
+            $(el).attr('href', href.replace(/^\//, relPrefix));
+        }
+    });
 
-    // H. Inject Locale Script
+    $('script[src]').each((i, el) => {
+        const src = $(el).attr('src');
+        if (src && src.startsWith('/')) {
+            $(el).attr('src', src.replace(/^\//, relPrefix));
+        }
+    });
+
+    $('link[rel="icon"]').each((i, el) => {
+        const href = $(el).attr('href');
+        if (href && href.startsWith('/')) {
+            $(el).attr('href', href.replace(/^\//, relPrefix));
+        }
+    });
+
+    // Manifest
+    $('link[rel="manifest"]').remove();
+    $('head').append(`<link rel="manifest" href="${relPrefix}manifest.json">\n    `);
+
+    // Locale Script
     $('head').append(`<script>localStorage.setItem('i18nextLng', '${langCode}');</script>\n    `);
 
     return $.html();
 }
 
-// 4. Generate Sitemap
+// 4. Generate Sitemap (remains mostly same)
 function generateSitemap(urls) {
     const header = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
     const footer = `\n</urlset>`;
-
     const body = urls.map(url => {
         let priority = '0.8';
         if (url === `${BASE_URL}/` || url.endsWith('/')) priority = '1.0';
         else if (url.includes('/tools/')) priority = '0.9';
-
         return `\n  <url>\n    <loc>${url}</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     }).join('');
-
     return header + body + footer;
 }
 
-// ==================== MAIN EXECUTION ====================
-
+// Main
 async function main() {
-    console.log('🔄 Starting Node.js Generator...');
-
+    console.log('🔄 Starting Node.js Generator (Relative Paths)...');
     const sourceFiles = scanFiles(__dirname);
-    console.log(`Found ${sourceFiles.length} source HTML files.`);
-
     const allUrls = [];
 
-    // Add Root URLs (English)
+    // Add Root URLs
     sourceFiles.forEach(file => {
         let url;
         if (file.relPath === 'index.html') url = `${BASE_URL}/`;
@@ -178,12 +205,9 @@ async function main() {
 
     // Process Languages
     LANGUAGE_CODES.forEach(langCode => {
-        console.log(`\n📁 Processing ${langCode}...`);
+        process.stdout.write(`Processing ${langCode}... `);
         const translations = loadJson(path.join(LOCALES_DIR, `${langCode}.json`));
-        if (!translations) {
-            console.error(`Missing translations for ${langCode}`);
-            return;
-        }
+        if (!translations) return;
 
         const langDir = path.join(__dirname, langCode);
         if (!fs.existsSync(langDir)) fs.mkdirSync(langDir, { recursive: true });
@@ -192,27 +216,21 @@ async function main() {
             const html = fs.readFileSync(file.absPath, 'utf8');
             const processed = processHtml(html, translations, langCode, file.relPath);
 
-            // Output path
-            const outFileRel = file.relPath;
-            const outFileAbs = path.join(langDir, outFileRel);
-
-            // Ensure dir exists
+            const outFileAbs = path.join(langDir, file.relPath);
             const outDir = path.dirname(outFileAbs);
             if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-
             fs.writeFileSync(outFileAbs, processed, 'utf8');
 
-            // Add to Sitemap
             let sitemapUrl;
-            if (outFileRel === 'index.html') sitemapUrl = `${BASE_URL}/${langCode}/`;
-            else if (outFileRel.endsWith('/index.html')) sitemapUrl = `${BASE_URL}/${langCode}/${path.dirname(outFileRel)}/`;
-            else sitemapUrl = `${BASE_URL}/${langCode}/${outFileRel}`;
+            if (file.relPath === 'index.html') sitemapUrl = `${BASE_URL}/${langCode}/`;
+            else if (file.relPath.endsWith('/index.html')) sitemapUrl = `${BASE_URL}/${langCode}/${path.dirname(file.relPath)}/`;
+            else sitemapUrl = `${BASE_URL}/${langCode}/${file.relPath}`;
             allUrls.push(sitemapUrl);
         });
     });
 
-    // scan MP3/Story for Sitemap inclusion (Pre-generated)
-    console.log('\n🔍 Scanning for pre-generated pages (mp3, story)...');
+    // Scan MP3/Story
+    console.log('\nScanning MP3/Story...');
     ['mp3', 'story'].forEach(dir => {
         const fullDir = path.join(__dirname, dir);
         if (fs.existsSync(fullDir)) {
@@ -220,12 +238,9 @@ async function main() {
                 const listing = fs.readdirSync(d);
                 listing.forEach(f => {
                     const fp = path.join(d, f);
-                    if (fs.statSync(fp).isDirectory()) {
-                        scan(fp);
-                    } else if (f === 'index.html') {
-                        // Correct path calculation
+                    if (fs.statSync(fp).isDirectory()) scan(fp);
+                    else if (f === 'index.html') {
                         const relative = path.relative(__dirname, fp).replace(/\\/g, '/');
-                        // remove index.html
                         const urlSuffix = relative.replace('index.html', '');
                         const url = `${BASE_URL}/${urlSuffix}`;
                         if (!allUrls.includes(url)) allUrls.push(url);
@@ -236,11 +251,8 @@ async function main() {
         }
     });
 
-    // Write Sitemap
-    console.log(`\n🗺️ Generating sitemap.xml with ${allUrls.length} URLs...`);
     fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), generateSitemap(allUrls.sort()), 'utf8');
-
     console.log('✅ Done!');
 }
 
-main().catch(err => console.error(err));
+main();
