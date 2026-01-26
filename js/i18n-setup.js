@@ -196,7 +196,22 @@ function updateContent() {
         }
     });
 
-    document.title = i18next.t('meta.title');
+    // Smart Title Update based on Page Context
+    const currentPath = window.location.pathname;
+    if (currentPath.includes('/mp3/')) {
+        const mp3Title = i18next.t('mp3_page.meta_title');
+        if (mp3Title && mp3Title !== 'mp3_page.meta_title') {
+            document.title = mp3Title;
+        }
+    } else if (currentPath.includes('/story/')) {
+        const storyTitle = i18next.t('story_page.meta_title');
+        if (storyTitle && storyTitle !== 'story_page.meta_title') {
+            document.title = storyTitle;
+        }
+    } else {
+        // Default / Home / Generic Pages
+        document.title = i18next.t('meta.title');
+    }
 }
 
 function renderHomeFAQ() {
