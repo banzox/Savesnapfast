@@ -12,12 +12,13 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
 
-    <!-- ==================== SEO META TAGS - MP3 FOCUS ==================== -->
-    <title>TikTok to MP3 Converter - Download TikTok Audio High Quality 320kbps | SaveTikFast</title>
-    <meta name="description"
-        content="Convert TikTok videos to MP3 audio files. Extract songs, sounds & music from TikTok in high quality 320kbps. Free TikTok to MP3 converter online. No app needed.">
+    <!-- SEO Meta Tags - MP3 Focus (Updated by i18n) -->
+    <title data-i18n="mp3_page.meta_title">TikTok to MP3 Converter - Download Audio High Quality 320kbps | SaveTikFast
+    </title>
+    <meta name="description" data-i18n="[content]mp3_page.meta_desc"
+        content="Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online.">
     <meta name="keywords"
-        content="tiktok to mp3, tiktok mp3 download, tiktok audio download, convert tiktok to mp3, tiktok music downloader, tiktok sound download, extract tiktok audio, tiktok song download, tiktok mp3 converter">
+        content="tiktok to mp3, tiktok mp3 download, tiktok audio download, convert tiktok to mp3, tiktok music downloader, tiktok sound download, extract tiktok audio, tiktok song download">
     <meta name="author" content="SaveTikFast">
 
     <!-- Open Graph / Facebook -->
@@ -28,17 +29,28 @@
         content="Free TikTok to MP3 converter. Download trending songs and sounds in 320kbps quality.">
     <meta property="og:image" content="https://savetik-fast.xyz/og-image.png">
     <meta property="og:site_name" content="SaveTikFast">
-    <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://savetik-fast.xyz/mp3.html">
     <meta name="twitter:title" content="TikTok MP3 Downloader - Extract Audio">
     <meta name="twitter:description" content="Convert TikTok videos to MP3. Download songs and sounds in high quality.">
-    <meta name="twitter:image" content="https://savetik-fast.xyz/og-image.png">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://savetik-fast.xyz/mp3.html">
+
+    <!-- Hreflang Tags for MP3 Page -->
+    <link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/mp3.html">
+    <link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/mp3.html">
+    <link rel="alternate" hreflang="ar" href="https://savetik-fast.xyz/ar/mp3.html">
+    <link rel="alternate" hreflang="es" href="https://savetik-fast.xyz/es/mp3.html">
+    <link rel="alternate" hreflang="fr" href="https://savetik-fast.xyz/fr/mp3.html">
+    <link rel="alternate" hreflang="de" href="https://savetik-fast.xyz/de/mp3.html">
+    <link rel="alternate" hreflang="ru" href="https://savetik-fast.xyz/ru/mp3.html">
+    <link rel="alternate" hreflang="zh" href="https://savetik-fast.xyz/zh/mp3.html">
+    <link rel="alternate" hreflang="pt" href="https://savetik-fast.xyz/pt/mp3.html">
+    <link rel="alternate" hreflang="ja" href="https://savetik-fast.xyz/ja/mp3.html">
+    <link rel="alternate" hreflang="ko" href="https://savetik-fast.xyz/ko/mp3.html">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,32 +86,6 @@
     }
     </script>
 
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I convert TikTok videos to MP3?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Copy the TikTok video URL, paste it into SaveTikFast MP3 Converter, and click Extract MP3. The audio will be downloaded in high quality MP3 format."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What is the audio quality of TikTok MP3 downloads?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We extract audio at the highest available quality, typically 128kbps to 320kbps depending on the original TikTok video."
-                }
-            }
-        ]
-    }
-    </script>
-
     <!-- i18next Libraries -->
     <script src="/js/vendor/i18next.min.js"></script>
     <script src="/js/vendor/i18nextHttpBackend.min.js"></script>
@@ -116,15 +102,15 @@
     <nav class="nav-menu" aria-label="Download Types">
         <a href="/" title="Download TikTok Videos">
             <i class="fas fa-video"></i>
-            <span>Video</span>
+            <span data-i18n="nav_menu.video">Video</span>
         </a>
         <a href="/mp3.html" class="active" title="Download TikTok Audio MP3">
             <i class="fas fa-music"></i>
-            <span>MP3 Audio</span>
+            <span data-i18n="nav_menu.mp3">MP3 Audio</span>
         </a>
         <a href="/story.html" title="Download TikTok Stories">
             <i class="fas fa-images"></i>
-            <span>Stories</span>
+            <span data-i18n="nav_menu.stories">Stories</span>
         </a>
     </nav>
 
@@ -133,21 +119,25 @@
 
         <!-- Hero Section with Downloader -->
         <article class="hero-section">
-            <h1><i class="fas fa-music" style="color: var(--secondary);"></i> Download TikTok MP3 <span
-                    style="color: var(--secondary);">(Audio Only)</span></h1>
-            <p>Convert TikTok videos to MP3 audio files. Extract songs, trending sounds & music in high quality 320kbps.
-                Free & unlimited.</p>
+            <h1>
+                <i class="fas fa-music" style="color: var(--secondary);"></i>
+                <span data-i18n="mp3_page.title">Download TikTok MP3</span>
+                <span style="color: var(--secondary);" data-i18n="mp3_page.subtitle">(Audio Only)</span>
+            </h1>
+            <p data-i18n="mp3_page.desc">Convert TikTok videos to MP3 audio files. Extract songs, trending sounds &
+                music in high quality 320kbps. Free & unlimited.</p>
 
             <!-- Downloader Box -->
             <div class="downloader-box">
                 <div class="input-wrapper">
-                    <input type="url" id="url-input" placeholder="Paste TikTok video link to extract MP3..."
-                        autocomplete="off" spellcheck="false" aria-label="TikTok video URL for MP3 extraction">
+                    <input type="url" id="url-input" data-i18n="[placeholder]mp3_page.placeholder"
+                        placeholder="Paste TikTok video link to extract MP3..." autocomplete="off" spellcheck="false"
+                        aria-label="TikTok video URL for MP3 extraction">
                     <button id="paste-btn" type="button" title="Paste from clipboard" aria-label="Paste link">
                         <i class="fas fa-paste"></i>
                     </button>
                 </div>
-                <button id="download-btn" aria-label="Extract MP3 from TikTok">
+                <button id="download-btn" data-i18n="mp3_page.btn_download" aria-label="Extract MP3 from TikTok">
                     <i class="fas fa-music"></i> Extract MP3
                 </button>
             </div>
@@ -166,12 +156,11 @@
         <!-- About Section -->
         <section class="container shadow-box">
             <div class="content-box">
-                <h2><i class="fas fa-headphones" style="color: var(--secondary);"></i> Best TikTok to MP3 Converter 2026
-                </h2>
-                <p>SaveTikFast MP3 Converter lets you extract audio from any TikTok video instantly. Download trending
-                    songs, viral sounds, voiceovers, and background music in high-quality MP3 format (up to 320kbps).
-                    Perfect for creating ringtones, music playlists, remixes, or enjoying your favorite TikTok tracks
-                    offline. No software installation required - works directly in your browser on all devices.</p>
+                <h2><i class="fas fa-headphones" style="color: var(--secondary);"></i> <span
+                        data-i18n="mp3_page.about_title">Best TikTok to MP3 Converter 2026</span></h2>
+                <p data-i18n="mp3_page.about_content">SaveTikFast MP3 Converter lets you extract audio from any TikTok
+                    video instantly. Download trending songs, viral sounds, voiceovers, and background music in
+                    high-quality MP3 format.</p>
             </div>
         </section>
 
@@ -179,61 +168,70 @@
         <section class="container features-grid">
             <div class="feature-card">
                 <i class="fas fa-headphones-alt"></i>
-                <h3>High Quality Audio</h3>
-                <p>Extract audio in the best available quality - up to 320kbps crystal clear MP3 files.</p>
+                <h3 data-i18n="mp3_page.features.quality.title">High Quality Audio</h3>
+                <p data-i18n="mp3_page.features.quality.desc">Extract audio in the best available quality - up to
+                    320kbps crystal clear MP3 files.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-bolt"></i>
-                <h3>Instant Conversion</h3>
-                <p>Convert TikTok to MP3 in seconds. No waiting, no processing delays.</p>
+                <h3 data-i18n="mp3_page.features.fast.title">Instant Conversion</h3>
+                <p data-i18n="mp3_page.features.fast.desc">Convert TikTok to MP3 in seconds. No waiting, no processing
+                    delays.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-fire"></i>
-                <h3>Trending Sounds</h3>
-                <p>Download viral TikTok sounds and trending songs everyone is using.</p>
+                <h3 data-i18n="mp3_page.features.trending.title">Trending Sounds</h3>
+                <p data-i18n="mp3_page.features.trending.desc">Download viral TikTok sounds and trending songs everyone
+                    is using.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-mobile-alt"></i>
-                <h3>Works Everywhere</h3>
-                <p>Download TikTok MP3 on iPhone, Android, PC, or any device with a browser.</p>
+                <h3 data-i18n="mp3_page.features.device.title">Works Everywhere</h3>
+                <p data-i18n="mp3_page.features.device.desc">Download TikTok MP3 on iPhone, Android, PC, or any device
+                    with a browser.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-bell"></i>
-                <h3>Ringtone Ready</h3>
-                <p>Use downloaded MP3s as ringtones, alarms, or notification sounds.</p>
+                <h3 data-i18n="mp3_page.features.ringtone.title">Ringtone Ready</h3>
+                <p data-i18n="mp3_page.features.ringtone.desc">Use downloaded MP3s as ringtones, alarms, or notification
+                    sounds.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-infinity"></i>
-                <h3>Unlimited & Free</h3>
-                <p>No limits on downloads. Convert as many TikTok videos to MP3 as you want.</p>
+                <h3 data-i18n="mp3_page.features.unlimited.title">Unlimited & Free</h3>
+                <p data-i18n="mp3_page.features.unlimited.desc">No limits on downloads. Convert as many TikTok videos to
+                    MP3 as you want.</p>
             </div>
         </section>
 
         <!-- How To Section -->
         <section class="container how-to-box shadow-box">
-            <h2 style="text-align: center; margin-bottom: 30px;">How to Convert TikTok to MP3</h2>
+            <h2 style="text-align: center; margin-bottom: 30px;" data-i18n="mp3_page.how_to.title">How to Convert TikTok
+                to MP3</h2>
             <div class="steps-wrapper">
                 <div class="step">
                     <div class="step-num">1</div>
-                    <h3>Copy Link</h3>
-                    <p>Find the TikTok video with the audio you want. Tap Share → Copy Link.</p>
+                    <h3 data-i18n="how_to.step1_title">Copy Link</h3>
+                    <p data-i18n="mp3_page.how_to.step1">Find the TikTok video with the audio you want. Tap Share → Copy
+                        Link.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">2</div>
-                    <h3>Paste URL</h3>
-                    <p>Paste the TikTok link into the box above on this page.</p>
+                    <h3 data-i18n="how_to.step2_title">Paste URL</h3>
+                    <p data-i18n="mp3_page.how_to.step2">Paste the TikTok link into the box above on this page.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
-                    <h3>Get MP3</h3>
-                    <p>Click "Extract MP3" and download your audio file instantly.</p>
+                    <h3 data-i18n="how_to.step3_title">Get MP3</h3>
+                    <p data-i18n="mp3_page.how_to.step3">Click "Extract MP3" and download your audio file instantly.</p>
                 </div>
             </div>
         </section>
 
         <!-- ==================== FAQ SECTION ==================== -->
         <section class="container faq-section">
-            <h2 class="section-title"><i class="fas fa-question-circle"></i> TikTok MP3 Downloader FAQ</h2>
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> <span data-i18n="faq.title">Frequently
+                    Asked Questions</span></h2>
 
             <div class="faq-container">
                 <details class="faq-item-new">
@@ -249,8 +247,7 @@
                     <summary>What is the audio quality of downloaded MP3 files?</summary>
                     <div class="faq-answer-new">
                         <p>SaveTikFast extracts audio at the highest quality available from the original TikTok video.
-                            Depending on the source, this can range from 128kbps to 320kbps. Most popular sounds are
-                            available in high quality suitable for music players and ringtones.</p>
+                            Depending on the source, this can range from 128kbps to 320kbps.</p>
                     </div>
                 </details>
 
@@ -258,8 +255,7 @@
                     <summary>Can I download trending TikTok songs and sounds?</summary>
                     <div class="faq-answer-new">
                         <p>Yes! You can download any sound from TikTok - trending songs, viral audio clips, original
-                            sounds, voice-overs, and background music. If it's on TikTok, you can convert it to MP3 with
-                            our tool.</p>
+                            sounds, voice-overs, and background music.</p>
                     </div>
                 </details>
 
@@ -267,8 +263,7 @@
                     <summary>Is the TikTok to MP3 converter safe to use?</summary>
                     <div class="faq-answer-new">
                         <p>Absolutely! SaveTikFast is 100% safe. We don't ask for your TikTok login, we don't store your
-                            files, and our website uses SSL encryption. The MP3 files you download are clean and
-                            virus-free.</p>
+                            files, and our website uses SSL encryption.</p>
                     </div>
                 </details>
 
@@ -276,8 +271,7 @@
                     <summary>Can I use downloaded MP3s as ringtones?</summary>
                     <div class="faq-answer-new">
                         <p>Yes! Once you download the MP3 file, you can use it as a ringtone, alarm, or notification
-                            sound on your phone. On iPhone, use GarageBand or iTunes. On Android, simply set it directly
-                            from your settings.</p>
+                            sound on your phone.</p>
                     </div>
                 </details>
 
@@ -285,8 +279,7 @@
                     <summary>Does this work on iPhone and Android?</summary>
                     <div class="faq-answer-new">
                         <p>Yes, SaveTikFast MP3 Converter works on all devices - iPhone, iPad, Android phones and
-                            tablets, Windows PC, Mac, and Chromebooks. No app installation needed - just use your web
-                            browser.</p>
+                            tablets, Windows PC, Mac, and Chromebooks.</p>
                     </div>
                 </details>
 
@@ -294,7 +287,7 @@
                     <summary>Is there a limit to how many MP3s I can download?</summary>
                     <div class="faq-answer-new">
                         <p>No limits at all! SaveTikFast is completely free and unlimited. You can convert and download
-                            as many TikTok sounds to MP3 as you want, every day, forever. No registration required.</p>
+                            as many TikTok sounds to MP3 as you want.</p>
                     </div>
                 </details>
 
@@ -302,8 +295,7 @@
                     <summary>Why can't I hear the music in my downloaded file?</summary>
                     <div class="faq-answer-new">
                         <p>If your MP3 file is silent, the original TikTok video might have had muted audio or very low
-                            volume. Try downloading audio from a different video. Also ensure your device volume is
-                            turned up and the file plays in a media player.</p>
+                            volume. Try downloading audio from a different video.</p>
                     </div>
                 </details>
 
@@ -311,8 +303,7 @@
                     <summary>Can I download music from copyrighted TikTok videos?</summary>
                     <div class="faq-answer-new">
                         <p>SaveTikFast can extract audio from any public TikTok video. However, please respect copyright
-                            laws. Downloaded content should be for personal use only. Commercial use of copyrighted
-                            music requires proper licensing.</p>
+                            laws. Downloaded content should be for personal use only.</p>
                     </div>
                 </details>
 
@@ -320,8 +311,7 @@
                     <summary>What's the difference between this and the video downloader?</summary>
                     <div class="faq-answer-new">
                         <p>Our <a href="/">Video Downloader</a> saves the full video with visuals, while the MP3
-                            Converter extracts only the audio track. Use MP3 converter when you just want the song or
-                            sound without the video footage.</p>
+                            Converter extracts only the audio track.</p>
                     </div>
                 </details>
             </div>

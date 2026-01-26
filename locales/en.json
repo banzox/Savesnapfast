@@ -17,7 +17,7 @@
     "title": "TikTok Video Downloader",
     "desc": "Download TikTok videos without watermark. Fast, Free, and Unlimited HD Quality."
   },
-    "downloader": {
+  "downloader": {
     "placeholder": "Paste TikTok link here...",
     "btn_download": "Download Now",
     "processing": "Processing...",
@@ -26,7 +26,6 @@
     "hd_quality": "No Watermark",
     "error_busy": "Service busy, please try again later."
   },
-
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",
     "q1": "How to download TikTok videos without watermark in 2026?",
@@ -78,8 +77,97 @@
   },
   "footer": {
     "rights": "© 2026 SaveTikFast. All Rights Reserved."
-  }
-  ,
+  },
+  "nav_menu": {
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok to MP3 Converter - Download Audio High Quality 320kbps",
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online.",
+    "title": "Download TikTok MP3",
+    "subtitle": "(Audio Only)",
+    "desc": "Convert TikTok videos to MP3 audio files. Extract songs, trending sounds & music in high quality 320kbps. Free & unlimited.",
+    "placeholder": "Paste TikTok video link to extract MP3...",
+    "btn_download": "Extract MP3",
+    "about_title": "Best TikTok to MP3 Converter 2026",
+    "about_content": "SaveTikFast MP3 Converter lets you extract audio from any TikTok video instantly. Download trending songs, viral sounds, voiceovers, and background music in high-quality MP3 format.",
+    "features": {
+      "quality": {
+        "title": "High Quality Audio",
+        "desc": "Extract audio in the best available quality - up to 320kbps crystal clear MP3 files."
+      },
+      "fast": {
+        "title": "Instant Conversion",
+        "desc": "Convert TikTok to MP3 in seconds. No waiting, no processing delays."
+      },
+      "trending": {
+        "title": "Trending Sounds",
+        "desc": "Download viral TikTok sounds and trending songs everyone is using."
+      },
+      "device": {
+        "title": "Works Everywhere",
+        "desc": "Download TikTok MP3 on iPhone, Android, PC, or any device with a browser."
+      },
+      "ringtone": {
+        "title": "Ringtone Ready",
+        "desc": "Use downloaded MP3s as ringtones, alarms, or notification sounds."
+      },
+      "unlimited": {
+        "title": "Unlimited & Free",
+        "desc": "No limits on downloads. Convert as many TikTok videos to MP3 as you want."
+      }
+    },
+    "how_to": {
+      "title": "How to Convert TikTok to MP3",
+      "step1": "Find the TikTok video with the audio you want. Tap Share → Copy Link.",
+      "step2": "Paste the TikTok link into the box above on this page.",
+      "step3": "Click \"Extract MP3\" and download your audio file instantly."
+    }
+  },
+  "story_page": {
+    "meta_title": "TikTok Story Downloader - Save Slideshows & Photos Anonymously",
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire.",
+    "title": "TikTok Story & Slideshow Downloader",
+    "desc": "Save TikTok Stories and Photo Slideshows before they disappear. Download all images anonymously in high quality.",
+    "placeholder": "Paste TikTok Story or Slideshow link...",
+    "btn_download": "Save Story",
+    "about_title": "Best TikTok Story Saver 2026",
+    "about_content": "SaveTikFast Story Downloader lets you save TikTok Stories and Photo Slideshows before they expire. Download all carousel images at once and keep your favorite content forever.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonymous",
+        "desc": "Download TikTok stories without the creator knowing. No traces, no notifications."
+      },
+      "slides": {
+        "title": "All Slides at Once",
+        "desc": "Download every image from TikTok slideshows and carousels with one click."
+      },
+      "expire": {
+        "title": "Before They Expire",
+        "desc": "Save stories before they disappear after 24 hours. Keep content forever."
+      },
+      "quality": {
+        "title": "Original Quality",
+        "desc": "Download photos and videos in their original high resolution without compression."
+      },
+      "device": {
+        "title": "All Devices",
+        "desc": "Works on iPhone, Android, PC, and tablets. No app installation required."
+      },
+      "favorites": {
+        "title": "Save Favorites",
+        "desc": "Keep aesthetic photos, tutorials, and inspiration from your favorite creators."
+      }
+    },
+    "how_to": {
+      "title": "How to Download TikTok Stories & Slideshows",
+      "step1": "Open TikTok, find the Story or Slideshow post, tap Share → Copy Link.",
+      "step2": "Paste the TikTok link into the box above on this page.",
+      "step3": "Click \"Save Story\" and download all images to your device."
+    }
+  },
   "features": {
     "fast": {
       "title": "Fast Download",
@@ -273,4 +361,3 @@
     }
   }
 }
-

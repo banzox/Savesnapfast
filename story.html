@@ -12,12 +12,13 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
 
-    <!-- ==================== SEO META TAGS - STORY FOCUS ==================== -->
-    <title>TikTok Story Downloader - Save Slideshows & Photos Anonymously | SaveTikFast</title>
-    <meta name="description"
-        content="Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire. Free TikTok Story Saver online.">
+    <!-- SEO Meta Tags - Story Focus (Updated by i18n) -->
+    <title data-i18n="story_page.meta_title">TikTok Story Downloader - Save Slideshows & Photos Anonymously |
+        SaveTikFast</title>
+    <meta name="description" data-i18n="[content]story_page.meta_desc"
+        content="Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire.">
     <meta name="keywords"
-        content="tiktok story downloader, tiktok slideshow download, save tiktok story, tiktok photos download, tiktok carousel downloader, tiktok story saver, download tiktok images, tiktok story viewer anonymous">
+        content="tiktok story downloader, tiktok slideshow download, save tiktok story, tiktok photos download, tiktok carousel downloader, tiktok story saver, download tiktok images">
     <meta name="author" content="SaveTikFast">
 
     <!-- Open Graph / Facebook -->
@@ -28,17 +29,28 @@
         content="Save TikTok Stories and Photo Slideshows before they expire. Free and anonymous.">
     <meta property="og:image" content="https://savetik-fast.xyz/og-image.png">
     <meta property="og:site_name" content="SaveTikFast">
-    <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://savetik-fast.xyz/story.html">
     <meta name="twitter:title" content="TikTok Story Downloader">
     <meta name="twitter:description" content="Download TikTok Stories and Slideshows. Save photos anonymously.">
-    <meta name="twitter:image" content="https://savetik-fast.xyz/og-image.png">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://savetik-fast.xyz/story.html">
+
+    <!-- Hreflang Tags for Story Page -->
+    <link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/story.html">
+    <link rel="alternate" hreflang="en" href="https://savetik-fast.xyz/story.html">
+    <link rel="alternate" hreflang="ar" href="https://savetik-fast.xyz/ar/story.html">
+    <link rel="alternate" hreflang="es" href="https://savetik-fast.xyz/es/story.html">
+    <link rel="alternate" hreflang="fr" href="https://savetik-fast.xyz/fr/story.html">
+    <link rel="alternate" hreflang="de" href="https://savetik-fast.xyz/de/story.html">
+    <link rel="alternate" hreflang="ru" href="https://savetik-fast.xyz/ru/story.html">
+    <link rel="alternate" hreflang="zh" href="https://savetik-fast.xyz/zh/story.html">
+    <link rel="alternate" hreflang="pt" href="https://savetik-fast.xyz/pt/story.html">
+    <link rel="alternate" hreflang="ja" href="https://savetik-fast.xyz/ja/story.html">
+    <link rel="alternate" hreflang="ko" href="https://savetik-fast.xyz/ko/story.html">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,32 +86,6 @@
     }
     </script>
 
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I download TikTok Stories?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Copy the TikTok Story or Slideshow link, paste it into SaveTikFast Story Downloader, and click Save Story. All images and videos will be downloaded."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Will the user know I downloaded their story?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No, SaveTikFast downloads stories anonymously. The content creator will not receive any notification or see that you viewed or downloaded their story."
-                }
-            }
-        ]
-    }
-    </script>
-
     <!-- i18next Libraries -->
     <script src="/js/vendor/i18next.min.js"></script>
     <script src="/js/vendor/i18nextHttpBackend.min.js"></script>
@@ -116,15 +102,15 @@
     <nav class="nav-menu" aria-label="Download Types">
         <a href="/" title="Download TikTok Videos">
             <i class="fas fa-video"></i>
-            <span>Video</span>
+            <span data-i18n="nav_menu.video">Video</span>
         </a>
         <a href="/mp3.html" title="Download TikTok Audio MP3">
             <i class="fas fa-music"></i>
-            <span>MP3 Audio</span>
+            <span data-i18n="nav_menu.mp3">MP3 Audio</span>
         </a>
         <a href="/story.html" class="active" title="Download TikTok Stories">
             <i class="fas fa-images"></i>
-            <span>Stories</span>
+            <span data-i18n="nav_menu.stories">Stories</span>
         </a>
     </nav>
 
@@ -133,20 +119,24 @@
 
         <!-- Hero Section with Downloader -->
         <article class="hero-section">
-            <h1><i class="fas fa-images" style="color: var(--secondary);"></i> TikTok Story & Slideshow Downloader</h1>
-            <p>Save TikTok Stories and Photo Slideshows before they disappear. Download all images anonymously in high
-                quality.</p>
+            <h1>
+                <i class="fas fa-images" style="color: var(--secondary);"></i>
+                <span data-i18n="story_page.title">TikTok Story & Slideshow Downloader</span>
+            </h1>
+            <p data-i18n="story_page.desc">Save TikTok Stories and Photo Slideshows before they disappear. Download all
+                images anonymously in high quality.</p>
 
             <!-- Downloader Box -->
             <div class="downloader-box">
                 <div class="input-wrapper">
-                    <input type="url" id="url-input" placeholder="Paste TikTok Story or Slideshow link..."
-                        autocomplete="off" spellcheck="false" aria-label="TikTok story or slideshow URL">
+                    <input type="url" id="url-input" data-i18n="[placeholder]story_page.placeholder"
+                        placeholder="Paste TikTok Story or Slideshow link..." autocomplete="off" spellcheck="false"
+                        aria-label="TikTok story or slideshow URL">
                     <button id="paste-btn" type="button" title="Paste from clipboard" aria-label="Paste link">
                         <i class="fas fa-paste"></i>
                     </button>
                 </div>
-                <button id="download-btn" aria-label="Save TikTok story">
+                <button id="download-btn" data-i18n="story_page.btn_download" aria-label="Save TikTok story">
                     <i class="fas fa-images"></i> Save Story
                 </button>
             </div>
@@ -165,11 +155,11 @@
         <!-- About Section -->
         <section class="container shadow-box">
             <div class="content-box">
-                <h2><i class="fas fa-photo-film" style="color: var(--secondary);"></i> Best TikTok Story Saver 2026</h2>
-                <p>SaveTikFast Story Downloader lets you save TikTok Stories and Photo Slideshows before they expire.
-                    Download all carousel images at once, save story videos, and keep your favorite content forever. Our
-                    tool works anonymously - the creator won't know you downloaded their story. Perfect for saving
-                    aesthetic content, inspiration, or memories from your favorite TikTok creators.</p>
+                <h2><i class="fas fa-photo-film" style="color: var(--secondary);"></i> <span
+                        data-i18n="story_page.about_title">Best TikTok Story Saver 2026</span></h2>
+                <p data-i18n="story_page.about_content">SaveTikFast Story Downloader lets you save TikTok Stories and
+                    Photo Slideshows before they expire. Download all carousel images at once and keep your favorite
+                    content forever.</p>
             </div>
         </section>
 
@@ -177,61 +167,71 @@
         <section class="container features-grid">
             <div class="feature-card">
                 <i class="fas fa-user-secret"></i>
-                <h3>100% Anonymous</h3>
-                <p>Download TikTok stories without the creator knowing. No traces, no notifications.</p>
+                <h3 data-i18n="story_page.features.anonymous.title">100% Anonymous</h3>
+                <p data-i18n="story_page.features.anonymous.desc">Download TikTok stories without the creator knowing.
+                    No traces, no notifications.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-layer-group"></i>
-                <h3>All Slides at Once</h3>
-                <p>Download every image from TikTok slideshows and carousels with one click.</p>
+                <h3 data-i18n="story_page.features.slides.title">All Slides at Once</h3>
+                <p data-i18n="story_page.features.slides.desc">Download every image from TikTok slideshows and carousels
+                    with one click.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-clock"></i>
-                <h3>Before They Expire</h3>
-                <p>Save stories before they disappear after 24 hours. Keep content forever.</p>
+                <h3 data-i18n="story_page.features.expire.title">Before They Expire</h3>
+                <p data-i18n="story_page.features.expire.desc">Save stories before they disappear after 24 hours. Keep
+                    content forever.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-hd"></i>
-                <h3>Original Quality</h3>
-                <p>Download photos and videos in their original high resolution without compression.</p>
+                <h3 data-i18n="story_page.features.quality.title">Original Quality</h3>
+                <p data-i18n="story_page.features.quality.desc">Download photos and videos in their original high
+                    resolution without compression.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-mobile-alt"></i>
-                <h3>All Devices</h3>
-                <p>Works on iPhone, Android, PC, and tablets. No app installation required.</p>
+                <h3 data-i18n="story_page.features.device.title">All Devices</h3>
+                <p data-i18n="story_page.features.device.desc">Works on iPhone, Android, PC, and tablets. No app
+                    installation required.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-heart"></i>
-                <h3>Save Favorites</h3>
-                <p>Keep aesthetic photos, tutorials, and inspiration from your favorite creators.</p>
+                <h3 data-i18n="story_page.features.favorites.title">Save Favorites</h3>
+                <p data-i18n="story_page.features.favorites.desc">Keep aesthetic photos, tutorials, and inspiration from
+                    your favorite creators.</p>
             </div>
         </section>
 
         <!-- How To Section -->
         <section class="container how-to-box shadow-box">
-            <h2 style="text-align: center; margin-bottom: 30px;">How to Download TikTok Stories & Slideshows</h2>
+            <h2 style="text-align: center; margin-bottom: 30px;" data-i18n="story_page.how_to.title">How to Download
+                TikTok Stories & Slideshows</h2>
             <div class="steps-wrapper">
                 <div class="step">
                     <div class="step-num">1</div>
-                    <h3>Copy Link</h3>
-                    <p>Open TikTok, find the Story or Slideshow post, tap Share → Copy Link.</p>
+                    <h3 data-i18n="how_to.step1_title">Copy Link</h3>
+                    <p data-i18n="story_page.how_to.step1">Open TikTok, find the Story or Slideshow post, tap Share →
+                        Copy Link.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">2</div>
-                    <h3>Paste URL</h3>
-                    <p>Paste the TikTok link into the box above on this page.</p>
+                    <h3 data-i18n="how_to.step2_title">Paste URL</h3>
+                    <p data-i18n="story_page.how_to.step2">Paste the TikTok link into the box above on this page.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
-                    <h3>Save</h3>
-                    <p>Click "Save Story" and download all images to your device.</p>
+                    <h3 data-i18n="how_to.step3_title">Save</h3>
+                    <p data-i18n="story_page.how_to.step3">Click "Save Story" and download all images to your device.
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- ==================== FAQ SECTION ==================== -->
         <section class="container faq-section">
-            <h2 class="section-title"><i class="fas fa-question-circle"></i> TikTok Story Downloader FAQ</h2>
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> <span data-i18n="faq.title">Frequently
+                    Asked Questions</span></h2>
 
             <div class="faq-container">
                 <details class="faq-item-new">
@@ -239,7 +239,7 @@
                     <div class="faq-answer-new">
                         <p>To download TikTok Stories: 1) Open TikTok and find the Story or Slideshow you want to save,
                             2) Tap Share and Copy Link, 3) Paste the link into SaveTikFast Story Downloader, 4) Click
-                            "Save Story" and all images/videos will be downloaded to your device.</p>
+                            "Save Story" and all images/videos will be downloaded.</p>
                     </div>
                 </details>
 
@@ -248,7 +248,7 @@
                     <div class="faq-answer-new">
                         <p>No, absolutely not! SaveTikFast downloads stories completely anonymously. The content creator
                             will NOT receive any notification and cannot see that you viewed or downloaded their story.
-                            Your privacy is fully protected.</p>
+                        </p>
                     </div>
                 </details>
 
@@ -256,17 +256,15 @@
                     <summary>Can I download TikTok Slideshows with multiple photos?</summary>
                     <div class="faq-answer-new">
                         <p>Yes! SaveTikFast fully supports TikTok's Photo Slideshow (Carousel) feature. When you paste a
-                            slideshow link, we download ALL images from the carousel at once, so you don't have to save
-                            each photo individually.</p>
+                            slideshow link, we download ALL images from the carousel at once.</p>
                     </div>
                 </details>
 
                 <details class="faq-item-new">
                     <summary>Do TikTok Stories really expire after 24 hours?</summary>
                     <div class="faq-answer-new">
-                        <p>TikTok Stories (similar to Instagram Stories) typically expire after 24 hours. That's why
-                            it's important to download them quickly using SaveTikFast before they disappear forever.
-                            Once downloaded, you keep the content permanently.</p>
+                        <p>TikTok Stories typically expire after 24 hours. That's why it's important to download them
+                            quickly using SaveTikFast before they disappear forever.</p>
                     </div>
                 </details>
 
@@ -274,8 +272,7 @@
                     <summary>What quality are the downloaded story images?</summary>
                     <div class="faq-answer-new">
                         <p>SaveTikFast downloads TikTok story images and photos in their original high resolution.
-                            There's no compression or quality loss. You get the same quality as the creator uploaded.
-                        </p>
+                            There's no compression or quality loss.</p>
                     </div>
                 </details>
 
@@ -283,7 +280,7 @@
                     <summary>Does this work on iPhone and Android?</summary>
                     <div class="faq-answer-new">
                         <p>Yes! SaveTikFast Story Downloader works on all devices - iPhone, iPad, Android phones and
-                            tablets, Windows PC, Mac, and any device with a web browser. No app installation needed.</p>
+                            tablets, Windows PC, Mac, and any device with a web browser.</p>
                     </div>
                 </details>
 
@@ -291,7 +288,7 @@
                     <summary>Can I download stories from private TikTok accounts?</summary>
                     <div class="faq-answer-new">
                         <p>No, SaveTikFast can only download stories and slideshows from public TikTok accounts. Private
-                            account content is protected and not accessible through our service.</p>
+                            account content is protected.</p>
                     </div>
                 </details>
 
@@ -299,8 +296,7 @@
                     <summary>Is it free to download TikTok stories?</summary>
                     <div class="faq-answer-new">
                         <p>Yes, SaveTikFast is 100% free! There are no hidden fees, no subscriptions, and no limits on
-                            how many stories you can download. We believe everyone should have access to free story
-                            downloads.</p>
+                            how many stories you can download.</p>
                     </div>
                 </details>
 
@@ -308,8 +304,8 @@
                     <summary>Why is my story download not working?</summary>
                     <div class="faq-answer-new">
                         <p>If downloading fails, please check: 1) The link is correct and complete, 2) The story hasn't
-                            expired yet, 3) The account is public (not private), 4) Try refreshing the page or using a
-                            different browser. If issues persist, the story may have been deleted.</p>
+                            expired yet, 3) The account is public (not private). Try refreshing the page or using a
+                            different browser.</p>
                     </div>
                 </details>
 
@@ -317,9 +313,8 @@
                     <summary>What's the difference between Story and Slideshow?</summary>
                     <div class="faq-answer-new">
                         <p>TikTok Stories are temporary posts that disappear after 24 hours. Slideshows (Photo
-                            Carousels) are permanent posts with multiple images that users can swipe through.
-                            SaveTikFast can download both types - we save all images from slideshows and preserve story
-                            content before it expires.</p>
+                            Carousels) are permanent posts with multiple images. SaveTikFast can download both types.
+                        </p>
                     </div>
                 </details>
             </div>
