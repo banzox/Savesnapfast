@@ -75,6 +75,14 @@ languages.forEach(lang => {
             `content="https://savetik-fast.xyz/${lang}/"`
         );
 
+        // Add localStorage script for i18next
+        content = content.replace(/<\/head>/, `<script>localStorage.setItem('i18nextLng', '${lang}');</script>\n</head>`);
+
+        // Update html lang and dir if RTL
+        if (isRTL) {
+            content = content.replace(/<body/i, '<body class="rtl"');
+        }
+
         // Write file
         const filePath = path.join(langDir, tmpl.name);
         fs.writeFileSync(filePath, content, 'utf8');

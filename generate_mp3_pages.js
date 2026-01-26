@@ -99,19 +99,46 @@ const FAQS = {
 // Fallback for others (English)
 const DEFAULT_FAQS = FAQS.en;
 
+const mp3Template = fs.readFileSync('mp3.html', 'utf8');
+
 function generateHTML(lang, langData) {
     const faqs = FAQS[lang] || DEFAULT_FAQS;
     const isRTL = langData.dir === 'rtl';
 
-    // Generate Hreflang Tags
+    let content = mp3Template;
+
+    // Update html attributes
+    content = content.replace(/<html lang="en">/, `<html lang="${lang}" dir="${langData.dir}">`);
+    if (isRTL) {
+        content = content.replace(/<body/i, '<body class="rtl"');
+    }
+
+    // Update Title and Meta Description (Optional since i18n handles them, but good for SEO/SSR)
+    content = content.replace(/<title>.*?<\/title>/, `<title>${langData.title} - SaveTikFast 2026 | ${langData.name}</title>`);
+    content = content.replace(/content="Convert TikTok videos to MP3 audio files.*?"/, `content="${langData.desc}"`);
+
+    // Update Canonical and Hreflangs
     const hreflangTags = Object.keys(LANGUAGES).map(code =>
         `<link rel="alternate" hreflang="${code}" href="https://savetik-fast.xyz/mp3/${code}/" />`
     ).join('\n    ');
-
-    // Add x-default (English)
     const xDefault = `<link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/mp3/en/" />`;
     const fullHreflangs = `${xDefault}\n    ${hreflangTags}`;
 
+    // We replace the placeholder in head if we want to be clean, or just append
+    content = content.replace(/<!-- Hreflang Tags for MP3 Page -->[\s\S]*?<!-- Preconnect/, `<!-- Hreflang Tags for SEO -->\n    ${fullHreflangs}\n\n    <!-- Preconnect`);
+    content = content.replace(/<link rel="canonical" href=".*?"/, `<link rel="canonical" href="https://savetik-fast.xyz/mp3/${lang}/"`);
+
+    // Add localStorage script for i18next
+    content = content.replace(/<\/head>/, `<script>localStorage.setItem('i18nextLng', '${lang}');</script>\n</head>`);
+
+    // Update H1 and P tags
+    content = content.replace(/<h1[^>]*?>.*?<\/h1>/, `<h1>\n                <i class="fas fa-music" style="color: var(--secondary);"></i>\n                ${langData.title}\n            </h1>`);
+    content = content.replace(/<p class="hero-description">.*?<\/p>/, `<p class="hero-description">${langData.desc}</p>`);
+
+    // Update Keywords
+    content = content.replace(/<meta name="keywords" content="tiktok to mp3, tiktok mp3 download, en, convert tiktok to mp3, tiktok audio download 2026">/, `<meta name="keywords" content="tiktok to mp3, tiktok mp3 download, ${lang}, convert tiktok to mp3, tiktok audio download 2026">`);
+
+    // Generate and inject FAQs
     const faqsHTML = faqs.map((faq, i) => `
                 <details class="faq-item-new">
                     <summary>${faq.q}</summary>
@@ -119,94 +146,9 @@ function generateHTML(lang, langData) {
                         <p>${faq.a}</p>
                     </div>
                 </details>`).join('');
+    content = content.replace(/<!-- FAQ_PLACEHOLDER -->/, faqsHTML);
 
-    return `<!DOCTYPE html>
-<html lang="${lang}" dir="${langData.dir}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    
-    <title>${langData.title} - SaveTikFast 2026 | ${langData.name}</title>
-    <meta name="description" content="${langData.desc}">
-    <meta name="keywords" content="tiktok to mp3, tiktok mp3 download, ${lang}, convert tiktok to mp3, tiktok audio download 2026">
-    
-    <!-- Hreflang Tags for SEO -->
-    ${fullHreflangs}
-
-    <link rel="canonical" href="https://savetik-fast.xyz/mp3/${lang}/">
-    <link rel="icon" type="image/png" href="../../favicon.png">
-    <link rel="manifest" href="../../manifest.json">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../style.css">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "${langData.title} - SaveTikFast",
-        "url": "https://savetik-fast.xyz/mp3/${lang}/",
-        "description": "${langData.desc}",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "All",
-        "inLanguage": "${lang}",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    }
-    </script>
-
-    <!-- Correct i18next Libraries Loader -->
-    <script src="https://unpkg.com/i18next@21.6.10/dist/umd/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-http-backend@1.4.0/i18nextHttpBackend.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
-</head>
-<body${isRTL ? ' class="rtl"' : ''}>
-    <header id="main-header"></header>
-    
-    <nav class="nav-menu" aria-label="Download Types">
-        <a href="../../${lang}/" title="Video" data-i18n="nav_menu.video"><i class="fas fa-video"></i> Video</a>
-        <a href="../../mp3/${lang}/" class="active" title="MP3" data-i18n="nav_menu.mp3"><i class="fas fa-music"></i> MP3</a>
-        <a href="../../story/${lang}/" title="Stories" data-i18n="nav_menu.stories"><i class="fas fa-images"></i> Stories</a>
-    </nav>
-
-    <main id="main-content">
-        <article class="hero-section">
-            <h1>
-                <i class="fas fa-music" style="color: var(--secondary);"></i>
-                ${langData.title}
-            </h1>
-            <p>${langData.desc}</p>
-
-            <div class="downloader-box">
-                <div class="input-wrapper">
-                    <input type="url" id="url-input" placeholder="Paste TikTok video link..." autocomplete="off">
-                    <button id="paste-btn" type="button" title="Paste"><i class="fas fa-paste"></i></button>
-                </div>
-                <button id="download-btn"><i class="fas fa-music"></i> Download MP3</button>
-            </div>
-
-            <div id="result-area" role="region" aria-live="polite"></div>
-        </article>
-
-        <section class="container faq-section">
-            <h2 class="section-title"><i class="fas fa-question-circle"></i> FAQ</h2>
-            <div class="faq-container">
-${faqsHTML}
-            </div>
-        </section>
-    </main>
-
-    <footer id="main-footer"></footer>
-    
-    <script src="../../js/i18n-setup.js"></script>
-    <script src="../../logic.js"></script>
-    
-    <!-- Social Bar Ad -->
-    <script src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js"></script>
-</body>
-</html>`;
+    return content;
 }
 
 // Generate all pages

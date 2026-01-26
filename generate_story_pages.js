@@ -155,112 +155,50 @@ const FAQS = {
 // Default FAQs for languages without specific translations
 const DEFAULT_FAQS = FAQS.en;
 
+const storyTemplate = fs.readFileSync('story.html', 'utf8');
+
 function generateHTML(lang, data) {
     const faqs = FAQS[lang] || DEFAULT_FAQS;
     const isRTL = data.dir === 'rtl';
 
-    // Generate Hreflang Tags
+    let content = storyTemplate;
+
+    // Update html attributes
+    content = content.replace(/<html lang="en">/, `<html lang="${lang}" dir="${data.dir}">`);
+    if (isRTL) {
+        content = content.replace(/<body/i, '<body class="rtl"');
+    }
+
+    // Update Title and Meta Description
+    content = content.replace(/<title>.*?<\/title>/, `<title>${data.title} - SaveTikFast 2026 | ${data.name}</title>`);
+    content = content.replace(/content="Download TikTok Stories and Slideshows.*?"/, `content="${data.desc}"`);
+
+    // Update Canonical and Hreflangs
     const hreflangTags = Object.keys(LANGUAGES).map(code =>
         `<link rel="alternate" hreflang="${code}" href="https://savetik-fast.xyz/story/${code}/" />`
     ).join('\n    ');
-
-    // Add x-default (English)
     const xDefault = `<link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/story/en/" />`;
     const fullHreflangs = `${xDefault}\n    ${hreflangTags}`;
 
+    content = content.replace(/<!-- Hreflang Tags for Story Page -->[\s\S]*?<!-- Preconnect/, `<!-- Hreflang Tags for SEO -->\n    ${fullHreflangs}\n\n    <!-- Preconnect`);
+    content = content.replace(/<link rel="canonical" href=".*?"/, `<link rel="canonical" href="https://savetik-fast.xyz/story/${lang}/"`);
+
+    // Add localStorage script for i18next
+    content = content.replace(/<\/head>/, `<script>localStorage.setItem('i18nextLng', '${lang}');</script>\n</head>`);
+
+    // Update H1 and P tags
+    content = content.replace(/<h1[^>]*?>.*?<\/h1>/, `<h1>\n                <i class="fas fa-images" style="color: var(--secondary);"></i>\n                ${data.title}\n            </h1>`);
+    content = content.replace(/<p data-i18n="story_page.desc">.*?<\/p>/, `<p data-i18n="story_page.desc">${data.desc}</p>`);
+
+    // Inject FAQs
     const faqsHTML = faqs.map(faq => `
                 <details class="faq-item-new">
                     <summary>${faq.q}</summary>
                     <div class="faq-answer-new"><p>${faq.a}</p></div>
                 </details>`).join('');
+    content = content.replace(/<!-- FAQ_PLACEHOLDER -->/, faqsHTML);
 
-    return `<!DOCTYPE html>
-<html lang="${lang}" dir="${data.dir}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    
-    <title>${data.title} - SaveTikFast 2026 | ${data.name}</title>
-    <meta name="description" content="${data.desc}">
-    <meta name="keywords" content="tiktok story download, tiktok slideshow download, ${lang}, download tiktok stories 2026, tiktok photo slideshow">
-    
-    <!-- Hreflang Tags for SEO -->
-    ${fullHreflangs}
-
-    <link rel="canonical" href="https://savetik-fast.xyz/story/${lang}/">
-    <link rel="icon" type="image/png" href="../../favicon.png">
-    <link rel="manifest" href="../../manifest.json">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../style.css">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "${data.title} - SaveTikFast",
-        "url": "https://savetik-fast.xyz/story/${lang}/",
-        "description": "${data.desc}",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "All",
-        "inLanguage": "${lang}",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    }
-    </script>
-    
-    <!-- Correct i18next Libraries Loader -->
-    <script src="https://unpkg.com/i18next@21.6.10/dist/umd/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-http-backend@1.4.0/i18nextHttpBackend.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
-</head>
-<body${isRTL ? ' class="rtl"' : ''}>
-    <header id="main-header"></header>
-    
-    <nav class="nav-menu" aria-label="Download Types">
-        <a href="../../${lang}/" title="Video" data-i18n="nav_menu.video"><i class="fas fa-video"></i> Video</a>
-        <a href="../../mp3/${lang}/" title="MP3" data-i18n="nav_menu.mp3"><i class="fas fa-music"></i> MP3</a>
-        <a href="../../story/${lang}/" class="active" title="Stories" data-i18n="nav_menu.stories"><i class="fas fa-images"></i> Stories</a>
-    </nav>
-
-    <main id="main-content">
-        <article class="hero-section">
-            <h1>
-                <i class="fas fa-images" style="color: var(--secondary);"></i>
-                ${data.title}
-            </h1>
-            <p>${data.desc}</p>
-
-            <div class="downloader-box">
-                <div class="input-wrapper">
-                    <input type="url" id="url-input" placeholder="Paste TikTok story/slideshow link..." autocomplete="off">
-                    <button id="paste-btn" type="button" title="Paste"><i class="fas fa-paste"></i></button>
-                </div>
-                <button id="download-btn"><i class="fas fa-images"></i> Download Story</button>
-            </div>
-
-            <div id="result-area" role="region" aria-live="polite"></div>
-        </article>
-
-        <section class="container faq-section">
-            <h2 class="section-title"><i class="fas fa-question-circle"></i> FAQ</h2>
-            <div class="faq-container">
-${faqsHTML}
-            </div>
-        </section>
-    </main>
-
-    <footer id="main-footer"></footer>
-    
-    <script src="../../js/i18n-setup.js"></script>
-    <script src="../../logic.js"></script>
-    
-    <!-- Social Bar Ad -->
-    <script src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js"></script>
-</body>
-</html>`;
+    return content;
 }
 
 // Generate all pages
