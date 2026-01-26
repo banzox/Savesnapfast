@@ -107,10 +107,13 @@ function processHtml(html, translations, langCode, filename) {
             if (targetAttr) {
                 $(el).attr(targetAttr, val);
             } else {
-                $(el).text(val);
+                // Use .html() to preserve nested tags like spans (e.g. in hero.title)
+                $(el).html(val);
             }
         }
-        $(el).removeAttr('data-i18n');
+        // DO NOT REMOVE data-i18n. This allows client-side i18next to 
+        // handle dynamic updates or missing keys on page load.
+        // $(el).removeAttr('data-i18n');
     });
 
     // B. Update <html lang/dir>

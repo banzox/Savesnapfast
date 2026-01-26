@@ -124,6 +124,28 @@
       "step1": "Find the TikTok video with the audio you want. Tap Share → Copy Link.",
       "step2": "Paste the TikTok link into the box above on this page.",
       "step3": "Click \"Extract MP3\" and download your audio file instantly."
+    },
+    "faq": {
+      "q1": "How do I convert a TikTok video to MP3?",
+      "a1": "Converting TikTok to MP3 is simple: 1) Open TikTok and find the video with the sound you want, 2) Tap Share and Copy Link, 3) Paste the link here on SaveTikFast, 4) Click \"Extract MP3\" and your audio file will download automatically.",
+      "q2": "What is the audio quality of downloaded MP3 files?",
+      "a2": "SaveTikFast extracts audio at the highest quality available from the original TikTok video. Depending on the source, this can range from 128kbps to 320kbps.",
+      "q3": "Can I download trending TikTok songs and sounds?",
+      "a3": "Yes! You can download any sound from TikTok - trending songs, viral audio clips, original sounds, voice-overs, and background music.",
+      "q4": "Is the TikTok to MP3 converter safe to use?",
+      "a4": "Absolutely! SaveTikFast is 100% safe. We don't ask for your TikTok login, we don't store your files, and our website uses SSL encryption.",
+      "q5": "Can I use downloaded MP3s as ringtones?",
+      "a5": "Yes! Once you download the MP3 file, you can use it as a ringtone, alarm, or notification sound on your phone.",
+      "q6": "Does this work on iPhone and Android?",
+      "a6": "Yes, SaveTikFast MP3 Converter works on all devices - iPhone, iPad, Android phones and tablets, Windows PC, Mac, and Chromebooks.",
+      "q7": "Is there a limit to how many MP3s I can download?",
+      "a7": "No limits at all! SaveTikFast is completely free and unlimited. You can convert and download as many TikTok sounds to MP3 as you want.",
+      "q8": "Why can't I hear the music in my downloaded file?",
+      "a8": "If your MP3 file is silent, the original TikTok video might have had muted audio or very low volume. Try downloading audio from a different video.",
+      "q9": "Can I download music from copyrighted TikTok videos?",
+      "a9": "SaveTikFast can extract audio from any public TikTok video. However, please respect copyright laws. Downloaded content should be for personal use only.",
+      "q10": "What's the difference between this and the video downloader?",
+      "a10": "Our <a href=\"/\">Video Downloader</a> saves the full video with visuals, while the MP3 Converter extracts only the audio track."
     }
   },
   "story_page": {
@@ -166,26 +188,63 @@
       "step1": "Open TikTok, find the Story or Slideshow post, tap Share → Copy Link.",
       "step2": "Paste the TikTok link into the box above on this page.",
       "step3": "Click \"Save Story\" and download all images to your device."
+    },
+    "faq": {
+      "q1": "How do I download TikTok Stories?",
+      "a1": "To download TikTok Stories: 1) Open TikTok and find the Story or Slideshow you want to save, 2) Tap Share and Copy Link, 3) Paste the link into SaveTikFast Story Downloader, 4) Click \"Save Story\" and all images/videos will be downloaded.",
+      "q2": "Will the user know I downloaded their story?",
+      "a2": "No, absolutely not! SaveTikFast downloads stories completely anonymously. The content creator will NOT receive any notification and cannot see that you viewed or downloaded their story.",
+      "q3": "Can I download TikTok Slideshows with multiple photos?",
+      "a3": "Yes! SaveTikFast fully supports TikTok's Photo Slideshow (Carousel) feature. When you paste a slideshow link, we download ALL images from the carousel at once.",
+      "q4": "Do TikTok Stories really expire after 24 hours?",
+      "a4": "TikTok Stories typically expire after 24 hours. That's why it's important to download them quickly using SaveTikFast before they disappear forever.",
+      "q5": "What quality are the downloaded story images?",
+      "a5": "SaveTikFast downloads TikTok story images and photos in their original high resolution. There's no compression or quality loss.",
+      "q6": "Does this work on iPhone and Android?",
+      "a6": "Yes! SaveTikFast Story Downloader works on all devices - iPhone, iPad, Android phones and tablets, Windows PC, Mac, and any device with a web browser.",
+      "q7": "Can I download stories from private TikTok accounts?",
+      "a7": "No, SaveTikFast can only download stories and slideshows from public TikTok accounts. Private account content is protected.",
+      "q8": "Is it free to download TikTok stories?",
+      "a8": "Yes, SaveTikFast is 100% free! There are no hidden fees, no subscriptions, and no limits on how many stories you can download.",
+      "q9": "Why is my story download not working?",
+      "a9": "If downloading fails, please check: 1) The link is correct and complete, 2) The story hasn't expired yet, 3) The account is public (not private). Try refreshing the page or using a different browser.",
+      "q10": "What's the difference between Story and Slideshow?",
+      "a10": "TikTok Stories are temporary posts that disappear after 24 hours. Slideshows (Photo Carousels) are permanent posts with multiple images. SaveTikFast can download both types."
     }
   },
   "features": {
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
     "fast": {
       "title": "Fast Download",
       "desc": "Download TikTok videos in seconds with our high-speed servers."
     },
-    "safe": {
-      "title": "Safe & Private",
-      "desc": "We don't store your videos or track your personal data."
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     },
     "unlimited": {
       "title": "Unlimited Usage",
       "desc": "Download as many videos as you want without restrictions."
+    },
+    "safe": {
+      "title": "Safe & Private",
+      "desc": "We don't store your videos or track your personal data."
     }
   },
   "how_to": {
     "title": "How to Download TikTok Videos Without Watermark",
+    "step1_title": "Copy Link",
     "step1": "Copy the TikTok video link you want to save.",
+    "step2_title": "Paste URL",
     "step2": "Paste the link into the download box at the top of this page.",
+    "step3_title": "Download",
     "step3": "Click the 'Download' button and your video will be saved immediately."
   },
   "tools": {
