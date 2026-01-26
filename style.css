@@ -1,7 +1,9 @@
 /* 1. المتغيرات والأساسيات */
 :root {
-    --primary: #ff0050;    /* أحمر تيك توك */
-    --secondary: #00f2ea;  /* فيروزي تيك توك */
+    --primary: #ff0050;
+    /* أحمر تيك توك */
+    --secondary: #00f2ea;
+    /* فيروزي تيك توك */
     --bg-dark: #0f0c29;
     --bg-gradient: radial-gradient(circle at top, #1a1a2e 0%, #0f0c29 100%);
     --glass: rgba(255, 255, 255, 0.05);
@@ -15,7 +17,122 @@
     --transition-smooth: transform 0.3s ease, opacity 0.3s ease;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* ============================================
+   SEO Navigation Menu - Video / MP3 / Stories
+   ============================================ */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(15, 12, 41, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 60px;
+    /* Below main header */
+    z-index: 999;
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    background: var(--glass);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a i {
+    font-size: 16px;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Active state - TikTok gradient */
+.nav-menu a.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    border: none;
+    box-shadow:
+        0 4px 15px rgba(255, 0, 80, 0.4),
+        0 0 20px rgba(0, 242, 234, 0.2);
+    font-weight: 700;
+}
+
+.nav-menu a.active:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        0 6px 20px rgba(255, 0, 80, 0.5),
+        0 0 30px rgba(0, 242, 234, 0.3);
+}
+
+/* Light Mode */
+body.light-mode .nav-menu {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom-color: #e0e0e0;
+}
+
+body.light-mode .nav-menu a {
+    color: rgba(0, 0, 0, 0.6);
+    background: #f5f5f5;
+}
+
+body.light-mode .nav-menu a:hover {
+    color: #1a1a2e;
+    background: #e8e8e8;
+}
+
+body.light-mode .nav-menu a.active {
+    color: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .nav-menu {
+        gap: 6px;
+        padding: 10px 12px;
+        top: 56px;
+    }
+
+    .nav-menu a {
+        padding: 8px 14px;
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .nav-menu a i {
+        font-size: 14px;
+    }
+
+    .nav-menu a span {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-menu a {
+        padding: 10px 16px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     background: var(--bg-gradient);
@@ -55,7 +172,10 @@ body {
     white-space: nowrap;
 }
 
-.logo i { color: var(--primary); font-size: 28px; }
+.logo i {
+    color: var(--primary);
+    font-size: 28px;
+}
 
 /* زر اختيار اللغة الأنيق */
 .lang-select {
@@ -71,7 +191,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 242, 234, 0.1);
 }
 
-.lang-select:hover { background: rgba(0, 242, 234, 0.1); transform: translateY(-2px); }
+.lang-select:hover {
+    background: rgba(0, 242, 234, 0.1);
+    transform: translateY(-2px);
+}
 
 /* 3. قسم الهيرو وصندوق التحميل */
 .hero-section {
@@ -110,7 +233,7 @@ body {
 .input-wrapper {
     flex: 1;
     display: flex;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     padding: 5px 15px;
 }
@@ -160,7 +283,11 @@ body {
 }
 
 /* 4. الأسئلة الشائعة (Accordion) - إصلاح الفتح والغلق */
-.container { max-width: 950px; margin: 50px auto; padding: 0 30px; }
+.container {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
 
 .faq-item {
     background: var(--glass);
@@ -185,10 +312,13 @@ body {
     justify-content: space-between;
     align-items: center;
     font-weight: 700;
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
 }
 
-.faq-question i { color: var(--secondary); transition: 0.4s; }
+.faq-question i {
+    color: var(--secondary);
+    transition: 0.4s;
+}
 
 .faq-answer {
     max-height: 0;
@@ -197,12 +327,24 @@ body {
     opacity: 0;
     overflow: hidden;
     transition: all 0.5s ease;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
-.faq-item.active { border-color: var(--secondary); background: rgba(0, 242, 234, 0.03); }
-.faq-item.active .faq-answer { max-height: 500px; padding-block: 20px; padding-inline: 22px; opacity: 1; }
-.faq-item.active .faq-question i { transform: rotate(180deg); }
+.faq-item.active {
+    border-color: var(--secondary);
+    background: rgba(0, 242, 234, 0.03);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-block: 20px;
+    padding-inline: 22px;
+    opacity: 1;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
 
 /* 5. الإعلانات والفوتر */
 .ad-container {
@@ -216,7 +358,7 @@ body {
 }
 
 footer {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     padding: 60px 20px 30px;
     margin-top: 80px;
     text-align: center;
@@ -237,13 +379,22 @@ footer {
     transition: var(--transition);
 }
 
-.footer-links a:hover { color: var(--secondary); }
+.footer-links a:hover {
+    color: var(--secondary);
+}
 
 /* تحسينات الموبايل */
 @media (max-width: 768px) {
-    .downloader-box { flex-direction: column; padding: 15px; }
-    .hero-section h1 { font-size: 2rem; }
+    .downloader-box {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
 }
+
 /* تنسيق قائمة اللغات الاحترافية */
 .custom-dropdown {
     position: relative;
@@ -291,7 +442,8 @@ footer {
     position: absolute;
     top: 120%;
     inset-inline-end: 0;
-    background: #1a1a2e; /* لون داكن عميق */
+    background: #1a1a2e;
+    /* لون داكن عميق */
     border: 1px solid var(--border);
     border-radius: 15px;
     width: max-content;
@@ -299,12 +451,16 @@ footer {
     max-width: 90vw;
     max-height: 300px;
     overflow-y: auto;
-    display: none; /* مخفية افتراضياً */
+    display: none;
+    /* مخفية افتراضياً */
     z-index: 1000;
     box-shadow: var(--shadow);
 }
 
-.dropdown-options.show { display: block; animation: fadeIn 0.3s ease; }
+.dropdown-options.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
 
 .option-item {
     padding-block: 12px;
@@ -315,12 +471,26 @@ footer {
     text-align: start;
 }
 
-.option-item:hover { background: rgba(0, 242, 234, 0.1); color: var(--secondary); }
-.option-item.active { color: var(--secondary); font-weight: bold; }
+.option-item:hover {
+    background: rgba(0, 242, 234, 0.1);
+    color: var(--secondary);
+}
+
+.option-item.active {
+    color: var(--secondary);
+    font-weight: bold;
+}
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Performance optimizations: Button loading states */
@@ -424,21 +594,48 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
 /* --- ألوان الوضع الصبحي (Light Mode) --- */
 body.light-mode {
     background: radial-gradient(circle at top, #f0f2f5 0%, #ffffff 100%);
     color: #1a1a2e;
 }
 
-body.light-mode .nav-container { background: rgba(255, 255, 255, 0.9); border-bottom-color: #ddd; }
-body.light-mode .logo { color: #1a1a2e; }
-body.light-mode .hero-section h1 { background: linear-gradient(to right, #1a1a2e, #ff0050); -webkit-background-clip: text; }
-body.light-mode .downloader-box, 
-body.light-mode .glass-card, 
-body.light-mode .faq-item { background: #ffffff; border-color: #ddd; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-body.light-mode #url-input { color: #1a1a2e; }
-body.light-mode .faq-question { background: #f9f9f9; color: #1a1a2e; }
-body.light-mode .faq-answer { background: #fff; color: #444; }
+body.light-mode .nav-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom-color: #ddd;
+}
+
+body.light-mode .logo {
+    color: #1a1a2e;
+}
+
+body.light-mode .hero-section h1 {
+    background: linear-gradient(to right, #1a1a2e, #ff0050);
+    -webkit-background-clip: text;
+}
+
+body.light-mode .downloader-box,
+body.light-mode .glass-card,
+body.light-mode .faq-item {
+    background: #ffffff;
+    border-color: #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode #url-input {
+    color: #1a1a2e;
+}
+
+body.light-mode .faq-question {
+    background: #f9f9f9;
+    color: #1a1a2e;
+}
+
+body.light-mode .faq-answer {
+    background: #fff;
+    color: #444;
+}
 
 /* زر تبديل الوضع */
 #theme-toggle {
@@ -463,7 +660,10 @@ body.light-mode .faq-answer { background: #fff; color: #444; }
     background: rgba(0, 242, 234, 0.1);
 }
 
-body.light-mode #theme-toggle { color: #ffae00; border-color: #ffae00; }
+body.light-mode #theme-toggle {
+    color: #ffae00;
+    border-color: #ffae00;
+}
 
 /* Navigation Link Styling */
 .nav-link {
@@ -506,7 +706,7 @@ body.light-mode .nav-link:hover {
 .nav-separator {
     width: 1px;
     height: 20px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     flex-shrink: 0;
 }
 
@@ -517,46 +717,46 @@ body.light-mode .nav-link:hover {
         padding-inline: 12px;
         gap: 6px;
     }
-    
+
     .logo {
         font-size: 18px;
         gap: 6px;
     }
-    
+
     .logo i {
         font-size: 22px;
     }
-    
+
     .nav-link {
         padding: 10px !important;
         margin-inline-start: 8px;
     }
-    
+
     .nav-link span {
         display: none;
     }
-    
+
     #theme-toggle {
         width: 36px;
         height: 36px;
         min-width: 36px;
         font-size: 1rem;
     }
-    
+
     .dropdown-trigger {
         padding: 8px 10px;
         font-size: 12px;
     }
-    
+
     .dropdown-trigger span {
         max-width: 70px;
         font-size: 12px;
     }
-    
+
     .dropdown-trigger .fa-chevron-down {
         display: none;
     }
-    
+
     .nav-separator {
         display: none;
     }
@@ -567,64 +767,100 @@ body.light-mode .nav-link:hover {
         padding-block: 8px;
         padding-inline: 10px;
     }
-    
+
     .logo {
         font-size: 16px;
     }
-    
+
     .logo i {
         font-size: 20px;
     }
-    
+
     .dropdown-trigger {
         padding: 8px;
     }
-    
+
     .dropdown-trigger span {
         display: none;
     }
 }
 
 /* --- تنسيق المميزات والطريقة --- */
-.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 55px; }
-.feature-card { 
-    background: var(--glass); 
-    padding: 40px 30px; 
-    border-radius: 20px; 
-    text-align: center; 
-    border: 1px solid var(--border); 
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 55px;
+}
+
+.feature-card {
+    background: var(--glass);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid var(--border);
     transition: var(--transition-smooth);
     box-shadow: var(--shadow-soft);
 }
-.feature-card:hover { 
-    transform: translateY(-8px); 
-    border-color: var(--secondary); 
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
     box-shadow: 0 10px 30px rgba(0, 242, 234, 0.2);
 }
-.feature-card i { font-size: 3rem; color: var(--secondary); margin-bottom: 22px; display: block; }
-.how-to-box { margin-top: 65px; padding: 45px; }
-.steps-wrapper { display: flex; justify-content: space-around; gap: 35px; flex-wrap: wrap; }
-.step { flex: 1; min-width: 200px; text-align: center; position: relative; }
-.step-num { 
-    width: 50px; 
-    height: 50px; 
-    background: var(--primary); 
-    color: white; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-weight: 800; 
-    margin: 0 auto 18px; 
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 22px;
+    display: block;
+}
+
+.how-to-box {
+    margin-top: 65px;
+    padding: 45px;
+}
+
+.steps-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.step-num {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    margin: 0 auto 18px;
     font-size: 1.3rem;
     box-shadow: 0 4px 15px rgba(255, 0, 80, 0.4);
     transition: var(--transition-smooth);
 }
+
 .step-num:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(255, 0, 80, 0.6);
 }
-body.light-mode .feature-card, body.light-mode .how-to-box { background: #ffffff; color: #1a1a2e; }
+
+body.light-mode .feature-card,
+body.light-mode .how-to-box {
+    background: #ffffff;
+    color: #1a1a2e;
+}
 
 /* --- Back Button - Improved with slide-in animation --- */
 .back-btn {
@@ -664,6 +900,7 @@ body.light-mode .feature-card, body.light-mode .how-to-box { background: #ffffff
         opacity: 0;
         transform: translateX(-30px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -691,10 +928,13 @@ body.light-mode .back-btn {
 }
 
 @keyframes iconPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.15);
         opacity: 0.85;
@@ -742,7 +982,7 @@ body.light-mode .dropdown-trigger span {
 body.light-mode .dropdown-options {
     background: #ffffff;
     border-color: #ddd;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 body.light-mode .option-item {
@@ -777,6 +1017,7 @@ body.light-mode .option-item.active {
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -849,7 +1090,7 @@ body {
         inset-inline-start: 50%;
         transform: translateX(-50%);
     }
-    
+
     [dir="rtl"] .dropdown-options {
         transform: translateX(50%);
     }
@@ -893,7 +1134,7 @@ body {
 .glass-card,
 .faq-item,
 .content-box {
-    box-shadow: 
+    box-shadow:
         0 8px 32px 0 rgba(0, 0, 0, 0.5),
         0 2px 8px 0 rgba(0, 0, 0, 0.3);
 }
@@ -902,7 +1143,7 @@ body {
 #download-btn:hover,
 .dropdown-trigger:hover {
     transform: translateY(-3px);
-    box-shadow: 
+    box-shadow:
         0 12px 40px rgba(255, 0, 80, 0.4),
         0 0 20px rgba(255, 0, 80, 0.3);
 }
@@ -933,6 +1174,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -946,7 +1188,7 @@ body {
 /* Enhanced input field focus states */
 #url-input:focus {
     border-color: var(--secondary);
-    box-shadow: 
+    box-shadow:
         0 0 0 3px rgba(0, 242, 234, 0.2),
         0 4px 12px rgba(0, 242, 234, 0.3);
     transform: translateY(-1px);
@@ -1012,7 +1254,7 @@ body {
         transform: none !important;
         z-index: 1001;
     }
-    
+
     /* RTL-specific fix for mobile */
     [dir="rtl"] .dropdown-options {
         inset-inline-end: 0 !important;
@@ -1026,7 +1268,7 @@ body {
     .nav-actions {
         position: relative;
     }
-    
+
     .dropdown-options {
         position: absolute !important;
         inset-inline-end: 0 !important;
@@ -1133,6 +1375,7 @@ body.light-mode .tools-text {
     .nav-link.tools-link {
         gap: 6px;
     }
+
     .tools-text {
         font-size: 12px;
         letter-spacing: 0.2px;
@@ -1144,10 +1387,12 @@ body.light-mode .tools-text {
     .nav-link.tools-link {
         gap: 5px;
     }
+
     .tools-text {
         font-size: 11px;
         letter-spacing: 0.1px;
     }
+
     .nav-link.tools-link svg {
         width: 18px;
         height: 18px;
@@ -1159,12 +1404,14 @@ body.light-mode .tools-text {
     .nav-link.tools-link {
         gap: 4px;
     }
+
     .tools-text {
         font-size: 10px;
         /* Increase font-weight to maintain readability at smaller sizes */
         font-weight: 700;
         letter-spacing: 0;
     }
+
     .nav-link.tools-link svg {
         width: 16px;
         height: 16px;
@@ -1177,10 +1424,12 @@ body.light-mode .tools-text {
         gap: 3px;
         padding: 6px 8px !important;
     }
+
     .tools-text {
         font-size: 9px;
         font-weight: 700;
     }
+
     .nav-link.tools-link svg {
         width: 14px;
         height: 14px;
@@ -1196,11 +1445,13 @@ body.light-mode .tools-text {
         transform: scale(0.95);
         transform-origin: center;
     }
+
     .tools-text {
         font-size: 8px;
         font-weight: 800;
         letter-spacing: -0.2px;
     }
+
     .nav-link.tools-link svg {
         width: 12px;
         height: 12px;
@@ -1213,6 +1464,7 @@ body.light-mode .tools-text {
         /* Scale down by 10% as final safety net for extreme cases */
         transform: scale(0.9);
     }
+
     .tools-text {
         font-size: 7px;
     }
@@ -1273,7 +1525,7 @@ body.light-mode .tools-text {
     background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
     color: #ffffff;
     border: none;
-    box-shadow: 
+    box-shadow:
         0 4px 20px rgba(255, 0, 80, 0.4),
         0 0 40px rgba(0, 242, 234, 0.2);
     font-weight: 800;
@@ -1283,7 +1535,7 @@ body.light-mode .tools-text {
 
 .btn-download.btn-hd:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 
+    box-shadow:
         0 8px 30px rgba(255, 0, 80, 0.5),
         0 0 60px rgba(0, 242, 234, 0.3);
 }
@@ -1295,7 +1547,7 @@ body.light-mode .tools-text {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     transition: left 0.5s;
 }
 
@@ -1336,10 +1588,13 @@ body.light-mode .tools-text {
 }
 
 @keyframes badgePulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
         transform: scale(1);
     }
+
     50% {
         opacity: 0.8;
         transform: scale(1.05);
@@ -1431,17 +1686,226 @@ body.light-mode .result-desc {
         padding: 14px 20px;
         font-size: 14px;
     }
-    
+
     .btn-download .badge {
         font-size: 10px;
         padding: 3px 8px;
     }
-    
+
     .result-thumbnail img {
         width: 150px;
     }
-    
+
     .play-overlay {
         font-size: 40px;
+    }
+}
+
+/* ============================================
+   FAQ Section - Modern Details/Summary Style
+   ============================================ */
+.faq-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.faq-section .section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.faq-section .section-title i {
+    color: var(--secondary);
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* FAQ Item - Details Element */
+.faq-item-new {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item-new:hover {
+    border-color: rgba(0, 242, 234, 0.3);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* FAQ Question - Summary Element */
+.faq-item-new summary {
+    padding: 20px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.faq-item-new summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item-new summary::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--secondary);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.faq-item-new[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.faq-item-new summary:hover {
+    background: rgba(0, 242, 234, 0.05);
+}
+
+/* FAQ Answer Container */
+.faq-answer-new {
+    padding: 0 25px 20px 25px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid var(--border);
+    animation: fadeInAnswer 0.3s ease;
+}
+
+.faq-answer-new p {
+    margin: 0;
+    padding-top: 15px;
+}
+
+.faq-answer-new a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.faq-answer-new a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+@keyframes fadeInAnswer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Open State - Active FAQ */
+.faq-item-new[open] {
+    border-color: var(--secondary);
+    background: rgba(0, 242, 234, 0.03);
+}
+
+.faq-item-new[open] summary {
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+/* Light Mode */
+body.light-mode .faq-section .section-title {
+    color: #1a1a2e;
+}
+
+body.light-mode .faq-item-new {
+    background: #ffffff;
+    border-color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .faq-item-new summary {
+    color: #1a1a2e;
+    background: #fafafa;
+}
+
+body.light-mode .faq-item-new summary:hover {
+    background: rgba(0, 242, 234, 0.08);
+}
+
+body.light-mode .faq-answer-new {
+    color: #444444;
+    background: #f5f5f5;
+    border-top-color: #e0e0e0;
+}
+
+body.light-mode .faq-item-new[open] {
+    border-color: #00b8b0;
+    background: rgba(0, 242, 234, 0.05);
+}
+
+body.light-mode .faq-item-new[open] summary {
+    color: #00b8b0;
+}
+
+/* Mobile Responsive FAQ */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 0 15px;
+    }
+
+    .faq-section .section-title {
+        font-size: 1.5rem;
+    }
+
+    .faq-item-new summary {
+        padding: 16px 20px;
+        font-size: 14px;
+    }
+
+    .faq-item-new summary::after {
+        font-size: 12px;
+    }
+
+    .faq-answer-new {
+        padding: 0 20px 16px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-item-new summary {
+        padding: 14px 16px;
+        font-size: 13px;
+    }
+
+    .faq-answer-new {
+        padding: 0 16px 14px 16px;
+        font-size: 13px;
     }
 }
