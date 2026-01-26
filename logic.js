@@ -18,7 +18,8 @@ const SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e523
 /**
  * Cloudflare Worker URL for proxying video downloads (CORS bypass)
  */
-const WORKER_URL = "https://misty-violet-50ef.banzox9595.workers.dev";
+const WORKER_URL = "https://api.savetik-fast.xyz";
+
 
 // ==================== DOM ELEMENTS ====================
 
