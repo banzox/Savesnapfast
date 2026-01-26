@@ -301,6 +301,18 @@ function renderResult(data) {
             </div>
         </div>
     `;
+
+    // Excellent UX Strategy: Auto-scroll to results (accounting for fixed header)
+    setTimeout(() => {
+        const headerOffset = 100;
+        const elementPosition = resultArea.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    }, 100);
 }
 
 /**
