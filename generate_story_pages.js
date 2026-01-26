@@ -42,31 +42,117 @@ const LANGUAGES = {
 
 const FAQS = {
     ar: [
-        ('كيف أحمل ستوري تيك توك بدون علامة مائية؟', 'انسخ رابط الستوري من تيك توك والصقه في الأداة أعلاه واضغط تحميل. سيتم حفظ الستوري بجودة عالية بدون أي علامة مائية.'),
-        ('هل يمكنني تحميل سلايدشو صور من تيك توك؟', 'نعم! أداتنا تدعم تحميل سلايدشو الصور بالإضافة للفيديوهات العادية والستوريات.'),
-        ('ما جودة الستوري المحمل؟', 'نوفر أعلى جودة متاحة من الستوري الأصلي، تصل لـ Full HD 1080p.'),
-        ('هل التحميل مجاني وآمن؟', 'نعم، الخدمة مجانية 100% وآمنة تماماً. لا نطلب تسجيل دخول ولا نحفظ ملفاتك.'),
-        ('هل يعمل على الآيفون والأندرويد؟', 'نعم، يعمل على جميع الأجهزة: آيفون، أندرويد، كمبيوتر، وأي جهاز بمتصفح.'),
-        ('كم يستغرق تحميل الستوري؟', 'التحميل فوري! يستغرق ثوانٍ فقط لحفظ الستوري على جهازك.'),
-        ('هل يمكنني تحميل ستوري خاص؟', 'لا، يمكن تحميل الستوريات العامة فقط. الستوريات الخاصة محمية.'),
-        ('لماذا لا يعمل الرابط؟', 'تأكد من نسخ الرابط الصحيح للستوري. جرب فتح الستوري مباشرة ونسخ الرابط.'),
-        ('هل هناك حد للتحميلات؟', 'لا حدود! حمّل ما تشاء من الستوريات مجاناً بدون قيود.'),
-        ('هل يمكنني مشاركة الستوري المحمل؟', 'نعم، بعد التحميل يمكنك مشاركته على أي منصة. لكن يرجى احترام حقوق المنشئ.')
+        { q: 'كيف أحمل ستوري تيك توك بدون علم صاحبها؟', a: 'انسخ رابط الستوري، الصقه في موقع SaveTikFast واضغط تحميل. التحميل يتم بخصوصية تامة ولا يتم إشعار صاحب الحساب.' },
+        { q: 'هل يمكنني حفظ صور السلايدشو من تيك توك؟', a: 'نعم! أداتنا تدعم تحميل "سلايدشو الصور" (Photo Slideshows) وتحفظ كل الصور بجودة عالية دفعة واحدة.' },
+        { q: 'هل جودة الستوري المحملة تكون واضحة؟', a: 'نوفر الستوري بنفس جودتها الأصلية (HD 1080p) بدون أي تقليل في الدقة.' },
+        { q: 'هل تعمل الأداة على الآيفون؟', a: 'نعم، SaveTikFast يعمل بسلاسة على الآيفون (iOS) عبر متصفح سفاري، وكذلك على الأندرويد والكمبيوتر.' },
+        { q: 'كم تبقى الستوري متاحة للتحميل؟', a: 'بمجرد نشر الستوري على تيك توك تكون متاحة للتحميل لمدة 24 ساعة (أو حتى يحذفها الناشر). حملها قبل اختفائها!' },
+        { q: 'هل يمكنني تحميل ستوريات من حساب خاص (Private)؟', a: 'لا، نحترم الخصوصية ولا ندعم تحميل المحتوى من الحسابات الخاصة والمقفلة.' },
+        { q: 'هل التحميل مجاني؟', a: 'نعم، الخدمة مجانية 100% وبدون عدد محدود للتحميلات.' },
+        { q: 'أين أجد الستوري بعد تحميلها؟', a: 'عادة ما تجد الملفات في مجلد "الصور" أو "التنزيلات" في هاتفك.' },
+        { q: 'هل أحتاج لتسجيل الدخول بحسابي؟', a: 'لا! لا نطلب منك تسجيل الدخول أبداً. فقط ضع الرابط وحمل.' },
+        { q: 'هل يمكنني إعادة نشر الستوري؟', a: 'يمكنك ذلك، ولكن يفضل دائماً استئذان صاحب المحتوى الأصلي أو ذكر المصدر.' }
     ],
     en: [
-        ('How to download TikTok stories without watermark?', 'Copy the story link from TikTok, paste it in the tool above and click Download. The story will be saved in high quality without any watermark.'),
-        ('Can I download photo slideshows from TikTok?', 'Yes! Our tool supports downloading photo slideshows in addition to regular videos and stories.'),
-        ('What quality are the downloaded stories?', 'We provide the highest quality available from the original story, up to Full HD 1080p.'),
-        ('Is downloading free and safe?', 'Yes, the service is 100% free and completely safe. No login required and we don\'t store your files.'),
-        ('Does it work on iPhone and Android?', 'Yes, it works on all devices: iPhone, Android, PC, and any device with a browser.'),
-        ('How long does story download take?', 'Download is instant! It takes only seconds to save the story to your device.'),
-        ('Can I download private stories?', 'No, only public stories can be downloaded. Private stories are protected.'),
-        ('Why isn\'t the link working?', 'Make sure you copied the correct story link. Try opening the story directly and copying the link.'),
-        ('Is there a download limit?', 'No limits! Download as many stories as you want for free without restrictions.'),
-        ('Can I share the downloaded story?', 'Yes, after downloading you can share it on any platform. But please respect the creator\'s rights.')
+        { q: 'How to download TikTok Stories anonymously?', a: 'Copy the story link, paste it on SaveTikFast, and click Download. The creator will not know you saved it.' },
+        { q: 'Can I download TikTok photo slideshows?', a: 'Yes! We support downloading photo slideshows. All images are downloaded in high quality at once.' },
+        { q: 'What is the quality of downloaded stories?', a: 'We save stories in their original resolution (High Definition 1080p) without any compression.' },
+        { q: 'Does this work on iPhone iOS?', a: 'Yes, our tool works perfectly on iPhone (Safari), Android, and PC browsers.' },
+        { q: 'How long can I download a story?', a: 'Stories are available for 24 hours on TikTok. Download them here before they expire!' },
+        { q: 'Can I download private stories?', a: 'No, we respect user privacy. You can only download stories from public accounts.' },
+        { q: 'Is it free to use?', a: 'Yes, SaveTikFast is 100% free with unlimited downloads.' },
+        { q: 'Where are stories saved on my phone?', a: 'Check your "Photos" app or "Downloads" folder after saving.' },
+        { q: 'Do I need to log in to TikTok?', a: 'No login required. We extract the story using the link only.' },
+        { q: 'Can I save stories without watermark?', a: 'Yes, all stories and videos are downloaded clean without the TikTok watermark.' }
+    ],
+    fr: [
+        { q: 'Comment télécharger une story TikTok anonymement ?', a: 'Copiez le lien, collez-le ici et téléchargez. Le créateur ne saura pas que vous avez sauvegardé sa story.' },
+        { q: 'Puis-je télécharger des diaporamas photos ?', a: 'Oui ! Nous supportons le téléchargement des "Slideshows" photo en haute qualité.' },
+        { q: 'Quelle est la qualité des stories ?', a: 'Originale (HD 1080p). Aucune perte de qualité lors du téléchargement.' },
+        { q: 'Cela fonctionne-t-il sur iPhone ?', a: 'Oui, compatible avec iPhone (Safari), Android et PC/Mac.' },
+        { q: 'Combien de temps pour télécharger ?', a: 'Les stories durent 24h. Sauvegardez-les ici avant qu\'elles ne disparaissent.' },
+        { q: 'Puis-je télécharger depuis un compte privé ?', a: 'Non, seuls les comptes publics sont supportés par respect pour la vie privée.' },
+        { q: 'Est-ce gratuit ?', a: '100% gratuit et illimité.' },
+        { q: 'Où se trouve le fichier téléchargé ?', a: 'Vérifiez votre galerie photo ou le dossier Téléchargements.' },
+        { q: 'Faut-il se connecter ?', a: 'Non, aucun compte TikTok n\'est nécessaire.' },
+        { q: 'Le filigrane est-il supprimé ?', a: 'Oui, toutes les stories sont téléchargées sans logo TikTok.' }
+    ],
+    es: [
+        { q: '¿Cómo descargar historias de TikTok anónimamente?', a: 'Copia el enlace, pégalo aquí y descarga. El creador no sabrá que la guardaste.' },
+        { q: '¿Puedo descargar presentaciones de fotos?', a: '¡Sí! Soportamos la descarga de "Photo Slideshows" en alta calidad.' },
+        { q: '¿Qué calidad tienen las historias?', a: 'Guardamos en la resolución original (HD 1080p) sin compresión.' },
+        { q: '¿Funciona en iPhone?', a: 'Sí, funciona perfecto en iPhone (Safari), Android y PC.' },
+        { q: '¿Cuánto tiempo tengo para descargar?', a: 'Las historias duran 24h. ¡Descárgalas antes de que expiren!' },
+        { q: '¿Soporta cuentas privadas?', a: 'No, solo cuentas públicas. No podemos acceder a contenido privado.' },
+        { q: '¿Es gratis?', a: 'Sí, SaveTikFast es 100% gratuito e ilimitado.' },
+        { q: '¿Dónde se guardan los archivos?', a: 'Revisa tu Galería o carpeta de Descargas.' },
+        { q: '¿Necesito iniciar sesión?', a: 'No requerimos tu cuenta ni contraseña.' },
+        { q: '¿Se descarga sin marca de agua?', a: 'Sí, totalmente limpio sin el logo de TikTok.' }
+    ],
+    de: [
+        { q: 'Wie lade ich TikTok Stories anonym herunter?', a: 'Link kopieren, hier einfügen und laden. Der Ersteller wird nicht benachrichtigt.' },
+        { q: 'Kann ich Foto-Diashows laden?', a: 'Ja! Wir unterstützen den Download von Foto-Slideshows in HD.' },
+        { q: 'Wie ist die Qualität?', a: 'Wir speichern in Originalqualität (Full HD) ohne Verlust.' },
+        { q: 'Geht das auf dem iPhone?', a: 'Ja, funktioniert problemlos auf iPhone, Android und PC.' },
+        { q: 'Kann ich private Stories laden?', a: 'Nein, nur öffentliche Stories werden unterstützt.' },
+        { q: 'Ist es kostenlos?', a: 'Ja, komplett kostenlos und ohne Limits.' },
+        { q: 'Wo werden die Dateien gespeichert?', a: 'In Ihrer Galerie oder im Download-Ordner.' },
+        { q: 'Muss ich mich anmelden?', a: 'Kein Login erforderlich.' },
+        { q: 'Sind die Videos ohne Wasserzeichen?', a: 'Ja, alle Downloads sind ohne störendes TikTok-Logo.' },
+        { q: 'Wie lange dauert der Download?', a: 'Sofort! In wenigen Sekunden ist die Story gespeichert.' }
+    ],
+    // Add translations for ID, TR, RU, PT... (Template populated)
+    ru: [
+        { q: 'Как скачать историю ТикТок анонимно?', a: 'Скопируйте ссылку, вставьте здесь и скачайте. Автор не узнает об этом.' },
+        { q: 'Можно ли скачать слайд-шоу из фото?', a: 'Да! Мы поддерживаем загрузку фото-слайдшоу в высоком качестве.' },
+        { q: 'Какое качество видео?', a: 'Оригинальное HD качество без сжатия.' },
+        { q: 'Работает на айфоне?', a: 'Да, работает на iPhone, Android и ПК.' },
+        { q: 'Можно ли скачать из закрытого профиля?', a: 'Нет, только из открытых (публичных) аккаунтов.' },
+        { q: 'Это бесплатно?', a: 'Да, 100% бесплатно и без ограничений.' },
+        { q: 'Где найти скачанный файл?', a: 'Проверьте галерею или папку Загрузки.' },
+        { q: 'Нужна ли регистрация?', a: 'Нет, вход в аккаунт не требуется.' },
+        { q: 'Видео будет без водяного знака?', a: 'Да, мы удаляем логотип TikTok.' },
+        { q: 'Как быстро происходит скачивание?', a: 'Мгновенно, всего за пару секунд.' }
+    ],
+    tr: [
+        { q: 'TikTok hikayeleri gizlice nasıl indirilir?', a: 'Linki kopyalayın, yapıştırın ve indirin. Karşı tarafa bildirim gitmez.' },
+        { q: 'Fotoğraf slaytlarını indirebilir miyim?', a: 'Evet! Fotoğraf slaytlarını (Slideshow) HD kalitede indirebilirsiniz.' },
+        { q: 'Videoların kalitesi nedir?', a: 'Orijinal kalitede (HD 1080p) kaydedilir.' },
+        { q: 'iPhone\'da çalışıyor mu?', a: 'Evet, iPhone, Android ve PC\'de sorunsuz çalışır.' },
+        { q: 'Gizli hesaptan indirebilir miyim?', a: 'Hayır, sadece herkese açık hesaplar desteklenir.' },
+        { q: 'Ücretli mi?', a: 'Hayır, tamamen ücretsiz ve sınırsızdır.' },
+        { q: 'Dosyalar nereye iniyor?', a: 'Galerinize veya İndirilenler klasörüne bakın.' },
+        { q: 'Giriş yapmam gerekiyor mu?', a: 'Hayır, şifre veya üyelik gerekmez.' },
+        { q: 'Filigran var mı?', a: 'Hayır, filigransız (logosuz) olarak indirilir.' },
+        { q: 'İndirme ne kadar sürer?', a: 'Sadece birkaç saniye sürer.' }
+    ],
+    id: [
+        { q: 'Cara download Story TikTok secara anonim?', a: 'Salin tautan, tempel di sini, dan unduh. Pemilik akun tidak akan tahu.' },
+        { q: 'Bisa download slideshow foto?', a: 'Ya! Kami mendukung unduhan Slideshow Foto kualitas HD.' },
+        { q: 'Bagaimana kualitas videonya?', a: 'Kualitas asli (HD 1080p) tanpa kompresi.' },
+        { q: 'Apakah bisa di iPhone?', a: 'Ya, bekerja di iPhone (Safari), Android, dan PC.' },
+        { q: 'Bisa download dari akun privat?', a: 'Tidak, hanya akun publik yang didukung.' },
+        { q: 'Apakah gratis?', a: 'Ya, 100% gratis tanpa batas.' },
+        { q: 'Di mana file tersimpan?', a: 'Cek Galeri atau folder Download di HP Anda.' },
+        { q: 'Perlu login akun?', a: 'Tidak perlu login atau daftar.' },
+        { q: 'Apakah ada watermark?', a: 'Tidak, video bersih tanpa watermark TikTok.' },
+        { q: 'Berapa lama prosesnya?', a: 'Sangat cepat, hanya beberapa detik.' }
+    ],
+    pt: [
+        { q: 'Como baixar Stories anonimamente?', a: 'Copie o link, cole aqui e baixe. O criador não saberá.' },
+        { q: 'Posso baixar apresentações de fotos?', a: 'Sim! Baixe slideshows de fotos em alta qualidade.' },
+        { q: 'Qual a qualidade?', a: 'Qualidade original (HD 1080p) sem perdas.' },
+        { q: 'Funciona no iPhone?', a: 'Sim, compatível com iPhone, Android e PC.' },
+        { q: 'Posso baixar de conta privada?', a: 'Não, apenas contas públicas.' },
+        { q: 'É gratuito?', a: 'Sim, totalmente grátis e ilimitado.' },
+        { q: 'Onde fica salvo?', a: 'Olhe na sua Galeria ou Downloads.' },
+        { q: 'Preciso de login?', a: 'Não, sem cadastro.' },
+        { q: 'Vem com marca d\'água?', a: 'Não, removemos a marca do TikTok.' },
+        { q: 'Demora muito?', a: 'É instantâneo, leva segundos.' }
     ]
 };
 
+// Default FAQs for languages without specific translations
 const DEFAULT_FAQS = FAQS.en;
 
 function generateHTML(lang, data) {
@@ -75,8 +161,8 @@ function generateHTML(lang, data) {
 
     const faqsHTML = faqs.map(faq => `
                 <details class="faq-item-new">
-                    <summary>${faq[0]}</summary>
-                    <div class="faq-answer-new"><p>${faq[1]}</p></div>
+                    <summary>${faq.q}</summary>
+                    <div class="faq-answer-new"><p>${faq.a}</p></div>
                 </details>`).join('');
 
     return `<!DOCTYPE html>
@@ -111,6 +197,11 @@ function generateHTML(lang, data) {
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
+    
+    <!-- Correct i18next Libraries Loader -->
+    <script src="https://unpkg.com/i18next@21.6.10/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.0/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
 </head>
 <body${isRTL ? ' class="rtl"' : ''}>
     <header id="main-header"></header>
@@ -149,6 +240,7 @@ ${faqsHTML}
     </main>
 
     <footer id="main-footer"></footer>
+    
     <script src="/js/i18n-setup.js"></script>
     <script src="/logic.js"></script>
 </body>
