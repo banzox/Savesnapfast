@@ -143,10 +143,8 @@ function renderResult(data) {
         return;
     }
 
-    // Extract author name for viral filename
-    const authorName = data.author?.nickname
-        || data.author?.unique_id
-        || data.author?.username
+    // Extract author name for viral filename (new API uses `author` string)
+    const authorName = data.author
         || data.authorName
         || 'TikTok';
 
@@ -155,36 +153,24 @@ function renderResult(data) {
     const hdVideoFileName = generateViralFileName(authorName + '_HD', 'mp4');
     const audioFileName = generateViralFileName(authorName, 'mp3');
 
-    // Get video URLs (handle different API response formats)
-    // Standard quality video URL
-    const videoUrl = data.play
-        || data.video?.playAddr
-        || data.wmplay
-        || '';
+    // Get video URLs from new API response structure
+    // Primary video URL (no watermark)
+    const videoUrl = data.video || '';
 
-    // HD quality video URL (highest quality available)
-    const hdVideoUrl = data.hdplay
-        || data.video?.noWatermark
-        || data.video?.playAddr
-        || videoUrl
-        || '';
+    // HD video URL (same as video in new API, or fallback)
+    const hdVideoUrl = data.video || '';
 
-    const audioUrl = data.music?.playUrl
-        || data.music_info?.play
-        || data.music
-        || '';
+    // Audio/Music URL
+    const audioUrl = data.music || '';
 
-    // Get thumbnail
-    const thumbnail = data.video?.cover
-        || data.cover
-        || data.origin_cover
-        || '';
+    // Get thumbnail (cover image)
+    const thumbnail = data.cover || '';
 
-    // Get video description
-    const description = data.desc
-        || data.title
-        || data.video?.desc
-        || '';
+    // Get video title/description
+    const description = data.title || '';
+
+    // Check if this is a photo slideshow
+    const images = data.images || [];
 
     // Build result HTML with two download buttons
     resultArea.innerHTML = `
@@ -294,8 +280,8 @@ async function fetchVideoData(url) {
     showLoading();
 
     try {
-        // API endpoint (using RapidAPI or similar service)
-        const apiUrl = `${WORKER_URL}/api/tiktok?url=${encodeURIComponent(url)}`;
+        // New Cloudflare Worker API endpoint
+        const apiUrl = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
 
         const response = await fetch(apiUrl, {
             method: 'GET',
@@ -314,8 +300,11 @@ async function fetchVideoData(url) {
             throw new Error(data.error);
         }
 
+        // Extract result object from new API response
+        const result = data.result || data;
+
         // Render the result
-        renderResult(data);
+        renderResult(result);
 
     } catch (error) {
         console.error('Fetch error:', error);
