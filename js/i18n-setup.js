@@ -54,6 +54,25 @@ function getPagePathWithoutLang() {
     return path;
 }
 
+/* Helper: detect if site uses /en/ folder by checking hreflang alternates (cached) */
+function englishUsesFolder() {
+    // cache result on window to avoid repeated DOM queries
+    if (typeof window.__ENGLISH_IN_FOLDER !== 'undefined') return window.__ENGLISH_IN_FOLDER;
+    try {
+        const alt = document.querySelector('link[hreflang="en"]');
+        if (alt && alt.href) {
+            const p = new URL(alt.href, window.location.origin).pathname;
+            window.__ENGLISH_IN_FOLDER = p.startsWith('/en/') || p === '/en';
+            return window.__ENGLISH_IN_FOLDER;
+        }
+    } catch (e) {
+        // ignore URL parsing errors
+    }
+    // Fallback: assume English is at root unless proven otherwise
+    window.__ENGLISH_IN_FOLDER = false;
+    return window.__ENGLISH_IN_FOLDER;
+}
+
 /**
  * Build URL for a specific language
  * Handles both Root structure (en=root) and Deep structure (mp3/en exists)
@@ -74,14 +93,21 @@ function buildLanguageUrl(targetLang, pagePath = null) {
         return `/${type}/${targetLang}${suffix || '/'}`;
     }
 
-    // Standard Structure (Root)
+    // Standard Structure
     if (targetLang === 'en') {
-        // English is at root
-        return currentPagePath; // e.g., /about.html
+        // If the site uses an explicit /en/ folder (detected via hreflang), include it.
+        if (englishUsesFolder()) {
+            // ensure we don't duplicate slashes
+            const path = currentPagePath === '/' ? '/' : currentPagePath;
+            return `/en${path}`.replace(/\/\/+/g, '/');
+        }
+        // Default: English at root
+        return currentPagePath;
     }
 
     // Other languages are in subfolders
-    return '/' + targetLang + currentPagePath;
+    const suffix = currentPagePath === '/' ? '/' : currentPagePath;
+    return `/${targetLang}${suffix}`.replace(/\/\/+/g, '/');
 }
 
 /**
@@ -109,7 +135,7 @@ window.navigateWithLang = function (basePath) {
 
 // Helper function to preserve language in URLs
 function getLocalizedUrl(path) {
-    const currentLng = i18next.language || getCurrentLanguageFromPath();
+    const currentLng = (typeof i18next !== 'undefined' && i18next.language) ? i18next.language : getCurrentLanguageFromPath();
     return buildLanguageUrl(currentLng, path);
 }
 
@@ -121,6 +147,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
+        // Determine initial language: prefer saved user choice, then path, then browser
+        const savedLng = localStorage.getItem('i18nextLng');
+        const initialLng = savedLng || getCurrentLanguageFromPath() || (navigator.language || navigator.userLanguage || 'en').slice(0,2);
+
         await i18next
             .use(i18nextHttpBackend)
             .use(i18nextBrowserLanguageDetector)
@@ -130,17 +160,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // استخدام cache headers بدلاً من timestamp للتحكم في التخزين المؤقت
                 backend: { loadPath: '/locales/{{lng}}.json' },
 
-                // Use custom detection: path-based first, then localStorage
-                lng: getCurrentLanguageFromPath(), // Force use path-based detection
+                // Use prioritized initial language (saved -> path -> browser)
+                lng: initialLng,
                 detection: {
-                    order: ['localStorage', 'navigator'], // Fallback only
+                    order: ['localStorage', 'navigator'],
                     caches: ['localStorage']
                 }
             });
 
         // Set initial RTL direction based on detected language
-        const initialLng = i18next.language;
-        applyDirection(initialLng);
+        const initialDetectedLng = i18next.language;
+        applyDirection(initialDetectedLng);
 
         injectMasterLayout();
         updateContent();
@@ -326,7 +356,7 @@ function createPicker(slotId) {
     const slot = document.getElementById(slotId);
     if (!slot) return;
 
-    const currentLng = i18next.language || 'en';
+    const currentLng = (typeof i18next !== 'undefined' && i18next.language) ? i18next.language : 'en';
     const currentName = languageNames[currentLng] || currentLng.toUpperCase();
 
     slot.innerHTML = `
