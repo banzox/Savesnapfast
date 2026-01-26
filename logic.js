@@ -309,38 +309,46 @@ function renderResult(data) {
  * @param {string} fileName - Viral filename to save as
  */
 async function downloadFile(url, fileName) {
-    // 1. فتح الإعلان (Smart Link)
+    // 1. Trigger Ad (Smart Link)
     if (typeof SMART_LINK !== 'undefined' && SMART_LINK) {
         window.open(SMART_LINK, '_blank');
     }
 
-    // 2. التحميل المباشر من الرابط
     try {
+        // 2. Force Download via Blob (Prevents video playback in tab)
+        // Note: This requires CORS to be allowed on the video server.
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const blob = await response.blob();
+        const blobUrl = window.URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = blobUrl;
+        a.download = fileName; // Forces browser to save file
+        document.body.appendChild(a);
+
+        a.click();
+
+        // Cleanup
+        setTimeout(() => {
+            window.URL.revokeObjectURL(blobUrl);
+            document.body.removeChild(a);
+        }, 1000);
+
+    } catch (error) {
+        console.warn('Blob download failed (likely CORS), falling back to direct link:', error);
+
+        // Fallback: Direct Link (May open in new tab depending on browser)
         const a = document.createElement('a');
         a.href = url;
         a.download = fileName;
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
-
         document.body.appendChild(a);
         a.click();
-
-        setTimeout(() => {
-            document.body.removeChild(a);
-        }, 1000);
-
-        // إعادة تفعيل الزر إذا كان معطلاً
-        const btn = document.querySelector(`[data-url="${url}"]`);
-        if (btn) {
-            btn.disabled = false;
-            btn.innerHTML = fileName.endsWith('.mp3')
-                ? '<i class="fas fa-music"></i> Download MP3'
-                : '<i class="fas fa-video"></i> Download Video <span class="badge">No Watermark</span>';
-        }
-
-    } catch (error) {
-        console.error('Download error:', error);
-        alert('Download failed. Please try again.');
+        setTimeout(() => document.body.removeChild(a), 1000);
     }
 }
 
