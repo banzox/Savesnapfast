@@ -147,6 +147,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
+        // Determine initial language: prefer saved user choice, then path, then browser
+        const savedLng = localStorage.getItem('i18nextLng');
+        const initialLng = savedLng || getCurrentLanguageFromPath() || (navigator.language || navigator.userLanguage || 'en').slice(0,2);
+
         await i18next
             .use(i18nextHttpBackend)
             .use(i18nextBrowserLanguageDetector)
@@ -156,17 +160,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // استخدام cache headers بدلاً من timestamp للتحكم في التخزين المؤقت
                 backend: { loadPath: '/locales/{{lng}}.json' },
 
-                // Use custom detection: path-based first, then localStorage
-                lng: getCurrentLanguageFromPath(), // Force use path-based detection
+                // Use prioritized initial language (saved -> path -> browser)
+                lng: initialLng,
                 detection: {
-                    order: ['localStorage', 'navigator'], // Fallback only
+                    order: ['localStorage', 'navigator'],
                     caches: ['localStorage']
                 }
             });
 
         // Set initial RTL direction based on detected language
-        const initialLng = i18next.language;
-        applyDirection(initialLng);
+        const initialDetectedLng = i18next.language;
+        applyDirection(initialDetectedLng);
 
         injectMasterLayout();
         updateContent();
