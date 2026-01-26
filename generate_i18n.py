@@ -227,6 +227,10 @@ def process_html_for_language(html_content, translations, lang_code, filename):
         lang_script = soup.new_tag("script")
         lang_script.string = f"localStorage.setItem('i18nextLng', '{lang_code}');"
         head.append(lang_script)
+        
+        # Add Manifest
+        manifest_link = soup.new_tag("link", rel="manifest", href="/manifest.json")
+        head.append(manifest_link)
     
     return str(soup)
 

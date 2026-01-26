@@ -482,5 +482,4 @@ if (urlInput) {
 // Make downloadFile globally accessible (used in onclick handlers)
 window.downloadFile = downloadFile;
 
-// Debug: Log initialization
-console.log('SaveTikFast Logic v2.0 loaded successfully.');
+

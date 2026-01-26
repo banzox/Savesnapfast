@@ -1,0 +1,21 @@
+{
+    "name": "SaveTikFast - TikTok Downloader",
+    "short_name": "SaveTikFast",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#00f2ea",
+    "description": "Download TikTok videos, stories, and MP3 audio instantly without watermark.",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
