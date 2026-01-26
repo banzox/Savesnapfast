@@ -159,6 +159,15 @@ function generateHTML(lang, data) {
     const faqs = FAQS[lang] || DEFAULT_FAQS;
     const isRTL = data.dir === 'rtl';
 
+    // Generate Hreflang Tags
+    const hreflangTags = Object.keys(LANGUAGES).map(code =>
+        `<link rel="alternate" hreflang="${code}" href="https://savetik-fast.xyz/story/${code}/" />`
+    ).join('\n    ');
+
+    // Add x-default (English)
+    const xDefault = `<link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/story/en/" />`;
+    const fullHreflangs = `${xDefault}\n    ${hreflangTags}`;
+
     const faqsHTML = faqs.map(faq => `
                 <details class="faq-item-new">
                     <summary>${faq.q}</summary>
@@ -176,6 +185,9 @@ function generateHTML(lang, data) {
     <meta name="description" content="${data.desc}">
     <meta name="keywords" content="tiktok story download, tiktok slideshow download, ${lang}, download tiktok stories 2026, tiktok photo slideshow">
     
+    <!-- Hreflang Tags for SEO -->
+    ${fullHreflangs}
+
     <link rel="canonical" href="https://savetik-fast.xyz/story/${lang}/">
     <link rel="icon" type="image/png" href="/favicon.png">
     

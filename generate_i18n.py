@@ -96,7 +96,7 @@ def discover_html_files():
     html_files = []
     
     # Directories to exclude (language codes + system dirs)
-    excluded_dirs = LANGUAGE_CODES | {'locales', 'js', 'css', 'node_modules', '.git', '.github', '__pycache__'}
+    excluded_dirs = LANGUAGE_CODES | {'locales', 'js', 'css', 'node_modules', '.git', '.github', '__pycache__', 'mp3', 'story'}
     
     for root, dirs, files in os.walk(BASE_DIR):
         # Calculate relative path from BASE_DIR
@@ -190,26 +190,36 @@ def process_html_for_language(html_content, translations, lang_code, filename):
             canonical_path = f"/{lang_code}/{filename}"
         canonical_link["href"] = f"{BASE_URL}{canonical_path}"
     
-    # 6. Update Hreflang links
+    # 6. Update Hreflang links (Dynamic Injection)
+    # Remove existing hreflangs first to avoid cleanup issues
     for link in soup.find_all("link", attrs={"rel": "alternate", "hreflang": True}):
-        hreflang = link.get("hreflang")
-        
+        link.decompose()
+
+    # Create new hreflang tags for all languages + x-default
+    sorted_langs = sorted(list(LANGUAGE_CODES))
+    head = soup.find("head")
+    
+    if head:
+        # Determine current path suffix
         if filename == "index.html":
-            if hreflang == "x-default":
-                link["href"] = f"{BASE_URL}/"
-            else:
-                link["href"] = f"{BASE_URL}/{hreflang}/"
+            base_suffix = ""
         elif filename.endswith("/index.html"):
-            folder = filename.replace("/index.html", "")
-            if hreflang == "x-default":
-                link["href"] = f"{BASE_URL}/{folder}/"
-            else:
-                link["href"] = f"{BASE_URL}/{hreflang}/{folder}/"
+            base_suffix = filename.replace("/index.html", "") + "/"
         else:
-            if hreflang == "x-default":
-                link["href"] = f"{BASE_URL}/{filename}"
-            else:
-                link["href"] = f"{BASE_URL}/{hreflang}/{filename}"
+            base_suffix = filename
+
+        # Add x-default
+        x_def = soup.new_tag("link", rel="alternate", hreflang="x-default")
+        x_def["href"] = f"{BASE_URL}/{base_suffix}"
+        head.append(x_def)
+        head.append(BeautifulSoup("\n    ", 'html.parser'))
+
+        # Add all languages
+        for code in sorted_langs:
+            link = soup.new_tag("link", rel="alternate", hreflang=code)
+            link["href"] = f"{BASE_URL}/{code}/{base_suffix}"
+            head.append(link)
+            head.append(BeautifulSoup("\n    ", 'html.parser'))
     
     # 7. Add language script
     head = soup.find("head")

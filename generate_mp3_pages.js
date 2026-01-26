@@ -167,6 +167,15 @@ function generateHTML(lang, langData) {
     const faqs = FAQS[lang] || DEFAULT_FAQS;
     const isRTL = langData.dir === 'rtl';
 
+    // Generate Hreflang Tags
+    const hreflangTags = Object.keys(LANGUAGES).map(code =>
+        `<link rel="alternate" hreflang="${code}" href="https://savetik-fast.xyz/mp3/${code}/" />`
+    ).join('\n    ');
+
+    // Add x-default (English)
+    const xDefault = `<link rel="alternate" hreflang="x-default" href="https://savetik-fast.xyz/mp3/en/" />`;
+    const fullHreflangs = `${xDefault}\n    ${hreflangTags}`;
+
     const faqsHTML = faqs.map((faq, i) => `
                 <details class="faq-item-new">
                     <summary>${faq.q}</summary>
@@ -186,6 +195,9 @@ function generateHTML(lang, langData) {
     <meta name="description" content="${langData.desc}">
     <meta name="keywords" content="tiktok to mp3, tiktok mp3 download, ${lang}, convert tiktok to mp3, tiktok audio download 2026">
     
+    <!-- Hreflang Tags for SEO -->
+    ${fullHreflangs}
+
     <link rel="canonical" href="https://savetik-fast.xyz/mp3/${lang}/">
     <link rel="icon" type="image/png" href="/favicon.png">
     
