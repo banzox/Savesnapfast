@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Downloader from '../components/Downloader.jsx';
+import FAQ from '../components/FAQ.astro';
+import { getTranslations } from '../utils/i18n';
+
+// Default Language (English)
+const lang = 'en';
+const tData = getTranslations(lang);
+
+// Helper to access nested keys (e.g. "downloader.placeholder")
+const t = (key) => {
+  const keys = key.split('.');
+  let value = tData;
+  for (const k of keys) {
+    value = value?.[k];
+  }
+  return value || key;
+};
+---
+
+<Layout title="TikTok Downloader Without Watermark - SaveTikFast" description="Download TikTok videos without watermark in HD, Full HD & 4K quality. Free & Fast." lang={lang}>
+  
+  <article class="hero-section">
+    <h1>TikTok Video Downloader <span style="color: var(--secondary);">(No Watermark)</span></h1>
+    <p>Download TikTok videos without watermark in HD, Full HD & 4K quality. Free, fast, and works on iPhone, Android & PC.</p>
+
+    <!-- Client-Side Downloader -->
+    <Downloader client:load t={t} />
+
+  </article>
+
+  <!-- Features Grid (Static) -->
+  <section class="container features-grid">
+      <div class="feature-card">
+          <i class="fas fa-magic"></i>
+          <h3>{t('features.no_watermark.title')}</h3>
+          <p>{t('features.no_watermark.desc')}</p>
+      </div>
+      <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>{t('features.fast.title')}</h3>
+          <p>{t('features.fast.desc')}</p>
+      </div>
+      <div class="feature-card">
+          <i class="fas fa-hd"></i>
+          <h3>{t('features.quality.title')}</h3>
+          <p>{t('features.quality.desc')}</p>
+      </div>
+  </section>
+
+  <FAQ t={t} />
+
+</Layout>

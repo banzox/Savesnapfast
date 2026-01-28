@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "title": "SaveTikFast 2026 - 틱톡 동영상 다운로드 워터마크 없음 (HD & 4K)",
+    "description": "워터마크 없는 틱톡 영상을 무료로 다운로드하세요. 2026년 가장 빠른 틱톡 다운로더. 아이폰, 안드로이드, PC에서 MP4 및 MP3 고화질 저장."
+  },
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "contact": "문의하기",
+    "terms": "이용약관",
+    "privacy": "개인정보처리방침",
+    "dmca": "DMCA",
+    "disclaimer": "면책 조항"
+  },
+  "hero": {
+    "title": "틱톡 비디오 다운로더",
+    "desc": "워터마크 없이 틱톡 영상을 저장하세요. 빠르고, 무료이며, 무제한 HD 화질."
+  },
+  "downloader": {
+    "placeholder": "여기에 TikTok 링크를 붙여넣으세요...",
+    "btn_download": "지금 다운로드",
+    "processing": "처리 중...",
+    "download_video": "비디오 다운로드",
+    "download_audio": "MP3 다운로드",
+    "hd_quality": "워터마크 없음",
+    "error_busy": "서비스가 바쁩니다. 나중에 다시 시도해 주세요."
+  },
+  "faq": {
+    "title": "자주 묻는 질문 (FAQ)",
+    "q1": "2026년에 워터마크 없이 틱톡 영상을 다운로드하는 방법은?",
+    "a1": "매우 간단합니다: 1. 틱톡 앱을 열고 영상을 선택합니다. 2. '공유' 버튼을 누르고 '링크 복사'를 선택합니다. 3. 위 상자에 링크를 붙여넣고 '다운로드'를 클릭합니다. 로고 없이 영상이 저장됩니다.",
+    "q2": "SaveTikFast는 완전히 무료인가요?",
+    "a2": "네, SaveTikFast는 100% 무료이며 앞으로도 계속 무료일 것입니다. 영상을 다운로드하기 위해 구독, 가입, 또는 숨겨진 비용을 요구하지 않습니다.",
+    "q3": "아이폰(iOS)과 안드로이드에서 작동하나요?",
+    "a3": "물론입니다! 저희 도구는 모든 기기에 최적화되어 있습니다. 아이폰, 아이패드, 안드로이드 스마트폰, PC/Mac 등 어떤 기기에서도 브라우저를 통해 완벽하게 작동합니다.",
+    "q4": "4K 또는 HD 화질로 다운로드할 수 있나요?",
+    "a4": "네, 저희의 고급 알고리즘이 원본 서버에서 사용 가능한 최고 해상도(HD, Full HD, 또는 4K)를 자동으로 찾아 제공합니다.",
+    "q5": "음악/소리(MP3)만 저장할 수 있나요?",
+    "a5": "네, '오디오 다운로드 (MP3)' 전용 기능을 제공합니다. 영상 링크를 붙여넣기만 하면 고음질 오디오 파일을 추출하여 저장할 수 있는 옵션이 표시됩니다.",
+    "q6": "다운로드한 영상은 어디에 저장되나요?",
+    "a6": "파일은 보통 브라우저의 기본 '다운로드' 폴더에 저장됩니다. 모바일 기기에서는 파일 관리자나 갤러리 앱에서도 찾을 수 있습니다.",
+    "q7": "SaveTikFast는 내 영상을 저장하나요?",
+    "a7": "절대 그렇지 않습니다. 저희는 사용자의 개인정보를 존중합니다. 서버에 어떤 영상도 호스팅하지 않으며, 다운로드 기록을 보관하지 않습니다. 모든 과정은 익명으로 진행됩니다.",
+    "q8": "다운로드 링크가 가끔 작동하지 않는 이유는 무엇인가요?",
+    "a8": "다운로드하려는 틱톡 계정이 '비공개'가 아닌 '공개' 상태인지 확인해 주세요. 또한 영상 링크를 정확하게 복사했는지 다시 확인해 주세요.",
+    "q9": "앱이나 확장 프로그램을 설치해야 하나요?",
+    "a9": "설치는 필요 없습니다. SaveTikFast는 웹 기반 도구입니다. 웹 브라우저(Chrome, Safari 등)와 인터넷 연결만 있으면 됩니다.",
+    "q10": "이 다운로더를 사용하는 것이 합법인가요?",
+    "a10": "네, 다운로드한 콘텐츠를 개인적, 비상업적 목적(예: 오프라인 시청)으로 사용하는 한 합법입니다. 콘텐츠 제작자의 저작권을 존중해 주시기 바랍니다."
+  },
+  "pages": {
+    "about": {
+      "title": "서비스 소개",
+      "content": "2026년 최고의 틱톡 다운로더, SaveTikFast에 오신 것을 환영합니다.\n\n저희는 단 하나의 목표를 가지고 SaveTikFast를 만들었습니다. 바로 틱톡 영상을 워터마크 없이 저장하는 가장 빠르고, 안전하며, 신뢰할 수 있는 방법을 제공하는 것입니다. 다른 도구들과 달리 사용자 경험을 최우선으로 생각하여 성가신 광고나 회원가입, 소프트웨어 설치가 필요 없습니다.\n\n저희 기술은 겹쳐진 로고를 제거하면서도 영상의 원본 화질(최대 4K)을 유지하도록 보장합니다."
+    },
+    "contact": {
+      "title": "문의하기",
+      "content": "여러분의 의견은 소중하며 언제든 도와드릴 준비가 되어 있습니다.\n\n기술적인 문제가 있거나, 개선 제안, 또는 비즈니스 문의가 있으시면 아래 지원 팀으로 연락해 주세요:\n\n📧 이메일: support@savetik-fast.xyz\n\n모든 문의에 대해 24시간 이내에 답변드리도록 노력하겠습니다."
+    },
+    "terms": {
+      "title": "이용약관",
+      "content": "SaveTikFast를 사용함으로써 귀하는 다음 약관에 동의하게 됩니다:\n\n1. 개인적 사용:\n저희 서비스는 개인적이고 비상업적인 용도로만 제공됩니다. 오프라인 시청을 위해 영상을 다운로드할 수 있습니다.\n\n2. 지적 재산권:\n저희는 다운로드된 콘텐츠를 소유하지 않습니다. 모든 권리는 틱톡의 원작자에게 있습니다. 저작권을 침해하는 방식으로 콘텐츠를 사용하지 않는 것에 동의합니다.\n\n3. 책임의 한계:\nSaveTikFast는 사용자가 다운로드한 자료를 어떻게 사용하는지에 대해 책임을 지지 않습니다. 저작권 침해에 대한 모든 책임은 사용자에게 있습니다."
+    },
+    "privacy": {
+      "title": "개인정보처리방침",
+      "content": "귀하의 개인정보는 저희에게 매우 중요합니다.\n\n데이터 수집:\n이름이나 이메일과 같은 개인정보를 수집하지 않습니다. 사이트 성능 향상을 위해 익명의 분석 데이터(쿠키 등)를 사용할 수 있습니다.\n\n영상 미저장:\nSaveTikFast는 서버에 어떤 영상도 호스팅하거나 저장하지 않습니다. 모든 파일 처리는 즉시 이루어집니다."
+    },
+    "dmca": {
+      "title": "DMCA 정책",
+      "content": "SaveTikFast는 타인의 지적 재산권을 존중합니다.\n\n저희는 기술 서비스 제공자로 운영되며 저작권이 있는 콘텐츠를 호스팅하지 않습니다. 모든 영상은 제3자 서버(TikTok)에서 직접 제공됩니다.\n\n귀하의 저작권이 있는 저작물이 허가 없이 저희 서비스에 표시되었다고 판단되는 경우, 공식 DMCA 통지를 다음 주소로 보내주십시오: support@savetik-fast.xyz."
+    },
+    "disclaimer": {
+      "title": "면책 조항",
+      "content": "1. 비제휴:\nSaveTikFast는 독립적인 유틸리티 도구이며 TikTok Inc. 또는 ByteDance Ltd.와 제휴, 연관, 승인, 보증되거나 어떤 방식으로든 공식적으로 연결되어 있지 않습니다.\n\n2. 상표:\n'TikTok'이라는 이름과 로고는 해당 소유자의 등록 상표입니다.\n\n3. 콘텐츠:\n저희는 틱톡 서버에 호스팅된 콘텐츠에 대해 어떠한 통제권도 없습니다."
+    }
+  },
+  "footer": {
+    "rights": "© 2026 SaveTikFast. All rights reserved."
+  },
+  "features": {
+    "fast": {
+      "title": "초고속 다운로드",
+      "desc": "고속 서버를 통해 몇 초 만에 TikTok 동영상을 다운로드하세요."
+    },
+    "safe": {
+      "title": "안전 및 개인 정보 보호",
+      "desc": "당사는 귀하의 동영상을 저장하거나 개인 데이터를 추적하지 않습니다."
+    },
+    "unlimited": {
+      "title": "무제한 사용",
+      "desc": "제한 없이 원하는 만큼 동영상을 다운로드하세요."
+    }
+  },
+  "how_to": {
+    "title": "워터마크 없이 TikTok 동영상을 다운로드하는 방법",
+    "step1": "저장하려는 TikTok 동영상 링크를 복사합니다.",
+    "step2": "이 페이지 상단의 다운로드 상자에 링크를 붙여넣습니다.",
+    "step3": "'다운로드' 버튼을 클릭하면 동영상이 즉시 저장됩니다."
+  },
+  "tools": {
+    "backToDownloader": "다운로더로 돌아가기",
+    "meta": {
+      "title": "무료 이미지 및 QR 도구",
+      "description": "이미지 압축, 형식 변환 및 QR 코드 생성을 위한 무료 도구."
+    },
+    "hero": {
+      "title": "이미지 및 QR 도구",
+      "desc": "브라우저에서 직접 압축, 변환 및 QR 코드를 생성하세요."
+    },
+    "tabs": {
+      "compressor": "이미지 압축",
+      "converter": "변환기",
+      "qrcode": "QR 생성기"
+    },
+    "dropzone": {
+      "text": "이미지를 여기로 드래그",
+      "hint": "또는 클릭하여 선택",
+      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "compressor": {
+      "title": "Image Compressor",
+      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
+      "quality": "Compression Quality",
+      "maxWidth": "Max Width (px)",
+      "btn": "Compress Image",
+      "howto": {
+        "title": "How to Compress Images Online",
+        "step1": {
+          "title": "Upload Image",
+          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+        },
+        "step2": {
+          "title": "Adjust Settings",
+          "desc": "Set your desired quality level (10-100%) and maximum width."
+        },
+        "step3": {
+          "title": "Download",
+          "desc": "Click compress and download your optimized image instantly."
+        }
+      },
+      "seo": {
+        "title": "Why Compress Images?",
+        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
+        "p2": "Benefits of image compression include:",
+        "benefit1": "Faster website loading speeds (improves SEO)",
+        "benefit2": "Reduced storage and bandwidth costs",
+        "benefit3": "Better user experience on mobile devices",
+        "benefit4": "Optimized images for social media sharing",
+        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "Is my image uploaded to a server?",
+        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
+        "q2": "What file formats are supported?",
+        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
+        "q3": "How much can I reduce file size?",
+        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+      }
+    },
+    "converter": {
+      "title": "Image Format Converter",
+      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
+      "output": "Output Format",
+      "quality": "Output Quality",
+      "btn": "Convert Image",
+      "howto": {
+        "title": "How to Convert Image Formats",
+        "step1": {
+          "title": "Select Image",
+          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+        },
+        "step2": {
+          "title": "Choose Format",
+          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+        },
+        "step3": {
+          "title": "Convert & Save",
+          "desc": "Click convert and download your new image instantly."
+        }
+      },
+      "seo": {
+        "title": "Understanding Image Formats",
+        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
+        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
+        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
+        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
+        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "Why convert to WebP?",
+        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
+        "q2": "Will I lose image quality?",
+        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
+        "q3": "Can I convert animated GIFs?",
+        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+      }
+    },
+    "qrcode": {
+      "title": "QR Code Generator",
+      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
+      "input": "Text or URL",
+      "placeholder": "https://example.com or any text",
+      "size": "QR Code Size",
+      "color": "QR Color",
+      "btn": "Generate QR Code",
+      "howto": {
+        "title": "How to Generate QR Codes",
+        "step1": {
+          "title": "Enter Content",
+          "desc": "Type your URL, text, phone number, or any content you want to encode."
+        },
+        "step2": {
+          "title": "Customize",
+          "desc": "Choose your preferred size and color for the QR code."
+        },
+        "step3": {
+          "title": "Generate & Download",
+          "desc": "Click generate and download your high-resolution QR code as PNG."
+        }
+      },
+      "seo": {
+        "title": "QR Code Use Cases",
+        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
+        "use1": "Website URLs - Direct users to your website instantly",
+        "use2": "Business cards - Share contact information digitally",
+        "use3": "Product packaging - Link to manuals or support pages",
+        "use4": "Marketing materials - Track campaign engagement",
+        "use5": "Restaurant menus - Contactless menu access",
+        "use6": "Event tickets - Fast entry verification",
+        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What can I encode in a QR code?",
+        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
+        "q2": "What size should I choose?",
+        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
+        "q3": "Do QR codes expire?",
+        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+      }
+    },
+    "progress": {
+      "compressing": "Compressing image...",
+      "converting": "Converting image..."
+    },
+    "result": {
+      "success": "Compression Complete!",
+      "converted": "Conversion Complete!",
+      "qrReady": "Your QR Code is Ready!"
+    },
+    "stats": {
+      "original": "Original Size",
+      "compressed": "Compressed Size",
+      "saved": "Saved",
+      "originalFormat": "Original Format",
+      "newFormat": "New Format",
+      "newSize": "New Size"
+    },
+    "preview": {
+      "before": "Before",
+      "after": "After",
+      "original": "Original",
+      "converted": "Converted"
+    },
+    "btn": {
+      "download": "다운로드",
+      "downloadPng": "Download PNG"
+    }
+  }
+}

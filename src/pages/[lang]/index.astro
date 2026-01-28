@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Downloader from '../../components/Downloader.jsx';
+import FAQ from '../../components/FAQ.astro';
+import { getTranslations, supportedLanguages } from '../../utils/i18n';
+
+export async function getStaticPaths() {
+  return supportedLanguages.map(lang => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params;
+const tData = getTranslations(lang);
+
+const t = (key) => {
+  const keys = key.split('.');
+  let value = tData;
+  for (const k of keys) {
+    value = value?.[k];
+  }
+  return value || key;
+};
+
+// Start of Page Content (Reused from index.astro logic, but with dynamic t)
+---
+
+<Layout 
+    title={t('seo.title') || "TikTok Downloader - SaveTikFast"} 
+    description={t('seo.description') || "Download TikTok videos without watermark."}
+    lang={lang}
+>
+  
+  <article class="hero-section">
+    <h1>{t('hero.title') || "TikTok Video Downloader"} <span style="color: var(--secondary);">(No Watermark)</span></h1>
+    <p>{t('hero.desc')}</p>
+
+    <Downloader client:load t={t} />
+
+  </article>
+
+  <section class="container features-grid">
+      <div class="feature-card">
+          <i class="fas fa-magic"></i>
+          <h3>{t('features.no_watermark.title')}</h3>
+          <p>{t('features.no_watermark.desc')}</p>
+      </div>
+      <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>{t('features.fast.title')}</h3>
+          <p>{t('features.fast.desc')}</p>
+      </div>
+      <div class="feature-card">
+          <i class="fas fa-hd"></i>
+          <h3>{t('features.quality.title')}</h3>
+          <p>{t('features.quality.desc')}</p>
+      </div>
+  </section>
+
+  <FAQ t={t} />
+  
+</Layout>

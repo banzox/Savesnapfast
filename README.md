@@ -1,284 +1,43 @@
-# Snaptiks - موقع تحميل فيديوهات TikTok
+# Astro Starter Kit: Minimal
 
-موقع Snaptiks هو تطبيق ويب متكامل لتحميل فيديوهات TikTok بدون علامة مائية بجودة عالية HD. يتميز الموقع بتصميم حديث وجذاب مع دعم كامل للإعلانات (Adsterra) وجاهز للنشر والاستضافة.
-
-## ✨ المميزات
-
-- ✅ تحميل فيديوهات TikTok بدون علامة مائية
-- ⚡ سرعة عالية في التحميل
-- 🎯 جودة عالية HD (720p, 1080p)
-- 📱 متوافق مع جميع الأجهزة
-- 🔒 آمن ومجاني 100%
-- 🎵 تحميل الصوت فقط (MP3)
-- 🌐 واجهة عربية احترافية
-- 💰 متكامل مع مساحات إعلانية
-- 🎨 تصميم حديث وجذاب
-
-## 🚀 التثبيت السريع
-
-### 1. تحميل الملفات
-
-```bash
-# نسخ الملفات إلى جهازك
-git clone [repository-url]
-cd snaptiks
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-### 2. رفع الموقع إلى الاستضافة
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-#### الطريقة 1: عبر FTP
-1. قم بتحميل جميع الملفات إلى استضافتك باستخدام برنامج FTP
-2. تأكد أن ملف `index.html` في المجلد الرئيسي (public_html)
+## 🚀 Project Structure
 
-#### الطريقة 2: عبر cPanel
-1. سجل دخول إلى cPanel
-2. اذهب إلى File Manager
-3. ارفع الملفات المضغوطة ثم فك الضغط
+Inside of your Astro project, you'll see the following folders and files:
 
-#### الطريقة 3: استضافة مجانية (مؤقتة)
-يمكنك استخدام استضافة مجانية مثل:
-- [Netlify](https://www.netlify.com/)
-- [Vercel](https://vercel.com/)
-- [GitHub Pages](https://pages.github.com/)
-
-## 🔧 إعداد Adsterra
-
-### الخطوات:
-
-1. **التسجيل في Adsterra:**
-   - اذهب إلى [Adsterra.com](https://adsterra.com/)
-   - أنشئ حساب جديد كـ Publisher
-   - فعّل حسابك عبر البريد الإلكتروني
-
-2. **إنشاء موقع جديد:**
-   - في لوحة التحكم، اذهب إلى **Sites**
-   - اضغط **Add New Site**
-   - أدخل عنوان موقعك (مثال: `https://snaptiks.com`)
-   - اختر نوع الموقع: **Website**
-   - اختر التصنيف: **Entertainment** أو **Downloads**
-
-3. **إضافة أكواد الإعلانات:**
-
-   ### أ. إعلان رأسي (Header - 728x90)
-   - اذهب إلى **Ad Units** → **Create Ad Unit**
-   - اختر **Banner Ad**
-   - حجم الإعلان: **728x90**
-   - انسخ الكود وضعه في ملف `index.html` بدلاً من:
-   ```html
-   <!-- Adsterra Header Ad Code -->
-   <p>مساحة إعلانية - 728x90</p>
-   <p>انسخ كود Adsterra هنا</p>
-   ```
-
-   ### ب. إعلان جانبي (Sidebar - 300x600)
-   - أنشئ إعلان جديد بحجم **300x600**
-   - انسخ الكود وضعه في القسم الجانبي
-
-   ### ج. إعلانات إضافية:
-   يمكنك إضافة المزيد من الإعلانات:
-   - **Native Ads** (إعلانات أصلية)
-   - **Popunder** (منبثقة خلفية)
-   - **Direct Link** (رابط مباشر)
-   - **Social Bar** (شريط اجتماعي)
-
-4. **تحديث الموقع:**
-   بعد إضافة الأكواد، رفع الملفات المحدثة إلى الاستضافة.
-
-## 🌐 شراء دومين وربطه
-
-### 1. شراء دومين
-يمكنك شراء دومين من:
-- [Namecheap](https://www.namecheap.com/) - يبدأ من $10/سنة
-- [GoDaddy](https://www.godaddy.com/) - يبدأ من $12/سنة
-- [Google Domains](https://domains.google/) - يبدأ من $12/سنة
-
-### 2. استضافة المواقع
-
-#### خيارات استضافة موثوقة:
-
-**A. استضافة مشتركة (مناسبة للبدء):**
-- [Bluehost](https://www.bluehost.com/) - $3.95/شهر
-- [HostGator](https://www.hostgator.com/) - $2.75/شهر
-- [Namecheap Hosting](https://www.namecheap.com/hosting/) - $1.58/شهر
-
-**B. استضافة سحابية (أداء أفضل):**
-- [DigitalOcean](https://www.digitalocean.com/) - $5/شهر
-- [Vultr](https://www.vultr.com/) - $5/شهر
-- [Linode](https://www.linode.com/) - $5/شهر
-
-**C. استضافة مجانية (للتجربة):**
-- [Netlify](https://www.netlify.com/) - مجاني
-- [Vercel](https://vercel.com/) - مجاني
-- [GitHub Pages](https://pages.github.com/) - مجاني
-
-### 3. ربط الدومين بالاستضافة
-
-#### في Namecheap:
-1. سجل دخول إلى حسابك
-2. اذهب إلى **Domain List**
-3. اضغط **Manage** بجانب الدومين
-4. في **Nameservers** اختر **Custom DNS**
-5. أدخل نيم سيرفرز الاستضافة (مثال لـ Bluehost):
-   ```
-   ns1.bluehost.com
-   ns2.bluehost.com
-   ```
-
-#### في GoDaddy:
-1. سجل دخول إلى حسابك
-2. اذهب إلى **My Products** → **Domains**
-3. اضغط **DNS** بجانب الدومين
-4. في **Nameservers** اضغط **Change**
-5. أدخل نيم سيرفرز الاستضافة
-
-## 📁 هيكل الملفات
-
-```
-snaptiks/
-├── index.html              # الصفحة الرئيسية
-├── about.html              # صفحة عن الموقع
-├── contact.html            # صفحة التواصل
-├── main.js                 # ملف JavaScript الرئيسي
-└── README.md              # دليل الاستخدام
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-## 🎨 التخصيص
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-### تغيير الألوان
-يمكنك تغيير الألوان من ملف CSS في كل صفحة:
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-```css
-:root {
-    --primary-color: #ff0050;
-    --secondary-color: #00f2ea;
-    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-}
-```
+Any static assets, like images, can be placed in the `public/` directory.
 
-### تغيير الشعار
-ابحث عن هذا الكود وغيره:
-```html
-<div class="logo-icon">📱</div>
-<span>Snaptiks</span>
-```
+## 🧞 Commands
 
-### تغيير النصوص
-جميع النصوص موجودة في ملفات HTML ويمكن تعديلها مباشرة.
+All commands are run from the root of the project, from a terminal:
 
-## 🔒 الأمان
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-### نصائح للأمان:
-1. استخدم HTTPS دائماً (SSL Certificate)
-2. حدّث الموقع باستمرار
-3. استخدم كلمات مرور قوية للاستضافة
-4. أنشئ نسخ احتياطية بانتظام
-5. راقب حركة الزوار باستخدام Google Analytics
+## 👀 Want to learn more?
 
-## 📊 تتبع الأداء
-
-### إضافة Google Analytics:
-1. أنشئ حساب في [Google Analytics](https://analytics.google.com/)
-2. احصل على كود التتبع (GA4)
-3. أضف الكود في هيدر جميع الصفحات:
-
-```html
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script>
-```
-
-## 🚀 تحسينات SEO
-
-### ملف robots.txt
-أنشئ ملف `robots.txt`:
-```
-User-agent: *
-Allow: /
-
-Sitemap: https://snaptiks.com/sitemap.xml
-```
-
-### ملف sitemap.xml
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://snaptiks.com/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://snaptiks.com/about.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://snaptiks.com/contact.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-</urlset>
-```
-
-## 💰 زيادة الأرباح من Adsterra
-
-### نصائح لزيادة الأرباح:
-
-1. **تحسين مواضع الإعلانات:**
-   - ضع إعلانات فوق الصفحة (Above the fold)
-   - استخدم إعلانات متجاوبة (Responsive)
-   - تجنب وضع الكثير من الإعلانات
-
-2. **زيادة حركة المرور:**
-   - أنشئ محتوى جذاب
-   - شارك الموقع على وسائل التواصل
-   - استخدم SEO لتحسين الترتيب
-
-3. **اختيار الإعلانات المناسبة:**
-   - استخدم Native Ads للمحتوى
-   - Popunder للأرباح العالية
-   - Direct Links للروابط
-
-4. **متابعة الإحصائيات:**
-   - راجع لوحة تحكم Adsterra يومياً
-   - جرب أنواع إعلانات مختلفة
-   - حلل أفضل المواقع المُعلنة
-
-## 🛠️ الدعم الفني
-
-### إذا واجهت مشاكل:
-
-1. **الموقع لا يعمل:**
-   - تأكد من رفع جميع الملفات
-   - تحقق من أذونات الملفات (644)
-   - تأكد من صحة أكواد HTML
-
-2. **الإعلانات لا تظهر:**
-   - تأكد من تفعيل حساب Adsterra
-   - تحقق من وضع الأكواد بشكل صحيح
-   - انتظر 24-48 ساعة للمراجعة
-
-3. **الموقع بطيء:**
-   - ضغط الصور باستخدام TinyPNG
-   - استخدم CDN للمكتبات الخارجية
-   - امسح ملفات CSS وJS غير المستخدمة
-
-## 📞 التواصل
-
-للدعم الفني أو الاستفسارات:
-- البريد الإلكتروني: support@snaptiks.com
-- الموقع: https://snaptiks.com
-
----
-
-**Made with ❤️ by Snaptiks Team**
-
-© 2024 Snaptiks. جميع الحقوق محفوظة.
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
