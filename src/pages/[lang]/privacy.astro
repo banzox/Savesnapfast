@@ -1,7 +1,9 @@
 ---
+export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
-import { ui, defaultLang, languages } from "../../i18n/ui";
+import { defaultLang, languages } from "../../i18n/ui";
+import { useTranslations, getTranslations } from "../../utils/i18n";
 
 export async function getStaticPaths() {
     return Object.keys(languages)
@@ -13,27 +15,8 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
-
-// Helper for nested keys
-const t = (key: string) => {
-    let val: any = ui[currentLang] || ui[defaultLang];
-    const parts = key.split(".");
-    for (const part of parts) {
-        if (val === undefined || val === null) break;
-        val = val[part];
-    }
-
-    // Fallback to default
-    if (val === undefined) {
-        val = ui[defaultLang];
-        for (const part of parts) {
-            if (val === undefined || val === null) break;
-            val = val[part];
-        }
-    }
-
-    return val || key;
-};
+const t = useTranslations(currentLang);
+const translations = getTranslations(currentLang);
 ---
 
 <Layout
@@ -44,7 +27,7 @@ const t = (key: string) => {
     <article class="hero-section">
         <h1>{t("nav.privacy")}</h1>
         <p>{t("pages.privacy.content")?.substring(0, 150)}...</p>
-        <Downloader client:load t={t} />
+        <Downloader client:load messages={translations.downloader} />
     </article>
 
     <div class="container" style="padding: 2rem;">

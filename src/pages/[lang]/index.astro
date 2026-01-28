@@ -1,11 +1,10 @@
 ---
+export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
 import FAQ from "../../components/FAQ.astro";
 import { languages, defaultLang } from "../../i18n/ui";
-import { useTranslations } from "../../utils/i18n";
-// @ts-ignore
-import extractedContent from "../../i18n/extracted_content.json";
+import { useTranslations, getTranslations } from "../../utils/i18n";
 
 export async function getStaticPaths() {
   return Object.keys(languages)
@@ -18,10 +17,7 @@ export async function getStaticPaths() {
 const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
 const t = useTranslations(currentLang);
-
-// Get extracted content for FAQ
-const ec = extractedContent as any;
-const content = ec[currentLang] || ec[defaultLang];
+const translations = getTranslations(currentLang);
 ---
 
 <Layout
@@ -32,11 +28,11 @@ const content = ec[currentLang] || ec[defaultLang];
   <article class="hero-section">
     <h1>
       {t("hero.title")}
-      <span style="color: var(--secondary);">(No Watermark)</span>
+      <span style="color: var(--secondary);">({t("hero.no_watermark")})</span>
     </h1>
     <p>{t("hero.desc")}</p>
 
-    <Downloader client:load t={t} />
+    <Downloader client:load messages={translations.downloader} />
   </article>
 
   <!-- ==================== AD CONTAINER ==================== -->
@@ -104,21 +100,21 @@ const content = ec[currentLang] || ec[defaultLang];
     <div class="steps-wrapper">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>{t("how_to.step1_title") || "Copy Link"}</h3>
+        <h3>{t("how_to.step1_title")}</h3>
         <p>{t("how_to.step1")}</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>{t("how_to.step2_title") || "Paste URL"}</h3>
+        <h3>{t("how_to.step2_title")}</h3>
         <p>{t("how_to.step2")}</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>{t("how_to.step3_title") || "Download"}</h3>
+        <h3>{t("how_to.step3_title")}</h3>
         <p>{t("how_to.step3")}</p>
       </div>
     </div>
   </section>
 
-  <FAQ t={t} items={content?.faqs || []} />
+  <FAQ t={t} items={translations?.faqs || []} />
 </Layout>

@@ -1,20 +1,16 @@
 ---
+export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import { ui, defaultLang } from "../i18n/ui";
+import {
+    getLangFromUrl,
+    useTranslations,
+    getTranslations,
+} from "../utils/i18n";
 
-const lang = "en";
-
-// Helper for nested keys
-const t = (key: string) => {
-    let val: any = ui[lang];
-    const parts = key.split(".");
-    for (const part of parts) {
-        if (val === undefined || val === null) break;
-        val = val[part];
-    }
-    return val || key;
-};
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translations = getTranslations(lang);
 ---
 
 <Layout
@@ -25,7 +21,7 @@ const t = (key: string) => {
     <article class="hero-section">
         <h1>{t("nav.privacy")}</h1>
         <p>{t("pages.privacy.content")?.substring(0, 150)}...</p>
-        <Downloader client:load t={t} />
+        <Downloader client:load messages={translations.downloader} />
     </article>
 
     <div class="container" style="padding: 2rem;">

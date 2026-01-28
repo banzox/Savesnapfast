@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 const WORKER_URL = "https://api.savetik-fast.xyz";
 const SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
-export default function Downloader({ t = (key) => key, mode = 'video' }) { // Simple mockup translation function
+export default function Downloader({ messages = {}, mode = 'video' }) {
+    // Simplified translation helper for the component
+    const t = (key) => {
+        const k = key.replace('downloader.', '');
+        return messages[k] || key;
+    };
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -17,7 +22,7 @@ export default function Downloader({ t = (key) => key, mode = 'video' }) { // Si
     const generateViralFileName = (author, ext = 'mp4') => {
         const cleanName = sanitizeFileName(author);
         const randomId = Math.random().toString(36).substring(2, 8);
-        return `SaveTikFast_${cleanName}_${randomId}.${ext}`;
+        return `SaveTikFast_${cleanName}_${randomId}.${ext} `;
     };
 
     const downloadFile = async (fileUrl, fileName) => {
@@ -157,17 +162,17 @@ export default function Downloader({ t = (key) => key, mode = 'video' }) { // Si
                                 {/* Video Buttons */}
                                 {!result.images && result.video && (
                                     <button className="btn-download btn-video" onClick={() => downloadFile(result.video, generateViralFileName(result.author || result.authorName, 'mp4'))}>
-                                        <i className="fas fa-download"></i> Download <span className="badge">No Watermark</span>
+                                        <i className="fas fa-download"></i> {t('downloader.download_video') || "Download"} <span className="badge">{t('downloader.hd_quality') || "No Watermark"}</span>
                                     </button>
                                 )}
                                 {!result.images && result.video && (
                                     <button className="btn-download btn-hd" onClick={() => downloadFile(result.video, generateViralFileName((result.author || result.authorName) + '_HD', 'mp4'))}>
-                                        <i className="fas fa-film"></i> Download HD <span className="badge badge-hd">1080p</span>
+                                        <i className="fas fa-film"></i> {t('downloader.download_hd') || "Download HD"} <span className="badge badge-hd">1080p</span>
                                     </button>
                                 )}
                                 {result.music && (
                                     <button className="btn-download btn-audio" onClick={() => downloadFile(result.music, generateViralFileName(result.author || result.authorName, 'mp3'))}>
-                                        <i className="fas fa-music"></i> Download MP3
+                                        <i className="fas fa-music"></i> {t('downloader.download_audio') || "Download MP3"}
                                     </button>
                                 )}
                             </div>
@@ -181,7 +186,7 @@ export default function Downloader({ t = (key) => key, mode = 'video' }) { // Si
                                             <button className="btn-download btn-sm"
                                                 style={{ fontSize: '0.8rem', padding: '5px', marginTop: '5px', width: '100%' }}
                                                 onClick={() => downloadFile(img, generateViralFileName(`${result.author || result.authorName}_slide_${index + 1}`, 'jpg'))}>
-                                                <i className="fas fa-download"></i> Save
+                                                <i className="fas fa-download"></i> {t('downloader.save') || "Save"}
                                             </button>
                                         </div>
                                     ))}

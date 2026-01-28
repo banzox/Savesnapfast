@@ -1,29 +1,29 @@
 ---
+export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
 import FAQ from "../components/FAQ.astro";
-import { getLangFromUrl, useTranslations } from "../utils/i18n";
-// @ts-ignore
-import extractedContent from "../i18n/extracted_content.json";
+import {
+  getLangFromUrl,
+  useTranslations,
+  getTranslations,
+} from "../utils/i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-// Get direct access to content for FAQ
-const ec = extractedContent as any;
-const content = ec[lang] || ec["en"];
+const translations = getTranslations(lang);
 ---
 
 <Layout title={t("meta.title")} description={t("meta.description")} lang={lang}>
   <article class="hero-section">
     <h1>
       {t("hero.title")}
-      <span style="color: var(--secondary);">(No Watermark)</span>
+      <span style="color: var(--secondary);">({t("hero.no_watermark")})</span>
     </h1>
     <p>{t("hero.desc")}</p>
 
     <!-- Client-Side Downloader -->
-    <Downloader client:load t={t} />
+    <Downloader client:load messages={translations.downloader} />
   </article>
 
   <!-- Features Grid (Static) -->
@@ -60,5 +60,5 @@ const content = ec[lang] || ec["en"];
     </div>
   </section>
 
-  <FAQ t={t} items={content?.faqs || []} />
+  <FAQ t={t} items={translations?.faqs || []} />
 </Layout>

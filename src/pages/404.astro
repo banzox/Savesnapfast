@@ -1,10 +1,16 @@
 ---
+export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import { getLangFromUrl, useTranslations } from "../utils/i18n";
+import {
+    getLangFromUrl,
+    useTranslations,
+    getTranslations,
+} from "../utils/i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translations = getTranslations(lang);
 ---
 
 <Layout title="404 - Page Not Found" lang={lang} description="Page not found">
@@ -14,7 +20,7 @@ const t = useTranslations(lang);
             {lang === "ar" ? "الصفحة غير موجودة" : "Page not found"}
         </p>
 
-        <Downloader client:load t={t} />
+        <Downloader client:load messages={translations.downloader} />
 
         <div style="margin-top: 2rem;">
             <a

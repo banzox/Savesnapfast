@@ -36,34 +36,44 @@ const currentLangName =
     <a
         href={`/${lang === "en" ? "" : lang}`}
         class="active"
-        title={t("meta.title") || "Download TikTok Videos"}
+        title={t("hero.title")}
     >
         <i class="fas fa-video"></i>
-        <span>{t("nav_menu.video") || "Video"}</span>
+        <span>{t("nav_menu.video")}</span>
     </a>
     <a
         href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
-        title={t("mp3_page.meta_title") || "Download TikTok Audio MP3"}
+        title={t("mp3_page.meta_title")}
     >
         <i class="fas fa-music"></i>
-        <span>{t("nav_menu.mp3") || "MP3 Audio"}</span>
+        <span>{t("nav_menu.mp3")}</span>
     </a>
     <a
         href={`/${lang === "en" ? "story" : lang + "/story"}`}
-        title={t("story_page.meta_title") || "Download TikTok Stories"}
+        title={t("story_page.meta_title")}
     >
         <i class="fas fa-images"></i>
-        <span>{t("nav_menu.stories") || "Stories"}</span>
+        <span>{t("nav_menu.stories")}</span>
     </a>
 </nav>
 
 <script>
     // Simple Language Dropdown Logic
     const langSelect = document.querySelector(".lang-select");
-    if (langSelect) {
-        langSelect.addEventListener("click", () => {
-            const options = langSelect.querySelector(".dropdown-options");
-            if (options) options.classList.toggle("show");
+    const dropdownOptions = document.querySelector(".dropdown-options");
+
+    if (langSelect && dropdownOptions) {
+        langSelect.addEventListener("click", (e) => {
+            e.stopPropagation();
+            dropdownOptions.classList.toggle("show");
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+            const target = e.target as HTMLElement;
+            if (!langSelect.contains(target)) {
+                dropdownOptions.classList.remove("show");
+            }
         });
     }
 </script>

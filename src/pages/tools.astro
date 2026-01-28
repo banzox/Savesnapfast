@@ -1,10 +1,16 @@
 ---
+export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import { getLangFromUrl, useTranslations } from "../utils/i18n";
+import {
+    getLangFromUrl,
+    useTranslations,
+    getTranslations,
+} from "../utils/i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translations = getTranslations(lang);
 ---
 
 <Layout
@@ -19,7 +25,7 @@ const t = useTranslations(lang);
         </h1>
         <p>{t("tools.hero.desc")}</p>
 
-        <Downloader client:load t={t} />
+        <Downloader client:load messages={translations.downloader} />
     </article>
 
     <div class="container features-grid">

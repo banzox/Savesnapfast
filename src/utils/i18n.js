@@ -30,3 +30,7 @@ export function useTranslations(lang) {
         return value !== undefined ? value : key;
     }
 }
+
+export function getTranslations(lang) {
+    return ui[lang] || ui[defaultLang];
+}

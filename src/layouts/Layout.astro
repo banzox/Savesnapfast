@@ -1,9 +1,9 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
-import { ViewTransitions } from "astro:transitions";
 import Schema from "../components/Schema.astro";
 import Footer from "../components/Footer.astro";
+import { languages } from "../i18n/ui";
 
 interface Props {
     title: string;
@@ -29,7 +29,27 @@ const { title, description, lang = "en", keywords } = Astro.props;
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
-        <Schema />
+        <!-- Hreflang Tags for SEO -->
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href={new URL("/", Astro.site || Astro.url).href}
+        />
+        {
+            Object.keys(languages).map((l) => (
+                <link
+                    rel="alternate"
+                    hreflang={l}
+                    href={
+                        new URL(
+                            l === "en" ? "/" : `/${l}`,
+                            Astro.site || Astro.url,
+                        ).href
+                    }
+                />
+            ))
+        }
+        <Schema lang={lang} />
         <meta name="author" content="SaveTikFast" />
 
         <!-- Open Graph / Facebook -->
@@ -59,19 +79,21 @@ const { title, description, lang = "en", keywords } = Astro.props;
 
         <link rel="manifest" href="/manifest.json" />
 
-        <!-- Preconnect -->
+        <!-- Preconnect & Prefetch -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        <link rel="dns-prefetch" href="https://api.savetik-fast.xyz" />
 
-        <!-- Fonts & Icons -->
+        {/* Prefetch most common languages for faster navigation */}
+        <link rel="prefetch" href="/" />
+        <link rel="prefetch" href="/ar" />
+        <link rel="prefetch" href="/es" />
+        <link rel="prefetch" href="/fr" />
+
+        <!-- Fonts -->
         <link
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
     </head>
     <body>

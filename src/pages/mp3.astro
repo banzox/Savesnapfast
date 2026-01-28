@@ -1,10 +1,16 @@
 ---
+export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import { getLangFromUrl, useTranslations } from "../utils/i18n";
+import {
+    getLangFromUrl,
+    useTranslations,
+    getTranslations,
+} from "../utils/i18n";
 
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
+const translations = getTranslations(currentLang);
 ---
 
 <Layout
@@ -24,7 +30,7 @@ const t = useTranslations(currentLang);
         <p>{t("mp3_page.desc")}</p>
 
         <!-- Downloader Component (configured for MP3 focus) -->
-        <Downloader client:load t={t} mode="mp3" />
+        <Downloader client:load messages={translations.downloader} mode="mp3" />
     </article>
 
     <section class="container features-grid">

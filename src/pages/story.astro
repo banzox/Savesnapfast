@@ -1,10 +1,16 @@
 ---
+export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import { getLangFromUrl, useTranslations } from "../utils/i18n";
+import {
+    getLangFromUrl,
+    useTranslations,
+    getTranslations,
+} from "../utils/i18n";
 
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
+const translations = getTranslations(currentLang);
 ---
 
 <Layout
@@ -21,7 +27,11 @@ const t = useTranslations(currentLang);
         <p>{t("story_page.desc")}</p>
 
         <!-- Downloader Component (configured for Story mode) -->
-        <Downloader client:load t={t} mode="story" />
+        <Downloader
+            client:load
+            messages={translations.downloader}
+            mode="story"
+        />
     </article>
 
     <section class="container features-grid">

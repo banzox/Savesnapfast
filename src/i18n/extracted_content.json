@@ -17,7 +17,7 @@
     "nav_menu": {
       "video": "فيديو",
       "mp3": "صوت MP3",
-      "stories": "قصص (Story)"
+      "stories": "قصص"
     },
     "mp3_page": {
       "meta_title": "تحميل MP3 من تيك توك - جودة عالية",
@@ -79,17 +79,20 @@
     },
     "hero": {
       "title": "تحميل فيديو تيك توك",
-      "desc": "قم بتحميل فيديوهات تيك توك بدون العلامة المائية بجودة أصلية. سريع، مجاني، وغير محدود."
+      "desc": "قم بتحميل فيديوهات تيك توك بدون العلامة المائية بجودة أصلية. سريع، مجاني، وغير محدود.",
+      "no_watermark": "بدون علامة مائية"
     },
     "downloader": {
       "placeholder": "ضع رابط فيديو تيك توك هنا...",
-      "btn_download": "تحميل الآن",
+      "btn_download": "تحميل",
       "processing": "جاري التحليل...",
       "error": "يرجى وضع رابط صحيح!",
-      "download_video": "تحميل فيديو",
+      "download_video": "تحميل الفيديو",
       "download_audio": "تحميل MP3",
       "hd_quality": "بدون علامة مائية",
-      "error_busy": "الخدمة مشغولة، يرجى المحاولة مرة أخرى لاحقاً."
+      "error_busy": "الخدمة مشغولة، يرجى المحاولة مرة أخرى لاحقاً.",
+      "download_hd": "تحميل فيديو HD",
+      "save": "حفظ"
     },
     "faq": {
       "title": "الأسئلة الشائعة حول التحميل (FAQ)",
@@ -154,29 +157,29 @@
       },
       "quality": {
         "title": "جودة HD و 4K",
-        "desc": "احفظ الفيديوهات بجودتها الأصلية - حتى دقة 4K مع صوت نقي وواضح."
+        "desc": "احفظ الفيديوهات بجودتها الأصلية - دقة تصل إلى 4K مع صوت نقي جداً."
       },
       "device": {
         "title": "جميع الأجهزة",
-        "desc": "يعمل بشكل مثالي على الآيفون، الأندرويد، الكمبيوتر، والماك. لا حاجة لتثبيت تطبيقات."
+        "desc": "يعمل بشكل مثالي على الأيفون، الأندرويد، الكمبيوتر، الماك، والأجهزة اللوحية. لا حاجة لتثبيت أي تطبيق."
       },
       "unlimited": {
         "title": "استخدام غير محدود",
-        "desc": "حمل أي عدد تريده من الفيديوهات يومياً بدون أي قيود أو شروط."
+        "desc": "قم بتحميل أي عدد تريده من الفيديوهات دون أي قيود."
       },
       "safe": {
-        "title": "آمن وخصوصي",
-        "desc": "نحن لا نقوم بتخزين فيديوهاتك أو تتبع بياناتك الشخصية أبداً."
+        "title": "آمن وخاص",
+        "desc": "نحن لا نخزن فيديوهاتك ولا نتتبع بياناتك الشخصية."
       }
     },
     "how_to": {
       "title": "كيفية تحميل فيديوهات تيك توك بدون علامة مائية",
       "step1_title": "نسخ الرابط",
-      "step1": "قم بنسخ رابط فيديو تيك توك الذي ترغب في حفظه.",
+      "step1": "انسخ رابط فيديو تيك توك الذي تريد حفظه.",
       "step2_title": "لصق الرابط",
       "step2": "الصق الرابط في مربع التحميل في أعلى هذه الصفحة.",
       "step3_title": "تحميل",
-      "step3": "اضغط على زر 'تحميل' وسيتم حفظ الفيديو فوراً."
+      "step3": "اضغط على زر 'تحميل' وسيتم حفظ الفيديو الخاص بك على الفور."
     },
     "tools": {
       "backToDownloader": "العودة لتحميل تيك توك",
@@ -404,28 +407,31 @@
       "description": "Download TikTok videos without watermark for free in Ultra HD/4K quality. The fastest TikTok Saver 2026. Save to MP4 & MP3 on iPhone, Android, and PC."
     },
     "nav": {
-      "about": "About Us",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "contact": "Contact",
+      "about": "За нас",
+      "privacy": "Политика за поверителност",
+      "terms": "Условия за ползване",
+      "contact": "Контакт",
       "dmca": "DMCA",
-      "home": "Home",
-      "disclaimer": "Disclaimer",
-      "tools": "Tools"
+      "home": "Начало",
+      "disclaimer": "Отказ от отговорност",
+      "tools": "Инструменти"
     },
     "hero": {
-      "title": "TikTok Video Downloader",
-      "desc": "Download TikTok videos without watermark. Fast, Free, and Unlimited HD Quality."
+      "title": "TikTok Downloader",
+      "desc": "Изтеглете TikTok видеоклипове без воден знак. Бързо, безплатно и в HD качество.",
+      "no_watermark": "Без воден знак"
     },
     "downloader": {
-      "placeholder": "Paste TikTok link here...",
-      "btn_download": "Download Now",
-      "processing": "Processing...",
+      "placeholder": "Поставете TikTok връзка тук...",
+      "btn_download": "Изтегли сега",
+      "processing": "Обработка...",
       "error": "Невалидна връзка!",
-      "download_video": "Download Video",
-      "download_audio": "Download MP3",
-      "hd_quality": "No Watermark",
-      "error_busy": "Service busy, please try again later."
+      "download_video": "Изтегли видео",
+      "download_audio": "Изтегли MP3",
+      "hd_quality": "Без воден знак",
+      "error_busy": "Услугата е заета, моля опитайте по-късно.",
+      "download_hd": "Изтегли HD",
+      "save": "Запази"
     },
     "faq": {
       "title": "Frequently Asked Questions (FAQ)",
@@ -480,9 +486,9 @@
       "rights": "© 2026 SaveTikFast. All Rights Reserved."
     },
     "nav_menu": {
-      "video": "Video",
-      "mp3": "MP3 Audio",
-      "stories": "Stories"
+      "video": "Видео",
+      "mp3": "MP3 Аудио",
+      "stories": "Истории"
     },
     "mp3_page": {
       "meta_title": "TikTok to MP3 Converter - Download Audio High Quality 320kbps",
@@ -570,24 +576,39 @@
       }
     },
     "features": {
-      "fast": {
-        "title": "Fast Download",
-        "desc": "Download TikTok videos in seconds with our high-speed servers."
+      "no_watermark": {
+        "title": "Без воден знак",
+        "desc": "Изтегляйте TikTok видеоклипове без воден знак. Чисти и готови за споделяне."
       },
-      "safe": {
-        "title": "Safe & Private",
-        "desc": "We don't store your videos or track your personal data."
+      "fast": {
+        "title": "Бързо изтегляне",
+        "desc": "Изтеглете TikTok видеоклипове за секунди."
+      },
+      "quality": {
+        "title": "HD и 4K качество",
+        "desc": "Запазвайте видеоклипове в оригиналното им качество."
+      },
+      "device": {
+        "title": "Всички устройства",
+        "desc": "Работи на iPhone, Android, PC и таблети."
       },
       "unlimited": {
-        "title": "Unlimited Usage",
-        "desc": "Download as many videos as you want without restrictions."
+        "title": "Неограничено ползване",
+        "desc": "Изтегляйте без никакви ограничения."
+      },
+      "safe": {
+        "title": "Безопасно и анонимно",
+        "desc": "Ние не съхраняваме вашите данни."
       }
     },
     "how_to": {
-      "title": "How to Download TikTok Videos Without Watermark",
-      "step1": "Copy the TikTok video link you want to save.",
-      "step2": "Paste the link into the download box at the top of this page.",
-      "step3": "Click the 'Download' button and your video will be saved immediately."
+      "title": "Как да изтеглите TikTok видео без воден знак",
+      "step1_title": "Копирайте връзката",
+      "step1": "Копирайте връзката към видеото.",
+      "step2_title": "Поставете URL",
+      "step2": "Поставете връзката в полето по-горе.",
+      "step3_title": "Изтеглете",
+      "step3": "Кликнете 'Изтегли' и видеото ще бъде записано."
     },
     "tools": {
       "backToDownloader": "Back to TikTok Downloader",
@@ -825,7 +846,8 @@
     },
     "hero": {
       "title": "Stahovač TikTok videí",
-      "desc": "Stahujte videa z TikToku bez vodoznaku. Rychle, zdarma a v neomezené HD kvalitě."
+      "desc": "Stahujte videa z TikToku bez vodoznaku. Rychle, zdarma a v neomezené HD kvalitě.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Vložte odkaz na TikTok zde...",
@@ -835,7 +857,9 @@
       "download_video": "Stáhnout video",
       "download_audio": "Stáhnout MP3",
       "hd_quality": "Bez vodoznaku",
-      "error_busy": "Služba je zaneprázdněna, zkuste to prosím později."
+      "error_busy": "Služba je zaneprázdněna, zkuste to prosím později.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Často kladené otázky (FAQ)",
@@ -907,7 +931,10 @@
       "title": "Jak stahovat videa z TikToku bez vodoznaku",
       "step1": "Zkopírujte odkaz na video TikTok, které chcete uložit.",
       "step2": "Vložte odkaz do pole pro stahování v horní části této stránky.",
-      "step3": "Klikněte na tlačítko „Stáhnout“ a vaše video se okamžitě uloží."
+      "step3": "Klikněte na tlačítko „Stáhnout“ a vaše video se okamžitě uloží.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Zpět na stahovač",
@@ -1128,7 +1155,12 @@
         "question": "Je legální používat tento stahovač?",
         "answer": "Ano, pokud stahovaný obsah používáte pro osobní, nekomerční účely (jako je sledování offline). Respektujte prosím autorská práva tvůrců."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "da": {
     "meta": {
@@ -1146,7 +1178,8 @@
     },
     "hero": {
       "title": "TikTok Video Downloader",
-      "desc": "Download TikTok-videoer uden vandmærke. Hurtigt, gratis og ubegrænset HD-kvalitet."
+      "desc": "Download TikTok-videoer uden vandmærke. Hurtigt, gratis og ubegrænset HD-kvalitet.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Indsæt TikTok-link her...",
@@ -1156,7 +1189,9 @@
       "download_video": "Download video",
       "download_audio": "Download MP3",
       "hd_quality": "Uden vandmærke",
-      "error_busy": "Tjenesten er optaget, prøv igen senere."
+      "error_busy": "Tjenesten er optaget, prøv igen senere.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Ofte stillede spørgsmål (FAQ)",
@@ -1228,7 +1263,10 @@
       "title": "Sådan downloader du TikTok-videoer uden vandmærke",
       "step1": "Kopier det TikTok-videolink, du vil gemme.",
       "step2": "Indsæt linket i downloadboksen øverst på denne side.",
-      "step3": "Klik på knappen 'Download', og din video gemmes med det samme."
+      "step3": "Klik på knappen 'Download', og din video gemmes med det samme.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Tilbage til downloader",
@@ -1448,7 +1486,12 @@
         "question": "Er det lovligt at bruge denne downloader?",
         "answer": "Ja, så længe du bruger det downloadede indhold til personlige, ikke-kommercielle formål (som offline visning). Respekter venligst skabernes ophavsret."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "de": {
     "meta": {
@@ -1466,7 +1509,8 @@
     },
     "hero": {
       "title": "TikTok Video Downloader",
-      "desc": "TikTok Videos ohne Wasserzeichen herunterladen. Schnell, kostenlos und unbegrenzte HD-Qualität."
+      "desc": "TikTok Videos ohne Wasserzeichen herunterladen. Schnell, kostenlos und unbegrenzte HD-Qualität.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "TikTok-Link hier einfügen...",
@@ -1476,7 +1520,9 @@
       "download_video": "Video herunterladen",
       "download_audio": "MP3 herunterladen",
       "hd_quality": "Ohne Wasserzeichen",
-      "error_busy": "Dienst beschäftigt, bitte später erneut versuchen."
+      "error_busy": "Dienst beschäftigt, bitte später erneut versuchen.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Häufig gestellte Fragen (FAQ)",
@@ -1548,7 +1594,10 @@
       "title": "So laden Sie TikTok-Videos ohne Wasserzeichen herunter",
       "step1": "Kopieren Sie den TikTok-Videolink, den Sie speichern möchten.",
       "step2": "Fügen Sie den Link in das Download-Feld oben auf dieser Seite ein.",
-      "step3": "Klicken Sie auf die Schaltfläche 'Download' und Ihr Video wird sofort gespeichert."
+      "step3": "Klicken Sie auf die Schaltfläche 'Download' und Ihr Video wird sofort gespeichert.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Zurück zum Downloader",
@@ -1768,7 +1817,12 @@
         "question": "Ist es legal, diesen Downloader zu verwenden?",
         "answer": "Ja, solange du die heruntergeladenen Inhalte für persönliche, nicht-kommerzielle Zwecke nutzt (z. B. Offline-Ansicht). Bitte respektiere das Urheberrecht der Ersteller."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "el": {
     "meta": {
@@ -1786,7 +1840,8 @@
     },
     "hero": {
       "title": "Λήψη Βίντεο TikTok",
-      "desc": "Κατεβάστε βίντεο TikTok χωρίς υδατογράφημα. Γρήγορα, Δωρεάν και Απεριόριστη ποιότητα HD."
+      "desc": "Κατεβάστε βίντεο TikTok χωρίς υδατογράφημα. Γρήγορα, Δωρεάν και Απεριόριστη ποιότητα HD.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Επικολλήστε τον σύνδεσμο TikTok εδώ...",
@@ -1796,7 +1851,9 @@
       "download_video": "Λήψη βίντεο",
       "download_audio": "Λήψη MP3",
       "hd_quality": "Χωρίς υδατογράφημα",
-      "error_busy": "Η υπηρεσία είναι απασχολημένη, δοκιμάστε ξανά αργότερα."
+      "error_busy": "Η υπηρεσία είναι απασχολημένη, δοκιμάστε ξανά αργότερα.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Συχνές Ερωτήσεις (FAQ)",
@@ -1868,7 +1925,10 @@
       "title": "Πώς να κατεβάσετε βίντεο TikTok χωρίς υδατογράφημα",
       "step1": "Αντιγράψτε τον σύνδεσμο του βίντεο TikTok που θέλετε να αποθηκεύσετε.",
       "step2": "Επικολλήστε τον σύνδεσμο στο πλαίσιο λήψης στο επάνω μέρος αυτής της σελίδας.",
-      "step3": "Κάντε κλικ στο κουμπί 'Λήψη' και το βίντεό σας θα αποθηκευτεί αμέσως."
+      "step3": "Κάντε κλικ στο κουμπί 'Λήψη' και το βίντεό σας θα αποθηκευτεί αμέσως.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Πίσω στη λήψη",
@@ -2088,7 +2148,12 @@
         "question": "Είναι νόμιμη η χρήση αυτού του προγράμματος λήψης;",
         "answer": "Ναι, αρκεί να χρησιμοποιείτε το ληφθέν περιεχόμενο για προσωπικούς και μη εμπορικούς σκοπούς (όπως προβολή εκτός σύνδεσης). Παρακαλούμε να σέβεστε τα πνευματικά δικαιώματα των δημιουργών."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "en": {
     "meta": {
@@ -2107,17 +2172,20 @@
     },
     "hero": {
       "title": "TikTok Video Downloader",
-      "desc": "Download TikTok videos without watermark. Fast, Free, and Unlimited HD Quality."
+      "desc": "Download TikTok videos without watermark. Fast, Free, and Unlimited HD Quality.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Paste TikTok link here...",
-      "btn_download": "Download Now",
+      "btn_download": "Download",
       "processing": "Processing...",
       "error": "Please paste a valid TikTok link!",
       "download_video": "Download Video",
       "download_audio": "Download MP3",
       "hd_quality": "No Watermark",
-      "error_busy": "Service busy, please try again later."
+      "error_busy": "Service busy, please try again later.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Frequently Asked Questions (FAQ)",
@@ -2576,17 +2644,20 @@
     },
     "hero": {
       "title": "Descargador de TikTok",
-      "desc": "Descargar videos de TikTok sin marca de agua. Rápido, Gratis y Calidad HD Ilimitada."
+      "desc": "Descargar videos de TikTok sin marca de agua. Rápido, Gratis y Calidad HD Ilimitada.",
+      "no_watermark": "Sin marca de agua"
     },
     "downloader": {
       "placeholder": "Pegue el enlace de TikTok aquí...",
       "btn_download": "Descargar",
       "processing": "Procesando...",
       "error": "¡Pega un enlace válido!",
-      "download_video": "Descargar Video",
+      "download_video": "Descargar Vídeo",
       "download_audio": "Descargar MP3",
       "hd_quality": "Sin marca de agua",
-      "error_busy": "Servicio ocupado, inténtalo de nuevo más tarde."
+      "error_busy": "Servicio ocupado, inténtalo de nuevo más tarde.",
+      "download_hd": "Descargar HD",
+      "save": "Guardar"
     },
     "faq": {
       "title": "Preguntas Frecuentes (FAQ)",
@@ -2652,13 +2723,28 @@
       "unlimited": {
         "title": "Uso Ilimitado",
         "desc": "Descarga tantos videos como quieras sin ninguna restricción."
+      },
+      "no_watermark": {
+        "title": "Sin marca de agua",
+        "desc": "Descarga videos de TikTok sin la molesta marca de agua de TikTok."
+      },
+      "quality": {
+        "title": "Calidad HD & 4K",
+        "desc": "Guarda videos en su calidad original - hasta resolución 4K."
+      },
+      "device": {
+        "title": "Todos los dispositivos",
+        "desc": "Funciona perfectamente en iPhone, Android, PC, Mac y tabletas."
       }
     },
     "how_to": {
       "title": "Cómo Descargar Videos de TikTok Sin Marca de Agua",
       "step1": "Copia el enlace del video de TikTok que quieres guardar.",
       "step2": "Pega el enlace en el cuadro de descarga en la parte superior.",
-      "step3": "Haz clic en el botón 'Descargar' y tu video se guardará inmediatamente."
+      "step3": "Haz clic en el botón 'Descargar' y tu video se guardará inmediatamente.",
+      "step1_title": "Copiar enlace",
+      "step2_title": "Pegar URL",
+      "step3_title": "Descargar"
     },
     "tools": {
       "backToDownloader": "Volver al descargador",
@@ -2878,7 +2964,12 @@
         "question": "¿Es legal usar este descargador?",
         "answer": "Sí, siempre y cuando uses el contenido descargado para fines personales y no comerciales (como visualización sin conexión). Por favor, respeta los derechos de autor de los creadores."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Vídeo",
+      "mp3": "Audio MP3",
+      "stories": "Historias"
+    }
   },
   "fi": {
     "meta": {
@@ -2896,7 +2987,8 @@
     },
     "hero": {
       "title": "TikTok Video Lataaja",
-      "desc": "Lataa TikTok-videoita ilman vesileimaa. Nopea, ilmainen ja rajoittamaton HD-laatu."
+      "desc": "Lataa TikTok-videoita ilman vesileimaa. Nopea, ilmainen ja rajoittamaton HD-laatu.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Liitä TikTok-linkki tähän...",
@@ -2906,7 +2998,9 @@
       "download_video": "Lataa video",
       "download_audio": "Lataa MP3",
       "hd_quality": "Ilman vesileimaa",
-      "error_busy": "Palvelu on varattu, yritä myöhemmin uudelleen."
+      "error_busy": "Palvelu on varattu, yritä myöhemmin uudelleen.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Usein kysytyt kysymykset (FAQ)",
@@ -2978,7 +3072,10 @@
       "title": "Kuinka ladata TikTok-videoita ilman vesileimaa",
       "step1": "Kopioi tallennettavan TikTok-videon linkki.",
       "step2": "Liitä linkki tämän sivun yläreunassa olevaan latauskenttään.",
-      "step3": "Napsauta 'Lataa'-painiketta, niin videosi tallennεται välittömästi."
+      "step3": "Napsauta 'Lataa'-painiketta, niin videosi tallennεται välittömästi.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Takaisin lataajaan",
@@ -3198,7 +3295,12 @@
         "question": "Onko tämän lataajan käyttö laillista?",
         "answer": "Kyllä, kunhan käytät ladattua sisältöä henkilökohtaisiin, ei-kaupallisiin tarkoituksiin (kuten offline-katseluun). Kunnioita sisällöntuottajien tekijänoikeuksia."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "fr": {
     "meta": {
@@ -3216,7 +3318,8 @@
     },
     "hero": {
       "title": "Téléchargeur TikTok",
-      "desc": "Téléchargez des vidéos TikTok sans filigrane. Rapide, Gratuit et Qualité HD illimitée."
+      "desc": "Téléchargez des vidéos TikTok sans filigrane. Rapide, Gratuit et Qualité HD illimitée.",
+      "no_watermark": "Sans filigrane"
     },
     "downloader": {
       "placeholder": "Coller le lien TikTok ici...",
@@ -3226,7 +3329,9 @@
       "download_video": "Télécharger Vidéo",
       "download_audio": "Télécharger MP3",
       "hd_quality": "Sans filigrane",
-      "error_busy": "Service occupé, veuillez réessayer plus tard."
+      "error_busy": "Service occupé, veuillez réessayer plus tard.",
+      "download_hd": "Télécharger HD",
+      "save": "Enregistrer"
     },
     "faq": {
       "title": "Foire Aux Questions (FAQ)",
@@ -3281,23 +3386,38 @@
       "rights": "© 2026 SaveTikFast. Tous droits réservés."
     },
     "features": {
+      "no_watermark": {
+        "title": "Sans filigrane",
+        "desc": "Téléchargez des vidéos TikTok sans le filigrane gênant de TikTok."
+      },
       "fast": {
         "title": "Téléchargement Rapide",
         "desc": "Téléchargez des vidéos TikTok en quelques secondes grâce à nos serveurs haute vitesse."
       },
-      "safe": {
-        "title": "Sûr et Privé",
-        "desc": "Nous ne stockons pas vos vidéos et ne suivons pas vos données personnelles."
+      "quality": {
+        "title": "Qualité HD & 4K",
+        "desc": "Enregistrez les vidéos dans leur qualité d'origine - jusqu'à 4K."
+      },
+      "device": {
+        "title": "Tous les Appareils",
+        "desc": "Fonctionne parfaitement sur iPhone, Android, PC, Mac et tablettes."
       },
       "unlimited": {
         "title": "Utilisation Illimitée",
         "desc": "Téléchargez autant de vidéos que vous le souhaitez sans aucune restriction."
+      },
+      "safe": {
+        "title": "Sûr et Privé",
+        "desc": "Nous ne stockons pas vos vidéos et ne suivons pas vos données personnelles."
       }
     },
     "how_to": {
       "title": "Comment télécharger des vidéos TikTok sans filigrane",
+      "step1_title": "Copier le lien",
       "step1": "Copiez le lien de la vidéo TikTok que vous souhaitez enregistrer.",
+      "step2_title": "Coller le lien",
       "step2": "Collez le lien dans la zone de téléchargement en haut de cette page.",
+      "step3_title": "Télécharger",
       "step3": "Cliquez sur le bouton 'Télécharger' et votre vidéo sera enregistrée immédiatement."
     },
     "tools": {
@@ -3518,7 +3638,12 @@
         "question": "Est-il légal d'utiliser ce téléchargeur ?",
         "answer": "Oui, tant que vous utilisez le contenu téléchargé à des fins personnelles et non commerciales (comme le visionnage hors ligne). Veuillez respecter les droits d'auteur des créateurs."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Vidéo",
+      "mp3": "Audio MP3",
+      "stories": "Stories"
+    }
   },
   "hi": {
     "meta": {
@@ -3536,17 +3661,20 @@
     },
     "hero": {
       "title": "TikTok Video Downloader",
-      "desc": "TikTok video bina watermark ke download karein. Tez, Muft aur Unlimited HD Quality."
+      "desc": "TikTok video bina watermark ke download karein. Tez, Muft aur Unlimited HD Quality.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "टिकटॉक लिंक यहाँ पेस्ट करें...",
-      "btn_download": "अभी डाउनलोड करें",
+      "btn_download": "डाउनलोड",
       "processing": "प्रसंस्करण हो रहा है...",
       "error": "अमान्य लिंक!",
-      "download_video": "वीडियो डाउनलोड करें",
-      "download_audio": "MP3 डाउनलोड करें",
-      "hd_quality": "बिना वॉटरमार्क के",
-      "error_busy": "सेवा व्यस्त है, कृपया बाद में पुनः प्रयास करें।"
+      "download_video": "वीडियो डाउनलोड",
+      "download_audio": "MP3 डाउनलोड",
+      "hd_quality": "बिना वॉटरमार्क",
+      "error_busy": "सेवा व्यस्त है, कृपया बाद में पुनः प्रयास करें।",
+      "download_hd": "HD डाउनलोड",
+      "save": "सेव"
     },
     "faq": {
       "title": "Aksar Puche Jane Wale Sawal (FAQ)",
@@ -3618,7 +3746,10 @@
       "title": "बिना वॉटरमार्क के टिकटॉक वीडियो कैसे डाउनलोड करें",
       "step1": "उस टिकटॉक वीडियो का लिंक कॉपी करें जिसे आप सेव करना चाहते हैं।",
       "step2": "इस पेज के शीर्ष पर स्थित डाउनलोड बॉक्स में लिंक पेस्ट करें।",
-      "step3": "'डाउनलोड' बटन पर क्लिक करें और आपका वीडियो तुरंत सेव हो जाएगा।"
+      "step3": "'डाउनलोड' बटन पर क्लिक करें और आपका वीडियो तुरंत सेव हो जाएगा।",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "डाउनलोडर पर वापस जाएं",
@@ -3838,7 +3969,12 @@
         "question": "Kya is downloader ka upyog karna legal hai?",
         "answer": "Haan, jab tak aap download kiye gaye content ka upyog niji aur gair-vyavsayik (non-commercial) uddeshyon ke liye karte hain (jaise offline dekhna). Kripya creators ke copyright ka samman karein."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "वीडियो",
+      "mp3": "MP3 ऑडियो",
+      "stories": "कहानियां"
+    }
   },
   "hu": {
     "meta": {
@@ -3856,7 +3992,8 @@
     },
     "hero": {
       "title": "TikTok Videó Letöltő",
-      "desc": "Tölts le TikTok videókat vízjel nélkül. Gyors, ingyenes és korlátlan HD minőség."
+      "desc": "Tölts le TikTok videókat vízjel nélkül. Gyors, ingyenes és korlátlan HD minőség.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Illessze be a TikTok linket ide...",
@@ -3866,7 +4003,9 @@
       "download_video": "Videó letöltése",
       "download_audio": "MP3 letöltése",
       "hd_quality": "Vízjel nélkül",
-      "error_busy": "A szolgáltatás foglalt, próbáld újra később."
+      "error_busy": "A szolgáltatás foglalt, próbáld újra később.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Gyakran Ismételt Kérdések (GYIK)",
@@ -3938,7 +4077,10 @@
       "title": "TikTok videók letöltése vízjel nélkül",
       "step1": "Másolja ki a menteni kívánt TikTok videó linkjét.",
       "step2": "Illessze be a linket az oldal tetején található letöltési mezőbe.",
-      "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül."
+      "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Vissza a letöltőhöz",
@@ -4158,7 +4300,12 @@
         "question": "Legális ennek a letöltőnek a használata?",
         "answer": "Igen, amíg a letöltött tartalmat személyes, nem kereskedelmi célokra használod (például offline megtekintés). Kérjük, tartsd tiszteletben az alkotók szerzői jogait."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "id": {
     "meta": {
@@ -4176,17 +4323,20 @@
     },
     "hero": {
       "title": "Pengunduh Video TikTok",
-      "desc": "Download video TikTok tanpa watermark. Cepat, Gratis, dan Kualitas HD Tak Terbatas."
+      "desc": "Download video TikTok tanpa watermark. Cepat, Gratis, dan Kualitas HD Tak Terbatas.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Tempel tautan TikTok di sini...",
-      "btn_download": "Unduh sekarang",
+      "btn_download": "Unduh",
       "processing": "Memproses...",
       "error": "Tempel tautan yang valid!",
       "download_video": "Unduh Video",
       "download_audio": "Unduh MP3",
-      "hd_quality": "Tanpa tanda air",
-      "error_busy": "Layanan sibuk, silakan coba lagi nanti."
+      "hd_quality": "Tanpa Watermark",
+      "error_busy": "Layanan sibuk, silakan coba lagi nanti.",
+      "download_hd": "Unduh HD",
+      "save": "Simpan"
     },
     "faq": {
       "title": "Pertanyaan Umum (FAQ)",
@@ -4258,7 +4408,10 @@
       "title": "Cara Mengunduh Video TikTok Tanpa Watermark",
       "step1": "Salin tautan video TikTok yang ingin Anda simpan.",
       "step2": "Tempel tautan ke kotak unduhan di bagian atas halaman ini.",
-      "step3": "Klik tombol 'Unduh' dan video Anda akan segera disimpan."
+      "step3": "Klik tombol 'Unduh' dan video Anda akan segera disimpan.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Kembali ke Pengunduh",
@@ -4478,7 +4631,12 @@
         "question": "Apakah legal menggunakan layanan ini?",
         "answer": "Ya, selama Anda menggunakan konten yang diunduh untuk tujuan pribadi dan non-komersial (seperti menonton offline). Harap hormati hak cipta pembuat konten."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "Audio MP3",
+      "stories": "Stories"
+    }
   },
   "it": {
     "meta": {
@@ -4496,7 +4654,8 @@
     },
     "hero": {
       "title": "Downloader TikTok",
-      "desc": "Scarica video TikTok senza logo. Veloce, Gratis e Qualità HD illimitata."
+      "desc": "Scarica video TikTok senza logo. Veloce, Gratis e Qualità HD illimitata.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Incolla qui il link di TikTok...",
@@ -4506,7 +4665,9 @@
       "download_video": "Scarica Video",
       "download_audio": "Scarica MP3",
       "hd_quality": "Senza filigrana",
-      "error_busy": "Servizio occupato, riprova più tardi."
+      "error_busy": "Servizio occupato, riprova più tardi.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Domande Frequenti (FAQ)",
@@ -4578,7 +4739,10 @@
       "title": "Come scaricare video TikTok senza filigrana",
       "step1": "Copia il link del video TikTok che desideri salvare.",
       "step2": "Incolla il link nella casella di download in alto in questa pagina.",
-      "step3": "Fai clic sul pulsante 'Download' e il tuo video verrà salvato immediatamente."
+      "step3": "Fai clic sul pulsante 'Download' e il tuo video verrà salvato immediatamente.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Torna al downloader",
@@ -4798,7 +4962,12 @@
         "question": "È legale usare questo downloader?",
         "answer": "Sì, purché tu utilizzi il contenuto scaricato per scopi personali e non commerciali (come la visione offline). Si prega di rispettare il copyright dei creatori."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "Audio MP3",
+      "stories": "Storie"
+    }
   },
   "ja": {
     "meta": {
@@ -4816,7 +4985,8 @@
     },
     "hero": {
       "title": "TikTok動画ダウンローダー",
-      "desc": "透かしなしでTikTok動画を保存。高速、無料、無制限のHD画質。"
+      "desc": "透かしなしでTikTok動画を保存。高速、無料、無制限のHD画質。",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "ここにTikTokリンクを貼り付け...",
@@ -4826,7 +4996,9 @@
       "download_video": "ビデオをダウンロード",
       "download_audio": "MP3をダウンロード",
       "hd_quality": "ウォーターマークなし",
-      "error_busy": "サービスが混雑しています。後でもう一度お試しください。"
+      "error_busy": "サービスが混雑しています。後でもう一度お試しください。",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "よくある質問 (FAQ)",
@@ -4898,7 +5070,10 @@
       "title": "ロゴなしでTikTok動画をダウンロードする方法",
       "step1": "保存したいTikTok動画のリンクをコピーします。",
       "step2": "このページ上部の入力ボックスにリンクを貼り付けます。",
-      "step3": "「ダウンロード」ボタンをクリックすると、すぐに保存されます。"
+      "step3": "「ダウンロード」ボタンをクリックすると、すぐに保存されます。",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "ダウンローダーに戻る",
@@ -5118,7 +5293,12 @@
         "question": "このダウンローダーを使用することは合法的ですか？",
         "answer": "はい、個人的かつ非営利目的（オフラインでの視聴など）で使用する限り合法です。コンテンツ作成者の著作権を尊重してください。"
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "ビデオ",
+      "mp3": "MP3音声",
+      "stories": "ストーリー"
+    }
   },
   "ko": {
     "meta": {
@@ -5136,7 +5316,8 @@
     },
     "hero": {
       "title": "틱톡 비디오 다운로더",
-      "desc": "워터마크 없이 틱톡 영상을 저장하세요. 빠르고, 무료이며, 무제한 HD 화질."
+      "desc": "워터마크 없이 틱톡 영상을 저장하세요. 빠르고, 무료이며, 무제한 HD 화질.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "여기에 TikTok 링크를 붙여넣으세요...",
@@ -5146,7 +5327,9 @@
       "download_video": "비디오 다운로드",
       "download_audio": "MP3 다운로드",
       "hd_quality": "워터마크 없음",
-      "error_busy": "서비스가 바쁩니다. 나중에 다시 시도해 주세요."
+      "error_busy": "서비스가 바쁩니다. 나중에 다시 시도해 주세요.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "자주 묻는 질문 (FAQ)",
@@ -5218,7 +5401,10 @@
       "title": "워터마크 없이 TikTok 동영상을 다운로드하는 방법",
       "step1": "저장하려는 TikTok 동영상 링크를 복사합니다.",
       "step2": "이 페이지 상단의 다운로드 상자에 링크를 붙여넣습니다.",
-      "step3": "'다운로드' 버튼을 클릭하면 동영상이 즉시 저장됩니다."
+      "step3": "'다운로드' 버튼을 클릭하면 동영상이 즉시 저장됩니다.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "다운로더로 돌아가기",
@@ -5438,7 +5624,12 @@
         "question": "이 다운로더를 사용하는 것이 합법인가요?",
         "answer": "네, 다운로드한 콘텐츠를 개인적, 비상업적 목적(예: 오프라인 시청)으로 사용하는 한 합법입니다. 콘텐츠 제작자의 저작권을 존중해 주시기 바랍니다."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "비디오",
+      "mp3": "MP3 오디오",
+      "stories": "스토리"
+    }
   },
   "ms": {
     "meta": {
@@ -5456,7 +5647,8 @@
     },
     "hero": {
       "title": "Pemuat Turun Video TikTok",
-      "desc": "Muat turun video TikTok tanpa tanda air. Pantas, Percuma dan Kualiti HD Tanpa Had."
+      "desc": "Muat turun video TikTok tanpa tanda air. Pantas, Percuma dan Kualiti HD Tanpa Had.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Tampal pautan TikTok di sini...",
@@ -5466,7 +5658,9 @@
       "download_video": "Muat Turun Video",
       "download_audio": "Muat Turun MP3",
       "hd_quality": "Tanpa tanda air",
-      "error_busy": "Perkhidmatan sibuk, sila cuba lagi kemudian."
+      "error_busy": "Perkhidmatan sibuk, sila cuba lagi kemudian.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Soalan Lazim (FAQ)",
@@ -5538,7 +5732,10 @@
       "title": "Cara Memuat Turun Video TikTok Tanpa Tanda Air",
       "step1": "Salin pautan video TikTok yang ingin anda simpan.",
       "step2": "Tampal pautan ke dalam kotak muat turun di bahagian atas halaman ini.",
-      "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta."
+      "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Kembali ke Pemuat Turun",
@@ -5758,7 +5955,12 @@
         "question": "Adakah sah untuk menggunakan pemuat turun ini?",
         "answer": "Ya, selagi anda menggunakan kandungan yang dimuat turun untuk tujuan peribadi dan bukan komersial (seperti tontonan luar talian). Sila hormati hak cipta pencipta."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "nl": {
     "meta": {
@@ -5776,7 +5978,8 @@
     },
     "hero": {
       "title": "TikTok Video Downloader",
-      "desc": "Download TikTok video's zonder watermerk. Snel, Gratis en Onbeperkt HD Kwaliteit."
+      "desc": "Download TikTok video's zonder watermerk. Snel, Gratis en Onbeperkt HD Kwaliteit.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Plak hier de TikTok-link...",
@@ -5786,7 +5989,9 @@
       "download_video": "Video downloaden",
       "download_audio": "MP3 downloaden",
       "hd_quality": "Zonder watermerk",
-      "error_busy": "Service bezet, probeer het later opnieuw."
+      "error_busy": "Service bezet, probeer het later opnieuw.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Veelgestelde Vragen (FAQ)",
@@ -5858,7 +6063,10 @@
       "title": "TikTok-video's downloaden zonder watermerk",
       "step1": "Kopieer de link van de TikTok-video die je wilt opslaan.",
       "step2": "Plak de link in het downloadvak bovenaan deze pagina.",
-      "step3": "Klik op de knop 'Downloaden' en je video wordt direct opgeslagen."
+      "step3": "Klik op de knop 'Downloaden' en je video wordt direct opgeslagen.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Terug naar downloader",
@@ -6078,7 +6286,12 @@
         "question": "Is het legaal om deze downloader te gebruiken?",
         "answer": "Ja, zolang je de gedownloade content gebruikt voor persoonlijke, niet-commerciële doeleinden (zoals offline bekijken). Respecteer alsjeblieft het auteursrecht van de makers."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "no": {
     "meta": {
@@ -6096,7 +6309,8 @@
     },
     "hero": {
       "title": "TikTok Video Nedlaster",
-      "desc": "Last ned TikTok-videoer uten vannmerke. Raskt, gratis og ubegrenset HD-kvalitet."
+      "desc": "Last ned TikTok-videoer uten vannmerke. Raskt, gratis og ubegrenset HD-kvalitet.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Lim inn TikTok-lenke her...",
@@ -6106,7 +6320,9 @@
       "download_video": "Last ned video",
       "download_audio": "Last ned MP3",
       "hd_quality": "Uten vannmerke",
-      "error_busy": "Tjenesten er opptatt, prøv igjen senere."
+      "error_busy": "Tjenesten er opptatt, prøv igjen senere.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Ofte stilte spørsmål (FAQ)",
@@ -6178,7 +6394,10 @@
       "title": "Hvordan laste ned TikTok-videoer uten vannmerke",
       "step1": "Kopier TikTok-videolenken du vil lagre.",
       "step2": "Lim inn lenken i nedlastingsfeltet øverst på denne siden.",
-      "step3": "Klikk på 'Last ned'-knappen og videoen din blir lagret umiddelbart."
+      "step3": "Klikk på 'Last ned'-knappen og videoen din blir lagret umiddelbart.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Tilbake til laster",
@@ -6398,7 +6617,12 @@
         "question": "Er det lovlig å bruke denne nedlasteren?",
         "answer": "Ja, så lenge du bruker det nedlastede innholdet til personlige, ikke-kommersielle formål (som offline visning). Vennligst respekter opphavsretten til skaperne."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "pl": {
     "meta": {
@@ -6416,7 +6640,8 @@
     },
     "hero": {
       "title": "Pobieracz wideo TikTok",
-      "desc": "Pobieraj filmy TikTok bez znaku wodnego. Szybko, za darmo i w nieograniczonej jakości HD."
+      "desc": "Pobieraj filmy TikTok bez znaku wodnego. Szybko, za darmo i w nieograniczonej jakości HD.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Wklej link z TikToka tutaj...",
@@ -6426,7 +6651,9 @@
       "download_video": "Pobierz wideo",
       "download_audio": "Pobierz MP3",
       "hd_quality": "Bez znaku wodnego",
-      "error_busy": "Usługa zajęta, spróbuj ponownie później."
+      "error_busy": "Usługa zajęta, spróbuj ponownie później.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Często zadawane pytania (FAQ)",
@@ -6498,7 +6725,10 @@
       "title": "Jak pobierać filmy z TikToka bez znaku wodnego",
       "step1": "Skopiuj link do filmu na TikToku, który chcesz zapisać.",
       "step2": "Wklej link do pola pobierania u góry tej strony.",
-      "step3": "Kliknij przycisk „Pobierz”, a Twój film zostanie natychmiast zapisany."
+      "step3": "Kliknij przycisk „Pobierz”, a Twój film zostanie natychmiast zapisany.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Wróć do pobierania",
@@ -6718,7 +6948,12 @@
         "question": "Czy używanie tego narzędzia jest legalne?",
         "answer": "Tak, pod warunkiem, że używasz pobranych treści do celów osobistych i niekomercyjnych (np. oglądanie offline). Prosimy o poszanowanie praw autorskich twórców."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Wideo",
+      "mp3": "Audio MP3",
+      "stories": "Relacje"
+    }
   },
   "pt": {
     "meta": {
@@ -6736,17 +6971,20 @@
     },
     "hero": {
       "title": "Baixador de TikTok",
-      "desc": "Baixar vídeos do TikTok sem marca d'água. Rápido, Grátis e Qualidade HD Ilimitada."
+      "desc": "Baixar vídeos do TikTok sem marca d'água. Rápido, Grátis e Qualidade HD Ilimitada.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Cole o link do TikTok aqui...",
-      "btn_download": "Baixar agora",
+      "btn_download": "Baixar",
       "processing": "Processando...",
       "error": "Cole um link válido!",
       "download_video": "Baixar Vídeo",
       "download_audio": "Baixar MP3",
       "hd_quality": "Sem marca d'água",
-      "error_busy": "Serviço ocupado, tente novamente mais tarde."
+      "error_busy": "Serviço ocupado, tente novamente mais tarde.",
+      "download_hd": "Baixar HD",
+      "save": "Salvar"
     },
     "faq": {
       "title": "Perguntas Frequentes (FAQ)",
@@ -6818,7 +7056,10 @@
       "title": "Como baixar vídeos do TikTok sem marca d'água",
       "step1": "Copie o link do vídeo do TikTok que você deseja salvar.",
       "step2": "Cole o link na caixa de download no topo desta página.",
-      "step3": "Clique no botão 'Download' e seu vídeo será salvo imediatamente."
+      "step3": "Clique no botão 'Download' e seu vídeo será salvo imediatamente.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Voltar ao Baixador",
@@ -7038,7 +7279,12 @@
         "question": "É legal usar este baixador?",
         "answer": "Sim, desde que você use o conteúdo baixado para fins pessoais e não comerciais (como visualização offline). Por favor, respeite os direitos autorais dos criadores."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Vídeo",
+      "mp3": "Áudio MP3",
+      "stories": "Stories"
+    }
   },
   "ro": {
     "meta": {
@@ -7056,7 +7302,8 @@
     },
     "hero": {
       "title": "TikTok Video Downloader",
-      "desc": "Descarcă videoclipuri TikTok fără filigran. Rapid, gratuit și calitate HD nelimitată."
+      "desc": "Descarcă videoclipuri TikTok fără filigran. Rapid, gratuit și calitate HD nelimitată.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Lipește link-ul TikTok aici...",
@@ -7066,7 +7313,9 @@
       "download_video": "Descarcă Video",
       "download_audio": "Descarcă MP3",
       "hd_quality": "Fără watermark",
-      "error_busy": "Serviciu ocupat, încercați din nou mai târziu."
+      "error_busy": "Serviciu ocupat, încercați din nou mai târziu.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Întrebări Frecvente (FAQ)",
@@ -7138,7 +7387,10 @@
       "title": "Cum să descărcați videoclipuri TikTok fără filigran",
       "step1": "Copiați linkul videoclipului TikTok pe care doriți să îl salvați.",
       "step2": "Lipiți linkul în caseta de descărcare din partea de sus a acestei pagini.",
-      "step3": "Faceți clic på butonul „Descărcare” și videoclipul va fi salvat imediat."
+      "step3": "Faceți clic på butonul „Descărcare” și videoclipul va fi salvat imediat.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Înapoi la descărcare",
@@ -7358,7 +7610,12 @@
         "question": "Este legal să folosesc acest downloader?",
         "answer": "Da, atâta timp cât folosești conținutul descărcat în scopuri personale și necomerciale (cum ar fi vizionarea offline). Te rugăm să respecți drepturile de autor ale creatorilor."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "ru": {
     "meta": {
@@ -7376,7 +7633,8 @@
     },
     "hero": {
       "title": "Загрузчик Тик Ток",
-      "desc": "Скачать видео TikTok без водяного знака. Быстро, бесплатно и в HD качестве."
+      "desc": "Скачать видео TikTok без водяного знака. Быстро, бесплатно и в HD качестве.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Вставьте ссылку на TikTok здесь...",
@@ -7386,7 +7644,9 @@
       "download_video": "Скачать видео",
       "download_audio": "Скачать MP3",
       "hd_quality": "Без водяного знака",
-      "error_busy": "Сервис занят, попробуйте позже."
+      "error_busy": "Сервис занят, попробуйте позже.",
+      "download_hd": "Скачать HD",
+      "save": "Сохранить"
     },
     "faq": {
       "title": "Часто задаваемые вопросы (FAQ)",
@@ -7458,7 +7718,10 @@
       "title": "Как скачать видео из TikTok без водяного знака",
       "step1": "Скопируйте ссылку на видео TikTok, которое хотите сохранить.",
       "step2": "Вставьте ссылку в поле загрузки в верхней части этой страницы.",
-      "step3": "Нажмите кнопку «Скачать», и ваше видео будет немедленно сохранено."
+      "step3": "Нажмите кнопку «Скачать», и ваше видео будет немедленно сохранено.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Назад к загрузчику",
@@ -7678,7 +7941,12 @@
         "question": "Законно ли использовать этот загрузчик?",
         "answer": "Да, при условии, что вы используете скачанный контент в личных, некоммерческих целях (например, для просмотра офлайн). Пожалуйста, уважайте авторские права создателей."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Видео",
+      "mp3": "MP3 Аудио",
+      "stories": "Истории"
+    }
   },
   "sv": {
     "meta": {
@@ -7696,7 +7964,8 @@
     },
     "hero": {
       "title": "TikTok Video Nedladdare",
-      "desc": "Ladda ner TikTok-videor utan vattenstämpel. Snabbt, gratis och obegränsad HD-kvalitet."
+      "desc": "Ladda ner TikTok-videor utan vattenstämpel. Snabbt, gratis och obegränsad HD-kvalitet.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Klistra in TikTok-länk här...",
@@ -7706,7 +7975,9 @@
       "download_video": "Ladda ner video",
       "download_audio": "Ladda ner MP3",
       "hd_quality": "Utan vattenstämpel",
-      "error_busy": "Tjänsten är upptagen, försök igen senare."
+      "error_busy": "Tjänsten är upptagen, försök igen senare.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Vanliga frågor (FAQ)",
@@ -7778,7 +8049,10 @@
       "title": "Hur man laddar ner TikTok-videor utan vattenstämpel",
       "step1": "Kopiera länken till TikTok-videon du vill spara.",
       "step2": "Klistra in länken i nedladdningsrutan högst upp på denna sida.",
-      "step3": "Klicka på knappen 'Ladda ner' så sparas din video omedelbart."
+      "step3": "Klicka på knappen 'Ladda ner' så sparas din video omedelbart.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Tillbaka till nedladdare",
@@ -7998,7 +8272,12 @@
         "question": "Är det lagligt att använda denna nedladdare?",
         "answer": "Ja, så länge du använder det nedladdade innehållet för personliga, icke-kommersiella ändamål (som offlinevisning). Vänligen respektera upphovsrätten för skaparna."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "th": {
     "meta": {
@@ -8016,7 +8295,8 @@
     },
     "hero": {
       "title": "เครื่องมือดาวน์โหลด TikTok",
-      "desc": "โหลดวิดีโอ TikTok ไม่มีลายน้ำ รวดเร็ว ฟรี และคุณภาพ HD ไม่จำกัด"
+      "desc": "โหลดวิดีโอ TikTok ไม่มีลายน้ำ รวดเร็ว ฟรี และคุณภาพ HD ไม่จำกัด",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "วางลิงก์ TikTok ที่นี่...",
@@ -8026,7 +8306,9 @@
       "download_video": "ดาวน์โหลดวิดีโอ",
       "download_audio": "ดาวน์โหลด MP3",
       "hd_quality": "ไม่มีลายน้ำ",
-      "error_busy": "บริการไม่ว่าง กรุณาลองใหม่อีกครั้งในภายหลัง"
+      "error_busy": "บริการไม่ว่าง กรุณาลองใหม่อีกครั้งในภายหลัง",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "คำถามที่พบบ่อย (FAQ)",
@@ -8098,7 +8380,10 @@
       "title": "วิธีดาวน์โหลดวิดีโอ TikTok แบบไม่มีลายน้ำ",
       "step1": "คัดลอกลิงก์วิดีโอ TikTok ที่คุณต้องการบันทึก",
       "step2": "วางลิงก์ลงในช่องดาวน์โหลดที่ด้านบนของหน้านี้",
-      "step3": "คลิกปุ่ม 'ดาวน์โหลด' และวิดีโอของคุณจะถูกบันทึกทันที"
+      "step3": "คลิกปุ่ม 'ดาวน์โหลด' และวิดีโอของคุณจะถูกบันทึกทันที",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "กลับไปที่เครื่องมือดาวน์โหลด",
@@ -8318,7 +8603,12 @@
         "question": "การใช้โปรแกรมดาวน์โหลดนี้ถูกกฎหมายหรือไม่?",
         "answer": "ใช่ ตราบใดที่คุณใช้เนื้อหาที่ดาวน์โหลดมาเพื่อวัตถุประสงค์ส่วนตัวและไม่ใช่เพื่อการค้า (เช่น การดูแบบออฟไลน์) โปรดเคารพลิขสิทธิ์ของผู้สร้างเนื้อหา"
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "วิดีโอ",
+      "mp3": "เสียง MP3",
+      "stories": "สตอรี่"
+    }
   },
   "fil": {
     "meta": {
@@ -8337,7 +8627,8 @@
     },
     "hero": {
       "title": "TikTok Video Downloader",
-      "desc": "Download TikTok videos without watermark. Fast, Free, and Unlimited HD Quality."
+      "desc": "Download TikTok videos without watermark. Fast, Free, and Unlimited HD Quality.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Paste TikTok link here...",
@@ -8347,7 +8638,9 @@
       "download_video": "Download Video",
       "download_audio": "Download MP3",
       "hd_quality": "No Watermark",
-      "error_busy": "Service busy, please try again later."
+      "error_busy": "Service busy, please try again later.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Frequently Asked Questions (FAQ)",
@@ -8509,7 +8802,10 @@
       "title": "How to Download TikTok Videos Without Watermark",
       "step1": "Copy the TikTok video link you want to save.",
       "step2": "Paste the link into the download box at the top of this page.",
-      "step3": "Click the 'Download' button and your video will be saved immediately."
+      "step3": "Click the 'Download' button and your video will be saved immediately.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Back to TikTok Downloader",
@@ -8747,7 +9043,8 @@
     },
     "hero": {
       "title": "TikTok Video İndirici",
-      "desc": "Filigransız TikTok videoları indir. Hızlı, Ücretsiz ve Sınırsız HD Kalite."
+      "desc": "Filigransız TikTok videoları indir. Hızlı, Ücretsiz ve Sınırsız HD Kalite.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "TikTok bağlantısını buraya yapıştırın...",
@@ -8757,7 +9054,9 @@
       "download_video": "Videoyu İndir",
       "download_audio": "MP3 İndir",
       "hd_quality": "Filigransız",
-      "error_busy": "Servis meşgul, lütfen daha sonra tekrar deneyin."
+      "error_busy": "Servis meşgul, lütfen daha sonra tekrar deneyin.",
+      "download_hd": "HD İndir",
+      "save": "Kaydet"
     },
     "faq": {
       "title": "Sıkça Sorulan Sorular (SSS)",
@@ -8829,7 +9128,10 @@
       "title": "Filigransız TikTok Videosu Nasıl İndirilir?",
       "step1": "Kaydetmek istediğiniz TikTok videosunun bağlantısını kopyalayın.",
       "step2": "Bağlantıyı bu sayفن صفحة التحميل في الأعلى.",
-      "step3": "'İndir' butonuna tıklayın, videonuz anında cihazınıza kaydedilecektir."
+      "step3": "'İndir' butonuna tıklayın, videonuz anında cihazınıza kaydedilecektir.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "TikTok İndiriciye Dön",
@@ -9049,7 +9351,12 @@
         "question": "Bu hizmeti kullanmak yasal mı?",
         "answer": "Evet, videoları kişisel ve ticari olmayan amaçlarla (çevrimdışı izleme gibi) kullandığınız sürece yasaldır. Lütfen içerik üreticilerinin telif haklarına saygı gösterin."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Ses",
+      "stories": "Hikayeler"
+    }
   },
   "uk": {
     "meta": {
@@ -9067,7 +9374,8 @@
     },
     "hero": {
       "title": "Завантажувач TikTok",
-      "desc": "Завантажити відео TikTok без водяного знака. Швидко, безкоштовно та в необмеженій HD якості."
+      "desc": "Завантажити відео TikTok без водяного знака. Швидко, безкоштовно та в необмеженій HD якості.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Вставте посилання на TikTok тут...",
@@ -9077,7 +9385,9 @@
       "download_video": "Завантажити відео",
       "download_audio": "Завантажити MP3",
       "hd_quality": "Без водяного знака",
-      "error_busy": "Сервіс зайнятий, спробуйте пізніше."
+      "error_busy": "Сервіс зайнятий, спробуйте пізніше.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Часті запитання (FAQ)",
@@ -9149,7 +9459,10 @@
       "title": "Як завантажити відео з TikTok без водяного знака",
       "step1": "Скопіюйте посилання на відео TikTok, яке ви хочете зберегти.",
       "step2": "Вставте посилання в поле завантаження у верхній частині цієї сторінки.",
-      "step3": "Натисніть кнопку «Завантажити», і ваше відео буде негайно збережено."
+      "step3": "Натисніть кнопку «Завантажити», і ваше відео буде негайно збережено.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Назад до завантажувача",
@@ -9369,7 +9682,12 @@
         "question": "Чи законно використовувати цей завантажувач?",
         "answer": "Так, за умови, що ви використовуєте завантажений контент в особистих, некомерційних цілях (наприклад, для перегляду офлайн). Будь ласка, поважайте авторські права творців."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "MP3 Audio",
+      "stories": "Stories"
+    }
   },
   "vi": {
     "meta": {
@@ -9387,7 +9705,8 @@
     },
     "hero": {
       "title": "Trình Tải Video TikTok",
-      "desc": "Tải video TikTok không logo. Nhanh chóng, Miễn phí và Chất lượng HD không giới hạn."
+      "desc": "Tải video TikTok không logo. Nhanh chóng, Miễn phí và Chất lượng HD không giới hạn.",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "Dán liên kết TikTok vào đây...",
@@ -9397,7 +9716,9 @@
       "download_video": "Tải Video",
       "download_audio": "Tải MP3",
       "hd_quality": "Không có logo",
-      "error_busy": "Dịch vụ đang bận, vui lòng thử lại sau."
+      "error_busy": "Dịch vụ đang bận, vui lòng thử lại sau.",
+      "download_hd": "Download HD",
+      "save": "Save"
     },
     "faq": {
       "title": "Câu hỏi thường gặp (FAQ)",
@@ -9469,7 +9790,10 @@
       "title": "Cách tải video TikTok không có hình mờ",
       "step1": "Sao chép liên kết video TikTok mà bạn muốn lưu.",
       "step2": "Dán liên kết vào hộp tải xuống ở đầu trang này.",
-      "step3": "Nhấp vào nút 'Tải xuống' và video của bạn sẽ được lưu ngay lập tức."
+      "step3": "Nhấp vào nút 'Tải xuống' và video của bạn sẽ được lưu ngay lập tức.",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "Quay lại trình tải xuống",
@@ -9689,7 +10013,12 @@
         "question": "Sử dụng trình tải xuống này có hợp pháp không?",
         "answer": "Có, miễn là bạn sử dụng nội dung đã tải cho mục đích cá nhân và phi thương mại (như xem ngoại tuyến). Vui lòng tôn trọng bản quyền của người sáng tạo nội dung."
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "Video",
+      "mp3": "Âm thanh MP3",
+      "stories": "Stories"
+    }
   },
   "zh": {
     "meta": {
@@ -9707,17 +10036,20 @@
     },
     "hero": {
       "title": "TikTok 影片下載器",
-      "desc": "下載無浮水印的 TikTok 影片。快速、免費且無限量 HD 畫質。"
+      "desc": "下載無浮水印的 TikTok 影片。快速、免費且無限量 HD 畫質。",
+      "no_watermark": "No Watermark"
     },
     "downloader": {
       "placeholder": "在此处粘贴 TikTok 链接...",
-      "btn_download": "立即下载",
+      "btn_download": "下载",
       "processing": "正在处理...",
       "error": "无效链接！",
       "download_video": "下载视频",
       "download_audio": "下载 MP3",
       "hd_quality": "无水印",
-      "error_busy": "服务繁忙，请稍后再试。"
+      "error_busy": "服务繁忙，请稍后再试。",
+      "download_hd": "下载 HD",
+      "save": "保存"
     },
     "faq": {
       "title": "常見問題 (FAQ)",
@@ -9789,7 +10121,10 @@
       "title": "如何下载无水印的 TikTok 视频",
       "step1": "复制您想要保存的 TikTok 视频链接。",
       "step2": "将链接粘贴到页面顶部的下载框中。",
-      "step3": "点击“下载”按钮，您的视频将立即保存。"
+      "step3": "点击“下载”按钮，您的视频将立即保存。",
+      "step1_title": "Copy Link",
+      "step2_title": "Paste URL",
+      "step3_title": "Download"
     },
     "tools": {
       "backToDownloader": "返回下载器",
@@ -10009,6 +10344,11 @@
         "question": "使用這個下載器合法嗎？",
         "answer": "是的，只要您將下載的內容用於個人和非商業目的（例如離線觀看）。請尊重內容創作者的版權。"
       }
-    ]
+    ],
+    "nav_menu": {
+      "video": "视频",
+      "mp3": "MP3音频",
+      "stories": "故事"
+    }
   }
 }
