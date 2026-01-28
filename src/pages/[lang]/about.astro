@@ -1,9 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Downloader from "../components/Downloader.jsx";
-import { getLangFromUrl, useTranslations } from "../utils/i18n";
+import Layout from "../../layouts/Layout.astro";
+import Downloader from "../../components/Downloader.jsx";
+import { languages, defaultLang } from "../../i18n/ui";
+import { useTranslations } from "../../utils/i18n";
 
-const currentLang = getLangFromUrl(Astro.url);
+export async function getStaticPaths() {
+    return Object.keys(languages)
+        .filter((lang) => lang !== defaultLang)
+        .map((lang) => ({
+            params: { lang },
+        }));
+}
+
+const { lang } = Astro.params;
+const currentLang = lang || defaultLang;
 const t = useTranslations(currentLang);
 ---
 

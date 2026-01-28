@@ -1,18 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Downloader from "../components/Downloader.jsx";
+import { getLangFromUrl, useTranslations } from "../utils/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="404 - Page Not Found">
-    <div style="text-align: center; padding: 100px 20px;">
+<Layout title="404 - Page Not Found" lang={lang} description="Page not found">
+    <article class="hero-section">
         <h1 style="font-size: 5rem; color: var(--secondary);">404</h1>
         <p style="font-size: 1.5rem; margin-bottom: 2rem;">
-            Page not found / الصفحة غير موجودة
+            {lang === "ar" ? "الصفحة غير موجودة" : "Page not found"}
         </p>
-        <a
-            href="/"
-            class="btn-download"
-            style="text-decoration: none; display: inline-block;"
-            >Go Home / العودة للرئيسية</a
-        >
-    </div>
+
+        <Downloader client:load t={t} />
+
+        <div style="margin-top: 2rem;">
+            <a
+                href="/"
+                class="btn-download"
+                style="text-decoration: none; display: inline-block; width: auto;"
+                >{lang === "ar" ? "العودة للرئيسية" : "Go Home"}</a
+            >
+        </div>
+    </article>
 </Layout>

@@ -1,54 +1,64 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Downloader from '../components/Downloader.jsx';
-import FAQ from '../components/FAQ.astro';
-import { getTranslations } from '../utils/i18n';
+import Layout from "../layouts/Layout.astro";
+import Downloader from "../components/Downloader.jsx";
+import FAQ from "../components/FAQ.astro";
+import { getLangFromUrl, useTranslations } from "../utils/i18n";
+// @ts-ignore
+import extractedContent from "../i18n/extracted_content.json";
 
-// Default Language (English)
-const lang = 'en';
-const tData = getTranslations(lang);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-// Helper to access nested keys (e.g. "downloader.placeholder")
-const t = (key) => {
-  const keys = key.split('.');
-  let value = tData;
-  for (const k of keys) {
-    value = value?.[k];
-  }
-  return value || key;
-};
+// Get direct access to content for FAQ
+const ec = extractedContent as any;
+const content = ec[lang] || ec["en"];
 ---
 
-<Layout title="TikTok Downloader Without Watermark - SaveTikFast" description="Download TikTok videos without watermark in HD, Full HD & 4K quality. Free & Fast." lang={lang}>
-  
+<Layout title={t("meta.title")} description={t("meta.description")} lang={lang}>
   <article class="hero-section">
-    <h1>TikTok Video Downloader <span style="color: var(--secondary);">(No Watermark)</span></h1>
-    <p>Download TikTok videos without watermark in HD, Full HD & 4K quality. Free, fast, and works on iPhone, Android & PC.</p>
+    <h1>
+      {t("hero.title")}
+      <span style="color: var(--secondary);">(No Watermark)</span>
+    </h1>
+    <p>{t("hero.desc")}</p>
 
     <!-- Client-Side Downloader -->
     <Downloader client:load t={t} />
-
   </article>
 
   <!-- Features Grid (Static) -->
   <section class="container features-grid">
-      <div class="feature-card">
-          <i class="fas fa-magic"></i>
-          <h3>{t('features.no_watermark.title')}</h3>
-          <p>{t('features.no_watermark.desc')}</p>
-      </div>
-      <div class="feature-card">
-          <i class="fas fa-bolt"></i>
-          <h3>{t('features.fast.title')}</h3>
-          <p>{t('features.fast.desc')}</p>
-      </div>
-      <div class="feature-card">
-          <i class="fas fa-hd"></i>
-          <h3>{t('features.quality.title')}</h3>
-          <p>{t('features.quality.desc')}</p>
-      </div>
+    <div class="feature-card">
+      <i class="fas fa-magic"></i>
+      <h3>{t("features.no_watermark.title")}</h3>
+      <p>{t("features.no_watermark.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-bolt"></i>
+      <h3>{t("features.fast.title")}</h3>
+      <p>{t("features.fast.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-hd"></i>
+      <h3>{t("features.quality.title")}</h3>
+      <p>{t("features.quality.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>{t("features.device.title")}</h3>
+      <p>{t("features.device.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-infinity"></i>
+      <h3>{t("features.unlimited.title")}</h3>
+      <p>{t("features.unlimited.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>{t("features.safe.title")}</h3>
+      <p>{t("features.safe.desc")}</p>
+    </div>
   </section>
 
-  <FAQ t={t} />
-
+  <FAQ t={t} items={content?.faqs || []} />
 </Layout>

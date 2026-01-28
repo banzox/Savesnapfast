@@ -35,13 +35,13 @@ const t = (key: string) => {
 ---
 
 <Layout
-    title={t("nav.contact")}
-    description={t("pages.contact.content")?.substring(0, 150)}
+    title={t("nav.dmca")}
+    description={t("pages.dmca.content")?.substring(0, 150)}
     lang={currentLang}
 >
     <article class="hero-section">
-        <h1>{t("nav.contact")}</h1>
-        <p>{t("pages.contact.content")?.substring(0, 150)}...</p>
+        <h1>{t("nav.dmca")}</h1>
+        <p>{t("pages.dmca.content")?.substring(0, 150)}...</p>
         <Downloader client:load t={t} />
     </article>
 
@@ -51,13 +51,7 @@ const t = (key: string) => {
             style="background: var(--glass); padding: 3rem; border-radius: 25px; border: 1px solid var(--border);"
         >
             <div style="white-space: pre-line; line-height: 1.8; opacity: 0.9;">
-                {t("pages.contact.content")}
-                <br /><br />
-                <a
-                    href="mailto:contact@savetik-fast.xyz"
-                    style="color: var(--primary); font-weight: bold;"
-                    >contact@savetik-fast.xyz</a
-                >
+                {t("pages.dmca.content")}
             </div>
         </article>
     </div>

@@ -1,19 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import { ui, defaultLang } from "../i18n/ui";
+import { getLangFromUrl, useTranslations } from "../utils/i18n";
 
-const currentLang = defaultLang;
-
-function t(key: keyof (typeof ui)[typeof defaultLang]) {
-    return ui[currentLang]?.[key] || ui[defaultLang][key] || key;
-}
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
 ---
 
 <Layout
     title={t("story_page.meta_title")}
     description={t("story_page.meta_desc")}
     lang={currentLang}
+    keywords="tiktok story downloader, tiktok slideshow download, save tiktok story, tiktok photos download, tiktok carousel downloader, tiktok story saver, download tiktok images"
 >
     <article class="hero-section">
         <h1>
@@ -76,7 +74,7 @@ function t(key: keyof (typeof ui)[typeof defaultLang]) {
             </div>
             <div class="step">
                 <div class="step-num">3</div>
-                <h3>{t("story_page.how_to.step3_title")}</h3>
+                <h3>{t("how_to.step3_title")}</h3>
                 <p>{t("story_page.how_to.step3")}</p>
             </div>
         </div>

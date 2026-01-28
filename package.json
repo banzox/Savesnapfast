@@ -9,11 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
     "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.16.16",
+    "cheerio": "^1.2.0",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.3"
   }
 }

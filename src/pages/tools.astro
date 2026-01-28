@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Downloader from "../components/Downloader.jsx";
+import { getLangFromUrl, useTranslations } from "../utils/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout
+    title={t("tools.meta.title")}
+    description={t("tools.meta.description")}
+    lang={lang}
+>
+    <article class="hero-section">
+        <h1>
+            <i class="fas fa-tools" style="color: var(--secondary);"></i>
+            {t("tools.hero.title")}
+        </h1>
+        <p>{t("tools.hero.desc")}</p>
+
+        <Downloader client:load t={t} />
+    </article>
+
+    <div class="container features-grid">
+        <div class="feature-card">
+            <i class="fas fa-compress-arrows-alt"></i>
+            <h3>{t("tools.tabs.compressor")}</h3>
+            <p>{t("tools.compressor.desc")}</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>{t("tools.tabs.converter")}</h3>
+            <p>{t("tools.converter.desc")}</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-qrcode"></i>
+            <h3>{t("tools.tabs.qrcode")}</h3>
+            <p>{t("tools.qrcode.desc")}</p>
+        </div>
+    </div>
+</Layout>

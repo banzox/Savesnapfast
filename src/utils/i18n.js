@@ -1,23 +1,32 @@
-
-const locales = import.meta.glob('../locales/*.json', { eager: true });
-
-export function getTranslations(lang) {
-    const path = `../locales/${lang}.json`;
-    if (locales[path]) {
-        return locales[path].default || locales[path];
-    }
-    // Fallback to English
-    return locales['../locales/en.json']?.default || {};
-}
+import { ui, defaultLang } from '../i18n/ui';
 
 export function getLangFromUrl(url) {
     const [, lang] = url.pathname.split('/');
-    if (lang && Object.keys(locales).some(p => p.includes(`/${lang}.json`))) {
-        return lang;
-    }
-    return 'en';
+    if (lang in ui) return lang;
+    const queryLang = url.searchParams.get('lang');
+    if (queryLang && queryLang in ui) return queryLang;
+    return defaultLang;
 }
 
-export const supportedLanguages = Object.keys(locales).map(path => {
-    return path.replace('../locales/', '').replace('.json', '');
-});
+export function useTranslations(lang) {
+    return function t(key) {
+        const keys = key.split('.');
+
+        // Try current language
+        let value = ui[lang];
+        for (const k of keys) {
+            if (value === undefined || value === null) break;
+            value = value[k];
+        }
+        if (value !== undefined) return value;
+
+        // Fallback to default language
+        value = ui[defaultLang];
+        for (const k of keys) {
+            if (value === undefined || value === null) break;
+            value = value[k];
+        }
+
+        return value !== undefined ? value : key;
+    }
+}

@@ -1,5 +1,10 @@
 ---
+import { languages } from "../i18n/ui";
+import { useTranslations } from "../utils/i18n";
 const { lang = "en" } = Astro.props;
+const t = useTranslations(lang);
+const currentLangName =
+    languages[lang as keyof typeof languages] || languages["en"];
 ---
 
 <header id="main-header">
@@ -10,12 +15,18 @@ const { lang = "en" } = Astro.props;
 
         <!-- Language Selector (Simple Dropdown or Link) -->
         <div class="lang-select" tabindex="0">
-            {lang === "ar" ? "العربية" : "English"}
+            {currentLangName || "English"}
             <div class="dropdown-options">
-                <a href="/" class="option-item">English</a>
-                <a href="/ar" class="option-item">العربية</a>
-                <a href="/tr" class="option-item">Türkçe</a>
-                <a href="/vi" class="option-item">Tiếng Việt</a>
+                {
+                    Object.entries(languages).map(([code, name]) => (
+                        <a
+                            href={code === "en" ? "/" : `/${code}`}
+                            class="option-item"
+                        >
+                            {name}
+                        </a>
+                    ))
+                }
             </div>
         </div>
     </nav>
@@ -25,24 +36,24 @@ const { lang = "en" } = Astro.props;
     <a
         href={`/${lang === "en" ? "" : lang}`}
         class="active"
-        title="Download TikTok Videos"
+        title={t("meta.title") || "Download TikTok Videos"}
     >
         <i class="fas fa-video"></i>
-        <span>Video</span>
+        <span>{t("nav_menu.video") || "Video"}</span>
     </a>
     <a
         href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
-        title="Download TikTok Audio MP3"
+        title={t("mp3_page.meta_title") || "Download TikTok Audio MP3"}
     >
         <i class="fas fa-music"></i>
-        <span>MP3 Audio</span>
+        <span>{t("nav_menu.mp3") || "MP3 Audio"}</span>
     </a>
     <a
         href={`/${lang === "en" ? "story" : lang + "/story"}`}
-        title="Download TikTok Stories"
+        title={t("story_page.meta_title") || "Download TikTok Stories"}
     >
         <i class="fas fa-images"></i>
-        <span>Stories</span>
+        <span>{t("nav_menu.stories") || "Stories"}</span>
     </a>
 </nav>
 

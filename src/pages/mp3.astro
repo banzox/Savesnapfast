@@ -1,19 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import { ui, defaultLang } from "../i18n/ui";
+import { getLangFromUrl, useTranslations } from "../utils/i18n";
 
-const currentLang = defaultLang;
-
-function t(key: keyof (typeof ui)[typeof defaultLang]) {
-    return ui[currentLang]?.[key] || ui[defaultLang][key] || key;
-}
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
 ---
 
 <Layout
     title={t("mp3_page.meta_title")}
     description={t("mp3_page.meta_desc")}
     lang={currentLang}
+    keywords="tiktok to mp3, tiktok mp3 download, tiktok audio download, convert tiktok to mp3, tiktok music downloader, tiktok sound download, extract tiktok audio, tiktok song download"
 >
     <article class="hero-section">
         <h1>

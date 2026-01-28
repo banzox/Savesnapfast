@@ -1,7 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
-import { ui, defaultLang, languages } from "../../i18n/ui";
+import { languages, defaultLang } from "../../i18n/ui";
+import { useTranslations } from "../../utils/i18n";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => ({
@@ -11,12 +12,7 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
-
-function t(key: keyof (typeof ui)[typeof defaultLang]) {
-    return (
-        ui[currentLang as keyof typeof ui]?.[key] || ui[defaultLang][key] || key
-    );
-}
+const t = useTranslations(currentLang);
 ---
 
 <Layout

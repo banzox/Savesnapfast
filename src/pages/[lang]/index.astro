@@ -2,22 +2,26 @@
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
 import FAQ from "../../components/FAQ.astro";
-import { ui, defaultLang, languages } from "../../i18n/ui";
+import { languages, defaultLang } from "../../i18n/ui";
+import { useTranslations } from "../../utils/i18n";
+// @ts-ignore
+import extractedContent from "../../i18n/extracted_content.json";
 
 export async function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({
-    params: { lang },
-  }));
+  return Object.keys(languages)
+    .filter((lang) => lang !== defaultLang)
+    .map((lang) => ({
+      params: { lang },
+    }));
 }
 
 const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
+const t = useTranslations(currentLang);
 
-function t(key: keyof (typeof ui)[typeof defaultLang]) {
-  return (
-    ui[currentLang as keyof typeof ui]?.[key] || ui[defaultLang][key] || key
-  );
-}
+// Get extracted content for FAQ
+const ec = extractedContent as any;
+const content = ec[currentLang] || ec[defaultLang];
 ---
 
 <Layout
@@ -27,7 +31,7 @@ function t(key: keyof (typeof ui)[typeof defaultLang]) {
 >
   <article class="hero-section">
     <h1>
-      {t("hero.title") || "TikTok Video Downloader"}
+      {t("hero.title")}
       <span style="color: var(--secondary);">(No Watermark)</span>
     </h1>
     <p>{t("hero.desc")}</p>
@@ -116,5 +120,5 @@ function t(key: keyof (typeof ui)[typeof defaultLang]) {
     </div>
   </section>
 
-  <FAQ t={t} />
+  <FAQ t={t} items={content?.faqs || []} />
 </Layout>

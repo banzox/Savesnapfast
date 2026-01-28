@@ -11,7 +11,7 @@ export default defineConfig({
     integrations: [react(), sitemap()],
     i18n: {
         defaultLocale: 'en',
-        locales: ['en', 'ar', 'fr', 'es', 'de', 'id', 'it', 'ja', 'ko', 'pt', 'ru', 'th', 'tr', 'vi'], // Adding major languages from the list initially, will add all 90+ later or dynamically
+        locales: ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'it', 'tr', 'ru', 'vi', 'th', 'ja', 'ko', 'pl', 'nl', 'ro', 'ms', 'fil', 'uk', 'cs', 'sv', 'hu', 'el', 'da', 'fi', 'no', 'bg', 'zh', 'hi'],
         routing: {
             prefixDefaultLocale: false
         }

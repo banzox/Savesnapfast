@@ -4,7 +4,21 @@ import { ui, defaultLang } from "../i18n/ui";
 const { lang = "en" } = Astro.props;
 
 function t(key: string) {
-    return ui[lang]?.[key] || ui[defaultLang][key] || key;
+    let val: any = ui[lang];
+    const parts = key.split(".");
+    for (const part of parts) {
+        if (val === undefined || val === null) break;
+        val = val[part];
+    }
+    // Fallback
+    if (val === undefined) {
+        val = ui[defaultLang];
+        for (const part of parts) {
+            if (val === undefined || val === null) break;
+            val = val[part];
+        }
+    }
+    return val || key;
 }
 ---
 

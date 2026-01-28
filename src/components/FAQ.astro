@@ -1,9 +1,10 @@
 ---
 interface Props {
-    t: (key: any) => any;
+    t: (key: string) => any;
+    items?: { question: string; answer: string }[];
 }
 
-const { t } = Astro.props;
+const { t, items } = Astro.props;
 ---
 
 <section class="container faq-section">
@@ -13,16 +14,27 @@ const { t } = Astro.props;
     </h2>
     <div class="faq-container">
         {
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
-                <div class="faq-item">
-                    <div class="faq-question">
-                        {t(`faq.q${i}`)} <i class="fas fa-chevron-down" />
-                    </div>
-                    <div class="faq-answer">
-                        <p>{t(`faq.a${i}`)}</p>
-                    </div>
-                </div>
-            ))
+            items && items.length > 0
+                ? items.map((item) => (
+                      <div class="faq-item">
+                          <div class="faq-question">
+                              {item.question} <i class="fas fa-chevron-down" />
+                          </div>
+                          <div class="faq-answer">
+                              <p>{item.answer}</p>
+                          </div>
+                      </div>
+                  ))
+                : [1, 2, 3, 4, 5, 6].map((i) => (
+                      <div class="faq-item">
+                          <div class="faq-question">
+                              {t(`faq.q${i}`)} <i class="fas fa-chevron-down" />
+                          </div>
+                          <div class="faq-answer">
+                              <p>{t(`faq.a${i}`)}</p>
+                          </div>
+                      </div>
+                  ))
         }
     </div>
 </section>
