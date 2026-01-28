@@ -15,72 +15,120 @@ const currentLangName =
 
         <!-- Language Selector (Simple Dropdown or Link) -->
         <div class="lang-select" tabindex="0">
-            {currentLangName || "English"}
-            <div class="dropdown-options">
-                {
-                    Object.entries(languages).map(([code, name]) => (
-                        <a
-                            href={code === "en" ? "/" : `/${code}`}
-                            class="option-item"
-                        >
-                            {name}
-                        </a>
-                    ))
-                }
+            <div class="lang-selector">
+                <button
+                    class="theme-toggle"
+                    id="theme-btn"
+                    aria-label="Toggle Theme"
+                >
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="dropdown-trigger" id="lang-btn">
+                    <span
+                        >{
+                            languages[lang as keyof typeof languages] ||
+                                languages["en"]
+                        }</span
+                    >
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-options" id="lang-options">
+                    {
+                        Object.entries(languages).map(([code, name]) => (
+                            <a
+                                href={code === "en" ? "/" : `/${code}`}
+                                class="option-item"
+                            >
+                                {name}
+                            </a>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     </nav>
-</header>
 
-<nav class="nav-menu" aria-label="Download Types">
-    <a
-        href={`/${lang === "en" ? "" : lang}`}
-        class="active"
-        title={t("hero.title")}
-    >
-        <i class="fas fa-video"></i>
-        <span>{t("nav_menu.video")}</span>
-    </a>
-    <a
-        href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
-        title={t("mp3_page.meta_title")}
-    >
-        <i class="fas fa-music"></i>
-        <span>{t("nav_menu.mp3")}</span>
-    </a>
-    <a
-        href={`/${lang === "en" ? "story" : lang + "/story"}`}
-        title={t("story_page.meta_title")}
-    >
-        <i class="fas fa-images"></i>
-        <span>{t("nav_menu.stories")}</span>
-    </a>
-</nav>
+    <nav class="nav-menu" aria-label="Download Types">
+        <a
+            href={`/${lang === "en" ? "" : lang}`}
+            class="active"
+            title={t("hero.title")}
+        >
+            <i class="fas fa-video"></i>
+            <span>{t("nav_menu.video")}</span>
+        </a>
+        <a
+            href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
+            title={t("mp3_page.meta_title")}
+        >
+            <i class="fas fa-music"></i>
+            <span>{t("nav_menu.mp3")}</span>
+        </a>
+        <a
+            href={`/${lang === "en" ? "story" : lang + "/story"}`}
+            title={t("story_page.meta_title")}
+        >
+            <i class="fas fa-images"></i>
+            <span>{t("nav_menu.stories")}</span>
+        </a>
+    </nav>
 
-<script>
-    // Simple Language Dropdown Logic
-    const langSelect = document.querySelector(".lang-select");
-    const dropdownOptions = document.querySelector(".dropdown-options");
+    <script>
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById("theme-btn");
+        if (themeBtn) {
+            themeBtn.addEventListener("click", () => {
+                // @ts-ignore
+                if (typeof handleToggleClick === "function") {
+                    // @ts-ignore
+                    handleToggleClick();
+                    // Update icon
+                    const icon = themeBtn.querySelector("i");
+                    if (icon) {
+                        const isDark =
+                            !document.documentElement.hasAttribute(
+                                "data-theme",
+                            );
+                        icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+                    }
+                }
+            });
 
-    if (langSelect && dropdownOptions) {
-        langSelect.addEventListener("click", (e) => {
-            e.stopPropagation();
-            dropdownOptions.classList.toggle("show");
-        });
-
-        // Close when clicking outside
-        document.addEventListener("click", (e) => {
-            const target = e.target as HTMLElement;
-            if (!langSelect.contains(target)) {
-                dropdownOptions.classList.remove("show");
+            // Initialize icon on load
+            const icon = themeBtn.querySelector("i");
+            if (icon) {
+                const isDark =
+                    !document.documentElement.hasAttribute("data-theme");
+                icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
             }
-        });
-    }
-</script>
+        }
 
-<style>
-    /* Add specific styles if not in global.css yet */
-    .dropdown-options.show {
-        display: block;
-    }
-</style>
+        // Language Dropdown Logic
+        const langBtn = document.getElementById("lang-btn");
+        const langOptions = document.getElementById("lang-options");
+
+        if (langBtn && langOptions) {
+            langBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                langOptions.classList.toggle("show");
+                langBtn.classList.toggle("active");
+            });
+
+            document.addEventListener("click", (e) => {
+                if (
+                    !langBtn.contains(e.target as Node) &&
+                    !langOptions.contains(e.target as Node)
+                ) {
+                    langOptions.classList.remove("show");
+                    langBtn.classList.remove("active");
+                }
+            });
+        }
+    </script>
+
+    <style>
+        .dropdown-options.show {
+            display: grid !important;
+        }
+    </style>
+</header>

@@ -130,9 +130,9 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
 
             <div id="result-area" role="region" aria-live="polite">
                 {loading && (
-                    <div className="loading-spinner" style={{ textAlign: 'center', padding: '30px' }}>
-                        <i className="fas fa-spinner fa-spin fa-3x" style={{ color: '#00f2ea' }}></i>
-                        <p style={{ marginTop: '15px', color: 'white' }}>{t('downloader.processing') || "Processing..."}</p>
+                    <div className="lightning-loader">
+                        <i className="fas fa-bolt lightning-bolt"></i>
+                        <p className="shimmer-text">{t('downloader.processing') || "Processing..."}</p>
                     </div>
                 )}
 

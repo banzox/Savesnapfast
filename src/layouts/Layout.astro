@@ -95,6 +95,55 @@ const { title, description, lang = "en", keywords } = Astro.props;
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
         />
+        <script is:inline>
+            // Initialize theme
+            const theme = (() => {
+                if (
+                    typeof localStorage !== "undefined" &&
+                    localStorage.getItem("theme")
+                ) {
+                    return localStorage.getItem("theme");
+                }
+                if (
+                    window.matchMedia("(prefers-color-scheme: light)").matches
+                ) {
+                    return "light";
+                }
+                return "dark";
+            })();
+
+            if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+            } else {
+                document.documentElement.removeAttribute("data-theme");
+            }
+
+            window.localStorage.setItem("theme", theme);
+
+            const handleToggleClick = () => {
+                const element = document.documentElement;
+                const isLight = element.getAttribute("data-theme") === "light";
+                if (isLight) {
+                    element.removeAttribute("data-theme");
+                    localStorage.setItem("theme", "dark");
+                } else {
+                    element.setAttribute("data-theme", "light");
+                    localStorage.setItem("theme", "light");
+                }
+            };
+
+            document.addEventListener("astro:after-swap", () => {
+                const theme = localStorage.getItem("theme");
+                if (theme === "light") {
+                    document.documentElement.setAttribute(
+                        "data-theme",
+                        "light",
+                    );
+                } else {
+                    document.documentElement.removeAttribute("data-theme");
+                }
+            });
+        </script>
     </head>
     <body>
         <Navbar lang={lang} />
