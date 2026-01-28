@@ -1,39 +1,43 @@
 ---
 interface Props {
-  t: (key: string) => string;
+    t: (key: any) => any;
 }
 
 const { t } = Astro.props;
 ---
+
 <section class="container faq-section">
-    <h2 class="section-title"><i class="fas fa-question-circle"></i> {t('faq.title')}</h2>
+    <h2 class="section-title">
+        <i class="fas fa-question-circle"></i>
+        {t("faq.title")}
+    </h2>
     <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">{t('faq.q1') || "How to download TikTok videos?"} <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-answer">
-                <p>{t('how_to.step1')} {t('how_to.step2')} {t('how_to.step3')}</p>
-            </div>
-        </div>
-         <div class="faq-item">
-            <div class="faq-question">{t('faq.q2') || "Is it free?"} <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-answer">
-                <p>{t('faq.a2') || "Yes, it is completely free."}</p>
-            </div>
-        </div>
+        {
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+                <div class="faq-item">
+                    <div class="faq-question">
+                        {t(`faq.q${i}`)} <i class="fas fa-chevron-down" />
+                    </div>
+                    <div class="faq-answer">
+                        <p>{t(`faq.a${i}`)}</p>
+                    </div>
+                </div>
+            ))
+        }
     </div>
 </section>
 
 <script>
     // FAQ Toggle Logic
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question?.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+        question?.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
             // Close all
-            faqItems.forEach(i => i.classList.remove('active'));
+            faqItems.forEach((i) => i.classList.remove("active"));
             // Toggle current
-            if (!isActive) item.classList.add('active');
+            if (!isActive) item.classList.add("active");
         });
     });
 </script>

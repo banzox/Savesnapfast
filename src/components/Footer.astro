@@ -1,12 +1,30 @@
 ---
-const { lang = 'en' } = Astro.props;
+import { ui, defaultLang } from "../i18n/ui";
+
+const { lang = "en" } = Astro.props;
+
+function t(key: string) {
+    return ui[lang]?.[key] || ui[defaultLang][key] || key;
+}
 ---
+
 <footer id="main-footer">
     <div class="footer-links">
-        <a href={`/${lang === 'en' ? 'about' : lang + '/about'}`}>About</a>
-        <a href={`/${lang === 'en' ? 'privacy' : lang + '/privacy'}`}>Privacy</a>
-        <a href={`/${lang === 'en' ? 'terms' : lang + '/terms'}`}>Terms</a>
-        <a href={`/${lang === 'en' ? 'contact' : lang + '/contact'}`}>Contact</a>
+        <a href={`/${lang === "en" ? "about" : lang + "/about"}`}
+            >{t("nav.about")}</a
+        >
+        <a href={`/${lang === "en" ? "privacy" : lang + "/privacy"}`}
+            >{t("nav.privacy")}</a
+        >
+        <a href={`/${lang === "en" ? "terms" : lang + "/terms"}`}
+            >{t("nav.terms")}</a
+        >
+        <a href={`/${lang === "en" ? "contact" : lang + "/contact"}`}
+            >{t("nav.contact")}</a
+        >
+        <a href={`/${lang === "en" ? "dmca" : lang + "/dmca"}`}
+            >{t("nav.dmca")}</a
+        >
     </div>
-    <p>&copy; 2026 SaveTikFast. All rights reserved.</p>
+    <p>{t("footer.rights")}</p>
 </footer>

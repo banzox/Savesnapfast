@@ -1,62 +1,120 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Downloader from '../../components/Downloader.jsx';
-import FAQ from '../../components/FAQ.astro';
-import { getTranslations, supportedLanguages } from '../../utils/i18n';
+import Layout from "../../layouts/Layout.astro";
+import Downloader from "../../components/Downloader.jsx";
+import FAQ from "../../components/FAQ.astro";
+import { ui, defaultLang, languages } from "../../i18n/ui";
 
 export async function getStaticPaths() {
-  return supportedLanguages.map(lang => ({
+  return Object.keys(languages).map((lang) => ({
     params: { lang },
   }));
 }
 
 const { lang } = Astro.params;
-const tData = getTranslations(lang);
+const currentLang = lang || defaultLang;
 
-const t = (key) => {
-  const keys = key.split('.');
-  let value = tData;
-  for (const k of keys) {
-    value = value?.[k];
-  }
-  return value || key;
-};
-
-// Start of Page Content (Reused from index.astro logic, but with dynamic t)
+function t(key: keyof (typeof ui)[typeof defaultLang]) {
+  return (
+    ui[currentLang as keyof typeof ui]?.[key] || ui[defaultLang][key] || key
+  );
+}
 ---
 
-<Layout 
-    title={t('seo.title') || "TikTok Downloader - SaveTikFast"} 
-    description={t('seo.description') || "Download TikTok videos without watermark."}
-    lang={lang}
+<Layout
+  title={t("meta.title")}
+  description={t("meta.description")}
+  lang={currentLang}
 >
-  
   <article class="hero-section">
-    <h1>{t('hero.title') || "TikTok Video Downloader"} <span style="color: var(--secondary);">(No Watermark)</span></h1>
-    <p>{t('hero.desc')}</p>
+    <h1>
+      {t("hero.title") || "TikTok Video Downloader"}
+      <span style="color: var(--secondary);">(No Watermark)</span>
+    </h1>
+    <p>{t("hero.desc")}</p>
 
     <Downloader client:load t={t} />
-
   </article>
 
+  <!-- ==================== AD CONTAINER ==================== -->
+  <aside
+    class="ad-container"
+    style="margin: 20px auto; text-align: center; max-width: 100%;"
+  >
+    <script
+      async="async"
+      data-cfasync="false"
+      src="https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"
+    ></script>
+    <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
+  </aside>
+
+  <!-- About Section -->
+  <section class="container shadow-box">
+    <div class="content-box">
+      <h2>
+        <i class="fas fa-info-circle" style="color: var(--secondary);"></i>
+        {t("pages.about.title")}
+      </h2>
+      <p style="white-space: pre-line;">{t("pages.about.content")}</p>
+    </div>
+  </section>
+
   <section class="container features-grid">
-      <div class="feature-card">
-          <i class="fas fa-magic"></i>
-          <h3>{t('features.no_watermark.title')}</h3>
-          <p>{t('features.no_watermark.desc')}</p>
+    <div class="feature-card">
+      <i class="fas fa-magic"></i>
+      <h3>{t("features.no_watermark.title")}</h3>
+      <p>{t("features.no_watermark.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-bolt"></i>
+      <h3>{t("features.fast.title")}</h3>
+      <p>{t("features.fast.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-hd"></i>
+      <h3>{t("features.quality.title")}</h3>
+      <p>{t("features.quality.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>{t("features.device.title")}</h3>
+      <p>{t("features.device.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-infinity"></i>
+      <h3>{t("features.unlimited.title")}</h3>
+      <p>{t("features.unlimited.desc")}</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>{t("features.safe.title")}</h3>
+      <p>{t("features.safe.desc")}</p>
+    </div>
+  </section>
+
+  <!-- How To Section -->
+  <section class="container how-to-box shadow-box">
+    <h2 style="text-align: center; margin-bottom: 30px;">
+      {t("how_to.title")}
+    </h2>
+    <div class="steps-wrapper">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>{t("how_to.step1_title") || "Copy Link"}</h3>
+        <p>{t("how_to.step1")}</p>
       </div>
-      <div class="feature-card">
-          <i class="fas fa-bolt"></i>
-          <h3>{t('features.fast.title')}</h3>
-          <p>{t('features.fast.desc')}</p>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>{t("how_to.step2_title") || "Paste URL"}</h3>
+        <p>{t("how_to.step2")}</p>
       </div>
-      <div class="feature-card">
-          <i class="fas fa-hd"></i>
-          <h3>{t('features.quality.title')}</h3>
-          <p>{t('features.quality.desc')}</p>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>{t("how_to.step3_title") || "Download"}</h3>
+        <p>{t("how_to.step3")}</p>
       </div>
+    </div>
   </section>
 
   <FAQ t={t} />
-  
 </Layout>

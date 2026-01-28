@@ -1,36 +1,46 @@
 ---
-const { lang = 'en' } = Astro.props;
+const { lang = "en" } = Astro.props;
 ---
+
 <header id="main-header">
     <nav class="nav-container">
-        <a href={`/${lang === 'en' ? '' : lang}`} class="logo">
-             <i class="fab fa-tiktok"></i> SaveTikFast
+        <a href={`/${lang === "en" ? "" : lang}`} class="logo">
+            <i class="fab fa-tiktok"></i> SaveTikFast
         </a>
-        
+
         <!-- Language Selector (Simple Dropdown or Link) -->
         <div class="lang-select" tabindex="0">
-            {lang.toUpperCase()}
+            {lang === "ar" ? "العربية" : "English"}
             <div class="dropdown-options">
-                <!-- We can populate this dynamically if we pass supported languages -->
-                <a href="/" class="option-item">EN</a>
-                <a href="/fr" class="option-item">FR</a>
-                <a href="/es" class="option-item">ES</a>
-                <!-- Add more as needed or make dynamic -->
+                <a href="/" class="option-item">English</a>
+                <a href="/ar" class="option-item">العربية</a>
+                <a href="/tr" class="option-item">Türkçe</a>
+                <a href="/vi" class="option-item">Tiếng Việt</a>
             </div>
         </div>
     </nav>
 </header>
 
 <nav class="nav-menu" aria-label="Download Types">
-    <a href={`/${lang === 'en' ? '' : lang}`} class="active" title="Download TikTok Videos">
+    <a
+        href={`/${lang === "en" ? "" : lang}`}
+        class="active"
+        title="Download TikTok Videos"
+    >
         <i class="fas fa-video"></i>
         <span>Video</span>
     </a>
-    <a href={`/${lang === 'en' ? 'mp3' : lang + '/mp3'}`} title="Download TikTok Audio MP3">
+    <a
+        href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
+        title="Download TikTok Audio MP3"
+    >
         <i class="fas fa-music"></i>
         <span>MP3 Audio</span>
     </a>
-    <a href={`/${lang === 'en' ? 'story' : lang + '/story'}`} title="Download TikTok Stories">
+    <a
+        href={`/${lang === "en" ? "story" : lang + "/story"}`}
+        title="Download TikTok Stories"
+    >
         <i class="fas fa-images"></i>
         <span>Stories</span>
     </a>
@@ -38,11 +48,11 @@ const { lang = 'en' } = Astro.props;
 
 <script>
     // Simple Language Dropdown Logic
-    const langSelect = document.querySelector('.lang-select');
-    if(langSelect) {
-        langSelect.addEventListener('click', () => {
-            const options = langSelect.querySelector('.dropdown-options');
-            if(options) options.classList.toggle('show');
+    const langSelect = document.querySelector(".lang-select");
+    if (langSelect) {
+        langSelect.addEventListener("click", () => {
+            const options = langSelect.querySelector(".dropdown-options");
+            if (options) options.classList.toggle("show");
         });
     }
 </script>

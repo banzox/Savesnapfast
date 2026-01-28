@@ -6,13 +6,15 @@ export function getTranslations(lang) {
     if (locales[path]) {
         return locales[path].default || locales[path];
     }
-    // Fallback to English if not found
+    // Fallback to English
     return locales['../locales/en.json']?.default || {};
 }
 
 export function getLangFromUrl(url) {
     const [, lang] = url.pathname.split('/');
-    if (lang in locales) return lang;
+    if (lang && Object.keys(locales).some(p => p.includes(`/${lang}.json`))) {
+        return lang;
+    }
     return 'en';
 }
 

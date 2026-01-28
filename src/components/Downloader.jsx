@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const WORKER_URL = "https://api.savetik-fast.xyz";
 const SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
-export default function Downloader({ t = (key) => key }) { // Simple mockup translation function
+export default function Downloader({ t = (key) => key, mode = 'video' }) { // Simple mockup translation function
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);

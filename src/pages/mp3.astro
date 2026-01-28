@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Downloader from "../components/Downloader.jsx";
+import { ui, defaultLang } from "../i18n/ui";
+
+const currentLang = defaultLang;
+
+function t(key: keyof (typeof ui)[typeof defaultLang]) {
+    return ui[currentLang]?.[key] || ui[defaultLang][key] || key;
+}
+---
+
+<Layout
+    title={t("mp3_page.meta_title")}
+    description={t("mp3_page.meta_desc")}
+    lang={currentLang}
+>
+    <article class="hero-section">
+        <h1>
+            <i class="fas fa-music" style="color: var(--secondary);"></i>
+            {t("mp3_page.title")}
+            <span style="color: var(--secondary);">
+                {t("mp3_page.subtitle")}</span
+            >
+        </h1>
+        <p>{t("mp3_page.desc")}</p>
+
+        <!-- Downloader Component (configured for MP3 focus) -->
+        <Downloader client:load t={t} mode="mp3" />
+    </article>
+
+    <section class="container features-grid">
+        <div class="feature-card">
+            <i class="fas fa-headphones-alt"></i>
+            <h3>{t("mp3_page.features.quality.title")}</h3>
+            <p>{t("mp3_page.features.quality.desc")}</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-bolt"></i>
+            <h3>{t("mp3_page.features.fast.title")}</h3>
+            <p>{t("mp3_page.features.fast.desc")}</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-fire"></i>
+            <h3>{t("mp3_page.features.trending.title")}</h3>
+            <p>{t("mp3_page.features.trending.desc")}</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>{t("mp3_page.features.device.title")}</h3>
+            <p>{t("mp3_page.features.device.desc")}</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-bell"></i>
+            <h3>{t("mp3_page.features.ringtone.title")}</h3>
+            <p>{t("mp3_page.features.ringtone.desc")}</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-infinity"></i>
+            <h3>{t("mp3_page.features.unlimited.title")}</h3>
+            <p>{t("mp3_page.features.unlimited.desc")}</p>
+        </div>
+    </section>
+
+    <section class="container how-to-box shadow-box">
+        <h2 style="text-align: center; margin-bottom: 30px;">
+            {t("mp3_page.how_to.title")}
+        </h2>
+        <div class="steps-wrapper">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>{t("how_to.step1_title")}</h3>
+                <p>{t("mp3_page.how_to.step1")}</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>{t("how_to.step2_title")}</h3>
+                <p>{t("mp3_page.how_to.step2")}</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>{t("how_to.step3_title")}</h3>
+                <p>{t("mp3_page.how_to.step3")}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container shadow-box" style="margin-top: 2rem;">
+        <div class="content-box">
+            <h2>
+                <i class="fas fa-headphones" style="color: var(--secondary);"
+                ></i>
+                {t("mp3_page.about_title")}
+            </h2>
+            <p>{t("mp3_page.about_content")}</p>
+        </div>
+    </section>
+</Layout>
