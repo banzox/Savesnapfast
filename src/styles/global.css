@@ -31,7 +31,11 @@
     --shadow-glow: 0 0 40px rgba(255, 0, 80, 0.2);
 
     --radius-main: 24px;
+    --radius-main: 24px;
     --transition: 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    /* --- Header Background --- */
+    --bg-header: rgba(15, 12, 41, 0.95);
 }
 
 /* --- Light Mode Overrides --- */
@@ -55,7 +59,10 @@
     --bg-dropdown: #ffffff;
 
     --shadow-premium: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    --shadow-premium: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
     --shadow-glow: 0 0 20px rgba(255, 0, 80, 0.15);
+
+    --bg-header: rgba(255, 255, 255, 0.95);
 }
 
 /* --- Universal Resets --- */
@@ -373,7 +380,7 @@ body::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(15, 12, 41, 0.95);
+    background: var(--bg-header);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     z-index: -1;
@@ -435,7 +442,7 @@ body::after {
 
     .nav-links {
         position: fixed;
-        top: 100%;
+        top: 70px;
         /* Fluid positioning relative to header bottom */
         left: 0;
         width: 100%;
@@ -508,7 +515,7 @@ body::after {
         width: 100%;
         padding: 12px;
         border-radius: 12px;
-        background: rgba(255, 255, 255, 0.05);
+        background: var(--glass-bright);
         border: 1px solid var(--border);
         display: flex;
         justify-content: center;
@@ -520,8 +527,8 @@ body::after {
         width: 100%;
         justify-content: center;
         padding: 12px;
-        background: rgba(255, 255, 255, 0.05);
-        color: #fff !important;
+        background: var(--glass-bright);
+        color: var(--text-main) !important;
     }
 
     /* Hamburger Animation */

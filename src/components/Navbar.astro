@@ -107,7 +107,7 @@ const currentLangName =
 
             if (!hamburger || !navLinks) return;
 
-            // Clean up old listener if it exists (using a custom property to track)
+            // Clean up old listener if it exists
             // @ts-ignore
             if (hamburger._clickListener) {
                 // @ts-ignore
@@ -118,7 +118,9 @@ const currentLangName =
             }
 
             const toggleMenu = (e) => {
+                e.preventDefault(); // Stop default action
                 e.stopPropagation();
+
                 const isActive = navLinks.classList.contains("active");
 
                 if (isActive) {
@@ -137,16 +139,14 @@ const currentLangName =
             hamburger._clickListener = toggleMenu;
 
             // Close when clicking links
+            const handleLinkClick = () => {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("active");
+                document.body.style.overflow = "";
+            };
+
             navLinks.querySelectorAll("a").forEach((link) => {
-                // Remove old listeners? Hard to track anonymous ones.
-                // Cloning is easier for children, but let's just add new ones and assume browser handles garbage collection or use 'once' if navigating away?
-                // Actually, if we use ViewTransitions, these are destroyed.
-                // We'll just add simple onclick to overwrite
-                link.onclick = () => {
-                    navLinks.classList.remove("active");
-                    hamburger.classList.remove("active");
-                    document.body.style.overflow = "";
-                };
+                link.onclick = handleLinkClick;
             });
 
             // Close when clicking outside
@@ -231,26 +231,23 @@ const currentLangName =
                 themeBtn.removeEventListener("click", themeBtn._clickListener);
             }
 
-            const icon = themeBtn.querySelector("i");
-            if (icon) {
-                const isDark =
-                    !document.documentElement.hasAttribute("data-theme");
-                icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
-            }
+            const updateIcon = () => {
+                const icon = themeBtn.querySelector("i");
+                if (icon) {
+                    const isDark =
+                        !document.documentElement.hasAttribute("data-theme");
+                    icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+                }
+            };
+
+            updateIcon();
 
             const toggleTheme = () => {
                 // @ts-ignore
                 if (typeof window.handleToggleClick === "function") {
                     // @ts-ignore
                     window.handleToggleClick();
-                    const icon = themeBtn.querySelector("i");
-                    if (icon) {
-                        const isDark =
-                            !document.documentElement.hasAttribute(
-                                "data-theme",
-                            );
-                        icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
-                    }
+                    updateIcon();
                 }
             };
 
@@ -260,6 +257,8 @@ const currentLangName =
         };
 
         const initAll = () => {
+            // CRITICAL: Always reset overflow to prevent freezing
+            document.body.style.overflow = "";
             initMenu();
             initLang();
             initTheme();
