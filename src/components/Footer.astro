@@ -5,7 +5,7 @@ const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<footer id="main-footer">
+<footer id="main-footer" class="footer-glass">
     <div class="footer-links">
         <a href={`/${lang === "en" ? "about" : lang + "/about"}`}
             >{t("nav.about")}</a
