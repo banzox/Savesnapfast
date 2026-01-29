@@ -417,30 +417,31 @@ body::after {
 
 .theme-toggle,
 .dropdown-trigger {
-    background: rgba(255, 255, 255, 0.05);
-    /* Subtle glass */
-    border: 1px solid var(--border);
-    padding: 10px 14px;
-    border-radius: 50px;
-    /* Pill shape is more modern */
+    background: transparent;
+    /* Clean look - No Top Rectangle */
+    border: 1px solid transparent;
+    /* Reserve space but invisible */
+    padding: 10px;
     cursor: pointer;
     color: var(--text-main);
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* More breathing room */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 8px;
+    transition: all 0.3s ease;
     font-size: 0.95rem;
     font-weight: 600;
+    border-radius: 12px;
 }
 
 .theme-toggle:hover,
 .dropdown-trigger:hover,
 .dropdown-trigger.active {
     background: var(--glass-bright);
-    border-color: var(--primary);
-    box-shadow: 0 0 20px rgba(var(--primary-rgb, 255, 0, 80), 0.2);
+    /* Only show box on hover/active */
+    border-color: var(--border);
+    color: var(--primary);
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-trigger i {
@@ -653,50 +654,79 @@ body::after {
     }
 
     /* Mobile Dropdown - Anchor to button, not screen */
-    /* Mobile Language Selector - Refined */
+    /* --- Mobile Language Sidebar (Drawer) --- */
     .dropdown-options {
-        position: absolute;
-        top: calc(100% + 10px);
-        right: -10px;
-        /* Slight offset to align with edge */
-        left: auto;
-        transform: translateY(10px);
-        width: 240px;
-        /* Wider for long language names */
-        max-height: 60vh;
-        z-index: 3000;
-        overflow-y: auto;
-        background: var(--bg-dropdown, rgba(15, 23, 42, 0.95));
-        /* Fallback high contrast */
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-        /* Deep shadow */
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        max-height: 100vh;
+        background: var(--bg-main);
+        /* Solid background */
+        border-left: 1px solid var(--border);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 5000;
+        /* Highest priority */
+
         display: flex !important;
-        /* Force flex to keep layout */
         flex-direction: column;
-        padding: 8px;
+        padding: 80px 20px 20px 20px;
+        /* Top padding clears close button */
+        gap: 15px;
+        /* More spacing */
+
+        transform: translateX(100%);
+        /* Start off-screen */
+        opacity: 1;
+        pointer-events: auto;
+        /* Always auto, controlled by transform */
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 0;
+        /* Full height */
+        backdrop-filter: none;
+        overflow-y: auto;
     }
 
     .dropdown-options.show {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
+        transform: translateX(0);
+        /* Slide in */
     }
 
-    /* Scrollbar for the dropdown */
-    .dropdown-options::-webkit-scrollbar {
-        width: 6px;
+    /* Overlay for Sidebar */
+    .dropdown-options.show::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        z-index: -1;
+        opacity: 0;
+        animation: fadeIn 0.4s forwards;
     }
 
-    .dropdown-options::-webkit-scrollbar-thumb {
-        background: var(--border);
-        border-radius: 3px;
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .dropdown-options .option-item {
+        padding: 16px;
+        font-size: 1.1rem;
+        background: var(--glass);
+        border: 1px solid var(--border);
+        margin: 0;
+        justify-content: flex-start;
+    }
+
+    .dropdown-options .option-item:hover {
+        transform: translateX(-5px);
+        background: var(--glass-bright);
+        border-color: var(--primary);
     }
 
     /* Burger at the very end */
