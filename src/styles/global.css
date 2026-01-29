@@ -136,10 +136,38 @@ body {
     transition: 0.2s;
 }
 
-.dropdown-options a:hover {
-    background: var(--glass-bright) !important;
-    color: var(--primary) !important;
-    transform: translateX(5px);
+transform: translateX(5px);
+}
+
+/* Custom Scrollbar for Dropdown */
+.dropdown-options::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-options::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    /* Dark track */
+    border-radius: 10px;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    /* Pink/Red Thumb */
+    border-radius: 10px;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+    /* Blue on Hover */
+}
+
+/* Light Mode Scrollbar */
+[data-theme='light'] .dropdown-options::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .dropdown-options::-webkit-scrollbar-thumb {
+    background: #ccc;
 }
 
 /* ============================================
@@ -190,21 +218,21 @@ body {
 }
 
 /* Active state - Modern Gradient & Glow */
+/* Active state - Modern Gradient & Glow */
 .nav-menu a.active {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
+    /* Stronger Gradient */
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow:
-        0 8px 20px rgba(255, 0, 80, 0.4),
-        0 0 15px rgba(0, 242, 234, 0.3) inset;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 5px 20px rgba(255, 0, 80, 0.6);
+    /* Stronger Glow */
     font-weight: 800;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav-menu a.active:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow:
-        0 12px 30px rgba(255, 0, 80, 0.6),
-        0 0 25px rgba(0, 242, 234, 0.5) inset;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 0, 80, 0.8);
 }
 
 /* Light Mode Legacy Removed */
