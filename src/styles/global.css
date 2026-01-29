@@ -207,14 +207,23 @@ body::after {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background: rgba(15, 12, 41, 0.95);
-    backdrop-filter: blur(15px);
+    /* Background & blur moved to ::before to avoid trapping fixed descendants */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid var(--border);
     height: 70px;
+}
+
+.nav-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 12, 41, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: -1;
 }
 
 /* Nav Links Container (Desktop) */
@@ -710,90 +719,108 @@ footer {
     }
 }
 
-/* تنسيق قائمة اللغات الاحترافية */
-.custom-dropdown {
-    position: relative;
-    display: inline-block;
-    flex-shrink: 1;
-    min-width: 0;
+
+/* --- Mobile Language as Bottom Sheet --- */
+@media (max-width: 768px) {
+    .dropdown-options {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        max-height: 60vh;
+        border-radius: 25px 25px 0 0;
+        background: rgba(15, 12, 41, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--border-bright);
+        border-bottom: none;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5), 0 0 0 1000px rgba(0, 0, 0, 0.6);
+        /* Backdrop hack */
+        transform: translateY(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 3000 !important;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .dropdown-options.show {
+        display: grid !important;
+        transform: translateY(0);
+        animation: none;
+    }
+
+    .dropdown-options::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
 }
 
-.dropdown-trigger {
-    background: var(--glass);
-    border: 1px solid var(--secondary);
+/* --- Input & Paste Button Fix --- */
+.input-wrapper {
+    flex: 1;
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 8px 20px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+    /* Essential for absolute positioning of children */
+}
+
+#url-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 12px 50px 12px 12px;
+    /* Clean space for the button */
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+}
+
+#paste-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
     color: var(--secondary);
-    padding: 10px 14px;
-    border-radius: 30px;
+    border: none;
     cursor: pointer;
-    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px;
+    transition: var(--transition);
+    z-index: 5;
     display: flex;
     align-items: center;
-    gap: 6px;
-    transition: var(--transition-smooth);
-    white-space: nowrap;
-    overflow: hidden;
+    justify-content: center;
 }
 
-.dropdown-trigger:hover {
-    background: rgba(0, 242, 234, 0.1);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 242, 234, 0.15);
+#paste-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    filter: drop-shadow(0 0 8px var(--secondary));
 }
 
-.dropdown-trigger span {
-    max-width: 120px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    flex-shrink: 1;
-}
-
-.dropdown-trigger i,
-.dropdown-trigger svg {
-    flex-shrink: 0;
-}
-
-.dropdown-options {
+#clear-btn {
+    /* Ensure clear button also sits nicely if present */
     position: absolute;
-    top: 120%;
-    inset-inline-end: 0;
-    background: #1a1a2e;
-    /* لون داكن عميق */
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    width: max-content;
-    min-width: 200px;
-    max-width: 90vw;
-    max-height: 300px;
-    overflow-y: auto;
-    display: none;
-    /* مخفية افتراضياً */
-    z-index: 1000;
-    box-shadow: var(--shadow);
-}
-
-.dropdown-options.show {
-    display: block;
-    animation: fadeIn 0.3s ease;
-}
-
-.option-item {
-    padding-block: 12px;
-    padding-inline: 20px;
-    cursor: pointer;
-    transition: 0.2s;
-    font-size: 14px;
-    text-align: start;
-}
-
-.option-item:hover {
-    background: rgba(0, 242, 234, 0.1);
-    color: var(--secondary);
-}
-
-.option-item.active {
-    color: var(--secondary);
-    font-weight: bold;
+    right: 50px;
+    /* To the left of paste btn */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @keyframes fadeIn {

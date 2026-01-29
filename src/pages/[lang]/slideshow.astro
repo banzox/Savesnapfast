@@ -11,9 +11,23 @@ export async function getStaticPaths() {
     }));
 }
 
+import FAQ from "../../components/FAQ.astro";
+
 const { lang } = Astro.params;
 const t = useTranslations(lang);
 const translations = getTranslations(lang);
+
+// Fix for Downloader placeholder: Inject the specific key since Downloader expects it in 'messages'
+const downloaderMessages = {
+    ...translations.downloader,
+    "slideshow_page.placeholder": t("slideshow_page.placeholder"),
+};
+
+// Generates 10 FAQ items
+const faqItems = Array.from({ length: 10 }, (_, i) => ({
+    question: t(`slideshow_page.faq.q${i + 1}`),
+    answer: t(`slideshow_page.faq.a${i + 1}`),
+}));
 ---
 
 <Layout
@@ -32,7 +46,7 @@ const translations = getTranslations(lang);
         <!-- Downloader Component (configured for Slideshow mode) -->
         <Downloader
             client:load
-            messages={translations.downloader}
+            messages={downloaderMessages}
             mode="slideshow"
         />
     </article>
@@ -92,6 +106,9 @@ const translations = getTranslations(lang);
             </div>
         </div>
     </section>
+
+    <!-- Inserted FAQ Section -->
+    <FAQ t={t} items={faqItems} />
 
     <section class="container shadow-box" style="margin-top: 2rem;">
         <div class="content-box">
