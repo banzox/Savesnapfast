@@ -11,6 +11,7 @@ import {
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
+import FAQ from "../components/FAQ.astro";
 ---
 
 <Layout
@@ -99,4 +100,6 @@ const translations = getTranslations(currentLang);
             <p>{t("mp3_page.about_content")}</p>
         </div>
     </section>
+
+    <FAQ t={t} />
 </Layout>

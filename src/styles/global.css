@@ -4,7 +4,7 @@
     --accent: #7000ff;
     --bg-dark: #05040a;
     /* CRITICAL RESTORE: Vibrant Purple/Pink Gradient */
-    --bg-gradient: linear-gradient(135deg, #1a0b2e 0%, #0c081e 50%, #05040a 100%);
+    --bg-gradient: linear-gradient(135deg, #2a0845 0%, #6441a5 100%);
     --glass: rgba(255, 255, 255, 0.05);
     --glass-bright: rgba(255, 255, 255, 0.1);
     --border: rgba(255, 255, 255, 0.15);
@@ -18,9 +18,9 @@
 }
 
 /* CRITICAL FIX: Make Logo White in Dark Mode */
-body:not(.light-mode) .logo img,
-body:not(.light-mode) .logo svg,
-body:not(.light-mode) a.logo {
+body:not([data-theme='light']) .logo img,
+body:not([data-theme='light']) .logo svg,
+body:not([data-theme='light']) a.logo {
     filter: brightness(0) invert(1) !important;
     color: #fff !important;
 }
@@ -34,6 +34,8 @@ body:not(.light-mode) a.logo {
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     z-index: 2000;
+    backdrop-filter: none !important;
+    /* Force remove transparency */
 }
 
 [data-theme='light'] {
@@ -462,6 +464,11 @@ body::after {
     font-size: 17px;
     font-weight: 500;
     width: 100%;
+}
+
+#url-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
 }
 
 #paste-btn {
