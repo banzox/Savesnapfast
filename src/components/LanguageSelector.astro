@@ -1,0 +1,370 @@
+---
+import { languages } from "../i18n/ui";
+
+const { lang = "en" } = Astro.props;
+const currentLangName =
+    languages[lang as keyof typeof languages] || languages["en"];
+---
+
+<div class="language-wrapper">
+    <button
+        id="lang-toggle-btn"
+        class="lang-btn"
+        aria-label="Select Language"
+        aria-expanded="false"
+    >
+        <span class="lang-text">{currentLangName}</span>
+        <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="lang-dropdown" class="lang-dropdown">
+        <div class="dropdown-header">
+            <span class="header-title">Select Language</span>
+            <button id="close-lang-btn" class="close-btn" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="lang-grid">
+            {
+                Object.entries(languages).map(([code, name]) => (
+                    <a
+                        href={code === "en" ? "/" : `/${code}`}
+                        class={`lang-option ${code === lang ? "active" : ""}`}
+                    >
+                        <span class="lang-name">{name}</span>
+                        {code === lang && <i class="fas fa-check check-icon" />}
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+
+    <div id="lang-overlay" class="lang-overlay"></div>
+</div>
+
+<script>
+    function initLanguageSelector() {
+        const btn = document.getElementById("lang-toggle-btn");
+        const dropdown = document.getElementById("lang-dropdown");
+        const overlay = document.getElementById("lang-overlay");
+        const closeBtn = document.getElementById("close-lang-btn");
+        const options = document.querySelectorAll(".lang-option");
+
+        if (!btn || !dropdown || !overlay || !closeBtn) return;
+
+        const toggleMenu = (show) => {
+            const isShow =
+                show === true ||
+                (show === undefined && !dropdown.classList.contains("show"));
+
+            btn.setAttribute("aria-expanded", isShow ? "true" : "false");
+            btn.classList.toggle("active", isShow);
+            dropdown.classList.toggle("show", isShow);
+            overlay.classList.toggle("show", isShow);
+            document.body.style.overflow = isShow ? "hidden" : "";
+        };
+
+        const closeMenu = () => toggleMenu(false);
+
+        // Toggle click
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        // Close button click
+        closeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            closeMenu();
+        });
+
+        // Overlay click
+        overlay.addEventListener("click", closeMenu);
+
+        // Escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && dropdown.classList.contains("show")) {
+                closeMenu();
+            }
+        });
+
+        // Handle view transitions if any
+        document.addEventListener("astro:after-swap", initLanguageSelector);
+    }
+
+    // Run on load
+    initLanguageSelector();
+    // Also run on Astro page load (for view transitions support)
+    document.addEventListener("astro:page-load", initLanguageSelector);
+</script>
+
+<style>
+    /* Wrapper */
+    .language-wrapper {
+        position: relative;
+        z-index: 1000;
+    }
+
+    /* Trigger Button */
+    .lang-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 10px 18px;
+        border-radius: 50px;
+        color: var(--text-main, #fff);
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 15px rgba(255, 0, 80, 0.3);
+        transform: translateY(-1px);
+    }
+
+    .arrow-icon {
+        font-size: 0.8rem;
+        transition: transform 0.3s ease;
+        opacity: 0.8;
+    }
+
+    .lang-btn.active .arrow-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Dropdown / Modal */
+    .lang-dropdown {
+        position: absolute;
+        top: calc(100% + 15px);
+        right: 0;
+        width: 600px;
+        max-width: 90vw;
+        background: rgba(10, 10, 20, 0.95); /* Deep dark theme */
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.6),
+            0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+        pointer-events: none;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transform-origin: top right;
+    }
+
+    /* Light Theme Override */
+    :global([data-theme="light"]) .lang-dropdown {
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    :global([data-theme="light"]) .lang-btn {
+        color: var(--text-main, #333);
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    :global([data-theme="light"]) .lang-btn:hover {
+        background: rgba(0, 0, 0, 0.08);
+    }
+
+    /* Show State */
+    .lang-dropdown.show {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    /* Header inside Dropdown */
+    .dropdown-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: none; /* Hidden on desktop by default, shown on mobile */
+    }
+
+    :global([data-theme="light"]) .dropdown-header {
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .close-btn {
+        background: transparent;
+        border: none;
+        color: inherit;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    /* Grid Layout */
+    .lang-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-height: 60vh;
+        overflow-y: auto;
+        padding-right: 5px; /* Space for scrollbar */
+    }
+
+    /* Custom Scrollbar */
+    .lang-grid::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .lang-grid::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+
+    :global([data-theme="light"]) .lang-grid::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Option Items */
+    .lang-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid transparent;
+        color: var(--text-dim, rgba(255, 255, 255, 0.8));
+        text-decoration: none;
+        transition: all 0.2s ease;
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+
+    :global([data-theme="light"]) .lang-option {
+        background: rgba(0, 0, 0, 0.03);
+        color: var(--text-main, #333);
+    }
+
+    .lang-option:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+        color: var(--primary, #ff0050);
+        border-color: rgba(255, 0, 80, 0.3);
+    }
+
+    :global([data-theme="light"]) .lang-option:hover {
+        background: rgba(0, 0, 0, 0.08);
+        color: var(--primary, #ff0050);
+    }
+
+    .lang-option.active {
+        background: linear-gradient(
+            135deg,
+            var(--primary, #ff0050),
+            var(--secondary, #00f2ea)
+        );
+        color: #fff;
+        box-shadow: 0 8px 15px rgba(255, 0, 80, 0.3);
+        border: none;
+        font-weight: 700;
+    }
+
+    /* Overlay */
+    .lang-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        display: none; /* Only for mobile usually */
+    }
+
+    /* RESPONSIVE Design */
+    @media (max-width: 768px) {
+        .lang-dropdown {
+            position: fixed;
+            top: auto;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100vw;
+            max-width: 100vw;
+            max-height: 85vh;
+            border-radius: 24px 24px 0 0;
+            transform: translateY(100%);
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 2005; /* High z-index */
+        }
+
+        .lang-dropdown.show {
+            transform: translateY(0);
+        }
+
+        .dropdown-header {
+            display: flex;
+        }
+
+        .lang-grid {
+            grid-template-columns: repeat(2, 1fr);
+            padding-bottom: 20px;
+        }
+
+        .lang-overlay {
+            display: block;
+        }
+
+        /* Make button cleaner for mobile header */
+        .lang-text {
+            display: none;
+        }
+        .lang-btn {
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+        }
+        .arrow-icon {
+            display: none;
+        }
+        .lang-btn::before {
+            content: "\f0ac"; /* Globe icon FontAwesome */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .lang-grid {
+            grid-template-columns: 1fr; /* Single column on tiny screens */
+        }
+    }
+</style>

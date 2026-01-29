@@ -1,10 +1,9 @@
 ---
 import { languages } from "../i18n/ui";
 import { useTranslations } from "../utils/i18n";
+import LanguageSelector from "./LanguageSelector.astro";
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
-const currentLangName =
-    languages[lang as keyof typeof languages] || languages["en"];
 ---
 
 <header id="main-header">
@@ -15,37 +14,15 @@ const currentLangName =
         </a>
 
         <!-- Language Selector -->
-        <div class="lang-select" tabindex="0">
-            <div class="lang-selector">
-                <button
-                    class="theme-toggle"
-                    id="theme-btn"
-                    aria-label="Toggle Theme"
-                >
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="dropdown-trigger" id="lang-btn">
-                    <span
-                        >{
-                            languages[lang as keyof typeof languages] ||
-                                languages["en"]
-                        }</span
-                    >
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="dropdown-options" id="lang-options">
-                    {
-                        Object.entries(languages).map(([code, name]) => (
-                            <a
-                                href={code === "en" ? "/" : `/${code}`}
-                                class="option-item"
-                            >
-                                {name}
-                            </a>
-                        ))
-                    }
-                </div>
-            </div>
+        <div class="lang-select">
+            <button
+                class="theme-toggle"
+                id="theme-btn"
+                aria-label="Toggle Theme"
+            >
+                <i class="fas fa-moon"></i>
+            </button>
+            <LanguageSelector lang={lang} />
         </div>
 
         <!-- Hamburger Icon for Mobile -->
@@ -178,51 +155,6 @@ const currentLangName =
             document._menuCloseListener = closeOnClickOutside;
         };
 
-        const initLang = () => {
-            const langBtn = document.getElementById("lang-btn");
-            const langOptions = document.getElementById("lang-options");
-
-            if (!langBtn || !langOptions) return;
-
-            // @ts-ignore
-            if (langBtn._clickListener) {
-                // @ts-ignore
-                langBtn.removeEventListener("click", langBtn._clickListener);
-            }
-
-            const toggleLang = (e) => {
-                e.stopPropagation();
-                langOptions.classList.toggle("show");
-                langBtn.classList.toggle("active");
-            };
-
-            langBtn.addEventListener("click", toggleLang);
-            // @ts-ignore
-            langBtn._clickListener = toggleLang;
-
-            const closeLang = (e) => {
-                if (
-                    !langBtn.contains(e.target) &&
-                    !langOptions.contains(e.target)
-                ) {
-                    langOptions.classList.remove("show");
-                    langBtn.classList.remove("active");
-                }
-            };
-
-            // @ts-ignore
-            if (document._langCloseListener) {
-                // @ts-ignore
-                document.removeEventListener(
-                    "click",
-                    document._langCloseListener,
-                );
-            }
-            document.addEventListener("click", closeLang);
-            // @ts-ignore
-            document._langCloseListener = closeLang;
-        };
-
         const initTheme = () => {
             const themeBtn = document.getElementById("theme-btn");
             if (!themeBtn) return;
@@ -262,7 +194,6 @@ const currentLangName =
             // CRITICAL: Always reset overflow to prevent freezing
             document.body.style.overflow = "";
             initMenu();
-            initLang();
             initTheme();
         };
 
@@ -274,9 +205,5 @@ const currentLangName =
         document.addEventListener("astro:page-load", initAll);
     </script>
 
-    <style>
-        .dropdown-options.show {
-            display: grid !important;
-        }
-    </style>
+    <style></style>
 </header>
