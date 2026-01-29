@@ -101,129 +101,162 @@ const currentLangName =
     </nav>
 
     <script>
-        // Helper to safely add click listeners
-        const addSafeClickListener = (id, callback) => {
-            const el = document.getElementById(id);
-            if (el) {
-                const newEl = el.cloneNode(true);
-                el.parentNode.replaceChild(newEl, el);
-                newEl.addEventListener("click", callback);
-                return newEl;
-            }
-            return null;
-        };
-
         const initMenu = () => {
             const hamburger = document.getElementById("hamburger");
             const navLinks = document.getElementById("nav-links");
 
-            if (hamburger && navLinks) {
-                // Reset Hamburger
-                const newHamburger = hamburger.cloneNode(true);
-                hamburger.parentNode.replaceChild(newHamburger, hamburger);
+            if (!hamburger || !navLinks) return;
 
-                // Toggle Logic
-                newHamburger.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    const isActive = navLinks.classList.contains("active");
-
-                    if (isActive) {
-                        navLinks.classList.remove("active");
-                        newHamburger.classList.remove("active");
-                        document.body.style.overflow = ""; // Restore scroll
-                    } else {
-                        navLinks.classList.add("active");
-                        newHamburger.classList.add("active");
-                        document.body.style.overflow = "hidden"; // Prevent background scroll
-                    }
-                });
-
-                // Close when clicking links
-                navLinks.querySelectorAll("a").forEach((link) => {
-                    link.addEventListener("click", () => {
-                        navLinks.classList.remove("active");
-                        newHamburger.classList.remove("active");
-                        document.body.style.overflow = "";
-                    });
-                });
-
-                // Close when clicking outside
-                document.addEventListener("click", (e) => {
-                    // @ts-ignore
-                    if (
-                        navLinks.classList.contains("active") &&
-                        !navLinks.contains(e.target) &&
-                        !newHamburger.contains(e.target)
-                    ) {
-                        navLinks.classList.remove("active");
-                        newHamburger.classList.remove("active");
-                        document.body.style.overflow = "";
-                    }
-                });
+            // Clean up old listener if it exists (using a custom property to track)
+            // @ts-ignore
+            if (hamburger._clickListener) {
+                // @ts-ignore
+                hamburger.removeEventListener(
+                    "click",
+                    hamburger._clickListener,
+                );
             }
+
+            const toggleMenu = (e) => {
+                e.stopPropagation();
+                const isActive = navLinks.classList.contains("active");
+
+                if (isActive) {
+                    navLinks.classList.remove("active");
+                    hamburger.classList.remove("active");
+                    document.body.style.overflow = "";
+                } else {
+                    navLinks.classList.add("active");
+                    hamburger.classList.add("active");
+                    document.body.style.overflow = "hidden";
+                }
+            };
+
+            hamburger.addEventListener("click", toggleMenu);
+            // @ts-ignore
+            hamburger._clickListener = toggleMenu;
+
+            // Close when clicking links
+            navLinks.querySelectorAll("a").forEach((link) => {
+                // Remove old listeners? Hard to track anonymous ones.
+                // Cloning is easier for children, but let's just add new ones and assume browser handles garbage collection or use 'once' if navigating away?
+                // Actually, if we use ViewTransitions, these are destroyed.
+                // We'll just add simple onclick to overwrite
+                link.onclick = () => {
+                    navLinks.classList.remove("active");
+                    hamburger.classList.remove("active");
+                    document.body.style.overflow = "";
+                };
+            });
+
+            // Close when clicking outside
+            const closeOnClickOutside = (e) => {
+                if (
+                    navLinks.classList.contains("active") &&
+                    !navLinks.contains(e.target) &&
+                    !hamburger.contains(e.target)
+                ) {
+                    navLinks.classList.remove("active");
+                    hamburger.classList.remove("active");
+                    document.body.style.overflow = "";
+                }
+            };
+
+            // Remove previous document listener to prevent stacking
+            // @ts-ignore
+            if (document._menuCloseListener) {
+                // @ts-ignore
+                document.removeEventListener(
+                    "click",
+                    document._menuCloseListener,
+                );
+            }
+            document.addEventListener("click", closeOnClickOutside);
+            // @ts-ignore
+            document._menuCloseListener = closeOnClickOutside;
         };
 
         const initLang = () => {
             const langBtn = document.getElementById("lang-btn");
             const langOptions = document.getElementById("lang-options");
 
-            if (langBtn && langOptions) {
-                const newLangBtn = langBtn.cloneNode(true);
-                langBtn.parentNode.replaceChild(newLangBtn, langBtn);
+            if (!langBtn || !langOptions) return;
 
-                newLangBtn.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    langOptions.classList.toggle("show");
-                    newLangBtn.classList.toggle("active");
-                });
-
-                document.addEventListener("click", (e) => {
-                    // @ts-ignore
-                    if (
-                        !newLangBtn.contains(e.target) &&
-                        !langOptions.contains(e.target)
-                    ) {
-                        langOptions.classList.remove("show");
-                        newLangBtn.classList.remove("active");
-                    }
-                });
+            // @ts-ignore
+            if (langBtn._clickListener) {
+                // @ts-ignore
+                langBtn.removeEventListener("click", langBtn._clickListener);
             }
+
+            const toggleLang = (e) => {
+                e.stopPropagation();
+                langOptions.classList.toggle("show");
+                langBtn.classList.toggle("active");
+            };
+
+            langBtn.addEventListener("click", toggleLang);
+            // @ts-ignore
+            langBtn._clickListener = toggleLang;
+
+            const closeLang = (e) => {
+                if (
+                    !langBtn.contains(e.target) &&
+                    !langOptions.contains(e.target)
+                ) {
+                    langOptions.classList.remove("show");
+                    langBtn.classList.remove("active");
+                }
+            };
+
+            // @ts-ignore
+            if (document._langCloseListener) {
+                // @ts-ignore
+                document.removeEventListener(
+                    "click",
+                    document._langCloseListener,
+                );
+            }
+            document.addEventListener("click", closeLang);
+            // @ts-ignore
+            document._langCloseListener = closeLang;
         };
 
         const initTheme = () => {
             const themeBtn = document.getElementById("theme-btn");
-            if (themeBtn) {
-                const newThemeBtn = themeBtn.cloneNode(true);
-                themeBtn.parentNode.replaceChild(newThemeBtn, themeBtn);
+            if (!themeBtn) return;
 
-                // Set initial icon state based on current theme
-                const icon = newThemeBtn.querySelector("i");
-                if (icon) {
-                    const isDark =
-                        !document.documentElement.hasAttribute("data-theme");
-                    icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
-                }
-
-                newThemeBtn.addEventListener("click", () => {
-                    // @ts-ignore
-                    if (typeof window.handleToggleClick === "function") {
-                        // @ts-ignore
-                        window.handleToggleClick();
-
-                        // Update icon immediately after toggle
-                        const icon = newThemeBtn.querySelector("i");
-                        if (icon) {
-                            const isDark =
-                                !document.documentElement.hasAttribute(
-                                    "data-theme",
-                                );
-                            icon.className = isDark
-                                ? "fas fa-moon"
-                                : "fas fa-sun";
-                        }
-                    }
-                });
+            // @ts-ignore
+            if (themeBtn._clickListener) {
+                // @ts-ignore
+                themeBtn.removeEventListener("click", themeBtn._clickListener);
             }
+
+            const icon = themeBtn.querySelector("i");
+            if (icon) {
+                const isDark =
+                    !document.documentElement.hasAttribute("data-theme");
+                icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+            }
+
+            const toggleTheme = () => {
+                // @ts-ignore
+                if (typeof window.handleToggleClick === "function") {
+                    // @ts-ignore
+                    window.handleToggleClick();
+                    const icon = themeBtn.querySelector("i");
+                    if (icon) {
+                        const isDark =
+                            !document.documentElement.hasAttribute(
+                                "data-theme",
+                            );
+                        icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+                    }
+                }
+            };
+
+            themeBtn.addEventListener("click", toggleTheme);
+            // @ts-ignore
+            themeBtn._clickListener = toggleTheme;
         };
 
         const initAll = () => {
