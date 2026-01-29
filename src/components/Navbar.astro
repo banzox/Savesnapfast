@@ -51,7 +51,10 @@ const currentLangName =
     <nav class="nav-menu" aria-label="Download Types">
         <a
             href={`/${lang === "en" ? "" : lang}`}
-            class="active"
+            class={!Astro.url.pathname.includes("mp3") &&
+            !Astro.url.pathname.includes("story")
+                ? "active"
+                : ""}
             title={t("hero.title")}
         >
             <i class="fas fa-video"></i>
@@ -59,6 +62,7 @@ const currentLangName =
         </a>
         <a
             href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
+            class={Astro.url.pathname.includes("mp3") ? "active" : ""}
             title={t("mp3_page.meta_title")}
         >
             <i class="fas fa-music"></i>
@@ -66,6 +70,7 @@ const currentLangName =
         </a>
         <a
             href={`/${lang === "en" ? "story" : lang + "/story"}`}
+            class={Astro.url.pathname.includes("story") ? "active" : ""}
             title={t("story_page.meta_title")}
         >
             <i class="fas fa-images"></i>

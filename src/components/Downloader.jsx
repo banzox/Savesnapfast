@@ -96,8 +96,13 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
             const text = await navigator.clipboard.readText();
             if (text) {
                 setUrl(text);
-                // Optional: auto-submit if valid URL
-                // handleDownload(); 
+                if (text.includes('tiktok.com')) {
+                    // Small delay to ensure state update or just pass text if we refactored
+                    // For now, let's just fill it. Auto-download might be annoying if accidental.
+                    // But user asked for "improve tool". Let's stick to auto-fill for safety, 
+                    // or maybe focus the button. 
+                    // Let's Just fill it. UX standard is usually fill. 
+                }
             }
         } catch (err) {
             // Input focus fallback handled by UI interaction naturally
@@ -119,6 +124,18 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                         spellCheck="false"
                         aria-label="TikTok video URL"
                     />
+                    {url && (
+                        <button
+                            id="clear-btn"
+                            type="button"
+                            onClick={() => setUrl('')}
+                            title="Clear"
+                            aria-label="Clear input"
+                            style={{ background: 'transparent', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', marginRight: '5px' }}
+                        >
+                            <i className="fas fa-times"></i>
+                        </button>
+                    )}
                     <button id="paste-btn" type="button" onClick={handlePaste} title="Paste from clipboard" aria-label="Paste link">
                         <i className="fas fa-paste"></i>
                     </button>
