@@ -120,7 +120,7 @@ const { title, description, lang = "en", keywords } = Astro.props;
 
             window.localStorage.setItem("theme", theme);
 
-            const handleToggleClick = () => {
+            window.handleToggleClick = () => {
                 const element = document.documentElement;
                 const isLight = element.getAttribute("data-theme") === "light";
                 if (isLight) {

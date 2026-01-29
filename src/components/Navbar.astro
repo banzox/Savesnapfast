@@ -101,86 +101,125 @@ const currentLangName =
     </nav>
 
     <script>
-        // Hamburger Menu Logic
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("nav-links");
+        const initMenu = () => {
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("nav-links");
 
-        if (hamburger && navLinks) {
-            hamburger.addEventListener("click", () => {
-                hamburger.classList.toggle("active");
-                navLinks.classList.toggle("active");
-            });
+            if (hamburger && navLinks) {
+                // Remove old listeners to prevent duplicates if any
+                const newHamburger = hamburger.cloneNode(true);
+                hamburger.parentNode.replaceChild(newHamburger, hamburger);
 
-            // Close menu when clicking a link
-            navLinks.querySelectorAll("a").forEach((link) => {
-                link.addEventListener("click", () => {
-                    hamburger.classList.remove("active");
-                    navLinks.classList.remove("active");
+                newHamburger.addEventListener("click", (e) => {
+                    e.stopPropagation(); // Stop bubbling
+                    newHamburger.classList.toggle("active");
+                    navLinks.classList.toggle("active");
                 });
-            });
 
-            // Close menu when clicking outside
-            document.addEventListener("click", (e) => {
-                if (
-                    !navLinks.contains(e.target as Node) &&
-                    !hamburger.contains(e.target as Node)
-                ) {
-                    hamburger.classList.remove("active");
-                    navLinks.classList.remove("active");
-                }
-            });
-        }
-
-        // Theme Toggle Logic
-        const themeBtn = document.getElementById("theme-btn");
-        if (themeBtn) {
-            themeBtn.addEventListener("click", () => {
-                // @ts-ignore
-                if (typeof handleToggleClick === "function") {
+                // Close menu when clicking outside
+                const closeMenu = (e) => {
                     // @ts-ignore
-                    handleToggleClick();
-                    // Update icon
-                    const icon = themeBtn.querySelector("i");
-                    if (icon) {
-                        const isDark =
-                            !document.documentElement.hasAttribute(
-                                "data-theme",
-                            );
-                        icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+                    if (
+                        !navLinks.contains(e.target) &&
+                        !newHamburger.contains(e.target)
+                    ) {
+                        newHamburger.classList.remove("active");
+                        navLinks.classList.remove("active");
                     }
-                }
-            });
+                };
+                document.addEventListener("click", closeMenu);
 
-            // Initialize icon on load
-            const icon = themeBtn.querySelector("i");
-            if (icon) {
-                const isDark =
-                    !document.documentElement.hasAttribute("data-theme");
-                icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+                // Close when clicking a link
+                navLinks.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        newHamburger.classList.remove("active");
+                        navLinks.classList.remove("active");
+                    });
+                });
             }
-        }
+        };
 
-        // Language Dropdown Logic
-        const langBtn = document.getElementById("lang-btn");
-        const langOptions = document.getElementById("lang-options");
+        const initTheme = () => {
+            const themeBtn = document.getElementById("theme-btn");
+            if (themeBtn) {
+                // Clone to clear listeners
+                const newThemeBtn = themeBtn.cloneNode(true);
+                themeBtn.parentNode.replaceChild(newThemeBtn, themeBtn);
 
-        if (langBtn && langOptions) {
-            langBtn.addEventListener("click", (e) => {
-                e.stopPropagation();
-                langOptions.classList.toggle("show");
-                langBtn.classList.toggle("active");
-            });
+                newThemeBtn.addEventListener("click", () => {
+                    // @ts-ignore
+                    if (typeof window.handleToggleClick === "function") {
+                        // @ts-ignore
+                        window.handleToggleClick();
+                        // Update icon
+                        const icon = newThemeBtn.querySelector("i");
+                        if (icon) {
+                            const isDark =
+                                !document.documentElement.hasAttribute(
+                                    "data-theme",
+                                );
+                            icon.className = isDark
+                                ? "fas fa-moon"
+                                : "fas fa-sun";
+                        }
+                    }
+                });
 
-            document.addEventListener("click", (e) => {
-                if (
-                    !langBtn.contains(e.target as Node) &&
-                    !langOptions.contains(e.target as Node)
-                ) {
-                    langOptions.classList.remove("show");
-                    langBtn.classList.remove("active");
+                // Init Icon
+                const icon = newThemeBtn.querySelector("i");
+                if (icon) {
+                    const isDark =
+                        !document.documentElement.hasAttribute("data-theme");
+                    icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
                 }
-            });
-        }
+            }
+        };
+
+        const initLang = () => {
+            const langBtn = document.getElementById("lang-btn");
+            const langOptions = document.getElementById("lang-options");
+
+            if (langBtn && langOptions) {
+                const newLangBtn = langBtn.cloneNode(true);
+                langBtn.parentNode.replaceChild(newLangBtn, langBtn);
+
+                newLangBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    langOptions.classList.toggle("show");
+                    newLangBtn.classList.toggle("active");
+                });
+
+                document.addEventListener("click", (e) => {
+                    // @ts-ignore
+                    if (
+                        !newLangBtn.contains(e.target) &&
+                        !langOptions.contains(e.target)
+                    ) {
+                        langOptions.classList.remove("show");
+                        newLangBtn.classList.remove("active");
+                    }
+                });
+            }
+        };
+
+        // Run on initial load
+        initMenu();
+        initTheme();
+        initLang();
+
+        // Run on Astro Page Swap
+        document.addEventListener("astro:after-swap", () => {
+            initMenu();
+            initTheme();
+            initLang();
+        });
+
+        // Also listen to page-load if using new ViewTransitions API
+        document.addEventListener("astro:page-load", () => {
+            initMenu();
+            initTheme();
+            initLang();
+        });
     </script>
 
     <style>
