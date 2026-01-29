@@ -2,7 +2,7 @@
 export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
-import { languages, defaultLang } from "../../i18n/ui";
+import { languages, defaultLang, ui } from "../../i18n/ui";
 import { useTranslations, getTranslations } from "../../utils/i18n";
 
 export async function getStaticPaths() {
@@ -15,6 +15,12 @@ const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
+const defaultTranslations = ui[defaultLang];
+
+const downloaderMessages = {
+    ...defaultTranslations.downloader,
+    ...(translations?.downloader || {}),
+};
 ---
 
 <Layout
@@ -29,7 +35,7 @@ const translations = getTranslations(currentLang);
         </h1>
         <p>{t("tools.hero.desc")}</p>
 
-        <Downloader client:load messages={translations.downloader} />
+        <Downloader client:load messages={downloaderMessages} />
     </article>
 
     <div class="container features-grid">

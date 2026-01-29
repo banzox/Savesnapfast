@@ -7,10 +7,17 @@ import {
     useTranslations,
     getTranslations,
 } from "../utils/i18n";
+import { ui, defaultLang } from "../i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translations = getTranslations(lang);
+const defaultTranslations = ui[defaultLang];
+
+const downloaderMessages = {
+    ...defaultTranslations.downloader,
+    ...(translations?.downloader || {}),
+};
 ---
 
 <Layout title="404 - Page Not Found" lang={lang} description="Page not found">
@@ -20,7 +27,7 @@ const translations = getTranslations(lang);
             {t("404.title")}
         </p>
 
-        <Downloader client:load messages={translations.downloader} />
+        <Downloader client:load messages={downloaderMessages} />
 
         <div style="margin-top: 2rem;">
             <a
