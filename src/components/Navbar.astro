@@ -13,80 +13,123 @@ const currentLangName =
             <i class="fab fa-tiktok"></i> SaveTikFast
         </a>
 
-        <nav class="nav-menu" aria-label="Download Types">
-            <a
-                href={`/${lang === "en" ? "" : lang}`}
-                class={!Astro.url.pathname.includes("mp3") &&
-                !Astro.url.pathname.includes("story")
-                    ? "active"
-                    : ""}
-                title={t("hero.title")}
-            >
-                <i class="fas fa-video"></i>
-                <span>{t("nav_menu.video")}</span>
-            </a>
-            <a
-                href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
-                class={Astro.url.pathname.includes("mp3") ? "active" : ""}
-                title={t("mp3_page.meta_title")}
-            >
-                <i class="fas fa-music"></i>
-                <span>{t("nav_menu.mp3")}</span>
-            </a>
-            <a
-                href={`/${lang === "en" ? "story" : lang + "/story"}`}
-                class={Astro.url.pathname.includes("story") ? "active" : ""}
-                title={t("story_page.meta_title")}
-            >
-                <i class="fas fa-images"></i>
-                <span>{t("nav_menu.stories")}</span>
-            </a>
-            <a
-                href={`/${lang === "en" ? "slideshow" : lang + "/slideshow"}`}
-                class={Astro.url.pathname.includes("slideshow") ? "active" : ""}
-                title={t("slideshow_page.meta_title")}
-            >
-                <i class="fas fa-layer-group"></i>
-                <span>{t("nav_menu.slideshow")}</span>
-            </a>
-        </nav>
+        <!-- Hamburger Icon for Mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <!-- Language Selector (Simple Dropdown or Link) -->
-        <div class="lang-select" tabindex="0">
-            <div class="lang-selector">
-                <button
-                    class="theme-toggle"
-                    id="theme-btn"
-                    aria-label="Toggle Theme"
+        <!-- Navigation Links & Settings Container -->
+        <div class="nav-links" id="nav-links">
+            <nav class="nav-menu" aria-label="Download Types">
+                <a
+                    href={`/${lang === "en" ? "" : lang}`}
+                    class={!Astro.url.pathname.includes("mp3") &&
+                    !Astro.url.pathname.includes("story") &&
+                    !Astro.url.pathname.includes("slideshow")
+                        ? "active"
+                        : ""}
+                    title={t("hero.title")}
                 >
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="dropdown-trigger" id="lang-btn">
-                    <span
-                        >{
-                            languages[lang as keyof typeof languages] ||
-                                languages["en"]
-                        }</span
+                    <i class="fas fa-video"></i>
+                    <span>{t("nav_menu.video")}</span>
+                </a>
+                <a
+                    href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
+                    class={Astro.url.pathname.includes("mp3") ? "active" : ""}
+                    title={t("mp3_page.meta_title")}
+                >
+                    <i class="fas fa-music"></i>
+                    <span>{t("nav_menu.mp3")}</span>
+                </a>
+                <a
+                    href={`/${lang === "en" ? "story" : lang + "/story"}`}
+                    class={Astro.url.pathname.includes("story") ? "active" : ""}
+                    title={t("story_page.meta_title")}
+                >
+                    <i class="fas fa-images"></i>
+                    <span>{t("nav_menu.stories")}</span>
+                </a>
+                <a
+                    href={`/${lang === "en" ? "slideshow" : lang + "/slideshow"}`}
+                    class={Astro.url.pathname.includes("slideshow")
+                        ? "active"
+                        : ""}
+                    title={t("slideshow_page.meta_title")}
+                >
+                    <i class="fas fa-layer-group"></i>
+                    <span>{t("nav_menu.slideshow")}</span>
+                </a>
+            </nav>
+
+            <!-- Language Selector (Simple Dropdown or Link) -->
+            <div class="lang-select" tabindex="0">
+                <div class="lang-selector">
+                    <button
+                        class="theme-toggle"
+                        id="theme-btn"
+                        aria-label="Toggle Theme"
                     >
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="dropdown-options" id="lang-options">
-                    {
-                        Object.entries(languages).map(([code, name]) => (
-                            <a
-                                href={code === "en" ? "/" : `/${code}`}
-                                class="option-item"
-                            >
-                                {name}
-                            </a>
-                        ))
-                    }
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="dropdown-trigger" id="lang-btn">
+                        <span
+                            >{
+                                languages[lang as keyof typeof languages] ||
+                                    languages["en"]
+                            }</span
+                        >
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-options" id="lang-options">
+                        {
+                            Object.entries(languages).map(([code, name]) => (
+                                <a
+                                    href={code === "en" ? "/" : `/${code}`}
+                                    class="option-item"
+                                >
+                                    {name}
+                                </a>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
     <script>
+        // Hamburger Menu Logic
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navLinks.classList.toggle("active");
+            });
+
+            // Close menu when clicking a link
+            navLinks.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    hamburger.classList.remove("active");
+                    navLinks.classList.remove("active");
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (
+                    !navLinks.contains(e.target as Node) &&
+                    !hamburger.contains(e.target as Node)
+                ) {
+                    hamburger.classList.remove("active");
+                    navLinks.classList.remove("active");
+                }
+            });
+        }
+
         // Theme Toggle Logic
         const themeBtn = document.getElementById("theme-btn");
         if (themeBtn) {
