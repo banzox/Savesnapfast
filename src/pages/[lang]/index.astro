@@ -3,7 +3,7 @@ export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
 import FAQ from "../../components/FAQ.astro";
-import { languages, defaultLang } from "../../i18n/ui";
+import { languages, defaultLang, ui } from "../../i18n/ui";
 import { useTranslations, getTranslations } from "../../utils/i18n";
 
 export async function getStaticPaths() {
@@ -18,6 +18,30 @@ const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
+const defaultTranslations = ui[defaultLang];
+
+// --- Robust FAQ Array Generation ---
+// Converts 'faq' object (q1..q10) into the array format expected by FAQ.astro
+const faqItems = [];
+if (translations && translations.faq) {
+  for (let i = 1; i <= 20; i++) {
+    const qKey = `q${i}`;
+    const aKey = `a${i}`;
+    if (translations.faq[qKey] && translations.faq[aKey]) {
+      faqItems.push({
+        question: translations.faq[qKey],
+        answer: translations.faq[aKey],
+      });
+    }
+  }
+}
+
+// --- Safe Downloader Messages ---
+// Merges current language messages with English defaults to prevent empty buttons
+const downloaderMessages = {
+  ...defaultTranslations.downloader,
+  ...(translations.downloader || {}),
+};
 ---
 
 <Layout
@@ -34,7 +58,7 @@ const translations = getTranslations(currentLang);
     </h1>
     <p>{t("hero.desc")}</p>
 
-    <Downloader client:load messages={translations.downloader} />
+    <Downloader client:load messages={downloaderMessages} />
   </article>
 
   <!-- ==================== AD CONTAINER ==================== -->
@@ -118,5 +142,5 @@ const translations = getTranslations(currentLang);
     </div>
   </section>
 
-  <FAQ t={t} items={translations?.faqs || []} />
+  <FAQ t={t} items={faqItems} />
 </Layout>

@@ -2,7 +2,8 @@
 export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
-import { languages, defaultLang } from "../../i18n/ui";
+import FAQ from "../../components/FAQ.astro";
+import { languages, defaultLang, ui } from "../../i18n/ui";
 import { useTranslations, getTranslations } from "../../utils/i18n";
 
 export async function getStaticPaths() {
@@ -15,6 +16,19 @@ const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
+const defaultTranslations = ui[defaultLang];
+
+// --- Safe Downloader Messages ---
+const downloaderMessages = {
+    ...defaultTranslations.downloader,
+    ...(translations.downloader || {}),
+};
+
+// --- FAQ Array Generation ---
+const faqItems = Array.from({ length: 10 }, (_, i) => ({
+    question: t(`story_page.faq.q${i + 1}`),
+    answer: t(`story_page.faq.a${i + 1}`),
+}));
 ---
 
 <Layout
@@ -29,12 +43,7 @@ const translations = getTranslations(currentLang);
         </h1>
         <p>{t("story_page.desc")}</p>
 
-        <!-- Downloader Component (configured for Story mode) -->
-        <Downloader
-            client:load
-            messages={translations.downloader}
-            mode="story"
-        />
+        <Downloader client:load messages={downloaderMessages} mode="story" />
     </article>
 
     <section class="container features-grid">
@@ -92,6 +101,8 @@ const translations = getTranslations(currentLang);
             </div>
         </div>
     </section>
+
+    <FAQ t={t} items={faqItems} />
 
     <section class="container shadow-box" style="margin-top: 2rem;">
         <div class="content-box">

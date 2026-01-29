@@ -12,6 +12,11 @@ const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
 import FAQ from "../components/FAQ.astro";
+
+const faqItems = Array.from({ length: 10 }, (_, i) => ({
+    question: t(`mp3_page.faq.q${i + 1}`),
+    answer: t(`mp3_page.faq.a${i + 1}`),
+}));
 ---
 
 <Layout
@@ -101,5 +106,5 @@ import FAQ from "../components/FAQ.astro";
         </div>
     </section>
 
-    <FAQ t={t} />
+    <FAQ t={t} items={faqItems} />
 </Layout>

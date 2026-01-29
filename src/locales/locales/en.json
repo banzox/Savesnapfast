@@ -286,6 +286,10 @@
       "title": "Fast Download",
       "desc": "Download TikTok videos in seconds with our high-speed servers."
     },
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "quality": {
       "title": "HD & 4K Quality",
       "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."

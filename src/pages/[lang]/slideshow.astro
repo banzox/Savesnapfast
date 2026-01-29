@@ -1,6 +1,6 @@
 ---
 export const prerender = true;
-import { languages } from "../../i18n/ui";
+import { languages, defaultLang, ui } from "../../i18n/ui";
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
 import { useTranslations, getTranslations } from "../../utils/i18n";
@@ -17,9 +17,12 @@ const { lang } = Astro.params;
 const t = useTranslations(lang);
 const translations = getTranslations(lang);
 
+const defaultTranslations = ui[defaultLang];
+
 // Fix for Downloader placeholder: Inject the specific key since Downloader expects it in 'messages'
 const downloaderMessages = {
-    ...translations.downloader,
+    ...defaultTranslations.downloader,
+    ...(translations.downloader || {}),
     "slideshow_page.placeholder": t("slideshow_page.placeholder"),
 };
 
