@@ -113,6 +113,10 @@ body {
     border-radius: 16px !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
     z-index: 2000;
+    max-height: 50vh;
+    /* Fix Desktop Overflow */
+    overflow-y: auto;
+    /* Enable Scroll */
 }
 
 [data-theme='light'] .dropdown-options {
@@ -1097,6 +1101,159 @@ footer {
     padding: 20px;
 }
 
+
+
+/* =========================================
+   6. MEDIA QUERIES (Responsive Base)
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-container {
+        padding-inline: 15px;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .hero-section {
+        padding-top: 140px;
+        padding-inline: 20px;
+    }
+
+    .feature-card i {
+        font-size: 2rem;
+    }
+
+    .downloader-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #download-btn {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   7. LOADING ANIMATION (Spinner)
+   ========================================= */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-left-color: var(--secondary);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 15px auto;
+}
+
+/* =========================================
+   8. FEATURES GRID (Restored)
+   ========================================= */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+   9. HOW-TO STEPS (Restored)
+   ========================================= */
+.how-to-box {
+    margin-top: 80px;
+    padding: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.steps-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+.step {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.step-num {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.step p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
 
 /* 10. محتوى نصي (Content Box) - Kept generic for both themes */
 
