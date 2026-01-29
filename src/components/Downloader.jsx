@@ -4,25 +4,31 @@ const WORKER_URL = "https://api.savetik-fast.xyz";
 const SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
 export default function Downloader({ messages = {}, mode = 'video' }) {
-    // Simplified translation helper for the component
+    
+    // --- تحديث 1: إصلاح دالة الترجمة ---
+    // الآن، إذا لم تجد الترجمة، ستعيد null لكي يظهر النص الاحتياطي (الإنجليزي)
     const t = (key) => {
         const k = key.replace('downloader.', '');
-        return messages[k] || key;
+        return messages[k] || null; 
     };
+
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
 
     const sanitizeFileName = (name) => {
-        if (!name) return 'TikTok';
-        return name.replace(/[^\w\s-]/gi, '').replace(/\s+/g, '_').replace(/^_|_$/g, '').substring(0, 30) || 'TikTok';
+        if (!name) return 'User';
+        // إبقاء الحروف والأرقام فقط وإزالة الرموز الغريبة
+        return name.replace(/[^\w\s-]/gi, '').replace(/\s+/g, '_').substring(0, 20);
     };
 
-    const generateViralFileName = (author, ext = 'mp4') => {
-        const cleanName = sanitizeFileName(author);
-        const randomId = Math.random().toString(36).substring(2, 8);
-        return `SaveTikFast_${cleanName}_${randomId}.${ext} `;
+    // --- تحديث 2: تسمية الملفات بشكل جميل ونظيف ---
+    // النتيجة ستكون مثل: TikTok_@UserName_12345.mp4
+    const generateCleanName = (author, ext = 'mp4') => {
+        const cleanAuthor = sanitizeFileName(author);
+        const shortId = Math.floor(1000 + Math.random() * 9000); // رقم قصير مكون من 4 خانات فقط
+        return `TikTok_@${cleanAuthor}_${shortId}.${ext}`;
     };
 
     const downloadFile = async (fileUrl, fileName) => {
@@ -72,7 +78,6 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
             const res = data.result || data;
             setResult(res);
 
-            // Auto-scroll logic could go here or in useEffect
             setTimeout(() => {
                 const resultElement = document.getElementById('result-area');
                 if (resultElement) {
@@ -94,19 +99,11 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
     const handlePaste = async () => {
         try {
             const text = await navigator.clipboard.readText();
-            if (text) {
-                setUrl(text);
-                if (text.includes('tiktok.com')) {
-                    // Small delay logic
-                }
-            }
-        } catch (err) {
-            // Input focus fallback
-        }
+            if (text) setUrl(text);
+        } catch (err) {}
     };
 
-    // --- هذا هو التعديل الوحيد: تعريف متغيرات لضمان ظهور الأزرار ---
-    // نتحقق هنا أن الصور غير فارغة فعلاً، وأن الفيديو موجود تحت أي مسمى
+    // تعريف المتغيرات الآمنة (التي أصلحت مشكلة الاختفاء)
     const isSlideshow = result?.images && Array.isArray(result.images) && result.images.length > 0;
     const videoUrl = result?.video || result?.play || result?.url || result?.nowatermark;
     const musicUrl = result?.music || result?.audio;
@@ -137,18 +134,17 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                             type="button"
                             onClick={() => setUrl('')}
                             title="Clear"
-                            aria-label="Clear input"
                             style={{ background: 'transparent', border: 'none', color: 'var(--text-dim)', cursor: 'pointer', marginRight: '5px' }}
                         >
                             <i className="fas fa-times"></i>
                         </button>
                     )}
-                    <button id="paste-btn" type="button" onClick={handlePaste} title="Paste from clipboard" aria-label="Paste link">
+                    <button id="paste-btn" type="button" onClick={handlePaste} title="Paste from clipboard">
                         <i className="fas fa-paste"></i>
                     </button>
                 </div>
-                <button id="download-btn" onClick={handleDownload} aria-label="Download TikTok video">
-                    <i className="fas fa-download"></i> {t('downloader.btn_download') || "Download"}
+                <button id="download-btn" onClick={handleDownload}>
+                    <i className="fas fa-download"></i> {t('btn_download') || "Download"}
                 </button>
             </div>
 
@@ -156,7 +152,7 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                 {loading && (
                     <div className="lightning-loader">
                         <i className="fas fa-bolt lightning-bolt"></i>
-                        <p className="shimmer-text">{t('downloader.processing') || "Processing..."}</p>
+                        <p className="shimmer-text">{t('processing') || "Processing..."}</p>
                     </div>
                 )}
 
@@ -183,28 +179,29 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                             {result.title && <p className="result-desc">{result.title.substring(0, 100)}{result.title.length > 100 ? '...' : ''}</p>}
 
                             <div className="result-buttons">
-                                {/* تم إصلاح الشرط هنا: نستخدم videoUrl و isSlideshow */}
+                                {/* Video Buttons */}
                                 {(!mode || mode === 'video') && !isSlideshow && videoUrl && (
                                     <>
-                                        <button className="btn-download btn-video" onClick={() => downloadFile(videoUrl, generateViralFileName(result.author || result.authorName, 'mp4'))}>
-                                            <i className="fas fa-download"></i> {t('downloader.download_video') || "Download"} <span className="badge">{t('downloader.hd_quality') || "No Watermark"}</span>
+                                        <button className="btn-download btn-video" onClick={() => downloadFile(videoUrl, generateCleanName(result.author || result.authorName, 'mp4'))}>
+                                            <i className="fas fa-download"></i> {t('download_video') || "Download Video"} <span className="badge">{t('hd_quality') || "No Watermark"}</span>
                                         </button>
-                                        <button className="btn-download btn-hd" onClick={() => downloadFile(videoUrl, generateViralFileName((result.author || result.authorName) + '_HD', 'mp4'))}>
-                                            <i className="fas fa-film"></i> {t('downloader.download_hd') || "Download HD"} <span className="badge badge-hd">1080p</span>
+                                        
+                                        {/* هنا تم إصلاح النص ليظهر Download HD بدلاً من الكود */}
+                                        <button className="btn-download btn-hd" onClick={() => downloadFile(videoUrl, generateCleanName((result.author || result.authorName) + '_HD', 'mp4'))}>
+                                            <i className="fas fa-film"></i> {t('download_hd') || "Download HD"} <span className="badge badge-hd">1080p</span>
                                         </button>
                                     </>
                                 )}
 
-                                {/* تم إصلاح زر MP3 ليظهر دائماً إذا توفر الرابط */}
+                                {/* MP3 Button */}
                                 {(mode === 'mp3' || (!mode || mode === 'video')) && musicUrl && (
-                                    <button className="btn-download btn-audio" onClick={() => downloadFile(musicUrl, generateViralFileName(result.author || result.authorName, 'mp3'))}>
-                                        <i className="fas fa-music"></i> {t('downloader.download_audio') || "Download MP3"}
+                                    <button className="btn-download btn-audio" onClick={() => downloadFile(musicUrl, generateCleanName(result.author || result.authorName, 'mp3'))}>
+                                        <i className="fas fa-music"></i> {t('download_audio') || "Download MP3"}
                                     </button>
                                 )}
-
                             </div>
 
-                            {/* Slideshow / Story Images */}
+                            {/* Slideshow Images */}
                             {(mode === 'story' || mode === 'slideshow' || (!mode && isSlideshow)) && isSlideshow && (
                                 <div className="slideshow-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '10px', marginTop: '15px' }}>
                                     {result.images.map((img, index) => (
@@ -212,8 +209,8 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                                             <img src={img} style={{ width: '100%', borderRadius: '8px', aspectRatio: '9/16', objectFit: 'cover' }} loading="lazy" />
                                             <button className="btn-download btn-sm"
                                                 style={{ fontSize: '0.8rem', padding: '5px', marginTop: '5px', width: '100%' }}
-                                                onClick={() => downloadFile(img, generateViralFileName(`${result.author || result.authorName}_slide_${index + 1}`, 'jpg'))}>
-                                                <i className="fas fa-download"></i> {t('downloader.save') || "Save"}
+                                                onClick={() => downloadFile(img, generateCleanName(`${result.author || result.authorName}_slide_${index + 1}`, 'jpg'))}>
+                                                <i className="fas fa-download"></i> {t('save') || "Save"}
                                             </button>
                                         </div>
                                     ))}
