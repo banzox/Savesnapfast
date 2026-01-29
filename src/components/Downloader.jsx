@@ -97,17 +97,19 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
             if (text) {
                 setUrl(text);
                 if (text.includes('tiktok.com')) {
-                    // Small delay to ensure state update or just pass text if we refactored
-                    // For now, let's just fill it. Auto-download might be annoying if accidental.
-                    // But user asked for "improve tool". Let's stick to auto-fill for safety, 
-                    // or maybe focus the button. 
-                    // Let's Just fill it. UX standard is usually fill. 
+                    // Small delay logic
                 }
             }
         } catch (err) {
-            // Input focus fallback handled by UI interaction naturally
+            // Input focus fallback
         }
     };
+
+    // --- هذا هو التعديل الوحيد: تعريف متغيرات لضمان ظهور الأزرار ---
+    // نتحقق هنا أن الصور غير فارغة فعلاً، وأن الفيديو موجود تحت أي مسمى
+    const isSlideshow = result?.images && Array.isArray(result.images) && result.images.length > 0;
+    const videoUrl = result?.video || result?.play || result?.url || result?.nowatermark;
+    const musicUrl = result?.music || result?.audio;
 
     return (
         <div className="downloader-container">
@@ -167,7 +169,7 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
 
                 {result && (
                     <div className="result-card">
-                        {(result.cover || result.thumbnail) && (!result.images || result.images.length === 0) && (
+                        {(result.cover || result.thumbnail) && !isSlideshow && (
                             <div className="result-thumbnail">
                                 <img src={result.cover || result.thumbnail} alt="TikTok Thumbnail" loading="lazy" />
                                 <div className="play-overlay"><i className="fas fa-play-circle"></i></div>
@@ -181,30 +183,29 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                             {result.title && <p className="result-desc">{result.title.substring(0, 100)}{result.title.length > 100 ? '...' : ''}</p>}
 
                             <div className="result-buttons">
-                                {/* Video Buttons - Only show in 'video' mode or default */}
-                                {(!mode || mode === 'video') && !result.images && result.video && (
+                                {/* تم إصلاح الشرط هنا: نستخدم videoUrl و isSlideshow */}
+                                {(!mode || mode === 'video') && !isSlideshow && videoUrl && (
                                     <>
-                                        <button className="btn-download btn-video" onClick={() => downloadFile(result.video, generateViralFileName(result.author || result.authorName, 'mp4'))}>
+                                        <button className="btn-download btn-video" onClick={() => downloadFile(videoUrl, generateViralFileName(result.author || result.authorName, 'mp4'))}>
                                             <i className="fas fa-download"></i> {t('downloader.download_video') || "Download"} <span className="badge">{t('downloader.hd_quality') || "No Watermark"}</span>
                                         </button>
-                                        <button className="btn-download btn-hd" onClick={() => downloadFile(result.video, generateViralFileName((result.author || result.authorName) + '_HD', 'mp4'))}>
+                                        <button className="btn-download btn-hd" onClick={() => downloadFile(videoUrl, generateViralFileName((result.author || result.authorName) + '_HD', 'mp4'))}>
                                             <i className="fas fa-film"></i> {t('downloader.download_hd') || "Download HD"} <span className="badge badge-hd">1080p</span>
                                         </button>
                                     </>
                                 )}
 
-                                {/* MP3 Button - Only show in 'mp3' mode */}
-                                {mode === 'mp3' && result.music && (
-                                    <button className="btn-download btn-audio" onClick={() => downloadFile(result.music, generateViralFileName(result.author || result.authorName, 'mp3'))}>
+                                {/* تم إصلاح زر MP3 ليظهر دائماً إذا توفر الرابط */}
+                                {(mode === 'mp3' || (!mode || mode === 'video')) && musicUrl && (
+                                    <button className="btn-download btn-audio" onClick={() => downloadFile(musicUrl, generateViralFileName(result.author || result.authorName, 'mp3'))}>
                                         <i className="fas fa-music"></i> {t('downloader.download_audio') || "Download MP3"}
                                     </button>
                                 )}
 
-                                {/* Story/Slideshow Logic handled below, but if we want to force 'slideshow' mode to ONLY show images, we keep this empty for slideshows */}
                             </div>
 
                             {/* Slideshow / Story Images */}
-                            {(mode === 'story' || mode === 'slideshow' || (!mode && result.images)) && result.images && result.images.length > 0 && (
+                            {(mode === 'story' || mode === 'slideshow' || (!mode && isSlideshow)) && isSlideshow && (
                                 <div className="slideshow-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '10px', marginTop: '15px' }}>
                                     {result.images.map((img, index) => (
                                         <div className="slide-item" key={index} style={{ position: 'relative' }}>
