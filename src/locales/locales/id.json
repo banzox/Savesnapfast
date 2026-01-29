@@ -268,5 +268,58 @@
       "download": "Unduh",
       "downloadPng": "Download PNG"
     }
+  },
+  "slideshow_page": {
+    "meta_title": "Download Slideshow TikTok - Simpan Foto Carousel",
+    "meta_desc": "Unduh slideshow dan foto carousel TikTok HD tanpa watermark. Gratis dan cepat.",
+    "title": "Downloader Slideshow TikTok",
+    "desc": "Alat terbaik untuk menyimpan foto slide TikTok. Unduh setiap gambar dengan kualitas tinggi.",
+    "placeholder": "Tempel tautan Slideshow...",
+    "btn_download": "Unduh Gambar",
+    "about_title": "Penyimpan Foto TikTok",
+    "about_content": "Alat kami dirancang untuk menyimpan carousel foto TikTok. Ekstrak setiap gambar dalam kualitas HD asli tanpa watermark.",
+    "features": {
+      "bulk": {
+        "title": "Unduh Semua",
+        "desc": "Simpan semua foto sekaligus."
+      },
+      "original": {
+        "title": "Kualitas Asli",
+        "desc": "Resolusi penuh tanpa kompresi."
+      },
+      "fast": {
+        "title": "Sangat Cepat",
+        "desc": "Proses instan."
+      },
+      "format": {
+        "title": "Format Cerdas",
+        "desc": "Disimpan sebagai JPG/PNG."
+      },
+      "device": {
+        "title": "Semua Perangkat",
+        "desc": "iOS, Android, PC."
+      },
+      "unlimited": {
+        "title": "Tanpa Batas",
+        "desc": "Unduhan gratis tanpa batas."
+      }
+    },
+    "how_to": {
+      "title": "Cara Mengunduh Slideshow",
+      "step1": "Buka TikTok, salin tautan slideshow.",
+      "step2": "Tempel tautan di atas.",
+      "step3": "Klik 'Unduh Gambar'."
+    },
+    "faq": {
+      "q1": "Bisa unduh semua foto?",
+      "a1": "Ya, kami mengunduh semua gambar carousel.",
+      "q2": "Ada watermark?",
+      "a2": "Tidak, gambar bersih tanpa watermark.",
+      "q3": "Bisa untuk video?",
+      "a3": "Tidak, gunakan pengunduh video kami."
+    }
+  },
+  "nav_menu": {
+    "slideshow": "Slideshow"
   }
 }

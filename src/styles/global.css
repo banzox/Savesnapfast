@@ -206,11 +206,12 @@ body::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
     padding-block: 15px;
     padding-inline: 5%;
-    background: rgba(15, 12, 41, 0.85);
-    backdrop-filter: blur(12px);
+    background: rgba(15, 12, 41, 0.95);
+    /* Slightly more opaque */
+    backdrop-filter: blur(15px);
     position: fixed;
     top: 0;
     width: 100%;
@@ -218,17 +219,30 @@ body::after {
     border-bottom: 1px solid var(--border);
 }
 
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    pointer-events: auto;
+    flex-grow: 1;
+    /* Center it */
+}
+
 .dropdown-options {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 120%;
+    /* Slight offset */
     inset-inline-end: 0;
     width: 280px;
     background: var(--bg-dark);
     border: 1px solid var(--border);
     box-shadow: var(--shadow-premium);
     border-radius: 10px;
-    z-index: 1000;
+    z-index: 2000;
+    /* CRITICAL: High z-index to stay on top */
     max-height: 400px;
     overflow-y: auto;
     display: grid;
@@ -1035,6 +1049,8 @@ body.light-mode .nav-link:hover {
     .nav-container {
         padding-inline: 15px;
         flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
     }
 
     .hero-section {
@@ -1045,15 +1061,30 @@ body.light-mode .nav-link:hover {
     .nav-menu {
         order: 3;
         width: 100%;
+        display: flex;
         justify-content: center;
-        margin-top: 10px;
         gap: 10px;
-        flex-wrap: wrap;
+        margin-top: 5px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        /* Subtle separator */
     }
 
     .nav-menu a {
-        padding: 8px 15px;
+        padding: 6px 14px;
         font-size: 13px;
+        background: rgba(255, 255, 255, 0.05);
+        /* Lighter background */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+        /* Remove shadow for cleaner look */
+    }
+
+    .nav-menu a.active {
+        background: var(--primary);
+        /* Solid color for active */
+        border-color: var(--primary);
+        box-shadow: 0 4px 12px rgba(255, 0, 80, 0.3);
     }
 
     .hero-section h1 {

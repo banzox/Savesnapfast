@@ -268,5 +268,58 @@
       "download": "Downloaden",
       "downloadPng": "Download PNG"
     }
+  },
+  "slideshow_page": {
+    "meta_title": "TikTok Slideshow Downloader - Save Photos",
+    "meta_desc": "Download TikTok photo slideshows in HD. Save all images without watermark.",
+    "title": "TikTok Slideshow Downloader",
+    "desc": "Download TikTok photo carousels in high quality.",
+    "placeholder": "Paste link...",
+    "btn_download": "Download Images",
+    "about_title": "TikTok Photo Downloader",
+    "about_content": "Save TikTok photo slideshows in original HD quality without watermarks.",
+    "features": {
+      "bulk": {
+        "title": "Bulk Download",
+        "desc": "Save all photos at once."
+      },
+      "original": {
+        "title": "Original Quality",
+        "desc": "Full resolution."
+      },
+      "fast": {
+        "title": "Fast Speed",
+        "desc": "Instant processing."
+      },
+      "format": {
+        "title": "Smart Formats",
+        "desc": "JPG/PNG."
+      },
+      "device": {
+        "title": "Cross-Platform",
+        "desc": "iOS, Android, PC."
+      },
+      "unlimited": {
+        "title": "Unlimited",
+        "desc": "Free unlimited downloads."
+      }
+    },
+    "how_to": {
+      "title": "How to Download",
+      "step1": "Copy TikTok link.",
+      "step2": "Paste link above.",
+      "step3": "Click Download."
+    },
+    "faq": {
+      "q1": "Download all photos?",
+      "a1": "Yes, we save the full carousel.",
+      "q2": "No watermark?",
+      "a2": "Yes, images are clean.",
+      "q3": "Works for video?",
+      "a3": "No, use our Video Downloader."
+    }
+  },
+  "nav_menu": {
+    "slideshow": "Diavoorstelling"
   }
 }

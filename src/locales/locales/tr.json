@@ -268,5 +268,58 @@
       "download": "İndir",
       "downloadPng": "Download PNG"
     }
+  },
+  "slideshow_page": {
+    "meta_title": "TikTok Slayt İndirici - Fotoğraf Kaydet",
+    "meta_desc": "TikTok fotoğraf slaytlarını ve karusellerini filigransız HD indir. Hızlı ve ücretsiz.",
+    "title": "TikTok Slayt İndirici",
+    "desc": "TikTok fotoğraf serilerini indirmek için en iyi araç. Her resmi yüksek kalitede kaydet.",
+    "placeholder": "Slayt bağlantısını yapıştır...",
+    "btn_download": "Resimleri İndir",
+    "about_title": "TikTok Fotoğraf İndirici",
+    "about_content": "Aracımız TikTok fotoğraf karusellerini kaydetmek için tasarlanmıştır. Her resmi orijinal HD kalitesinde filigransız olarak çıkarır.",
+    "features": {
+      "bulk": {
+        "title": "Toplu İndirme",
+        "desc": "Tüm fotoğrafları tek seferde kaydet."
+      },
+      "original": {
+        "title": "Orijinal Kalite",
+        "desc": "Sıkıştırma olmadan tam çözünürlük."
+      },
+      "fast": {
+        "title": "Çok Hızlı",
+        "desc": "Anında işlem."
+      },
+      "format": {
+        "title": "Akıllı Format",
+        "desc": "JPG/PNG olarak kaydeder."
+      },
+      "device": {
+        "title": "Her Cihazda",
+        "desc": "iOS, Android, PC."
+      },
+      "unlimited": {
+        "title": "Sınırsız",
+        "desc": "Ücretsiz ve limitsiz."
+      }
+    },
+    "how_to": {
+      "title": "Slayt Nasıl İndirilir",
+      "step1": "TikTok'u aç, bağlantıyı kopyala.",
+      "step2": "Bağlantıyı yukarı yapıştır.",
+      "step3": "'İndir' butonuna tıkla."
+    },
+    "faq": {
+      "q1": "Tüm fotoğrafları indirebilir miyim?",
+      "a1": "Evet, tüm karuseli indiriyoruz.",
+      "q2": "Filigran var mı?",
+      "a2": "Hayır, resimler temizdir.",
+      "q3": "Video için çalışır mı?",
+      "a3": "Hayır, video indiricimizi kullanın."
+    }
+  },
+  "nav_menu": {
+    "slideshow": "Slayt Gösterisi"
   }
 }

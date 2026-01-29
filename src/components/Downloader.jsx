@@ -176,26 +176,30 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                             {result.title && <p className="result-desc">{result.title.substring(0, 100)}{result.title.length > 100 ? '...' : ''}</p>}
 
                             <div className="result-buttons">
-                                {/* Video Buttons */}
-                                {!result.images && result.video && (
-                                    <button className="btn-download btn-video" onClick={() => downloadFile(result.video, generateViralFileName(result.author || result.authorName, 'mp4'))}>
-                                        <i className="fas fa-download"></i> {t('downloader.download_video') || "Download"} <span className="badge">{t('downloader.hd_quality') || "No Watermark"}</span>
-                                    </button>
+                                {/* Video Buttons - Only show in 'video' mode or default */}
+                                {(!mode || mode === 'video') && !result.images && result.video && (
+                                    <>
+                                        <button className="btn-download btn-video" onClick={() => downloadFile(result.video, generateViralFileName(result.author || result.authorName, 'mp4'))}>
+                                            <i className="fas fa-download"></i> {t('downloader.download_video') || "Download"} <span className="badge">{t('downloader.hd_quality') || "No Watermark"}</span>
+                                        </button>
+                                        <button className="btn-download btn-hd" onClick={() => downloadFile(result.video, generateViralFileName((result.author || result.authorName) + '_HD', 'mp4'))}>
+                                            <i className="fas fa-film"></i> {t('downloader.download_hd') || "Download HD"} <span className="badge badge-hd">1080p</span>
+                                        </button>
+                                    </>
                                 )}
-                                {!result.images && result.video && (
-                                    <button className="btn-download btn-hd" onClick={() => downloadFile(result.video, generateViralFileName((result.author || result.authorName) + '_HD', 'mp4'))}>
-                                        <i className="fas fa-film"></i> {t('downloader.download_hd') || "Download HD"} <span className="badge badge-hd">1080p</span>
-                                    </button>
-                                )}
-                                {result.music && (
+
+                                {/* MP3 Button - Only show in 'mp3' mode */}
+                                {mode === 'mp3' && result.music && (
                                     <button className="btn-download btn-audio" onClick={() => downloadFile(result.music, generateViralFileName(result.author || result.authorName, 'mp3'))}>
                                         <i className="fas fa-music"></i> {t('downloader.download_audio') || "Download MP3"}
                                     </button>
                                 )}
+
+                                {/* Story/Slideshow Logic handled below, but if we want to force 'slideshow' mode to ONLY show images, we keep this empty for slideshows */}
                             </div>
 
-                            {/* Slideshow */}
-                            {result.images && result.images.length > 0 && (
+                            {/* Slideshow / Story Images */}
+                            {(mode === 'story' || mode === 'slideshow' || (!mode && result.images)) && result.images && result.images.length > 0 && (
                                 <div className="slideshow-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '10px', marginTop: '15px' }}>
                                     {result.images.map((img, index) => (
                                         <div className="slide-item" key={index} style={{ position: 'relative' }}>

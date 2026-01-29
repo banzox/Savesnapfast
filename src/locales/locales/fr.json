@@ -268,5 +268,58 @@
       "download": "Télécharger",
       "downloadPng": "Download PNG"
     }
+  },
+  "slideshow_page": {
+    "meta_title": "Télécharger Diaporama TikTok - Sauvegarder Photos",
+    "meta_desc": "Téléchargez des diaporamas et carrousels photos TikTok en HD sans filigrane. Gratuit et rapide.",
+    "title": "Téléchargeur de Diaporama TikTok",
+    "desc": "Le meilleur outil pour sauvegarder les diaporamas photos TikTok. Obtenez chaque image en haute qualité.",
+    "placeholder": "Collez le lien du diaporama...",
+    "btn_download": "Télécharger Images",
+    "about_title": "Téléchargeur de Photos TikTok",
+    "about_content": "Notre outil est conçu pour sauvegarder les carrousels photos TikTok. Il extrait chaque image en qualité HD originale sans filigrane.",
+    "features": {
+      "bulk": {
+        "title": "Téléchargement Groupé",
+        "desc": "Sauvegardez toutes les photos d'un coup."
+      },
+      "original": {
+        "title": "Qualité Originale",
+        "desc": "Résolution complète sans compression."
+      },
+      "fast": {
+        "title": "Ultra Rapide",
+        "desc": "Traitement instantané."
+      },
+      "format": {
+        "title": "Formats Intelligents",
+        "desc": "JPG/PNG compatibles."
+      },
+      "device": {
+        "title": "Multiplateforme",
+        "desc": "Compatible iOS, Android, PC."
+      },
+      "unlimited": {
+        "title": "Illimité",
+        "desc": "Téléchargements gratuits illimités."
+      }
+    },
+    "how_to": {
+      "title": "Comment Télécharger des Diaporamas",
+      "step1": "Ouvrez TikTok, trouvez le diaporama et copiez le lien.",
+      "step2": "Collez le lien ci-dessus.",
+      "step3": "Cliquez sur 'Télécharger Images'."
+    },
+    "faq": {
+      "q1": "Puis-je tout télécharger d'un coup ?",
+      "a1": "Oui, nous téléchargeons toutes les images du carrousel.",
+      "q2": "Y a-t-il un filigrane ?",
+      "a2": "Non, les images sont propres et originales.",
+      "q3": "Cela marche-t-il pour les vidéos ?",
+      "a3": "Non, utilisez notre téléchargeur vidéo pour cela."
+    }
+  },
+  "nav_menu": {
+    "slideshow": "Diaporama"
   }
 }

@@ -268,5 +268,58 @@
       "download": "Herunterladen",
       "downloadPng": "Download PNG"
     }
+  },
+  "slideshow_page": {
+    "meta_title": "TikTok Slideshow Downloader - Fotos Speichern",
+    "meta_desc": "Lade TikTok Foto-Karussells in HD ohne Wasserzeichen herunter. Kostenlos und schnell.",
+    "title": "TikTok Slideshow Downloader",
+    "desc": "Das beste Tool zum Speichern von TikTok-Fotoserien. Jedes Bild in Originalqualität.",
+    "placeholder": "Slideshow-Link hier einfügen...",
+    "btn_download": "Bilder Herunterladen",
+    "about_title": "TikTok Foto-Downloader",
+    "about_content": "Unser Tool speichert TikTok-Foto-Karussells in bester Qualität. Jedes Bild wird einzeln und ohne Wasserzeichen extrahiert.",
+    "features": {
+      "bulk": {
+        "title": "Massen-Download",
+        "desc": "Alle Fotos auf einmal speichern."
+      },
+      "original": {
+        "title": "Originalqualität",
+        "desc": "Volle Auflösung."
+      },
+      "fast": {
+        "title": "Blitzschnell",
+        "desc": "Sofortige Verarbeitung."
+      },
+      "format": {
+        "title": "Smarte Formate",
+        "desc": "JPG/PNG Format."
+      },
+      "device": {
+        "title": "Alle Geräte",
+        "desc": "iOS, Android, Windows."
+      },
+      "unlimited": {
+        "title": "Unbegrenzt",
+        "desc": "Kostenlos und ohne Limits."
+      }
+    },
+    "how_to": {
+      "title": "So laden Sie Slideshows herunter",
+      "step1": "TikTok öffnen, Link kopieren.",
+      "step2": "Link oben einfügen.",
+      "step3": "Auf 'Herunterladen' klicken."
+    },
+    "faq": {
+      "q1": "Kann ich alle Fotos laden?",
+      "a1": "Ja, wir laden das komplette Karussell.",
+      "q2": "Gibt es Wasserzeichen?",
+      "a2": "Nein, die Bilder sind sauber.",
+      "q3": "Geht das für Videos?",
+      "a3": "Nein, nutzen Sie dafür unseren Video-Downloader."
+    }
+  },
+  "nav_menu": {
+    "slideshow": "Diashow"
   }
 }

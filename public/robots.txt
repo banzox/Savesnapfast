@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Sitemap
 Sitemap: https://savetik-fast.xyz/sitemap-index.xml
-Sitemap: https://savetik-fast.xyz/sitemap-0.xml

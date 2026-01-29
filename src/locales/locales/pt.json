@@ -268,5 +268,58 @@
       "download": "Baixar",
       "downloadPng": "Download PNG"
     }
+  },
+  "slideshow_page": {
+    "meta_title": "Baixar Slideshow TikTok - Salvar Fotos e Carrosséis",
+    "meta_desc": "Baixe carrosséis de fotos TikTok em HD sem marca d'água. Salve todas as imagens com qualidade original.",
+    "title": "Baixar Slideshow do TikTok",
+    "desc": "A melhor ferramenta para salvar apresentações de fotos do TikTok. Baixe cada imagem em alta qualidade.",
+    "placeholder": "Cole o link do Slideshow...",
+    "btn_download": "Baixar Imagens",
+    "about_title": "Baixador de Fotos TikTok",
+    "about_content": "Ferramenta especializada para salvar carrosséis de fotos TikTok. Extrai cada imagem em qualidade HD sem marca d'água.",
+    "features": {
+      "bulk": {
+        "title": "Download em Massa",
+        "desc": "Salve todas as fotos de uma vez."
+      },
+      "original": {
+        "title": "Qualidade Original",
+        "desc": "Resolução total sem compressão."
+      },
+      "fast": {
+        "title": "Super Rápido",
+        "desc": "Processamento instantâneo."
+      },
+      "format": {
+        "title": "Formatos Compatíveis",
+        "desc": "Salvo em JPG/PNG."
+      },
+      "device": {
+        "title": "Multi-dispositivo",
+        "desc": "Funciona em iOS, Android, PC."
+      },
+      "unlimited": {
+        "title": "Ilimitado",
+        "desc": "Downloads gratuitos sem limites."
+      }
+    },
+    "how_to": {
+      "title": "Como Baixar Slideshows",
+      "step1": "Abra o TikTok, copie o link do slideshow.",
+      "step2": "Cole o link na caixa acima.",
+      "step3": "Clique em 'Baixar Imagens'."
+    },
+    "faq": {
+      "q1": "Posso baixar todas as fotos?",
+      "a1": "Sim, baixamos todas as imagens do carrossel.",
+      "q2": "Tem marca d'água?",
+      "a2": "Não, as imagens são limpas.",
+      "q3": "Funciona para vídeos?",
+      "a3": "Não, use nosso baixador de vídeos."
+    }
+  },
+  "nav_menu": {
+    "slideshow": "Slideshow"
   }
 }

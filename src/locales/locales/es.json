@@ -268,5 +268,58 @@
       "download": "Descargar",
       "downloadPng": "Download PNG"
     }
+  },
+  "slideshow_page": {
+    "meta_title": "Descargar Slideshow de TikTok - Guardar Fotos y Carruseles",
+    "meta_desc": "Descarga carruseles de fotos de TikTok en HD. Guarda todas las imágenes de TikTok sin marca de agua. Gratis y rápido.",
+    "title": "Descargador de Slideshow TikTok",
+    "desc": "La mejor herramienta para descargar presentaciones de fotos de TikTok. Guarda cada imagen en alta calidad con un clic.",
+    "placeholder": "Pega el enlace del Slideshow...",
+    "btn_download": "Descargar Imágenes",
+    "about_title": "Descargador Definitivo de Fotos TikTok",
+    "about_content": "Nuestra herramienta está diseñada específicamente para guardar carruseles de fotos de TikTok. Extrae cada imagen en su calidad original HD sin marcas de agua.",
+    "features": {
+      "bulk": {
+        "title": "Descarga Masiva",
+        "desc": "Guarda todas las fotos a la vez."
+      },
+      "original": {
+        "title": "Calidad Original",
+        "desc": "Fotos en resolución completa sin compresión."
+      },
+      "fast": {
+        "title": "Ultracero",
+        "desc": "Procesamiento instantáneo."
+      },
+      "format": {
+        "title": "Formatos Inteligentes",
+        "desc": "Guardado en JPG/PNG compatible."
+      },
+      "device": {
+        "title": "Multiplataforma",
+        "desc": "Funciona en iOS, Android, PC."
+      },
+      "unlimited": {
+        "title": "Sin Límites",
+        "desc": "Descargas ilimitadas gratis."
+      }
+    },
+    "how_to": {
+      "title": "Cómo Descargar Slideshows",
+      "step1": "Abre TikTok y busca el slideshow. Copia el enlace.",
+      "step2": "Pega el enlace en la caja de arriba.",
+      "step3": "Haz clic en 'Descargar Imágenes'."
+    },
+    "faq": {
+      "q1": "¿Puedo descargar todas las fotos a la vez?",
+      "a1": "Sí, descargamos todas las imágenes del carrusel juntas.",
+      "q2": "¿Tienen marca de agua?",
+      "a2": "No, las imágenes son 100% limpias y originales.",
+      "q3": "¿Funciona con videos?",
+      "a3": "No, esta herramienta es para fotos. Usa el descargador de video para videos."
+    }
+  },
+  "nav_menu": {
+    "slideshow": "Slideshow"
   }
 }

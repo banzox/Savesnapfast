@@ -81,7 +81,8 @@
   "nav_menu": {
     "video": "Video",
     "mp3": "MP3 Audio",
-    "stories": "Stories"
+    "stories": "Stories",
+    "slideshow": "Slideshow"
   },
   "mp3_page": {
     "meta_title": "TikTok to MP3 Converter - Download Audio High Quality 320kbps",
@@ -210,6 +211,56 @@
       "a9": "If downloading fails, please check: 1) The link is correct and complete, 2) The story hasn't expired yet, 3) The account is public (not private). Try refreshing the page or using a different browser.",
       "q10": "What's the difference between Story and Slideshow?",
       "a10": "TikTok Stories are temporary posts that disappear after 24 hours. Slideshows (Photo Carousels) are permanent posts with multiple images. SaveTikFast can download both types."
+    }
+  },
+  "slideshow_page": {
+    "meta_title": "TikTok Slideshow Downloader - Save Photo Carousels & Images",
+    "meta_desc": "Download TikTok Slideshows and Photo Carousels in HD. Save all images from TikTok posts instantly. Free, fast, and no watermark.",
+    "title": "TikTok Slideshow Downloader",
+    "desc": "The best tool to download TikTok photo slideshows and carousels. Save every image in high quality with just one click.",
+    "placeholder": "Paste TikTok Slideshow link...",
+    "btn_download": "Download Slideshow",
+    "about_title": "Ultimate TikTok Slideshow & Carousel Downloader",
+    "about_content": "Our TikTok Slideshow Downloader is designed specifically for saving photo carousels from TikTok. Whether it's a collection of memes, a tutorial series, or a photo dump, our tool extracts every single image in its original high definition quality. Unlike other tools that might only grab the first image or convert the slideshow into a video, SaveTikFast ensures you get the individual image files, ready for reposting or archiving. Experience the fastest and most reliable way to keep your favorite TikTok photo moments forever.",
+    "features": {
+      "bulk": {
+        "title": "Download All Images",
+        "desc": "Grab every photo in the slideshow at once. No need to download them one by one."
+      },
+      "original": {
+        "title": "Original Quality",
+        "desc": "Get the photos in their exact upload resolution without any compression or watermarks."
+      },
+      "fast": {
+        "title": "Lightning Fast",
+        "desc": "Our optimized engine processes slideshows instantly, saving you time."
+      },
+      "format": {
+        "title": "Smart Formats",
+        "desc": "Photos are saved in universally compatible layouts like JPG or PNG for easy sharing."
+      },
+      "device": {
+        "title": "Cross-Platform",
+        "desc": "Works seamlessly on iOS, Android, Windows, and MacOS devices."
+      },
+      "unlimited": {
+        "title": "Unlimited Saves",
+        "desc": "There is no limit to the number of slideshows you can download per day."
+      }
+    },
+    "how_to": {
+      "title": "How to Download TikTok Photo Slideshows",
+      "step1": "Open TikTok and find the slideshow you love. Tap Share > Copy Link.",
+      "step2": "Paste the link into the box above on this page.",
+      "step3": "Click 'Download Slideshow' to save all images to your device."
+    },
+    "faq": {
+      "q1": "Can I download all photos from a TikTok slideshow at once?",
+      "a1": "Yes, our tool detects multiple images in a slideshow and provides a distinct download option for each or all of them together.",
+      "q2": "Are the images downloaded without watermarks?",
+      "a2": "Absolutely. We extract the original image files directly from TikTok's servers, ensuring they are clean and watermark-free.",
+      "q3": "Does this work for video carousels too?",
+      "a3": "Currently, this tool is optimized for photo slideshows. For video posts, please use our main Video Downloader."
     }
   },
   "features": {
