@@ -3,25 +3,37 @@
     --secondary: #00f2ea;
     --accent: #7000ff;
     --bg-dark: #05040a;
-    /* RESTORED VIBRANT GRADIENT */
-    --bg-gradient: radial-gradient(circle at top center, #1a0b2e 0%, #05040a 80%);
+    /* CRITICAL RESTORE: Vibrant Purple/Pink Gradient */
+    --bg-gradient: linear-gradient(135deg, #1a0b2e 0%, #0c081e 50%, #05040a 100%);
     --glass: rgba(255, 255, 255, 0.05);
     --glass-bright: rgba(255, 255, 255, 0.1);
     --border: rgba(255, 255, 255, 0.15);
     --border-bright: rgba(255, 255, 255, 0.3);
     --text-main: #ffffff !important;
-    /* Force White */
-    --text-dim: rgba(255, 255, 255, 0.7);
+    /* CRITICAL: Force White Text */
+    --text-dim: rgba(255, 255, 255, 0.8);
     --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.6);
     --shadow-glow: 0 0 30px rgba(255, 0, 80, 0.3);
     --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Force White Logo in Dark Mode */
+/* CRITICAL FIX: Make Logo White in Dark Mode */
 body:not(.light-mode) .logo img,
-body:not(.light-mode) .logo svg {
-    filter: brightness(0) invert(1);
-    fill: #ffffff;
+body:not(.light-mode) .logo svg,
+body:not(.light-mode) a.logo {
+    filter: brightness(0) invert(1) !important;
+    color: #fff !important;
+}
+
+/* CRITICAL FIX: Language Dropdown Visibility */
+.dropdown-options {
+    background: #1a1a2e !important;
+    /* Solid Dark Background */
+    border: 1px solid var(--border-bright) !important;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
 }
 
 [data-theme='light'] {
