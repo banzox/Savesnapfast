@@ -13,6 +13,36 @@ const currentLangName =
             <i class="fab fa-tiktok"></i> SaveTikFast
         </a>
 
+        <nav class="nav-menu" aria-label="Download Types">
+            <a
+                href={`/${lang === "en" ? "" : lang}`}
+                class={!Astro.url.pathname.includes("mp3") &&
+                !Astro.url.pathname.includes("story")
+                    ? "active"
+                    : ""}
+                title={t("hero.title")}
+            >
+                <i class="fas fa-video"></i>
+                <span>{t("nav_menu.video")}</span>
+            </a>
+            <a
+                href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
+                class={Astro.url.pathname.includes("mp3") ? "active" : ""}
+                title={t("mp3_page.meta_title")}
+            >
+                <i class="fas fa-music"></i>
+                <span>{t("nav_menu.mp3")}</span>
+            </a>
+            <a
+                href={`/${lang === "en" ? "story" : lang + "/story"}`}
+                class={Astro.url.pathname.includes("story") ? "active" : ""}
+                title={t("story_page.meta_title")}
+            >
+                <i class="fas fa-images"></i>
+                <span>{t("nav_menu.stories")}</span>
+            </a>
+        </nav>
+
         <!-- Language Selector (Simple Dropdown or Link) -->
         <div class="lang-select" tabindex="0">
             <div class="lang-selector">
@@ -46,36 +76,6 @@ const currentLangName =
                 </div>
             </div>
         </div>
-    </nav>
-
-    <nav class="nav-menu" aria-label="Download Types">
-        <a
-            href={`/${lang === "en" ? "" : lang}`}
-            class={!Astro.url.pathname.includes("mp3") &&
-            !Astro.url.pathname.includes("story")
-                ? "active"
-                : ""}
-            title={t("hero.title")}
-        >
-            <i class="fas fa-video"></i>
-            <span>{t("nav_menu.video")}</span>
-        </a>
-        <a
-            href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
-            class={Astro.url.pathname.includes("mp3") ? "active" : ""}
-            title={t("mp3_page.meta_title")}
-        >
-            <i class="fas fa-music"></i>
-            <span>{t("nav_menu.mp3")}</span>
-        </a>
-        <a
-            href={`/${lang === "en" ? "story" : lang + "/story"}`}
-            class={Astro.url.pathname.includes("story") ? "active" : ""}
-            title={t("story_page.meta_title")}
-        >
-            <i class="fas fa-images"></i>
-            <span>{t("nav_menu.stories")}</span>
-        </a>
     </nav>
 
     <script>

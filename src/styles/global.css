@@ -35,19 +35,10 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    /* Increased gap */
-    padding: 15px 20px;
+    padding: 0;
+    margin: 0;
     background: transparent;
-    /* Removed rectangle */
-    backdrop-filter: none;
-    /* Removed blur */
-    border-bottom: none;
-    /* Removed border */
-    position: sticky;
-    top: 76px;
-    z-index: 999;
-    pointer-events: none;
-    /* Let clicks pass through empty space */
+    pointer-events: auto;
 }
 
 .nav-menu a {
@@ -1049,6 +1040,20 @@ body.light-mode .nav-link:hover {
     .hero-section {
         padding-top: 140px;
         padding-inline: 20px;
+    }
+
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+        padding: 8px 15px;
+        font-size: 13px;
     }
 
     .hero-section h1 {
