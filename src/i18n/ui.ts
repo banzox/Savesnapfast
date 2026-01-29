@@ -103,7 +103,7 @@ import zh from '../locales/locales/zh.json';
 import zu from '../locales/locales/zu.json';
 
 export const languages = {
-  "en": "🇺🇸 English",
+  "en": "English",
   "ar": "🇸🇦 العربية",
   "es": "🇪🇸 Español",
   "pt": "🇵🇹 Português",
