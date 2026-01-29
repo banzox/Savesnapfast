@@ -10,54 +10,52 @@
     --accent: #7000ff;
 
     /* --- Dark Mode (DEFAULT) --- */
-    --bg-main: #05040a;
-    --bg-gradient: linear-gradient(135deg, #130420 0%, #090214 50%, #000000 100%);
+    --bg-main: #0a0a0a;
+    /* Deep Black/Gray */
+    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    /* Rich Night Sky */
 
     --text-main: #ffffff;
     --text-dim: rgba(255, 255, 255, 0.7);
     --text-invert: #000000;
 
-    --glass: rgba(255, 255, 255, 0.03);
-    --glass-bright: rgba(255, 255, 255, 0.08);
-    /* Used for hovers */
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-bright: rgba(255, 255, 255, 0.1);
+
     --border: rgba(255, 255, 255, 0.1);
-    --border-bright: rgba(255, 255, 255, 0.25);
+    --border-bright: rgba(255, 255, 255, 0.2);
 
     --bg-dropdown: #1a1a2e;
-    /* Dark Gray Solid */
 
     --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.7);
     --shadow-glow: 0 0 40px rgba(255, 0, 80, 0.2);
 
     --radius-main: 24px;
-    /* Standardize Shapes */
-
     --transition: 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* --- Light Mode Overrides --- */
-/* --- Light Mode Overrides --- */
 [data-theme='light'] {
-    --bg-main: #f8f9fa;
-    --bg-gradient: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+    --bg-main: #ffffff;
+    --bg-gradient: linear-gradient(180deg, #f0f2f5 0%, #ffffff 100%);
 
-    --text-main: #1f2937;
-    /* Dark Charcoal */
+    --text-main: #111827;
+    /* Deep Charcoal */
     --text-dim: #4b5563;
+    /* Cool Gray */
     --text-invert: #ffffff;
 
-    /* Cards become solid white for better contrast against off-white bg */
-    --glass: #ffffff;
+    --glass: rgba(255, 255, 255, 0.8);
     --glass-bright: #ffffff;
 
-    --border: rgba(31, 41, 55, 0.1);
-    --border-bright: rgba(31, 41, 55, 0.15);
+    --border: rgba(0, 0, 0, 0.08);
+    /* Subtle border for light mode */
+    --border-bright: rgba(0, 0, 0, 0.15);
 
     --bg-dropdown: #ffffff;
-    /* Solid White */
 
-    --shadow-premium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-glow: 0 0 15px rgba(0, 0, 0, 0.05);
+    --shadow-premium: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 20px rgba(255, 0, 80, 0.15);
 }
 
 /* --- Universal Resets --- */
@@ -442,8 +440,8 @@ body::after {
         left: 0;
         width: 100%;
         height: 0;
-        background: rgba(10, 5, 20, 0.98);
-        /* Premium Dark Glass */
+        height: 0;
+        background: var(--bg-dropdown);
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
         /* User Requested Solid/Dark Color */
@@ -483,8 +481,8 @@ body::after {
         justify-content: center;
         padding: 15px;
         font-size: 1.1rem;
-        color: #fff !important;
-        /* Force White Text */
+        /* Force White Text on Mobile if dark, or text-main if light */
+        color: var(--text-main) !important;
     }
 
     /* --- Mobile Settings Area (Theme + Lang) --- */
@@ -552,7 +550,7 @@ body::after {
         max-width: 100%;
         max-height: 60vh;
         border-radius: 25px 25px 0 0;
-        background: rgba(15, 12, 41, 0.98);
+        background: var(--bg-dropdown);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid var(--border-bright);
@@ -849,7 +847,7 @@ body::after {
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--glass);
     backdrop-filter: blur(10px);
     padding: 80px 20px 40px;
     margin-top: 100px;
@@ -942,7 +940,7 @@ footer {
 .input-wrapper {
     flex: 1;
     display: flex;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--glass-bright);
     border-radius: 20px;
     padding: 8px 20px;
     border: 1px solid var(--border);
@@ -1277,8 +1275,8 @@ footer {
 }
 
 .feature-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--glass);
+    border: 1px solid var(--border);
     padding: 30px;
     border-radius: 20px;
     text-align: center;
@@ -1287,8 +1285,9 @@ footer {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    background: var(--glass-bright);
+    border-color: var(--border-bright);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -1399,7 +1398,7 @@ footer {
 }
 
 .shadow-box {
-    background: rgba(15, 12, 41, 0.6);
+    background: var(--glass);
     border: 1px solid var(--border);
     border-radius: 20px;
     box-shadow: var(--shadow-card);

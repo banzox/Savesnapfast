@@ -101,77 +101,65 @@ const currentLangName =
     </nav>
 
     <script>
+        // Helper to safely add click listeners
+        const addSafeClickListener = (id, callback) => {
+            const el = document.getElementById(id);
+            if (el) {
+                const newEl = el.cloneNode(true);
+                el.parentNode.replaceChild(newEl, el);
+                newEl.addEventListener("click", callback);
+                return newEl;
+            }
+            return null;
+        };
+
         const initMenu = () => {
             const hamburger = document.getElementById("hamburger");
             const navLinks = document.getElementById("nav-links");
 
             if (hamburger && navLinks) {
-                // Remove old listeners to prevent duplicates if any
+                // Reset Hamburger
                 const newHamburger = hamburger.cloneNode(true);
                 hamburger.parentNode.replaceChild(newHamburger, hamburger);
 
+                // Toggle Logic
                 newHamburger.addEventListener("click", (e) => {
-                    e.stopPropagation(); // Stop bubbling
-                    newHamburger.classList.toggle("active");
-                    navLinks.classList.toggle("active");
+                    e.stopPropagation();
+                    const isActive = navLinks.classList.contains("active");
+
+                    if (isActive) {
+                        navLinks.classList.remove("active");
+                        newHamburger.classList.remove("active");
+                        document.body.style.overflow = ""; // Restore scroll
+                    } else {
+                        navLinks.classList.add("active");
+                        newHamburger.classList.add("active");
+                        document.body.style.overflow = "hidden"; // Prevent background scroll
+                    }
                 });
 
-                // Close menu when clicking outside
-                const closeMenu = (e) => {
+                // Close when clicking links
+                navLinks.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        navLinks.classList.remove("active");
+                        newHamburger.classList.remove("active");
+                        document.body.style.overflow = "";
+                    });
+                });
+
+                // Close when clicking outside
+                document.addEventListener("click", (e) => {
                     // @ts-ignore
                     if (
+                        navLinks.classList.contains("active") &&
                         !navLinks.contains(e.target) &&
                         !newHamburger.contains(e.target)
                     ) {
-                        newHamburger.classList.remove("active");
                         navLinks.classList.remove("active");
-                    }
-                };
-                document.addEventListener("click", closeMenu);
-
-                // Close when clicking a link
-                navLinks.querySelectorAll("a").forEach((link) => {
-                    link.addEventListener("click", () => {
                         newHamburger.classList.remove("active");
-                        navLinks.classList.remove("active");
-                    });
-                });
-            }
-        };
-
-        const initTheme = () => {
-            const themeBtn = document.getElementById("theme-btn");
-            if (themeBtn) {
-                // Clone to clear listeners
-                const newThemeBtn = themeBtn.cloneNode(true);
-                themeBtn.parentNode.replaceChild(newThemeBtn, themeBtn);
-
-                newThemeBtn.addEventListener("click", () => {
-                    // @ts-ignore
-                    if (typeof window.handleToggleClick === "function") {
-                        // @ts-ignore
-                        window.handleToggleClick();
-                        // Update icon
-                        const icon = newThemeBtn.querySelector("i");
-                        if (icon) {
-                            const isDark =
-                                !document.documentElement.hasAttribute(
-                                    "data-theme",
-                                );
-                            icon.className = isDark
-                                ? "fas fa-moon"
-                                : "fas fa-sun";
-                        }
+                        document.body.style.overflow = "";
                     }
                 });
-
-                // Init Icon
-                const icon = newThemeBtn.querySelector("i");
-                if (icon) {
-                    const isDark =
-                        !document.documentElement.hasAttribute("data-theme");
-                    icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
-                }
             }
         };
 
@@ -202,24 +190,54 @@ const currentLangName =
             }
         };
 
-        // Run on initial load
-        initMenu();
-        initTheme();
-        initLang();
+        const initTheme = () => {
+            const themeBtn = document.getElementById("theme-btn");
+            if (themeBtn) {
+                const newThemeBtn = themeBtn.cloneNode(true);
+                themeBtn.parentNode.replaceChild(newThemeBtn, themeBtn);
 
-        // Run on Astro Page Swap
-        document.addEventListener("astro:after-swap", () => {
-            initMenu();
-            initTheme();
-            initLang();
-        });
+                // Set initial icon state based on current theme
+                const icon = newThemeBtn.querySelector("i");
+                if (icon) {
+                    const isDark =
+                        !document.documentElement.hasAttribute("data-theme");
+                    icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+                }
 
-        // Also listen to page-load if using new ViewTransitions API
-        document.addEventListener("astro:page-load", () => {
+                newThemeBtn.addEventListener("click", () => {
+                    // @ts-ignore
+                    if (typeof window.handleToggleClick === "function") {
+                        // @ts-ignore
+                        window.handleToggleClick();
+
+                        // Update icon immediately after toggle
+                        const icon = newThemeBtn.querySelector("i");
+                        if (icon) {
+                            const isDark =
+                                !document.documentElement.hasAttribute(
+                                    "data-theme",
+                                );
+                            icon.className = isDark
+                                ? "fas fa-moon"
+                                : "fas fa-sun";
+                        }
+                    }
+                });
+            }
+        };
+
+        const initAll = () => {
             initMenu();
-            initTheme();
             initLang();
-        });
+            initTheme();
+        };
+
+        // Run immediately
+        initAll();
+
+        // Run on Astro View Transitions
+        document.addEventListener("astro:after-swap", initAll);
+        document.addEventListener("astro:page-load", initAll);
     </script>
 
     <style>
