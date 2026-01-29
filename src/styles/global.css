@@ -104,19 +104,41 @@ body {
 }
 
 /* --- Glassmorphism Language Dropdown --- */
+/* --- Language Selector Wrapper --- */
+.lang-selector {
+    position: relative;
+    /* Anchor for absolute dropdown */
+    z-index: 2001;
+}
+
+/* --- Glassmorphism Language Dropdown --- */
 .dropdown-options {
-    background: rgba(15, 12, 41, 0.85) !important;
+    position: absolute;
+    /* Float on Desktop */
+    top: 120%;
+    /* Below button with gap */
+    right: 0;
+    min-width: 200px;
+    background: rgba(15, 12, 41, 0.95) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
     padding: 15px !important;
     border-radius: 16px !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
-    z-index: 2000;
+    z-index: 2002;
     max-height: 50vh;
     /* Fix Desktop Overflow */
     overflow-y: auto;
     /* Enable Scroll */
+    display: none;
+    /* Hidden by default */
+}
+
+/* Show state */
+.dropdown-options.show {
+    display: block;
+    animation: fadeUp 0.3s ease;
 }
 
 [data-theme='light'] .dropdown-options {
@@ -136,7 +158,10 @@ body {
     transition: 0.2s;
 }
 
-transform: translateX(5px);
+.dropdown-options a:hover {
+    background: var(--glass-bright) !important;
+    color: var(--primary) !important;
+    transform: translateX(5px);
 }
 
 /* Custom Scrollbar for Dropdown */
@@ -663,8 +688,10 @@ body::after {
 }
 
 .btn-video {
-    background: linear-gradient(135deg, var(--secondary) 0%, #00d2ca 100%);
-    color: #000;
+    background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+    border: none;
 }
 
 .btn-hd {
