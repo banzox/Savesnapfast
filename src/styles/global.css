@@ -374,6 +374,7 @@ body::after {
     z-index: 1000;
     border-bottom: 1px solid var(--border);
     height: 70px;
+    gap: 15px;
 }
 
 .nav-container::before {
@@ -393,6 +394,108 @@ body::after {
     gap: 20px;
     flex-grow: 1;
     justify-content: flex-end;
+    /* Push to right */
+}
+
+/* Language & Hamburger Grouping */
+.lang-select {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    z-index: 2002;
+    /* Higher than links */
+}
+
+/* --- Redesigned Vertical Strip Dropdown --- */
+.lang-selector {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle,
+.dropdown-trigger {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.theme-toggle:hover,
+.dropdown-trigger:hover {
+    background: var(--glass-bright);
+    border-color: var(--primary);
+}
+
+.dropdown-trigger i {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Vertical Strip Design */
+.dropdown-options {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    width: 200px;
+    /* Fixed width */
+    max-height: 400px;
+    /* Vertical Strip Limit */
+    overflow-y: auto;
+    /* Scrollable */
+    background: var(--bg-dropdown) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--shadow-premium) !important;
+    padding: 10px !important;
+    display: flex;
+    flex-direction: column;
+    /* Vertical Stack */
+    gap: 5px;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dropdown-options.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: flex !important;
+    /* Override CSS display:none if set anywhere */
+}
+
+/* Flag & Text Item */
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px !important;
+    border-radius: 10px;
+    color: var(--text-main) !important;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.2s;
+    background: transparent;
+}
+
+.option-item:hover {
+    background: var(--glass-bright) !important;
+    color: var(--primary) !important;
+    transform: translateX(5px);
 }
 
 .nav-menu {
@@ -471,8 +574,11 @@ body::after {
         padding-bottom: 50px;
         border-bottom: 1px solid var(--border);
         overflow-y: auto;
-        /* Allow scrolling if needed */
     }
+
+    /* Hide Lang Select inside Mobile Drawer (Since we moved it out) */
+    /* But wait, we moved it out of .nav-links in HTML, so it won't be in the drawer anymore. */
+    /* It is now next to the logo/hamburger on the main bar. */
 
     .nav-menu {
         flex-direction: column;
@@ -480,7 +586,6 @@ body::after {
         gap: 15px;
         padding-bottom: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        /* Separator Line */
     }
 
     .nav-menu a {
@@ -488,48 +593,57 @@ body::after {
         justify-content: center;
         padding: 15px;
         font-size: 1.1rem;
-        /* Force White Text on Mobile if dark, or text-main if light */
         color: var(--text-main) !important;
     }
 
-    /* --- Mobile Settings Area (Theme + Lang) --- */
+    /* Adjust Lang Select for Mobile Header */
     .lang-select {
-        width: 85%;
-        background: transparent !important;
-        border: none !important;
-        padding: 0 !important;
-        box-shadow: none !important;
+        margin-left: auto;
+        /* Push to right, near hamburger */
+        margin-right: 10px;
+        width: auto;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
     }
 
     .lang-selector {
-        display: flex;
-        flex-direction: column;
-        /* Stack vertically */
-        gap: 15px;
-        width: 100%;
-        align-items: center;
+        gap: 8px;
     }
 
-    /* Theme Toggle Row */
-    .theme-toggle {
-        width: 100%;
-        padding: 12px;
-        border-radius: 12px;
-        background: var(--glass-bright);
-        border: 1px solid var(--border);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .dropdown-trigger span {
+        display: none;
+        /* Hide text on mobile, only flag/icon if possible or keep minimal */
     }
 
-    /* Language Button Row */
+    /* If user wants text visible on mobile, remove display:none above. User asked for "Vertical strip... next to side button" */
+
     .dropdown-trigger {
-        width: 100%;
-        justify-content: center;
-        padding: 12px;
-        background: var(--glass-bright);
-        color: var(--text-main) !important;
+        padding: 8px;
+        /* Compact */
     }
+
+    .theme-toggle {
+        padding: 8px;
+    }
+
+    /* Mobile Dropdown Positioning */
+    .dropdown-options {
+        right: -50px;
+        /* Offset to not go off-screen if too far right */
+        top: 60px;
+        width: 220px;
+        max-height: 50vh;
+    }
+
+    /* Burger correction */
+    .hamburger {
+        display: block;
+        margin-left: 0;
+    }
+
+
 
     /* Hamburger Animation */
     .hamburger.active span:nth-child(1) {
@@ -547,47 +661,29 @@ body::after {
 
 
 /* --- Mobile Language as Bottom Sheet --- */
+/* Mobile Language as Bottom Sheet - REMOVE OLD STYLE */
+/* We will keep the dropdown style consistent (vertical strip) as requested "Vertical Strip" instead of bottom sheet */
 @media (max-width: 768px) {
     .dropdown-options {
-        position: fixed;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        max-width: 100%;
-        max-height: 60vh;
-        border-radius: 25px 25px 0 0;
-        background: var(--bg-dropdown);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid var(--border-bright);
-        border-bottom: none;
-        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5), 0 0 0 1000px rgba(0, 0, 0, 0.6);
-        /* Backdrop hack */
-        transform: translateY(100%);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        z-index: 3000 !important;
-        padding: 20px;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        position: absolute;
+        /* Keep it attached to the button, not fixed bottom */
+        bottom: auto;
+        left: auto;
+        border-radius: 16px;
+        transform: translateY(-10px);
+        grid-template-columns: 1fr;
+        /* Single column vertical */
+        width: 220px;
+        box-shadow: var(--shadow-premium);
     }
 
     .dropdown-options.show {
-        display: grid !important;
         transform: translateY(0);
-        animation: none;
+        display: flex !important;
     }
 
     .dropdown-options::before {
-        content: '';
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 5px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
+        display: none;
     }
 }
 

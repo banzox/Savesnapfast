@@ -63,38 +63,38 @@ const currentLangName =
                     <span>{t("nav_menu.slideshow")}</span>
                 </a>
             </nav>
+        </div>
 
-            <!-- Language Selector (Simple Dropdown or Link) -->
-            <div class="lang-select" tabindex="0">
-                <div class="lang-selector">
-                    <button
-                        class="theme-toggle"
-                        id="theme-btn"
-                        aria-label="Toggle Theme"
+        <!-- Language Selector (Moved to Header Top Level) -->
+        <div class="lang-select" tabindex="0">
+            <div class="lang-selector">
+                <button
+                    class="theme-toggle"
+                    id="theme-btn"
+                    aria-label="Toggle Theme"
+                >
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="dropdown-trigger" id="lang-btn">
+                    <span
+                        >{
+                            languages[lang as keyof typeof languages] ||
+                                languages["en"]
+                        }</span
                     >
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <div class="dropdown-trigger" id="lang-btn">
-                        <span
-                            >{
-                                languages[lang as keyof typeof languages] ||
-                                    languages["en"]
-                            }</span
-                        >
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="dropdown-options" id="lang-options">
-                        {
-                            Object.entries(languages).map(([code, name]) => (
-                                <a
-                                    href={code === "en" ? "/" : `/${code}`}
-                                    class="option-item"
-                                >
-                                    {name}
-                                </a>
-                            ))
-                        }
-                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-options" id="lang-options">
+                    {
+                        Object.entries(languages).map(([code, name]) => (
+                            <a
+                                href={code === "en" ? "/" : `/${code}`}
+                                class="option-item"
+                            >
+                                {name}
+                            </a>
+                        ))
+                    }
                 </div>
             </div>
         </div>
