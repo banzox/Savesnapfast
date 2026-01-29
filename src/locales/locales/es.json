@@ -311,12 +311,26 @@
       "step3": "Haz clic en 'Descargar Imágenes'."
     },
     "faq": {
-      "q1": "¿Puedo descargar todas las fotos a la vez?",
-      "a1": "Sí, descargamos todas las imágenes del carrusel juntas.",
-      "q2": "¿Tienen marca de agua?",
-      "a2": "No, las imágenes son 100% limpias y originales.",
-      "q3": "¿Funciona con videos?",
-      "a3": "No, esta herramienta es para fotos. Usa el descargador de video para videos."
+      "q1": "¿Puedo descargar todas las fotos de un slideshow de TikTok a la vez?",
+      "a1": "Sí, nuestra herramienta detecta automáticamente todas las imágenes y te permite descargarlas como conjunto o elegir fotos individuales.",
+      "q2": "¿Las imágenes descargadas son de alta calidad?",
+      "a2": "¡Absolutamente! Guardamos las imágenes en su resolución HD original (1080p o superior) tal como se subieron a TikTok.",
+      "q3": "¿Las imágenes tienen marcas de agua?",
+      "a3": "No, SaveTikFast elimina todas las marcas de agua y logos, dándote imágenes limpias y listas para usar.",
+      "q4": "¿Esta herramienta es gratuita?",
+      "a4": "Sí, nuestro descargador de slideshows es 100% gratuito sin costos ocultos ni suscripciones.",
+      "q5": "¿Funciona en teléfonos móviles?",
+      "a5": "Sí, funciona perfectamente en dispositivos iOS (iPhone/iPad) y Android directamente en tu navegador.",
+      "q6": "¿Necesito instalar alguna aplicación?",
+      "a6": "No se requiere instalación. Simplemente pega el enlace en tu navegador y descarga al instante.",
+      "q7": "¿Puedo descargar de cuentas privadas?",
+      "a7": "Debido a restricciones de privacidad, solo podemos acceder y descargar contenido de cuentas públicas de TikTok.",
+      "q8": "¿En qué formato se guardan las imágenes?",
+      "a8": "Las imágenes se guardan típicamente en formato JPG o PNG de alta calidad, compatible con todos los dispositivos.",
+      "q9": "¿Hay un límite de descargas?",
+      "a9": "¡No hay límite! Puedes descargar tantos slideshows y carruseles de fotos como quieras.",
+      "q10": "¿Puedo descargar la música del slideshow también?",
+      "a10": "Sí, generalmente el audio está disponible como una opción de descarga MP3 separada junto con las imágenes."
     }
   },
   "nav_menu": {

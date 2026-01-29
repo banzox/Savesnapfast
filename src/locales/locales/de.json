@@ -311,12 +311,26 @@
       "step3": "Auf 'Herunterladen' klicken."
     },
     "faq": {
-      "q1": "Kann ich alle Fotos laden?",
-      "a1": "Ja, wir laden das komplette Karussell.",
-      "q2": "Gibt es Wasserzeichen?",
-      "a2": "Nein, die Bilder sind sauber.",
-      "q3": "Geht das für Videos?",
-      "a3": "Nein, nutzen Sie dafür unseren Video-Downloader."
+      "q1": "Kann ich alle Fotos einer TikTok-Slideshow auf einmal laden?",
+      "a1": "Ja, unser Tool erkennt alle Bilder und lädt sie als Set herunter.",
+      "q2": "Sind die Bilder in hoher Qualität?",
+      "a2": "Absolut! Wir speichern in Original-HD-Auflösung (1080p+).",
+      "q3": "Haben die Bilder Wasserzeichen?",
+      "a3": "Nein, SaveTikFast entfernt alle Wasserzeichen.",
+      "q4": "Ist dieses Tool kostenlos?",
+      "a4": "Ja, zu 100% kostenlos ohne versteckte Gebühren.",
+      "q5": "Funktioniert es auf dem Handy?",
+      "a5": "Ja, perfekt auf iOS und Android im Browser.",
+      "q6": "Muss ich eine App installieren?",
+      "a6": "Keine Installation nötig. Einfach Link einfügen.",
+      "q7": "Kann ich von privaten Konten laden?",
+      "a7": "Nein, nur von öffentlichen TikTok-Konten.",
+      "q8": "Welches Format haben die Bilder?",
+      "a8": "Meist JPG oder PNG in hoher Qualität.",
+      "q9": "Gibt es ein Download-Limit?",
+      "a9": "Kein Limit! Lade so viel du willst.",
+      "q10": "Kann ich auch die Musik laden?",
+      "a10": "Ja, Audio ist oft als MP3 verfügbar."
     }
   },
   "nav_menu": {

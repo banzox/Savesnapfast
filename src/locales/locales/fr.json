@@ -311,12 +311,26 @@
       "step3": "Cliquez sur 'Télécharger Images'."
     },
     "faq": {
-      "q1": "Puis-je tout télécharger d'un coup ?",
-      "a1": "Oui, nous téléchargeons toutes les images du carrousel.",
-      "q2": "Y a-t-il un filigrane ?",
-      "a2": "Non, les images sont propres et originales.",
-      "q3": "Cela marche-t-il pour les vidéos ?",
-      "a3": "Non, utilisez notre téléchargeur vidéo pour cela."
+      "q1": "Puis-je télécharger toutes les photos d'un diaporama TikTok en une seule fois ?",
+      "a1": "Oui, notre outil détecte toutes les images et vous permet de les télécharger en lot ou individuellement.",
+      "q2": "Les images téléchargées sont-elles de haute qualité ?",
+      "a2": "Absolument ! Nous sauvegardons les images dans leur résolution HD originale (1080p+).",
+      "q3": "Les images ont-elles des filigranes ?",
+      "a3": "No, SaveTikFast supprime tous les filigranes pour des images propres.",
+      "q4": "Est-ce gratuit ?",
+      "a4": "Oui, notre téléchargeur est 100% gratuit sans frais cachés.",
+      "q5": "Cela fonctionne-t-il sur mobile ?",
+      "a5": "Oui, parfaitement compatible avec iOS et Android via le navigateur.",
+      "q6": "Dois-je installer une application ?",
+      "a6": "Aucune installation requise. Collez simplement le lien et téléchargez.",
+      "q7": "Puis-je télécharger depuis des comptes privés ?",
+      "a7": "Non, seulement depuis des comptes publics pour des raisons de confidentialité.",
+      "q8": "Quel est le format des images ?",
+      "a8": "JPG ou PNG haute qualité, compatibles partout.",
+      "q9": "Y a-t-il une limite de téléchargement ?",
+      "a9": "Aucune limite ! Téléchargez autant que vous voulez.",
+      "q10": "Puis-je aussi télécharger la musique ?",
+      "a10": "Oui, l'audio est souvent disponible en MP3 séparé."
     }
   },
   "nav_menu": {

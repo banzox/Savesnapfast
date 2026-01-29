@@ -116,7 +116,12 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                     <input
                         type="url"
                         id="url-input"
-                        placeholder={t('downloader.placeholder') || "Paste TikTok video link here..."}
+                        placeholder={
+                            mode === 'mp3' ? (t('mp3_page.placeholder') || "Paste TikTok music link...") :
+                                mode === 'slideshow' ? (t('slideshow_page.placeholder') || "Paste slideshow link...") :
+                                    mode === 'story' ? (t('story_page.placeholder') || "Paste story link...") :
+                                        (t('downloader.placeholder') || "Paste TikTok video link here...")
+                        }
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
                         onKeyDown={(e) => e.key === 'Enter' && handleDownload()}

@@ -311,12 +311,26 @@
       "step3": "Clique em 'Baixar Imagens'."
     },
     "faq": {
-      "q1": "Posso baixar todas as fotos?",
-      "a1": "Sim, baixamos todas as imagens do carrossel.",
-      "q2": "Tem marca d'água?",
-      "a2": "Não, as imagens são limpas.",
-      "q3": "Funciona para vídeos?",
-      "a3": "Não, use nosso baixador de vídeos."
+      "q1": "Can I download all photos from a TikTok slideshow at once?",
+      "a1": "Yes, our tool automatically detects all images in a slideshow and downloads them as a complete set or lets you choose individual photos.",
+      "q2": "Are the downloaded images high quality?",
+      "a2": "Absolutely! We save the images in their original HD resolution (1080p or higher) exactly as they were uploaded to TikTok.",
+      "q3": "Do the images have watermarks?",
+      "a3": "No, SaveTikFast removes all watermarks and logos, giving you clean, high-quality images ready for use.",
+      "q4": "Is this tool free to use?",
+      "a4": "Yes, our TikTok Slideshow Downloader is 100% free with no hidden costs or subscription fees.",
+      "q5": "Does it work on mobile phones?",
+      "a5": "Yes, it works perfectly on both iOS (iPhone/iPad) and Android devices directly in your web browser.",
+      "q6": "Do I need to install any app?",
+      "a6": "No app installation is required. Simply paste the link in your browser and download instantly.",
+      "q7": "Can I download slideshows from private accounts?",
+      "a7": "Due to privacy restrictions, we can only access and download content from public TikTok accounts.",
+      "q8": "What format are the images saved in?",
+      "a8": "Images are typically saved in high-quality JPG or PNG format, which is compatible with all devices.",
+      "q9": "Is there a limit on how many slideshows I can download?",
+      "a9": "There is no limit! You can download as many TikTok slideshows and photo carousels as you like.",
+      "q10": "Can I download the music from the slideshow too?",
+      "a10": "Yes, usually the audio is available as a separate MP3 download option alongside the images."
     }
   },
   "nav_menu": {
