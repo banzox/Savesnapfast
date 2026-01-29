@@ -136,7 +136,7 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                             onClick={() => setUrl('')}
                             title="Clear"
                             aria-label="Clear input"
-                            style={{ background: 'transparent', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', marginRight: '5px' }}
+                            style={{ background: 'transparent', border: 'none', color: 'var(--text-dim)', cursor: 'pointer', marginRight: '5px' }}
                         >
                             <i className="fas fa-times"></i>
                         </button>

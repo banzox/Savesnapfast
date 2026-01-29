@@ -611,7 +611,7 @@ body::after {
 }
 
 #url-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-dim);
     opacity: 1;
 }
 
@@ -864,7 +864,7 @@ footer {
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--text-dim);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -953,7 +953,7 @@ footer {
     flex: 1;
     background: transparent;
     border: none;
-    color: #fff;
+    color: var(--text-main);
     padding: 12px 50px 12px 12px;
     /* Clean space for the button */
     outline: none;
@@ -1062,7 +1062,7 @@ footer {
     text-align: center;
     max-width: 600px;
     margin: 40px auto;
-    color: white;
+    color: var(--text-main);
     width: 100%;
     box-shadow: var(--shadow-premium);
     animation: fadeInScale 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1199,7 +1199,7 @@ footer {
 .processing-state p {
     margin-top: 15px;
     font-weight: bold;
-    color: white;
+    color: var(--text-main);
 }
 
 .error-state {
@@ -1379,12 +1379,12 @@ footer {
 .content-box h3 {
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #fff;
+    color: var(--text-main);
 }
 
 .content-box p {
     margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-dim);
 }
 
 .content-box ul {
@@ -1394,7 +1394,7 @@ footer {
 
 .content-box li {
     margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-dim);
 }
 
 .shadow-box {
