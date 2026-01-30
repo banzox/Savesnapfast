@@ -1,63 +1,16 @@
 {
   "ar": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "bg": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.faq.q1",
-      "mp3_page.faq.a1",
-      "mp3_page.faq.q2",
-      "mp3_page.faq.a2",
-      "mp3_page.faq.q3",
-      "mp3_page.faq.a3",
-      "mp3_page.faq.q4",
-      "mp3_page.faq.a4",
-      "mp3_page.faq.q5",
-      "mp3_page.faq.a5",
-      "mp3_page.faq.q6",
-      "mp3_page.faq.a6",
-      "mp3_page.faq.q7",
-      "mp3_page.faq.a7",
-      "mp3_page.faq.q8",
-      "mp3_page.faq.a8",
-      "mp3_page.faq.q9",
-      "mp3_page.faq.a9",
-      "mp3_page.faq.q10",
-      "mp3_page.faq.a10",
-      "story_page.faq.q1",
-      "story_page.faq.a1",
-      "story_page.faq.q2",
-      "story_page.faq.a2",
-      "story_page.faq.q3",
-      "story_page.faq.a3",
-      "story_page.faq.q4",
-      "story_page.faq.a4",
-      "story_page.faq.q5",
-      "story_page.faq.a5",
-      "story_page.faq.q6",
-      "story_page.faq.a6",
-      "story_page.faq.q7",
-      "story_page.faq.a7",
-      "story_page.faq.q8",
-      "story_page.faq.a8",
-      "story_page.faq.q9",
-      "story_page.faq.a9",
-      "story_page.faq.q10",
-      "story_page.faq.a10"
-    ],
+    "untranslated": [],
     "missing_faq": [],
-    "untranslated_faq": [
-      "mp3_page",
-      "story_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "cs": {
@@ -69,10 +22,7 @@
   },
   "da": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.title",
-      "slideshow_page.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
@@ -116,11 +66,7 @@
   },
   "hi": {
     "missing": [],
-    "untranslated": [
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
