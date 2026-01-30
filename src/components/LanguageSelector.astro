@@ -251,10 +251,28 @@ function getPathForLanguage(targetLang: string) {
 
     .lang-btn:hover,
     .lang-btn.active {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: rgba(15, 12, 41, 0.95); /* Match dropdown bg */
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: none; /* No movement when active */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .lang-btn.active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 1px solid transparent; /* Hide separator */
+        z-index: 3001; /* Above menu */
+    }
+
+    :global([data-theme="light"]) .lang-btn:hover,
+    :global([data-theme="light"]) .lang-btn.active {
+        background: rgba(255, 255, 255, 0.95);
+        color: #000;
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    :global([data-theme="light"]) .lang-btn.active {
+        border-bottom-color: transparent;
     }
 
     :global([data-theme="light"]) .lang-btn:hover {
@@ -287,16 +305,18 @@ function getPathForLanguage(targetLang: string) {
     */
     .lang-menu-container {
         position: absolute;
-        bottom: calc(100% + 15px); /* Floating above button */
+        top: 100%; /* Directly below */
+        bottom: auto; /* Not above anymore */
         left: 50%;
-        transform: translateX(-50%) translateY(10px) scale(0.95);
-        width: 200px; /* Small width */
-        max-width: 90vw;
+        transform: translateX(-50%); /* Centered */
+        min-width: 180px; /* Small width but enough for text */
+        width: max-content;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.2s ease;
         z-index: 3000;
         pointer-events: none;
+        margin-top: -1px; /* Overlap border */
     }
 
     .lang-menu-container.show {
@@ -312,11 +332,14 @@ function getPathForLanguage(targetLang: string) {
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0; /* Attach to button */
         padding: 5px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
         max-height: 300px;
         display: flex;
         flex-direction: column;
+        margin-top: 0;
     }
 
     :global([data-theme="light"]) .lang-dropdown {

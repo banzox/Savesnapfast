@@ -338,28 +338,23 @@ const currentPath = Astro.url.pathname;
         padding: 10px 24px;
         border-radius: 50px;
         transition: all 0.3s ease;
-        border: 1px solid transparent;
-    }
-
-    :global([data-theme="light"]) .nav-item {
-        color: #555;
+        border: 1px solid transparent; /* No border by default */
+        box-shadow: none;
     }
 
     .nav-item:hover {
         background: rgba(255, 255, 255, 0.1);
         color: #fff;
+        /* Subtle glow instead of border */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
 
-    :global([data-theme="light"]) .nav-item:hover {
-        background: rgba(0, 0, 0, 0.05);
-        color: #000;
-    }
-
-    /* Active State */
+    /* Active State - Keep gradient but remove border artifact if any */
     .nav-item.active {
         background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
         color: #fff !important;
-        box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+        box-shadow: 0 4px 15px rgba(255, 0, 80, 0.4);
+        border: none;
     }
 
     .nav-item i {

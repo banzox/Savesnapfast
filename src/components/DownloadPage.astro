@@ -275,15 +275,90 @@ if (!pagePrefix) {
         margin-right: auto;
     }
 
-    /* Section Styles */
+    /* How To Steps Grid */
+    .steps-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .step {
+        background: rgba(255, 255, 255, 0.03); /* Card bg */
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 25px;
+        position: relative;
+        overflow: hidden;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    :global([data-theme="light"]) .step {
+        background: #fff;
+        border-color: rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border-color: rgba(0, 242, 234, 0.3); /* Hover color */
+    }
+
+    .step-num {
+        font-size: 3rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.05); /* Architectural styling */
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        line-height: 1;
+        pointer-events: none;
+    }
+
+    :global([data-theme="light"]) .step-num {
+        color: rgba(0, 0, 0, 0.03);
+    }
+
+    .step h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .step p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--text-dim);
+        position: relative;
+        z-index: 1;
+    }
+
     .section-title {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        font-weight: 800;
+        background: linear-gradient(to right, #fff, #bbb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    :global([data-theme="light"]) .section-title {
+        background: linear-gradient(to right, #333, #666);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .about-section {
-        margin-top: 2rem;
+        margin-top: 3rem;
+        padding: 40px;
+        background: var(--card-bg); /* Use global card var if available */
+        border-radius: 20px;
     }
-
-    /* Reuse shadow-box if not global, but assuming global classes based on usage */
 </style>
