@@ -108,6 +108,43 @@ function getPathForLanguage(targetLang: string) {
         const overlay = document.getElementById("lang-overlay");
         const closeBtn = document.getElementById("close-lang-btn");
 
+        // --- CLIENT SIDE FIX FOR LINKS ---
+        // This ensures that even if SSG generated wrong links, the client fixes them based on actual URL
+        const currentPath = window.location.pathname;
+        const isMp3 = currentPath.includes("/mp3");
+        const isStory = currentPath.includes("/story");
+        const isSlideshow = currentPath.includes("/slideshow");
+
+        if (isMp3 || isStory || isSlideshow) {
+            const langLinks = document.querySelectorAll(".lang-option");
+            const toolSlug = isMp3 ? "/mp3" : isStory ? "/story" : "/slideshow";
+
+            langLinks.forEach((link) => {
+                const originalHref = link.getAttribute("href");
+                // Check if link is pointing to Home (e.g. /es, /fr, /) instead of tool
+                // We assume if it DOESN'T contain the tool slug, it's wrong (unless it's default lang home)
+
+                // Logic:
+                // 1. Get the target lang code from the href (e.g. /es -> es)
+                // 2. Append toolSlug
+
+                if (originalHref && !originalHref.includes(toolSlug)) {
+                    // E.g. original is "/es". We want "/es/mp3"
+                    // E.g. original is "/". We want "/mp3"
+
+                    // Simply append the slug if it's missing
+                    // Remove trailing slash from original if present to avoid /es//mp3
+                    const cleanHref =
+                        originalHref.endsWith("/") && originalHref.length > 1
+                            ? originalHref.slice(0, -1)
+                            : originalHref;
+
+                    link.setAttribute("href", cleanHref + toolSlug);
+                }
+            });
+        }
+        // ----------------------------------
+
         if (!btn || !dropdown || !overlay || !closeBtn) return;
 
         const toggleMenu = (show?: boolean) => {
