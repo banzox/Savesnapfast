@@ -21,22 +21,16 @@ const SURGICAL_FIXES = {
     },
     // German Fixes
     "de": {
-        "slideshow_page.title": "TikTok Slideshow Downloader"
-    },
-    // Hindi Fixes
-    "hi": {
-        "slideshow_page.features.original.title": "मूल गुणवत्ता",
-        "slideshow_page.features.format.title": "स्मार्ट प्रारूप",
-        "slideshow_page.features.device.title": "सभी उपकरण"
+        "slideshow_page.title": "TikTok Diashow Downloader"
     },
     // Dutch Fixes
     "nl": {
-        "slideshow_page.title": "TikTok Slideshow Downloader"
+        "slideshow_page.title": "TikTok Diashow Downloader"
     },
     // Tagalog Fixes
     "tl": {
-        "slideshow_page.title": "TikTok Slideshow Downloader",
-        "slideshow_page.features.format.title": "Smart Formats"
+        "slideshow_page.title": "Tagapag-download ng TikTok Slideshow",
+        "slideshow_page.features.format.title": "Matalinong Format"
     },
 
     // BULGARIAN FAQ FIXES (Massive injection)
