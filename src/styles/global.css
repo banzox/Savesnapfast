@@ -42,14 +42,16 @@
 }
 
 /* --- Light Mode Overrides (Soft & Professional) --- */
+/* --- Light Mode Overrides (Soft & Professional) --- */
 [data-theme='light'] {
-    --bg-main: #f9fafb;
+    --bg-main: #eef2f6;
+    /* Grayish White */
     /* Soft Off-White (Apple style) */
-    --bg-gradient: linear-gradient(180deg, #f3f4f6 0%, #ffffff 100%);
+    --bg-gradient: linear-gradient(180deg, #eef2f6 0%, #e2e8f0 100%);
 
     --text-main: #1f2937;
     /* Dark Charcoal (Readable) */
-    --text-dim: #6b7280;
+    --text-dim: #4b5563;
     /* Cool Gray */
     --text-invert: #ffffff;
 

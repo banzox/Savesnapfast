@@ -290,9 +290,9 @@ function getPathForLanguage(targetLang: string) {
         bottom: 100%; /* Open Upwards */
         top: auto;
         left: 50%;
-        transform: translateX(-50%) translateY(10px) scale(0.98); /* Center horizontally + slight down for animation start */
+        transform: translateX(-50%) translateY(10px) scale(0.98);
         margin-bottom: 15px;
-        width: 600px;
+        width: 300px; /* Narrower width for list view */
         max-width: 90vw;
         opacity: 0;
         visibility: hidden;
@@ -314,15 +314,15 @@ function getPathForLanguage(targetLang: string) {
         -webkit-backdrop-filter: blur(30px);
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 20px;
-        padding: 20px;
+        padding: 10px;
         box-shadow:
             0 25px 50px -12px rgba(0, 0, 0, 0.5),
             0 0 0 1px rgba(255, 255, 255, 0.05) inset;
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        max-height: 70vh; /* Constraint */
-        overflow: hidden; /* Header fixed, grid scrolls */
+        gap: 10px;
+        max-height: 60vh; /* Constraint */
+        overflow: hidden;
     }
 
     :global([data-theme="light"]) .lang-dropdown {
@@ -333,10 +333,10 @@ function getPathForLanguage(targetLang: string) {
 
     /* Header inside Dropdown */
     .dropdown-header {
-        display: none; /* Hidden on desktop usually */
+        display: none;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 15px;
+        padding: 10px 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         margin-bottom: 5px;
     }
@@ -385,25 +385,25 @@ function getPathForLanguage(targetLang: string) {
         background: rgba(255, 255, 255, 0.2);
     }
 
-    /* Language Grid */
+    /* Language List (Vertical) */
     .lang-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-        overflow-y: auto;
+        display: flex;
+        flex-direction: column; /* Vertical Stack */
+        gap: 5px;
+        overflow-y: auto; /* Scrollable */
         padding-right: 5px;
-        max-height: 50vh; /* Scrollable area */
+        max-height: 400px;
     }
 
     /* Scrollbar */
     .lang-grid::-webkit-scrollbar {
-        width: 6px;
+        width: 4px;
     }
     .lang-grid::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.02);
+        background: transparent;
     }
     .lang-grid::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.2);
         border-radius: 10px;
     }
     :global([data-theme="light"]) .lang-grid::-webkit-scrollbar-thumb {
