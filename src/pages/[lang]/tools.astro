@@ -4,6 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
 import { languages, defaultLang } from "../../i18n/ui";
 import { useTranslations, getTranslations } from "../../utils/i18n";
+import AdBanner from "../../components/AdBanner.astro";
 
 export async function getStaticPaths() {
     return Object.keys(languages)
@@ -37,8 +38,14 @@ const tools = [
         </h1>
         <p>{t("tools.hero.desc")}</p>
 
-        <Downloader client:load messages={translations.downloader} />
+        <Downloader
+            client:load
+            messages={translations.downloader}
+            placeholder={t("downloader.placeholder")}
+        />
     </article>
+
+    <AdBanner />
 
     <div class="container features-grid">
         {

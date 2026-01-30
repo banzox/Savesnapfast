@@ -5,7 +5,8 @@ import { saveAs } from 'file-saver';
 const WORKER_URL = "https://api.savetik-fast.xyz";
 const SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
-export default function Downloader({ messages = {}, mode = 'video' }) {
+export default function Downloader(props) {
+    const { messages = {}, mode = 'video' } = props;
 
     // دالة الترجمة
     const t = (key, defaultText) => {
@@ -142,17 +143,15 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
     const musicUrl = result?.music || result?.audio;
     const images = result?.images && Array.isArray(result.images) && result.images.length > 0 ? result.images : null;
 
-    const placeholderText =
-        mode === 'mp3' ? t('placeholder_mp3', "Paste TikTok music link...") :
-            mode === 'slideshow' ? t('placeholder_slideshow', "Paste slideshow link...") :
-                mode === 'story' ? t('placeholder_story', "Paste story link...") :
-                    t('placeholder_video', "Paste TikTok video link here...");
+    // Use passed placeholder or fallback
+    const placeholderText = props.placeholder || t('placeholder', "Paste TikTok link here...");
 
     return (
         <div className="downloader-container">
             <div className="downloader-box">
-                {/* تصحيح: تمت إعادة هيكلة الـ input-wrapper وإضافة id="url-input"
-                    هذا هو المفتاح لاسترجاع التصميم الأصلي من ملف الـ CSS لديك
+                {/* 
+                   New robust structure compatible with updated global.css 
+                   .input-wrapper contains input AND action buttons
                 */}
                 <div className="input-wrapper">
                     <input

@@ -12,8 +12,6 @@ if (currentLang !== defaultLang && !languages[currentLang]) {
 }
 ---
 
-const {lang} = Astro.params; const currentLang = lang || defaultLang; ---
-
 <TextPage
     titleKey="pages.about.title"
     contentKey="pages.about.content"

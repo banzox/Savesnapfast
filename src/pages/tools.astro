@@ -2,15 +2,13 @@
 export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import {
-    getLangFromUrl,
-    useTranslations,
-    getTranslations,
-} from "../utils/i18n";
+import { languages, defaultLang } from "../i18n/ui";
+import { useTranslations, getTranslations } from "../utils/i18n";
+import AdBanner from "../components/AdBanner.astro";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translations = getTranslations(lang);
+const currentLang = defaultLang;
+const t = useTranslations(currentLang);
+const translations = getTranslations(currentLang);
 
 const tools = [
     { icon: "fas fa-compress-arrows-alt", key: "compressor" },
@@ -22,7 +20,7 @@ const tools = [
 <Layout
     title={t("tools.meta.title")}
     description={t("tools.meta.description")}
-    lang={lang}
+    lang={currentLang}
 >
     <article class="hero-section">
         <h1>
@@ -31,8 +29,14 @@ const tools = [
         </h1>
         <p>{t("tools.hero.desc")}</p>
 
-        <Downloader client:load messages={translations.downloader} />
+        <Downloader
+            client:load
+            messages={translations.downloader}
+            placeholder={t("downloader.placeholder")}
+        />
     </article>
+
+    <AdBanner />
 
     <div class="container features-grid">
         {

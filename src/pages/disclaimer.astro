@@ -1,11 +1,9 @@
 ---
-// export const prerender = true; // DISABLED FOR SSR
 import TextPage from "../components/TextPage.astro";
-import { defaultLang } from "../i18n/ui";
 ---
 
 <TextPage
     titleKey="pages.disclaimer.title"
     contentKey="pages.disclaimer.content"
-    lang={defaultLang}
+    lang="en"
 />

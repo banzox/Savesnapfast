@@ -173,6 +173,8 @@ if (!pagePrefix) {
                     client:load
                     messages={translations.downloader}
                     mode={mode}
+                    placeholder={t(`${pagePrefix}.placeholder`) ||
+                        t("downloader.placeholder")}
                 />
             </div>
         </article>
@@ -296,9 +298,9 @@ if (!pagePrefix) {
     }
 
     :global([data-theme="light"]) .step {
-        background: #fff;
-        border-color: rgba(0, 0, 0, 0.05);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Softer, broader shadow */
     }
 
     .step:hover {

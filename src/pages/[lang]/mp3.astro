@@ -15,8 +15,6 @@ if (currentLang !== defaultLang && !languages[currentLang]) {
 }
 ---
 
-const {lang} = Astro.params; const currentLang = lang || defaultLang; ---
-
 <DownloadPage
     lang={currentLang}
     pagePrefix="mp3_page"

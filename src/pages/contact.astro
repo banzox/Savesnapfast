@@ -1,19 +1,13 @@
 ---
-// export const prerender = true; // DISABLED FOR SSR
 import TextPage from "../components/TextPage.astro";
-import { defaultLang } from "../i18n/ui";
 ---
 
 <TextPage
-    titleKey="nav.contact"
+    titleKey="pages.contact.title"
     contentKey="pages.contact.content"
-    lang={defaultLang}
+    lang="en"
 >
-    <div class="contact-link-wrapper">
-        <a href="mailto:contact@savetik-fast.xyz" class="contact-email">
-            contact@savetik-fast.xyz
-        </a>
-    </div>
+    contact@savetik-fast.xyz
 </TextPage>
 
 <style>

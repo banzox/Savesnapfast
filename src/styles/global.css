@@ -44,30 +44,32 @@
 /* --- Light Mode Overrides (Soft & Professional) --- */
 /* --- Light Mode Overrides (Soft & Professional) --- */
 [data-theme='light'] {
-    --bg-main: #eef2f6;
-    /* Grayish White */
-    /* Soft Off-White (Apple style) */
-    --bg-gradient: linear-gradient(180deg, #eef2f6 0%, #e2e8f0 100%);
+    /* --- Premium Clean Light Theme (Apple Style) --- */
+    --bg-main: #f5f7fa;
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
 
-    --text-main: #1f2937;
-    /* Dark Charcoal (Readable) */
-    --text-dim: #4b5563;
-    /* Cool Gray */
+    --text-main: #1a202c;
+    /* Deep Charcoal (High Contrast) */
+    --text-dim: #4a5568;
+    /* Slate Gray */
     --text-invert: #ffffff;
 
-    --glass: rgba(255, 255, 255, 0.7);
-    --glass-bright: rgba(255, 255, 255, 0.9);
+    /* Cards: Solid White for Crispnest */
+    --glass: #ffffff;
+    --glass-bright: #ffffff;
 
-    --border: rgba(0, 0, 0, 0.06);
-    --border-bright: rgba(0, 0, 0, 0.12);
+    --border: rgba(0, 0, 0, 0.08);
+    --border-bright: rgba(0, 0, 0, 0.15);
 
     --bg-dropdown: #ffffff;
 
-    --shadow-premium: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-    --shadow-glow: 0 0 20px rgba(255, 0, 80, 0.1);
+    /* Soft, diffused shadows */
+    --shadow-premium: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 0 20px rgba(0, 0, 0, 0.05);
 
-    --bg-header: rgba(255, 255, 255, 0.85);
-    /* Frosty White */
+    --bg-header: rgba(255, 255, 255, 0.9);
+    /* High opacity glass */
+    --header-blur: 30px;
     --header-border: rgba(0, 0, 0, 0.05);
 }
 
@@ -168,6 +170,13 @@ body {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+:global([data-theme="light"]) .nav-menu a {
+    background: #ffffff;
+    color: var(--text-main);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
 .nav-menu a i {
     font-size: 18px;
 }
@@ -178,6 +187,13 @@ body {
     border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+:global([data-theme="light"]) .nav-menu a:hover {
+    background: #f0f0f0;
+    color: var(--primary);
+    border-color: var(--border-bright);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 /* Active state - Modern Gradient & Glow */
@@ -429,19 +445,18 @@ body::after {
     display: flex;
     align-items: center;
     background: var(--glass-bright);
-    border-radius: 30px;
-    /* Pill shape */
-    padding: 5px 8px 5px 20px;
-    /* Space for text */
+    border-radius: 50px;
+    padding: 6px 8px 6px 24px;
     border: 1px solid var(--border);
     transition: var(--transition);
     position: relative;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Premium Glow on Focus */
 .input-wrapper:focus-within {
     border-color: var(--secondary);
-    box-shadow: 0 0 20px rgba(0, 242, 234, 0.2);
+    box-shadow: 0 0 25px rgba(0, 242, 234, 0.3), inset 0 2px 10px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
     background: rgba(255, 255, 255, 0.15);
 }
@@ -449,7 +464,7 @@ body::after {
 :global([data-theme="light"]) .input-wrapper:focus-within {
     background: #fff;
     border-color: var(--primary);
-    box-shadow: 0 0 20px rgba(255, 0, 80, 0.15);
+    box-shadow: 0 0 25px rgba(255, 0, 80, 0.2);
 }
 
 #url-input {
@@ -457,68 +472,75 @@ body::after {
     background: transparent;
     border: none;
     color: var(--text-main);
-    padding: 12px;
+    padding: 12px 0;
     outline: none;
-    font-size: 17px;
+    font-size: 1.1rem;
     font-weight: 500;
     width: 100%;
 }
 
 #url-input::placeholder {
     color: var(--text-dim);
-    opacity: 1;
+    opacity: 0.8;
 }
 
 /* Input Controls Group */
 .input-controls {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    margin-left: 10px;
 }
 
 /* Action Buttons (Paste / Clear) */
 .action-btn {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-dim);
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-main);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(5px);
 }
 
 :global([data-theme="light"]) .action-btn {
-    background: rgba(0, 0, 0, 0.05);
-    color: #555;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.08);
+    color: #444;
 }
 
 .action-btn:hover {
     background: var(--secondary);
-    color: #fff;
+    color: #000;
     transform: scale(1.1);
-    box-shadow: 0 0 10px var(--secondary-glow);
+    box-shadow: 0 0 15px var(--secondary-glow);
 }
 
 :global([data-theme="light"]) .action-btn:hover {
     background: var(--primary);
     color: #fff;
-    box-shadow: 0 0 10px var(--primary-glow);
+    box-shadow: 0 0 15px var(--primary-glow);
 }
 
-/* Distinctive Clear Button (Red on Hover) */
+/* Distinctive Clear Button */
+.clear-btn {
+    background: rgba(255, 68, 68, 0.15);
+    color: #ff4444;
+}
+
 .clear-btn:hover {
     background: #ff4444 !important;
-    box-shadow: 0 0 10px rgba(255, 68, 68, 0.4) !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5) !important;
     transform: rotate(90deg) scale(1.1);
 }
 
-/* Paste Button (Standard Hover) */
+/* Paste Button */
 .paste-btn:hover i {
     transform: scale(1.1);
 }
@@ -528,7 +550,7 @@ button:active,
 a:active,
 .btn-download:active,
 .action-btn:active {
-    transform: scale(0.95) !important;
+    transform: scale(0.92) !important;
 }
 
 /* Premium Download Button with Glow */
@@ -536,16 +558,23 @@ a:active,
     background: linear-gradient(135deg, var(--primary) 0%, #ff2d70 100%);
     color: white;
     border: none;
-    padding: 18px 45px;
-    border-radius: 20px;
-    font-weight: 900;
-    font-size: 1.1rem;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.2rem;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: var(--transition);
-    box-shadow: 0 10px 30px rgba(255, 0, 80, 0.3);
+    box-shadow: 0 10px 40px rgba(255, 0, 80, 0.4);
     z-index: 1;
+    margin-top: 25px;
+    /* Added spacing */
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
 #download-btn::before {
@@ -874,7 +903,8 @@ footer {
     transform: scale(0.98);
     transition: transform 0.1s;
 }
-}
+
+/* End of Smooth Card Interaction */
 
 /* Premium Focus Rings for Input */
 .input-wrapper:focus-within {
