@@ -2,29 +2,104 @@
 
 ---
 
-<div class="ad-banner">
-    <script type="text/javascript">
-        atOptions = {
-            key: "e7cb7613583ca46358c6655c0c976e31",
-            format: "iframe",
-            height: 250,
-            width: 300,
-            params: {},
-        };
-    </script>
-    <script
-        type="text/javascript"
-        src="//www.effectivegatecpm.com/e7cb7613583ca46358c6655c0c976e31/invoke.js"
-    ></script>
+<div class="ad-banner-grid">
+    <!-- Ad Slot 1 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+            atOptions = {
+                key: "e7cb7613583ca46358c6655c0c976e31",
+                format: "iframe",
+                height: 250,
+                width: 300,
+                params: {},
+            };
+        </script>
+        <script
+            type="text/javascript"
+            src="//www.effectivegatecpm.com/e7cb7613583ca46358c6655c0c976e31/invoke.js"
+        ></script>
+    </div>
+    <!-- Ad Slot 2 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+            atOptions = {
+                key: "e7cb7613583ca46358c6655c0c976e31",
+                format: "iframe",
+                height: 250,
+                width: 300,
+                params: {},
+            };
+        </script>
+        <script
+            type="text/javascript"
+            src="//www.effectivegatecpm.com/e7cb7613583ca46358c6655c0c976e31/invoke.js"
+        ></script>
+    </div>
+    <!-- Ad Slot 3 -->
+    <div class="ad-slot mobile-hide">
+        <script type="text/javascript">
+            atOptions = {
+                key: "e7cb7613583ca46358c6655c0c976e31",
+                format: "iframe",
+                height: 250,
+                width: 300,
+                params: {},
+            };
+        </script>
+        <script
+            type="text/javascript"
+            src="//www.effectivegatecpm.com/e7cb7613583ca46358c6655c0c976e31/invoke.js"
+        ></script>
+    </div>
+    <!-- Ad Slot 4 -->
+    <div class="ad-slot mobile-hide">
+        <script type="text/javascript">
+            atOptions = {
+                key: "e7cb7613583ca46358c6655c0c976e31",
+                format: "iframe",
+                height: 250,
+                width: 300,
+                params: {},
+            };
+        </script>
+        <script
+            type="text/javascript"
+            src="//www.effectivegatecpm.com/e7cb7613583ca46358c6655c0c976e31/invoke.js"
+        ></script>
+    </div>
 </div>
 
 <style>
-    .ad-banner {
+    .ad-banner-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px 0;
+        width: 100%;
+    }
+
+    .ad-slot {
+        width: 300px;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 10px;
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 2rem 0;
-        width: 100%;
-        min-height: 250px;
+    }
+
+    @media (max-width: 768px) {
+        .mobile-hide {
+            display: none; /* Show only 2 on mobile to save space/bandwidth, or 4 stacked? User said 4. */
+            /* User said 4 slots. I will attempt to show all 4 but maybe stacked 2x2 */
+        }
+        .ad-banner-grid {
+            gap: 10px;
+        }
+        .mobile-hide {
+            display: flex; /* Force show all */
+        }
     }
 </style>

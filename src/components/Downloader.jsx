@@ -115,10 +115,20 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
             setTimeout(() => {
                 const el = document.getElementById('result-area');
                 if (el) {
-                    const offset = el.getBoundingClientRect().top + window.scrollY - 100;
+                    // Scroll to result area plus extra space for ads
+                    const offset = el.getBoundingClientRect().top + window.scrollY - 80;
+                    // Note: Ads are usually below result-area. 
+                    // To include ads in view, we should scroll enough so 'result-area' is at top
+                    // or maybe slightly lower if ads are huge.
+                    // User said: "Screen goes down automatically to download buttons so I can benefit from him seeing ads".
+                    // Ads are usually AFTER buttons.
+                    // So we want the Buttons to be visible? YES.
+                    // If we scroll to 'result-area', buttons are visible.
+                    // We might want to scroll a bit more if the header is sticky? Header is static now.
+                    // Let's scroll to the top of result area.
                     window.scrollTo({ top: offset, behavior: "smooth" });
                 }
-            }, 100);
+            }, 500); // Increased timeout to ensure DOM render
 
         } catch (err) {
             setError(t('error_msg', "Service is busy or link is invalid. Please try again."));
