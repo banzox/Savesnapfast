@@ -72,44 +72,58 @@ function getPathForLanguage(targetLang: string) {
         aria-label="Select Language"
         aria-expanded="false"
     >
+        <span class="lang-icon">
+            <i class="fas fa-globe"></i>
+        </span>
         <span class="lang-text">{currentLangName}</span>
         <i class="fas fa-chevron-down arrow-icon"></i>
     </button>
 
-    <div id="lang-dropdown" class="lang-dropdown">
-        <div class="dropdown-header">
-            <span class="header-title">Select Language</span>
-            <button id="close-lang-btn" class="close-btn" aria-label="Close">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="lang-grid">
-            {
-                Object.entries(languages).map(([code, name]) => (
-                    <a
-                        href={getPathForLanguage(code)}
-                        class={`lang-option ${code === lang ? "active" : ""}`}
-                    >
-                        <span class="lang-name">{name}</span>
-                        {code === lang && <i class="fas fa-check check-icon" />}
-                    </a>
-                ))
-            }
-        </div>
-    </div>
+    <div id="lang-menu-container" class="lang-menu-container">
+        <div class="lang-dropdown">
+            <div class="dropdown-header">
+                <span class="header-title">
+                    <i class="fas fa-language"></i> Select Language
+                </span>
+                <button
+                    id="close-lang-btn"
+                    class="close-btn"
+                    aria-label="Close"
+                >
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
 
-    <div id="lang-overlay" class="lang-overlay"></div>
+            <div class="lang-grid">
+                {
+                    Object.entries(languages).map(([code, name]) => (
+                        <a
+                            href={getPathForLanguage(code)}
+                            class={`lang-option ${code === lang ? "active" : ""}`}
+                            data-lang-code={code}
+                        >
+                            <span class="lang-name">{name}</span>
+                            {code === lang && (
+                                <i class="fas fa-check check-icon" />
+                            )}
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+        <div id="lang-overlay" class="lang-overlay"></div>
+    </div>
 </div>
 
 <script>
     function initLanguageSelector() {
         const btn = document.getElementById("lang-toggle-btn");
-        const dropdown = document.getElementById("lang-dropdown");
+        const container = document.getElementById("lang-menu-container");
+        const dropdown = container?.querySelector(".lang-dropdown");
         const overlay = document.getElementById("lang-overlay");
         const closeBtn = document.getElementById("close-lang-btn");
 
-        // --- CLIENT SIDE FIX FOR LINKS ---
-        // This ensures that even if SSG generated wrong links, the client fixes them based on actual URL
+        // --- CLIENT SIDE FIX FOR LINKS (Preserved from original) ---
         const currentPath = window.location.pathname;
         const isMp3 = currentPath.includes("/mp3");
         const isStory = currentPath.includes("/story");
@@ -121,42 +135,33 @@ function getPathForLanguage(targetLang: string) {
 
             langLinks.forEach((link) => {
                 const originalHref = link.getAttribute("href");
-                // Check if link is pointing to Home (e.g. /es, /fr, /) instead of tool
-                // We assume if it DOESN'T contain the tool slug, it's wrong (unless it's default lang home)
-
-                // Logic:
-                // 1. Get the target lang code from the href (e.g. /es -> es)
-                // 2. Append toolSlug
-
                 if (originalHref && !originalHref.includes(toolSlug)) {
-                    // E.g. original is "/es". We want "/es/mp3"
-                    // E.g. original is "/". We want "/mp3"
-
-                    // Simply append the slug if it's missing
-                    // Remove trailing slash from original if present to avoid /es//mp3
                     const cleanHref =
                         originalHref.endsWith("/") && originalHref.length > 1
                             ? originalHref.slice(0, -1)
                             : originalHref;
-
                     link.setAttribute("href", cleanHref + toolSlug);
                 }
             });
         }
         // ----------------------------------
 
-        if (!btn || !dropdown || !overlay || !closeBtn) return;
+        if (!btn || !container || !overlay || !closeBtn || !dropdown) return;
 
         const toggleMenu = (show?: boolean) => {
             const isShow =
                 show === true ||
-                (show === undefined && !dropdown.classList.contains("show"));
+                (show === undefined && !container.classList.contains("show"));
 
             btn.setAttribute("aria-expanded", isShow ? "true" : "false");
             btn.classList.toggle("active", isShow);
-            dropdown.classList.toggle("show", isShow);
-            overlay.classList.toggle("show", isShow);
-            document.body.style.overflow = isShow ? "hidden" : "";
+            container.classList.toggle("show", isShow);
+
+            if (isShow) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "";
+            }
         };
 
         const closeMenu = () => toggleMenu(false);
@@ -178,7 +183,18 @@ function getPathForLanguage(targetLang: string) {
 
         // Escape key
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && dropdown.classList.contains("show")) {
+            if (e.key === "Escape" && container.classList.contains("show")) {
+                closeMenu();
+            }
+        });
+
+        // Handle click outside (for desktop mainly)
+        document.addEventListener("click", (e) => {
+            if (
+                container.classList.contains("show") &&
+                !dropdown.contains(e.target as Node) &&
+                !btn.contains(e.target as Node)
+            ) {
                 closeMenu();
             }
         });
@@ -196,230 +212,309 @@ function getPathForLanguage(targetLang: string) {
     /* Wrapper */
     .language-wrapper {
         position: relative;
-        z-index: 1000;
+        z-index: 2001;
     }
 
-    /* Trigger Button */
+    /* 
+    ========================================
+    TRIGGER BUTTON (VIP STYLE)
+    ========================================
+    */
     .lang-btn {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 10px 18px;
+        padding: 8px 16px;
         border-radius: 50px;
         color: var(--text-main, #fff);
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         font-family: "Inter", sans-serif;
         font-weight: 600;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+    }
+
+    :global([data-theme="light"]) .lang-btn {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #333;
     }
 
     .lang-btn:hover,
     .lang-btn.active {
         background: rgba(255, 255, 255, 0.15);
         border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 0 15px rgba(255, 0, 80, 0.3);
         transform: translateY(-1px);
-    }
-
-    .arrow-icon {
-        font-size: 0.8rem;
-        transition: transform 0.3s ease;
-        opacity: 0.8;
-    }
-
-    .lang-btn.active .arrow-icon {
-        transform: rotate(180deg);
-    }
-
-    /* Dropdown / Modal */
-    .lang-dropdown {
-        position: absolute;
-        top: calc(100% + 15px);
-        right: 0;
-        width: 600px;
-        max-width: 90vw;
-        background: rgba(10, 10, 20, 0.95);
-        backdrop-filter: blur(30px);
-        -webkit-backdrop-filter: blur(30px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 24px;
-        padding: 24px;
-        box-shadow:
-            0 20px 60px rgba(0, 0, 0, 0.6),
-            0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-
-        opacity: 0;
-        transform: translateY(10px) scale(0.98);
-        pointer-events: none;
-        visibility: hidden;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        transform-origin: top right;
-    }
-
-    /* Light Theme Override */
-    :global([data-theme="light"]) .lang-dropdown {
-        background: rgba(255, 255, 255, 0.95);
-        border-color: rgba(0, 0, 0, 0.08);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    }
-
-    :global([data-theme="light"]) .lang-btn {
-        color: var(--text-main, #333);
-        background: rgba(0, 0, 0, 0.05);
-        border-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     :global([data-theme="light"]) .lang-btn:hover {
         background: rgba(0, 0, 0, 0.08);
     }
 
-    /* Show State */
-    .lang-dropdown.show {
+    .lang-icon {
+        color: #00f2ea;
+        font-size: 1rem;
+    }
+
+    :global([data-theme="light"]) .lang-icon {
+        color: #ff0050;
+    }
+
+    .arrow-icon {
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+        opacity: 0.7;
+    }
+
+    .lang-btn.active .arrow-icon {
+        transform: rotate(180deg);
+    }
+
+    /* 
+    ========================================
+    DROPDOWN CONTAINER (FIXED POSITIONING)
+    ========================================
+    */
+    .lang-menu-container {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 15px;
+        width: 600px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px) scale(0.98);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+        z-index: 3000;
+    }
+
+    .lang-menu-container.show {
         opacity: 1;
+        visibility: visible;
         transform: translateY(0) scale(1);
         pointer-events: auto;
-        visibility: visible;
+    }
+
+    .lang-dropdown {
+        background: rgba(15, 23, 42, 0.95); /* Deep slate */
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow:
+            0 25px 50px -12px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-height: 70vh; /* Constraint */
+        overflow: hidden; /* Header fixed, grid scrolls */
+    }
+
+    :global([data-theme="light"]) .lang-dropdown {
+        background: rgba(255, 255, 255, 0.98);
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     }
 
     /* Header inside Dropdown */
     .dropdown-header {
-        display: flex;
-        justify-content: space-between;
+        display: none; /* Hidden on desktop usually */
         align-items: center;
+        justify-content: space-between;
         padding-bottom: 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        display: none;
+        margin-bottom: 5px;
     }
 
     :global([data-theme="light"]) .dropdown-header {
         border-bottom-color: rgba(0, 0, 0, 0.1);
+        color: #333;
     }
 
     .header-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-title i {
+        color: #00f2ea;
+    }
+
+    :global([data-theme="light"]) .header-title i {
+        color: #ff0050;
     }
 
     .close-btn {
-        background: transparent;
+        background: rgba(255, 255, 255, 0.1);
         border: none;
-        color: inherit;
-        font-size: 1.2rem;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
-        padding: 5px;
+        transition: background 0.2s;
     }
 
-    /* Grid Layout */
+    :global([data-theme="light"]) .close-btn {
+        background: rgba(0, 0, 0, 0.05);
+        color: #333;
+    }
+
+    .close-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Language Grid */
     .lang-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        max-height: 60vh;
+        gap: 8px;
         overflow-y: auto;
         padding-right: 5px;
+        max-height: 50vh; /* Scrollable area */
     }
 
-    /* Custom Scrollbar */
+    /* Scrollbar */
     .lang-grid::-webkit-scrollbar {
-        width: 5px;
+        width: 6px;
     }
-
+    .lang-grid::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+    }
     .lang-grid::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.15);
         border-radius: 10px;
     }
-
     :global([data-theme="light"]) .lang-grid::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.15);
     }
 
-    /* Option Items */
+    /* Lang Option */
     .lang-option {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 12px 16px;
-        border-radius: 14px;
+        padding: 10px 14px;
+        border-radius: 10px;
         background: rgba(255, 255, 255, 0.03);
-        border: 1px solid transparent;
         color: var(--text-dim, rgba(255, 255, 255, 0.8));
         text-decoration: none;
         transition: all 0.2s ease;
-        font-weight: 500;
         font-size: 0.95rem;
+        border: 1px solid transparent;
     }
 
     :global([data-theme="light"]) .lang-option {
         background: rgba(0, 0, 0, 0.03);
-        color: var(--text-main, #333);
+        color: #444;
     }
 
     .lang-option:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateY(-2px);
-        color: var(--primary, #ff0050);
-        border-color: rgba(255, 0, 80, 0.3);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transform: translateX(2px);
     }
 
     :global([data-theme="light"]) .lang-option:hover {
-        background: rgba(0, 0, 0, 0.08);
-        color: var(--primary, #ff0050);
+        background: rgba(0, 0, 0, 0.06);
+        color: #000;
+        border-color: rgba(0, 0, 0, 0.05);
     }
 
     .lang-option.active {
-        background: linear-gradient(
-            135deg,
-            var(--primary, #ff0050),
-            var(--secondary, #00f2ea)
-        );
+        background: linear-gradient(135deg, #ff0050 0%, #aa0035 100%);
         color: #fff;
-        box-shadow: 0 8px 15px rgba(255, 0, 80, 0.3);
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(255, 0, 80, 0.3);
         border: none;
-        font-weight: 700;
     }
 
-    /* Overlay */
+    .check-icon {
+        font-size: 0.8rem;
+    }
+
     .lang-overlay {
         position: fixed;
         inset: 0;
         background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(4px);
-        z-index: 999;
+        z-index: -1;
         opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease;
-        display: none;
+        pointer-events: none;
+        transition: opacity 0.3s;
     }
 
-    /* RESPONSIVE Design */
+    .lang-menu-container.show .lang-overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* 
+    ========================================
+    RESPONSIVE (MOBILE)
+    ========================================
+    */
     @media (max-width: 768px) {
-        .lang-dropdown {
+        .lang-text {
+            display: none;
+        }
+
+        .lang-btn {
+            padding: 8px;
+            width: 36px;
+            height: 36px;
+            justify-content: center;
+        }
+
+        .arrow-icon {
+            display: none;
+        }
+
+        /* Mobile Drawer Style */
+        .lang-menu-container {
             position: fixed;
             top: auto;
             bottom: 0;
-            right: 0;
             left: 0;
-            width: 100vw;
-            max-width: 100vw;
-            max-height: 85vh;
-            border-radius: 24px 24px 0 0;
+            right: 0;
+            width: 100%;
+            margin: 0;
             transform: translateY(100%);
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 2005;
+            z-index: 5000;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            pointer-events: none; /* Let overlay handle clicks underneath if needed */
         }
 
-        .lang-dropdown.show {
+        .lang-menu-container.show {
             transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .lang-dropdown {
+            width: 100%;
+            max-height: 80vh;
+            border-radius: 24px 24px 0 0;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 24px;
+            padding-bottom: 40px; /* Safe area */
         }
 
         .dropdown-header {
@@ -428,30 +523,8 @@ function getPathForLanguage(targetLang: string) {
 
         .lang-grid {
             grid-template-columns: repeat(2, 1fr);
-            padding-bottom: 20px;
-        }
-
-        .lang-overlay {
-            display: block;
-        }
-
-        .lang-text {
-            display: none;
-        }
-        .lang-btn {
-            padding: 10px;
-            width: 40px;
-            height: 40px;
-            justify-content: center;
-        }
-        .arrow-icon {
-            display: none;
-        }
-        .lang-btn::before {
-            content: "\f0ac";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            font-size: 1.1rem;
+            max-height: none; /* Let the container handle overflow */
+            overflow-y: visible;
         }
     }
 
