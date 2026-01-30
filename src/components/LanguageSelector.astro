@@ -17,36 +17,38 @@ function getPathForLanguage(targetLang: string) {
         currentPath = currentPath.slice(0, -1);
     }
 
-    // 1. Identify and Strip Current Locale Prefix (if any)
-    // If current lang is NOT default (en), we expect the path to start with /lang
-    let cleanPath = currentPath;
+    // 1. Strip existing language prefix by checking against ALL known languages.
+    // This is safer than relying on the 'lang' prop.
+    let pathNoLang = currentPath;
 
-    if (lang !== defaultLang) {
-        const prefix = `/${lang}`;
-        if (currentPath.startsWith(prefix)) {
-            // Remove prefix. Handle /es/mp3 -> /mp3 and /es -> /
-            cleanPath = currentPath.substring(prefix.length);
-            if (!cleanPath.startsWith("/")) {
-                cleanPath = "/" + cleanPath;
-            }
+    // We only look for non-default languages (since default has no prefix)
+    const langCodes = Object.keys(languages).filter((k) => k !== defaultLang);
+
+    for (const code of langCodes) {
+        const prefix = `/${code}`;
+        // Match exact "/es" or "/es/..."
+        if (pathNoLang === prefix || pathNoLang.startsWith(prefix + "/")) {
+            pathNoLang = pathNoLang.slice(prefix.length);
+            break; // Found and stripped the language
         }
     }
 
-    // Ensure cleanPath starts with /
-    if (!cleanPath.startsWith("/")) cleanPath = "/" + cleanPath;
+    // Ensure path starts with /
+    if (!pathNoLang.startsWith("/")) pathNoLang = "/" + pathNoLang;
 
     // 2. Construct New Path
     if (targetLang === defaultLang) {
-        // Default: just the clean path (e.g. /mp3)
-        // But if cleanPath is just / and we want to go home, it's correct.
-        return cleanPath + search;
+        // Target is default (no prefix)
+        // If path is just /, return / (Home)
+        return pathNoLang === "/" ? "/" : pathNoLang + search;
     } else {
-        // Other: /target + cleanPath (e.g. /es/mp3)
-        // Handle root case: cleanPath / -> /es
-        if (cleanPath === "/") {
+        // Target is localized (add prefix)
+        // If path is /, return /es
+        if (pathNoLang === "/") {
             return `/${targetLang}${search}`;
         }
-        return `/${targetLang}${cleanPath}${search}`;
+        // If path is /mp3, return /es/mp3
+        return `/${targetLang}${pathNoLang}${search}`;
     }
 }
 ---
