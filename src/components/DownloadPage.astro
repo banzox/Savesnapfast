@@ -111,6 +111,7 @@ const showAbout = aboutTitle && aboutTitle !== aboutTitleKey;
 let aboutIcon = "fas fa-info-circle";
 if (pagePrefix.includes("mp3")) aboutIcon = "fas fa-headphones";
 if (pagePrefix.includes("story")) aboutIcon = "fas fa-photo-film";
+if (pagePrefix.includes("slideshow")) aboutIcon = "fas fa-layer-group";
 
 // --- Meta Data ---
 const metaTitle = t(getKey("meta_title")) || t("meta.title");

@@ -24,6 +24,9 @@
     "download_video": "Download Video",
     "download_audio": "Download MP3",
     "hd_quality": "No Watermark",
+    "download_zip": "Download All Images (ZIP)",
+    "creating_zip": "Creating ZIP...",
+    "save_image": "Save Image",
     "error_busy": "Service busy, please try again later."
   },
   "faq": {
@@ -118,6 +121,14 @@
       "unlimited": {
         "title": "Unlimited & Free",
         "desc": "No limits on downloads. Convert as many TikTok videos to MP3 as you want."
+      },
+      "safe": {
+        "title": "Safe & Secure",
+        "desc": "We respect your privacy. No personal data is collected or stored."
+      },
+      "no_watermark": {
+        "title": "Clean Audio",
+        "desc": "Get pure audio tracks without any intro/outro sounds or watermarks."
       }
     },
     "how_to": {
@@ -246,6 +257,14 @@
       "unlimited": {
         "title": "Unlimited Saves",
         "desc": "There is no limit to the number of slideshows you can download per day."
+      },
+      "safe": {
+        "title": "100% Secure",
+        "desc": "Your downloads are private and secure. No history is saved."
+      },
+      "anonymous": {
+        "title": "Anonymous Story Viewer",
+        "desc": "View and download slideshows without notifying the creator."
       }
     },
     "how_to": {
