@@ -10,7 +10,8 @@
     "terms": "使用條款",
     "privacy": "隱私權政策",
     "dmca": "DMCA",
-    "disclaimer": "免責聲明"
+    "disclaimer": "免責聲明",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok 影片下載器",
@@ -23,7 +24,10 @@
     "download_video": "下载视频",
     "download_audio": "下载 MP3",
     "hd_quality": "无水印",
-    "error_busy": "服务繁忙，请稍后再试。"
+    "error_busy": "服务繁忙，请稍后再试。",
+    "download_zip": "全部下载 (ZIP)",
+    "creating_zip": "生成 ZIP...",
+    "save_image": "保存"
   },
   "faq": {
     "title": "常見問題 (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. 保留所有權利。"
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "极速下载",
       "desc": "利用我们的高速服务器，在几秒钟内下载 TikTok 视频。"
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "无限使用",
       "desc": "每天可以无限制下载任意数量的视频。"
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "如何下载无水印的 TikTok 视频",
     "step1": "复制您想要保存的 TikTok 视频链接。",
     "step2": "将链接粘贴到页面顶部的下载框中。",
-    "step3": "点击“下载”按钮，您的视频将立即保存。"
+    "step3": "点击“下载”按钮，您的视频将立即保存。",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "返回下载器",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% 安全",
+        "desc": "私密下载。"
+      },
+      "anonymous": {
+        "title": "匿名",
+        "desc": "查看时不通知。"
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "幻灯片"
+    "slideshow": "幻灯片",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 转换器 - 下载音频 (高品质)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "免费且无限制",
         "desc": "无下载次数限制。"
+      },
+      "safe": {
+        "title": "安全",
+        "desc": "隐私保护。"
+      },
+      "no_watermark": {
+        "title": "纯净音频",
+        "desc": "无水印。"
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "仅限个人使用。",
       "q10": "与视频下载器有什么区别？",
       "a10": "MP3 转换器只保存声音，不保存画面。"
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "下载 TikTok 快拍 - 匿名保存",
@@ -461,6 +504,7 @@
       "a9": "快拍可能已过期或账号是私密的。",
       "q10": "快拍和幻灯片的区别？",
       "a10": "快拍是临时的 (24h)，幻灯片是永久的。"
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

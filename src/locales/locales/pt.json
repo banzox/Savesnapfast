@@ -10,7 +10,8 @@
     "terms": "Termos de Uso",
     "privacy": "Privacidade",
     "dmca": "DMCA",
-    "disclaimer": "Isenção de Responsabilidade"
+    "disclaimer": "Isenção de Responsabilidade",
+    "tools": "Tools"
   },
   "hero": {
     "title": "Baixador de TikTok",
@@ -23,7 +24,10 @@
     "download_video": "Baixar Vídeo",
     "download_audio": "Baixar MP3",
     "hd_quality": "Sem marca d'água",
-    "error_busy": "Serviço ocupado, tente novamente mais tarde."
+    "error_busy": "Serviço ocupado, tente novamente mais tarde.",
+    "download_zip": "Baixar Tudo (ZIP)",
+    "creating_zip": "Criando ZIP...",
+    "save_image": "Salvar"
   },
   "faq": {
     "title": "Perguntas Frequentes (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Todos os direitos reservados."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Download Super Rápido",
       "desc": "Baixe vídeos do TikTok em segundos com nossos servidores de alta velocidade."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Uso Ilimitado",
       "desc": "Baixe quantos vídeos quiser, sem restrições."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Como baixar vídeos do TikTok sem marca d'água",
     "step1": "Copie o link do vídeo do TikTok que você deseja salvar.",
     "step2": "Cole o link na caixa de download no topo desta página.",
-    "step3": "Clique no botão 'Download' e seu vídeo será salvo imediatamente."
+    "step3": "Clique no botão 'Download' e seu vídeo será salvo imediatamente.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Voltar ao Baixador",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Ilimitado",
         "desc": "Downloads gratuitos sem limites."
+      },
+      "safe": {
+        "title": "100% Seguro",
+        "desc": "Downloads privados."
+      },
+      "anonymous": {
+        "title": "Anônimo",
+        "desc": "Ver sem notificar."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Slideshow",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Conversor TikTok MP3 - Baixar Áudio (Alta Qualidade)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Ilimitado e Grátis",
         "desc": "Sem limites. Converta quantos vídeos quiser."
+      },
+      "safe": {
+        "title": "Seguro",
+        "desc": "Privacidade garantida."
+      },
+      "no_watermark": {
+        "title": "Áudio Limpo",
+        "desc": "Sem marca d'água."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Para uso pessoal apenas.",
       "q10": "Diferença para o baixador de vídeo?",
       "a10": "O conversor MP3 salva apenas o áudio, sem o vídeo."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Baixar Stories do TikTok - Salvar Anonimamente",
@@ -461,6 +504,7 @@
       "a9": "O story pode ter expirado ou a conta é privada.",
       "q10": "Diferença Story vs Slideshow?",
       "a10": "Stories somem, Slideshows (carrosséis) são permanentes. Baixamos ambos."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

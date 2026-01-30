@@ -24,7 +24,10 @@
     "download_video": "Download Video",
     "download_audio": "Download MP3",
     "hd_quality": "No Watermark",
-    "error_busy": "Service busy, please try again later."
+    "error_busy": "Service busy, please try again later.",
+    "download_zip": "I-download Lahat (ZIP)",
+    "creating_zip": "Gumagawa ng ZIP...",
+    "save_image": "I-save"
   },
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",
@@ -81,7 +84,8 @@
   "nav_menu": {
     "video": "Video",
     "mp3": "MP3 Audio",
-    "stories": "Stories"
+    "stories": "Stories",
+    "slideshow": "Slideshow"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Converter - I-download ang Audio (Mataas na Kalidad)",
@@ -116,6 +120,14 @@
       "unlimited": {
         "title": "Libre at Walang Limitasyon",
         "desc": "Walang limit sa pag-download."
+      },
+      "safe": {
+        "title": "Ligtas",
+        "desc": "Ginagalang ang privacy."
+      },
+      "no_watermark": {
+        "title": "Malinis na Audio",
+        "desc": "Walang watermark."
       }
     },
     "how_to": {
@@ -145,7 +157,8 @@
       "a9": "Para sa personal na gamit lamang.",
       "q10": "Ano ang kaibahan sa video downloader?",
       "a10": "Ang MP3 converter ay audio lang ang sini-save, walang video."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "I-download ang TikTok Story - I-save nang Anonymous",
@@ -208,9 +221,14 @@
       "a9": "Baka expired na ang story o private ang account.",
       "q10": "Kaibahan ng Story vs Slideshow?",
       "a10": "Ang stories ay temporary (24h), ang slideshows ay permanent."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Fast Download",
       "desc": "Download TikTok videos in seconds with our high-speed servers."
@@ -222,13 +240,28 @@
     "unlimited": {
       "title": "Unlimited Usage",
       "desc": "Download as many videos as you want without restrictions."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "How to Download TikTok Videos Without Watermark",
     "step1": "Copy the TikTok video link you want to save.",
     "step2": "Paste the link into the download box at the top of this page.",
-    "step3": "Click the 'Download' button and your video will be saved immediately."
+    "step3": "Click the 'Download' button and your video will be saved immediately.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Back to TikTok Downloader",
@@ -435,6 +468,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Libreng downloads."
+      },
+      "safe": {
+        "title": "100% Ligtas",
+        "desc": "Pribadong pag-download."
+      },
+      "anonymous": {
+        "title": "Incognito",
+        "desc": "Manood nang hindi inaabisuhan."
       }
     },
     "how_to": {

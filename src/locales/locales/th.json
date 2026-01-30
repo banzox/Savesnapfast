@@ -10,7 +10,8 @@
     "terms": "ข้อกำหนด",
     "privacy": "ความเป็นส่วนตัว",
     "dmca": "DMCA",
-    "disclaimer": "ข้อจำกัดความรับผิดชอบ"
+    "disclaimer": "ข้อจำกัดความรับผิดชอบ",
+    "tools": "Tools"
   },
   "hero": {
     "title": "เครื่องมือดาวน์โหลด TikTok",
@@ -23,7 +24,10 @@
     "download_video": "ดาวน์โหลดวิดีโอ",
     "download_audio": "ดาวน์โหลด MP3",
     "hd_quality": "ไม่มีลายน้ำ",
-    "error_busy": "บริการไม่ว่าง กรุณาลองใหม่อีกครั้งในภายหลัง"
+    "error_busy": "บริการไม่ว่าง กรุณาลองใหม่อีกครั้งในภายหลัง",
+    "download_zip": "ดาวน์โหลดทั้งหมด (ZIP)",
+    "creating_zip": "กำลังสร้าง ZIP...",
+    "save_image": "บันทึก"
   },
   "faq": {
     "title": "คำถามที่พบบ่อย (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast สงวนลิขสิทธิ์"
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "ดาวน์โหลดเร็วสุดขีด",
       "desc": "ดาวน์โหลดวิดีโอ TikTok ในไม่กี่วินาทีด้วยเซิร์ฟเวอร์ความเร็วสูงของเรา"
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "ใช้งานได้ไม่จำกัด",
       "desc": "ดาวน์โหลดวิดีโอได้มากเท่าที่คุณต้องการโดยไม่มีข้อจำกัดใดๆ"
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "วิธีดาวน์โหลดวิดีโอ TikTok แบบไม่มีลายน้ำ",
     "step1": "คัดลอกลิงก์วิดีโอ TikTok ที่คุณต้องการบันทึก",
     "step2": "วางลิงก์ลงในช่องดาวน์โหลดที่ด้านบนของหน้านี้",
-    "step3": "คลิกปุ่ม 'ดาวน์โหลด' และวิดีโอของคุณจะถูกบันทึกทันที"
+    "step3": "คลิกปุ่ม 'ดาวน์โหลด' และวิดีโอของคุณจะถูกบันทึกทันที",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "กลับไปที่เครื่องมือดาวน์โหลด",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "ปลอดภัย 100%",
+        "desc": "ดาวน์โหลดส่วนตัว"
+      },
+      "anonymous": {
+        "title": "นิรนาม",
+        "desc": "ดูโดยไม่แจ้งเตือน"
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "สไลด์โชว์"
+    "slideshow": "สไลด์โชว์",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "แปลง TikTok เป็น MP3 - ดาวน์โหลดเสียง (คุณภาพสูง)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "ฟรีและไม่จำกัด",
         "desc": "ดาวน์โหลดได้ไม่อั้น."
+      },
+      "safe": {
+        "title": "ปลอดภัย",
+        "desc": "เคารพความเป็นส่วนตัว"
+      },
+      "no_watermark": {
+        "title": "เสียงชัดใส",
+        "desc": "ไม่มีลายน้ำ"
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "สำหรับใช้ส่วนตัวเท่านั้น.",
       "q10": "ต่างจากโหลดวิดีโอไหม?",
       "a10": "แบบ MP3 จะได้แค่เสียง ไม่ได้ภาพ."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "ดาวน์โหลดสตอรี่ TikTok - บันทึกแบบไม่ระบุตัวตน",
@@ -461,6 +504,7 @@
       "a9": "สตอรี่อาจหมดอายุหรือเป็นส่วนตัว.",
       "q10": "ต่างกันอย่างไร?",
       "a10": "สตอรี่อยู่ชั่วคราว (24ชม.), สไลด์โชว์อยู่ถาวร."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

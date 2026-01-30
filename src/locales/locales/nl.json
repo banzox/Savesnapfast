@@ -10,7 +10,8 @@
     "terms": "Voorwaarden",
     "privacy": "Privacy",
     "dmca": "DMCA",
-    "disclaimer": "Disclaimer"
+    "disclaimer": "Disclaimer",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Video Downloader",
@@ -23,7 +24,10 @@
     "download_video": "Video downloaden",
     "download_audio": "MP3 downloaden",
     "hd_quality": "Zonder watermerk",
-    "error_busy": "Service bezet, probeer het later opnieuw."
+    "error_busy": "Service bezet, probeer het later opnieuw.",
+    "download_zip": "Alles Downloaden (ZIP)",
+    "creating_zip": "ZIP maken...",
+    "save_image": "Opslaan"
   },
   "faq": {
     "title": "Veelgestelde Vragen (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Alle rechten voorbehouden."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Supersnel downloaden",
       "desc": "Download TikTok-video's in enkele seconden met onze hogesnelheidsservers."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Onbeperkt gebruik",
       "desc": "Download zoveel video's als je wilt zonder enige beperkingen."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "TikTok-video's downloaden zonder watermerk",
     "step1": "Kopieer de link van de TikTok-video die je wilt opslaan.",
     "step2": "Plak de link in het downloadvak bovenaan deze pagina.",
-    "step3": "Klik op de knop 'Downloaden' en je video wordt direct opgeslagen."
+    "step3": "Klik op de knop 'Downloaden' en je video wordt direct opgeslagen.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Terug naar downloader",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Veilig",
+        "desc": "Privé downloads."
+      },
+      "anonymous": {
+        "title": "Anoniem",
+        "desc": "Bekijk zonder melding."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Diavoorstelling"
+    "slideshow": "Diavoorstelling",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Converter - Audio Downloaden (Hoge Kwaliteit)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Gratis & Onbeperkt",
         "desc": "Geen downloadlimieten."
+      },
+      "safe": {
+        "title": "Veilig",
+        "desc": "Privacy gerespecteerd."
+      },
+      "no_watermark": {
+        "title": "Zuivere Audio",
+        "desc": "Geen watermerk."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Alleen voor persoonlijk gebruik.",
       "q10": "Verschil met video downloader?",
       "a10": "De MP3 converter slaat alleen het geluid op, niet het beeld."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "TikTok Story Downloaden - Anoniem Opslaan",
@@ -461,6 +504,7 @@
       "a9": "Story kan verlopen zijn of account is privé.",
       "q10": "Verschil Story vs Diavoorstelling?",
       "a10": "Stories zijn tijdelijk (24u), Diavoorstellingen permanent."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

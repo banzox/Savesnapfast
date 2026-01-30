@@ -10,7 +10,8 @@
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutz",
     "dmca": "DMCA",
-    "disclaimer": "Haftungsausschluss"
+    "disclaimer": "Haftungsausschluss",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Video Downloader",
@@ -23,7 +24,10 @@
     "download_video": "Video herunterladen",
     "download_audio": "MP3 herunterladen",
     "hd_quality": "Ohne Wasserzeichen",
-    "error_busy": "Dienst beschäftigt, bitte später erneut versuchen."
+    "error_busy": "Dienst beschäftigt, bitte später erneut versuchen.",
+    "download_zip": "Alles Laden (ZIP)",
+    "creating_zip": "ZIP erstellen...",
+    "save_image": "Speichern"
   },
   "faq": {
     "title": "Häufig gestellte Fragen (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Alle Rechte vorbehalten."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Superschneller Download",
       "desc": "Laden Sie TikTok-Videos in Sekundenschnelle mit unseren Hochgeschwindigkeitsservern herunter."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Unbegrenzte Nutzung",
       "desc": "Laden Sie so viele Videos herunter, wie Sie möchten, ohne Einschränkungen."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "So laden Sie TikTok-Videos ohne Wasserzeichen herunter",
     "step1": "Kopieren Sie den TikTok-Videolink, den Sie speichern möchten.",
     "step2": "Fügen Sie den Link in das Download-Feld oben auf dieser Seite ein.",
-    "step3": "Klicken Sie auf die Schaltfläche 'Download' und Ihr Video wird sofort gespeichert."
+    "step3": "Klicken Sie auf die Schaltfläche 'Download' und Ihr Video wird sofort gespeichert.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Zurück zum Downloader",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unbegrenzt",
         "desc": "Kostenlos und ohne Limits."
+      },
+      "safe": {
+        "title": "100% Sicher",
+        "desc": "Private Downloads."
+      },
+      "anonymous": {
+        "title": "Anonym",
+        "desc": "Ohne Benachrichtigung ansehen."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Diashow"
+    "slideshow": "Diashow",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Converter - Audio herunterladen (Hohe Qualität)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Kostenlos & Unbegrenzt",
         "desc": "Keine Limits. Lade so viel du willst."
+      },
+      "safe": {
+        "title": "Sicher",
+        "desc": "Privatsphäre geschützt."
+      },
+      "no_watermark": {
+        "title": "Reines Audio",
+        "desc": "Ohne Wasserzeichen."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Nur für den privaten Gebrauch.",
       "q10": "Unterschied zum Video Downloader?",
       "a10": "Der MP3 Converter speichert nur die Audiospur."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "TikTok Story Downloader - Anonym speichern",
@@ -461,6 +504,7 @@
       "a9": "Story könnte abgelaufen oder privat sein.",
       "q10": "Unterschied Story vs Diashow?",
       "a10": "Stories sind temporär (24h), Diashows permanent."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

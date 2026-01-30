@@ -10,7 +10,8 @@
     "terms": "利用規約",
     "privacy": "プライバシー",
     "dmca": "DMCA",
-    "disclaimer": "免責事項"
+    "disclaimer": "免責事項",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok動画ダウンローダー",
@@ -23,7 +24,10 @@
     "download_video": "ビデオをダウンロード",
     "download_audio": "MP3をダウンロード",
     "hd_quality": "ウォーターマークなし",
-    "error_busy": "サービスが混雑しています。後でもう一度お試しください。"
+    "error_busy": "サービスが混雑しています。後でもう一度お試しください。",
+    "download_zip": "すべてDL (ZIP)",
+    "creating_zip": "ZIP作成中...",
+    "save_image": "保存"
   },
   "faq": {
     "title": "よくある質問 (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. 全著作権所有."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "超高速ダウンロード",
       "desc": "高速サーバーにより、TikTok動画を数秒でダウンロードできます。"
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "無制限に使用可能",
       "desc": "制限なしで、1日に好きなだけ動画をダウンロードできます。"
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "ロゴなしでTikTok動画をダウンロードする方法",
     "step1": "保存したいTikTok動画のリンクをコピーします。",
     "step2": "このページ上部の入力ボックスにリンクを貼り付けます。",
-    "step3": "「ダウンロード」ボタンをクリックすると、すぐに保存されます。"
+    "step3": "「ダウンロード」ボタンをクリックすると、すぐに保存されます。",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "ダウンローダーに戻る",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100%安全",
+        "desc": "プライベートなダウンロード。"
+      },
+      "anonymous": {
+        "title": "匿名",
+        "desc": "通知せずに閲覧。"
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "スライドショー"
+    "slideshow": "スライドショー",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3変換 - 音声をダウンロード (高音質)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "無料＆無制限",
         "desc": "ダウンロード回数に制限はありません。"
+      },
+      "safe": {
+        "title": "安全",
+        "desc": "プライバシー保護。"
+      },
+      "no_watermark": {
+        "title": "クリアな音声",
+        "desc": "透かしなし。"
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "個人的な使用に限り合法です。",
       "q10": "動画ダウンローダーとの違いは？",
       "a10": "MP3変換は音声のみを保存し、動画は保存しません。"
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "TikTokストーリーダウンローダー - 匿名保存",
@@ -461,6 +504,7 @@
       "a9": "ストーリーが期限切れか、非公開の可能性があります。",
       "q10": "ストーリーとスライドショーの違いは？",
       "a10": "ストーリーは一時的(24h)、スライドショーは永続的です。"
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

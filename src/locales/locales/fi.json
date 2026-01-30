@@ -10,7 +10,8 @@
     "terms": "Ehdot",
     "privacy": "Tietosuoja",
     "dmca": "DMCA",
-    "disclaimer": "Vastuuvapaus"
+    "disclaimer": "Vastuuvapaus",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Video Lataaja",
@@ -23,7 +24,10 @@
     "download_video": "Lataa video",
     "download_audio": "Lataa MP3",
     "hd_quality": "Ilman vesileimaa",
-    "error_busy": "Palvelu on varattu, yritä myöhemmin uudelleen."
+    "error_busy": "Palvelu on varattu, yritä myöhemmin uudelleen.",
+    "download_zip": "Lataa kaikki (ZIP)",
+    "creating_zip": "Luodaan ZIP...",
+    "save_image": "Tallenna"
   },
   "faq": {
     "title": "Usein kysytyt kysymykset (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Kaikki oikeudet pidätetään."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Erittäin nopea lataus",
       "desc": "Lataa TikTok-videoita sekunneissa nopeilla palvelimillamme."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Rajoittamaton käyttö",
       "desc": "Lataa niin monta videota kuin haluat ilman rajoituksia."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Kuinka ladata TikTok-videoita ilman vesileimaa",
     "step1": "Kopioi tallennettavan TikTok-videon linkki.",
     "step2": "Liitä linkki tämän sivun yläreunassa olevaan latauskenttään.",
-    "step3": "Napsauta 'Lataa'-painiketta, niin videosi tallennεται välittömästi."
+    "step3": "Napsauta 'Lataa'-painiketta, niin videosi tallennεται välittömästi.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Takaisin lataajaan",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Turvallinen",
+        "desc": "Yksityiset lataukset."
+      },
+      "anonymous": {
+        "title": "Anonyymi",
+        "desc": "Katso ilman ilmoitusta."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Diaesitys"
+    "slideshow": "Diaesitys",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Muunnin - Lataa Ääntä (Korkea Laatu)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Ilmainen & Rajoittamaton",
         "desc": "Ei latausrajoituksia."
+      },
+      "safe": {
+        "title": "Turvallinen",
+        "desc": "Yksityisyyden suoja."
+      },
+      "no_watermark": {
+        "title": "Puhdas ääni",
+        "desc": "Ei vesileimaa."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Vain henkilökohtaiseen käyttöön.",
       "q10": "Ero videolataajaan?",
       "a10": "MP3-muunnin tallentaa vain äänen, ei kuvaa."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Lataa TikTok Story - Tallenna Anonyymisti",
@@ -461,6 +504,7 @@
       "a9": "Story voi olla vanhentunut tai tili yksityinen.",
       "q10": "Ero Story vs Diaesitys?",
       "a10": "Tarinat ovat väliaikaisia (24h), Diaesitykset pysyviä."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

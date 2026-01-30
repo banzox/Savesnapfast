@@ -10,7 +10,8 @@
     "terms": "Điều khoản",
     "privacy": "Quyền riêng tư",
     "dmca": "DMCA",
-    "disclaimer": "Tuyên bố miễn trừ"
+    "disclaimer": "Tuyên bố miễn trừ",
+    "tools": "Tools"
   },
   "hero": {
     "title": "Trình Tải Video TikTok",
@@ -23,7 +24,10 @@
     "download_video": "Tải Video",
     "download_audio": "Tải MP3",
     "hd_quality": "Không có logo",
-    "error_busy": "Dịch vụ đang bận, vui lòng thử lại sau."
+    "error_busy": "Dịch vụ đang bận, vui lòng thử lại sau.",
+    "download_zip": "Tải Tất Cả (ZIP)",
+    "creating_zip": "Tạo ZIP...",
+    "save_image": "Lưu"
   },
   "faq": {
     "title": "Câu hỏi thường gặp (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Bảo lưu mọi quyền."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Tải xuống cực nhanh",
       "desc": "Tải video TikTok trong vài giây với máy chủ tốc độ cao của chúng tôi."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Sử dụng không giới hạn",
       "desc": "Tải xuống bao nhiêu video tùy thích mà không có bất kỳ hạn chế nào."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Cách tải video TikTok không có hình mờ",
     "step1": "Sao chép liên kết video TikTok mà bạn muốn lưu.",
     "step2": "Dán liên kết vào hộp tải xuống ở đầu trang này.",
-    "step3": "Nhấp vào nút 'Tải xuống' và video của bạn sẽ được lưu ngay lập tức."
+    "step3": "Nhấp vào nút 'Tải xuống' và video của bạn sẽ được lưu ngay lập tức.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Quay lại trình tải xuống",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "An Toàn 100%",
+        "desc": "Tải xuống riêng tư."
+      },
+      "anonymous": {
+        "title": "Ẩn Danh",
+        "desc": "Xem không thông báo."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Trình chiếu"
+    "slideshow": "Trình chiếu",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Chuyển đổi TikTok sang MP3 - Tải Âm thanh (Chất lượng cao)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Miễn phí & Không giới hạn",
         "desc": "Không giới hạn số lần tải."
+      },
+      "safe": {
+        "title": "An Toàn",
+        "desc": "Bảo mật quyền riêng tư."
+      },
+      "no_watermark": {
+        "title": "Âm Thanh Sạch",
+        "desc": "Không logo."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Chỉ dành cho sử dụng cá nhân.",
       "q10": "Khác gì với tải video?",
       "a10": "Chuyển đổi MP3 chỉ lưu âm thanh, không lưu hình."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Tải Story TikTok - Lưu Ẩn danh",
@@ -461,6 +504,7 @@
       "a9": "Story có thể đã hết hạn hoặc tài khoản riêng tư.",
       "q10": "Khác nhau Story và Trình chiếu?",
       "a10": "Story tự hủy (24h), Trình chiếu vĩnh viễn."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

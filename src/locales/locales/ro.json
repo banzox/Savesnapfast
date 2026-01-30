@@ -10,7 +10,8 @@
     "terms": "Termeni",
     "privacy": "Confidențialitate",
     "dmca": "DMCA",
-    "disclaimer": "Declinare a responsabilității"
+    "disclaimer": "Declinare a responsabilității",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Video Downloader",
@@ -23,7 +24,10 @@
     "download_video": "Descarcă Video",
     "download_audio": "Descarcă MP3",
     "hd_quality": "Fără watermark",
-    "error_busy": "Serviciu ocupat, încercați din nou mai târziu."
+    "error_busy": "Serviciu ocupat, încercați din nou mai târziu.",
+    "download_zip": "Descarcă Tot (ZIP)",
+    "creating_zip": "Creare ZIP...",
+    "save_image": "Salvează"
   },
   "faq": {
     "title": "Întrebări Frecvente (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Toate drepturile rezervate."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Descărcare super rapidă",
       "desc": "Descărcați videoclipuri TikTok în câteva secunde cu serverele noastre de mare viteză."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Utilizare nelimitată",
       "desc": "Descărcați oricâte videoclipuri doriți, fără nicio restricție."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Cum să descărcați videoclipuri TikTok fără filigran",
     "step1": "Copiați linkul videoclipului TikTok pe care doriți să îl salvați.",
     "step2": "Lipiți linkul în caseta de descărcare din partea de sus a acestei pagini.",
-    "step3": "Faceți clic på butonul „Descărcare” și videoclipul va fi salvat imediat."
+    "step3": "Faceți clic på butonul „Descărcare” și videoclipul va fi salvat imediat.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Înapoi la descărcare",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Sigur",
+        "desc": "Descărcări private."
+      },
+      "anonymous": {
+        "title": "Anonim",
+        "desc": "Vezi fără notificare."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Prezentare"
+    "slideshow": "Prezentare",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Convertor TikTok în MP3 - Descarcă Audio (Calitate Înaltă)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Gratuit & Nelimitat",
         "desc": "Fără limită de descărcare."
+      },
+      "safe": {
+        "title": "Sigur",
+        "desc": "Respectăm confidențialitatea."
+      },
+      "no_watermark": {
+        "title": "Audio Curat",
+        "desc": "Fără filigran."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Doar pentru uz personal.",
       "q10": "Diferența față de video downloader?",
       "a10": "Convertorul MP3 salvează doar sunetul, fără imagine."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Descarcă Story TikTok - Salvează Anonim",
@@ -461,6 +504,7 @@
       "a9": "Story-ul poate fi expirat sau contul privat.",
       "q10": "Diferența Story vs Slideshow?",
       "a10": "Story-urile sunt temporare (24h), Slideshow-urile permanente."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

@@ -10,7 +10,8 @@
     "terms": "Términos de Uso",
     "privacy": "Privacidad",
     "dmca": "DMCA",
-    "disclaimer": "Descargo de Responsabilidad"
+    "disclaimer": "Descargo de Responsabilidad",
+    "tools": "Tools"
   },
   "hero": {
     "title": "Descargador de TikTok",
@@ -23,7 +24,10 @@
     "download_video": "Descargar Video",
     "download_audio": "Descargar MP3",
     "hd_quality": "Sin marca de agua",
-    "error_busy": "Servicio ocupado, inténtalo de nuevo más tarde."
+    "error_busy": "Servicio ocupado, inténtalo de nuevo más tarde.",
+    "download_zip": "Descargar Todo (ZIP)",
+    "creating_zip": "Creando ZIP...",
+    "save_image": "Guardar Imagen"
   },
   "faq": {
     "title": "Preguntas Frecuentes (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Todos los derechos reservados."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Descarga Súper Rápida",
       "desc": "Descarga videos de TikTok en segundos con nuestros servidores de alta velocidad."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Uso Ilimitado",
       "desc": "Descarga tantos videos como quieras sin ninguna restricción."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Cómo Descargar Videos de TikTok Sin Marca de Agua",
     "step1": "Copia el enlace del video de TikTok que quieres guardar.",
     "step2": "Pega el enlace en el cuadro de descarga en la parte superior.",
-    "step3": "Haz clic en el botón 'Descargar' y tu video se guardará inmediatamente."
+    "step3": "Haz clic en el botón 'Descargar' y tu video se guardará inmediatamente.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Volver al descargador",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Sin Límites",
         "desc": "Descargas ilimitadas gratis."
+      },
+      "safe": {
+        "title": "100% Seguro",
+        "desc": "Descargas privadas. Sin historial."
+      },
+      "anonymous": {
+        "title": "Visor Anónimo",
+        "desc": "Ver sin notificar al creador."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Slideshow",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Convertidor MP3 TikTok - Descargar Audio (Alta Calidad)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Ilimitado y Gratis",
         "desc": "Sin límites de descarga."
+      },
+      "safe": {
+        "title": "Seguro",
+        "desc": "Respetamos tu privacidad."
+      },
+      "no_watermark": {
+        "title": "Audio Limpio",
+        "desc": "Sin marcas de agua."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Solo para uso personal.",
       "q10": "¿Diferencia con descargar video?",
       "a10": "El convertidor MP3 solo guarda el audio."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Descargar Historias TikTok - Guardar Anónimamente",
@@ -461,6 +504,7 @@
       "a9": "Verifica si expiró o es privada.",
       "q10": "¿Diferencia Story vs Slideshow?",
       "a10": "Las historias son temporales (24h), los slideshows permanentes."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

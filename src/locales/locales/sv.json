@@ -10,7 +10,8 @@
     "terms": "Villkor",
     "privacy": "Integritet",
     "dmca": "DMCA",
-    "disclaimer": "Ansvarsfriskrivning"
+    "disclaimer": "Ansvarsfriskrivning",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Video Nedladdare",
@@ -23,7 +24,10 @@
     "download_video": "Ladda ner video",
     "download_audio": "Ladda ner MP3",
     "hd_quality": "Utan vattenstämpel",
-    "error_busy": "Tjänsten är upptagen, försök igen senare."
+    "error_busy": "Tjänsten är upptagen, försök igen senare.",
+    "download_zip": "Ladda ner alla (ZIP)",
+    "creating_zip": "Skapar ZIP...",
+    "save_image": "Spara"
   },
   "faq": {
     "title": "Vanliga frågor (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Alla rättigheter förbehållna."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Supersnabb nedladdning",
       "desc": "Ladda ner TikTok-videor på några sekunder med våra höghastighetsservrar."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Obegränsad användning",
       "desc": "Ladda ner så många videor du vill utan några begränsningar."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Hur man laddar ner TikTok-videor utan vattenstämpel",
     "step1": "Kopiera länken till TikTok-videon du vill spara.",
     "step2": "Klistra in länken i nedladdningsrutan högst upp på denna sida.",
-    "step3": "Klicka på knappen 'Ladda ner' så sparas din video omedelbart."
+    "step3": "Klicka på knappen 'Ladda ner' så sparas din video omedelbart.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Tillbaka till nedladdare",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Säkert",
+        "desc": "Privata nedladdningar."
+      },
+      "anonymous": {
+        "title": "Anonym",
+        "desc": "Visa utan avisering."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Bildspel"
+    "slideshow": "Bildspel",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Konverterare - Ladda Ner Ljud (Hög Kvalitet)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Gratis & Obegränsat",
         "desc": "Inga nedladdningsgränser."
+      },
+      "safe": {
+        "title": "Säkert",
+        "desc": "Integritet skyddad."
+      },
+      "no_watermark": {
+        "title": "Rent Ljud",
+        "desc": "Inget vattenmärke."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Endast för personligt bruk.",
       "q10": "Skillnad mot videonedladdare?",
       "a10": "MP3-konverteraren sparar bara ljudet, inte bilden."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Ladda Ner TikTok Story - Spara Anonymt",
@@ -461,6 +504,7 @@
       "a9": "Storyn kan ha gått ut eller kontot är privat.",
       "q10": "Skillnad Story vs Bildspel?",
       "a10": "Stories är tillfälliga (24h), bildspel är permanenta."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

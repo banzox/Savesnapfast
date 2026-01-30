@@ -10,7 +10,8 @@
     "terms": "Terma",
     "privacy": "Privasi",
     "dmca": "DMCA",
-    "disclaimer": "Penafian"
+    "disclaimer": "Penafian",
+    "tools": "Tools"
   },
   "hero": {
     "title": "Pemuat Turun Video TikTok",
@@ -23,7 +24,10 @@
     "download_video": "Muat Turun Video",
     "download_audio": "Muat Turun MP3",
     "hd_quality": "Tanpa tanda air",
-    "error_busy": "Perkhidmatan sibuk, sila cuba lagi kemudian."
+    "error_busy": "Perkhidmatan sibuk, sila cuba lagi kemudian.",
+    "download_zip": "Muat Turun Semua (ZIP)",
+    "creating_zip": "Mencipta ZIP...",
+    "save_image": "Simpan"
   },
   "faq": {
     "title": "Soalan Lazim (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Hak cipta terpelihara."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Muat Turun Sangat Pantas",
       "desc": "Muat turun video TikTok dalam beberapa saat dengan pelayan berkelajuan tinggi kami."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Penggunaan Tanpa Had",
       "desc": "Muat turun seberapa banyak video yang anda mahu tanpa sebarang sekatan."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Cara Memuat Turun Video TikTok Tanpa Tanda Air",
     "step1": "Salin pautan video TikTok yang ingin anda simpan.",
     "step2": "Tampal pautan ke dalam kotak muat turun di bahagian atas halaman ini.",
-    "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta."
+    "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Kembali ke Pemuat Turun",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Selamat",
+        "desc": "Muat turun peribadi."
+      },
+      "anonymous": {
+        "title": "Tanpa Nama",
+        "desc": "Lihat tanpa pemberitahuan."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Tayangan Slaid"
+    "slideshow": "Tayangan Slaid",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Penukar MP3 TikTok - Muat Turun Audio (Kualiti Tinggi)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Percuma & Tanpa Had",
         "desc": "Tiada had muat turun."
+      },
+      "safe": {
+        "title": "Selamat",
+        "desc": "Privasi dihormati."
+      },
+      "no_watermark": {
+        "title": "Audio Bersih",
+        "desc": "Tiada tera air."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Hanya untuk kegunaan peribadi.",
       "q10": "Apa beza dengan video downloader?",
       "a10": "Penukar MP3 hanya simpan audio, bukan video."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Muat Turun Story TikTok - Simpan Tanpa Nama",
@@ -461,6 +504,7 @@
       "a9": "Story mungkin dah tamat tempoh atau akaun peribadi.",
       "q10": "Beza Story vs Slideshow?",
       "a10": "Story sementara (24j), Slideshow kekal."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

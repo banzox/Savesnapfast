@@ -10,7 +10,8 @@
     "terms": "Kullanım Şartları",
     "privacy": "Gizlilik Politikası",
     "dmca": "DMCA",
-    "disclaimer": "Yasal Uyarı"
+    "disclaimer": "Yasal Uyarı",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Video İndirici",
@@ -23,7 +24,10 @@
     "download_video": "Videoyu İndir",
     "download_audio": "MP3 İndir",
     "hd_quality": "Filigransız",
-    "error_busy": "Servis meşgul, lütfen daha sonra tekrar deneyin."
+    "error_busy": "Servis meşgul, lütfen daha sonra tekrar deneyin.",
+    "download_zip": "Hepsini İndir (ZIP)",
+    "creating_zip": "ZIP Yapılıyor...",
+    "save_image": "Kaydet"
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular (SSS)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Tüm Hakları Saklıdır."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Süper Hızlı İndirme",
       "desc": "Gelişmiş sunucularımızla TikTok videolarını saniyeler içinde indirin."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Sınırsız Kullanım",
       "desc": "Günde istediğiniz kadar videoyu kısıtlama olmadan indirin."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Filigransız TikTok Videosu Nasıl İndirilir?",
     "step1": "Kaydetmek istediğiniz TikTok videosunun bağlantısını kopyalayın.",
     "step2": "Bağlantıyı bu sayفن صفحة التحميل في الأعلى.",
-    "step3": "'İndir' butonuna tıklayın, videonuz anında cihazınıza kaydedilecektir."
+    "step3": "'İndir' butonuna tıklayın, videonuz anında cihazınıza kaydedilecektir.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "TikTok İndiriciye Dön",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Sınırsız",
         "desc": "Ücretsiz ve limitsiz."
+      },
+      "safe": {
+        "title": "%100 Güvenli",
+        "desc": "Gizli indirmeler."
+      },
+      "anonymous": {
+        "title": "Anonim",
+        "desc": "Bildirim gitmeden izle."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slayt Gösterisi"
+    "slideshow": "Slayt Gösterisi",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Dönüştürücü - Ses İndir (Yüksek Kalite)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Sınırsız ve Ücretsiz",
         "desc": "İndirme sınırı yok."
+      },
+      "safe": {
+        "title": "Güvenli",
+        "desc": "Gizliliğe saygı."
+      },
+      "no_watermark": {
+        "title": "Temiz Ses",
+        "desc": "Filigran yok."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Sadece kişisel kullanım içindir.",
       "q10": "Video indiriciden farkı ne?",
       "a10": "MP3 dönüştürücü sadece sesi kaydeder, görüntüyü değil."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "TikTok Hikaye İndirici - Anonim Kaydet",
@@ -461,6 +504,7 @@
       "a9": "Hikaye süresi dolmuş veya hesap gizli olabilir.",
       "q10": "Story ve Slayt farkı?",
       "a10": "Hikayeler geçicidir (24s), Slaytlar kalıcıdır."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

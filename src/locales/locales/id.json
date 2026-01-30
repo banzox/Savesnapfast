@@ -10,7 +10,8 @@
     "terms": "Syarat Ketentuan",
     "privacy": "Kebijakan Privasi",
     "dmca": "DMCA",
-    "disclaimer": "Penafian"
+    "disclaimer": "Penafian",
+    "tools": "Tools"
   },
   "hero": {
     "title": "Pengunduh Video TikTok",
@@ -23,7 +24,10 @@
     "download_video": "Unduh Video",
     "download_audio": "Unduh MP3",
     "hd_quality": "Tanpa tanda air",
-    "error_busy": "Layanan sibuk, silakan coba lagi nanti."
+    "error_busy": "Layanan sibuk, silakan coba lagi nanti.",
+    "download_zip": "Unduh Semua (ZIP)",
+    "creating_zip": "Membuat ZIP...",
+    "save_image": "Simpan"
   },
   "faq": {
     "title": "Pertanyaan Umum (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Hak cipta dilindungi undang-undang."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Unduhan Super Cepat",
       "desc": "Unduh video TikTok dalam hitungan detik dengan server berkecepatan tinggi kami."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Penggunaan Tanpa Batas",
       "desc": "Unduh video sebanyak yang Anda inginkan tanpa batasan apa pun."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Cara Mengunduh Video TikTok Tanpa Watermark",
     "step1": "Salin tautan video TikTok yang ingin Anda simpan.",
     "step2": "Tempel tautan ke kotak unduhan di bagian atas halaman ini.",
-    "step3": "Klik tombol 'Unduh' dan video Anda akan segera disimpan."
+    "step3": "Klik tombol 'Unduh' dan video Anda akan segera disimpan.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Kembali ke Pengunduh",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Tanpa Batas",
         "desc": "Unduhan gratis tanpa batas."
+      },
+      "safe": {
+        "title": "100% Aman",
+        "desc": "Unduhan pribadi."
+      },
+      "anonymous": {
+        "title": "Anonim",
+        "desc": "Lihat tanpa notifikasi."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Slideshow",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Konverter MP3 TikTok - Download Audio (Kualitas Tinggi)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Gratis & Tanpa Batas",
         "desc": "Tidak ada batas unduhan."
+      },
+      "safe": {
+        "title": "Aman",
+        "desc": "Privasi terjaga."
+      },
+      "no_watermark": {
+        "title": "Audio Bersih",
+        "desc": "Tanpa tanda air."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Hanya untuk penggunaan pribadi.",
       "q10": "Apa bedanya dengan video downloader?",
       "a10": "Konverter MP3 hanya menyimpan file audio."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Download Story TikTok - Simpan Anonim",
@@ -461,6 +504,7 @@
       "a9": "Mungkin story sudah kedaluwarsa atau akun privat.",
       "q10": "Bedanya Story vs Slideshow?",
       "a10": "Story sementara (24 jam), Slideshow permanen."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

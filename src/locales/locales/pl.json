@@ -10,7 +10,8 @@
     "terms": "Regulamin",
     "privacy": "Prywatność",
     "dmca": "DMCA",
-    "disclaimer": "Zastrzeżenia"
+    "disclaimer": "Zastrzeżenia",
+    "tools": "Tools"
   },
   "hero": {
     "title": "Pobieracz wideo TikTok",
@@ -23,7 +24,10 @@
     "download_video": "Pobierz wideo",
     "download_audio": "Pobierz MP3",
     "hd_quality": "Bez znaku wodnego",
-    "error_busy": "Usługa zajęta, spróbuj ponownie później."
+    "error_busy": "Usługa zajęta, spróbuj ponownie później.",
+    "download_zip": "Pobierz Wszystko (ZIP)",
+    "creating_zip": "Tworzenie ZIP...",
+    "save_image": "Zapisz"
   },
   "faq": {
     "title": "Często zadawane pytania (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Wszelkie prawa zastrzeżone."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Superszybkie pobieranie",
       "desc": "Pobieraj filmy z TikToka w kilka sekund dzięki naszym szybkim serwerom."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Nieograniczone korzystanie",
       "desc": "Pobieraj tyle filmów, ile chcesz, bez żadnych ograniczeń."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Jak pobierać filmy z TikToka bez znaku wodnego",
     "step1": "Skopiuj link do filmu na TikToku, który chcesz zapisać.",
     "step2": "Wklej link do pola pobierania u góry tej strony.",
-    "step3": "Kliknij przycisk „Pobierz”, a Twój film zostanie natychmiast zapisany."
+    "step3": "Kliknij przycisk „Pobierz”, a Twój film zostanie natychmiast zapisany.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Wróć do pobierania",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Bezpieczne",
+        "desc": "Prywatne pobieranie."
+      },
+      "anonymous": {
+        "title": "Anonimowy",
+        "desc": "Oglądaj bez powiadomienia."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Pokaz slajdów"
+    "slideshow": "Pokaz slajdów",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Konwerter TikTok na MP3 - Pobierz Audio (Wysoka Jakość)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Darmowe i Bez Limitu",
         "desc": "Brak limitów pobierania."
+      },
+      "safe": {
+        "title": "Bezpieczne",
+        "desc": "Prywatność chroniona."
+      },
+      "no_watermark": {
+        "title": "Czyste Audio",
+        "desc": "Bez znaku wodnego."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Tylko do użytku osobistego.",
       "q10": "Różnica względem pobierania wideo?",
       "a10": "Konwerter MP3 zapisuje tylko sam dźwięk, bez obrazu."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Pobierz Story z TikToka - Anonimowo",
@@ -461,6 +504,7 @@
       "a9": "Story mogło wygasnąć lub konto jest prywatne.",
       "q10": "Różnica Story a Pokaz slajdów?",
       "a10": "Stories są tymczasowe (24h), slajdy stałe."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

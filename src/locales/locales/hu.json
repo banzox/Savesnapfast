@@ -10,7 +10,8 @@
     "terms": "Feltételek",
     "privacy": "Adatvédelem",
     "dmca": "DMCA",
-    "disclaimer": "Jogi nyilatkozat"
+    "disclaimer": "Jogi nyilatkozat",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Videó Letöltő",
@@ -23,7 +24,10 @@
     "download_video": "Videó letöltése",
     "download_audio": "MP3 letöltése",
     "hd_quality": "Vízjel nélkül",
-    "error_busy": "A szolgáltatás foglalt, próbáld újra később."
+    "error_busy": "A szolgáltatás foglalt, próbáld újra később.",
+    "download_zip": "Összes letöltése (ZIP)",
+    "creating_zip": "ZIP készítése...",
+    "save_image": "Mentés"
   },
   "faq": {
     "title": "Gyakran Ismételt Kérdések (GYIK)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Minden jog fenntartva."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Szupergyors letöltés",
       "desc": "Töltsön le TikTok videókat másodpercek alatt nagy sebességű szervereinkkel."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Korlátlan használat",
       "desc": "Töltsön le annyi videót, amennyit csak akar, korlátozások nélkül."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "TikTok videók letöltése vízjel nélkül",
     "step1": "Másolja ki a menteni kívánt TikTok videó linkjét.",
     "step2": "Illessze be a linket az oldal tetején található letöltési mezőbe.",
-    "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül."
+    "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Vissza a letöltőhöz",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Biztonságos",
+        "desc": "Privát letöltések."
+      },
+      "anonymous": {
+        "title": "Névtelen",
+        "desc": "Nézd meg értesítés nélkül."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Diavetítés"
+    "slideshow": "Diavetítés",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Konvertáló - Hang Letöltése (Kiváló Minőség)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Ingyenes és Korlátlan",
         "desc": "Nincs letöltési korlát."
+      },
+      "safe": {
+        "title": "Biztonságos",
+        "desc": "Adatvédelem."
+      },
+      "no_watermark": {
+        "title": "Tiszta Hang",
+        "desc": "Vízjel nélkül."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Csak személyes használatra.",
       "q10": "Mi a különbség a videó letöltőhöz képest?",
       "a10": "Az MP3 konvertáló csak a hangot menti, a képet nem."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "TikTok Story Letöltése - Névtelenül Menteni",
@@ -461,6 +504,7 @@
       "a9": "A sztori lehet, hogy lejárt vagy a fiók privát.",
       "q10": "Story vs Diavetítés különbség?",
       "a10": "A sztorik átmenetiek (24ó), a diavetítések állandóak."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

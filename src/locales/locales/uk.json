@@ -10,7 +10,8 @@
     "terms": "Умови",
     "privacy": "Конфіденційність",
     "dmca": "DMCA",
-    "disclaimer": "Відмова від відповідальності"
+    "disclaimer": "Відмова від відповідальності",
+    "tools": "Tools"
   },
   "hero": {
     "title": "Завантажувач TikTok",
@@ -23,7 +24,10 @@
     "download_video": "Завантажити відео",
     "download_audio": "Завантажити MP3",
     "hd_quality": "Без водяного знака",
-    "error_busy": "Сервіс зайнятий, спробуйте пізніше."
+    "error_busy": "Сервіс зайнятий, спробуйте пізніше.",
+    "download_zip": "Завантажити все (ZIP)",
+    "creating_zip": "Створення ZIP...",
+    "save_image": "Зберегти"
   },
   "faq": {
     "title": "Часті запитання (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Всі права захищені."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Надшвидке завантаження",
       "desc": "Завантажуйте відео з TikTok за лічені секунди за допомогою наших швидкісних серверів."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Необмежене використання",
       "desc": "Завантажуйте скільки завгодно відео без будь-яких обмежень."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Як завантажити відео з TikTok без водяного знака",
     "step1": "Скопіюйте посилання на відео TikTok, яке ви хочете зберегти.",
     "step2": "Вставте посилання в поле завантаження у верхній частині цієї сторінки.",
-    "step3": "Натисніть кнопку «Завантажити», і ваше відео буде негайно збережено."
+    "step3": "Натисніть кнопку «Завантажити», і ваше відео буде негайно збережено.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Назад до завантажувача",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Безпечно",
+        "desc": "Приватні завантаження."
+      },
+      "anonymous": {
+        "title": "Анонімно",
+        "desc": "Перегляд без сповіщень."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Слайд-шоу"
+    "slideshow": "Слайд-шоу",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Конвертер TikTok в MP3 - Завантажити Аудіо (Висока Якість)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Безкоштовно та Безлімітно",
         "desc": "Без обмежень на завантаження."
+      },
+      "safe": {
+        "title": "Безпечно",
+        "desc": "Конфіденційність."
+      },
+      "no_watermark": {
+        "title": "Чистий звук",
+        "desc": "Без водяних знаків."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Тільки для особистого використання.",
       "q10": "Відмінність від завантажувача відео?",
       "a10": "MP3 конвертер зберігає тільки звук."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Завантажити Історії TikTok - Анонімно",
@@ -461,6 +504,7 @@
       "a9": "Історія могла зникнути або акаунт закритий.",
       "q10": "Різниця Сторіс і Слайд-шоу?",
       "a10": "Сторіс зникають (24г), Слайди постійні."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

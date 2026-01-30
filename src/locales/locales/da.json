@@ -10,7 +10,8 @@
     "terms": "Vilkår",
     "privacy": "Privatliv",
     "dmca": "DMCA",
-    "disclaimer": "Ansvarsfraskrivelse"
+    "disclaimer": "Ansvarsfraskrivelse",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Video Downloader",
@@ -23,7 +24,10 @@
     "download_video": "Download video",
     "download_audio": "Download MP3",
     "hd_quality": "Uden vandmærke",
-    "error_busy": "Tjenesten er optaget, prøv igen senere."
+    "error_busy": "Tjenesten er optaget, prøv igen senere.",
+    "download_zip": "Download alle (ZIP)",
+    "creating_zip": "Laver ZIP...",
+    "save_image": "Gem"
   },
   "faq": {
     "title": "Ofte stillede spørgsmål (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Alle rettigheder forbeholdes."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Superhurtig download",
       "desc": "Download TikTok-videoer på få sekunder med vores højhastighedsservere."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Ubegrænset brug",
       "desc": "Download lige så mange videoer, du vil, uden begrænsninger."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Sådan downloader du TikTok-videoer uden vandmærke",
     "step1": "Kopier det TikTok-videolink, du vil gemme.",
     "step2": "Indsæt linket i downloadboksen øverst på denne side.",
-    "step3": "Klik på knappen 'Download', og din video gemmes med det samme."
+    "step3": "Klik på knappen 'Download', og din video gemmes med det samme.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Tilbage til downloader",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Sikker",
+        "desc": "Private downloads."
+      },
+      "anonymous": {
+        "title": "Anonym",
+        "desc": "Se uden besked."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Diasshow"
+    "slideshow": "Diasshow",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Konverter - Download Lyd (Høj Kvalitet)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Gratis & Ubegrænset",
         "desc": "Ingen downloadgrænser."
+      },
+      "safe": {
+        "title": "Sikker",
+        "desc": "Vi respekterer privatliv."
+      },
+      "no_watermark": {
+        "title": "Ren lyd",
+        "desc": "Uden vandmærke."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Kun til personlig brug.",
       "q10": "Forskel fra video downloader?",
       "a10": "MP3-konverteren gemmer kun lyden, ikke billedet."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Download TikTok Story - Gem Anonymt",
@@ -461,6 +504,7 @@
       "a9": "Storyen kan være udløbet eller kontoen er privat.",
       "q10": "Forskel Story vs Diasshow?",
       "a10": "Stories er midlertidige (24t), Diasshows er permanente."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }

@@ -10,7 +10,8 @@
     "terms": "Upyog Ki Shartein",
     "privacy": "Gopniyata Niti",
     "dmca": "DMCA",
-    "disclaimer": "Asvikaran"
+    "disclaimer": "Asvikaran",
+    "tools": "Tools"
   },
   "hero": {
     "title": "TikTok Video Downloader",
@@ -23,7 +24,10 @@
     "download_video": "वीडियो डाउनलोड करें",
     "download_audio": "MP3 डाउनलोड करें",
     "hd_quality": "बिना वॉटरमार्क के",
-    "error_busy": "सेवा व्यस्त है, कृपया बाद में पुनः प्रयास करें।"
+    "error_busy": "सेवा व्यस्त है, कृपया बाद में पुनः प्रयास करें।",
+    "download_zip": "सभी डाउनलोड (ZIP)",
+    "creating_zip": "ZIP बना रहा है...",
+    "save_image": "सेव करें"
   },
   "faq": {
     "title": "Aksar Puche Jane Wale Sawal (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Sabhi adhikar surakshit hain."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "सुपर फास्ट डाउनलोड",
       "desc": "हमारे हाई-स्पीड सर्वर के साथ कुछ ही सेकंड में टिकटॉक वीडियो डाउनलोड करें।"
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "असीमित उपयोग",
       "desc": "बिना किसी प्रतिबंध के जितने चाहें उतने वीडियो डाउनलोड करें।"
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "बिना वॉटरमार्क के टिकटॉक वीडियो कैसे डाउनलोड करें",
     "step1": "उस टिकटॉक वीडियो का लिंक कॉपी करें जिसे आप सेव करना चाहते हैं।",
     "step2": "इस पेज के शीर्ष पर स्थित डाउनलोड बॉक्स में लिंक पेस्ट करें।",
-    "step3": "'डाउनलोड' बटन पर क्लिक करें और आपका वीडियो तुरंत सेव हो जाएगा।"
+    "step3": "'डाउनलोड' बटन पर क्लिक करें और आपका वीडियो तुरंत सेव हो जाएगा।",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "डाउनलोडर पर वापस जाएं",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% सुरक्षित",
+        "desc": "निजी डाउनलोड।"
+      },
+      "anonymous": {
+        "title": "गुमनाम",
+        "desc": "बिना सूचना के देखें।"
       }
     },
     "how_to": {
@@ -373,6 +404,14 @@
       "unlimited": {
         "title": "मुफ्त और अनलिमिटेड",
         "desc": "कोई डाउनलोड सीमा नहीं।"
+      },
+      "safe": {
+        "title": "सुरक्षित",
+        "desc": "गोपनीयता का सम्मान।"
+      },
+      "no_watermark": {
+        "title": "साफ ऑडियो",
+        "desc": "बिना वॉटरमार्क।"
       }
     },
     "how_to": {

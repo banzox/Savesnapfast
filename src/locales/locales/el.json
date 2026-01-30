@@ -10,7 +10,8 @@
     "terms": "Όροι Χρήσης",
     "privacy": "Απόρρητο",
     "dmca": "DMCA",
-    "disclaimer": "Αποποίηση"
+    "disclaimer": "Αποποίηση",
+    "tools": "Tools"
   },
   "hero": {
     "title": "Λήψη Βίντεο TikTok",
@@ -23,7 +24,10 @@
     "download_video": "Λήψη βίντεο",
     "download_audio": "Λήψη MP3",
     "hd_quality": "Χωρίς υδατογράφημα",
-    "error_busy": "Η υπηρεσία είναι απασχολημένη, δοκιμάστε ξανά αργότερα."
+    "error_busy": "Η υπηρεσία είναι απασχολημένη, δοκιμάστε ξανά αργότερα.",
+    "download_zip": "Λήψη όλων (ZIP)",
+    "creating_zip": "Δημιουργία ZIP...",
+    "save_image": "Αποθήκευση"
   },
   "faq": {
     "title": "Συχνές Ερωτήσεις (FAQ)",
@@ -78,6 +82,10 @@
     "rights": "© 2026 SaveTikFast. Με επιφύλαξη παντός δικαιώματος."
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "fast": {
       "title": "Εξαιρετικά γρήγορη λήψη",
       "desc": "Κατεβάστε βίντεο TikTok σε δευτερόλεπτα με τους διακομιστές υψηλής ταχύτητας."
@@ -89,13 +97,28 @@
     "unlimited": {
       "title": "Απεριόριστη χρήση",
       "desc": "Κατεβάστε όσα βίντεο θέλετε χωρίς περιορισμούς."
+    },
+    "no_watermark": {
+      "title": "No Watermark",
+      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+    },
+    "quality": {
+      "title": "HD & 4K Quality",
+      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+    },
+    "device": {
+      "title": "All Devices",
+      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
     }
   },
   "how_to": {
     "title": "Πώς να κατεβάσετε βίντεο TikTok χωρίς υδατογράφημα",
     "step1": "Αντιγράψτε τον σύνδεσμο του βίντεο TikTok που θέλετε να αποθηκεύσετε.",
     "step2": "Επικολλήστε τον σύνδεσμο στο πλαίσιο λήψης στο επάνω μέρος αυτής της σελίδας.",
-    "step3": "Κάντε κλικ στο κουμπί 'Λήψη' και το βίντεό σας θα αποθηκευτεί αμέσως."
+    "step3": "Κάντε κλικ στο κουμπί 'Λήψη' και το βίντεό σας θα αποθηκευτεί αμέσως.",
+    "step1_title": "Copy Link",
+    "step2_title": "Paste URL",
+    "step3_title": "Download"
   },
   "tools": {
     "backToDownloader": "Πίσω στη λήψη",
@@ -302,6 +325,14 @@
       "unlimited": {
         "title": "Unlimited",
         "desc": "Free unlimited downloads."
+      },
+      "safe": {
+        "title": "100% Ασφαλές",
+        "desc": "Ιδιωτικές λήψεις."
+      },
+      "anonymous": {
+        "title": "Ανώνυμη",
+        "desc": "Προβολή χωρίς ειδοποίηση."
       }
     },
     "how_to": {
@@ -334,7 +365,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Παρουσίαση"
+    "slideshow": "Παρουσίαση",
+    "video": "Video",
+    "mp3": "MP3 Audio",
+    "stories": "Stories"
   },
   "mp3_page": {
     "meta_title": "Μετατροπέας TikTok σε MP3 - Λήψη Ήχου (Υψηλή Ποιότητα)",
@@ -369,6 +403,14 @@
       "unlimited": {
         "title": "Δωρεάν & Απεριόριστο",
         "desc": "Χωρίς όριο λήψεων."
+      },
+      "safe": {
+        "title": "Ασφαλές",
+        "desc": "Σεβασμός στο απόρρητο."
+      },
+      "no_watermark": {
+        "title": "Καθαρός ήχος",
+        "desc": "Χωρίς υδατογράφημα."
       }
     },
     "how_to": {
@@ -398,7 +440,8 @@
       "a9": "Μόνο για προσωπική χρήση.",
       "q10": "Διαφορά από το πρόγραμμα λήψης βίντεο;",
       "a10": "Ο μετατροπέας MP3 αποθηκεύει μόνο τον ήχο, όχι την εικόνα."
-    }
+    },
+    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
   },
   "story_page": {
     "meta_title": "Λήψη TikTok Story - Αποθήκευση Ανώνυμα",
@@ -461,6 +504,7 @@
       "a9": "Το story μπορεί να έχει λήξει ή ο λογαριασμός είναι ιδιωτικός.",
       "q10": "Διαφορά Story vs Παρουσίαση;",
       "a10": "Τα stories είναι προσωρινά (24ω), οι παρουσιάσεις μόνιμες."
-    }
+    },
+    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
   }
 }
