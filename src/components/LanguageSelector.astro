@@ -287,14 +287,15 @@ function getPathForLanguage(targetLang: string) {
     */
     .lang-menu-container {
         position: absolute;
-        top: 100%;
-        right: 0;
-        margin-top: 15px;
+        bottom: 100%; /* Open Upwards */
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px) scale(0.98); /* Center horizontally + slight down for animation start */
+        margin-bottom: 15px;
         width: 600px;
-        max-width: 90vw; /* Prevent overflow on smaller desktop screens */
+        max-width: 90vw;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(10px) scale(0.98);
         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         pointer-events: none;
         z-index: 3000;
@@ -303,7 +304,7 @@ function getPathForLanguage(targetLang: string) {
     .lang-menu-container.show {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0) scale(1);
+        transform: translateX(-50%) translateY(0) scale(1);
         pointer-events: auto;
     }
 

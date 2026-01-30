@@ -1,27 +1,120 @@
 ---
 import { useTranslations } from "../utils/i18n";
+import LanguageSelector from "./LanguageSelector.astro";
 
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
 ---
 
 <footer id="main-footer" class="footer-glass">
-    <div class="footer-links">
-        <a href={`/${lang === "en" ? "about" : lang + "/about"}`}
-            >{t("nav.about")}</a
-        >
-        <a href={`/${lang === "en" ? "privacy" : lang + "/privacy"}`}
-            >{t("nav.privacy")}</a
-        >
-        <a href={`/${lang === "en" ? "terms" : lang + "/terms"}`}
-            >{t("nav.terms")}</a
-        >
-        <a href={`/${lang === "en" ? "contact" : lang + "/contact"}`}
-            >{t("nav.contact")}</a
-        >
-        <a href={`/${lang === "en" ? "dmca" : lang + "/dmca"}`}
-            >{t("nav.dmca")}</a
-        >
+    <div class="footer-content">
+        <!-- Language Selector (Bottom Center) -->
+        <div class="footer-lang">
+            <LanguageSelector lang={lang} />
+        </div>
+
+        <div class="footer-links">
+            <a href={`/${lang === "en" ? "about" : lang + "/about"}`}
+                >{t("nav.about")}</a
+            >
+            <a href={`/${lang === "en" ? "privacy" : lang + "/privacy"}`}
+                >{t("nav.privacy")}</a
+            >
+            <a href={`/${lang === "en" ? "terms" : lang + "/terms"}`}
+                >{t("nav.terms")}</a
+            >
+            <a href={`/${lang === "en" ? "contact" : lang + "/contact"}`}
+                >{t("nav.contact")}</a
+            >
+            <a href={`/${lang === "en" ? "dmca" : lang + "/dmca"}`}
+                >{t("nav.dmca")}</a
+            >
+        </div>
+
+        <p class="copyright">{t("footer.rights")}</p>
     </div>
-    <p>{t("footer.rights")}</p>
 </footer>
+
+<style>
+    /* 
+    ========================================
+    FOOTER STYLES
+    ========================================
+    */
+    .footer-glass {
+        background: rgba(
+            10,
+            10,
+            20,
+            0.6
+        ); /* Slightly darker than glass default */
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 60px 20px 40px;
+        margin-top: 80px;
+        text-align: center;
+        width: 100%;
+    }
+
+    :global([data-theme="light"]) .footer-glass {
+        background: rgba(255, 255, 255, 0.8);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /* Language Selector Container */
+    .footer-lang {
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 10; /* Ensure it stays below modal but clickable */
+    }
+
+    /* Links */
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a {
+        color: var(--text-dim, rgba(255, 255, 255, 0.6));
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-transform: capitalize;
+    }
+
+    :global([data-theme="light"]) .footer-links a {
+        color: #666;
+    }
+
+    .footer-links a:hover {
+        color: var(--secondary, #00f2ea);
+        transform: translateY(-2px);
+    }
+
+    :global([data-theme="light"]) .footer-links a:hover {
+        color: #ff0050;
+    }
+
+    .copyright {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.85rem;
+        margin-top: 10px;
+    }
+
+    :global([data-theme="light"]) .copyright {
+        color: rgba(0, 0, 0, 0.4);
+    }
+</style>

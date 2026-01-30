@@ -1,73 +1,63 @@
 ---
-import { languages } from "../i18n/ui";
 import { useTranslations } from "../utils/i18n";
-import LanguageSelector from "./LanguageSelector.astro";
+
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
+
+const navItems = [
+    {
+        id: "video",
+        icon: "fas fa-video",
+        label: t("nav_menu.video"),
+        href: lang === "en" ? "/" : `/${lang}`,
+        activeCheck: (path: string) =>
+            !path.includes("mp3") &&
+            !path.includes("story") &&
+            !path.includes("slideshow"),
+    },
+    {
+        id: "mp3",
+        icon: "fas fa-music",
+        label: t("nav_menu.mp3"),
+        href: lang === "en" ? "/mp3" : `/${lang}/mp3`,
+        activeCheck: (path: string) => path.includes("mp3"),
+    },
+    {
+        id: "story",
+        icon: "fas fa-images",
+        label: t("nav_menu.stories"),
+        href: lang === "en" ? "/story" : `/${lang}/story`,
+        activeCheck: (path: string) => path.includes("story"),
+    },
+    {
+        id: "slideshow",
+        icon: "fas fa-layer-group",
+        label: t("nav_menu.slideshow"),
+        href: lang === "en" ? "/slideshow" : `/${lang}/slideshow`,
+        activeCheck: (path: string) => path.includes("slideshow"),
+    },
+];
+
+const currentPath = Astro.url.pathname;
 ---
 
 <header id="main-header">
-    <nav class="nav-container">
-        <!-- 1. Logo (Left) -->
-        <a
-            href={`/${lang === "en" ? "" : lang}`}
-            class="logo"
-            aria-label="SaveTikFast Home"
-        >
-            <div class="logo-icon-wrapper">
-                <i class="fab fa-tiktok"></i>
-            </div>
-            <span class="logo-text"
-                >SaveTik<span class="highlight">Fast</span></span
+    <div class="header-container">
+        {/* Top Row: Logo & Theme Toggle */}
+        <div class="top-bar">
+            <a
+                href={`/${lang === "en" ? "" : lang}`}
+                class="logo"
+                aria-label="SaveTikFast"
             >
-        </a>
+                <div class="logo-icon-wrapper">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <span class="logo-text"
+                    >SaveTik<span class="highlight">Fast</span></span
+                >
+            </a>
 
-        <!-- 2. Navigation Links (Center - Desktop Only) -->
-        <div class="nav-links" id="nav-links">
-            <nav class="nav-menu">
-                <a
-                    href={`/${lang === "en" ? "" : lang}`}
-                    class={!Astro.url.pathname.includes("mp3") &&
-                    !Astro.url.pathname.includes("story") &&
-                    !Astro.url.pathname.includes("slideshow")
-                        ? "active"
-                        : ""}
-                >
-                    <i class="fas fa-video"></i>
-                    <span>{t("nav_menu.video")}</span>
-                </a>
-                <a
-                    href={`/${lang === "en" ? "mp3" : lang + "/mp3"}`}
-                    class={Astro.url.pathname.includes("mp3") ? "active" : ""}
-                >
-                    <i class="fas fa-music"></i>
-                    <span>{t("nav_menu.mp3")}</span>
-                </a>
-                <a
-                    href={`/${lang === "en" ? "story" : lang + "/story"}`}
-                    class={Astro.url.pathname.includes("story") ? "active" : ""}
-                >
-                    <i class="fas fa-images"></i>
-                    <span>{t("nav_menu.stories")}</span>
-                </a>
-                <a
-                    href={`/${lang === "en" ? "slideshow" : lang + "/slideshow"}`}
-                    class={Astro.url.pathname.includes("slideshow")
-                        ? "active"
-                        : ""}
-                >
-                    <i class="fas fa-layer-group"></i>
-                    <span>{t("nav_menu.slideshow")}</span>
-                </a>
-            </nav>
-        </div>
-
-        <!-- Mobile Sidebar Overlay -->
-        <div id="nav-overlay" class="nav-overlay"></div>
-
-        <!-- 3. Controls (Right) -->
-        <div class="nav-controls">
-            <!-- Theme Toggle -->
             <button
                 class="theme-toggle"
                 id="theme-btn"
@@ -79,26 +69,28 @@ const t = useTranslations(lang);
                     <i class="fas fa-sun sun-icon"></i>
                 </div>
             </button>
-
-            <!-- Language Selector -->
-            <div class="lang-wrapper">
-                <LanguageSelector lang={lang} />
-            </div>
-
-            <!-- Hamburger (Mobile) -->
-            <button class="hamburger" id="menu-btn" aria-label="Menu">
-                <div class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </div>
-            </button>
         </div>
-    </nav>
+
+        {/* Bottom Row: Navigation */}
+        <nav class="nav-bar">
+            {
+                navItems.map((item) => (
+                    <a
+                        href={item.href}
+                        class={`nav-item ${item.activeCheck(currentPath) ? "active" : ""}`}
+                    >
+                        <i class={item.icon} />
+                        <span>{item.label}</span>
+                    </a>
+                ))
+            }
+        </nav>
+    </div>
 </header>
 
 <script is:inline>
     // Theme Logic
     (function () {
-        // Function to get current theme
         function getTheme() {
             if (
                 typeof localStorage !== "undefined" &&
@@ -109,10 +101,9 @@ const t = useTranslations(lang);
             if (window.matchMedia("(prefers-color-scheme: light)").matches) {
                 return "light";
             }
-            return "dark"; // Default to dark
+            return "dark";
         }
 
-        // Apply theme to document
         function applyTheme(theme) {
             if (theme === "light") {
                 document.documentElement.setAttribute("data-theme", "light");
@@ -123,11 +114,9 @@ const t = useTranslations(lang);
             updateThemeIcon(theme);
         }
 
-        // Update the icon based on theme
         function updateThemeIcon(theme) {
             const btn = document.getElementById("theme-btn");
             if (btn) {
-                // Visual update handled by CSS mostly, but we can add classes if needed
                 if (theme === "light") {
                     btn.classList.add("light-mode-active");
                 } else {
@@ -136,14 +125,12 @@ const t = useTranslations(lang);
             }
         }
 
-        // Initialize on load
         function initTheme() {
             const currentTheme = getTheme();
             applyTheme(currentTheme);
 
             const btn = document.getElementById("theme-btn");
             if (btn) {
-                // Remove old listeners to prevent stacking
                 const newBtn = btn.cloneNode(true);
                 btn.parentNode.replaceChild(newBtn, btn);
 
@@ -155,149 +142,89 @@ const t = useTranslations(lang);
             }
         }
 
-        // Run immediately
         initTheme();
-
-        // Re-run on View Transitions
         document.addEventListener("astro:after-swap", initTheme);
     })();
 </script>
 
-<script>
-    // Menu Logic
-    document.addEventListener("astro:page-load", () => {
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("nav-links");
-
-        if (!hamburger || !navLinks) return;
-
-        // Clone to remove old listeners (Safety pattern)
-        const newHamburger = hamburger.cloneNode(true) as HTMLElement;
-        hamburger.parentNode?.replaceChild(newHamburger, hamburger);
-
-        const toggleMenu = (e: Event) => {
-            e.preventDefault();
-            e.stopPropagation();
-            const isActive = navLinks.classList.toggle("active");
-            newHamburger.classList.toggle("active");
-
-            const overlay = document.getElementById("nav-overlay");
-            if (overlay) {
-                if (isActive) overlay.classList.add("active");
-                else overlay.classList.remove("active");
-            }
-
-            document.body.style.overflow = isActive ? "hidden" : "";
-        };
-
-        newHamburger.addEventListener("click", toggleMenu);
-
-        // Close when clicking links
-        const links = navLinks.querySelectorAll("a");
-        links.forEach((link) => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-                newHamburger.classList.remove("active");
-                document.body.style.overflow = "";
-            });
-        });
-
-        // Close when clicking outside or on overlay
-        const closeOnClickOutside = (e: Event) => {
-            const overlay = document.getElementById("nav-overlay");
-
-            if (navLinks.classList.contains("active")) {
-                // If click is on overlay OR outside menu/hamburger
-                if (
-                    e.target === overlay ||
-                    (!navLinks.contains(e.target as Node) &&
-                        !newHamburger.contains(e.target as Node))
-                ) {
-                    navLinks.classList.remove("active");
-                    newHamburger.classList.remove("active");
-                    overlay?.classList.remove("active");
-                    document.body.style.overflow = "";
-                }
-            }
-        };
-
-        document.addEventListener("click", closeOnClickOutside);
-    });
-</script>
-
 <style>
-    :global(body) {
-        overflow-x: hidden;
-        width: 100%;
-        position: relative;
-    }
-
     /* 
     ========================================
-    PREMIUM NAVBAR STYLES (VIP)
+    HEADER CONTAINER
     ========================================
     */
-
     #main-header {
         position: sticky;
         top: 0;
         z-index: 2000;
         width: 100%;
-        height: 70px;
-        background: rgba(10, 10, 20, 0.85);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        background: rgba(10, 10, 20, 0.85); /* Dark base */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 15px 0;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
 
     :global([data-theme="light"]) #main-header {
         background: rgba(255, 255, 255, 0.9);
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     }
 
-    .nav-container {
+    .header-container {
         width: 100%;
-        max-width: 1400px; /* Radical Fix: Constrain width */
-        margin: 0 auto; /* Center it */
-        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 
+    ========================================
+    TOP BAR (Logo + Toggle)
+    ========================================
+    */
+    .top-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 20px;
-        position: relative;
+        width: 100%;
     }
 
-    /* --- LOGO --- */
+    /* Logo Styling */
     .logo {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         text-decoration: none;
         color: var(--text-main, #fff);
         font-weight: 800;
         font-size: 1.5rem;
-        letter-spacing: -0.5px;
-        z-index: 2002;
     }
 
     :global([data-theme="light"]) .logo {
-        color: #000000;
+        color: #000;
     }
 
     .logo-icon-wrapper {
-        width: 38px;
-        height: 38px;
+        width: 40px;
+        height: 40px;
         background: linear-gradient(135deg, #00f2ea 0%, #ff0050 100%);
-        border-radius: 10px;
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: white;
         box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .logo:hover .logo-icon-wrapper {
+        transform: rotate(-10deg) scale(1.05);
     }
 
     .highlight {
@@ -306,70 +233,12 @@ const t = useTranslations(lang);
         -webkit-text-fill-color: transparent;
     }
 
-    /* --- NAV LINKS (Desktop) --- */
-    .nav-links {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-menu {
-        display: flex;
-        gap: 4px;
-        background: rgba(255, 255, 255, 0.03);
-        padding: 4px;
-        border-radius: 50px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    :global([data-theme="light"]) .nav-menu {
-        background: rgba(0, 0, 0, 0.04);
-        border-color: rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-menu a {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        text-decoration: none;
-        color: var(--text-muted, rgba(255, 255, 255, 0.6));
-        font-weight: 500;
-        font-size: 0.9rem;
-        padding: 8px 16px;
-        border-radius: 40px;
-        transition: all 0.3s ease;
-    }
-
-    :global([data-theme="light"]) .nav-menu a {
-        color: #666;
-    }
-
-    .nav-menu a.active {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-    }
-
-    :global([data-theme="light"]) .nav-menu a.active {
-        background: #fff;
-        color: #ff0050;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    /* --- CONTROLS (Right) --- */
-    .nav-controls {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
+    /* Theme Toggle */
     .theme-toggle {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: #e0e0e0;
         cursor: pointer;
@@ -377,203 +246,142 @@ const t = useTranslations(lang);
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        position: relative;
+        transition: all 0.3s ease;
     }
 
     :global([data-theme="light"]) .theme-toggle {
-        background: #f5f5f5;
-        border-color: #e5e5e5;
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.1);
         color: #333;
+    }
+
+    .theme-toggle:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.1);
     }
 
     .theme-icon-container {
         position: relative;
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
-    .theme-toggle i {
+    .moon-icon,
+    .sun-icon {
         position: absolute;
-        transition: all 0.5s;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     .sun-icon {
-        transform: translateY(150%);
+        transform: translate(-50%, 150%);
         opacity: 0;
     }
+
     .moon-icon {
-        transform: translateY(0);
         opacity: 1;
     }
 
     :global([data-theme="light"]) .sun-icon {
-        transform: translateY(0);
+        transform: translate(-50%, -50%);
         opacity: 1;
         color: #f59e0b;
     }
+
     :global([data-theme="light"]) .moon-icon {
-        transform: translateY(-150%);
+        transform: translate(-50%, -150%);
         opacity: 0;
-    }
-
-    /* Hamburger (Mobile) */
-    .hamburger {
-        display: none;
-        width: 42px;
-        height: 42px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 2005;
-    }
-
-    .hamburger-box {
-        width: 24px;
-        height: 20px;
-        display: inline-block;
-        position: relative;
-    }
-
-    .hamburger-inner {
-        display: block;
-        top: 50%;
-        margin-top: -1px;
-    }
-
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-        width: 24px;
-        height: 2px;
-        background-color: var(--text-main, #fff);
-        border-radius: 2px;
-        position: absolute;
-        transition: transform 0.15s ease;
-    }
-
-    :global([data-theme="light"]) .hamburger-inner,
-    :global([data-theme="light"]) .hamburger-inner::before,
-    :global([data-theme="light"]) .hamburger-inner::after {
-        background-color: #333;
-    }
-
-    .hamburger-inner::before {
-        top: -8px;
-        content: "";
-        display: block;
-    }
-    .hamburger-inner::after {
-        bottom: -8px;
-        content: "";
-        display: block;
-    }
-
-    .hamburger.active .hamburger-inner {
-        transform: rotate(45deg);
-    }
-    .hamburger.active .hamburger-inner::before {
-        top: 0;
-        opacity: 0;
-    }
-    .hamburger.active .hamburger-inner::after {
-        bottom: 0;
-        transform: rotate(-90deg);
     }
 
     /* 
     ========================================
-    SIDEBAR DRAWER (MOBILE)
+    NAV BAR (Buttons)
     ========================================
     */
-    @media (max-width: 968px) {
-        .nav-links {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: auto;
-            bottom: 0;
-            width: 75%; /* Strict width requirement */
-            height: 100vh;
-            background: rgba(10, 10, 20, 0.98);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            transform: translateX(100%);
-            transition:
-                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                visibility 0s 0.4s;
-            z-index: 2005;
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
-            visibility: hidden;
-            touch-action: none;
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: var(--text-dim, rgba(255, 255, 255, 0.6));
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 10px 20px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    :global([data-theme="light"]) .nav-item {
+        background: rgba(0, 0, 0, 0.03);
+        border-color: rgba(0, 0, 0, 0.05);
+        color: #666;
+    }
+
+    .nav-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    :global([data-theme="light"]) .nav-item:hover {
+        background: rgba(0, 0, 0, 0.08);
+        color: #000;
+    }
+
+    /* Active State */
+    .nav-item.active {
+        background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
+        color: #fff !important;
+        border: 1px solid transparent;
+        box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+    }
+
+    .nav-item i {
+        font-size: 1.1rem;
+    }
+
+    /* 
+    ========================================
+    RESPONSIVE
+    ========================================
+    */
+    @media (max-width: 600px) {
+        .header-container {
+            gap: 15px;
+            padding: 0 15px;
         }
 
-        :global([data-theme="light"]) .nav-links {
-            background: rgba(255, 255, 255, 0.98);
+        .logo-text {
+            font-size: 1.3rem; /* Slightly smaller logo on mobile */
         }
 
-        .nav-links.active {
-            transform: translateX(0);
-            visibility: visible;
-            transition:
-                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                visibility 0s;
-        }
-
-        /* Separate Overlay */
-        .nav-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 2004; /* Below sidebar */
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-        }
-
-        .nav-overlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        /* REMOVED ::before styles, replaced by .nav-overlay */
-        .nav-links::before {
-            display: none;
-        }
-
-        .nav-menu {
-            flex-direction: column;
+        .nav-bar {
+            gap: 8px;
+            display: grid;
+            grid-template-columns: repeat(
+                2,
+                1fr
+            ); /* 2x2 Grid for buttons on mobile */
             width: 100%;
-            background: transparent;
-            border: none;
-            gap: 20px;
         }
 
-        .nav-menu a {
-            width: 100%;
+        .nav-item {
             justify-content: center;
-            padding: 15px;
-            font-size: 1.2rem;
+            padding: 12px;
+            font-size: 0.9rem;
+            border-radius: 12px; /* Less rounded for grid feeling */
         }
-
-        .hamburger {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Hide logo text in very small screens if needed, 
-           or keep it because we have space now */
     }
 </style>
