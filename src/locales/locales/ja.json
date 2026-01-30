@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "オリジナル画質",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "スマート形式",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "全デバイス対応",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "動画ダウンローダーとの違いは？",
       "a10": "MP3変換は音声のみを保存し、動画は保存しません。"
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "TikTok動画をMP3オーディオに変換。高音質320kbpsで曲や音楽を抽出。"
   },
   "story_page": {
     "meta_title": "TikTokストーリーダウンローダー - 匿名保存",
@@ -505,6 +505,6 @@
       "q10": "ストーリーとスライドショーの違いは？",
       "a10": "ストーリーは一時的(24h)、スライドショーは永続的です。"
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "TikTokストーリーとスライドショーを匿名でダウンロード。期限切れになる前に写真を保存。"
   }
 }

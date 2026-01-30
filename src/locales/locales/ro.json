@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Calitate Originală",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Formate Inteligente",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Toate Dispozitivele",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "Diferența față de video downloader?",
       "a10": "Convertorul MP3 salvează doar sunetul, fără imagine."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "Convertește videoclipuri TikTok în audio MP3. Extrage melodii și muzică la calitate înaltă."
   },
   "story_page": {
     "meta_title": "Descarcă Story TikTok - Salvează Anonim",
@@ -505,6 +505,6 @@
       "q10": "Diferența Story vs Slideshow?",
       "a10": "Story-urile sunt temporare (24h), Slideshow-urile permanente."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "Descarcă povești și slideshow-uri TikTok anonim. Salvează pozele înainte să expire."
   }
 }

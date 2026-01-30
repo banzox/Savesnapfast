@@ -106,7 +106,7 @@
         "desc": "TikTok sa MP3 sa ilang segundo."
       },
       "trending": {
-        "title": "Trending Sounds",
+        "title": "Trending na Tunog",
         "desc": "I-download ang sikat na musika sa TikTok."
       },
       "device": {
@@ -158,7 +158,7 @@
       "q10": "Ano ang kaibahan sa video downloader?",
       "a10": "Ang MP3 converter ay audio lang ang sini-save, walang video."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "I-convert ang mga video sa TikTok sa MP3 audio. I-extract ang mga kanta at musika."
   },
   "story_page": {
     "meta_title": "I-download ang TikTok Story - I-save nang Anonymous",
@@ -170,7 +170,7 @@
     "about_content": "Ang SaveTikFast Story Downloader ay tumutulong sa iyo na mag-save ng stories at photo carousels bago mawala pagkatapos ng 24 oras.",
     "features": {
       "anonymous": {
-        "title": "100% Anonymous",
+        "title": "Anonimo",
         "desc": "Mag-download nang hindi alam ng may-ari."
       },
       "slides": {
@@ -222,7 +222,7 @@
       "q10": "Kaibahan ng Story vs Slideshow?",
       "a10": "Ang stories ay temporary (24h), ang slideshows ay permanent."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "Mag-download ng TikTok Stories at Slideshows nang hindi nakikilala."
   },
   "features": {
     "404": {
@@ -450,7 +450,7 @@
         "desc": "Lahat ng photos agad."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Orihinal na Kalidad",
         "desc": "Buong resolution."
       },
       "fast": {

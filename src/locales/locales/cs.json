@@ -308,7 +308,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Originální kvalita",
         "desc": "Full resolution."
       },
       "fast": {
@@ -316,11 +316,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Chytré formáty",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Všechna zařízení",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -442,7 +442,7 @@
       "q10": "Rozdíl oproti stahovači videa?",
       "a10": "MP3 konvertor ukládá pouze zvuk, bez obrazu."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "Převod videa z TikToku na MP3 audio. Stahujte skladby a hudbu ve vysoké kvalitě 320kbps."
   },
   "story_page": {
     "meta_title": "Stáhnout Story z TikToku - Anonymně",
@@ -506,6 +506,6 @@
       "q10": "Rozdíl Story vs Prezentace?",
       "a10": "Stories jsou dočasné (24h), prezentace trvalé."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "Stahujte příběhy a prezentace z TikToku anonymně. Uložte fotky před vypršením platnosti."
   }
 }

@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "원본 화질",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "스마트 포맷",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "모든 기기 지원",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "비디오 다운로더와 차이점?",
       "a10": "MP3 변환기는 오디오만 저장하고 영상은 저장하지 않습니다."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "TikTok 비디오를 MP3 오디오로 변환하세요. 고음질 320kbps로 노래와 음악을 추출하세요."
   },
   "story_page": {
     "meta_title": "TikTok 스토리 다운로더 - 익명 저장",
@@ -505,6 +505,6 @@
       "q10": "스토리와 슬라이드쇼 차이?",
       "a10": "스토리는 일시적(24시간), 슬라이드쇼는 영구적입니다."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "TikTok 스토리와 슬라이드쇼를 익명으로 다운로드하세요. 만료되기 전에 사진을 저장하세요."
   }
 }

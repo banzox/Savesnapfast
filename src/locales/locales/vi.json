@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Chất lượng gốc",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Định dạng thông minh",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Mọi thiết bị",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "Khác gì với tải video?",
       "a10": "Chuyển đổi MP3 chỉ lưu âm thanh, không lưu hình."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "Chuyển đổi video TikTok sang âm thanh MP3. Trích xuất bài hát và nhạc chất lượng cao."
   },
   "story_page": {
     "meta_title": "Tải Story TikTok - Lưu Ẩn danh",
@@ -505,6 +505,6 @@
       "q10": "Khác nhau Story và Trình chiếu?",
       "a10": "Story tự hủy (24h), Trình chiếu vĩnh viễn."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "Tải xuống Tin và Trình chiếu TikTok ẩn danh. Lưu ảnh trước khi hết hạn."
   }
 }

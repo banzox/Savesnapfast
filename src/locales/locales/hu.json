@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Eredeti minőség",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Okos formátumok",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Minden eszköz",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "Mi a különbség a videó letöltőhöz képest?",
       "a10": "Az MP3 konvertáló csak a hangot menti, a képet nem."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "TikTok videók konvertálása MP3 hanggá. Dalok és zene kinyerése kiváló minőségben."
   },
   "story_page": {
     "meta_title": "TikTok Story Letöltése - Névtelenül Menteni",
@@ -505,6 +505,6 @@
       "q10": "Story vs Diavetítés különbség?",
       "a10": "A sztorik átmenetiek (24ó), a diavetítések állandóak."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "TikTok történetek és diavetítések névtelen letöltése. Mentse el a fotókat, mielőtt lejárnak."
   }
 }

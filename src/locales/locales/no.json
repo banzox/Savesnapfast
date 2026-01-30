@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Original kvalitet",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Smarte formater",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Alle enheter",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "Forskjell fra videonedlaster?",
       "a10": "MP3-konverteren lagrer kun lyden, ikke bildet."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "Konverter TikTok-videoer til MP3-lyd. Trekk ut sanger og musikk i høy kvalitet."
   },
   "story_page": {
     "meta_title": "Last Ned TikTok Story - Lagre Anonymt",
@@ -505,6 +505,6 @@
       "q10": "Forskjell Story vs Lysbildefremvisning?",
       "a10": "Stories er midlertidige (24t), Lysbildefremvisninger er permanente."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "Last ned TikTok-historier og bildeserier anonymt. Lagre bilder før de utløper."
   }
 }

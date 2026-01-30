@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Qualità Originale",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Formati Smart",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Tutti i Dispositivi",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "Differenza con downloader video?",
       "a10": "Il convertitore MP3 salva solo la traccia audio."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "Converti video TikTok in audio MP3. Estrai canzoni e musica in alta qualità 320kbps."
   },
   "story_page": {
     "meta_title": "Scarica Storie TikTok - Salva in Anonimo",
@@ -505,6 +505,6 @@
       "q10": "Differenza Storia vs Slideshow?",
       "a10": "Le storie sono temporanee, gli slideshow permanenti."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "Scarica storie e slideshow TikTok in modo anonimo. Salva le foto prima che scadano."
   }
 }

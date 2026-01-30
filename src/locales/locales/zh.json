@@ -295,7 +295,7 @@
   "slideshow_page": {
     "meta_title": "TikTok Slideshow Downloader - Save Photos",
     "meta_desc": "Download TikTok photo slideshows in HD. Save all images without watermark.",
-    "title": "TikTok Slideshow Downloader",
+    "title": "TikTok 幻灯片下载器",
     "desc": "Download TikTok photo carousels in high quality.",
     "placeholder": "Paste link...",
     "btn_download": "Download Images",
@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "原始质量",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "智能格式",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "所有设备",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "与视频下载器有什么区别？",
       "a10": "MP3 转换器只保存声音，不保存画面。"
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "将 TikTok 视频转换为 MP3 音频。提取高质量的歌曲和音乐。"
   },
   "story_page": {
     "meta_title": "下载 TikTok 快拍 - 匿名保存",
@@ -505,6 +505,6 @@
       "q10": "快拍和幻灯片的区别？",
       "a10": "快拍是临时的 (24h)，幻灯片是永久的。"
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "匿名下载 TikTok 故事和幻灯片。在过期前保存照片。"
   }
 }

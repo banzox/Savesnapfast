@@ -441,7 +441,7 @@
       "q10": "Video indiriciden farkı ne?",
       "a10": "MP3 dönüştürücü sadece sesi kaydeder, görüntüyü değil."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "TikTok videolarını MP3 sese dönüştürün. Şarkıları ve müzikleri yüksek kalitede çıkarın."
   },
   "story_page": {
     "meta_title": "TikTok Hikaye İndirici - Anonim Kaydet",
@@ -505,6 +505,6 @@
       "q10": "Story ve Slayt farkı?",
       "a10": "Hikayeler geçicidir (24s), Slaytlar kalıcıdır."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "TikTok Hikayelerini ve Slayt Gösterilerini anonim olarak indirin."
   }
 }

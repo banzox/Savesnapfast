@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Originele Kwaliteit",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Slimme Formaten",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Alle Apparaten",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "Verschil met video downloader?",
       "a10": "De MP3 converter slaat alleen het geluid op, niet het beeld."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "Converteer TikTok-video's naar MP3-audio. Extraheer nummers en muziek in hoge kwaliteit."
   },
   "story_page": {
     "meta_title": "TikTok Story Downloaden - Anoniem Opslaan",
@@ -505,6 +505,6 @@
       "q10": "Verschil Story vs Diavoorstelling?",
       "a10": "Stories zijn tijdelijk (24u), Diavoorstellingen permanent."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "Download TikTok Verhalen en Slideshows anoniem. Sla foto's op voordat ze verlopen."
   }
 }

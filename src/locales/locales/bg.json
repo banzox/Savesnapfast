@@ -89,8 +89,8 @@
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 Конвертор - Изтегли Аудио (Високо Качество)",
-    "meta_desc": "Преобразувайте TikTok видеоклипове в MP3 аудио файлове с високо качество (320kbps). Безплатен онлайн конвертор.",
-    "title": "Изтегли TikTok MP3",
+    "meta_desc": "Конвертиране на TikTok видео в MP3 аудио. Извличане на песни и музика с високо качество.",
+    "title": "TikTok MP3 Конвертор",
     "subtitle": "(Само Аудио)",
     "desc": "Преобразувайте TikTok видеоклипове в MP3 аудио файлове. Извличане на песни и музика с високо качество 320kbps.",
     "placeholder": "Поставете TikTok линк за MP3...",
@@ -162,7 +162,7 @@
   },
   "story_page": {
     "meta_title": "Изтегли TikTok Story - Запази Анонимно",
-    "meta_desc": "Изтеглете TikTok Stories и Слайдшоута анонимно. Запазете снимки и видео преди да изтекат.",
+    "meta_desc": "Сваляйте истории и слайдшоута от TikTok анонимно. Запазете снимките преди да изтекат.",
     "title": "Изтегли TikTok Story",
     "desc": "Запазете TikTok Stories и Слайдшоута преди да изтекат.",
     "placeholder": "Поставете линк към Story...",
@@ -438,7 +438,7 @@
   "slideshow_page": {
     "meta_title": "Сваляне на Слайдшоу от TikTok - Запази снимки",
     "meta_desc": "Свалете фото слайдшоу от TikTok в HD без воден знак.",
-    "title": "Сваляне на Слайдшоу TikTok",
+    "title": "Сваляне на Слайдшоу",
     "desc": "Запазете фото въртележки с високо качество.",
     "placeholder": "Поставете линка тук...",
     "btn_download": "Свали Снимки",
@@ -450,7 +450,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Оригинално качество",
         "desc": "Full resolution."
       },
       "fast": {
@@ -458,11 +458,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Умни формати",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Всички устройства",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {

@@ -307,7 +307,7 @@
         "desc": "Save all photos at once."
       },
       "original": {
-        "title": "Original Quality",
+        "title": "Kualiti Asal",
         "desc": "Full resolution."
       },
       "fast": {
@@ -315,11 +315,11 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Format Pintar",
         "desc": "JPG/PNG."
       },
       "device": {
-        "title": "Cross-Platform",
+        "title": "Semua Peranti",
         "desc": "iOS, Android, PC."
       },
       "unlimited": {
@@ -441,7 +441,7 @@
       "q10": "Apa beza dengan video downloader?",
       "a10": "Penukar MP3 hanya simpan audio, bukan video."
     },
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online."
+    "meta_desc": "Tukar video TikTok kepada audio MP3.kstrak lagu dan muzik dalam kualiti tinggi."
   },
   "story_page": {
     "meta_title": "Muat Turun Story TikTok - Simpan Tanpa Nama",
@@ -505,6 +505,6 @@
       "q10": "Beza Story vs Slideshow?",
       "a10": "Story sementara (24j), Slideshow kekal."
     },
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire."
+    "meta_desc": "Muat turun Cerita dan Tayangan Slaid TikTok secara tanpa nama. Simpan foto sebelum tamat tempoh."
   }
 }
