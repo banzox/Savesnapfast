@@ -438,7 +438,7 @@
   "slideshow_page": {
     "meta_title": "TikTok Slideshow Downloader - I-save ang mga Larawan",
     "meta_desc": "I-download ang mga TikTok photo slideshow sa HD nang walang watermark.",
-    "title": "TikTok Slideshow Downloader",
+    "title": "Tagapag-download ng TikTok Slideshow",
     "desc": "I-save ang mga photo carousel sa mataas na kalidad.",
     "placeholder": "I-paste ang link dito...",
     "btn_download": "I-download ang mga Larawan",
@@ -458,7 +458,7 @@
         "desc": "Instant processing."
       },
       "format": {
-        "title": "Smart Formats",
+        "title": "Matalinong Format",
         "desc": "JPG/PNG."
       },
       "device": {

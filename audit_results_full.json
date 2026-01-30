@@ -29,9 +29,7 @@
   },
   "de": {
     "missing": [],
-    "untranslated": [
-      "slideshow_page.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
@@ -115,9 +113,7 @@
   },
   "nl": {
     "missing": [],
-    "untranslated": [
-      "slideshow_page.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
@@ -173,10 +169,7 @@
   },
   "tl": {
     "missing": [],
-    "untranslated": [
-      "slideshow_page.title",
-      "slideshow_page.features.format.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
