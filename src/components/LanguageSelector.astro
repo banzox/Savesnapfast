@@ -9,38 +9,28 @@ const pathname = Astro.url.pathname;
 const search = Astro.url.search;
 
 function getPathForLanguage(targetLang: string) {
-    let currentPath = pathname;
+    const segments = pathname.split("/").filter(Boolean);
 
-    // 1. Remove specific language prefix if present (using Regex for precision)
-    // We explicitly check against all known non-default languages
-    for (const langCode of Object.keys(languages)) {
-        if (langCode === defaultLang) continue;
-
-        // Matches "/lang" or "/lang/" at the start of the string
-        const regex = new RegExp(`^/${langCode}(/|$)`);
-        if (regex.test(currentPath)) {
-            currentPath = currentPath.replace(regex, "/");
-            break; // Found and removed the prefix
-        }
+    // Check if the first segment is a known language code (and strictly not defaultLang - though defaultLang shouldn't appear in path based on routing)
+    const firstSegment = segments[0];
+    if (
+        firstSegment &&
+        languages[firstSegment as keyof typeof languages] &&
+        firstSegment !== defaultLang
+    ) {
+        segments.shift(); // Remove the language prefix
     }
 
-    // Normalize path to ensure it starts with / and doesn't have double //
-    if (!currentPath.startsWith("/")) currentPath = "/" + currentPath;
-    currentPath = currentPath.replace("//", "/");
+    // Reconstruct path
+    const cleanPath = segments.length > 0 ? "/" + segments.join("/") : "";
 
-    // 2. Add target language prefix
     let finalPath;
     if (targetLang === defaultLang) {
-        finalPath = currentPath;
+        finalPath = cleanPath || "/";
     } else {
-        if (currentPath === "/") {
-            finalPath = `/${targetLang}`;
-        } else {
-            finalPath = `/${targetLang}${currentPath}`;
-        }
+        finalPath = `/${targetLang}${cleanPath}`;
     }
 
-    // 3. Append query parameters
     return finalPath + search;
 }
 ---
@@ -90,7 +80,7 @@ function getPathForLanguage(targetLang: string) {
 
         if (!btn || !dropdown || !overlay || !closeBtn) return;
 
-        const toggleMenu = (show) => {
+        const toggleMenu = (show?: boolean) => {
             const isShow =
                 show === true ||
                 (show === undefined && !dropdown.classList.contains("show"));
