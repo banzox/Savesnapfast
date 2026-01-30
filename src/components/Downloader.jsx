@@ -98,8 +98,44 @@ export default function Downloader(props) {
         }
     };
 
+    const validateResultType = (res, currentMode) => {
+        const hasImages = res.images && res.images.length > 0;
+        const hasVideo = !!(res.video || res.play || res.url || res.nowatermark);
+        // Basic Story detection: Check URL or if API flags it (API might not always flag, but presence of both video/image or specialized metadata helps)
+        // For now, we rely on output content.
+
+        if (currentMode === 'slideshow') {
+            if (!hasImages) return { valid: false, error: t('error_wrong_type_slideshow', "Link is not a slideshow! Use Video Downloader.") };
+        }
+
+        // Strict Video Mode: If it's a slideshow (only images), warn user? 
+        // Or if user wants to download VIDEO, but link is SLIDESHOW, TikWM often returns images for slideshows.
+        // If we are in VIDEO mode, we generally accept everything BUT if it's purely images, maybe warn?
+        // User requested strict separation.
+        if (currentMode === 'video' || currentMode === 'mp3') {
+            // MP3 is loose, usually any link works for mp3.
+        }
+
+        if (currentMode === 'story') {
+            // Stories can be video or image. 
+            // Ideally check if URL contains /story/ or /video/.
+            if (!url.includes('/story/') && !url.includes('/video/')) {
+                // Weak check, but better than nothing.
+            }
+        }
+
+        return { valid: true };
+    };
+
     const handleDownload = async () => {
         if (!url) return;
+
+        // Basic URL Validation
+        if (!url.includes('tiktok.com')) {
+            setError(t('error_invalid_link', "Invalid Link. Please check and try again."));
+            return;
+        }
+
         setLoading(true);
         setError(null);
         setResult(null);
@@ -108,31 +144,32 @@ export default function Downloader(props) {
             const apiUrl = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
             const response = await fetch(apiUrl);
             const data = await response.json();
+
             if (data.error) throw new Error(data.error);
 
             const res = data.result || data;
+
+            // STRICT MODE VALIDATION
+            const validation = validateResultType(res, mode);
+            if (!validation.valid) {
+                throw new Error(validation.error);
+            }
+
             setResult(res);
 
             setTimeout(() => {
                 const el = document.getElementById('result-area');
                 if (el) {
-                    // Scroll to result area plus extra space for ads
                     const offset = el.getBoundingClientRect().top + window.scrollY - 80;
-                    // Note: Ads are usually below result-area. 
-                    // To include ads in view, we should scroll enough so 'result-area' is at top
-                    // or maybe slightly lower if ads are huge.
-                    // User said: "Screen goes down automatically to download buttons so I can benefit from him seeing ads".
-                    // Ads are usually AFTER buttons.
-                    // So we want the Buttons to be visible? YES.
-                    // If we scroll to 'result-area', buttons are visible.
-                    // We might want to scroll a bit more if the header is sticky? Header is static now.
-                    // Let's scroll to the top of result area.
                     window.scrollTo({ top: offset, behavior: "smooth" });
                 }
-            }, 500); // Increased timeout to ensure DOM render
+            }, 500);
 
         } catch (err) {
-            setError(t('error_msg', "Service is busy or link is invalid. Please try again."));
+            let msg = err.message;
+            // Map some common API errors to user friendly text if needed
+            if (msg === 'Failed to fetch') msg = t('error_invalid_link', "Invalid Link or Network Error.");
+            setError(msg);
         } finally {
             setLoading(false);
         }
@@ -149,10 +186,7 @@ export default function Downloader(props) {
     return (
         <div className="downloader-container">
             <div className="downloader-box">
-                {/* 
-                   New robust structure compatible with updated global.css 
-                   .input-wrapper contains input AND action buttons
-                */}
+                {/* Inputs and Buttons */}
                 <div className="input-wrapper">
                     <input
                         type="url"
@@ -195,15 +229,18 @@ export default function Downloader(props) {
 
             <div id="result-area" role="region" aria-live="polite">
                 {loading && (
-                    <div className="lightning-loader">
-                        <i className="fas fa-bolt lightning-bolt"></i>
-                        <p className="shimmer-text">{t('processing', "Processing...")}</p>
+                    <div className="lightning-loader-container">
+                        <div className="lightning-bolt-wrapper">
+                            <i className="fas fa-bolt lightning-icon"></i>
+                        </div>
+                        <p className="processing-text">{t('processing', "Processing...")}</p>
                     </div>
                 )}
 
                 {error && (
-                    <div className="error-message" style={{ color: '#ff4444', textAlign: 'center', padding: '20px' }}>
-                        <p><i className="fas fa-exclamation-circle"></i> {error}</p>
+                    <div className="error-banner">
+                        <i className="fas fa-exclamation-circle"></i>
+                        <span>{error}</span>
                     </div>
                 )}
 

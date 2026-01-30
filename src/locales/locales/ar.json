@@ -1,4 +1,8 @@
 {
+  "404": {
+    "title": "الصفحة غير موجودة",
+    "home_btn": "العودة للرئيسية"
+  },
   "meta": {
     "title": "SaveTikFast 2026 - تحميل فيديو تيك توك بدون علامة مائية (HD 4K)",
     "description": "أفضل موقع لتحميل فيديوهات تيك توك بدون حقوق وبجودة عالية 4K/HD مجاناً. يدعم التحميل بصيغة MP3 و MP4. سريع، آمن، ويعمل على الآيفون والأندرويد والكمبيوتر."
@@ -246,7 +250,11 @@
     "download_zip": "تحميل الكل (ZIP)",
     "creating_zip": "جاري إنشاء الملف...",
     "save_image": "حفظ الصورة",
-    "error_busy": "الخدمة مشغولة، يرجى المحاولة مرة أخرى لاحقاً."
+    "error_busy": "الخدمة مشغولة، يرجى المحاولة مرة أخرى لاحقاً.",
+    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
+    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
+    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
+    "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
     "title": "الأسئلة الشائعة حول التحميل (FAQ)",
@@ -325,10 +333,6 @@
       "title": "استخدام غير محدود",
       "desc": "حمل أي عدد تريده من الفيديوهات يومياً بدون أي قيود أو شروط."
     }
-  },
-  "404": {
-    "title": "الصفحة غير موجودة",
-    "home_btn": "العودة للرئيسية"
   },
   "how_to": {
     "title": "كيفية تحميل فيديوهات تيك توك بدون علامة مائية",

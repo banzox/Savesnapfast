@@ -31,7 +31,11 @@
     "error_busy": "サービスが混雑しています。後でもう一度お試しください。",
     "download_zip": "すべてDL (ZIP)",
     "creating_zip": "ZIP作成中...",
-    "save_image": "保存"
+    "save_image": "保存",
+    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
+    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
+    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
+    "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
     "title": "よくある質問 (FAQ)",

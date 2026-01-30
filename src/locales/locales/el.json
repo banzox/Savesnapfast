@@ -31,7 +31,11 @@
     "error_busy": "Η υπηρεσία είναι απασχολημένη, δοκιμάστε ξανά αργότερα.",
     "download_zip": "Λήψη όλων (ZIP)",
     "creating_zip": "Δημιουργία ZIP...",
-    "save_image": "Αποθήκευση"
+    "save_image": "Αποθήκευση",
+    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
+    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
+    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
+    "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
     "title": "Συχνές Ερωτήσεις (FAQ)",

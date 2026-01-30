@@ -31,7 +31,11 @@
     "error_busy": "Dịch vụ đang bận, vui lòng thử lại sau.",
     "download_zip": "Tải Tất Cả (ZIP)",
     "creating_zip": "Tạo ZIP...",
-    "save_image": "Lưu"
+    "save_image": "Lưu",
+    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
+    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
+    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
+    "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
     "title": "Câu hỏi thường gặp (FAQ)",

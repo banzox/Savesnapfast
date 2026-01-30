@@ -31,7 +31,11 @@
     "error_busy": "Tjenesten er opptatt, prøv igjen senere.",
     "download_zip": "Last ned alle (ZIP)",
     "creating_zip": "Lager ZIP...",
-    "save_image": "Lagre"
+    "save_image": "Lagre",
+    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
+    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
+    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
+    "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
     "title": "Ofte stilte spørsmål (FAQ)",

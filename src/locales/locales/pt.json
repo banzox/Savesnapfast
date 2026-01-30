@@ -31,7 +31,11 @@
     "error_busy": "Serviço ocupado, tente novamente mais tarde.",
     "download_zip": "Baixar Tudo (ZIP)",
     "creating_zip": "Criando ZIP...",
-    "save_image": "Salvar"
+    "save_image": "Salvar",
+    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
+    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
+    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
+    "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
     "title": "Perguntas Frequentes (FAQ)",

@@ -568,7 +568,8 @@ a:active,
     transition: var(--transition);
     box-shadow: 0 10px 40px rgba(255, 0, 80, 0.4);
     z-index: 1;
-    margin-top: 25px;
+    margin: 25px auto 0;
+    /* Center the button */
     /* Added spacing */
     letter-spacing: 0.5px;
     display: flex;
@@ -915,4 +916,133 @@ footer {
 :global([data-theme="light"]) .input-wrapper:focus-within {
     box-shadow: 0 0 0 3px rgba(255, 0, 80, 0.2), 0 5px 20px rgba(0, 0, 0, 0.05);
     border-color: var(--primary);
+}
+
+/* =========================================
+   14. PREMIUM COMPONENTS (Loader & Error)
+   ========================================= */
+
+/* Lightning Loader Container */
+.lightning-loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: var(--glass);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin: 20px 0;
+    animation: fadeIn 0.5s ease;
+}
+
+[data-theme='light'] .lightning-loader-container {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.lightning-bolt-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: rgba(255, 230, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 200, 0, 0.3);
+}
+
+.lightning-icon {
+    font-size: 3rem;
+    color: #ffcc00;
+    filter: drop-shadow(0 0 10px #ffaa00);
+    animation: pulseBolt 1s infinite alternate;
+}
+
+.processing-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--text-main) 0%, var(--text-dim) 50%, var(--text-main) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerText 2s linear infinite;
+    margin: 0;
+}
+
+/* Error Banner */
+.error-banner {
+    background: rgba(255, 68, 68, 0.1);
+    border: 1px solid rgba(255, 68, 68, 0.3);
+    color: #ff4444;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    font-weight: 600;
+    animation: slideIn 0.3s ease-out;
+}
+
+.error-banner i {
+    font-size: 1.4rem;
+}
+
+[data-theme='light'] .error-banner {
+    background: #fff5f5;
+    border-color: #feb2b2;
+    color: #c53030;
+}
+
+
+/* Animations */
+@keyframes pulseBolt {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+        filter: drop-shadow(0 0 20px #ffcc00);
+    }
+}
+
+@keyframes shimmerText {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

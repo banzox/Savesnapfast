@@ -31,7 +31,11 @@
     "download_zip": "Download All Images (ZIP)",
     "creating_zip": "Creating ZIP...",
     "save_image": "Save Image",
-    "error_busy": "Service busy, please try again later."
+    "error_busy": "Service busy, please try again later.",
+    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
+    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
+    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
+    "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",
@@ -301,6 +305,10 @@
     }
   },
   "features": {
+    "404": {
+      "title": "Page Not Found",
+      "home_btn": "Go Back Home"
+    },
     "no_watermark": {
       "title": "No Watermark",
       "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
@@ -308,10 +316,6 @@
     "fast": {
       "title": "Fast Download",
       "desc": "Download TikTok videos in seconds with our high-speed servers."
-    },
-    "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
     },
     "quality": {
       "title": "HD & 4K Quality",

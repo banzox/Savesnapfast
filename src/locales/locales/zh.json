@@ -31,7 +31,11 @@
     "error_busy": "服务繁忙，请稍后再试。",
     "download_zip": "全部下载 (ZIP)",
     "creating_zip": "生成 ZIP...",
-    "save_image": "保存"
+    "save_image": "保存",
+    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
+    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
+    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
+    "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
     "title": "常見問題 (FAQ)",
