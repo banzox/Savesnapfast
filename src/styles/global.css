@@ -747,3 +747,74 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* ==========================================================================
+   13. APP-LIKE MOBILE POLISH (New Additions)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* 1. Generous Touch Targets (Accessibility) */
+    button,
+    input,
+    select,
+    a.btn,
+    .btn-download {
+        min-height: 52px;
+        /* Minimum tappable area */
+    }
+
+    #download-btn {
+        padding: 16px;
+        font-size: 1.1rem;
+    }
+
+    #url-input {
+        font-size: 16px;
+        /* Prevents iOS zoom on focus */
+        padding-left: 15px;
+    }
+
+    /* 2. Typography Breathing Room */
+    body {
+        line-height: 1.7;
+        /* Easier reading */
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        letter-spacing: -0.5px;
+        /* Modern tight spacing */
+    }
+
+    /* 3. Safe Area & Edge Protection */
+    .container,
+    .hero-section,
+    .content-box {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* 4. Smooth Card Interaction */
+    .feature-card:active,
+    .result-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+}
+
+/* Premium Focus Rings for Input */
+.input-wrapper:focus-within {
+    box-shadow: 0 0 0 3px rgba(0, 242, 234, 0.3), 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary);
+}
+
+:global([data-theme="light"]) .input-wrapper:focus-within {
+    box-shadow: 0 0 0 3px rgba(255, 0, 80, 0.2), 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary);
+}
