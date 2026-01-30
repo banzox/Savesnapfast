@@ -427,13 +427,15 @@ body::after {
 .input-wrapper {
     flex: 1;
     display: flex;
+    align-items: center;
     background: var(--glass-bright);
-    border-radius: 20px;
-    padding: 8px 20px;
+    border-radius: 30px;
+    /* Pill shape */
+    padding: 5px 8px 5px 20px;
+    /* Space for text */
     border: 1px solid var(--border);
     transition: var(--transition);
     position: relative;
-    /* Essential for absolute positioning of children */
 }
 
 /* Premium Glow on Focus */
@@ -455,19 +457,11 @@ body::after {
     background: transparent;
     border: none;
     color: var(--text-main);
-    padding: 12px 50px 12px 12px;
-    /* Clean space for the button */
+    padding: 12px;
     outline: none;
     font-size: 17px;
     font-weight: 500;
     width: 100%;
-}
-
-/* Tactile Feedback for all clickable elements */
-button:active,
-a:active,
-.btn-download:active {
-    transform: scale(0.96) !important;
 }
 
 #url-input::placeholder {
@@ -475,27 +469,66 @@ a:active,
     opacity: 1;
 }
 
-#paste-btn {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    color: var(--secondary);
+/* Input Controls Group */
+.input-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Action Buttons (Paste / Clear) */
+.action-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-dim);
     cursor: pointer;
-    font-size: 1.2rem;
-    padding: 5px;
-    transition: var(--transition);
-    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#paste-btn:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 8px var(--secondary));
+:global([data-theme="light"]) .action-btn {
+    background: rgba(0, 0, 0, 0.05);
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn:hover {
+    background: var(--secondary);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--secondary-glow);
+}
+
+:global([data-theme="light"]) .action-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* Distinctive Clear Button (Red on Hover) */
+.clear-btn:hover {
+    background: #ff4444 !important;
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.4) !important;
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Paste Button (Standard Hover) */
+.paste-btn:hover i {
+    transform: scale(1.1);
+}
+
+/* Tactile Feedback */
+button:active,
+a:active,
+.btn-download:active,
+.action-btn:active {
+    transform: scale(0.95) !important;
 }
 
 /* Premium Download Button with Glow */

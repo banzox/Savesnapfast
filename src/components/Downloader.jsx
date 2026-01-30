@@ -156,26 +156,27 @@ export default function Downloader({ messages = {}, mode = 'video' }) {
                         spellCheck="false"
                     />
 
-                    {url && (
+                    <div className="input-controls">
+                        {url && (
+                            <button
+                                type="button"
+                                className="action-btn clear-btn"
+                                onClick={() => setUrl('')}
+                                title={t('btn_clear', "Clear")}
+                            >
+                                <i className="fas fa-times"></i>
+                            </button>
+                        )}
+
                         <button
                             type="button"
-                            id="clear-btn"
-                            onClick={() => setUrl('')}
-                            title="Clear"
-                            style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+                            className="action-btn paste-btn"
+                            onClick={handlePaste}
+                            title={t('btn_paste', "Paste")}
                         >
-                            <i className="fas fa-times"></i>
+                            <i className="fas fa-paste"></i>
                         </button>
-                    )}
-
-                    <button
-                        type="button"
-                        id="paste-btn"
-                        onClick={handlePaste}
-                        title="Paste"
-                    >
-                        <i className="fas fa-paste"></i>
-                    </button>
+                    </div>
                 </div>
 
                 <button id="download-btn" onClick={handleDownload} disabled={loading}>
