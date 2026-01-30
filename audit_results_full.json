@@ -52,35 +52,13 @@
       "story_page.faq.a9",
       "story_page.faq.q10",
       "story_page.faq.a10",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
     "untranslated_faq": [
       "mp3_page",
-      "slideshow_page",
       "story_page"
     ],
     "incomplete_faq": []
@@ -90,35 +68,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "da": {
@@ -130,32 +85,10 @@
       "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "de": {
@@ -174,35 +107,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "es": {
@@ -220,35 +130,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "fr": {
@@ -264,35 +151,12 @@
   "hi": {
     "missing": [],
     "untranslated": [
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "hu": {
@@ -300,35 +164,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "id": {
@@ -336,32 +177,10 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "mp3_page.title",
-      "story_page.meta_desc",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "story_page.meta_desc"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "it": {
@@ -369,35 +188,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ja": {
@@ -405,35 +201,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ko": {
@@ -441,35 +214,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ms": {
@@ -477,35 +227,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "nl": {
@@ -516,32 +243,10 @@
       "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "no": {
@@ -549,35 +254,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "pl": {
@@ -585,67 +267,22 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "pt": {
     "missing": [],
     "untranslated": [
       "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "story_page.meta_desc"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ro": {
@@ -653,67 +290,22 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ru": {
     "missing": [],
     "untranslated": [
       "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "story_page.meta_desc"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "sv": {
@@ -721,35 +313,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "th": {
@@ -757,35 +326,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "tl": {
@@ -807,32 +353,10 @@
     "missing": [],
     "untranslated": [
       "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "story_page.meta_desc"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "uk": {
@@ -840,35 +364,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "vi": {
@@ -876,35 +377,12 @@
     "untranslated": [
       "mp3_page.meta_desc",
       "story_page.meta_desc",
-      "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   },
   "zh": {
@@ -915,32 +393,10 @@
       "slideshow_page.title",
       "slideshow_page.features.original.title",
       "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title",
-      "slideshow_page.faq.q1",
-      "slideshow_page.faq.a1",
-      "slideshow_page.faq.q2",
-      "slideshow_page.faq.a2",
-      "slideshow_page.faq.q3",
-      "slideshow_page.faq.a3",
-      "slideshow_page.faq.q4",
-      "slideshow_page.faq.a4",
-      "slideshow_page.faq.q5",
-      "slideshow_page.faq.a5",
-      "slideshow_page.faq.q6",
-      "slideshow_page.faq.a6",
-      "slideshow_page.faq.q7",
-      "slideshow_page.faq.a7",
-      "slideshow_page.faq.q8",
-      "slideshow_page.faq.a8",
-      "slideshow_page.faq.q9",
-      "slideshow_page.faq.a9",
-      "slideshow_page.faq.q10",
-      "slideshow_page.faq.a10"
+      "slideshow_page.features.device.title"
     ],
     "missing_faq": [],
-    "untranslated_faq": [
-      "slideshow_page"
-    ],
+    "untranslated_faq": [],
     "incomplete_faq": []
   }
 }

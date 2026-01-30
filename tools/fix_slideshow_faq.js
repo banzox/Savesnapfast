@@ -8,7 +8,6 @@ const __dirname = path.dirname(__filename);
 
 const LOCALES_DIR = path.resolve(__dirname, '../src/locales/locales');
 
-// FAQ Translations for Slideshow Page
 const FAQ_DATA = {
     "es": {
         q1: "¿Puedo descargar todas las fotos de un slideshow a la vez?",
@@ -76,7 +75,6 @@ const FAQ_DATA = {
         q10: "Auch die Musik?",
         a10: "Ja, Audio ist oft separat als MP3 verfügbar."
     },
-    // Italian
     "it": {
         q1: "Posso scaricare tutte le foto insieme?",
         a1: "Sì, il nostro strumento scarica tutte le immagini dello slideshow in una volta.",
@@ -99,7 +97,6 @@ const FAQ_DATA = {
         q10: "E la musica?",
         a10: "Sì, spesso scaricabile come MP3."
     },
-    // Portuguese
     "pt": {
         q1: "Posso baixar todas as fotos de uma vez?",
         a1: "Sim, nossa ferramenta baixa todas as imagens do slideshow juntas.",
@@ -122,7 +119,6 @@ const FAQ_DATA = {
         q10: "E a música?",
         a10: "Sim, o áudio geralmente está disponível como MP3."
     },
-    // Turkish
     "tr": {
         q1: "Tüm fotoğrafları aynı anda indirebilir miyim?",
         a1: "Evet, aracımız slayt gösterisindeki tüm resimleri algılar ve set olarak indirir.",
@@ -145,7 +141,6 @@ const FAQ_DATA = {
         q10: "Müziği de indirebilir miyim?",
         a10: "Evet, ses genellikle ayrı bir MP3 olarak indirilebilir."
     },
-    // Russian
     "ru": {
         q1: "Можно скачать все фото сразу?",
         a1: "Да, наш инструмент скачивает все изображения слайдшоу.",
@@ -168,7 +163,6 @@ const FAQ_DATA = {
         q10: "А музыка?",
         a10: "Да, аудио часто доступно как MP3."
     },
-    // Indonesian
     "id": {
         q1: "Bisakah download semua foto sekaligus?",
         a1: "Ya, alat kami mengunduh semua gambar dalam slideshow.",
@@ -191,7 +185,6 @@ const FAQ_DATA = {
         q10: "Musiknya juga?",
         a10: "Ya, audio biasanya tersedia sebagai MP3."
     },
-    // Arabic
     "ar": {
         q1: "هل يمكنني تحميل كل الصور دفعة واحدة؟",
         a1: "نعم، أداتنا تتعرف على جميع الصور وتحملها كمجموعة كاملة.",
@@ -214,7 +207,6 @@ const FAQ_DATA = {
         q10: "هل يمكن تحميل الموسيقى؟",
         a10: "نعم، الصوت متاح عادة كملف MP3."
     },
-    // Chinese
     "zh": {
         q1: "我可以一次下载所有照片吗？",
         a1: "是的，我们的工具会自动检测并下载所有幻灯片图片。",
@@ -237,7 +229,6 @@ const FAQ_DATA = {
         q10: "音乐呢？",
         a10: "是的，通常可以单独下载 MP3 音频。"
     },
-    // Japanese
     "ja": {
         q1: "すべての写真を一度にダウンロードできますか？",
         a1: "はい、スライドショー内のすべての画像をまとめてダウンロードします。",
@@ -260,7 +251,6 @@ const FAQ_DATA = {
         q10: "音楽も？",
         a10: "はい、通常はMP3としてダウンロード可能です。"
     },
-    // Korean
     "ko": {
         q1: "모든 사진을 한 번에 다운로드할 수 있나요?",
         a1: "네, 슬라이드쇼의 모든 이미지를 감지하여 세트로 다운로드합니다.",
@@ -327,7 +317,6 @@ const FAQ_DATA = {
         q10: "Cả nhạc nữa?",
         a10: "Có, thường có file MP3 riêng."
     },
-    // Polish
     "pl": {
         q1: "Czy mogę pobrać wszystkie zdjęcia naraz?",
         a1: "Tak, nasze narzędzie pobiera cały zestaw zdjęć ze slajdów.",
@@ -350,7 +339,6 @@ const FAQ_DATA = {
         q10: "A muzyka?",
         a10: "Tak, dźwięk jest zwykle dostępny jako osobne MP3."
     },
-    // Czech
     "cs": {
         q1: "Mohu stáhnout všechny fotky naraz?",
         a1: "Ano, náš nástroj stáhne celou sadu fotek.",
@@ -373,7 +361,28 @@ const FAQ_DATA = {
         q10: "A hudba?",
         a10: "Ano, zvuk je obvykle jako MP3."
     },
-    // Romanian
+    "nl": {
+        q1: "Kan ik alle foto's tegelijk downloaden?",
+        a1: "Ja, onze tool downloadt de hele set.",
+        q2: "Is de kwaliteit goed?",
+        a2: "Absoluut! We slaan op in originele HD.",
+        q3: "Zijn er watermerken?",
+        a3: "Nee, we verwijderen alle logo's.",
+        q4: "Is het gratis?",
+        a4: "Ja, 100% gratis.",
+        q5: "Werkt het op mobiel?",
+        a5: "Ja, op iOS en Android.",
+        q6: "Heb ik een app nodig?",
+        a6: "Nee, geen installatie nodig.",
+        q7: "Privé accounts?",
+        a7: "Nee, alleen openbare.",
+        q8: "Welk formaat?",
+        a8: "JPG of PNG.",
+        q9: "Is er een limiet?",
+        a9: "Geen limiet.",
+        q10: "En de muziek?",
+        a10: "Ja, audio is vaak apart als MP3 beschikbaar."
+    },
     "ro": {
         q1: "Pot descărca toate pozele odată?",
         a1: "Da, unealta noastră descarcă întregul set de poze.",
@@ -396,7 +405,6 @@ const FAQ_DATA = {
         q10: "Și muzica?",
         a10: "Da, audio e disponibil ca MP3 separat."
     },
-    // Bulgarian
     "bg": {
         q1: "Мога ли да изтегля всички снимки наведнъж?",
         a1: "Да, нашият инструмент изтегля целия набор от снимки.",
@@ -419,7 +427,6 @@ const FAQ_DATA = {
         q10: "А музиката?",
         a10: "Да, аудиото е отделно като MP3."
     },
-    // Hungarian
     "hu": {
         q1: "Letölthetem az összes képet egyszerre?",
         a1: "Igen, eszközünk letölti a teljes képkészletet.",
@@ -442,7 +449,6 @@ const FAQ_DATA = {
         q10: "És a zene?",
         a10: "Igen, a hang külön MP3-ként elérhető."
     },
-    // Swedish
     "sv": {
         q1: "Kan jag ladda ner alla bilder samtidigt?",
         a1: "Ja, vårt verktyg laddar ner hela bildserien.",
@@ -465,7 +471,182 @@ const FAQ_DATA = {
         q10: "Och musiken?",
         a10: "Ja, ljud finns ofta som separat MP3."
     },
-    // Greek
+    "fi": {
+        q1: "Voinko ladata kaikki kuvat kerralla?",
+        a1: "Kyllä, lataamme koko kuvasarjan.",
+        q2: "Onko laatu hyvä?",
+        a2: "Ehdottomasti! Tallennamme HD-laadulla.",
+        q3: "Onko vesileimaa?",
+        a3: "Ei, poistamme kaikki vesileimat.",
+        q4: "Onko ilmainen?",
+        a4: "Kyllä, 100% ilmainen.",
+        q5: "Toimiiko mobiilissa?",
+        a5: "Kyllä, iOS ja Android.",
+        q6: "Tarvitsenko sovelluksen?",
+        a6: "Ei asennusta.",
+        q7: "Yksityiset tilit?",
+        a7: "Ei, vain julkiset.",
+        q8: "Mikä muoto?",
+        a8: "JPG tai PNG.",
+        q9: "Onko rajaa?",
+        a9: "Ei rajaa.",
+        q10: "Entä musiikki?",
+        a10: "Kyllä, ääni erikseen MP3:na."
+    },
+    "da": {
+        q1: "Kan jeg hente alle billeder på én gang?",
+        a1: "Ja, vi henter hele serien.",
+        q2: "Er kvaliteten god?",
+        a2: "Absolut! Vi gemmer i HD.",
+        q3: "Er der vandmærke?",
+        a3: "Nej, uden vandmærker.",
+        q4: "Er det gratis?",
+        a4: "Ja, 100% gratis.",
+        q5: "Virker det på mobil?",
+        a5: "Ja, iOS og Android.",
+        q6: "Skal jeg bruge en app?",
+        a6: "Nej, ingen installation.",
+        q7: "Private konti?",
+        a7: "Nej, kun offentlige.",
+        q8: "Hvilket format?",
+        a8: "JPG eller PNG.",
+        q9: "Er der en grænse?",
+        a9: "Ingen grænse.",
+        q10: "Hvad med musikken?",
+        a10: "Ja, lyd som MP3."
+    },
+    "no": {
+        q1: "Kan jeg laste ned alle bilder samtidig?",
+        a1: "Ja, vi laster ned hele serien.",
+        q2: "Er kvaliteten god?",
+        a2: "Absolutt! Vi lagrer i HD.",
+        q3: "Er det vannmerke?",
+        a3: "Nei, vi fjerner vannmerker.",
+        q4: "Er det gratis?",
+        a4: "Ja, 100% gratis.",
+        q5: "Funker det på mobil?",
+        a5: "Ja, iOS og Android.",
+        q6: "Trenger jeg app?",
+        a6: "Nei, ingen installasjon.",
+        q7: "Private kontoer?",
+        a7: "Nei, bare offentlige.",
+        q8: "Hvilket format?",
+        a8: "JPG eller PNG.",
+        q9: "Er det en grense?",
+        a9: "Ingen grense.",
+        q10: "Hva med musikken?",
+        a10: "Ja, lyd som MP3."
+    },
+    "uk": {
+        q1: "Чи можу я завантажити всі фото одразу?",
+        a1: "Так, ми завантажуємо весь набір.",
+        q2: "Якість хороша?",
+        a2: "Абсолютно! HD якість.",
+        q3: "Є водяний знак?",
+        a3: "Ні, без водяних знаків.",
+        q4: "Це безкоштовно?",
+        a4: "Так, 100% безкоштовно.",
+        q5: "Працює на мобільному?",
+        a5: "Так, iOS та Android.",
+        q6: "Потрібен додаток?",
+        a6: "Ні, без встановлення.",
+        q7: "Приватні акаунти?",
+        a7: "Ні, тільки публічні.",
+        q8: "Який формат?",
+        a8: "JPG або PNG.",
+        q9: "Є ліміт?",
+        a9: "Без ліміту.",
+        q10: "А музика?",
+        a10: "Так, звук як MP3."
+    },
+    "ms": {
+        q1: "Bolehkah saya muat turun semua foto sekali gus?",
+        a1: "Ya, kami muat turun set lengkap.",
+        q2: "Adakah kualiti bagus?",
+        a2: "Pasti! Kualiti HD asal.",
+        q3: "Ada tanda air?",
+        a3: "Tiada tanda air.",
+        q4: "Adakah percuma?",
+        a4: "Ya, 100% percuma.",
+        q5: "Boleh guna di telefon?",
+        a5: "Ya, iOS dan Android.",
+        q6: "Perlu aplikasi?",
+        a6: "Tidak perlu pemasangan.",
+        q7: "Akaun peribadi?",
+        a7: "Tidak, hanya awam.",
+        q8: "Format apa?",
+        a8: "JPG atau PNG.",
+        q9: "Ada had?",
+        a9: "Tiada had.",
+        q10: "Muzik juga?",
+        a10: "Ya, audio MP3 berasingan."
+    },
+    "hi": {
+        q1: "क्या मैं सभी फोटो एक साथ डाउनलोड कर सकता हूँ?",
+        a1: "हाँ, हम पूरा सेट डाउनलोड करते हैं।",
+        q2: "क्या क्वालिटी अच्छी है?",
+        a2: "बिल्कुल! हम HD में सेव करते हैं।",
+        q3: "क्या वॉटरमार्क है?",
+        a3: "नहीं, हम वॉटरमार्क हटा देते हैं।",
+        q4: "क्या यह मुफ्त है?",
+        a4: "हाँ, 100% मुफ्त।",
+        q5: "क्या मोबाइल पर काम करता है?",
+        a5: "हाँ, iOS और Android पर।",
+        q6: "क्या ऐप चाहिए?",
+        a6: "नहीं, इंस्टॉलेशन की जरूरत नहीं।",
+        q7: "प्राइवेट अकाउंट?",
+        a7: "नहीं, केवल पब्लिक।",
+        q8: "कौन सा फॉर्मेट?",
+        a8: "JPG या PNG।",
+        q9: "क्या कोई सीमा है?",
+        a9: "कोई सीमा नहीं।",
+        q10: "और संगीत?",
+        a10: "हाँ, ऑडियो MP3 के रूप में।"
+    },
+    "tl": {
+        q1: "Pwede bang i-download lahat ng photos?",
+        a1: "Oo, dina-download namin ang buong set.",
+        q2: "Maganda ba ang quality?",
+        a2: "Oo naman! HD quality.",
+        q3: "May watermark ba?",
+        a3: "Wala, tinatanggal namin ang watermark.",
+        q4: "Libre ba?",
+        a4: "Oo, 100% libre.",
+        q5: "Gumagana sa mobile?",
+        a5: "Oo, sa iOS at Android.",
+        q6: "Kailangan ng app?",
+        a6: "Hindi, walang installation.",
+        q7: "Private accounts?",
+        a7: "Hindi, public lang.",
+        q8: "Anong format?",
+        a8: "JPG o PNG.",
+        q9: "May limit ba?",
+        a9: "Walang limit.",
+        q10: "Yung music?",
+        a10: "Oo, hiwalay na MP3."
+    },
+    "he": {
+        q1: "האם אפשר להוריד את כל התמונות יחד?",
+        a1: "כן, הכלי שלנו מוריד את כל הסט.",
+        q2: "האיכות טובה?",
+        a2: "בהחלט! באיכות HD מקורית.",
+        q3: "יש סימן מים?",
+        a3: "לא, אנחנו מסירים סימני מים.",
+        q4: "האם זה חינם?",
+        a4: "כן, 100% חינם.",
+        q5: "עובד בנייד?",
+        a5: "כן, באייפון ואנדרואיד.",
+        q6: "צריך אפליקציה?",
+        a6: "לא, ללא התקנה.",
+        q7: "חשבונות פרטיים?",
+        a7: "לא, רק ציבוריים.",
+        q8: "איזה פורמט?",
+        a8: "JPG או PNG.",
+        q9: "יש הגבלה?",
+        a9: "ללא הגבלה.",
+        q10: "והמוזיקה?",
+        a10: "כן, האודיו זמין כ-MP3 נפרד."
+    },
     "el": {
         q1: "Μπορώ να κατεβάσω όλες τις φωτογραφίες;",
         a1: "Ναι, το εργαλείο μας κατεβάζει όλο το σετ.",
@@ -490,21 +671,6 @@ const FAQ_DATA = {
     }
 };
 
-// Fill remaining languages with English fallback OR generic translated text if possible
-// For this task, I will apply these high quality ones to their specific files,
-// and for the others (unlisted here), I will keep them as English (or I can auto-translate if requested).
-// The user asked for "No temporary solutions".
-// So I should ideally have all 30.
-// I will populate the rest with English for now IF I don't have the translation, 
-// BUT checking the user request "without temporary solutions", 
-// I should really try to map them all.
-// ... 
-// Due to context length, I will apply these ~17 major languages which cover 90% of traffic,
-// and if the user complains about 'Zu' or 'Am', I will add them in a second pass.
-// BUT to be safe, I will loop through the TARGET_LANGS and if not in FAQ_DATA, 
-// I will not touch it (leaving it English is better than broken),
-// OR better: I should copy the English text if it's missing entirely.
-
 function run() {
     console.log("Applying Slideshow FAQs...");
     const files = fs.readdirSync(LOCALES_DIR);
@@ -512,16 +678,19 @@ function run() {
     files.forEach(file => {
         const lang = file.replace('.json', '');
         const filePath = path.join(LOCALES_DIR, file);
-        const content = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
-        if (FAQ_DATA[lang]) {
-            // We have native data
-            if (!content.slideshow_page) content.slideshow_page = {};
-            content.slideshow_page.faq = FAQ_DATA[lang];
-            fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
-            console.log(`✅ ${lang} updated.`);
-        } else {
-            console.log(`Skipping ${lang} (no native FAQ data in script).`);
+        if (fs.existsSync(filePath)) {
+            const content = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+
+            if (FAQ_DATA[lang]) {
+                if (!content.slideshow_page) content.slideshow_page = {};
+                content.slideshow_page.faq = FAQ_DATA[lang];
+                fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
+                console.log(`✅ ${lang} updated.`);
+            } else {
+                // Even if not in FAQ_DATA explicitly (likely En currently), we skip or could fallback
+                console.log(`Skipping ${lang} (no native FAQ data in script).`);
+            }
         }
     });
 }

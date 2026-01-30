@@ -485,26 +485,26 @@
       "step3": "I-click ang Download."
     },
     "faq": {
-      "q1": "Pwede bang lahat?",
-      "a1": "Oo, lahat sabay-sabay.",
-      "q2": "Mataas ba quality?",
-      "a2": "Oo, HD original.",
-      "q3": "May watermark?",
-      "a3": "Wala, malinis.",
+      "q1": "Pwede bang i-download lahat ng photos?",
+      "a1": "Oo, dina-download namin ang buong set.",
+      "q2": "Maganda ba ang quality?",
+      "a2": "Oo naman! HD quality.",
+      "q3": "May watermark ba?",
+      "a3": "Wala, tinatanggal namin ang watermark.",
       "q4": "Libre ba?",
       "a4": "Oo, 100% libre.",
-      "q5": "Pwede sa mobile?",
-      "a5": "Oo, lahat ng mobile.",
+      "q5": "Gumagana sa mobile?",
+      "a5": "Oo, sa iOS at Android.",
       "q6": "Kailangan ng app?",
-      "a6": "Hindi, browser lang.",
+      "a6": "Hindi, walang installation.",
       "q7": "Private accounts?",
-      "a7": "Public lang.",
+      "a7": "Hindi, public lang.",
       "q8": "Anong format?",
       "a8": "JPG o PNG.",
-      "q9": "May limit?",
+      "q9": "May limit ba?",
       "a9": "Walang limit.",
       "q10": "Yung music?",
-      "a10": "Pwede MP3 hiwalay."
+      "a10": "Oo, hiwalay na MP3."
     }
   }
 }

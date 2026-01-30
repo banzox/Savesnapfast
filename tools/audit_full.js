@@ -121,7 +121,7 @@ function audit() {
         if (issues.length > 0) {
             console.log(`\n[${lang.toUpperCase()}] Issues:`);
             console.log(issues.join('\n'));
-            // console.log("Details:", JSON.stringify(rep, null, 2)); // Too verbose for summary
+            console.log("Details:", JSON.stringify(rep, null, 2)); // Enable verbose output
             hasIssues = true;
         }
     }
