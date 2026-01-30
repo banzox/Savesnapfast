@@ -792,6 +792,7 @@ footer {
         /* Modern tight spacing */
     }
 
+
     /* 3. Safe Area & Edge Protection */
     .container,
     .hero-section,
@@ -799,13 +800,38 @@ footer {
         padding-left: 24px;
         padding-right: 24px;
     }
+}
 
-    /* 4. Smooth Card Interaction */
-    .feature-card:active,
-    .result-card:active {
-        transform: scale(0.98);
-        transition: transform 0.1s;
+/* =========================================
+   CRITICAL MOBILE FIXES (GHOST COLUMN)
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Force all main containers to stack vertically */
+    body,
+    main,
+    .main-content,
+    #app {
+        display: block !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding-right: 0 !important;
+        /* Fix RTL spacing */
     }
+
+    /* Hide the static sidebar placeholder */
+    .sidebar-container-desktop {
+        display: none !important;
+    }
+}
+
+/* 4. Smooth Card Interaction */
+.feature-card:active,
+.result-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+}
 }
 
 /* Premium Focus Rings for Input */
