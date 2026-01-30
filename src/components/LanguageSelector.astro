@@ -9,32 +9,39 @@ const pathname = Astro.url.pathname;
 const search = Astro.url.search;
 
 function getPathForLanguage(targetLang: string) {
-    // 1. Identify current language prefix in path
-    const segments = pathname.split("/").filter(Boolean);
-    let cleanSegments = segments;
+    let currentPath = pathname;
 
-    // Check if first segment is a known non-default language
-    if (
-        segments.length > 0 &&
-        segments[0] in languages &&
-        segments[0] !== defaultLang
-    ) {
-        cleanSegments = segments.slice(1);
+    // 1. Remove specific language prefix if present (using Regex for precision)
+    // We explicitly check against all known non-default languages
+    for (const langCode of Object.keys(languages)) {
+        if (langCode === defaultLang) continue;
+
+        // Matches "/lang" or "/lang/" at the start of the string
+        const regex = new RegExp(`^/${langCode}(/|$)`);
+        if (regex.test(currentPath)) {
+            currentPath = currentPath.replace(regex, "/");
+            break; // Found and removed the prefix
+        }
     }
 
-    // Reconstruct path without language
-    const cleanPath = "/" + cleanSegments.join("/");
+    // Normalize path to ensure it starts with / and doesn't have double //
+    if (!currentPath.startsWith("/")) currentPath = "/" + currentPath;
+    currentPath = currentPath.replace("//", "/");
 
-    // 2. Add new prefix
-    let newPath;
+    // 2. Add target language prefix
+    let finalPath;
     if (targetLang === defaultLang) {
-        newPath = cleanPath === "//" ? "/" : cleanPath; // Handle root edge case
+        finalPath = currentPath;
     } else {
-        newPath = `/${targetLang}${cleanPath === "/" ? "" : cleanPath}`;
+        if (currentPath === "/") {
+            finalPath = `/${targetLang}`;
+        } else {
+            finalPath = `/${targetLang}${currentPath}`;
+        }
     }
 
-    // 3. Append query parameters (if any)
-    return newPath + search;
+    // 3. Append query parameters
+    return finalPath + search;
 }
 ---
 
