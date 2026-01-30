@@ -169,10 +169,11 @@ const t = useTranslations(lang);
         if (!hamburger || !navLinks) return;
 
         // Clone to remove old listeners
-        const newHamburger = hamburger.cloneNode(true);
+        // Cast to HTMLElement because cloneNode returns Node
+        const newHamburger = hamburger.cloneNode(true) as HTMLElement;
         hamburger.parentNode?.replaceChild(newHamburger, hamburger);
 
-        const toggleMenu = (e) => {
+        const toggleMenu = (e: Event) => {
             e.preventDefault();
             e.stopPropagation();
             navLinks.classList.toggle("active");
@@ -195,11 +196,11 @@ const t = useTranslations(lang);
         });
 
         // Close when clicking outside
-        const closeOnClickOutside = (e) => {
+        const closeOnClickOutside = (e: Event) => {
             if (
                 navLinks.classList.contains("active") &&
-                !navLinks.contains(e.target) &&
-                !newHamburger.contains(e.target)
+                !navLinks.contains(e.target as Node) &&
+                !newHamburger.contains(e.target as Node)
             ) {
                 navLinks.classList.remove("active");
                 newHamburger.classList.remove("active");
@@ -207,12 +208,14 @@ const t = useTranslations(lang);
             }
         };
 
-        // Remove old document listener if exists? Hard to track with anonymous functions.
-        // But we can just add it; modern browsers handle duplicate identical listeners well or we just accept it.
-        // Better: namespace it or store reference. For simplicity in this context:
-        document.removeEventListener("click", window.menuCloseListener);
-        window.menuCloseListener = closeOnClickOutside;
-        document.addEventListener("click", window.menuCloseListener);
+        // Remove old document listener if exists
+        // Cast window to any to access custom property
+        document.removeEventListener(
+            "click",
+            (window as any).menuCloseListener,
+        );
+        (window as any).menuCloseListener = closeOnClickOutside;
+        document.addEventListener("click", (window as any).menuCloseListener);
     }
 
     // Run on load
@@ -248,13 +251,13 @@ const t = useTranslations(lang);
     }
 
     .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
+        width: 100%; /* Full width */
+        max-width: 100%; /* Remove constraint */
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 20px;
+        padding: 0 40px; /* More padding for aesthetic */
         position: relative;
     }
 
@@ -266,13 +269,14 @@ const t = useTranslations(lang);
         text-decoration: none;
         color: var(--text-main, #fff);
         font-weight: 800;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         letter-spacing: -0.5px;
         transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        z-index: 2002; /* Ensure above centers */
     }
 
     :global([data-theme="light"]) .logo {
-        color: #1a1a1a;
+        color: #000000; /* Stricter Black */
     }
 
     .logo:hover {
