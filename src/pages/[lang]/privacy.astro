@@ -1,19 +1,18 @@
 ---
-export const prerender = true;
+// export const prerender = true; // DISABLED FOR SSR
 import TextPage from "../../components/TextPage.astro";
 import { languages, defaultLang } from "../../i18n/ui";
 
-export async function getStaticPaths() {
-    return Object.keys(languages)
-        .filter((lang) => lang !== defaultLang)
-        .map((lang) => ({
-            params: { lang },
-        }));
-}
-
+// SSR Mode - Dynamic Handling
 const { lang } = Astro.params;
-const currentLang = lang || defaultLang;
+const currentLang = (lang || defaultLang) as keyof typeof languages;
+
+if (currentLang !== defaultLang && !languages[currentLang]) {
+    return Astro.redirect("/404");
+}
 ---
+
+const {lang} = Astro.params; const currentLang = lang || defaultLang; ---
 
 <TextPage
     titleKey="nav.privacy"

@@ -1,5 +1,5 @@
 ---
-// export const prerender = true; // DISABLED TO FIX ROUTING
+// export const prerender = true; // DISABLED FOR SSR
 import DownloadPage from "../../components/DownloadPage.astro";
 import { languages, defaultLang } from "../../i18n/ui";
 
@@ -7,15 +7,13 @@ import { languages, defaultLang } from "../../i18n/ui";
 // This ensures the page accepts ANY lang param allowed by config
 
 const { lang } = Astro.params;
-const currentLang = lang || defaultLang;
+const currentLang = (lang || defaultLang) as keyof typeof languages;
 
 // Validate lang
 if (currentLang !== defaultLang && !languages[currentLang]) {
     return Astro.redirect("/404");
 }
 ---
-
-const {lang} = Astro.params; const currentLang = lang || defaultLang; ---
 
 <DownloadPage
     lang={currentLang}

@@ -1,30 +1,28 @@
 ---
-export const prerender = true;
-import TextPage from "../../components/TextPage.astro";
+// export const prerender = true; // DISABLED FOR SSR
+import ContactForm from "../../components/ContactForm.jsx";
+import Layout from "../../layouts/Layout.astro";
+import TextPage from "../../components/TextPage.astro"; // Added missing import
 import { languages, defaultLang } from "../../i18n/ui";
+import { useTranslations } from "../../utils/i18n"; // Fixed import source
 
-export async function getStaticPaths() {
-    return Object.keys(languages)
-        .filter((lang) => lang !== defaultLang)
-        .map((lang) => ({
-            params: { lang },
-        }));
+// SSR Mode
+const { lang } = Astro.params;
+const currentLang = (lang || defaultLang) as keyof typeof languages; // Fixed Type Error
+
+if (currentLang !== defaultLang && !languages[currentLang]) {
+    return Astro.redirect("/404");
 }
 
-const { lang } = Astro.params;
-const currentLang = lang || defaultLang;
+const t = useTranslations(currentLang);
 ---
 
 <TextPage
-    titleKey="nav.contact"
+    titleKey="pages.contact.title"
     contentKey="pages.contact.content"
     lang={currentLang}
 >
-    <div class="contact-link-wrapper">
-        <a href="mailto:contact@savetik-fast.xyz" class="contact-email">
-            contact@savetik-fast.xyz
-        </a>
-    </div>
+    contact@savetik-fast.xyz
 </TextPage>
 
 <style>
