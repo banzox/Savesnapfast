@@ -51,10 +51,7 @@
       "story_page.faq.q9",
       "story_page.faq.a9",
       "story_page.faq.q10",
-      "story_page.faq.a10",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
+      "story_page.faq.a10"
     ],
     "missing_faq": [],
     "untranslated_faq": [
@@ -65,13 +62,7 @@
   },
   "cs": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
@@ -79,13 +70,8 @@
   "da": {
     "missing": [],
     "untranslated": [
-      "mp3_page.meta_desc",
       "mp3_page.title",
-      "story_page.meta_desc",
-      "slideshow_page.title",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
+      "slideshow_page.title"
     ],
     "missing_faq": [],
     "untranslated_faq": [],
@@ -94,8 +80,6 @@
   "de": {
     "missing": [],
     "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
       "slideshow_page.title"
     ],
     "missing_faq": [],
@@ -104,46 +88,28 @@
   },
   "el": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "es": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "fi": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "fr": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
@@ -161,76 +127,42 @@
   },
   "hu": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "id": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "mp3_page.title",
-      "story_page.meta_desc"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "it": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ja": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ko": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ms": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
@@ -238,12 +170,7 @@
   "nl": {
     "missing": [],
     "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.title",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
+      "slideshow_page.title"
     ],
     "missing_faq": [],
     "untranslated_faq": [],
@@ -251,85 +178,49 @@
   },
   "no": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "pl": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "pt": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ro": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "ru": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "sv": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "th": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
@@ -337,12 +228,7 @@
   "tl": {
     "missing": [],
     "untranslated": [
-      "mp3_page.meta_desc",
-      "mp3_page.features.trending.title",
-      "story_page.meta_desc",
-      "story_page.features.anonymous.title",
       "slideshow_page.title",
-      "slideshow_page.features.original.title",
       "slideshow_page.features.format.title"
     ],
     "missing_faq": [],
@@ -351,50 +237,28 @@
   },
   "tr": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "uk": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "vi": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
   },
   "zh": {
     "missing": [],
-    "untranslated": [
-      "mp3_page.meta_desc",
-      "story_page.meta_desc",
-      "slideshow_page.title",
-      "slideshow_page.features.original.title",
-      "slideshow_page.features.format.title",
-      "slideshow_page.features.device.title"
-    ],
+    "untranslated": [],
     "missing_faq": [],
     "untranslated_faq": [],
     "incomplete_faq": []
