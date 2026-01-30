@@ -2,34 +2,47 @@
 import { languages, defaultLang } from "../i18n/ui";
 
 const { lang = "en" } = Astro.props;
+// Ensure we use the languages map imported from the source of truth
 const currentLangName =
     languages[lang as keyof typeof languages] || languages["en"];
 
 const pathname = Astro.url.pathname;
 const search = Astro.url.search;
 
-import { getRelativeLocaleUrl } from "astro:i18n";
-
 function getPathForLanguage(targetLang: string) {
-    // 1. Get current path segments, stripping empty strings
-    const segments = pathname.split("/").filter(Boolean);
+    // 1. Get all parts, strictly handling slashes
+    const parts = pathname.split("/").filter(Boolean);
 
-    // 2. Detect if first segment is a locale
-    const firstSegment = segments[0];
-    const isFirstSegmentLocale =
-        firstSegment &&
-        languages[firstSegment as keyof typeof languages] &&
-        firstSegment !== defaultLang;
+    // 2. Check if the first part is a known locale
+    const firstPart = parts[0];
+    const isFirstPartLocale = firstPart && firstPart in languages;
 
-    // 3. Extract the "pure" path relative to locale
-    let relativePath = segments.join("/");
-    if (isFirstSegmentLocale) {
-        relativePath = segments.slice(1).join("/");
+    // 3. Extract the clean semantic path (e.g., "mp3", "story", or empty for home)
+    let cleanPathSegments = isFirstPartLocale ? parts.slice(1) : parts;
+
+    // 4. Construct the new path
+    // If target is default lang (en), we just want /path (e.g. /mp3)
+    // If target is other (e.g. es), we want /es/path (e.g. /es/mp3)
+
+    let newPath = "";
+
+    if (targetLang === defaultLang) {
+        // Default language: root based (e.g. /mp3)
+        newPath = `/${cleanPathSegments.join("/")}`;
+    } else {
+        // Other languages: prefix based (e.g. /es/mp3)
+        newPath = `/${targetLang}`;
+        if (cleanPathSegments.length > 0) {
+            newPath += `/${cleanPathSegments.join("/")}`;
+        }
     }
 
-    // 4. Generate new URL using Astro's standard helper
-    // This automatically handles default locale logic (e.g. /en/ -> /) if configured
-    return getRelativeLocaleUrl(targetLang, relativePath) + search;
+    // 5. Ensure trailing slash consistency if needed (Astro default is usually no trailing slash for files, but let's stick to clean)
+    // If original had trailing slash and it's not root, maybe preserve?
+    // For now, clean path is safest.
+
+    // Append search params
+    return newPath + search;
 }
 ---
 
