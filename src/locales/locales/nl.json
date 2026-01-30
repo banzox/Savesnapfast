@@ -293,14 +293,14 @@
     }
   },
   "slideshow_page": {
-    "meta_title": "TikTok Slideshow Downloader - Save Photos",
-    "meta_desc": "Download TikTok photo slideshows in HD. Save all images without watermark.",
+    "meta_title": "TikTok Slideshow Downloader - Foto's Opslaan",
+    "meta_desc": "Download TikTok foto slideshows in HD zonder watermerk.",
     "title": "TikTok Slideshow Downloader",
-    "desc": "Download TikTok photo carousels in high quality.",
-    "placeholder": "Paste link...",
-    "btn_download": "Download Images",
-    "about_title": "TikTok Photo Downloader",
-    "about_content": "Save TikTok photo slideshows in original HD quality without watermarks.",
+    "desc": "Sla fotocarrousels op in hoge kwaliteit.",
+    "placeholder": "Plak link hier...",
+    "btn_download": "Afbeeldingen Downloaden",
+    "about_title": "TikTok Foto Downloader",
+    "about_content": "Sla TikTok foto slideshows op in originele HD kwaliteit zonder watermerk.",
     "features": {
       "bulk": {
         "title": "Bulk Download",
@@ -336,32 +336,32 @@
       }
     },
     "how_to": {
-      "title": "How to Download",
-      "step1": "Copy TikTok link.",
-      "step2": "Paste link above.",
-      "step3": "Click Download."
+      "title": "Hoe te downloaden",
+      "step1": "Kopieer de TikTok-link.",
+      "step2": "Plak de link hierboven.",
+      "step3": "Klik op Downloaden."
     },
     "faq": {
-      "q1": "Can I download all photos from a TikTok slideshow at once?",
-      "a1": "Yes, our tool automatically detects all images in a slideshow and downloads them as a complete set or lets you choose individual photos.",
-      "q2": "Are the downloaded images high quality?",
-      "a2": "Absolutely! We save the images in their original HD resolution (1080p or higher) exactly as they were uploaded to TikTok.",
-      "q3": "Do the images have watermarks?",
-      "a3": "No, SaveTikFast removes all watermarks and logos, giving you clean, high-quality images ready for use.",
-      "q4": "Is this tool free to use?",
-      "a4": "Yes, our TikTok Slideshow Downloader is 100% free with no hidden costs or subscription fees.",
-      "q5": "Does it work on mobile phones?",
-      "a5": "Yes, it works perfectly on both iOS (iPhone/iPad) and Android devices directly in your web browser.",
-      "q6": "Do I need to install any app?",
-      "a6": "No app installation is required. Simply paste the link in your browser and download instantly.",
-      "q7": "Can I download slideshows from private accounts?",
-      "a7": "Due to privacy restrictions, we can only access and download content from public TikTok accounts.",
-      "q8": "What format are the images saved in?",
-      "a8": "Images are typically saved in high-quality JPG or PNG format, which is compatible with all devices.",
-      "q9": "Is there a limit on how many slideshows I can download?",
-      "a9": "There is no limit! You can download as many TikTok slideshows and photo carousels as you like.",
-      "q10": "Can I download the music from the slideshow too?",
-      "a10": "Yes, usually the audio is available as a separate MP3 download option alongside the images."
+      "q1": "Kan ik alle foto's tegelijk downloaden?",
+      "a1": "Ja, onze tool downloadt de hele set.",
+      "q2": "Is de kwaliteit goed?",
+      "a2": "Absoluut! We slaan op in originele HD.",
+      "q3": "Zijn er watermerken?",
+      "a3": "Nee, we verwijderen alle logo's.",
+      "q4": "Is het gratis?",
+      "a4": "Ja, 100% gratis.",
+      "q5": "Werkt het op mobiel?",
+      "a5": "Ja, op iOS en Android.",
+      "q6": "Heb ik een app nodig?",
+      "a6": "Nee, geen installatie nodig.",
+      "q7": "Privé accounts?",
+      "a7": "Nee, alleen openbare.",
+      "q8": "Welk formaat?",
+      "a8": "JPG of PNG.",
+      "q9": "Is er een limiet?",
+      "a9": "Geen limiet.",
+      "q10": "En de muziek?",
+      "a10": "Ja, audio is vaak apart als MP3 beschikbaar."
     }
   },
   "nav_menu": {

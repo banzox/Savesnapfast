@@ -293,14 +293,14 @@
     }
   },
   "slideshow_page": {
-    "meta_title": "TikTok Slayt İndirici - Fotoğraf Kaydet",
-    "meta_desc": "TikTok fotoğraf slaytlarını ve karusellerini filigransız HD indir. Hızlı ve ücretsiz.",
+    "meta_title": "TikTok Slayt İndirici - Fotoğrafları Kaydet",
+    "meta_desc": "TikTok fotoğraf slaytlarını HD kalitesinde filigransız indirin.",
     "title": "TikTok Slayt İndirici",
-    "desc": "TikTok fotoğraf serilerini indirmek için en iyi araç. Her resmi yüksek kalitede kaydet.",
-    "placeholder": "Slayt bağlantısını yapıştır...",
+    "desc": "Fotoğraf karusellerini yüksek kalitede kaydedin.",
+    "placeholder": "Linki buraya yapıştır...",
     "btn_download": "Resimleri İndir",
     "about_title": "TikTok Fotoğraf İndirici",
-    "about_content": "Aracımız TikTok fotoğraf karusellerini kaydetmek için tasarlanmıştır. Her resmi orijinal HD kalitesinde filigransız olarak çıkarır.",
+    "about_content": "TikTok fotoğraf slaytlarını orijinal HD kalitesinde ve filigransız kaydedin.",
     "features": {
       "bulk": {
         "title": "Toplu İndirme",
@@ -336,32 +336,32 @@
       }
     },
     "how_to": {
-      "title": "Slayt Nasıl İndirilir",
-      "step1": "TikTok'u aç, bağlantıyı kopyala.",
-      "step2": "Bağlantıyı yukarı yapıştır.",
-      "step3": "'İndir' butonuna tıkla."
+      "title": "Nasıl İndirilir",
+      "step1": "TikTok bağlantısını kopyala.",
+      "step2": "Linki yukarıya yapıştır.",
+      "step3": "İndir'e tıkla."
     },
     "faq": {
-      "q1": "Can I download all photos from a TikTok slideshow at once?",
-      "a1": "Yes, our tool automatically detects all images in a slideshow and downloads them as a complete set or lets you choose individual photos.",
-      "q2": "Are the downloaded images high quality?",
-      "a2": "Absolutely! We save the images in their original HD resolution (1080p or higher) exactly as they were uploaded to TikTok.",
-      "q3": "Do the images have watermarks?",
-      "a3": "No, SaveTikFast removes all watermarks and logos, giving you clean, high-quality images ready for use.",
-      "q4": "Is this tool free to use?",
-      "a4": "Yes, our TikTok Slideshow Downloader is 100% free with no hidden costs or subscription fees.",
-      "q5": "Does it work on mobile phones?",
-      "a5": "Yes, it works perfectly on both iOS (iPhone/iPad) and Android devices directly in your web browser.",
-      "q6": "Do I need to install any app?",
-      "a6": "No app installation is required. Simply paste the link in your browser and download instantly.",
-      "q7": "Can I download slideshows from private accounts?",
-      "a7": "Due to privacy restrictions, we can only access and download content from public TikTok accounts.",
-      "q8": "What format are the images saved in?",
-      "a8": "Images are typically saved in high-quality JPG or PNG format, which is compatible with all devices.",
-      "q9": "Is there a limit on how many slideshows I can download?",
-      "a9": "There is no limit! You can download as many TikTok slideshows and photo carousels as you like.",
-      "q10": "Can I download the music from the slideshow too?",
-      "a10": "Yes, usually the audio is available as a separate MP3 download option alongside the images."
+      "q1": "Tüm fotoğrafları aynı anda indirebilir miyim?",
+      "a1": "Evet, aracımız slayt gösterisindeki tüm resimleri algılar ve set olarak indirir.",
+      "q2": "Görüntüler yüksek kaliteli mi?",
+      "a2": "Kesinlikle! Orijinal HD çözünürlükte (1080p+) kaydediyoruz.",
+      "q3": "Filigran var mı?",
+      "a3": "Hayır, SaveTikFast tüm filigranları ve logoları temizler.",
+      "q4": "Ücretsiz mi?",
+      "a4": "Evet, %100 ücretsizdir.",
+      "q5": "Telefonda çalışır mı?",
+      "a5": "Evet, iOS ve Android tarayıcılarda sorunsuz çalışır.",
+      "q6": "Uygulama lazım mı?",
+      "a6": "Hayır, kurulum gerekmez.",
+      "q7": "Gizli hesaplar?",
+      "a7": "Hayır, sadece herkese açık hesaplar.",
+      "q8": "Hangi format?",
+      "a8": "Genellikle JPG veya PNG.",
+      "q9": "Limit var mı?",
+      "a9": "Limit yok, istediğiniz kadar indirin.",
+      "q10": "Müziği de indirebilir miyim?",
+      "a10": "Evet, ses genellikle ayrı bir MP3 olarak indirilebilir."
     }
   },
   "nav_menu": {

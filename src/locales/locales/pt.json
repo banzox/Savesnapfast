@@ -293,14 +293,14 @@
     }
   },
   "slideshow_page": {
-    "meta_title": "Baixar Slideshow TikTok - Salvar Fotos e Carrosséis",
-    "meta_desc": "Baixe carrosséis de fotos TikTok em HD sem marca d'água. Salve todas as imagens com qualidade original.",
-    "title": "Baixar Slideshow do TikTok",
-    "desc": "A melhor ferramenta para salvar apresentações de fotos do TikTok. Baixe cada imagem em alta qualidade.",
-    "placeholder": "Cole o link do Slideshow...",
+    "meta_title": "Baixar Slideshow TikTok - Salvar Fotos",
+    "meta_desc": "Baixe carrosséis de fotos do TikTok em HD sem marca d'água.",
+    "title": "Baixar Slideshow TikTok",
+    "desc": "Salve carrosséis de fotos em alta qualidade.",
+    "placeholder": "Cole o link aqui...",
     "btn_download": "Baixar Imagens",
     "about_title": "Baixador de Fotos TikTok",
-    "about_content": "Ferramenta especializada para salvar carrosséis de fotos TikTok. Extrai cada imagem em qualidade HD sem marca d'água.",
+    "about_content": "Salve slideshows de fotos do TikTok em qualidade HD original sem marca d'água.",
     "features": {
       "bulk": {
         "title": "Download em Massa",
@@ -336,32 +336,32 @@
       }
     },
     "how_to": {
-      "title": "Como Baixar Slideshows",
-      "step1": "Abra o TikTok, copie o link do slideshow.",
-      "step2": "Cole o link na caixa acima.",
-      "step3": "Clique em 'Baixar Imagens'."
+      "title": "Como Baixar",
+      "step1": "Copie o link do TikTok.",
+      "step2": "Cole o link acima.",
+      "step3": "Clique em Baixar."
     },
     "faq": {
-      "q1": "Can I download all photos from a TikTok slideshow at once?",
-      "a1": "Yes, our tool automatically detects all images in a slideshow and downloads them as a complete set or lets you choose individual photos.",
-      "q2": "Are the downloaded images high quality?",
-      "a2": "Absolutely! We save the images in their original HD resolution (1080p or higher) exactly as they were uploaded to TikTok.",
-      "q3": "Do the images have watermarks?",
-      "a3": "No, SaveTikFast removes all watermarks and logos, giving you clean, high-quality images ready for use.",
-      "q4": "Is this tool free to use?",
-      "a4": "Yes, our TikTok Slideshow Downloader is 100% free with no hidden costs or subscription fees.",
-      "q5": "Does it work on mobile phones?",
-      "a5": "Yes, it works perfectly on both iOS (iPhone/iPad) and Android devices directly in your web browser.",
-      "q6": "Do I need to install any app?",
-      "a6": "No app installation is required. Simply paste the link in your browser and download instantly.",
-      "q7": "Can I download slideshows from private accounts?",
-      "a7": "Due to privacy restrictions, we can only access and download content from public TikTok accounts.",
-      "q8": "What format are the images saved in?",
-      "a8": "Images are typically saved in high-quality JPG or PNG format, which is compatible with all devices.",
-      "q9": "Is there a limit on how many slideshows I can download?",
-      "a9": "There is no limit! You can download as many TikTok slideshows and photo carousels as you like.",
-      "q10": "Can I download the music from the slideshow too?",
-      "a10": "Yes, usually the audio is available as a separate MP3 download option alongside the images."
+      "q1": "Posso baixar todas as fotos de uma vez?",
+      "a1": "Sim, nossa ferramenta baixa todas as imagens do slideshow juntas.",
+      "q2": "A qualidade é boa?",
+      "a2": "Com certeza! Salvamos em HD original.",
+      "q3": "Tem marca d'água?",
+      "a3": "Não, removemos todas as marcas d'água.",
+      "q4": "É grátis?",
+      "a4": "Sim, 100% gratuito.",
+      "q5": "Funciona no celular?",
+      "a5": "Sim, em iOS e Android.",
+      "q6": "Preciso de app?",
+      "a6": "Não, não precisa instalar nada.",
+      "q7": "Contas privadas?",
+      "a7": "Não, apenas contas públicas.",
+      "q8": "Qual formato?",
+      "a8": "JPG ou PNG de alta qualidade.",
+      "q9": "Tem limite?",
+      "a9": "Sem limites.",
+      "q10": "E a música?",
+      "a10": "Sim, o áudio geralmente está disponível como MP3."
     }
   },
   "nav_menu": {

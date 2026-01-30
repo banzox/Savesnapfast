@@ -293,14 +293,14 @@
     }
   },
   "slideshow_page": {
-    "meta_title": "Descargar Slideshow de TikTok - Guardar Fotos y Carruseles",
-    "meta_desc": "Descarga carruseles de fotos de TikTok en HD. Guarda todas las imágenes de TikTok sin marca de agua. Gratis y rápido.",
+    "meta_title": "Descargar Slideshow TikTok - Guardar Fotos",
+    "meta_desc": "Descarga carruseles de fotos de TikTok en HD. Sin marca de agua.",
     "title": "Descargador de Slideshow TikTok",
-    "desc": "La mejor herramienta para descargar presentaciones de fotos de TikTok. Guarda cada imagen en alta calidad con un clic.",
-    "placeholder": "Pega el enlace del Slideshow...",
+    "desc": "Guarda todos los carruseles de fotos en alta calidad.",
+    "placeholder": "Pega el enlace del slideshow...",
     "btn_download": "Descargar Imágenes",
-    "about_title": "Descargador Definitivo de Fotos TikTok",
-    "about_content": "Nuestra herramienta está diseñada específicamente para guardar carruseles de fotos de TikTok. Extrae cada imagen en su calidad original HD sin marcas de agua.",
+    "about_title": "Descargador de Fotos TikTok",
+    "about_content": "Guarda presentaciones de fotos de TikTok en calidad original HD sin marcas de agua.",
     "features": {
       "bulk": {
         "title": "Descarga Masiva",
@@ -336,32 +336,32 @@
       }
     },
     "how_to": {
-      "title": "Cómo Descargar Slideshows",
-      "step1": "Abre TikTok y busca el slideshow. Copia el enlace.",
-      "step2": "Pega el enlace en la caja de arriba.",
-      "step3": "Haz clic en 'Descargar Imágenes'."
+      "title": "Cómo Descargar Slideshow",
+      "step1": "Copia el enlace del TikTok.",
+      "step2": "Pégalo en la caja de arriba.",
+      "step3": "Haz clic en Descargar."
     },
     "faq": {
-      "q1": "¿Puedo descargar todas las fotos de un slideshow de TikTok a la vez?",
-      "a1": "Sí, nuestra herramienta detecta automáticamente todas las imágenes y te permite descargarlas como conjunto o elegir fotos individuales.",
-      "q2": "¿Las imágenes descargadas son de alta calidad?",
-      "a2": "¡Absolutamente! Guardamos las imágenes en su resolución HD original (1080p o superior) tal como se subieron a TikTok.",
-      "q3": "¿Las imágenes tienen marcas de agua?",
-      "a3": "No, SaveTikFast elimina todas las marcas de agua y logos, dándote imágenes limpias y listas para usar.",
-      "q4": "¿Esta herramienta es gratuita?",
-      "a4": "Sí, nuestro descargador de slideshows es 100% gratuito sin costos ocultos ni suscripciones.",
-      "q5": "¿Funciona en teléfonos móviles?",
-      "a5": "Sí, funciona perfectamente en dispositivos iOS (iPhone/iPad) y Android directamente en tu navegador.",
-      "q6": "¿Necesito instalar alguna aplicación?",
-      "a6": "No se requiere instalación. Simplemente pega el enlace en tu navegador y descarga al instante.",
+      "q1": "¿Puedo descargar todas las fotos de un slideshow a la vez?",
+      "a1": "Sí, nuestra herramienta detecta automáticamente todas las imágenes del slideshow y las descarga como un set completo.",
+      "q2": "¿Las imágenes descargadas tienen buena calidad?",
+      "a2": "¡Absolutamente! Guardamos las imágenes en su resolución HD original (1080p o superior).",
+      "q3": "¿Las imágenes tienen marca de agua?",
+      "a3": "No, SaveTikFast elimina todas las marcas de agua y logos, dándote imágenes limpias.",
+      "q4": "¿Es gratis?",
+      "a4": "Sí, nuestro descargador de Slideshows es 100% gratuito sin costos ocultos.",
+      "q5": "¿Funciona en móviles?",
+      "a5": "Sí, funciona perfectamente en iOS (iPhone/iPad) y Android directamente en tu navegador.",
+      "q6": "¿Necesito instalar una app?",
+      "a6": "No se requiere instalación. Simplemente pega el enlace en tu navegador.",
       "q7": "¿Puedo descargar de cuentas privadas?",
-      "a7": "Debido a restricciones de privacidad, solo podemos acceder y descargar contenido de cuentas públicas de TikTok.",
-      "q8": "¿En qué formato se guardan las imágenes?",
-      "a8": "Las imágenes se guardan típicamente en formato JPG o PNG de alta calidad, compatible con todos los dispositivos.",
-      "q9": "¿Hay un límite de descargas?",
-      "a9": "¡No hay límite! Puedes descargar tantos slideshows y carruseles de fotos como quieras.",
-      "q10": "¿Puedo descargar la música del slideshow también?",
-      "a10": "Sí, generalmente el audio está disponible como una opción de descarga MP3 separada junto con las imágenes."
+      "a7": "No, solo podemos acceder a contenido de cuentas públicas.",
+      "q8": "¿En qué formato se guardan?",
+      "a8": "Las imágenes se guardan típicamente en formato JPG o PNG de alta calidad.",
+      "q9": "¿Hay límite de descargas?",
+      "a9": "¡No hay límite! Puedes descargar tantos slideshows como quieras.",
+      "q10": "¿Puedo descargar la música también?",
+      "a10": "Sí, usualmente el audio está disponible como descarga MP3 separada."
     }
   },
   "nav_menu": {

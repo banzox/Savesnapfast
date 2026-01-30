@@ -293,14 +293,14 @@
     }
   },
   "slideshow_page": {
-    "meta_title": "TikTok Slideshow Downloader - Save Photos",
-    "meta_desc": "Download TikTok photo slideshows in HD. Save all images without watermark.",
-    "title": "TikTok Slideshow Downloader",
-    "desc": "Download TikTok photo carousels in high quality.",
-    "placeholder": "Paste link...",
-    "btn_download": "Download Images",
-    "about_title": "TikTok Photo Downloader",
-    "about_content": "Save TikTok photo slideshows in original HD quality without watermarks.",
+    "meta_title": "TikTok स्लाइडशो डाउनलोडर - फोटो सहेजें",
+    "meta_desc": "बिना वॉटरमार्क के HD में TikTok फोटो स्लाइडशो डाउनलोड करें।",
+    "title": "TikTok स्लाइडशो डाउनलोडर",
+    "desc": "उच्च गुणवत्ता में फोटो हिंडोला सहेजें।",
+    "placeholder": "लिंक यहाँ पेस्ट करें...",
+    "btn_download": "छवियाँ डाउनलोड करें",
+    "about_title": "TikTok फोटो डाउनलोडर",
+    "about_content": "बिना वॉटरमार्क के मूल HD गुणवत्ता में TikTok फोटो स्लाइडशो सहेजें।",
     "features": {
       "bulk": {
         "title": "Bulk Download",
@@ -336,10 +336,10 @@
       }
     },
     "how_to": {
-      "title": "How to Download",
-      "step1": "Copy TikTok link.",
-      "step2": "Paste link above.",
-      "step3": "Click Download."
+      "title": "कैसे डाउनलोड करें",
+      "step1": "TikTok लिंक कॉपी करें।",
+      "step2": "लिंक ऊपर पेस्ट करें।",
+      "step3": "डाउनलोड पर क्लिक करें।"
     },
     "faq": {
       "q1": "Can I download all photos from a TikTok slideshow at once?",

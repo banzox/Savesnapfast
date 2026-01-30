@@ -437,13 +437,13 @@
   },
   "slideshow_page": {
     "meta_title": "TikTok Slideshow Downloader - I-save ang mga Larawan",
-    "meta_desc": "I-download ang TikTok slideshows at photos nang walang watermark sa HD.",
+    "meta_desc": "I-download ang mga TikTok photo slideshow sa HD nang walang watermark.",
     "title": "TikTok Slideshow Downloader",
-    "desc": "Ang pinakamahusay na tool para sa pag-save ng TikTok photos. I-download ang bawat larawan.",
-    "placeholder": "I-paste ang link...",
+    "desc": "I-save ang mga photo carousel sa mataas na kalidad.",
+    "placeholder": "I-paste ang link dito...",
     "btn_download": "I-download ang mga Larawan",
-    "about_title": "TikTok Photo Saver",
-    "about_content": "I-save ang TikTok slideshows sa orihinal na kalidad. Lahat ng larawan nang sabay-sabay.",
+    "about_title": "TikTok Photo Downloader",
+    "about_content": "I-save ang mga TikTok photo slideshow sa orihinal na HD na kalidad nang walang watermark.",
     "features": {
       "bulk": {
         "title": "Bulk Download",
@@ -479,9 +479,9 @@
       }
     },
     "how_to": {
-      "title": "Paano mag-download",
-      "step1": "Kopyahin ang link.",
-      "step2": "I-paste dito.",
+      "title": "Paano Mag-download",
+      "step1": "Kopyahin ang link ng TikTok.",
+      "step2": "I-paste ang link sa itaas.",
       "step3": "I-click ang Download."
     },
     "faq": {
