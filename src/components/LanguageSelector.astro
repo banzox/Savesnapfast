@@ -300,29 +300,30 @@ function getPathForLanguage(targetLang: string) {
 
     /* 
     ========================================
-    COMPACT FLOATING MENU (ALL DEVICES)
+    LANDSCAPE / GRID MENU (Unified)
     ========================================
     */
     .lang-menu-container {
         position: absolute;
-        top: 100%; /* Directly below */
-        bottom: auto; /* Not above anymore */
+        top: 100%;
         left: 50%;
-        transform: translateX(-50%); /* Centered */
-        min-width: 180px; /* Small width but enough for text */
-        width: max-content;
+        transform: translateX(-50%);
+        width: 600px; /* Wide Landscape */
+        max-width: 90vw;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.2s ease;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         z-index: 3000;
         pointer-events: none;
-        margin-top: -1px; /* Overlap border */
+        margin-top: 10px; /* Slight gap for floating effect, or 0 for merge? User said merged. */
+        margin-top: 0;
+        padding-top: 10px; /* Invisible hover bridge */
     }
 
     .lang-menu-container.show {
         opacity: 1;
         visibility: visible;
-        transform: translateX(-50%) translateY(0) scale(1);
+        transform: translateX(-50%) translateY(0);
         pointer-events: auto;
     }
 
@@ -331,40 +332,43 @@ function getPathForLanguage(targetLang: string) {
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0; /* Attach to button */
-        padding: 5px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-        max-height: 300px;
+        border-radius: 24px; /* More rounded */
+        padding: 15px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
-        margin-top: 0;
+        /* Create a "Tab" effect pointing to button? Or just nice floating card */
     }
+
+    /* Connect button to menu visually? 
+       Since menu is much wider, direct border connection looks weird. 
+       A nice floating landscape card is usually better for 'Premium'. 
+       I will stick to floating close to it.
+    */
 
     :global([data-theme="light"]) .lang-dropdown {
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.98);
         border-color: rgba(0, 0, 0, 0.1);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     }
 
-    /* Hide Full header */
     .dropdown-header {
         display: none !important;
     }
 
-    /* Compact List */
+    /* Grid Layout */
     .lang-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        padding: 2px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+        gap: 8px;
+        max-height: 400px;
         overflow-y: auto;
+        padding-right: 5px;
     }
 
-    /* Scrollbar Styling */
+    /* Scrollbar */
     .lang-grid::-webkit-scrollbar {
-        width: 3px;
+        width: 4px;
     }
     .lang-grid::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
@@ -374,80 +378,89 @@ function getPathForLanguage(targetLang: string) {
         background: rgba(0, 0, 0, 0.2);
     }
 
-    /* Compact Option */
     .lang-option {
-        padding: 8px 12px;
-        font-size: 0.85rem; /* Smaller font */
-        border-radius: 8px;
-        color: var(--text-dim);
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        background: transparent;
-        border: none;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text-dim);
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    :global([data-theme="light"]) .lang-option {
+        background: rgba(0, 0, 0, 0.03);
+        color: #444;
     }
 
     .lang-option:hover {
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
         color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     :global([data-theme="light"]) .lang-option:hover {
-        background: rgba(0, 0, 0, 0.05);
+        background: #fff;
         color: #000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
     .lang-option.active {
-        background: var(--primary); /* Use site color */
+        background: var(--primary);
         color: white !important;
         font-weight: 600;
+        border: none;
+        box-shadow: 0 4px 10px rgba(var(--primary-rgb), 0.3);
     }
 
-    /* Overlay removed visually but kept in DOM to close menu */
+    .lang-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .check-icon {
+        margin-left: auto;
+        font-size: 0.8rem;
+    }
+
+    /* Overlay */
     .lang-overlay {
         position: fixed;
         inset: 0;
         z-index: -1;
-        background: transparent; /* No dark background */
+        background: transparent;
         display: none;
     }
-
     .lang-menu-container.show .lang-overlay {
         display: block;
     }
 
-    /* Mobile Overrides: Keep it small! */
+    /* Mobile Responsive */
     @media (max-width: 768px) {
         .lang-menu-container {
-            position: absolute; /* Keep it absolute relative to button */
-            width: 180px; /* Even smaller on mobile */
-            bottom: calc(100% + 10px);
+            width: 95vw; /* Full width minus margin */
             left: 50%;
-            transform: translateX(-50%) translateY(10px) scale(0.95);
-            height: auto !important;
-            inset: auto !important;
-            margin: 0 !important;
-            background: transparent !important;
+            transform: translateX(-50%);
+            top: 100%;
+            margin-top: 10px;
         }
 
-        .lang-menu-container.show {
-            transform: translateX(-50%) translateY(0) scale(1);
-        }
-
-        .lang-dropdown {
-            max-height: 50vh; /* Limit height */
-            width: 100%;
-            border-radius: 12px;
-            background: rgba(20, 20, 25, 0.98); /* Solid bg for readability */
-        }
-
-        :global([data-theme="light"]) .lang-dropdown {
-            background: rgba(255, 255, 255, 0.98);
+        .lang-grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 Columns on mobile */
+            max-height: 50vh;
         }
 
         .lang-option {
-            min-height: 0; /* Remove big touch target style */
-            padding: 10px;
+            padding: 12px;
+            font-size: 0.95rem; /* Larger text for touch */
         }
     }
 </style>
