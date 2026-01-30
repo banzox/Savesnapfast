@@ -34,35 +34,39 @@
     --radius-main: 24px;
     --transition: 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 
-    /* --- Header Background --- */
-    --bg-header: rgba(15, 12, 41, 0.95);
+    /* --- Header Background (Glassmorphism) --- */
+    --bg-header: rgba(15, 12, 41, 0.7);
+    /* More transparent for glass effect */
+    --header-blur: 20px;
+    --header-border: rgba(255, 255, 255, 0.08);
 }
 
-/* --- Light Mode Overrides --- */
+/* --- Light Mode Overrides (Soft & Professional) --- */
 [data-theme='light'] {
-    --bg-main: #ffffff;
-    --bg-gradient: linear-gradient(180deg, #f0f2f5 0%, #ffffff 100%);
+    --bg-main: #f9fafb;
+    /* Soft Off-White (Apple style) */
+    --bg-gradient: linear-gradient(180deg, #f3f4f6 0%, #ffffff 100%);
 
-    --text-main: #111827;
-    /* Deep Charcoal */
-    --text-dim: #4b5563;
+    --text-main: #1f2937;
+    /* Dark Charcoal (Readable) */
+    --text-dim: #6b7280;
     /* Cool Gray */
     --text-invert: #ffffff;
 
-    --glass: rgba(255, 255, 255, 0.8);
-    --glass-bright: #ffffff;
+    --glass: rgba(255, 255, 255, 0.7);
+    --glass-bright: rgba(255, 255, 255, 0.9);
 
-    --border: rgba(0, 0, 0, 0.08);
-    /* Subtle border for light mode */
-    --border-bright: rgba(0, 0, 0, 0.15);
+    --border: rgba(0, 0, 0, 0.06);
+    --border-bright: rgba(0, 0, 0, 0.12);
 
     --bg-dropdown: #ffffff;
 
-    --shadow-premium: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
-    --shadow-premium: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
-    --shadow-glow: 0 0 20px rgba(255, 0, 80, 0.15);
+    --shadow-premium: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 20px rgba(255, 0, 80, 0.1);
 
-    --bg-header: rgba(255, 255, 255, 0.95);
+    --bg-header: rgba(255, 255, 255, 0.85);
+    /* Frosty White */
+    --header-border: rgba(0, 0, 0, 0.05);
 }
 
 /* --- Universal Resets --- */
@@ -271,30 +275,32 @@ body::after {
     }
 }
 
-/* 2. الهيدر المطور (Header & Logo) */
+/* 2. الهيدر المطور (Floating Glass Header) */
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    /* Background & blur moved to ::before to avoid trapping fixed descendants */
+    padding: 10px 5%;
+    /* Reduced vertical padding */
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid var(--border);
     height: 70px;
-    gap: 15px;
+    gap: 20px;
+
+    /* Modern Glass Effect */
+    background: var(--bg-header);
+    backdrop-filter: blur(var(--header-blur));
+    -webkit-backdrop-filter: blur(var(--header-blur));
+    border-bottom: 1px solid var(--header-border);
+    transition: all 0.3s ease;
 }
 
+/* Remove old pseudo-element blur as it's now direct */
 .nav-container::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--bg-header);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    z-index: -1;
+    display: none;
 }
 
 /* Nav Links Container (Desktop) */
@@ -303,20 +309,19 @@ body::after {
     align-items: center;
     gap: 20px;
     flex-grow: 1;
-    justify-content: flex-end;
-    /* Push to right */
+    justify-content: center;
+    /* Center the links */
 }
 
-/* Language & Hamburger Grouping */
-.lang-select {
+/* Language & Theme Controls (New Class) */
+.nav-controls {
     display: flex;
     align-items: center;
-    margin-left: 10px;
-    z-index: 2002;
-    /* Higher than links */
+    gap: 25px;
+    /* Increased from 12px for better separation */
 }
 
-
+/* Remove old lang-select since we use nav-controls now */
 
 .nav-menu {
     display: flex;
@@ -334,17 +339,7 @@ body::after {
     background: transparent;
     border: none;
     z-index: 2000;
-    /* Ensure clickable */
     padding: 10px;
-}
-
-/* ... */
-
-.nav-links {
-    /* ... */
-    z-index: 1999;
-    /* Below hamburger, above everything else */
-    /* ... */
 }
 
 .hamburger span {
@@ -363,18 +358,16 @@ body::after {
         display: block;
     }
 
+    /* Mobile Drawer */
     .nav-links {
         position: fixed;
         top: 70px;
-        /* Fluid positioning relative to header bottom */
         left: 0;
         width: 100%;
-        height: 0;
         height: 0;
         background: var(--bg-dropdown);
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
-        /* User Requested Solid/Dark Color */
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -384,7 +377,6 @@ body::after {
         z-index: 999;
         gap: 20px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        /* Visibility Shadow */
     }
 
     /* Active State for Mobile Drawer */
@@ -395,10 +387,6 @@ body::after {
         border-bottom: 1px solid var(--border);
         overflow-y: auto;
     }
-
-    /* Hide Lang Select inside Mobile Drawer (Since we moved it out) */
-    /* But wait, we moved it out of .nav-links in HTML, so it won't be in the drawer anymore. */
-    /* It is now next to the logo/hamburger on the main bar. */
 
     .nav-menu {
         flex-direction: column;
@@ -415,36 +403,6 @@ body::after {
         font-size: 1.1rem;
         color: var(--text-main) !important;
     }
-
-    /* Adjust Lang Select for Mobile Header */
-    /* Adjust Lang Select for Mobile Header */
-    .lang-select {
-        margin-left: auto;
-        /* Push to right */
-        margin-right: 15px;
-        /* Gap between Lang and Hamburger */
-        width: auto;
-        padding: 0;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-    }
-
-
-
-    .theme-toggle {
-        padding: 8px;
-    }
-
-
-
-    /* Burger at the very end */
-    .hamburger {
-        display: block;
-        margin-left: 0;
-    }
-
-
 
     /* Hamburger Animation */
     .hamburger.active span:nth-child(1) {
