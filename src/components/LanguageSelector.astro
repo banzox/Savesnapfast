@@ -6,17 +6,11 @@ const currentLangName =
     languages[lang as keyof typeof languages] || languages["en"];
 
 const pathname = Astro.url.pathname;
+const search = Astro.url.search;
 
 function getPathForLanguage(targetLang: string) {
     // 1. Identify current language prefix in path
-    // We can't just trust 'lang' prop because of potential mismatches, but usually 'lang' prop is correct.
-    // Let's deduce from pathname for robustness.
-
-    // Split path into segments
-    // e.g. "/fr/about" -> ["", "fr", "about"]
-    // e.g. "/about" -> ["", "about"]
     const segments = pathname.split("/").filter(Boolean);
-
     let cleanSegments = segments;
 
     // Check if first segment is a known non-default language
@@ -32,11 +26,15 @@ function getPathForLanguage(targetLang: string) {
     const cleanPath = "/" + cleanSegments.join("/");
 
     // 2. Add new prefix
+    let newPath;
     if (targetLang === defaultLang) {
-        return cleanPath === "//" ? "/" : cleanPath; // Handle root edge case
+        newPath = cleanPath === "//" ? "/" : cleanPath; // Handle root edge case
+    } else {
+        newPath = `/${targetLang}${cleanPath === "/" ? "" : cleanPath}`;
     }
 
-    return `/${targetLang}${cleanPath === "/" ? "" : cleanPath}`;
+    // 3. Append query parameters (if any)
+    return newPath + search;
 }
 ---
 
