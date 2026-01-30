@@ -143,5 +143,37 @@ const canonicalURL = new URL(
         </main>
 
         <Footer lang={lang} />
+
+        <!-- PART 3: Bulletproof Toggle Script -->
+        <script is:inline>
+            document.addEventListener("DOMContentLoaded", () => {
+                const btn = document.getElementById("menu-btn");
+                const sidebar = document.querySelector(".nav-links"); // Using class from Navbar
+                const overlay = document.getElementById("nav-overlay");
+
+                if (btn && sidebar) {
+                    btn.addEventListener("click", (e) => {
+                        e.stopPropagation(); // Stop bubbling
+                        sidebar.classList.toggle("active");
+                        btn.classList.toggle("active");
+                        if (overlay) overlay.classList.toggle("active");
+                        document.body.style.overflow =
+                            sidebar.classList.contains("active")
+                                ? "hidden"
+                                : "";
+                    });
+
+                    // Close on overlay click
+                    if (overlay) {
+                        overlay.addEventListener("click", () => {
+                            sidebar.classList.remove("active");
+                            btn.classList.remove("active");
+                            overlay.classList.remove("active");
+                            document.body.style.overflow = "";
+                        });
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
