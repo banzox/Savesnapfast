@@ -12,42 +12,54 @@ const search = Astro.url.search;
 function getPathForLanguage(targetLang: string) {
     let currentPath = pathname;
 
-    // Remove trailing slash for consistency
+    // Remove trailing slash
     if (currentPath.endsWith("/") && currentPath.length > 1) {
         currentPath = currentPath.slice(0, -1);
     }
 
-    // 1. Strip existing language prefix by checking against ALL known languages.
-    // This is safer than relying on the 'lang' prop.
-    let pathNoLang = currentPath;
+    // --- EXPLICIT FORCE FIX FOR TOOLS ---
+    // Verify if we are on a specific tool page regardless of current language prefix
+    const isMp3 = currentPath.includes("/mp3");
+    const isStory = currentPath.includes("/story");
+    const isSlideshow = currentPath.includes("/slideshow");
 
-    // We only look for non-default languages (since default has no prefix)
+    // If we are on a known tool page, FORCE the correct path structure
+    if (isMp3 || isStory || isSlideshow) {
+        let toolSlug = "";
+        if (isMp3) toolSlug = "/mp3";
+        if (isStory) toolSlug = "/story";
+        if (isSlideshow) toolSlug = "/slideshow";
+
+        // If target is default (English), return clean slug (e.g. /mp3)
+        if (targetLang === defaultLang) {
+            return toolSlug + search;
+        }
+        // If target is other, return /lang/slug (e.g. /es/mp3)
+        return `/${targetLang}${toolSlug}${search}`;
+    }
+
+    // --- STANDARD LOGIC FOR OTHER PAGES (Home, Legal, etc) ---
+    // 1. Strip existing language prefix
+    let pathNoLang = currentPath;
     const langCodes = Object.keys(languages).filter((k) => k !== defaultLang);
 
     for (const code of langCodes) {
         const prefix = `/${code}`;
-        // Match exact "/es" or "/es/..."
         if (pathNoLang === prefix || pathNoLang.startsWith(prefix + "/")) {
             pathNoLang = pathNoLang.slice(prefix.length);
-            break; // Found and stripped the language
+            break;
         }
     }
 
-    // Ensure path starts with /
     if (!pathNoLang.startsWith("/")) pathNoLang = "/" + pathNoLang;
 
     // 2. Construct New Path
     if (targetLang === defaultLang) {
-        // Target is default (no prefix)
-        // If path is just /, return / (Home)
         return pathNoLang === "/" ? "/" : pathNoLang + search;
     } else {
-        // Target is localized (add prefix)
-        // If path is /, return /es
         if (pathNoLang === "/") {
             return `/${targetLang}${search}`;
         }
-        // If path is /mp3, return /es/mp3
         return `/${targetLang}${pathNoLang}${search}`;
     }
 }
