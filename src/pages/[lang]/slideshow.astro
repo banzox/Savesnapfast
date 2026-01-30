@@ -1,126 +1,23 @@
 ---
 export const prerender = true;
-import { languages, defaultLang, ui } from "../../i18n/ui";
-import Layout from "../../layouts/Layout.astro";
-import Downloader from "../../components/Downloader.jsx";
-import { useTranslations, getTranslations } from "../../utils/i18n";
+import DownloadPage from "../../components/DownloadPage.astro";
+import { languages, defaultLang } from "../../i18n/ui";
 
 export async function getStaticPaths() {
-    return Object.keys(languages).map((lang) => ({
-        params: { lang },
-    }));
+    return Object.keys(languages)
+        .filter((lang) => lang !== defaultLang)
+        .map((lang) => ({
+            params: { lang },
+        }));
 }
 
-import FAQ from "../../components/FAQ.astro"; // FAQ Component Included
-
 const { lang } = Astro.params;
-const t = useTranslations(lang);
-const translations = getTranslations(lang);
-
-const defaultTranslations = ui[defaultLang];
-
-// Fix for Downloader placeholder: Inject the specific key since Downloader expects it in 'messages'
-const downloaderMessages = {
-    ...defaultTranslations.downloader,
-    ...(translations.downloader || {}),
-    "slideshow_page.placeholder": t("slideshow_page.placeholder"),
-};
-
-// Generates 10 FAQ items
-const faqItems = Array.from({ length: 10 }, (_, i) => ({
-    question: t(`slideshow_page.faq.q${i + 1}`),
-    answer: t(`slideshow_page.faq.a${i + 1}`),
-}));
+const currentLang = lang || defaultLang;
 ---
 
-<Layout
-    title={t("slideshow_page.meta_title")}
-    description={t("slideshow_page.meta_desc")}
-    lang={lang}
-    keywords="tiktok slideshow downloader, tiktok carousel download, save tiktok photos, tiktok image downloader, download all tiktok slides, tiktok photo saver"
->
-    <article class="hero-section">
-        <h1>
-            <i class="fas fa-layer-group" style="color: var(--secondary);"></i>
-            {t("slideshow_page.title")}
-        </h1>
-        <p>{t("slideshow_page.desc")}</p>
-
-        <!-- Downloader Component (configured for Slideshow mode) -->
-        <Downloader
-            client:load
-            messages={downloaderMessages}
-            mode="slideshow"
-        />
-    </article>
-
-    <section class="container features-grid">
-        <div class="feature-card">
-            <i class="fas fa-images"></i>
-            <h3>{t("slideshow_page.features.bulk.title")}</h3>
-            <p>{t("slideshow_page.features.bulk.desc")}</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-check-circle"></i>
-            <h3>{t("slideshow_page.features.original.title")}</h3>
-            <p>{t("slideshow_page.features.original.desc")}</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-bolt"></i>
-            <h3>{t("slideshow_page.features.fast.title")}</h3>
-            <p>{t("slideshow_page.features.fast.desc")}</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-file-image"></i>
-            <h3>{t("slideshow_page.features.format.title")}</h3>
-            <p>{t("slideshow_page.features.format.desc")}</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>{t("slideshow_page.features.device.title")}</h3>
-            <p>{t("slideshow_page.features.device.desc")}</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-infinity"></i>
-            <h3>{t("slideshow_page.features.unlimited.title")}</h3>
-            <p>{t("slideshow_page.features.unlimited.desc")}</p>
-        </div>
-    </section>
-
-    <section class="container how-to-box shadow-box">
-        <h2 style="text-align: center; margin-bottom: 30px;">
-            {t("slideshow_page.how_to.title")}
-        </h2>
-        <div class="steps-wrapper">
-            <div class="step">
-                <div class="step-num">1</div>
-                <h3>{t("how_to.step1_title")}</h3>
-                <p>{t("slideshow_page.how_to.step1")}</p>
-            </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <h3>{t("how_to.step2_title")}</h3>
-                <p>{t("slideshow_page.how_to.step2")}</p>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <h3>{t("how_to.step3_title")}</h3>
-                <p>{t("slideshow_page.how_to.step3")}</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Inserted FAQ Section -->
-    <FAQ t={t} items={faqItems} />
-
-    <section class="container shadow-box" style="margin-top: 2rem;">
-        <div class="content-box">
-            <h2>
-                <i class="fas fa-info-circle" style="color: var(--secondary);"
-                ></i>
-                {t("slideshow_page.about_title")}
-            </h2>
-            <p>{t("slideshow_page.about_content")}</p>
-        </div>
-    </section>
-</Layout>
+<DownloadPage
+    lang={currentLang}
+    pagePrefix="slideshow_page"
+    mode="slideshow"
+    showAd={true}
+/>

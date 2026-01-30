@@ -1,9 +1,7 @@
 ---
 export const prerender = true;
-import Layout from "../../layouts/Layout.astro";
-import Downloader from "../../components/Downloader.jsx";
-import { defaultLang, languages } from "../../i18n/ui";
-import { useTranslations, getTranslations } from "../../utils/i18n";
+import TextPage from "../../components/TextPage.astro";
+import { languages, defaultLang } from "../../i18n/ui";
 
 export async function getStaticPaths() {
     return Object.keys(languages)
@@ -15,35 +13,31 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
-const t = useTranslations(currentLang);
-const translations = getTranslations(currentLang);
 ---
 
-<Layout
-    title={t("nav.contact")}
-    description={t("pages.contact.content")?.substring(0, 150)}
+<TextPage
+    titleKey="nav.contact"
+    contentKey="pages.contact.content"
     lang={currentLang}
 >
-    <article class="hero-section">
-        <h1>{t("nav.contact")}</h1>
-        <p>{t("pages.contact.content")?.substring(0, 150)}...</p>
-        <Downloader client:load messages={translations.downloader} />
-    </article>
-
-    <div class="container" style="padding: 2rem;">
-        <article
-            class="content-box"
-            style="background: var(--glass); padding: 3rem; border-radius: 25px; border: 1px solid var(--border);"
-        >
-            <div style="white-space: pre-line; line-height: 1.8; opacity: 0.9;">
-                {t("pages.contact.content")}
-                <br /><br />
-                <a
-                    href="mailto:contact@savetik-fast.xyz"
-                    style="color: var(--primary); font-weight: bold;"
-                    >contact@savetik-fast.xyz</a
-                >
-            </div>
-        </article>
+    <div class="contact-link-wrapper">
+        <a href="mailto:contact@savetik-fast.xyz" class="contact-email">
+            contact@savetik-fast.xyz
+        </a>
     </div>
-</Layout>
+</TextPage>
+
+<style>
+    .contact-link-wrapper {
+        margin-top: 2rem;
+    }
+    .contact-email {
+        color: var(--primary);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+    .contact-email:hover {
+        text-decoration: underline;
+    }
+</style>

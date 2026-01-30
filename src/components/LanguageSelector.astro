@@ -1,9 +1,43 @@
 ---
-import { languages } from "../i18n/ui";
+import { languages, defaultLang } from "../i18n/ui";
 
 const { lang = "en" } = Astro.props;
 const currentLangName =
     languages[lang as keyof typeof languages] || languages["en"];
+
+const pathname = Astro.url.pathname;
+
+function getPathForLanguage(targetLang: string) {
+    // 1. Identify current language prefix in path
+    // We can't just trust 'lang' prop because of potential mismatches, but usually 'lang' prop is correct.
+    // Let's deduce from pathname for robustness.
+
+    // Split path into segments
+    // e.g. "/fr/about" -> ["", "fr", "about"]
+    // e.g. "/about" -> ["", "about"]
+    const segments = pathname.split("/").filter(Boolean);
+
+    let cleanSegments = segments;
+
+    // Check if first segment is a known non-default language
+    if (
+        segments.length > 0 &&
+        segments[0] in languages &&
+        segments[0] !== defaultLang
+    ) {
+        cleanSegments = segments.slice(1);
+    }
+
+    // Reconstruct path without language
+    const cleanPath = "/" + cleanSegments.join("/");
+
+    // 2. Add new prefix
+    if (targetLang === defaultLang) {
+        return cleanPath === "//" ? "/" : cleanPath; // Handle root edge case
+    }
+
+    return `/${targetLang}${cleanPath === "/" ? "" : cleanPath}`;
+}
 ---
 
 <div class="language-wrapper">
@@ -28,7 +62,7 @@ const currentLangName =
             {
                 Object.entries(languages).map(([code, name]) => (
                     <a
-                        href={code === "en" ? "/" : `/${code}`}
+                        href={getPathForLanguage(code)}
                         class={`lang-option ${code === lang ? "active" : ""}`}
                     >
                         <span class="lang-name">{name}</span>
@@ -48,7 +82,6 @@ const currentLangName =
         const dropdown = document.getElementById("lang-dropdown");
         const overlay = document.getElementById("lang-overlay");
         const closeBtn = document.getElementById("close-lang-btn");
-        const options = document.querySelectorAll(".lang-option");
 
         if (!btn || !dropdown || !overlay || !closeBtn) return;
 
@@ -88,13 +121,12 @@ const currentLangName =
             }
         });
 
-        // Handle view transitions if any
+        // Handle view transitions
         document.addEventListener("astro:after-swap", initLanguageSelector);
     }
 
     // Run on load
     initLanguageSelector();
-    // Also run on Astro page load (for view transitions support)
     document.addEventListener("astro:page-load", initLanguageSelector);
 </script>
 
@@ -149,7 +181,7 @@ const currentLangName =
         right: 0;
         width: 600px;
         max-width: 90vw;
-        background: rgba(10, 10, 20, 0.95); /* Deep dark theme */
+        background: rgba(10, 10, 20, 0.95);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -203,7 +235,7 @@ const currentLangName =
         align-items: center;
         padding-bottom: 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        display: none; /* Hidden on desktop by default, shown on mobile */
+        display: none;
     }
 
     :global([data-theme="light"]) .dropdown-header {
@@ -231,7 +263,7 @@ const currentLangName =
         gap: 10px;
         max-height: 60vh;
         overflow-y: auto;
-        padding-right: 5px; /* Space for scrollbar */
+        padding-right: 5px;
     }
 
     /* Custom Scrollbar */
@@ -303,7 +335,7 @@ const currentLangName =
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease;
-        display: none; /* Only for mobile usually */
+        display: none;
     }
 
     /* RESPONSIVE Design */
@@ -321,7 +353,7 @@ const currentLangName =
             transform: translateY(100%);
             border: none;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 2005; /* High z-index */
+            z-index: 2005;
         }
 
         .lang-dropdown.show {
@@ -341,7 +373,6 @@ const currentLangName =
             display: block;
         }
 
-        /* Make button cleaner for mobile header */
         .lang-text {
             display: none;
         }
@@ -355,8 +386,8 @@ const currentLangName =
             display: none;
         }
         .lang-btn::before {
-            content: "\f0ac"; /* Globe icon FontAwesome */
-            font-family: "Font Awesome 5 Free";
+            content: "\f0ac";
+            font-family: "Font Awesome 6 Free";
             font-weight: 900;
             font-size: 1.1rem;
         }
@@ -364,7 +395,7 @@ const currentLangName =
 
     @media (max-width: 480px) {
         .lang-grid {
-            grid-template-columns: 1fr; /* Single column on tiny screens */
+            grid-template-columns: 1fr;
         }
     }
 </style>

@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Downloader from "./Downloader.jsx";
+import { getTranslations, useTranslations } from "../utils/i18n";
+
+interface Props {
+    titleKey: string;
+    contentKey: string;
+    lang: string;
+    h1Color?: string;
+}
+
+const { titleKey, contentKey, lang, h1Color } = Astro.props;
+const t = useTranslations(lang);
+const translations = getTranslations(lang);
+
+const title = t(titleKey);
+const content = t(contentKey);
+// Safely handle potential undefined content
+const description = content ? content.substring(0, 150) + "..." : "";
+
+// Fallback for h1 color if not passed
+const customStyle = h1Color ? { "--h1-color": h1Color } : {};
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <article class="hero-section">
+        <h1 class="hero-title" style={customStyle}>{title}</h1>
+        <p>{description}</p>
+        <Downloader client:load messages={translations.downloader} />
+    </article>
+
+    <div class="content-wrapper">
+        <article class="content-box">
+            <div class="text-content">
+                {content}
+                <slot />
+            </div>
+        </article>
+    </div>
+</Layout>
+
+<style>
+    /* Hero Section */
+    .hero-section {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        color: var(--h1-color, inherit); /* Default to inherit if not set */
+    }
+
+    /* Content Box */
+    .content-wrapper {
+        padding: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content-box {
+        background: var(--glass);
+        padding: 3rem;
+        border-radius: 25px;
+        border: 1px solid var(--border);
+    }
+
+    .text-content {
+        white-space: pre-line;
+        line-height: 1.8;
+        opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+        .content-box {
+            padding: 1.5rem;
+        }
+        .content-wrapper {
+            padding: 1rem;
+        }
+    }
+</style>

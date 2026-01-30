@@ -13,6 +13,10 @@ interface Props {
 }
 
 const { title, description, lang = "en", keywords } = Astro.props;
+const canonicalURL = new URL(
+    Astro.url.pathname,
+    Astro.site || "https://savetik-fast.xyz",
+);
 ---
 
 <!doctype html>
@@ -21,7 +25,7 @@ const { title, description, lang = "en", keywords } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="description" content={description} />
         {keywords && <meta name="keywords" content={keywords} />}
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
@@ -29,11 +33,12 @@ const { title, description, lang = "en", keywords } = Astro.props;
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
+
         <!-- Hreflang Tags for SEO -->
         <link
             rel="alternate"
             hreflang="x-default"
-            href={new URL("/", Astro.site || Astro.url).href}
+            href={new URL("/", Astro.site || "https://savetik-fast.xyz").href}
         />
         {
             Object.keys(languages).map((l) => (
@@ -43,18 +48,20 @@ const { title, description, lang = "en", keywords } = Astro.props;
                     href={
                         new URL(
                             l === "en" ? "/" : `/${l}`,
-                            Astro.site || Astro.url,
+                            Astro.site || "https://savetik-fast.xyz",
                         ).href
                     }
                 />
             ))
         }
+
         <Schema lang={lang} />
+
         <meta name="author" content="SaveTikFast" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={Astro.url} />
+        <meta property="og:url" content={canonicalURL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
@@ -66,7 +73,7 @@ const { title, description, lang = "en", keywords } = Astro.props;
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={Astro.url} />
+        <meta name="twitter:url" content={canonicalURL} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta
@@ -75,7 +82,7 @@ const { title, description, lang = "en", keywords } = Astro.props;
         />
 
         <!-- Canonical URL -->
-        <link rel="canonical" href={Astro.url} />
+        <link rel="canonical" href={canonicalURL} />
 
         <link rel="manifest" href="/manifest.json" />
 
@@ -84,17 +91,12 @@ const { title, description, lang = "en", keywords } = Astro.props;
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="dns-prefetch" href="https://api.savetik-fast.xyz" />
 
-        {/* Prefetch most common languages for faster navigation */}
-        <link rel="prefetch" href="/" />
-        <link rel="prefetch" href="/ar" />
-        <link rel="prefetch" href="/es" />
-        <link rel="prefetch" href="/fr" />
-
         <!-- Fonts -->
         <link
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
         />
+
         <script is:inline>
             // Initialize theme
             const theme = (() => {
@@ -119,18 +121,6 @@ const { title, description, lang = "en", keywords } = Astro.props;
             }
 
             window.localStorage.setItem("theme", theme);
-
-            window.handleToggleClick = () => {
-                const element = document.documentElement;
-                const isLight = element.getAttribute("data-theme") === "light";
-                if (isLight) {
-                    element.removeAttribute("data-theme");
-                    localStorage.setItem("theme", "dark");
-                } else {
-                    element.setAttribute("data-theme", "light");
-                    localStorage.setItem("theme", "light");
-                }
-            };
 
             document.addEventListener("astro:after-swap", () => {
                 const theme = localStorage.getItem("theme");

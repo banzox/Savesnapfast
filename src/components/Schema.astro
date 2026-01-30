@@ -7,70 +7,83 @@ interface Props {
 
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
+
+// Dynamically generate FAQ Schema
+const faqSchemaItems = [];
+let i = 1;
+while (true) {
+    const qKey = `faq.q${i}`;
+    const aKey = `faq.a${i}`;
+    const q = t(qKey);
+    const a = t(aKey);
+
+    // Stop if translation is missing (returns key) or empty
+    if (!q || q === qKey || !a || a === aKey) {
+        break;
+    }
+
+    faqSchemaItems.push({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: {
+            "@type": "Answer",
+            text: a,
+        },
+    });
+    i++;
+}
+
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "SaveTikFast",
+    url: "https://savetik-fast.xyz/",
+    description: t("meta.description"),
+    applicationCategory: "MultimediaApplication",
+    operatingSystem: "All",
+    offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+    },
+    aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        ratingCount: "15420",
+        bestRating: "5",
+    },
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `https://savetik-fast.xyz${lang === "en" ? "" : "/" + lang}`,
+        },
+    ],
+};
 ---
 
-<script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        name: `${t("hero.title")} - SaveTikFast`,
-        url: "https://savetik-fast.xyz/",
-        description: t("meta.description"),
-        applicationCategory: "MultimediaApplication",
-        operatingSystem: "All",
-        offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-        },
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            ratingCount: "15420",
-            bestRating: "5",
-        },
-    })}
-/>
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+{
+    faqSchemaItems.length > 0 && (
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faqSchemaItems,
+            })}
+        />
+    )
+}
 
 <script
     type="application/ld+json"
-    set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-            {
-                "@type": "Question",
-                name: t("faq.q1"),
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: t("faq.a1"),
-                },
-            },
-            {
-                "@type": "Question",
-                name: t("faq.q2"),
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: t("faq.a2"),
-                },
-            },
-        ],
-    })}
-/>
-
-<script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: `https://savetik-fast.xyz${lang === "en" ? "" : "/" + lang}`,
-            },
-        ],
-    })}
+    set:html={JSON.stringify(breadcrumbSchema)}
 />

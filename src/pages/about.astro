@@ -1,40 +1,11 @@
 ---
 export const prerender = true;
-import Layout from "../layouts/Layout.astro";
-import Downloader from "../components/Downloader.jsx";
-import {
-    getLangFromUrl,
-    useTranslations,
-    getTranslations,
-} from "../utils/i18n";
-
-const currentLang = getLangFromUrl(Astro.url);
-const t = useTranslations(currentLang);
-const translations = getTranslations(currentLang);
+import TextPage from "../components/TextPage.astro";
+import { defaultLang } from "../i18n/ui";
 ---
 
-<Layout
-    lang={currentLang}
-    title={t("pages.about.title")}
-    description={t("pages.about.content")?.substring(0, 150)}
->
-    <article class="hero-section">
-        <h1>
-            {t("pages.about.title")}
-        </h1>
-        <p>{t("pages.about.content")?.substring(0, 200)}...</p>
-
-        <Downloader client:load messages={translations.downloader} />
-    </article>
-
-    <div class="container" style="padding: 2rem;">
-        <article
-            class="content-box"
-            style="background: var(--glass); padding: 3rem; border-radius: 25px; border: 1px solid var(--border);"
-        >
-            <div style="white-space: pre-line; line-height: 1.8; opacity: 0.9;">
-                {t("pages.about.content")}
-            </div>
-        </article>
-    </div>
-</Layout>
+<TextPage
+    titleKey="pages.about.title"
+    contentKey="pages.about.content"
+    lang={defaultLang}
+/>

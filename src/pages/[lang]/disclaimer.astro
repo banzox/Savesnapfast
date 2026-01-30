@@ -1,9 +1,7 @@
 ---
 export const prerender = true;
-import Layout from "../../layouts/Layout.astro";
-import Downloader from "../../components/Downloader.jsx";
+import TextPage from "../../components/TextPage.astro";
 import { languages, defaultLang } from "../../i18n/ui";
-import { useTranslations, getTranslations } from "../../utils/i18n";
 
 export async function getStaticPaths() {
     return Object.keys(languages)
@@ -15,29 +13,11 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
-const t = useTranslations(currentLang);
-const translations = getTranslations(currentLang);
 ---
 
-<Layout
+<TextPage
+    titleKey="pages.disclaimer.title"
+    contentKey="pages.disclaimer.content"
     lang={currentLang}
-    title={t("pages.disclaimer.title")}
-    description={t("pages.disclaimer.content")?.substring(0, 150)}
->
-    <article class="hero-section">
-        <h1 style="color: #ffc107;">{t("pages.disclaimer.title")}</h1>
-        <p>{t("pages.disclaimer.content")?.substring(0, 150)}...</p>
-        <Downloader client:load messages={translations.downloader} />
-    </article>
-
-    <div class="container" style="padding: 2rem;">
-        <article
-            class="content-box"
-            style="background: var(--glass); padding: 3rem; border-radius: 25px; border: 1px solid var(--border);"
-        >
-            <div style="white-space: pre-line; line-height: 1.8; opacity: 0.9;">
-                {t("pages.disclaimer.content")}
-            </div>
-        </article>
-    </div>
-</Layout>
+    h1Color="#ffc107"
+/>
