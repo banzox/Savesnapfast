@@ -92,14 +92,10 @@
 
     @media (max-width: 768px) {
         .mobile-hide {
-            display: none; /* Show only 2 on mobile to save space/bandwidth, or 4 stacked? User said 4. */
-            /* User said 4 slots. I will attempt to show all 4 but maybe stacked 2x2 */
+            display: flex; /* Ensure all 4 ads show as per user request */
         }
         .ad-banner-grid {
-            gap: 10px;
-        }
-        .mobile-hide {
-            display: flex; /* Force show all */
+            gap: 15px; /* Slightly more gap */
         }
     }
 </style>
