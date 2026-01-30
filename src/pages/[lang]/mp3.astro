@@ -1,19 +1,21 @@
 ---
-export const prerender = true;
+// export const prerender = true; // DISABLED TO FIX ROUTING
 import DownloadPage from "../../components/DownloadPage.astro";
 import { languages, defaultLang } from "../../i18n/ui";
 
-export async function getStaticPaths() {
-    return Object.keys(languages)
-        .filter((lang) => lang !== defaultLang)
-        .map((lang) => ({
-            params: { lang },
-        }));
-}
+// Server Side Rendering (SSR) - No getStaticPaths needed
+// This ensures the page accepts ANY lang param allowed by config
 
 const { lang } = Astro.params;
 const currentLang = lang || defaultLang;
+
+// Validate lang
+if (currentLang !== defaultLang && !languages[currentLang]) {
+    return Astro.redirect("/404");
+}
 ---
+
+const {lang} = Astro.params; const currentLang = lang || defaultLang; ---
 
 <DownloadPage
     lang={currentLang}
