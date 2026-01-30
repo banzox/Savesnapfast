@@ -334,6 +334,133 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Prezentare"
+  },
+  "mp3_page": {
+    "meta_title": "Convertor TikTok în MP3 - Descarcă Audio (Calitate Înaltă)",
+    "title": "Descarcă TikTok MP3",
+    "subtitle": "(Doar Audio)",
+    "desc": "Convertește videourile TikTok în fișiere audio MP3. Extrage melodii și muzică la calitate înaltă 320kbps.",
+    "placeholder": "Lipește linkul TikTok pentru a extrage MP3...",
+    "btn_download": "Extrage MP3",
+    "about_title": "Cel Mai Bun Convertor MP3 TikTok 2026",
+    "about_content": "SaveTikFast MP3 îți permite să extragi instantaneu audio din orice video TikTok. Descarcă melodii în tendințe și sunete virale.",
+    "features": {
+      "quality": {
+        "title": "Audio de Înaltă Calitate",
+        "desc": "Cea mai bună calitate audio, până la 320kbps."
+      },
+      "fast": {
+        "title": "Conversie Rapidă",
+        "desc": "TikTok în MP3 în câteva secunde."
+      },
+      "trending": {
+        "title": "Sunete Virale",
+        "desc": "Descarcă muzica populară de pe TikTok."
+      },
+      "device": {
+        "title": "Funcționează Oriunde",
+        "desc": "Pe iPhone, Android, PC și Mac."
+      },
+      "ringtone": {
+        "title": "Pentru Ton de Apel",
+        "desc": "Folosește MP3-urile ca ton de apel sau alarmă."
+      },
+      "unlimited": {
+        "title": "Gratuit & Nelimitat",
+        "desc": "Fără limită de descărcare."
+      }
+    },
+    "how_to": {
+      "title": "Cum să convertești TikTok în MP3",
+      "step1": "Găsește videoul. Apasă Partajează → Copiază linkul.",
+      "step2": "Lipește linkul în căsuța de mai sus.",
+      "step3": "Apasă 'Extrage MP3' pentru a descărca."
+    },
+    "faq": {
+      "q1": "Cum descarc MP3 de pe TikTok?",
+      "a1": "Copiază linkul, lipește-l pe SaveTikFast și apasă Extrage MP3.",
+      "q2": "Ce calitate are sunetul?",
+      "a2": "Extragem cea mai bună calitate originală posibilă.",
+      "q3": "Pot descărca melodii celebre?",
+      "a3": "Da, poți descărca orice sunet sau muzică.",
+      "q4": "Este sigur?",
+      "a4": "Da, 100% sigur și anonim. Nu stocăm fișiere.",
+      "q5": "Pot folosi ca ton de apel?",
+      "a5": "Da, fișierele MP3 sunt perfecte pentru tonuri de apel.",
+      "q6": "Merge pe iPhone?",
+      "a6": "Da, funcționează pe iOS și Android.",
+      "q7": "Există o limită?",
+      "a7": "Nu, este complet nelimitat.",
+      "q8": "De ce nu se aude?",
+      "a8": "Verifică dacă videoul original are sunet.",
+      "q9": "Este legal?",
+      "a9": "Doar pentru uz personal.",
+      "q10": "Diferența față de video downloader?",
+      "a10": "Convertorul MP3 salvează doar sunetul, fără imagine."
+    }
+  },
+  "story_page": {
+    "meta_title": "Descarcă Story TikTok - Salvează Anonim",
+    "title": "Descarcă Story TikTok",
+    "desc": "Salvează Story-urile și Prezentările TikTok înainte să expire.",
+    "placeholder": "Lipește linkul Story...",
+    "btn_download": "Salvează Story",
+    "about_title": "Story Downloader 2026",
+    "about_content": "SaveTikFast Story Downloader îți permite să salvezi story-uri și carusele foto înainte să dispară după 24 de ore.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonim",
+        "desc": "Descarcă fără ca autorul să știe."
+      },
+      "slides": {
+        "title": "Toată Prezentarea",
+        "desc": "Descarcă toate pozele odată."
+      },
+      "expire": {
+        "title": "Înainte de Expirare",
+        "desc": "Păstrează conținutul temporar pentru totdeauna."
+      },
+      "quality": {
+        "title": "Calitate Originală",
+        "desc": "Rezoluție înaltă fără compresie."
+      },
+      "device": {
+        "title": "Orice Dispozitiv",
+        "desc": "Compatibil cu mobil și PC."
+      },
+      "favorites": {
+        "title": "Favoritele Tale",
+        "desc": "Păstrează cele mai bune story-uri."
+      }
+    },
+    "how_to": {
+      "title": "Cum să descarci un Story TikTok",
+      "step1": "Deschide Story, Partajează → Copiază linkul.",
+      "step2": "Lipește linkul mai sus.",
+      "step3": "Apasă 'Salvează Story'."
+    },
+    "faq": {
+      "q1": "Cum descarc un story?",
+      "a1": "Lipește linkul și descarcă.",
+      "q2": "Este anonim?",
+      "a2": "Da, creatorul nu va ști.",
+      "q3": "Suportați slideshow-uri?",
+      "a3": "Da, descărcăm toate imaginile din carusel.",
+      "q4": "Când expiră story-urile?",
+      "a4": "După 24 de ore.",
+      "q5": "Ce calitate?",
+      "a5": "Calitate HD originală.",
+      "q6": "Merge pe iPhone?",
+      "a6": "Da, prin browser.",
+      "q7": "Conturi private?",
+      "a7": "Nu, doar cele publice.",
+      "q8": "Este gratuit?",
+      "a8": "Da, complet gratuit.",
+      "q9": "De ce nu merge?",
+      "a9": "Story-ul poate fi expirat sau contul privat.",
+      "q10": "Diferența Story vs Slideshow?",
+      "a10": "Story-urile sunt temporare (24h), Slideshow-urile permanente."
+    }
   }
 }

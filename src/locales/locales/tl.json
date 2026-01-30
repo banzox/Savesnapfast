@@ -84,88 +84,130 @@
     "stories": "Stories"
   },
   "mp3_page": {
-    "meta_title": "TikTok to MP3 Converter - Download Audio High Quality 320kbps",
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online.",
-    "title": "Download TikTok MP3",
-    "subtitle": "(Audio Only)",
-    "desc": "Convert TikTok videos to MP3 audio files. Extract songs, trending sounds & music in high quality 320kbps. Free & unlimited.",
-    "placeholder": "Paste TikTok video link to extract MP3...",
-    "btn_download": "Extract MP3",
-    "about_title": "Best TikTok to MP3 Converter 2026",
-    "about_content": "SaveTikFast MP3 Converter lets you extract audio from any TikTok video instantly. Download trending songs, viral sounds, voiceovers, and background music in high-quality MP3 format.",
+    "meta_title": "TikTok MP3 Converter - I-download ang Audio (Mataas na Kalidad)",
+    "title": "I-download ang TikTok MP3",
+    "subtitle": "(Audio Lang)",
+    "desc": "I-convert ang mga video ng TikTok sa mga MP3 audio file. I-extract ang mga kanta at musika sa mataas na kalidad na 320kbps.",
+    "placeholder": "I-paste ang link ng TikTok para i-extract ang MP3...",
+    "btn_download": "I-extract ang MP3",
+    "about_title": "Pinakamahusay na TikTok MP3 Converter 2026",
+    "about_content": "Pinapayagan ka ng SaveTikFast MP3 na i-extract ang audio mula sa anumang video ng TikTok agad. I-download ang mga trending na kanta, viral sounds, at background music.",
     "features": {
       "quality": {
-        "title": "High Quality Audio",
-        "desc": "Extract audio in the best available quality - up to 320kbps crystal clear MP3 files."
+        "title": "Mataas na Kalidad ng Audio",
+        "desc": "Pinakamahusay na audio hanggang 320kbps."
       },
       "fast": {
-        "title": "Instant Conversion",
-        "desc": "Convert TikTok to MP3 in seconds. No waiting, no processing delays."
+        "title": "Mabilis na Conversion",
+        "desc": "TikTok sa MP3 sa ilang segundo."
       },
       "trending": {
         "title": "Trending Sounds",
-        "desc": "Download viral TikTok sounds and trending songs everyone is using."
+        "desc": "I-download ang sikat na musika sa TikTok."
       },
       "device": {
-        "title": "Works Everywhere",
-        "desc": "Download TikTok MP3 on iPhone, Android, PC, or any device with a browser."
+        "title": "Gumagana Kahit Saan",
+        "desc": "Sa iPhone, Android, PC at Mac."
       },
       "ringtone": {
-        "title": "Ringtone Ready",
-        "desc": "Use downloaded MP3s as ringtones, alarms, or notification sounds."
+        "title": "Pang-Ringtone",
+        "desc": "Gamitin ang MP3 bilang ringtone o alarm."
       },
       "unlimited": {
-        "title": "Unlimited & Free",
-        "desc": "No limits on downloads. Convert as many TikTok videos to MP3 as you want."
+        "title": "Libre at Walang Limitasyon",
+        "desc": "Walang limit sa pag-download."
       }
     },
     "how_to": {
-      "title": "How to Convert TikTok to MP3",
-      "step1": "Find the TikTok video with the audio you want. Tap Share → Copy Link.",
-      "step2": "Paste the TikTok link into the box above on this page.",
-      "step3": "Click \"Extract MP3\" and download your audio file instantly."
+      "title": "Paano mag-convert ng TikTok sa MP3",
+      "step1": "Hanapin ang video. I-tap ang Share → Copy Link.",
+      "step2": "I-paste ang link sa box sa itaas.",
+      "step3": "I-click ang 'I-extract ang MP3' para i-download."
+    },
+    "faq": {
+      "q1": "Paano mag-download ng MP3 sa TikTok?",
+      "a1": "Kopyahin ang link, i-paste sa SaveTikFast at i-click ang I-extract ang MP3.",
+      "q2": "Ano ang kalidad ng tunog?",
+      "a2": "Kinukuha namin ang pinakamagandang orihinal na kalidad.",
+      "q3": "Pwede bang mag-download ng sikat na kanta?",
+      "a3": "Oo, pwede mong i-download ang anumang tunog.",
+      "q4": "Ligtas ba ito?",
+      "a4": "Oo, 100% ligtas at anonymous.",
+      "q5": "Pwede bang pang-ringtone?",
+      "a5": "Oo, ang mga MP3 files ay pwedeng gawing ringtone.",
+      "q6": "Gumagana ba sa iPhone?",
+      "a6": "Oo, gumagana sa iOS at Android.",
+      "q7": "May limitasyon ba?",
+      "a7": "Wala, libre at unlimited.",
+      "q8": "Bakit walang tunog?",
+      "a8": "Siguraduhin na may tunog ang orihinal na video.",
+      "q9": "Legal ba ito?",
+      "a9": "Para sa personal na gamit lamang.",
+      "q10": "Ano ang kaibahan sa video downloader?",
+      "a10": "Ang MP3 converter ay audio lang ang sini-save, walang video."
     }
   },
   "story_page": {
-    "meta_title": "TikTok Story Downloader - Save Slideshows & Photos Anonymously",
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire.",
-    "title": "TikTok Story & Slideshow Downloader",
-    "desc": "Save TikTok Stories and Photo Slideshows before they disappear. Download all images anonymously in high quality.",
-    "placeholder": "Paste TikTok Story or Slideshow link...",
-    "btn_download": "Save Story",
-    "about_title": "Best TikTok Story Saver 2026",
-    "about_content": "SaveTikFast Story Downloader lets you save TikTok Stories and Photo Slideshows before they expire. Download all carousel images at once and keep your favorite content forever.",
+    "meta_title": "I-download ang TikTok Story - I-save nang Anonymous",
+    "title": "I-download ang TikTok Story",
+    "desc": "I-save ang TikTok Stories at Slideshows bago sila mawala.",
+    "placeholder": "I-paste ang Story link...",
+    "btn_download": "I-save ang Story",
+    "about_title": "Story Downloader 2026",
+    "about_content": "Ang SaveTikFast Story Downloader ay tumutulong sa iyo na mag-save ng stories at photo carousels bago mawala pagkatapos ng 24 oras.",
     "features": {
       "anonymous": {
         "title": "100% Anonymous",
-        "desc": "Download TikTok stories without the creator knowing. No traces, no notifications."
+        "desc": "Mag-download nang hindi alam ng may-ari."
       },
       "slides": {
-        "title": "All Slides at Once",
-        "desc": "Download every image from TikTok slideshows and carousels with one click."
+        "title": "Buong Slideshow",
+        "desc": "I-download ang lahat ng photos nang sabay-sabay."
       },
       "expire": {
-        "title": "Before They Expire",
-        "desc": "Save stories before they disappear after 24 hours. Keep content forever."
+        "title": "Bago Mawala",
+        "desc": "I-save ang temporary content magpakailanman."
       },
       "quality": {
-        "title": "Original Quality",
-        "desc": "Download photos and videos in their original high resolution without compression."
+        "title": "Orihinal na Kalidad",
+        "desc": "Mataas na resolution nang walang compression."
       },
       "device": {
-        "title": "All Devices",
-        "desc": "Works on iPhone, Android, PC, and tablets. No app installation required."
+        "title": "Lahat ng Device",
+        "desc": "Compatible sa mobile at PC."
       },
       "favorites": {
-        "title": "Save Favorites",
-        "desc": "Keep aesthetic photos, tutorials, and inspiration from your favorite creators."
+        "title": "Iyong Mga Paborito",
+        "desc": "Itago ang pinakamagandang stories."
       }
     },
     "how_to": {
-      "title": "How to Download TikTok Stories & Slideshows",
-      "step1": "Open TikTok, find the Story or Slideshow post, tap Share → Copy Link.",
-      "step2": "Paste the TikTok link into the box above on this page.",
-      "step3": "Click \"Save Story\" and download all images to your device."
+      "title": "Paano mag-download ng TikTok Story",
+      "step1": "Buksan ang Story, Share → Copy Link.",
+      "step2": "I-paste ang link sa itaas.",
+      "step3": "I-click ang 'I-save ang Story'."
+    },
+    "faq": {
+      "q1": "Paano mag-download ng story?",
+      "a1": "I-paste ang link at i-download.",
+      "q2": "Anonymous ba ito?",
+      "a2": "Oo, hindi malalaman ng creator.",
+      "q3": "Supported ba ang slideshows?",
+      "a3": "Oo, dina-download namin lahat ng photos sa carousel.",
+      "q4": "Kailan nawawala ang stories?",
+      "a4": "Pagkatapos ng 24 oras.",
+      "q5": "Anong quality?",
+      "a5": "Original HD quality.",
+      "q6": "Pwede sa iPhone?",
+      "a6": "Oo, gamit ang browser.",
+      "q7": "Private accounts?",
+      "a7": "Hindi, pampublikong accounts lang.",
+      "q8": "Libre ba?",
+      "a8": "Oo, ganap na libre.",
+      "q9": "Bakit nag-fail?",
+      "a9": "Baka expired na ang story o private ang account.",
+      "q10": "Kaibahan ng Story vs Slideshow?",
+      "a10": "Ang stories ay temporary (24h), ang slideshows ay permanent."
     }
   },
   "features": {

@@ -334,6 +334,133 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Lysbildefremvisning"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Konverter - Last Ned Lyd (Høy Kvalitet)",
+    "title": "Last Ned TikTok MP3",
+    "subtitle": "(Kun Lyd)",
+    "desc": "Konverter TikTok-videoer til MP3-lydfiler. Pakk ut sanger og musikk i høy kvalitet 320kbps.",
+    "placeholder": "Lim inn TikTok-lenke for å hente MP3...",
+    "btn_download": "Hent MP3",
+    "about_title": "Beste TikTok MP3 Konverter 2026",
+    "about_content": "SaveTikFast MP3 lar deg trekke ut lyd fra hvilken som helst TikTok-video umiddelbart. Last ned populære sanger og virale lyder.",
+    "features": {
+      "quality": {
+        "title": "Høy Lydkvalitet",
+        "desc": "Beste lydkvalitet opp til 320kbps."
+      },
+      "fast": {
+        "title": "Rask Konvertering",
+        "desc": "TikTok til MP3 på noen sekunder."
+      },
+      "trending": {
+        "title": "Virale Lyder",
+        "desc": "Last ned musikk som trender på TikTok."
+      },
+      "device": {
+        "title": "Funker Overalt",
+        "desc": "På iPhone, Android, PC og Mac."
+      },
+      "ringtone": {
+        "title": "Til Ringetone",
+        "desc": "Bruk MP3 som ringetone eller alarm."
+      },
+      "unlimited": {
+        "title": "Gratis & Ubegrenset",
+        "desc": "Ingen nedlastingsgrenser."
+      }
+    },
+    "how_to": {
+      "title": "Hvordan konvertere TikTok til MP3",
+      "step1": "Finn videoen. Trykk Del → Kopier lenke.",
+      "step2": "Lim inn lenken i boksen ovenfor.",
+      "step3": "Klikk 'Hent MP3' for å laste ned."
+    },
+    "faq": {
+      "q1": "Hvordan laster jeg ned MP3 fra TikTok?",
+      "a1": "Kopier lenken, lim inn på SaveTikFast og klikk Hent MP3.",
+      "q2": "Hvordan er lydkvaliteten?",
+      "a2": "Vi trekker ut best mulig original kvalitet.",
+      "q3": "Kan jeg laste ned populære sanger?",
+      "a3": "Ja, du kan laste ned hvilken som helst lyd eller musikk.",
+      "q4": "Er det trygt?",
+      "a4": "Ja, 100% trygt og anonymt.",
+      "q5": "Kan jeg bruke det som ringetone?",
+      "a5": "Ja, MP3-filer er perfekte som ringetoner.",
+      "q6": "Funker det på iPhone?",
+      "a6": "Ja, funker på iOS og Android.",
+      "q7": "Er det en grense?",
+      "a7": "Nei, det er helt ubegrenset.",
+      "q8": "Hvorfor ingen lyd?",
+      "a8": "Sjekk om originalvideoen har lyd.",
+      "q9": "Er det lovlig?",
+      "a9": "Kun til personlig bruk.",
+      "q10": "Forskjell fra videonedlaster?",
+      "a10": "MP3-konverteren lagrer kun lyden, ikke bildet."
+    }
+  },
+  "story_page": {
+    "meta_title": "Last Ned TikTok Story - Lagre Anonymt",
+    "title": "Last Ned TikTok Story",
+    "desc": "Lagre TikTok Stories og Lysbildefremvisninger før de utløper.",
+    "placeholder": "Lim inn Story-lenke...",
+    "btn_download": "Lagre Story",
+    "about_title": "Story Nedlaster 2026",
+    "about_content": "SaveTikFast Story Downloader lar deg lagre stories og bildekaruseller før de forsvinner etter 24 timer.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonymt",
+        "desc": "Last ned uten at skaperen vet det."
+      },
+      "slides": {
+        "title": "Hele Lysbildefremvisningen",
+        "desc": "Last ned alle bildene på én gang."
+      },
+      "expire": {
+        "title": "Før De Utløper",
+        "desc": "Ta vare på midlertidig innhold for alltid."
+      },
+      "quality": {
+        "title": "Original Kvalitet",
+        "desc": "Høy oppløsning uten komprimering."
+      },
+      "device": {
+        "title": "Alle Enheter",
+        "desc": "Kompatibel med mobil og PC."
+      },
+      "favorites": {
+        "title": "Dine Favoritter",
+        "desc": "Lagre de beste historiene."
+      }
+    },
+    "how_to": {
+      "title": "Hvordan laste ned en TikTok Story",
+      "step1": "Åpne Story, Del → Kopier lenke.",
+      "step2": "Lim inn lenken ovenfor.",
+      "step3": "Klikk 'Lagre Story'."
+    },
+    "faq": {
+      "q1": "Hvordan laster jeg ned en story?",
+      "a1": "Lim inn lenken og last ned.",
+      "q2": "Er det anonymt?",
+      "a2": "Ja, skaperen får ingen beskjed.",
+      "q3": "Støtter dere bildeshow?",
+      "a3": "Ja, vi laster ned alle bildene i karusellen.",
+      "q4": "Når utløper stories?",
+      "a4": "Etter 24 timer.",
+      "q5": "Hvilken kvalitet?",
+      "a5": "Original HD-kvalitet.",
+      "q6": "Funker det på iPhone?",
+      "a6": "Ja, via nettleseren.",
+      "q7": "Private kontoer?",
+      "a7": "Nei, kun offentlige.",
+      "q8": "Er det gratis?",
+      "a8": "Ja, helt gratis.",
+      "q9": "Hvorfor feilet det?",
+      "a9": "Storyen kan ha utløpt eller kontoen er privat.",
+      "q10": "Forskjell Story vs Lysbildefremvisning?",
+      "a10": "Stories er midlertidige (24t), Lysbildefremvisninger er permanente."
+    }
   }
 }

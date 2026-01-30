@@ -335,6 +335,133 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Prezentace"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Konvertor - Stáhnout Audio (Vysoká Kvalita)",
+    "title": "Stáhnout TikTok MP3",
+    "subtitle": "(Pouze Audio)",
+    "desc": "Převeďte videa z TikToku na MP3 audio soubory. Extrahujte písně a hudbu ve vysoké kvalitě 320kbps.",
+    "placeholder": "Vložte odkaz TikTok pro extrakci MP3...",
+    "btn_download": "Extrahovat MP3",
+    "about_title": "Nejlepší TikTok MP3 Konvertor 2026",
+    "about_content": "SaveTikFast MP3 vám umožní okamžitě extrahovat zvuk z jakéhokoli videa TikTok. Stahujte trendy písně a virální zvuky.",
+    "features": {
+      "quality": {
+        "title": "Vysoká Kvalita Zvuku",
+        "desc": "Nejlepší kvalita zvuku až 320kbps."
+      },
+      "fast": {
+        "title": "Okamžitý Převod",
+        "desc": "TikTok na MP3 během několika sekund."
+      },
+      "trending": {
+        "title": "Virální Zvuky",
+        "desc": "Stahujte hudbu, která je nyní trendy."
+      },
+      "device": {
+        "title": "Funguje Všude",
+        "desc": "Na iPhonu, Androidu, PC a Macu."
+      },
+      "ringtone": {
+        "title": "Jako Vyzvánění",
+        "desc": "Použijte MP3 jako vyzvánění nebo budík."
+      },
+      "unlimited": {
+        "title": "Zdarma a Bez Limitu",
+        "desc": "Žádné limity stahování."
+      }
+    },
+    "how_to": {
+      "title": "Jak převést TikTok na MP3",
+      "step1": "Najděte video. Klepněte na Sdílet → Kopírovat odkaz.",
+      "step2": "Vložte odkaz do pole výše.",
+      "step3": "Klikněte na 'Extrahovat MP3' pro stažení."
+    },
+    "faq": {
+      "q1": "Jak stáhnout MP3 z TikToku?",
+      "a1": "Zkopírujte odkaz, vložte na SaveTikFast a klikněte na Extrahovat MP3.",
+      "q2": "Jaká je kvalita zvuku?",
+      "a2": "Extrahujeme nejlepší možnou originální kvalitu.",
+      "q3": "Mohu stahovat virální písně?",
+      "a3": "Ano, můžete stáhnout jakýkoli zvuk.",
+      "q4": "Je to bezpečné?",
+      "a4": "Ano, 100% bezpečné a anonymní.",
+      "q5": "Lze použít jako vyzvánění?",
+      "a5": "Ano, soubory MP3 jsou ideální pro vyzvánění.",
+      "q6": "Funguje na iPhonu?",
+      "a6": "Ano, funguje na iOS a Androidu.",
+      "q7": "Je tam limit?",
+      "a7": "Ne, je to neomezené.",
+      "q8": "Proč nejde zvuk?",
+      "a8": "Zkontrolujte, zda má originální video zvuk.",
+      "q9": "Je to legální?",
+      "a9": "Pouze pro osobní potřebu.",
+      "q10": "Rozdíl oproti stahovači videa?",
+      "a10": "MP3 konvertor ukládá pouze zvuk, bez obrazu."
+    }
+  },
+  "story_page": {
+    "meta_title": "Stáhnout Story z TikToku - Anonymně",
+    "title": "Stáhnout TikTok Story",
+    "desc": "Ukládejte Stories a prezentace z TikToku, než zmizí.",
+    "placeholder": "Vložte odkaz na Story...",
+    "btn_download": "Uložit Story",
+    "about_title": "Stahovač Stories 2026",
+    "about_content": "SaveTikFast Story Downloader vám umožní uložit stories a karusely fotek, než zmizí po 24 hodinách.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonymní",
+        "desc": "Stahujte bez vědomí tvůrce."
+      },
+      "slides": {
+        "title": "Celá Prezentace",
+        "desc": "Stáhněte všechny fotky najednou."
+      },
+      "expire": {
+        "title": "Než Zmizí",
+        "desc": "Uchovejte dočasný obsah navždy."
+      },
+      "quality": {
+        "title": "Originální Kvalita",
+        "desc": "Vysoké rozlišení bez komprese."
+      },
+      "device": {
+        "title": "Všechna Zařízení",
+        "desc": "Kompatibilní s mobilem a PC."
+      },
+      "favorites": {
+        "title": "Vaše Oblíbené",
+        "desc": "Uložte si nejlepší stories."
+      }
+    },
+    "how_to": {
+      "title": "Jak stáhnout Story z TikToku",
+      "step1": "Otevřete Story, Sdílet → Kopírovat odkaz.",
+      "step2": "Vložte odkaz výše.",
+      "step3": "Klikněte na 'Uložit Story'."
+    },
+    "faq": {
+      "q1": "Jak stáhnout story?",
+      "a1": "Vložte odkaz a stáhněte.",
+      "q2": "Je to anonymní?",
+      "a2": "Ano, tvůrce se to nedozví.",
+      "q3": "Podporujete prezentace?",
+      "a3": "Ano, stahujeme všechny obrázky z karuselu.",
+      "q4": "Kdy stories zmizí?",
+      "a4": "Po 24 hodinách.",
+      "q5": "Jaká kvalita?",
+      "a5": "Originální HD kvalita.",
+      "q6": "Funguje na iPhonu?",
+      "a6": "Ano, přes prohlížeč.",
+      "q7": "Soukromé účty?",
+      "a7": "Ne, pouze veřejné.",
+      "q8": "Je to zdarma?",
+      "a8": "Ano, zcela zdarma.",
+      "q9": "Proč to nejde?",
+      "a9": "Story mohla vypršet nebo je účet soukromý.",
+      "q10": "Rozdíl Story vs Prezentace?",
+      "a10": "Stories jsou dočasné (24h), prezentace trvalé."
+    }
   }
 }

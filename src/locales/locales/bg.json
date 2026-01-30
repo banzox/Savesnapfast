@@ -79,94 +79,94 @@
     "rights": "© 2026 SaveTikFast. All Rights Reserved."
   },
   "nav_menu": {
-    "video": "Video",
-    "mp3": "MP3 Audio",
-    "stories": "Stories",
-    "slideshow": "Slideshow"
+    "video": "Видео",
+    "mp3": "MP3 Аудио",
+    "stories": "Истории",
+    "slideshow": "Слайдшоу"
   },
   "mp3_page": {
-    "meta_title": "TikTok to MP3 Converter - Download Audio High Quality 320kbps",
-    "meta_desc": "Convert TikTok videos to MP3 audio files. Extract songs, sounds & music in high quality 320kbps. Free TikTok to MP3 converter online.",
-    "title": "Download TikTok MP3",
-    "subtitle": "(Audio Only)",
-    "desc": "Convert TikTok videos to MP3 audio files. Extract songs, trending sounds & music in high quality 320kbps. Free & unlimited.",
-    "placeholder": "Paste TikTok video link to extract MP3...",
-    "btn_download": "Extract MP3",
-    "about_title": "Best TikTok to MP3 Converter 2026",
-    "about_content": "SaveTikFast MP3 Converter lets you extract audio from any TikTok video instantly. Download trending songs, viral sounds, voiceovers, and background music in high-quality MP3 format.",
+    "meta_title": "TikTok MP3 Конвертор - Изтегли Аудио (Високо Качество)",
+    "meta_desc": "Преобразувайте TikTok видеоклипове в MP3 аудио файлове с високо качество (320kbps). Безплатен онлайн конвертор.",
+    "title": "Изтегли TikTok MP3",
+    "subtitle": "(Само Аудио)",
+    "desc": "Преобразувайте TikTok видеоклипове в MP3 аудио файлове. Извличане на песни и музика с високо качество 320kbps.",
+    "placeholder": "Поставете TikTok линк за MP3...",
+    "btn_download": "Извличане на MP3",
+    "about_title": "Най-добрият TikTok MP3 Конвертор 2026",
+    "about_content": "SaveTikFast MP3 ви позволява да извличате аудио от всяко TikTok видео незабавно. Изтеглете популярни песни и вирални звуци.",
     "features": {
       "quality": {
-        "title": "High Quality Audio",
-        "desc": "Extract audio in the best available quality - up to 320kbps crystal clear MP3 files."
+        "title": "Високо Аудио Качество",
+        "desc": "Най-доброто аудио качество до 320kbps."
       },
       "fast": {
-        "title": "Instant Conversion",
-        "desc": "Convert TikTok to MP3 in seconds. No waiting, no processing delays."
+        "title": "Бързо Конвертиране",
+        "desc": "TikTok към MP3 за секунди."
       },
       "trending": {
-        "title": "Trending Sounds",
-        "desc": "Download viral TikTok sounds and trending songs everyone is using."
+        "title": "Вирални Звуци",
+        "desc": "Изтеглете музика, която е популярна в TikTok."
       },
       "device": {
-        "title": "Works Everywhere",
-        "desc": "Download TikTok MP3 on iPhone, Android, PC, or any device with a browser."
+        "title": "Работи Навсякъде",
+        "desc": "На iPhone, Android, PC и Mac."
       },
       "ringtone": {
-        "title": "Ringtone Ready",
-        "desc": "Use downloaded MP3s as ringtones, alarms, or notification sounds."
+        "title": "За Мелодия",
+        "desc": "Използвайте MP3 като мелодия или аларма."
       },
       "unlimited": {
-        "title": "Unlimited & Free",
-        "desc": "No limits on downloads. Convert as many TikTok videos to MP3 as you want."
+        "title": "Безплатно и Неограничено",
+        "desc": "Без ограничения за изтегляне."
       }
     },
     "how_to": {
-      "title": "How to Convert TikTok to MP3",
-      "step1": "Find the TikTok video with the audio you want. Tap Share → Copy Link.",
-      "step2": "Paste the TikTok link into the box above on this page.",
-      "step3": "Click \"Extract MP3\" and download your audio file instantly."
+      "title": "Как да конвертирате TikTok в MP3",
+      "step1": "Намерете видеото. Натиснете Сподели → Копирай връзката.",
+      "step2": "Поставете връзката в полето по-горе.",
+      "step3": "Кликнете 'Извличане на MP3' за изтегляне."
     }
   },
   "story_page": {
-    "meta_title": "TikTok Story Downloader - Save Slideshows & Photos Anonymously",
-    "meta_desc": "Download TikTok Stories and Slideshows anonymously. Save photo carousel, image posts & story videos before they expire.",
-    "title": "TikTok Story & Slideshow Downloader",
-    "desc": "Save TikTok Stories and Photo Slideshows before they disappear. Download all images anonymously in high quality.",
-    "placeholder": "Paste TikTok Story or Slideshow link...",
-    "btn_download": "Save Story",
-    "about_title": "Best TikTok Story Saver 2026",
-    "about_content": "SaveTikFast Story Downloader lets you save TikTok Stories and Photo Slideshows before they expire. Download all carousel images at once and keep your favorite content forever.",
+    "meta_title": "Изтегли TikTok Story - Запази Анонимно",
+    "meta_desc": "Изтеглете TikTok Stories и Слайдшоута анонимно. Запазете снимки и видео преди да изтекат.",
+    "title": "Изтегли TikTok Story",
+    "desc": "Запазете TikTok Stories и Слайдшоута преди да изтекат.",
+    "placeholder": "Поставете линк към Story...",
+    "btn_download": "Запази Story",
+    "about_title": "Story Downloader 2026",
+    "about_content": "SaveTikFast Story Downloader ви позволява да запазвате истории и фото въртележки преди да изчезнат след 24 часа.",
     "features": {
       "anonymous": {
-        "title": "100% Anonymous",
-        "desc": "Download TikTok stories without the creator knowing. No traces, no notifications."
+        "title": "100% Анонимно",
+        "desc": "Изтегляне без знанието на автора."
       },
       "slides": {
-        "title": "All Slides at Once",
-        "desc": "Download every image from TikTok slideshows and carousels with one click."
+        "title": "Цялото Слайдшоу",
+        "desc": "Изтеглете всички снимки наведнъж."
       },
       "expire": {
-        "title": "Before They Expire",
-        "desc": "Save stories before they disappear after 24 hours. Keep content forever."
+        "title": "Преди Да Изтекат",
+        "desc": "Запазете временното съдържание завинаги."
       },
       "quality": {
-        "title": "Original Quality",
-        "desc": "Download photos and videos in their original high resolution without compression."
+        "title": "Оригинално Качество",
+        "desc": "Висока разделителна способност без компресия."
       },
       "device": {
-        "title": "All Devices",
-        "desc": "Works on iPhone, Android, PC, and tablets. No app installation required."
+        "title": "Всички Устройства",
+        "desc": "Съвместимо с мобилни и PC."
       },
       "favorites": {
-        "title": "Save Favorites",
-        "desc": "Keep aesthetic photos, tutorials, and inspiration from your favorite creators."
+        "title": "Вашите Любими",
+        "desc": "Запазете най-добрите истории."
       }
     },
     "how_to": {
-      "title": "How to Download TikTok Stories & Slideshows",
-      "step1": "Open TikTok, find the Story or Slideshow post, tap Share → Copy Link.",
-      "step2": "Paste the TikTok link into the box above on this page.",
-      "step3": "Click \"Save Story\" and download all images to your device."
+      "title": "Как да изтеглите TikTok Story",
+      "step1": "Отворете Story, Сподели → Копирай връзката.",
+      "step2": "Поставете връзката по-горе.",
+      "step3": "Кликнете 'Запази Story'."
     }
   },
   "features": {

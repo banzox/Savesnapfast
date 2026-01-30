@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Slideshow"
+  },
+  "mp3_page": {
+    "meta_title": "Convertidor MP3 TikTok - Descargar Audio (Alta Calidad)",
+    "title": "Descargar MP3 TikTok",
+    "subtitle": "(Solo Audio)",
+    "desc": "Convierte videos de TikTok a archivos de audio MP3. Extrae canciones y música en alta calidad 320kbps.",
+    "placeholder": "Pega el enlace de TikTok para extraer MP3...",
+    "btn_download": "Extraer MP3",
+    "about_title": "Mejor Convertidor MP3 TikTok 2026",
+    "about_content": "SaveTikFast MP3 te permite extraer audio de cualquier video de TikTok al instante. Descarga sonidos virales y música de fondo.",
+    "features": {
+      "quality": {
+        "title": "Audio de Alta Calidad",
+        "desc": "Extracción de audio óptima hasta 320kbps."
+      },
+      "fast": {
+        "title": "Conversión Instantánea",
+        "desc": "Convierte TikTok a MP3 en segundos."
+      },
+      "trending": {
+        "title": "Sonidos Virales",
+        "desc": "Descarga la música tendencia de TikTok."
+      },
+      "device": {
+        "title": "Compatible con Todo",
+        "desc": "Funciona en iPhone, Android, PC y Mac."
+      },
+      "ringtone": {
+        "title": "Para Tono de Llamada",
+        "desc": "Usa los MP3 como tono o alarma."
+      },
+      "unlimited": {
+        "title": "Ilimitado y Gratis",
+        "desc": "Sin límites de descarga."
+      }
+    },
+    "how_to": {
+      "title": "Cómo convertir TikTok a MP3",
+      "step1": "Encuentra el video. Toca Compartir → Copiar enlace.",
+      "step2": "Pega el enlace en la caja de arriba.",
+      "step3": "Haz clic en 'Extraer MP3' para descargar."
+    },
+    "faq": {
+      "q1": "¿Cómo convertir video TikTok a MP3?",
+      "a1": "Copia el enlace, pégalo en SaveTikFast y haz clic en Extraer MP3.",
+      "q2": "¿Qué calidad de audio tiene?",
+      "a2": "Extraemos la mejor calidad posible, hasta 320kbps.",
+      "q3": "¿Puedo descargar sonidos virales?",
+      "a3": "Sí, puedes bajar cualquier sonido o música.",
+      "q4": "¿Es seguro?",
+      "a4": "Sí, 100% seguro y anónimo. No guardamos archivos.",
+      "q5": "¿Sirve para tono de llamada?",
+      "a5": "Sí, los MP3 son compatibles.",
+      "q6": "¿Funciona en iPhone?",
+      "a6": "Sí, funciona en iOS y Android.",
+      "q7": "¿Hay límite?",
+      "a7": "No, es ilimitado y gratis.",
+      "q8": "¿Por qué no se oye?",
+      "a8": "Verifica que el video original tenga sonido.",
+      "q9": "¿Es legal?",
+      "a9": "Solo para uso personal.",
+      "q10": "¿Diferencia con descargar video?",
+      "a10": "El convertidor MP3 solo guarda el audio."
+    }
+  },
+  "story_page": {
+    "meta_title": "Descargar Historias TikTok - Guardar Anónimamente",
+    "title": "Descargar Historias TikTok",
+    "desc": "Guarda Historias y Slideshows de TikTok antes de que expiren.",
+    "placeholder": "Pega el enlace de la Historia...",
+    "btn_download": "Guardar Historia",
+    "about_title": "Descargador de Historias 2026",
+    "about_content": "SaveTikFast Story Downloader te permite guardar historias y carruseles antes de que desaparezcan a las 24h.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anónimo",
+        "desc": "Descarga sin ser visto."
+      },
+      "slides": {
+        "title": "Todo el Slideshow",
+        "desc": "Descarga todas las fotos de una vez."
+      },
+      "expire": {
+        "title": "Antes de Expirar",
+        "desc": "Guarda el contenido efímero para siempre."
+      },
+      "quality": {
+        "title": "Calidad Original",
+        "desc": "Alta resolución sin pérdida."
+      },
+      "device": {
+        "title": "Todos los Dispositivos",
+        "desc": "Compatible con móvil y PC."
+      },
+      "favorites": {
+        "title": "Tus Favoritos",
+        "desc": "Guarda las mejores historias."
+      }
+    },
+    "how_to": {
+      "title": "Cómo descargar una Historia de TikTok",
+      "step1": "Abre la Historia, Compartir → Copiar enlace.",
+      "step2": "Pega el enlace arriba.",
+      "step3": "Haz clic en 'Guardar Historia'."
+    },
+    "faq": {
+      "q1": "¿Cómo bajar una historia?",
+      "a1": "Pega el enlace y descarga.",
+      "q2": "¿Es anónimo?",
+      "a2": "Sí, el creador no sabrá que la descargaste.",
+      "q3": "¿Soportan slideshows?",
+      "a3": "Sí, descargamos todas las fotos del carrusel.",
+      "q4": "¿Cuándo expiran?",
+      "a4": "A las 24 horas.",
+      "q5": "¿Qué calidad?",
+      "a5": "Calidad original HD.",
+      "q6": "¿Funciona en iPhone?",
+      "a6": "Sí, en cualquier navegador.",
+      "q7": "¿Cuentas privadas?",
+      "a7": "No, solo públicas.",
+      "q8": "¿Es gratis?",
+      "a8": "Sí, totalmente.",
+      "q9": "¿Por qué falla?",
+      "a9": "Verifica si expiró o es privada.",
+      "q10": "¿Diferencia Story vs Slideshow?",
+      "a10": "Las historias son temporales (24h), los slideshows permanentes."
+    }
   }
 }

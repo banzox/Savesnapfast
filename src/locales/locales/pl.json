@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Pokaz slajdów"
+  },
+  "mp3_page": {
+    "meta_title": "Konwerter TikTok na MP3 - Pobierz Audio (Wysoka Jakość)",
+    "title": "Pobierz TikTok MP3",
+    "subtitle": "(Tylko Audio)",
+    "desc": "Konwertuj filmy z TikToka na pliki audio MP3. Wyodrębnij piosenki i muzykę w wysokiej jakości 320kbps.",
+    "placeholder": "Wklej link TikTok, aby pobrać MP3...",
+    "btn_download": "Wyodrębnij MP3",
+    "about_title": "Najlepszy Konwerter MP3 z TikToka 2026",
+    "about_content": "SaveTikFast MP3 pozwala natychmiast wyodrębnić dźwięk z dowolnego filmu na TikToku. Pobieraj popularne piosenki i wiralowe dźwięki.",
+    "features": {
+      "quality": {
+        "title": "Wysoka Jakość Audio",
+        "desc": "Najlepsza jakość dźwięku do 320kbps."
+      },
+      "fast": {
+        "title": "Natychmiastowa Konwersja",
+        "desc": "TikTok na MP3 w kilka sekund."
+      },
+      "trending": {
+        "title": "Wiralowe Dźwięki",
+        "desc": "Pobieraj muzykę, która jest teraz trendy."
+      },
+      "device": {
+        "title": "Działa Wszędzie",
+        "desc": "Na iPhone, Androidzie, PC i Macu."
+      },
+      "ringtone": {
+        "title": "Na Dzwonek",
+        "desc": "Użyj MP3 jako dzwonka lub budzika."
+      },
+      "unlimited": {
+        "title": "Darmowe i Bez Limitu",
+        "desc": "Brak limitów pobierania."
+      }
+    },
+    "how_to": {
+      "title": "Jak przekonwertować TikTok na MP3",
+      "step1": "Znajdź film. Stuknij Udostępnij → Kopiuj link.",
+      "step2": "Wklej link w polu powyżej.",
+      "step3": "Kliknij 'Wyodrębnij MP3', aby pobrać."
+    },
+    "faq": {
+      "q1": "Jak pobrać MP3 z TikToka?",
+      "a1": "Skopiuj link, wklej w SaveTikFast i kliknij Wyodrębnij MP3.",
+      "q2": "Jaka jest jakość dźwięku?",
+      "a2": "Pobieramy najlepszą oryginalną jakość.",
+      "q3": "Mogę pobrać viralowe piosenki?",
+      "a3": "Tak, możesz pobrać każdy dźwięk.",
+      "q4": "Czy to bezpieczne?",
+      "a4": "Tak, w 100% bezpieczne i anonimowe.",
+      "q5": "Można ustawić na dzwonek?",
+      "a5": "Tak, pliki MP3 nadają się na dzwonki.",
+      "q6": "Działa na iPhone?",
+      "a6": "Tak, działa na iOS i Androidzie.",
+      "q7": "Czy jest limit?",
+      "a7": "Nie, całkowicie bez limitu.",
+      "q8": "Dlaczego nie ma dźwięku?",
+      "a8": "Sprawdź, czy oryginalne wideo ma dźwięk.",
+      "q9": "Czy to legalne?",
+      "a9": "Tylko do użytku osobistego.",
+      "q10": "Różnica względem pobierania wideo?",
+      "a10": "Konwerter MP3 zapisuje tylko sam dźwięk, bez obrazu."
+    }
+  },
+  "story_page": {
+    "meta_title": "Pobierz Story z TikToka - Anonimowo",
+    "title": "Pobierz TikTok Story",
+    "desc": "Zapisuj Stories i pokazy slajdów zanim znikną.",
+    "placeholder": "Wklej link do Story...",
+    "btn_download": "Zapisz Story",
+    "about_title": "Pobieranie Stories 2026",
+    "about_content": "SaveTikFast Story Downloader pozwala zachować relacje i karuzele zdjęć, zanim znikną po 24 godzinach.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonimowo",
+        "desc": "Pobieraj bez wiedzy twórcy."
+      },
+      "slides": {
+        "title": "Cały Pokaz Slajdów",
+        "desc": "Pobierz wszystkie zdjęcia naraz."
+      },
+      "expire": {
+        "title": "Zanim Znikną",
+        "desc": "Zachowaj tymczasowe treści na zawsze."
+      },
+      "quality": {
+        "title": "Oryginalna Jakość",
+        "desc": "Wysoka rozdzielczość bez kompresji."
+      },
+      "device": {
+        "title": "Wszystkie Urządzenia",
+        "desc": "Działa na telefonie i komputerze."
+      },
+      "favorites": {
+        "title": "Ulubione",
+        "desc": "Zachowaj najlepsze relacje."
+      }
+    },
+    "how_to": {
+      "title": "Jak pobrać Story z TikToka",
+      "step1": "Otwórz Story, Udostępnij → Kopiuj link.",
+      "step2": "Wklej link powyżej.",
+      "step3": "Kliknij 'Zapisz Story'."
+    },
+    "faq": {
+      "q1": "Jak pobrać relację?",
+      "a1": "Wklej link i pobierz.",
+      "q2": "Czy to anonimowe?",
+      "a2": "Tak, twórca się nie dowie.",
+      "q3": "Obsługuje pokazy slajdów?",
+      "a3": "Tak, pobieramy wszystkie zdjęcia z karuzeli.",
+      "q4": "Kiedy stories znikają?",
+      "a4": "Po 24 godzinach.",
+      "q5": "Jaka jakość?",
+      "a5": "Oryginalna jakość HD.",
+      "q6": "Działa na iPhone?",
+      "a6": "Tak, przez przeglądarkę.",
+      "q7": "Konta prywatne?",
+      "a7": "Nie, tylko publiczne.",
+      "q8": "Czy to darmowe?",
+      "a8": "Tak, całkowicie za darmo.",
+      "q9": "Dlaczego błąd?",
+      "a9": "Story mogło wygasnąć lub konto jest prywatne.",
+      "q10": "Różnica Story a Pokaz slajdów?",
+      "a10": "Stories są tymczasowe (24h), slajdy stałe."
+    }
   }
 }

@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Diashow"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Converter - Audio herunterladen (Hohe Qualität)",
+    "title": "TikTok MP3 Download",
+    "subtitle": "(Nur Audio)",
+    "desc": "Wandle TikTok Videos in MP3 Audiodateien um. Extrahiere Songs und Musik in hoher Qualität (320kbps).",
+    "placeholder": "TikTok Link hier einfügen für MP3...",
+    "btn_download": "MP3 Extrahieren",
+    "about_title": "Bester TikTok MP3 Converter 2026",
+    "about_content": "Mit SaveTikFast MP3 kannst du Audio aus jedem TikTok Video sofort extrahieren. Lade Trend-Songs, virale Sounds und Hintergrundmusik herunter.",
+    "features": {
+      "quality": {
+        "title": "Hohe Audioqualität",
+        "desc": "Beste verfügbare Qualität bis zu 320kbps."
+      },
+      "fast": {
+        "title": "Sofortige Umwandlung",
+        "desc": "TikTok zu MP3 in Sekunden. Keine Wartezeit."
+      },
+      "trending": {
+        "title": "Trend Sounds",
+        "desc": "Lade virale TikTok Sounds und Musik herunter."
+      },
+      "device": {
+        "title": "Überall nutzbar",
+        "desc": "MP3 Download auf iPhone, Android, PC und Mac."
+      },
+      "ringtone": {
+        "title": "Als Klingelton",
+        "desc": "Nutze MP3s als Klingelton oder Wecker."
+      },
+      "unlimited": {
+        "title": "Kostenlos & Unbegrenzt",
+        "desc": "Keine Limits. Lade so viel du willst."
+      }
+    },
+    "how_to": {
+      "title": "Wie man TikTok in MP3 umwandelt",
+      "step1": "Finde das TikTok Video. Tippe auf Teilen → Link kopieren.",
+      "step2": "Füge den Link oben in das Feld ein.",
+      "step3": "Klicke 'MP3 Extrahieren' und lade die Datei."
+    },
+    "faq": {
+      "q1": "Wie lade ich TikTok MP3s?",
+      "a1": "Link kopieren, bei SaveTikFast einfügen, MP3 extrahieren klicken.",
+      "q2": "Wie ist die Qualität?",
+      "a2": "Wir extrahieren die bestmögliche Originalqualität (bis 320kbps).",
+      "q3": "Kann ich Musik runterladen?",
+      "a3": "Ja, jede Musik oder Sound von TikTok.",
+      "q4": "Ist es sicher?",
+      "a4": "Ja, 100% sicher und anonym.",
+      "q5": "Als Klingelton nutzen?",
+      "a5": "Ja, funktioniert perfekt.",
+      "q6": "Geht das auf dem iPhone?",
+      "a6": "Ja, iOS und Android werden unterstützt.",
+      "q7": "Gibt es ein Limit?",
+      "a7": "Nein, es ist unbegrenzt.",
+      "q8": "Warum kein Ton?",
+      "a8": "Prüfe, ob das Originalvideo Ton hat.",
+      "q9": "Ist es legal?",
+      "a9": "Nur für den privaten Gebrauch.",
+      "q10": "Unterschied zum Video Downloader?",
+      "a10": "Der MP3 Converter speichert nur die Audiospur."
+    }
+  },
+  "story_page": {
+    "meta_title": "TikTok Story Downloader - Anonym speichern",
+    "title": "TikTok Story Laden",
+    "desc": "Speichere TikTok Stories und Diashows bevor sie verschwinden.",
+    "placeholder": "Story Link hier einfügen...",
+    "btn_download": "Story Speichern",
+    "about_title": "Story Saver 2026",
+    "about_content": "SaveTikFast Story Downloader sichert Stories und Foto-Karussells, bevor sie nach 24 Stunden gelöscht werden.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonym",
+        "desc": "Download ohne dass der Ersteller es sieht."
+      },
+      "slides": {
+        "title": "Ganze Diashow",
+        "desc": "Lade alle Fotos eines Karussells auf einmal."
+      },
+      "expire": {
+        "title": "Vor Ablauf",
+        "desc": "Sichere Inhalte für immer, bevor sie weg sind."
+      },
+      "quality": {
+        "title": "Original Qualität",
+        "desc": "Hohe Auflösung ohne Kompression."
+      },
+      "device": {
+        "title": "Alle Geräte",
+        "desc": "Funktioniert auf Handy, Tablet und PC."
+      },
+      "favorites": {
+        "title": "Favoriten sichern",
+        "desc": "Behalte deine Lieblings-Stories."
+      }
+    },
+    "how_to": {
+      "title": "Wie man TikTok Stories lädt",
+      "step1": "Story öffnen, Teilen → Link kopieren.",
+      "step2": "Link oben einfügen.",
+      "step3": "Auf 'Story Speichern' klicken."
+    },
+    "faq": {
+      "q1": "Wie lade ich eine Story?",
+      "a1": "Link einfügen und herunterladen.",
+      "q2": "Ist es anonym?",
+      "a2": "Ja, der Nutzer wird nicht benachrichtigt.",
+      "q3": "Gehen Diashows?",
+      "a3": "Ja, wir laden alle Bilder herunter.",
+      "q4": "Wann laufen Stories ab?",
+      "a4": "Nach 24 Stunden.",
+      "q5": "Welche Qualität?",
+      "a5": "Original HD Qualität.",
+      "q6": "Klappt es am PC?",
+      "a6": "Ja, in jedem Browser.",
+      "q7": "Private Accounts?",
+      "a7": "Nein, nur öffentliche.",
+      "q8": "Ist es gratis?",
+      "a8": "Ja, komplett kostenlos.",
+      "q9": "Warum geht es nicht?",
+      "a9": "Story könnte abgelaufen oder privat sein.",
+      "q10": "Unterschied Story vs Diashow?",
+      "a10": "Stories sind temporär (24h), Diashows permanent."
+    }
   }
 }

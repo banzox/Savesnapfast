@@ -334,6 +334,133 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Diaesitys"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Muunnin - Lataa Ääntä (Korkea Laatu)",
+    "title": "Lataa TikTok MP3",
+    "subtitle": "(Vain Ääni)",
+    "desc": "Muunna TikTok-videot MP3-äänitiedostoiksi. Erota kappaleet ja musiikki korkealla laadulla 320kbps.",
+    "placeholder": "Liitä TikTok-linkki hakeaksesi MP3:n...",
+    "btn_download": "Hae MP3",
+    "about_title": "Paras TikTok MP3 Muunnin 2026",
+    "about_content": "SaveTikFast MP3 mahdollistaa äänen erottamisen mistä tahansa TikTok-videosta heti. Lataa trendaavia kappaleita ja viraaleja ääniä.",
+    "features": {
+      "quality": {
+        "title": "Korkea Äänenlaatu",
+        "desc": "Paras äänenlaatu jopa 320kbps."
+      },
+      "fast": {
+        "title": "Nopea Muunnos",
+        "desc": "TikTokista MP3:ksi sekunneissa."
+      },
+      "trending": {
+        "title": "Viraalit Äänet",
+        "desc": "Lataa musiikkia, joka on suosittua TikTokissa."
+      },
+      "device": {
+        "title": "Toimii Kaikkialla",
+        "desc": "iPhone, Android, PC ja Mac."
+      },
+      "ringtone": {
+        "title": "Soittoääneksi",
+        "desc": "Käytä MP3-tiedostoja soittoäänenä tai herätyksenä."
+      },
+      "unlimited": {
+        "title": "Ilmainen & Rajoittamaton",
+        "desc": "Ei latausrajoituksia."
+      }
+    },
+    "how_to": {
+      "title": "Miten muuntaa TikTok MP3:ksi",
+      "step1": "Etsi video. Napauta Jaa → Kopioi linkki.",
+      "step2": "Liitä linkki yllä olevaan laatikkoon.",
+      "step3": "Klikkaa 'Hae MP3' ladataksesi."
+    },
+    "faq": {
+      "q1": "Miten lataan MP3:n TikTokista?",
+      "a1": "Kopioi linkki, liitä SaveTikFast-sivulle ja klikkaa Hae MP3.",
+      "q2": "Mikä on äänenlaatu?",
+      "a2": "Erotamme parhaan mahdollisen alkuperäisen laadun.",
+      "q3": "Voinko ladata viraaleja kappaleita?",
+      "a3": "Kyllä, voit ladata minkä tahansa äänen tai musiikin.",
+      "q4": "Onko tämä turvallista?",
+      "a4": "Kyllä, 100% turvallista ja anonyymiä.",
+      "q5": "Voinko käyttää soittoäänenä?",
+      "a5": "Kyllä, MP3-tiedostot sopivat täydellisesti soittoääniksi.",
+      "q6": "Toimiiko iPhonella?",
+      "a6": "Kyllä, toimii iOS:lla ja Androidilla.",
+      "q7": "Onko rajaa?",
+      "a7": "Ei, tämä on täysin rajoittamaton.",
+      "q8": "Miksi ei ole ääntä?",
+      "a8": "Tarkista, onko alkuperäisessä videossa ääntä.",
+      "q9": "Onko tämä laillista?",
+      "a9": "Vain henkilökohtaiseen käyttöön.",
+      "q10": "Ero videolataajaan?",
+      "a10": "MP3-muunnin tallentaa vain äänen, ei kuvaa."
+    }
+  },
+  "story_page": {
+    "meta_title": "Lataa TikTok Story - Tallenna Anonyymisti",
+    "title": "Lataa TikTok Story",
+    "desc": "Tallenna TikTok Stories ja Diaesitykset ennen kuin ne vanhenevat.",
+    "placeholder": "Liitä Story-linkki...",
+    "btn_download": "Tallenna Story",
+    "about_title": "Story Lataaja 2026",
+    "about_content": "SaveTikFast Story Downloader antaa sinun tallentaa tarinoita ja valokuvakaruselleja ennen kuin ne katoavat 24 tunnin kuluttua.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonyymi",
+        "desc": "Lataa ilman että tekijä tietää."
+      },
+      "slides": {
+        "title": "Koko Diaesitys",
+        "desc": "Lataa kaikki kuvat kerralla."
+      },
+      "expire": {
+        "title": "Ennen Kuin Vanhenee",
+        "desc": "Säilytä väliaikainen sisältö ikuisesti."
+      },
+      "quality": {
+        "title": "Alkuperäinen Laatu",
+        "desc": "Korkea resoluutio ilman pakkausta."
+      },
+      "device": {
+        "title": "Kaikki Laitteet",
+        "desc": "Yhteensopiva mobiilin ja PC:n kanssa."
+      },
+      "favorites": {
+        "title": "Suosikkisi",
+        "desc": "Tallenna parhaat tarinat."
+      }
+    },
+    "how_to": {
+      "title": "Miten ladata TikTok Story",
+      "step1": "Avaa Story, Jaa → Kopioi linkki.",
+      "step2": "Liitä linkki yllä.",
+      "step3": "Klikkaa 'Tallenna Story'."
+    },
+    "faq": {
+      "q1": "Miten lataan storyn?",
+      "a1": "Liitä linkki ja lataa.",
+      "q2": "Onko se anonyymiä?",
+      "a2": "Kyllä, tekijä ei saa tietää.",
+      "q3": "Tuetteko diaesityksiä?",
+      "a3": "Kyllä, lataamme kaikki karusellin kuvat.",
+      "q4": "Milloin storyt vanhenevat?",
+      "a4": "24 tunnin kuluttua.",
+      "q5": "Mikä laatu?",
+      "a5": "Alkuperäinen HD-laatu.",
+      "q6": "Toimiiko iPhonella?",
+      "a6": "Kyllä, selaimen kautta.",
+      "q7": "Yksityiset tilit?",
+      "a7": "Ei, vain julkiset.",
+      "q8": "Onko se ilmainen?",
+      "a8": "Kyllä, täysin ilmainen.",
+      "q9": "Miksi epäonnistui?",
+      "a9": "Story voi olla vanhentunut tai tili yksityinen.",
+      "q10": "Ero Story vs Diaesitys?",
+      "a10": "Tarinat ovat väliaikaisia (24h), Diaesitykset pysyviä."
+    }
   }
 }

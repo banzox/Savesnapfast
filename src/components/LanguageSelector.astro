@@ -8,30 +8,28 @@ const currentLangName =
 const pathname = Astro.url.pathname;
 const search = Astro.url.search;
 
+import { getRelativeLocaleUrl } from "astro:i18n";
+
 function getPathForLanguage(targetLang: string) {
+    // 1. Get current path segments, stripping empty strings
     const segments = pathname.split("/").filter(Boolean);
 
-    // Check if the first segment is a known language code (and strictly not defaultLang - though defaultLang shouldn't appear in path based on routing)
+    // 2. Detect if first segment is a locale
     const firstSegment = segments[0];
-    if (
+    const isFirstSegmentLocale =
         firstSegment &&
         languages[firstSegment as keyof typeof languages] &&
-        firstSegment !== defaultLang
-    ) {
-        segments.shift(); // Remove the language prefix
+        firstSegment !== defaultLang;
+
+    // 3. Extract the "pure" path relative to locale
+    let relativePath = segments.join("/");
+    if (isFirstSegmentLocale) {
+        relativePath = segments.slice(1).join("/");
     }
 
-    // Reconstruct path
-    const cleanPath = segments.length > 0 ? "/" + segments.join("/") : "";
-
-    let finalPath;
-    if (targetLang === defaultLang) {
-        finalPath = cleanPath || "/";
-    } else {
-        finalPath = `/${targetLang}${cleanPath}`;
-    }
-
-    return finalPath + search;
+    // 4. Generate new URL using Astro's standard helper
+    // This automatically handles default locale logic (e.g. /en/ -> /) if configured
+    return getRelativeLocaleUrl(targetLang, relativePath) + search;
 }
 ---
 

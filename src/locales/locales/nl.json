@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Diavoorstelling"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Converter - Audio Downloaden (Hoge Kwaliteit)",
+    "title": "TikTok MP3 Download",
+    "subtitle": "(Alleen Audio)",
+    "desc": "Converteer TikTok video's naar MP3 audiobestanden. Extraheer liedjes en muziek in hoge kwaliteit 320kbps.",
+    "placeholder": "Plak TikTok link voor MP3...",
+    "btn_download": "MP3 Extraheren",
+    "about_title": "Beste TikTok MP3 Converter 2026",
+    "about_content": "SaveTikFast MP3 laat je direct audio uit elke TikTok video halen. Download trending nummers en virale geluiden.",
+    "features": {
+      "quality": {
+        "title": "Hoge Kwaliteit Audio",
+        "desc": "Beste audiokwaliteit tot 320kbps."
+      },
+      "fast": {
+        "title": "Directe Conversie",
+        "desc": "TikTok naar MP3 in seconden."
+      },
+      "trending": {
+        "title": "Trending Geluiden",
+        "desc": "Download de populairste TikTok muziek."
+      },
+      "device": {
+        "title": "Werkt Overal",
+        "desc": "Op iPhone, Android, PC en Mac."
+      },
+      "ringtone": {
+        "title": "Voor Beltoon",
+        "desc": "Gebruik MP3's als beltoon of wekker."
+      },
+      "unlimited": {
+        "title": "Gratis & Onbeperkt",
+        "desc": "Geen downloadlimieten."
+      }
+    },
+    "how_to": {
+      "title": "Hoe TikTok naar MP3 converteren",
+      "step1": "Zoek de video. Tik op Delen → Link kopiëren.",
+      "step2": "Plak de link in het vak hierboven.",
+      "step3": "Klik op 'MP3 Extraheren' om te downloaden."
+    },
+    "faq": {
+      "q1": "Hoe download ik MP3 van TikTok?",
+      "a1": "Kopieer de link, plak in SaveTikFast en klik op MP3 Extraheren.",
+      "q2": "Wat is de geluidskwaliteit?",
+      "a2": "We halen de best mogelijke originele kwaliteit op.",
+      "q3": "Kan ik trending muziek downloaden?",
+      "a3": "Ja, je kunt elk geluid of muziekje downloaden.",
+      "q4": "Is het veilig?",
+      "a4": "Ja, 100% veilig en anoniem. We bewaren geen bestanden.",
+      "q5": "Kan ik het als beltoon gebruiken?",
+      "a5": "Ja, MP3-bestanden zijn perfect als beltoon.",
+      "q6": "Werkt het op iPhone?",
+      "a6": "Ja, werkt op iOS en Android.",
+      "q7": "Is er een limiet?",
+      "a7": "Nee, het is onbeperkt.",
+      "q8": "Waarom geen geluid?",
+      "a8": "Check of de originele video geluid heeft.",
+      "q9": "Is het legaal?",
+      "a9": "Alleen voor persoonlijk gebruik.",
+      "q10": "Verschil met video downloader?",
+      "a10": "De MP3 converter slaat alleen het geluid op, niet het beeld."
+    }
+  },
+  "story_page": {
+    "meta_title": "TikTok Story Downloaden - Anoniem Opslaan",
+    "title": "TikTok Story Download",
+    "desc": "Sla TikTok Stories en Diavoorstellingen op voordat ze verlopen.",
+    "placeholder": "Plak Story link...",
+    "btn_download": "Story Opslaan",
+    "about_title": "Story Downloader 2026",
+    "about_content": "SaveTikFast Story Downloader laat je stories en fotocarrousels opslaan voordat ze na 24 uur verdwijnen.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anoniem",
+        "desc": "Downloaden zonder dat de maker het weet."
+      },
+      "slides": {
+        "title": "Hele Diavoorstelling",
+        "desc": "Download alle foto's in één keer."
+      },
+      "expire": {
+        "title": "Voor het Verloopt",
+        "desc": "Sla tijdelijke content voor altijd op."
+      },
+      "quality": {
+        "title": "Originele Kwaliteit",
+        "desc": "Hoge resolutie zonder compressie."
+      },
+      "device": {
+        "title": "Alle Apparaten",
+        "desc": "Compatibel met mobiel en PC."
+      },
+      "favorites": {
+        "title": "Jouw Favorieten",
+        "desc": "Bewaar de beste stories."
+      }
+    },
+    "how_to": {
+      "title": "Hoe download je een TikTok Story",
+      "step1": "Open Story, Delen → Link kopiëren.",
+      "step2": "Plak link hierboven.",
+      "step3": "Klik op 'Story Opslaan'."
+    },
+    "faq": {
+      "q1": "Hoe download ik een story?",
+      "a1": "Link plakken en downloaden.",
+      "q2": "Is het anoniem?",
+      "a2": "Ja, de maker krijgt geen melding.",
+      "q3": "Ondersteunen jullie diavoorstellingen?",
+      "a3": "Ja, we downloaden alle afbeeldingen.",
+      "q4": "Wanneer verlopen stories?",
+      "a4": "Na 24 uur.",
+      "q5": "Welke kwaliteit?",
+      "a5": "Originele HD kwaliteit.",
+      "q6": "Werkt het op iPhone?",
+      "a6": "Ja, via de browser.",
+      "q7": "Privé accounts?",
+      "a7": "Nee, alleen openbare accounts.",
+      "q8": "Is het gratis?",
+      "a8": "Ja, volledig gratis.",
+      "q9": "Waarom werkt het niet?",
+      "a9": "Story kan verlopen zijn of account is privé.",
+      "q10": "Verschil Story vs Diavoorstelling?",
+      "a10": "Stories zijn tijdelijk (24u), Diavoorstellingen permanent."
+    }
   }
 }

@@ -334,6 +334,133 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Bildspel"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Konverterare - Ladda Ner Ljud (Hög Kvalitet)",
+    "title": "Ladda Ner TikTok MP3",
+    "subtitle": "(Endast Ljud)",
+    "desc": "Konvertera TikTok-videor till MP3-ljudfiler. Extrahera låtar och musik i hög kvalitet 320kbps.",
+    "placeholder": "Klistra in TikTok-länk för att hämta MP3...",
+    "btn_download": "Hämta MP3",
+    "about_title": "Bästa TikTok MP3 Konverteraren 2026",
+    "about_content": "SaveTikFast MP3 låter dig extrahera ljud från vilken TikTok-video som helst direkt. Ladda ner trendiga låtar och virala ljud.",
+    "features": {
+      "quality": {
+        "title": "Hög Ljudkvalitet",
+        "desc": "Bästa ljudkvaliteten upp till 320kbps."
+      },
+      "fast": {
+        "title": "Snabb Konvertering",
+        "desc": "TikTok till MP3 på några sekunder."
+      },
+      "trending": {
+        "title": "Virala Ljud",
+        "desc": "Ladda ner musik som trendar på TikTok."
+      },
+      "device": {
+        "title": "Fungerar Överallt",
+        "desc": "På iPhone, Android, PC och Mac."
+      },
+      "ringtone": {
+        "title": "För Rington",
+        "desc": "Använd MP3 som ringsignal eller larm."
+      },
+      "unlimited": {
+        "title": "Gratis & Obegränsat",
+        "desc": "Inga nedladdningsgränser."
+      }
+    },
+    "how_to": {
+      "title": "Hur man konverterar TikTok till MP3",
+      "step1": "Hitta videon. Tryck på Dela → Kopiera länk.",
+      "step2": "Klistra in länken i rutan ovan.",
+      "step3": "Klicka på 'Hämta MP3' för att ladda ner."
+    },
+    "faq": {
+      "q1": "Hur laddar jag ner MP3 från TikTok?",
+      "a1": "Kopiera länken, klistra in på SaveTikFast och klicka på Hämta MP3.",
+      "q2": "Hur är ljudkvaliteten?",
+      "a2": "Vi extraherar bästa möjliga originalkvalitet.",
+      "q3": "Kan jag ladda ner virala låtar?",
+      "a3": "Ja, du kan ladda ner vilket ljud som helst.",
+      "q4": "Är det säkert?",
+      "a4": "Ja, 100% säkert och anonymt.",
+      "q5": "Kan jag ha det som ringsignal?",
+      "a5": "Ja, MP3-filer passar perfekt som ringsignal.",
+      "q6": "Fungerar det på iPhone?",
+      "a6": "Ja, fungerar på iOS och Android.",
+      "q7": "Finns det en gräns?",
+      "a7": "Nej, det är helt obegränsat.",
+      "q8": "Varför inget ljud?",
+      "a8": "Kontrollera att originalvideon har ljud.",
+      "q9": "Är det lagligt?",
+      "a9": "Endast för personligt bruk.",
+      "q10": "Skillnad mot videonedladdare?",
+      "a10": "MP3-konverteraren sparar bara ljudet, inte bilden."
+    }
+  },
+  "story_page": {
+    "meta_title": "Ladda Ner TikTok Story - Spara Anonymt",
+    "title": "Ladda Ner TikTok Story",
+    "desc": "Spara TikTok Stories och bildspel innan de försvinner.",
+    "placeholder": "Klistra in Story-länk...",
+    "btn_download": "Spara Story",
+    "about_title": "Story Nedladdare 2026",
+    "about_content": "SaveTikFast Story Downloader låter dig spara stories och fotokaruseller innan de försvinner efter 24 timmar.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonymt",
+        "desc": "Ladda ner utan att skaparen vet om det."
+      },
+      "slides": {
+        "title": "Hela Bildspelet",
+        "desc": "Ladda ner alla bilder på en gång."
+      },
+      "expire": {
+        "title": "Innan Det Försvinner",
+        "desc": "Spara tillfälligt innehåll för alltid."
+      },
+      "quality": {
+        "title": "Originalkvalitet",
+        "desc": "Hög upplösning utan komprimering."
+      },
+      "device": {
+        "title": "Alla Enheter",
+        "desc": "Kompatibel med mobil och PC."
+      },
+      "favorites": {
+        "title": "Dina Favoriter",
+        "desc": "Spara de bästa stories."
+      }
+    },
+    "how_to": {
+      "title": "Hur man laddar ner en TikTok Story",
+      "step1": "Öppna Story, Dela → Kopiera länk.",
+      "step2": "Klistra in länken ovan.",
+      "step3": "Klicka på 'Spara Story'."
+    },
+    "faq": {
+      "q1": "Hur laddar jag ner en story?",
+      "a1": "Klistra in länken och ladda ner.",
+      "q2": "Är det anonymt?",
+      "a2": "Ja, skaparen får ingen notis.",
+      "q3": "Stödjer ni bildspel?",
+      "a3": "Ja, vi laddar ner alla bilder i karusellen.",
+      "q4": "När går stories ut?",
+      "a4": "Efter 24 timmar.",
+      "q5": "Vilken kvalitet?",
+      "a5": "Original HD-kvalitet.",
+      "q6": "Fungerar det på iPhone?",
+      "a6": "Ja, via webbläsaren.",
+      "q7": "Privata konton?",
+      "a7": "Nej, endast offentliga.",
+      "q8": "Är det gratis?",
+      "a8": "Ja, helt gratis.",
+      "q9": "Varför misslyckas det?",
+      "a9": "Storyn kan ha gått ut eller kontot är privat.",
+      "q10": "Skillnad Story vs Bildspel?",
+      "a10": "Stories är tillfälliga (24h), bildspel är permanenta."
+    }
   }
 }

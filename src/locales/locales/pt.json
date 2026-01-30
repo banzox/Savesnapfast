@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Slideshow"
+  },
+  "mp3_page": {
+    "meta_title": "Conversor TikTok MP3 - Baixar Áudio (Alta Qualidade)",
+    "title": "Baixar TikTok MP3",
+    "subtitle": "(Somente Áudio)",
+    "desc": "Converta vídeos do TikTok para arquivos de áudio MP3. Extraia músicas e sons em alta qualidade 320kbps.",
+    "placeholder": "Cole o link do TikTok para extrair MP3...",
+    "btn_download": "Extrair MP3",
+    "about_title": "Melhor Conversor MP3 TikTok 2026",
+    "about_content": "SaveTikFast MP3 permite extrair áudio de qualquer vídeo do TikTok instantaneamente. Baixe músicas virais, sons e narrações em alta qualidade.",
+    "features": {
+      "quality": {
+        "title": "Áudio de Alta Qualidade",
+        "desc": "Extração de áudio na melhor qualidade, até 320kbps."
+      },
+      "fast": {
+        "title": "Conversão Instantânea",
+        "desc": "Converta TikTok para MP3 em segundos. Sem espera."
+      },
+      "trending": {
+        "title": "Sons Virais",
+        "desc": "Baixe os sons e músicas que estão bombando no TikTok."
+      },
+      "device": {
+        "title": "Funciona em Tudo",
+        "desc": "Baixe MP3 no iPhone, Android, PC ou qualquer dispositivo."
+      },
+      "ringtone": {
+        "title": "Para Toque de Celular",
+        "desc": "Use os MP3 baixados como toque, alarme ou notificação."
+      },
+      "unlimited": {
+        "title": "Ilimitado e Grátis",
+        "desc": "Sem limites. Converta quantos vídeos quiser."
+      }
+    },
+    "how_to": {
+      "title": "Como converter TikTok para MP3",
+      "step1": "Encontre o vídeo no TikTok. Toque em Compartilhar → Copiar Link.",
+      "step2": "Cole o link na caixa acima nesta página.",
+      "step3": "Clique em 'Extrair MP3' e baixe seu áudio."
+    },
+    "faq": {
+      "q1": "Como baixo MP3 do TikTok?",
+      "a1": "Copie o link do vídeo, cole no SaveTikFast e clique em Extrair MP3.",
+      "q2": "Qual é a qualidade do áudio?",
+      "a2": "Extraímos o áudio na qualidade máxima original, geralmente até 320kbps.",
+      "q3": "Posso baixar músicas de tendências?",
+      "a3": "Sim! Você pode baixar qualquer som, música ou áudio viral do TikTok.",
+      "q4": "É seguro usar?",
+      "a4": "Sim, 100% seguro. Não pedimos login e não armazenamos seus arquivos.",
+      "q5": "Posso usar como toque?",
+      "a5": "Sim, os arquivos MP3 são perfeitos para toques de celular.",
+      "q6": "Funciona no iPhone?",
+      "a6": "Sim, funciona em iOS, Android, Windows e Mac.",
+      "q7": "Tem limite de download?",
+      "a7": "Não, é totalmente ilimitado e gratuito.",
+      "q8": "Por que o arquivo está mudo?",
+      "a8": "Verifique se o vídeo original tem som.",
+      "q9": "É legal?",
+      "a9": "Para uso pessoal apenas.",
+      "q10": "Diferença para o baixador de vídeo?",
+      "a10": "O conversor MP3 salva apenas o áudio, sem o vídeo."
+    }
+  },
+  "story_page": {
+    "meta_title": "Baixar Stories do TikTok - Salvar Anonimamente",
+    "title": "Baixar Stories TikTok",
+    "desc": "Salve Stories e Slideshows do TikTok antes que expirem.",
+    "placeholder": "Cole o link do Story aqui...",
+    "btn_download": "Salvar Story",
+    "about_title": "Baixador de Stories 2026",
+    "about_content": "O SaveTikFast Story Downloader permite salvar stories e carrosséis de fotos antes que desapareçam após 24 horas.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anônimo",
+        "desc": "Baixe stories sem que o criador saiba."
+      },
+      "slides": {
+        "title": "Slideshow Completo",
+        "desc": "Baixe todas as fotos do carrossel de uma vez."
+      },
+      "expire": {
+        "title": "Antes de Expirar",
+        "desc": "Salve conteúdo efêmero para sempre no seu dispositivo."
+      },
+      "quality": {
+        "title": "Qualidade Original",
+        "desc": "Baixe na resolução original HD sem compressão."
+      },
+      "device": {
+        "title": "Todos os Dispositivos",
+        "desc": "Compatível com celular, tablet e PC."
+      },
+      "favorites": {
+        "title": "Salve Favoritos",
+        "desc": "Guarde inspirações e memórias dos seus criadores favoritos."
+      }
+    },
+    "how_to": {
+      "title": "Como baixar Stories e Slideshows",
+      "step1": "Abra o TikTok, encontre o Story/Slideshow, toque Compartilhar → Copiar Link.",
+      "step2": "Cole o link na caixa acima.",
+      "step3": "Clique em 'Salvar Story' e baixe tudo."
+    },
+    "faq": {
+      "q1": "Como baixar um Story?",
+      "a1": "Cole o link do Story e clique em baixar.",
+      "q2": "O usuário vai saber?",
+      "a2": "Não, o download é totalmente anônimo.",
+      "q3": "Baixa fotos de carrossel?",
+      "a3": "Sim, baixamos todas as fotos do slideshow automaticamente.",
+      "q4": "Stories expiram?",
+      "a4": "Sim, após 24 horas. Baixe rápido!",
+      "q5": "Qual a qualidade?",
+      "a5": "Qualidade original (HD).",
+      "q6": "Funciona no Android?",
+      "a6": "Sim, Android e iOS.",
+      "q7": "Contas privadas?",
+      "a7": "Não, apenas contas públicas.",
+      "q8": "É grátis?",
+      "a8": "Sim, 100% grátis.",
+      "q9": "Por que falhou?",
+      "a9": "O story pode ter expirado ou a conta é privada.",
+      "q10": "Diferença Story vs Slideshow?",
+      "a10": "Stories somem, Slideshows (carrosséis) são permanentes. Baixamos ambos."
+    }
   }
 }

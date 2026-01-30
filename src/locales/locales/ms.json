@@ -334,6 +334,133 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Tayangan Slaid"
+  },
+  "mp3_page": {
+    "meta_title": "Penukar MP3 TikTok - Muat Turun Audio (Kualiti Tinggi)",
+    "title": "Muat Turun MP3 TikTok",
+    "subtitle": "(Audio Sahaja)",
+    "desc": "Tukar video TikTok kepada fail audio MP3.kstrak lagu dan muzik dalam kualiti tinggi 320kbps.",
+    "placeholder": "Tampal pautan TikTok untuk ekstrak MP3...",
+    "btn_download": "Ekstrak MP3",
+    "about_title": "Penukar MP3 TikTok Terbaik 2026",
+    "about_content": "SaveTikFast MP3 membolehkan anda mengekstrak audio daripada mana-mana video TikTok serta-merta. Muat turun lagu trending dan bunyi viral.",
+    "features": {
+      "quality": {
+        "title": "Audio Kualiti Tinggi",
+        "desc": "Pengekstrakan audio terbaik sehingga 320kbps."
+      },
+      "fast": {
+        "title": "Penukaran Pantas",
+        "desc": "TikTok ke MP3 dalam beberapa saat."
+      },
+      "trending": {
+        "title": "Bunyi Trending",
+        "desc": "Muat turun muzik yang sedang popular di TikTok."
+      },
+      "device": {
+        "title": "Berfungsi Di Mana Saja",
+        "desc": "Pada iPhone, Android, PC dan Mac."
+      },
+      "ringtone": {
+        "title": "Untuk Nada Dering",
+        "desc": "Gunakan MP3 sebagai nada dering atau penggera."
+      },
+      "unlimited": {
+        "title": "Percuma & Tanpa Had",
+        "desc": "Tiada had muat turun."
+      }
+    },
+    "how_to": {
+      "title": "Cara menukar TikTok kepada MP3",
+      "step1": "Cari video. Tekan Kongsi → Salin Pautan.",
+      "step2": "Tampal pautan di kotak di atas.",
+      "step3": "Klik 'Ekstrak MP3' untuk memuat turun."
+    },
+    "faq": {
+      "q1": "Macam mana nak download MP3 TikTok?",
+      "a1": "Salin pautan, tampal di SaveTikFast dan klik Ekstrak MP3.",
+      "q2": "Bagaimana kualiti audio?",
+      "a2": "Kami mengekstrak kualiti asal terbaik, sehingga 320kbps.",
+      "q3": "Boleh download lagu viral?",
+      "a3": "Ya, anda boleh muat turun apa saja bunyi atau muzik.",
+      "q4": "Adakah selamat?",
+      "a4": "Ya, 100% selamat dan tanpa nama.",
+      "q5": "Boleh buat ringtone?",
+      "a5": "Ya, fail MP3 sesuai untuk nada dering.",
+      "q6": "Berfungsi di iPhone?",
+      "a6": "Ya, di iOS dan Android.",
+      "q7": "Ada had tak?",
+      "a7": "Tiada, percuma tanpa had.",
+      "q8": "Kenapa tiada bunyi?",
+      "a8": "Semak jika video asal ada bunyi.",
+      "q9": "Adakah sah?",
+      "a9": "Hanya untuk kegunaan peribadi.",
+      "q10": "Apa beza dengan video downloader?",
+      "a10": "Penukar MP3 hanya simpan audio, bukan video."
+    }
+  },
+  "story_page": {
+    "meta_title": "Muat Turun Story TikTok - Simpan Tanpa Nama",
+    "title": "Muat Turun Story TikTok",
+    "desc": "Simpan Story dan Tayangan Slaid TikTok sebelum tamat tempoh.",
+    "placeholder": "Tampal pautan Story...",
+    "btn_download": "Simpan Story",
+    "about_title": "Pemuat Turun Story 2026",
+    "about_content": "SaveTikFast Story Downloader membolehkan anda menyimpan story dan karusel gambar sebelum hilang selepas 24 jam.",
+    "features": {
+      "anonymous": {
+        "title": "100% Tanpa Nama",
+        "desc": "Muat turun tanpa pengetahuan pembuatnya."
+      },
+      "slides": {
+        "title": "Tayangan Slaid Penuh",
+        "desc": "Muat turun semua gambar serentak."
+      },
+      "expire": {
+        "title": "Sebelum Tamat Tempoh",
+        "desc": "Simpan kandungan sementara selamanya."
+      },
+      "quality": {
+        "title": "Kualiti Asli",
+        "desc": "Resolusi tinggi tanpa mampatan."
+      },
+      "device": {
+        "title": "Semua Peranti",
+        "desc": "Serasi dengan mudah alih dan PC."
+      },
+      "favorites": {
+        "title": "Kegemaran Anda",
+        "desc": "Simpan story terbaik."
+      }
+    },
+    "how_to": {
+      "title": "Cara memuat turun Story TikTok",
+      "step1": "Buka Story, Kongsi → Salin Pautan.",
+      "step2": "Tampal pautan di atas.",
+      "step3": "Klik 'Simpan Story'."
+    },
+    "faq": {
+      "q1": "Macam mana nak download story?",
+      "a1": "Tampal pautan dan muat turun.",
+      "q2": "Adakah tanpa nama?",
+      "a2": "Ya, pembuat tak akan tahu.",
+      "q3": "Boleh download slideshow?",
+      "a3": "Ya, kami muat turun semua gambar karusel.",
+      "q4": "Bila story tamat tempoh?",
+      "a4": "Selepas 24 jam.",
+      "q5": "Kualiti apa?",
+      "a5": "Kualiti HD asal.",
+      "q6": "Boleh guna iPhone?",
+      "a6": "Boleh, melalui pelayar web.",
+      "q7": "Akaun peribadi?",
+      "a7": "Tak boleh, hanya akaun awam.",
+      "q8": "Adakah percuma?",
+      "a8": "Ya, percuma sepenuhnya.",
+      "q9": "Kenapa gagal?",
+      "a9": "Story mungkin dah tamat tempoh atau akaun peribadi.",
+      "q10": "Beza Story vs Slideshow?",
+      "a10": "Story sementara (24j), Slideshow kekal."
+    }
   }
 }

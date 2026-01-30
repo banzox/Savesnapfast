@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Slayt Gösterisi"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Dönüştürücü - Ses İndir (Yüksek Kalite)",
+    "title": "TikTok MP3 İndir",
+    "subtitle": "(Sadece Ses)",
+    "desc": "TikTok videolarını MP3 ses dosyalarına dönüştürün. Şarkıları ve müzikleri yüksek kalitede (320kbps) çıkarın.",
+    "placeholder": "MP3 çıkarmak için TikTok linkini yapıştır...",
+    "btn_download": "MP3 Çıkar",
+    "about_title": "En İyi TikTok MP3 Dönüştürücü 2026",
+    "about_content": "SaveTikFast MP3, herhangi bir TikTok videosundan sesi anında çıkarmanızı sağlar. Trend şarkıları ve viral sesleri indirin.",
+    "features": {
+      "quality": {
+        "title": "Yüksek Kalite Ses",
+        "desc": "320kbps'ye kadar en iyi ses kalitesi."
+      },
+      "fast": {
+        "title": "Anında Dönüştürme",
+        "desc": "TikTok'tan MP3'e saniyeler içinde çevirin."
+      },
+      "trending": {
+        "title": "Viral Sesler",
+        "desc": "TikTok'taki popüler müzikleri indirin."
+      },
+      "device": {
+        "title": "Her Yerde Çalışır",
+        "desc": "iPhone, Android, PC ve Mac'te çalışır."
+      },
+      "ringtone": {
+        "title": "Zil Sesi İçin",
+        "desc": "MP3'leri zil sesi veya alarm yapın."
+      },
+      "unlimited": {
+        "title": "Sınırsız ve Ücretsiz",
+        "desc": "İndirme sınırı yok."
+      }
+    },
+    "how_to": {
+      "title": "TikTok MP3'e nasıl dönüştürülür",
+      "step1": "Videoyu bulun. Paylaş → Bağlantıyı Kopyala.",
+      "step2": "Linki yukarıdaki kutuya yapıştırın.",
+      "step3": "İndirmek için 'MP3 Çıkar'a tıklayın."
+    },
+    "faq": {
+      "q1": "TikTok MP3 nasıl indirilir?",
+      "a1": "Linki kopyalayın, SaveTikFast'e yapıştırın ve MP3 Çıkar'a tıklayın.",
+      "q2": "Ses kalitesi nasıl?",
+      "a2": "Mümkün olan en yüksek orijinal kaliteyi (320kbps'ye kadar) sunuyoruz.",
+      "q3": "Trend sesleri indirebilir miyim?",
+      "a3": "Evet, her türlü sesi ve müziği indirebilirsiniz.",
+      "q4": "Güvenli mi?",
+      "a4": "Evet, %100 güvenli ve anonim. Dosyaları saklamıyoruz.",
+      "q5": "Zil sesi yapabilir miyim?",
+      "a5": "Evet, MP3 dosyaları zil sesi için uygundur.",
+      "q6": "iPhone'da çalışır mı?",
+      "a6": "Evet, iOS ve Android'de sorunsuz çalışır.",
+      "q7": "Limit var mı?",
+      "a7": "Hayır, tamamen sınırsız ve ücretsiz.",
+      "q8": "Neden ses yok?",
+      "a8": "Orijinal videonun sesli olduğundan emin olun.",
+      "q9": "Yasal mı?",
+      "a9": "Sadece kişisel kullanım içindir.",
+      "q10": "Video indiriciden farkı ne?",
+      "a10": "MP3 dönüştürücü sadece sesi kaydeder, görüntüyü değil."
+    }
+  },
+  "story_page": {
+    "meta_title": "TikTok Hikaye İndirici - Anonim Kaydet",
+    "title": "TikTok Story İndir",
+    "desc": "TikTok Hikayelerini ve Slayt Gösterilerini süresi dolmadan kaydedin.",
+    "placeholder": "Hikaye linkini yapıştır...",
+    "btn_download": "Hikayeyi Kaydet",
+    "about_title": "Hikaye İndirici 2026",
+    "about_content": "SaveTikFast Story Downloader, hikayeleri ve fotoğraf karusellerini 24 saat sonra kaybolmadan önce kaydetmenizi sağlar.",
+    "features": {
+      "anonymous": {
+        "title": "%100 Anonim",
+        "desc": "Yükleyenin haberi olmadan indirin."
+      },
+      "slides": {
+        "title": "Tüm Slaytlar",
+        "desc": "Tüm fotoğrafları tek seferde indirin."
+      },
+      "expire": {
+        "title": "Kaybolmadan Önce",
+        "desc": "Geçici içerikleri sonsuza kadar saklayın."
+      },
+      "quality": {
+        "title": "Orijinal Kalite",
+        "desc": "Sıkıştırma olmadan yüksek çözünürlük."
+      },
+      "device": {
+        "title": "Tüm Cihazlar",
+        "desc": "Mobil ve PC ile uyumlu."
+      },
+      "favorites": {
+        "title": "Favorileriniz",
+        "desc": "En iyi hikayeleri saklayın."
+      }
+    },
+    "how_to": {
+      "title": "TikTok Hikayesi nasıl indirilir",
+      "step1": "Hikayeyi açın, Paylaş → Bağlantıyı Kopyala.",
+      "step2": "Linki yukarıya yapıştırın.",
+      "step3": "'Hikayeyi Kaydet'e tıklayın."
+    },
+    "faq": {
+      "q1": "Bir hikaye nasıl indirilir?",
+      "a1": "Linki yapıştırın ve indirin.",
+      "q2": "Anonim mi?",
+      "a2": "Evet, oluşturucuya bildirim gitmez.",
+      "q3": "Slayt gösterilerini destekliyor mu?",
+      "a3": "Evet, karuseldeki tüm fotoğrafları indiriyoruz.",
+      "q4": "Hikayeler ne zaman silinir?",
+      "a4": "24 saat sonra.",
+      "q5": "Hangi kalitede?",
+      "a5": "Orijinal HD kalite.",
+      "q6": "iPhone ile uyumlu mu?",
+      "a6": "Evet, tarayıcı üzerinden çalışır.",
+      "q7": "Gizli hesaplar?",
+      "a7": "Hayır, sadece herkese açık hesaplar.",
+      "q8": "Ücretsiz mi?",
+      "a8": "Evet, tamamen ücretsiz.",
+      "q9": "Neden çalışmıyor?",
+      "a9": "Hikaye süresi dolmuş veya hesap gizli olabilir.",
+      "q10": "Story ve Slayt farkı?",
+      "a10": "Hikayeler geçicidir (24s), Slaytlar kalıcıdır."
+    }
   }
 }

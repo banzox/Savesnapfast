@@ -334,6 +334,133 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Diasshow"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Konverter - Download Lyd (Høj Kvalitet)",
+    "title": "Download TikTok MP3",
+    "subtitle": "(Kun Lyd)",
+    "desc": "Konverter TikTok-videoer til MP3-lydfiler. Udtræk sange og musik i høj kvalitet 320kbps.",
+    "placeholder": "Indsæt TikTok-link for at hente MP3...",
+    "btn_download": "Hent MP3",
+    "about_title": "Bedste TikTok MP3 Konverter 2026",
+    "about_content": "SaveTikFast MP3 lader dig udtrække lyd fra enhver TikTok-video øjeblikkeligt. Download populære sange og virale lyde.",
+    "features": {
+      "quality": {
+        "title": "Høj Lydkvalitet",
+        "desc": "Bedste lydkvalitet op til 320kbps."
+      },
+      "fast": {
+        "title": "Hurtig Konvertering",
+        "desc": "TikTok til MP3 på få sekunder."
+      },
+      "trending": {
+        "title": "Virale Lyde",
+        "desc": "Download musik, der trender på TikTok."
+      },
+      "device": {
+        "title": "Virker Overalt",
+        "desc": "På iPhone, Android, PC og Mac."
+      },
+      "ringtone": {
+        "title": "Til Ringetone",
+        "desc": "Brug MP3 som ringetone eller alarm."
+      },
+      "unlimited": {
+        "title": "Gratis & Ubegrænset",
+        "desc": "Ingen downloadgrænser."
+      }
+    },
+    "how_to": {
+      "title": "Sådan konverterer du TikTok til MP3",
+      "step1": "Find videoen. Tryk Del → Kopier link.",
+      "step2": "Indsæt linket i boksen ovenfor.",
+      "step3": "Klik 'Hent MP3' for at downloade."
+    },
+    "faq": {
+      "q1": "Hvordan downloader jeg MP3 fra TikTok?",
+      "a1": "Kopier linket, indsæt på SaveTikFast og klik Hent MP3.",
+      "q2": "Hvad er lydkvaliteten?",
+      "a2": "Vi udtrækker den bedst mulige originale kvalitet.",
+      "q3": "Kan jeg downloade populære sange?",
+      "a3": "Ja, du kan downloade enhver lyd eller musik.",
+      "q4": "Er det sikkert?",
+      "a4": "Ja, 100% sikkert og anonymt.",
+      "q5": "Kan jeg bruge det som ringetone?",
+      "a5": "Ja, MP3-filer er perfekte som ringetoner.",
+      "q6": "Virker det på iPhone?",
+      "a6": "Ja, virker på iOS og Android.",
+      "q7": "Er der en grænse?",
+      "a7": "Nej, det er helt ubegrænset.",
+      "q8": "Hvorfor ingen lyd?",
+      "a8": "Tjek om originalvideoen har lyd.",
+      "q9": "Er det lovligt?",
+      "a9": "Kun til personlig brug.",
+      "q10": "Forskel fra video downloader?",
+      "a10": "MP3-konverteren gemmer kun lyden, ikke billedet."
+    }
+  },
+  "story_page": {
+    "meta_title": "Download TikTok Story - Gem Anonymt",
+    "title": "Download TikTok Story",
+    "desc": "Gem TikTok Stories og Diasshows før de udløber.",
+    "placeholder": "Indsæt Story-link...",
+    "btn_download": "Gem Story",
+    "about_title": "Story Downloader 2026",
+    "about_content": "SaveTikFast Story Downloader lader dig gemme stories og fotokarruseller, før de forsvinder efter 24 timer.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonymt",
+        "desc": "Download uden at skaberen ved det."
+      },
+      "slides": {
+        "title": "Hele Diasshowet",
+        "desc": "Download alle billeder på én gang."
+      },
+      "expire": {
+        "title": "Før De Udløber",
+        "desc": "Gem midlertidigt indhold for evigt."
+      },
+      "quality": {
+        "title": "Original Kvalitet",
+        "desc": "Høj opløsning uden komprimering."
+      },
+      "device": {
+        "title": "Alle Enheder",
+        "desc": "Kompatibel med mobil og PC."
+      },
+      "favorites": {
+        "title": "Dine Favoritter",
+        "desc": "Gem de bedste stories."
+      }
+    },
+    "how_to": {
+      "title": "Sådan downloader du en TikTok Story",
+      "step1": "Åbn Story, Del → Kopier link.",
+      "step2": "Indsæt linket ovenfor.",
+      "step3": "Klik 'Gem Story'."
+    },
+    "faq": {
+      "q1": "Hvordan downloader jeg en story?",
+      "a1": "Indsæt linket og download.",
+      "q2": "Er det anonymt?",
+      "a2": "Ja, skaberen får ingen besked.",
+      "q3": "Understøtter I diasshows?",
+      "a3": "Ja, vi downloader alle billeder i karrusellen.",
+      "q4": "Hvornår udløber stories?",
+      "a4": "Efter 24 timer.",
+      "q5": "Hvilken kvalitet?",
+      "a5": "Original HD-kvalitet.",
+      "q6": "Virker det på iPhone?",
+      "a6": "Ja, via browseren.",
+      "q7": "Private konti?",
+      "a7": "Nej, kun offentlige.",
+      "q8": "Er det gratis?",
+      "a8": "Ja, helt gratis.",
+      "q9": "Hvorfor mislykkedes det?",
+      "a9": "Storyen kan være udløbet eller kontoen er privat.",
+      "q10": "Forskel Story vs Diasshow?",
+      "a10": "Stories er midlertidige (24t), Diasshows er permanente."
+    }
   }
 }

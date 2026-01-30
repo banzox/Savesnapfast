@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Diaporama"
+  },
+  "mp3_page": {
+    "meta_title": "Convertisseur MP3 TikTok - Télécharger Audio (Haute Qualité)",
+    "title": "Télécharger MP3 TikTok",
+    "subtitle": "(Audio Uniquement)",
+    "desc": "Convertissez des vidéos TikTok en fichiers audio MP3. Extrayez des chansons et musiques en haute qualité 320kbps.",
+    "placeholder": "Collez le lien TikTok pour extraire le MP3...",
+    "btn_download": "Extraire MP3",
+    "about_title": "Meilleur Convertisseur MP3 TikTok 2026",
+    "about_content": "SaveTikFast MP3 vous permet d'extraire l'audio de n'importe quelle vidéo TikTok instantanément. Téléchargez les sons tendances et musiques de fond.",
+    "features": {
+      "quality": {
+        "title": "Audio Haute Qualité",
+        "desc": "Extraction audio optimale jusqu'à 320kbps."
+      },
+      "fast": {
+        "title": "Conversion Instantanée",
+        "desc": "Convertissez TikTok en MP3 en quelques secondes."
+      },
+      "trending": {
+        "title": "Sons Tendances",
+        "desc": "Téléchargez les musiques virales de TikTok."
+      },
+      "device": {
+        "title": "Compatible Partout",
+        "desc": "Fonctionne sur iPhone, Android, PC et Mac."
+      },
+      "ringtone": {
+        "title": "Pour Sonnerie",
+        "desc": "Utilisez les MP3 comme sonnerie ou alarme."
+      },
+      "unlimited": {
+        "title": "Illimité & Gratuit",
+        "desc": "Aucune limite de téléchargement."
+      }
+    },
+    "how_to": {
+      "title": "Comment convertir TikTok en MP3",
+      "step1": "Trouvez la vidéo TikTok. Appuyez sur Partager → Copier le lien.",
+      "step2": "Collez le lien dans la case ci-dessus.",
+      "step3": "Cliquez sur 'Extraire MP3' pour télécharger."
+    },
+    "faq": {
+      "q1": "Comment convertir une vidéo TikTok en MP3 ?",
+      "a1": "Copiez le lien de la vidéo, collez-le sur SaveTikFast, et cliquez sur Extraire MP3.",
+      "q2": "Quelle est la qualité audio ?",
+      "a2": "Nous extrayons la meilleure qualité possible, souvent jusqu'à 320kbps.",
+      "q3": "Puis-je télécharger des sons tendances ?",
+      "a3": "Oui, vous pouvez télécharger n'importe quel son ou musique de TikTok.",
+      "q4": "Est-ce sécurisé ?",
+      "a4": "Oui, 100% sécurisé et anonyme. Nous ne stockons pas vos fichiers.",
+      "q5": "Puis-je l'utiliser comme sonnerie ?",
+      "a5": "Oui, les fichiers MP3 sont compatibles pour être utilisés comme sonneries.",
+      "q6": "Cela fonctionne-t-il sur iPhone ?",
+      "a6": "Oui, cela fonctionne parfaitement sur iOS et Android.",
+      "q7": "Y a-t-il une limite ?",
+      "a7": "Non, c'est illimité et gratuit.",
+      "q8": "Pourquoi pas de son ?",
+      "a8": "Vérifiez que la vidéo originale n'est pas muette.",
+      "q9": "Est-ce légal ?",
+      "a9": "Pour un usage personnel uniquement.",
+      "q10": "Différence avec le téléchargeur vidéo ?",
+      "a10": "Le convertisseur MP3 ne garde que le son, pas l'image."
+    }
+  },
+  "story_page": {
+    "meta_title": "Télécharger Story TikTok - Sauvegarder Anonymement",
+    "title": "Télécharger Story TikTok",
+    "desc": "Sauvegardez les Stories et Diaporamas TikTok avant qu'ils n'expirent.",
+    "placeholder": "Collez le lien de la Story...",
+    "btn_download": "Sauvegarder Story",
+    "about_title": "Sauvegarde de Story TikTok 2026",
+    "about_content": "SaveTikFast Story Downloader vous permet de garder les stories et carrousels avant leur disparition après 24h.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonyme",
+        "desc": "Téléchargez sans être vu."
+      },
+      "slides": {
+        "title": "Tout le Diaporama",
+        "desc": "Téléchargez toutes les photos d'un coup."
+      },
+      "expire": {
+        "title": "Avant Expiration",
+        "desc": "Sauvegardez le contenu éphémère pour toujours."
+      },
+      "quality": {
+        "title": "Qualité Originale",
+        "desc": "Haute résolution sans perte."
+      },
+      "device": {
+        "title": "Tous Appareils",
+        "desc": "Compatible mobile et desktop."
+      },
+      "favorites": {
+        "title": "Vos Favoris",
+        "desc": "Gardez les meilleures stories."
+      }
+    },
+    "how_to": {
+      "title": "Comment télécharger une Story TikTok",
+      "step1": "Ouvrez la Story, Partager → Copier le lien.",
+      "step2": "Collez le lien ci-dessus.",
+      "step3": "Cliquez sur 'Sauvegarder Story'."
+    },
+    "faq": {
+      "q1": "Comment télécharger une Story ?",
+      "a1": "Collez le lien de la story et cliquez sur télécharger.",
+      "q2": "Est-ce anonyme ?",
+      "a2": "Oui, le créateur ne saura jamais que vous l'avez téléchargée.",
+      "q3": "Supportez-vous les diaporamas ?",
+      "a3": "Oui, nous téléchargeons toutes les images du carrousel.",
+      "q4": "Quand les stories expirent-elles ?",
+      "a4": "Après 24 heures.",
+      "q5": "Quelle qualité ?",
+      "a5": "Qualité originale HD.",
+      "q6": "Compatible iPhone ?",
+      "a6": "Oui, fonctionne sur tous les navigateurs.",
+      "q7": "Comptes privés ?",
+      "a7": "Non, seulement les comptes publics.",
+      "q8": "Est-ce gratuit ?",
+      "a8": "Oui, totalement gratuit.",
+      "q9": "Pourquoi ça ne marche pas ?",
+      "a9": "Vérifiez si la story a expiré ou si le compte est privé.",
+      "q10": "Différence Story vs Diaporama ?",
+      "a10": "Les stories sont temporaires (24h), les diaporamas sont permanents."
+    }
   }
 }

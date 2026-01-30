@@ -334,6 +334,133 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow"
+    "slideshow": "Diavetítés"
+  },
+  "mp3_page": {
+    "meta_title": "TikTok MP3 Konvertáló - Hang Letöltése (Kiváló Minőség)",
+    "title": "TikTok MP3 Letöltése",
+    "subtitle": "(Csak Hang)",
+    "desc": "Konvertáljon TikTok videókat MP3 hangfájlokká. Nyerjen ki dalokat és zenét kiváló minőségben, 320kbps.",
+    "placeholder": "Illessze be a TikTok linket az MP3 kinyeréséhez...",
+    "btn_download": "MP3 Kinyerése",
+    "about_title": "Legjobb TikTok MP3 Konvertáló 2026",
+    "about_content": "A SaveTikFast MP3 lehetővé teszi a hang azonnali kinyerését bármely TikTok videóból. Töltsön le felkapott dalokat és virális hangokat.",
+    "features": {
+      "quality": {
+        "title": "Kiváló Minőségű Hang",
+        "desc": "A legjobb hangminőség, akár 320kbps."
+      },
+      "fast": {
+        "title": "Gyors Konvertálás",
+        "desc": "TikTok-ból MP3 másodpercek alatt."
+      },
+      "trending": {
+        "title": "Felkapott Hangok",
+        "desc": "Töltsön le zenét, ami most népszerű a TikTok-on."
+      },
+      "device": {
+        "title": "Működik Mindenhol",
+        "desc": "iPhone-on, Androidon, PC-n és Mac-en."
+      },
+      "ringtone": {
+        "title": "Csengőhangnak",
+        "desc": "Használja az MP3-at csengőhangként vagy ébresztőként."
+      },
+      "unlimited": {
+        "title": "Ingyenes és Korlátlan",
+        "desc": "Nincs letöltési korlát."
+      }
+    },
+    "how_to": {
+      "title": "Hogyan konvertáljunk TikTok-ot MP3-ba",
+      "step1": "Keresse meg a videót. Koppintson a Megosztás → Link másolása gombra.",
+      "step2": "Illessze be a linket a fenti mezőbe.",
+      "step3": "Kattintson az 'MP3 Kinyerése' gombra a letöltéshez."
+    },
+    "faq": {
+      "q1": "Hogyan tölthetek le MP3-at TikTok-ról?",
+      "a1": "Másolja ki a linket, illessze be a SaveTikFast-re, és kattintson az MP3 Kinyerése gombra.",
+      "q2": "Milyen a hangminőség?",
+      "a2": "A lehető legjobb eredeti minőséget nyerjük ki.",
+      "q3": "Letölthetek népszerű dalokat?",
+      "a3": "Igen, bármilyen hangot vagy zenét letölthet.",
+      "q4": "Biztonságos ez?",
+      "a4": "Igen, 100%-ban biztonságos és névtelen.",
+      "q5": "Használhatom csengőhangként?",
+      "a5": "Igen, az MP3 fájlok tökéletesek csengőhangnak.",
+      "q6": "Működik iPhone-on?",
+      "a6": "Igen, működik iOS-en és Androidon.",
+      "q7": "Van valami korlát?",
+      "a7": "Nincs, teljesen korlátlan.",
+      "q8": "Miért nincs hang?",
+      "a8": "Ellenőrizze, hogy az eredeti videónak van-e hangja.",
+      "q9": "Legális ez?",
+      "a9": "Csak személyes használatra.",
+      "q10": "Mi a különbség a videó letöltőhöz képest?",
+      "a10": "Az MP3 konvertáló csak a hangot menti, a képet nem."
+    }
+  },
+  "story_page": {
+    "meta_title": "TikTok Story Letöltése - Névtelenül Menteni",
+    "title": "TikTok Story Letöltése",
+    "desc": "Mentse el a TikTok Story-kat és Diavetítéseket, mielőtt lejárnak.",
+    "placeholder": "Illessze be a Story linkjét...",
+    "btn_download": "Story Mentése",
+    "about_title": "Story Letöltő 2026",
+    "about_content": "A SaveTikFast Story Downloader lehetővé teszi sztorik és fotó körhinták mentését, mielőtt azok 24 óra után eltűnnének.",
+    "features": {
+      "anonymous": {
+        "title": "100% Névtelen",
+        "desc": "Töltsön le anélkül, hogy a szerző tudna róla."
+      },
+      "slides": {
+        "title": "Teljes Diavetítés",
+        "desc": "Töltse le az összes képet egyszerre."
+      },
+      "expire": {
+        "title": "Mielőtt Lejár",
+        "desc": "Őrizze meg az átmeneti tartalmat örökre."
+      },
+      "quality": {
+        "title": "Eredeti Minőség",
+        "desc": "Nagy felbontás tömörítés nélkül."
+      },
+      "device": {
+        "title": "Minden Eszköz",
+        "desc": "Kompatibilis mobillal és PC-vel."
+      },
+      "favorites": {
+        "title": "Kedvencei",
+        "desc": "Mentse el a legjobb sztorikat."
+      }
+    },
+    "how_to": {
+      "title": "Hogyan töltsünk le TikTok Story-t",
+      "step1": "Nyissa meg a Story-t, Megosztás → Link másolása.",
+      "step2": "Illessze be a linket fent.",
+      "step3": "Kattintson a 'Story Mentése' gombra."
+    },
+    "faq": {
+      "q1": "Hogyan tölthetek le sztorit?",
+      "a1": "Illessze be a linket és töltse le.",
+      "q2": "Ez névtelen?",
+      "a2": "Igen, a készítő nem fogja tudni.",
+      "q3": "Támogatják a diavetítéseket?",
+      "a3": "Igen, letöltjük az összes képet a körhintából.",
+      "q4": "Mikor járnak le a sztorik?",
+      "a4": "24 óra után.",
+      "q5": "Milyen minőség?",
+      "a5": "Eredeti HD minőség.",
+      "q6": "Működik iPhone-on?",
+      "a6": "Igen, böngészőn keresztül.",
+      "q7": "Privát fiókok?",
+      "a7": "Nem, csak nyilvánosak.",
+      "q8": "Ingyenes?",
+      "a8": "Igen, teljesen ingyenes.",
+      "q9": "Miért nem sikerül?",
+      "a9": "A sztori lehet, hogy lejárt vagy a fiók privát.",
+      "q10": "Story vs Diavetítés különbség?",
+      "a10": "A sztorik átmenetiek (24ó), a diavetítések állandóak."
+    }
   }
 }

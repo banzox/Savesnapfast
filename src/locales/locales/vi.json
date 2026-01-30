@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Trình chiếu"
+  },
+  "mp3_page": {
+    "meta_title": "Chuyển đổi TikTok sang MP3 - Tải Âm thanh (Chất lượng cao)",
+    "title": "Tải MP3 TikTok",
+    "subtitle": "(Chỉ âm thanh)",
+    "desc": "Chuyển đổi video TikTok sang tệp âm thanh MP3. Trích xuất bài hát và nhạc chất lượng cao 320kbps.",
+    "placeholder": "Dán liên kết TikTok để lấy MP3...",
+    "btn_download": "Lấy MP3",
+    "about_title": "Bộ chuyển đổi TikTok MP3 tốt nhất 2026",
+    "about_content": "SaveTikFast MP3 cho phép bạn trích xuất âm thanh từ bất kỳ video TikTok nào ngay lập tức. Tải xuống các bài hát thịnh hành và nhạc nền.",
+    "features": {
+      "quality": {
+        "title": "Âm thanh Chất lượng cao",
+        "desc": "Trích xuất âm thanh tốt nhất lên đến 320kbps."
+      },
+      "fast": {
+        "title": "Chuyển đổi tức thì",
+        "desc": "Chuyển TikTok sang MP3 trong vài giây."
+      },
+      "trending": {
+        "title": "Âm thanh thịnh hành",
+        "desc": "Tải nhạc đang hot trên TikTok."
+      },
+      "device": {
+        "title": "Hoạt động mọi nơi",
+        "desc": "Trên iPhone, Android, PC và Mac."
+      },
+      "ringtone": {
+        "title": "Làm nhạc chuông",
+        "desc": "Sử dụng MP3 làm nhạc chuông hoặc báo thức."
+      },
+      "unlimited": {
+        "title": "Miễn phí & Không giới hạn",
+        "desc": "Không giới hạn số lần tải."
+      }
+    },
+    "how_to": {
+      "title": "Cách chuyển TikTok sang MP3",
+      "step1": "Tìm video. Nhấn Chia sẻ → Sao chép liên kết.",
+      "step2": "Dán liên kết vào ô bên trên.",
+      "step3": "Nhấn 'Lấy MP3' để tải xuống."
+    },
+    "faq": {
+      "q1": "Cách tải MP3 từ TikTok?",
+      "a1": "Sao chép liên kết, dán vào SaveTikFast và nhấn Lấy MP3.",
+      "q2": "Chất lượng âm thanh thế nào?",
+      "a2": "Chúng tôi trích xuất chất lượng gốc tốt nhất.",
+      "q3": "Có thể tải nhạc hot không?",
+      "a3": "Có, bạn có thể tải mọi âm thanh.",
+      "q4": "Có an toàn không?",
+      "a4": "Có, 100% an toàn và ẩn danh.",
+      "q5": "Làm nhạc chuông được không?",
+      "a5": "Được, file MP3 phù hợp để làm nhạc chuông.",
+      "q6": "Dùng trên iPhone được không?",
+      "a6": "Được, hỗ trợ iOS và Android.",
+      "q7": "Có giới hạn không?",
+      "a7": "Không, hoàn toàn miễn phí.",
+      "q8": "Tại sao không có tiếng?",
+      "a8": "Kiểm tra xem video gốc có tiếng không.",
+      "q9": "Có hợp pháp không?",
+      "a9": "Chỉ dành cho sử dụng cá nhân.",
+      "q10": "Khác gì với tải video?",
+      "a10": "Chuyển đổi MP3 chỉ lưu âm thanh, không lưu hình."
+    }
+  },
+  "story_page": {
+    "meta_title": "Tải Story TikTok - Lưu Ẩn danh",
+    "title": "Tải Story TikTok",
+    "desc": "Lưu Story và Trình chiếu TikTok trước khi chúng hết hạn.",
+    "placeholder": "Dán liên kết Story...",
+    "btn_download": "Lưu Story",
+    "about_title": "Trình tải Story 2026",
+    "about_content": "SaveTikFast Story Downloader giúp bạn lưu story và album ảnh trước khi biến mất sau 24 giờ.",
+    "features": {
+      "anonymous": {
+        "title": "100% Ẩn danh",
+        "desc": "Tải xuống mà người đăng không biết."
+      },
+      "slides": {
+        "title": "Toàn bộ Album",
+        "desc": "Tải tất cả ảnh cùng lúc."
+      },
+      "expire": {
+        "title": "Trước khi hết hạn",
+        "desc": "Lưu nội dung tạm thời mãi mãi."
+      },
+      "quality": {
+        "title": "Chất lượng gốc",
+        "desc": "Độ phân giải cao không nén."
+      },
+      "device": {
+        "title": "Mọi thiết bị",
+        "desc": "Tương thích điện thoại và máy tính."
+      },
+      "favorites": {
+        "title": "Lưu yêu thích",
+        "desc": "Giữ lại những story hay nhất."
+      }
+    },
+    "how_to": {
+      "title": "Cách tải Story TikTok",
+      "step1": "Mở Story, Chia sẻ → Sao chép liên kết.",
+      "step2": "Dán liên kết lên trên.",
+      "step3": "Nhấn 'Lưu Story'."
+    },
+    "faq": {
+      "q1": "Cách tải story?",
+      "a1": "Dán liên kết và tải xuống.",
+      "q2": "Có ẩn danh không?",
+      "a2": "Có, người tạo sẽ không biết.",
+      "q3": "Hỗ trợ trình chiếu ảnh không?",
+      "a3": "Có, tải được tất cả ảnh trong album.",
+      "q4": "Khi nào story hết hạn?",
+      "a4": "Sau 24 giờ.",
+      "q5": "Chất lượng ra sao?",
+      "a5": "Chất lượng HD gốc.",
+      "q6": "Dùng trên iPhone?",
+      "a6": "Được, qua trình duyệt web.",
+      "q7": "Tài khoản riêng tư?",
+      "a7": "Không, chỉ tài khoản công khai.",
+      "q8": "Có miễn phí không?",
+      "a8": "Có, hoàn toàn miễn phí.",
+      "q9": "Tại sao lỗi?",
+      "a9": "Story có thể đã hết hạn hoặc tài khoản riêng tư.",
+      "q10": "Khác nhau Story và Trình chiếu?",
+      "a10": "Story tự hủy (24h), Trình chiếu vĩnh viễn."
+    }
   }
 }

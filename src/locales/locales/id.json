@@ -335,5 +335,132 @@
   },
   "nav_menu": {
     "slideshow": "Slideshow"
+  },
+  "mp3_page": {
+    "meta_title": "Konverter MP3 TikTok - Download Audio (Kualitas Tinggi)",
+    "title": "Download TikTok MP3",
+    "subtitle": "(Hanya Audio)",
+    "desc": "Ubah video TikTok menjadi file audio MP3. Ekstrak lagu dan musik dalam kualitas tinggi 320kbps.",
+    "placeholder": "Tempel tautan TikTok untuk ekstrak MP3...",
+    "btn_download": "Ekstrak MP3",
+    "about_title": "Konverter MP3 TikTok Terbaik 2026",
+    "about_content": "SaveTikFast MP3 memungkinkan Anda mengekstrak audio dari video TikTok apa pun secara instan. Unduh lagu yang sedang tren, suara viral, dan musik latar.",
+    "features": {
+      "quality": {
+        "title": "Audio Kualitas Tinggi",
+        "desc": "Ekstraksi audio terbaik hingga 320kbps."
+      },
+      "fast": {
+        "title": "Konversi Instan",
+        "desc": "Ubah TikTok ke MP3 dalam hitungan detik."
+      },
+      "trending": {
+        "title": "Suara Viral",
+        "desc": "Unduh musik yang sedang tren di TikTok."
+      },
+      "device": {
+        "title": "Bisa Dimana Saja",
+        "desc": "Berfungsi di iPhone, Android, PC, dan Mac."
+      },
+      "ringtone": {
+        "title": "Untuk Nada Dering",
+        "desc": "Gunakan MP3 sebagai nada dering atau alarm."
+      },
+      "unlimited": {
+        "title": "Gratis & Tanpa Batas",
+        "desc": "Tidak ada batas unduhan."
+      }
+    },
+    "how_to": {
+      "title": "Cara mengubah TikTok ke MP3",
+      "step1": "Temukan video TikTok. Ketuk Bagikan → Salin Tautan.",
+      "step2": "Tempel tautan di kotak di atas.",
+      "step3": "Klik 'Ekstrak MP3' untuk mengunduh."
+    },
+    "faq": {
+      "q1": "Cara download MP3 dari TikTok?",
+      "a1": "Salin tautan, tempel di SaveTikFast, dan klik Ekstrak MP3.",
+      "q2": "Bagaimana kualitas audionya?",
+      "a2": "Kami mengekstrak kualitas asli terbaik, hingga 320kbps.",
+      "q3": "Bisa download suara viral?",
+      "a3": "Ya, Anda bisa mengunduh suara atau musik apa pun.",
+      "q4": "Apakah aman?",
+      "a4": "Ya, 100% aman dan anonim. Kami tidak menyimpan file.",
+      "q5": "Bisa untuk nada dering?",
+      "a5": "Ya, file MP3 cocok untuk nada dering.",
+      "q6": "Bisa di HP?",
+      "a6": "Ya, berfungsi di iOS dan Android.",
+      "q7": "Ada batasnya?",
+      "a7": "Tidak, gratis tanpa batas.",
+      "q8": "Kenapa tidak ada suara?",
+      "a8": "Cek apakah video asli memiliki suara.",
+      "q9": "Apakah legal?",
+      "a9": "Hanya untuk penggunaan pribadi.",
+      "q10": "Apa bedanya dengan video downloader?",
+      "a10": "Konverter MP3 hanya menyimpan file audio."
+    }
+  },
+  "story_page": {
+    "meta_title": "Download Story TikTok - Simpan Anonim",
+    "title": "Download Story TikTok",
+    "desc": "Simpan Story dan Slideshow TikTok sebelum kedaluwarsa.",
+    "placeholder": "Tempel tautan Story...",
+    "btn_download": "Simpan Story",
+    "about_title": "Story Downloader 2026",
+    "about_content": "SaveTikFast Story Downloader memungkinkan Anda menyimpan story dan carousel foto sebelum hilang setelah 24 jam.",
+    "features": {
+      "anonymous": {
+        "title": "100% Anonim",
+        "desc": "Unduh tanpa diketahui pembuatnya."
+      },
+      "slides": {
+        "title": "Slideshow Lengkap",
+        "desc": "Unduh semua foto sekaligus."
+      },
+      "expire": {
+        "title": "Sebelum Hilang",
+        "desc": "Simpan konten sementara selamanya."
+      },
+      "quality": {
+        "title": "Kualitas Asli",
+        "desc": "Resolusi tinggi tanpa kompresi."
+      },
+      "device": {
+        "title": "Semua Perangkat",
+        "desc": "Kompatibel dengan HP dan PC."
+      },
+      "favorites": {
+        "title": "Favorit Anda",
+        "desc": "Simpan story terbaik."
+      }
+    },
+    "how_to": {
+      "title": "Cara download Story TikTok",
+      "step1": "Buka Story, Bagikan → Salin Tautan.",
+      "step2": "Tempel tautan di atas.",
+      "step3": "Klik 'Simpan Story'."
+    },
+    "faq": {
+      "q1": "Cara download story?",
+      "a1": "Tempel tautan dan unduh.",
+      "q2": "Apakah anonim?",
+      "a2": "Ya, pembuat tidak akan tahu.",
+      "q3": "Bisa untuk slideshow?",
+      "a3": "Ya, kami mengunduh semua foto carousel.",
+      "q4": "Kapan story hilang?",
+      "a4": "Setelah 24 jam.",
+      "q5": "Kualitas apa?",
+      "a5": "Kualitas asli HD.",
+      "q6": "Bisa di iPhone?",
+      "a6": "Ya, berfungsi di browser.",
+      "q7": "Akun privat?",
+      "a7": "Tidak, hanya akun publik.",
+      "q8": "Gratis kah?",
+      "a8": "Ya, sepenuhnya gratis.",
+      "q9": "Kenapa gagal?",
+      "a9": "Mungkin story sudah kedaluwarsa atau akun privat.",
+      "q10": "Bedanya Story vs Slideshow?",
+      "a10": "Story sementara (24 jam), Slideshow permanen."
+    }
   }
 }
