@@ -1,9 +1,13 @@
 ---
+export const prerender = true;
 import TextPage from "../components/TextPage.astro";
+import { getLangFromUrl } from "../utils/i18n";
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <TextPage
     titleKey="pages.about.title"
     contentKey="pages.about.content"
-    lang="en"
+    lang={lang}
 />

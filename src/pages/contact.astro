@@ -1,11 +1,15 @@
 ---
+export const prerender = true;
 import TextPage from "../components/TextPage.astro";
+import { getLangFromUrl } from "../utils/i18n";
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <TextPage
     titleKey="pages.contact.title"
     contentKey="pages.contact.content"
-    lang="en"
+    lang={lang}
 >
     contact@savetik-fast.xyz
 </TextPage>
