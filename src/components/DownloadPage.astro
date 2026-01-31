@@ -114,8 +114,17 @@ if (pagePrefix.includes("story")) aboutIcon = "fas fa-photo-film";
 if (pagePrefix.includes("slideshow")) aboutIcon = "fas fa-layer-group";
 
 // --- Meta Data ---
-const metaTitle = t(getKey("meta_title")) || t("meta.title");
-const metaDesc = t(getKey("meta_desc")) || t("meta.description");
+// Smart fallback: Check if translated value is different from the key (means translation exists)
+const pageMetaTitleKey = getKey("meta_title");
+const pageMetaDescKey = getKey("meta_desc");
+const pageMetaTitle = t(pageMetaTitleKey);
+const pageMetaDesc = t(pageMetaDescKey);
+
+// Only use page-specific meta if translation exists (value !== key)
+const metaTitle =
+    pageMetaTitle !== pageMetaTitleKey ? pageMetaTitle : t("meta.title");
+const metaDesc =
+    pageMetaDesc !== pageMetaDescKey ? pageMetaDesc : t("meta.description");
 
 // --- Hero ---
 let heroTitleDesc = "";
