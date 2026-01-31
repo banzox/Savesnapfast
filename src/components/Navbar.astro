@@ -131,19 +131,26 @@ const currentPath = Astro.url.pathname;
 
             const btn = document.getElementById("theme-btn");
             if (btn) {
-                const newBtn = btn.cloneNode(true);
-                btn.parentNode.replaceChild(newBtn, btn);
+                // Remove any existing listeners by using a named function or replacing the element
+                // But replacing element is slow. Better check if we already initialized.
+                if (btn.dataset.initialized) return;
 
-                newBtn.addEventListener("click", () => {
+                btn.addEventListener("click", () => {
                     const current = getTheme();
                     const next = current === "dark" ? "light" : "dark";
                     applyTheme(next);
                 });
+                btn.dataset.initialized = "true";
             }
         }
 
         initTheme();
-        document.addEventListener("astro:after-swap", initTheme);
+        document.addEventListener("astro:after-swap", () => {
+            initTheme();
+        });
+        document.addEventListener("astro:page-load", () => {
+            initTheme();
+        });
     })();
 </script>
 
@@ -195,7 +202,7 @@ const currentPath = Astro.url.pathname;
     }
 
     :global([data-theme="light"]) .logo {
-        color: #1f2937;
+        color: #2563eb; /* Blue for SaveTik */
     }
 
     .logo-icon-wrapper {
@@ -209,7 +216,13 @@ const currentPath = Astro.url.pathname;
         font-size: 1.4rem;
         color: white;
         box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    :global([data-theme="light"]) .logo-icon-wrapper {
+        background: #2563eb; /* Blue Box */
+        color: #000000; /* Black Icon */
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
     }
 
     .logo:hover .logo-icon-wrapper {
@@ -224,6 +237,12 @@ const currentPath = Astro.url.pathname;
         background: linear-gradient(to right, #00f2ea, #ff0050);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    :global([data-theme="light"]) .highlight {
+        background: none;
+        -webkit-text-fill-color: #dc2626; /* Red for Fast */
+        color: #dc2626;
     }
 
     /* Theme Toggle - Enhanced */

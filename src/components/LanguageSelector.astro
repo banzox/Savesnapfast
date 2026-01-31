@@ -127,7 +127,10 @@ function getPathForLanguage(targetLang: string) {
         const overlay = document.getElementById("lang-overlay");
         const closeBtn = document.getElementById("close-lang-btn");
 
-        // --- CLIENT SIDE FIX FOR LINKS (Preserved from original) ---
+        if (!btn || !container || !overlay || !closeBtn || !dropdown) return;
+        if (btn.dataset.initialized) return;
+
+        // --- CLIENT SIDE FIX FOR LINKS (Preserved) ---
         const currentPath = window.location.pathname;
         const isMp3 = currentPath.includes("/mp3");
         const isStory = currentPath.includes("/story");
@@ -150,9 +153,7 @@ function getPathForLanguage(targetLang: string) {
         }
         // ----------------------------------
 
-        if (!btn || !container || !overlay || !closeBtn || !dropdown) return;
-
-        const toggleMenu = (show?: boolean) => {
+        const toggleMenu = (show) => {
             const isShow =
                 show === true ||
                 (show === undefined && !container.classList.contains("show"));
@@ -160,61 +161,48 @@ function getPathForLanguage(targetLang: string) {
             btn.setAttribute("aria-expanded", isShow ? "true" : "false");
             btn.classList.toggle("active", isShow);
             container.classList.toggle("show", isShow);
-
-            if (isShow) {
-                // document.body.style.overflow = "hidden"; // Removed to prevent freezing
-            } else {
-                // document.body.style.overflow = "";
-            }
         };
 
         const closeMenu = () => toggleMenu(false);
 
-        // Toggle click
         btn.addEventListener("click", (e) => {
             e.stopPropagation();
             toggleMenu();
         });
 
-        // Close button click
         closeBtn.addEventListener("click", (e) => {
             e.stopPropagation();
             closeMenu();
         });
 
-        // Overlay click
         overlay.addEventListener("click", closeMenu);
-
-        // Container backdrop click (Mobile fallback)
         container.addEventListener("click", (e) => {
             if (e.target === container) closeMenu();
         });
 
-        // Escape key
         document.addEventListener("keydown", (e) => {
             if (e.key === "Escape" && container.classList.contains("show")) {
                 closeMenu();
             }
         });
 
-        // Handle click outside (for desktop mainly)
         document.addEventListener("click", (e) => {
             if (
                 container.classList.contains("show") &&
-                !dropdown.contains(e.target as Node) &&
-                !btn.contains(e.target as Node)
+                !dropdown.contains(e.target) &&
+                !btn.contains(e.target)
             ) {
                 closeMenu();
             }
         });
 
-        // Handle view transitions
-        document.addEventListener("astro:after-swap", initLanguageSelector);
+        btn.dataset.initialized = "true";
     }
 
     // Run on load
     initLanguageSelector();
     document.addEventListener("astro:page-load", initLanguageSelector);
+    document.addEventListener("astro:after-swap", initLanguageSelector);
 </script>
 
 <style>

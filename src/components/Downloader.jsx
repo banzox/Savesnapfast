@@ -18,6 +18,7 @@ export default function Downloader(props) {
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
     const [zipping, setZipping] = useState(false);
+    const [downloadingUrl, setDownloadingUrl] = useState(null); // New: Tracks individual file downloads
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
 
@@ -38,28 +39,56 @@ export default function Downloader(props) {
             const text = await navigator.clipboard.readText();
             if (text) setUrl(text);
         } catch (err) {
-            console.error('Failed to read clipboard', err);
+            // Fallback for browsers that block clipboard API or don't support it
+            const input = document.getElementById('url-input');
+            if (input) {
+                input.focus();
+                // try to use document.execCommand('paste') though deprecated
+                try { document.execCommand('paste'); } catch (e) { }
+            }
         }
     };
 
+    const handleCopyInput = () => {
+        if (!url) return;
+        navigator.clipboard.writeText(url);
+    };
+
     const downloadFile = async (fileUrl, fileName) => {
+        if (!fileUrl) return;
+
+        // Show ad in background if applicable
         if (SMART_LINK) window.open(SMART_LINK, '_blank');
+
+        setDownloadingUrl(fileUrl);
         try {
             const response = await fetch(fileUrl);
+            if (!response.ok) throw new Error("Network issues. Opening in new tab...");
+
             const blob = await response.blob();
             const blobUrl = window.URL.createObjectURL(blob);
+
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = blobUrl;
             a.download = fileName;
             document.body.appendChild(a);
             a.click();
+
             setTimeout(() => {
                 window.URL.revokeObjectURL(blobUrl);
                 document.body.removeChild(a);
             }, 1000);
         } catch (err) {
-            window.open(fileUrl, '_blank');
+            console.warn("Direct download failed, falling back to new tab", err);
+            // Fallback: Open directly if blob creation fails (CORS or other)
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.target = '_blank';
+            link.download = fileName;
+            link.click();
+        } finally {
+            setDownloadingUrl(null);
         }
     };
 
@@ -202,14 +231,24 @@ export default function Downloader(props) {
 
                     <div className="input-controls">
                         {url && (
-                            <button
-                                type="button"
-                                className="action-btn clear-btn"
-                                onClick={() => setUrl('')}
-                                title={t('btn_clear', "Clear")}
-                            >
-                                <i className="fas fa-times"></i>
-                            </button>
+                            <>
+                                <button
+                                    type="button"
+                                    className="action-btn copy-btn"
+                                    onClick={handleCopyInput}
+                                    title={t('btn_copy', "Copy")}
+                                >
+                                    <i className="fas fa-copy"></i>
+                                </button>
+                                <button
+                                    type="button"
+                                    className="action-btn clear-btn"
+                                    onClick={() => setUrl('')}
+                                    title={t('btn_clear', "Clear")}
+                                >
+                                    <i className="fas fa-times"></i>
+                                </button>
+                            </>
                         )}
 
                         <button
@@ -265,18 +304,21 @@ export default function Downloader(props) {
                             <div className="result-buttons">
                                 {(!mode || mode === 'video') && videoUrl && !images && (
                                     <>
-                                        <button className="btn-download btn-video" onClick={() => downloadFile(videoUrl, generateProName(result.author, 'mp4'))}>
-                                            <i className="fas fa-check-circle"></i> {t('download_nwm', "Download No Watermark")}
+                                        <button className="btn-download btn-video" onClick={() => downloadFile(videoUrl, generateProName(result.author, 'mp4'))} disabled={downloadingUrl === videoUrl}>
+                                            {downloadingUrl === videoUrl ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-check-circle"></i>}
+                                            {t('download_nwm', "Download No Watermark")}
                                         </button>
-                                        <button className="btn-download btn-hd" onClick={() => downloadFile(videoUrl, generateProName(result.author + '_HD', 'mp4'))}>
-                                            <i className="fas fa-crown"></i> {t('download_hd', "Download HD 1080p")}
+                                        <button className="btn-download btn-hd" onClick={() => downloadFile(videoUrl, generateProName(result.author + '_HD', 'mp4'))} disabled={downloadingUrl === videoUrl}>
+                                            {downloadingUrl === videoUrl ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-crown"></i>}
+                                            {t('download_hd', "Download HD 1080p")}
                                         </button>
                                     </>
                                 )}
 
                                 {mode === 'mp3' && musicUrl && (
-                                    <button className="btn-download btn-audio" onClick={() => downloadFile(musicUrl, generateProName(result.author, 'mp3'))}>
-                                        <i className="fas fa-music"></i> {t('download_audio', "Download MP3 Audio")}
+                                    <button className="btn-download btn-audio" onClick={() => downloadFile(musicUrl, generateProName(result.author, 'mp3'))} disabled={downloadingUrl === musicUrl}>
+                                        {downloadingUrl === musicUrl ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-music"></i>}
+                                        {t('download_audio', "Download MP3 Audio")}
                                     </button>
                                 )}
 
