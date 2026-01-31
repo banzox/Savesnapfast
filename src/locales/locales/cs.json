@@ -18,7 +18,7 @@
     "desc": "Stahujte videa z TikToku bez vodoznaku. Rychle, zdarma a v neomezené HD kvalitě."
   },
   "downloader": {
-    "placeholder": "Vložte odkaz na TikTok zde...",
+    "placeholder": "Vložte odkaz na video zde...",
     "btn_download": "Stáhnout nyní",
     "processing": "Zpracovávání...",
     "download_video": "Stáhnout video",

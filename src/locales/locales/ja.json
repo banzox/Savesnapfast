@@ -18,7 +18,7 @@
     "desc": "透かしなしでTikTok動画を保存。高速、無料、無制限のHD画質。"
   },
   "downloader": {
-    "placeholder": "ここにTikTokリンクを貼り付け...",
+    "placeholder": "ここにビデオリンクを貼り付け...",
     "btn_download": "今すぐダウンロード",
     "processing": "処理中...",
     "download_video": "ビデオをダウンロード",

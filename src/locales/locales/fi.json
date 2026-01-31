@@ -18,7 +18,7 @@
     "desc": "Lataa TikTok-videoita ilman vesileimaa. Nopea, ilmainen ja rajoittamaton HD-laatu."
   },
   "downloader": {
-    "placeholder": "Liitä TikTok-linkki tähän...",
+    "placeholder": "Liitä videolinkki tähän...",
     "btn_download": "Lataa nyt",
     "processing": "Käsitellään...",
     "download_video": "Lataa video",

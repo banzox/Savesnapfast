@@ -18,7 +18,7 @@
     "desc": "Pobieraj filmy TikTok bez znaku wodnego. Szybko, za darmo i w nieograniczonej jakości HD."
   },
   "downloader": {
-    "placeholder": "Wklej link z TikToka tutaj...",
+    "placeholder": "Wklej link do wideo tutaj...",
     "btn_download": "Pobierz teraz",
     "processing": "Przetwarzanie...",
     "download_video": "Pobierz wideo",

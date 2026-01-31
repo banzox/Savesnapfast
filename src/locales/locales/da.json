@@ -18,7 +18,7 @@
     "desc": "Download TikTok-videoer uden vandmærke. Hurtigt, gratis og ubegrænset HD-kvalitet."
   },
   "downloader": {
-    "placeholder": "Indsæt TikTok-link her...",
+    "placeholder": "Indsæt video-link her...",
     "btn_download": "Download nu",
     "processing": "Behandler...",
     "download_video": "Download video",

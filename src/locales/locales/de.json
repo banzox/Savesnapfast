@@ -18,7 +18,7 @@
     "desc": "TikTok Videos ohne Wasserzeichen herunterladen. Schnell, kostenlos und unbegrenzte HD-Qualität."
   },
   "downloader": {
-    "placeholder": "TikTok-Link hier einfügen...",
+    "placeholder": "Video-Link hier einfügen...",
     "btn_download": "Herunterladen",
     "processing": "Wird bearbeitet...",
     "download_video": "Video herunterladen",

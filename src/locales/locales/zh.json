@@ -18,7 +18,7 @@
     "desc": "下載無浮水印的 TikTok 影片。快速、免費且無限量 HD 畫質。"
   },
   "downloader": {
-    "placeholder": "在此处粘贴 TikTok 链接...",
+    "placeholder": "在此处粘贴视频链接...",
     "btn_download": "立即下载",
     "processing": "正在处理...",
     "download_video": "下载视频",

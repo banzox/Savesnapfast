@@ -18,7 +18,7 @@
     "desc": "Descargar videos de TikTok sin marca de agua. Rápido, Gratis y Calidad HD Ilimitada."
   },
   "downloader": {
-    "placeholder": "Pegue el enlace de TikTok aquí...",
+    "placeholder": "Pegue el enlace del video aquí...",
     "btn_download": "Descargar",
     "processing": "Procesando...",
     "download_video": "Descargar Video",

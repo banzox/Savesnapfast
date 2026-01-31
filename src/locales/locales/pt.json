@@ -18,7 +18,7 @@
     "desc": "Baixar vídeos do TikTok sem marca d'água. Rápido, Grátis e Qualidade HD Ilimitada."
   },
   "downloader": {
-    "placeholder": "Cole o link do TikTok aqui...",
+    "placeholder": "Cole o link do vídeo aqui...",
     "btn_download": "Baixar agora",
     "processing": "Processando...",
     "download_video": "Baixar Vídeo",

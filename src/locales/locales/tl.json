@@ -18,7 +18,7 @@
     "desc": "Download TikTok videos without watermark. Fast, Free, and Unlimited HD Quality."
   },
   "downloader": {
-    "placeholder": "Paste TikTok link here...",
+    "placeholder": "Paste video link here...",
     "btn_download": "Download Now",
     "processing": "Processing...",
     "download_video": "Download Video",

@@ -18,7 +18,7 @@
     "desc": "Téléchargez des vidéos TikTok sans filigrane. Rapide, Gratuit et Qualité HD illimitée."
   },
   "downloader": {
-    "placeholder": "Coller le lien TikTok ici...",
+    "placeholder": "Coller le lien de la vidéo ici...",
     "btn_download": "Télécharger",
     "processing": "Traitement...",
     "download_video": "Télécharger Vidéo",

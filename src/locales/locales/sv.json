@@ -18,7 +18,7 @@
     "desc": "Ladda ner TikTok-videor utan vattenstämpel. Snabbt, gratis och obegränsad HD-kvalitet."
   },
   "downloader": {
-    "placeholder": "Klistra in TikTok-länk här...",
+    "placeholder": "Klistra in videolänk här...",
     "btn_download": "Ladda ner nu",
     "processing": "Bearbetar...",
     "download_video": "Ladda ner video",

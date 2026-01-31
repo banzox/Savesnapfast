@@ -18,7 +18,7 @@
     "desc": "Download TikTok video's zonder watermerk. Snel, Gratis en Onbeperkt HD Kwaliteit."
   },
   "downloader": {
-    "placeholder": "Plak hier de TikTok-link...",
+    "placeholder": "Plak hier de videolink...",
     "btn_download": "Nu downloaden",
     "processing": "Verwerken...",
     "download_video": "Video downloaden",

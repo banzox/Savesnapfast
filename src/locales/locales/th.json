@@ -18,7 +18,7 @@
     "desc": "โหลดวิดีโอ TikTok ไม่มีลายน้ำ รวดเร็ว ฟรี และคุณภาพ HD ไม่จำกัด"
   },
   "downloader": {
-    "placeholder": "วางลิงก์ TikTok ที่นี่...",
+    "placeholder": "วางลิงก์วิดีโอที่นี่...",
     "btn_download": "ดาวน์โหลดทันที",
     "processing": "กำลังประมวลผล...",
     "download_video": "ดาวน์โหลดวิดีโอ",
