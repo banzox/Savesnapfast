@@ -202,7 +202,7 @@ const currentPath = Astro.url.pathname;
         width: 42px;
         height: 42px;
         background: linear-gradient(135deg, #00f2ea 0%, #ff0050 100%);
-        border-radius: 12px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -230,7 +230,7 @@ const currentPath = Astro.url.pathname;
     .theme-toggle {
         width: 48px;
         height: 48px;
-        border-radius: 50%;
+        border-radius: 8px;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: #e0e0e0;
@@ -306,16 +306,11 @@ const currentPath = Astro.url.pathname;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 12px; /* Close the gaps */
+        gap: 8px;
         flex-wrap: wrap;
-        background: rgba(
-            255,
-            255,
-            255,
-            0.03
-        ); /* Subtle container background for unity */
+        background: rgba(255, 255, 255, 0.03);
         padding: 8px;
-        border-radius: 60px;
+        border-radius: 8px;
         border: 1px solid rgba(255, 255, 255, 0.05);
         width: fit-content;
         margin: 0 auto;
@@ -336,7 +331,7 @@ const currentPath = Astro.url.pathname;
         font-weight: 600;
         font-size: 0.95rem;
         padding: 10px 24px;
-        border-radius: 50px;
+        border-radius: 6px;
         transition: all 0.3s ease;
         border: 1px solid transparent; /* No border by default */
         box-shadow: none;
@@ -351,9 +346,13 @@ const currentPath = Astro.url.pathname;
 
     /* Active State - Keep gradient but remove border artifact if any */
     .nav-item.active {
-        background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
+        background: linear-gradient(
+            135deg,
+            var(--primary) 0%,
+            var(--secondary) 100%
+        );
         color: #fff !important;
-        box-shadow: 0 4px 15px rgba(255, 0, 80, 0.4);
+        box-shadow: 0 4px 15px var(--primary-glow);
         border: none;
     }
 

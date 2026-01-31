@@ -58,7 +58,7 @@ export default function ContactForm({ lang, messages }) {
                     margin: 2rem auto;
                     background: var(--surface);
                     padding: 2rem;
-                    border-radius: 1rem;
+                    border-radius: 8px;
                     border: 1px solid var(--border);
                     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
                 }
@@ -131,7 +131,7 @@ export default function ContactForm({ lang, messages }) {
                 .loader {
                     border: 2px solid #f3f3f3;
                     border-top: 2px solid white;
-                    border-radius: 50%;
+                    border-radius: 4px;
                     width: 1.2rem;
                     height: 1.2rem;
                     animation: spin 1s linear infinite;

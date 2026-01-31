@@ -30,8 +30,8 @@
     --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.7);
     --shadow-glow: 0 0 40px rgba(255, 0, 80, 0.2);
 
-    --radius-main: 24px;
-    --radius-main: 24px;
+    --radius-main: 8px;
+    --radius-inner: 6px;
     --transition: 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 
     /* --- Header Background (Glassmorphism) --- */
@@ -44,33 +44,38 @@
 /* --- Light Mode Overrides (Soft & Professional) --- */
 /* --- Light Mode Overrides (Soft & Professional) --- */
 [data-theme='light'] {
-    /* --- Premium Clean Light Theme (Apple Style) --- */
-    --bg-main: #f5f7fa;
-    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    /* --- Facebook Blue Aesthetic (Premium & Professional) --- */
+    --primary: #1877f2;
+    --primary-glow: rgba(24, 119, 242, 0.3);
+    --secondary: #2188ff;
+    --secondary-glow: rgba(33, 136, 255, 0.3);
+    --accent: #4267b2;
+    /* Facebook Dark Blue */
 
-    --text-main: #1a202c;
-    /* Deep Charcoal (High Contrast) */
-    --text-dim: #4a5568;
-    /* Slate Gray */
+    --bg-main: #f0f2f5;
+    /* Facebook Matte Grey/White */
+    --bg-gradient: linear-gradient(135deg, #f0f2f5 0%, #e4e6eb 100%);
+
+    --text-main: #050505;
+    /* Facebook Deep Black */
+    --text-dim: #65676b;
+    /* Facebook Dimmed Text */
     --text-invert: #ffffff;
 
-    /* Cards: Solid White for Crispnest */
     --glass: #ffffff;
     --glass-bright: #ffffff;
 
-    --border: rgba(0, 0, 0, 0.08);
+    --border: rgba(0, 0, 0, 0.1);
     --border-bright: rgba(0, 0, 0, 0.15);
 
     --bg-dropdown: #ffffff;
 
-    /* Soft, diffused shadows */
-    --shadow-premium: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
-    --shadow-glow: 0 0 20px rgba(0, 0, 0, 0.05);
+    --shadow-premium: 0 12px 28px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 4px 12px rgba(24, 119, 242, 0.15);
 
-    --bg-header: rgba(255, 255, 255, 0.9);
-    /* High opacity glass */
-    --header-blur: 30px;
-    --header-border: rgba(0, 0, 0, 0.05);
+    --bg-header: rgba(255, 255, 255, 0.95);
+    --header-blur: 20px;
+    --header-border: rgba(0, 0, 0, 0.1);
 }
 
 /* --- Universal Resets --- */
@@ -121,11 +126,12 @@ body {
 }
 
 [data-theme='light'] .logo-text {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    background: linear-gradient(135deg, #1877f2 0%, #4267b2 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 900;
+    font-weight: 950;
+    /* Slightly thicker for premium look */
     text-transform: uppercase;
 }
 
@@ -156,8 +162,7 @@ body {
     align-items: center;
     gap: 10px;
     padding: 12px 25px;
-    border-radius: 50px;
-    /* Fully rounded */
+    border-radius: var(--radius-main);
     text-decoration: none;
     font-weight: 700;
     font-size: 15px;
@@ -172,9 +177,9 @@ body {
 
 :global([data-theme="light"]) .nav-menu a {
     background: #ffffff;
-    color: var(--text-main);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    color: #050505;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav-menu a i {
@@ -190,23 +195,20 @@ body {
 }
 
 :global([data-theme="light"]) .nav-menu a:hover {
-    background: #f0f0f0;
-    color: var(--primary);
-    border-color: var(--border-bright);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    background: #e4e6eb;
+    color: #1877f2;
+    border-color: #1877f2;
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.1);
 }
 
 /* Active state - Modern Gradient & Glow */
 /* Active state - Modern Gradient & Glow */
 .nav-menu a.active {
-    background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
-    /* Stronger Gradient */
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 5px 20px rgba(255, 0, 80, 0.6);
-    /* Stronger Glow */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px var(--primary-glow);
     font-weight: 800;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav-menu a.active:hover {
@@ -445,7 +447,7 @@ body::after {
     display: flex;
     align-items: center;
     background: var(--glass-bright);
-    border-radius: 50px;
+    border-radius: var(--radius-main);
     padding: 6px 8px 6px 24px;
     border: 1px solid var(--border);
     transition: var(--transition);
@@ -462,9 +464,9 @@ body::after {
 }
 
 :global([data-theme="light"]) .input-wrapper:focus-within {
-    background: #fff;
-    border-color: var(--primary);
-    box-shadow: 0 0 25px rgba(255, 0, 80, 0.2);
+    background: #ffffff;
+    border-color: #1877f2;
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.2);
 }
 
 #url-input {
@@ -496,7 +498,7 @@ body::after {
 .action-btn {
     width: 42px;
     height: 42px;
-    border-radius: 50%;
+    border-radius: 8px;
     border: none;
     background: rgba(255, 255, 255, 0.15);
     color: var(--text-main);
@@ -555,22 +557,20 @@ a:active,
 
 /* Premium Download Button with Glow */
 #download-btn {
-    background: linear-gradient(135deg, var(--primary) 0%, #ff2d70 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: white;
     border: none;
     padding: 18px 50px;
-    border-radius: 50px;
+    border-radius: var(--radius-main);
     font-weight: 800;
     font-size: 1.2rem;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: var(--transition);
-    box-shadow: 0 10px 40px rgba(255, 0, 80, 0.4);
+    box-shadow: 0 10px 40px var(--primary-glow);
     z-index: 1;
     margin: 25px auto 0;
-    /* Center the button */
-    /* Added spacing */
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
@@ -610,7 +610,7 @@ a:active,
     justify-content: center;
     gap: 12px;
     padding: 18px 30px;
-    border-radius: 18px;
+    border-radius: var(--radius-inner);
     font-weight: 800;
     font-size: 1.05rem;
     cursor: pointer;
@@ -631,9 +631,9 @@ a:active,
 }
 
 .btn-video {
-    background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: #ffffff;
-    box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+    box-shadow: 0 4px 15px var(--primary-glow);
     border: none;
 }
 
@@ -667,7 +667,7 @@ a:active,
 .faq-item {
     background: var(--glass);
     border: 1px solid var(--border);
-    border-radius: 24px;
+    border-radius: var(--radius-main);
     margin-bottom: 20px;
     overflow: hidden;
     transition: var(--transition);
@@ -751,7 +751,7 @@ a:active,
     background: var(--glass);
     border: 1px solid var(--border);
     padding: 30px;
-    border-radius: 20px;
+    border-radius: var(--radius-main);
     text-align: center;
     transition: var(--transition);
 }
@@ -930,7 +930,7 @@ footer {
     justify-content: center;
     padding: 30px;
     background: var(--glass);
-    border-radius: 20px;
+    border-radius: var(--radius-main);
     border: 1px solid var(--border);
     margin: 20px 0;
     animation: fadeIn 0.5s ease;
@@ -950,7 +950,7 @@ footer {
     justify-content: center;
     margin-bottom: 20px;
     background: rgba(255, 230, 0, 0.1);
-    border-radius: 50%;
+    border-radius: 12px;
     box-shadow: 0 0 30px rgba(255, 200, 0, 0.3);
 }
 
