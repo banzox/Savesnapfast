@@ -23,11 +23,11 @@ import ro from '../locales/locales/ro.json';
 import ru from '../locales/locales/ru.json';
 import sv from '../locales/locales/sv.json';
 import th from '../locales/locales/th.json';
-import tl from '../locales/locales/tl.json';
 import tr from '../locales/locales/tr.json';
 import uk from '../locales/locales/uk.json';
 import vi from '../locales/locales/vi.json';
 import zh from '../locales/locales/zh.json';
+import fil from '../locales/locales/fil.json';
 
 export const languages = {
   "en": "English",
@@ -65,6 +65,5 @@ export const languages = {
 export const defaultLang = 'en';
 
 export const ui = {
-  ar, bg, cs, da, de, el, en, es, fi, fr, hi, hu, id, it, ja, ko, ms, nl, no, pl, pt, ro, ru, sv, th, tr, uk, vi, zh,
-  fil: tl // Mapping Filipino to Tagalog
+  ar, bg, cs, da, de, el, en, es, fi, fr, hi, hu, id, it, ja, ko, ms, nl, no, pl, pt, ro, ru, sv, th, tr, uk, vi, zh, fil
 };

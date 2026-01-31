@@ -1,7 +1,15 @@
 {
+  "404": {
+    "title": "Page Not Found",
+    "home_btn": "Go to Homepage"
+  },
   "meta": {
     "title": "SaveTikFast 2026 - Best TikTok Downloader No Watermark (Fast & 4K)",
     "description": "Download TikTok videos without watermark for free in Ultra HD/4K quality. The fastest TikTok Saver 2026. Save to MP4 & MP3 on iPhone, Android, and PC."
+  },
+  "common": {
+    "select_language": "Select Language",
+    "toggle_theme": "Toggle Dark/Light Mode"
   },
   "nav": {
     "home": "Home",

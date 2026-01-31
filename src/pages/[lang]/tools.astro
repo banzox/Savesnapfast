@@ -1,0 +1,64 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import Downloader from "../../components/Downloader.jsx";
+import { languages, defaultLang } from "../../i18n/ui";
+import { useTranslations, getTranslations } from "../../utils/i18n";
+import AdBanner from "../../components/AdBanner.astro";
+
+export async function getStaticPaths() {
+    return Object.keys(languages)
+        .filter((l) => l !== defaultLang)
+        .map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+const translations = getTranslations(lang);
+
+const tools = [
+    { icon: "fas fa-compress-arrows-alt", key: "compressor" },
+    { icon: "fas fa-exchange-alt", key: "converter" },
+    { icon: "fas fa-qrcode", key: "qrcode" },
+];
+---
+
+<Layout
+    title={t("tools.meta.title")}
+    description={t("tools.meta.description")}
+    lang={lang}
+>
+    <article class="hero-section">
+        <h1>
+            <i class="fas fa-tools accent-icon"></i>
+            {t("tools.hero.title")}
+        </h1>
+        <p>{t("tools.hero.desc")}</p>
+
+        <Downloader
+            client:load
+            messages={translations.downloader}
+            placeholder={t("downloader.placeholder")}
+        />
+    </article>
+
+    <AdBanner />
+
+    <div class="container features-grid">
+        {
+            tools.map((tool) => (
+                <div class="feature-card">
+                    <i class={tool.icon} />
+                    <h3>{t(`tools.tabs.${tool.key}`)}</h3>
+                    <p>{t(`tools.${tool.key}.desc`)}</p>
+                </div>
+            ))
+        }
+    </div>
+</Layout>
+
+<style>
+    .accent-icon {
+        color: var(--secondary);
+    }
+</style>

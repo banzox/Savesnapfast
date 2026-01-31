@@ -1,0 +1,15 @@
+---
+export const prerender = true;
+import DownloadPage from "../../components/DownloadPage.astro";
+import { languages, defaultLang } from "../../i18n/ui";
+
+export async function getStaticPaths() {
+    return Object.keys(languages)
+        .filter((l) => l !== defaultLang)
+        .map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+---
+
+<DownloadPage lang={lang} pagePrefix="story_page" mode="story" showAd={true} />

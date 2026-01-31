@@ -1,4 +1,12 @@
 {
+  "common": {
+    "select_language": "Pilih Bahasa",
+    "toggle_theme": "Alihkan mode gelap/terang"
+  },
+  "404": {
+    "title": "Halaman tidak ditemukan",
+    "home_btn": "Kembali ke Beranda"
+  },
   "meta": {
     "title": "SaveTikFast 2026 - Download Video TikTok Tanpa Watermark (HD & 4K)",
     "description": "Unduh video TikTok tanpa tanda air (watermark) gratis kualitas HD/4K. Pengunduh TikTok tercepat 2026. Simpan ke MP4 & MP3 di Android, iPhone, dan PC."

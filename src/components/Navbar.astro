@@ -61,8 +61,8 @@ const currentPath = Astro.url.pathname;
             <button
                 class="theme-toggle"
                 id="theme-btn"
-                aria-label="Toggle Dark/Light Mode"
-                title="Toggle Theme"
+                aria-label={t("common.toggle_theme")}
+                title={t("common.toggle_theme")}
             >
                 <div class="theme-icon-container">
                     <i class="fas fa-moon moon-icon"></i>

@@ -2,7 +2,7 @@
 import { defineMiddleware } from "astro:middleware";
 
 // Map of legacy slugs to new slugs
-const redirects = {
+const redirects: Record<string, string> = {
     "about-us": "about",
     "who-are-we": "about",
     "contact-us": "contact",
@@ -17,8 +17,14 @@ export const onRequest = defineMiddleware(async (context, next) => {
     const url = new URL(context.request.url);
     const path = url.pathname;
 
-    // Clean trailing slash for checking
-    const cleanPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
+    // Clean trailing slash and .html for checking
+    let cleanPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
+
+    // REDIRECT .html to clean path
+    if (cleanPath.endsWith(".html")) {
+        const targetPath = cleanPath.slice(0, -5);
+        return context.redirect(targetPath + url.search, 301);
+    }
 
     // Split path parts
     const parts = cleanPath.split("/").filter(Boolean);

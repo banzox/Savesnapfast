@@ -1,0 +1,36 @@
+---
+export const prerender = true;
+import TextPage from "../../components/TextPage.astro";
+import { languages, defaultLang } from "../../i18n/ui";
+
+export async function getStaticPaths() {
+    return Object.keys(languages)
+        .filter((l) => l !== defaultLang)
+        .map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+---
+
+<TextPage
+    titleKey="pages.contact.title"
+    contentKey="pages.contact.content"
+    lang={lang}
+>
+    contact@savetik-fast.xyz
+</TextPage>
+
+<style>
+    .contact-link-wrapper {
+        margin-top: 2rem;
+    }
+    .contact-email {
+        color: var(--primary);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+    .contact-email:hover {
+        text-decoration: underline;
+    }
+</style>

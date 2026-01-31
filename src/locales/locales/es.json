@@ -1,4 +1,12 @@
 {
+  "common": {
+    "select_language": "Seleccionar idioma",
+    "toggle_theme": "Alternar modo claro/oscuro"
+  },
+  "404": {
+    "title": "Página no encontrada",
+    "home_btn": "Ir al inicio"
+  },
   "meta": {
     "title": "SaveTikFast 2026 - Descargar Videos de TikTok Sin Marca de Agua (HD & 4K)",
     "description": "Descarga videos de TikTok sin marca de agua gratis en calidad Ultra HD/4K. El descargador más rápido de 2026. Guarda en MP4 y MP3 en iPhone, Android y PC."

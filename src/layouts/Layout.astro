@@ -13,10 +13,17 @@ interface Props {
 }
 
 const { title, description, lang = "en", keywords } = Astro.props;
-const canonicalURL = new URL(
-    Astro.url.pathname,
-    Astro.site || "https://savetik-fast.xyz",
-);
+const site = Astro.site || "https://savetik-fast.xyz";
+const canonicalURL = new URL(Astro.url.pathname, site);
+
+// Logic to get the path without language prefix for hreflang
+const pathname = Astro.url.pathname;
+const pathParts = pathname.split("/").filter(Boolean);
+const firstPart = pathParts[0];
+const isLangPrefix = Object.keys(languages).includes(firstPart);
+const baseSlug = isLangPrefix
+    ? pathParts.slice(1).join("/")
+    : pathParts.join("/");
 ---
 
 <!doctype html>
@@ -57,18 +64,18 @@ const canonicalURL = new URL(
             href={new URL("/", Astro.site || "https://savetik-fast.xyz").href}
         />
         {
-            Object.keys(languages).map((l) => (
-                <link
-                    rel="alternate"
-                    hreflang={l}
-                    href={
-                        new URL(
-                            l === "en" ? "/" : `/${l}`,
-                            Astro.site || "https://savetik-fast.xyz",
-                        ).href
-                    }
-                />
-            ))
+            Object.keys(languages).map((l) => {
+                const langPath =
+                    l === "en" ? `/${baseSlug}` : `/${l}/${baseSlug}`;
+                const cleanLangPath = langPath.replace(/\/+$/, ""); // Remove trailing slash
+                return (
+                    <link
+                        rel="alternate"
+                        hreflang={l}
+                        href={new URL(cleanLangPath || "/", site).href}
+                    />
+                );
+            })
         }
 
         <Schema lang={lang} />

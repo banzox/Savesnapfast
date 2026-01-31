@@ -1,7 +1,10 @@
 ---
 import { languages, defaultLang } from "../i18n/ui";
 
+import { useTranslations } from "../utils/i18n";
+
 const { lang = "en" } = Astro.props;
+const t = useTranslations(lang);
 // Ensure we use the languages map imported from the source of truth
 const currentLangName =
     languages[lang as keyof typeof languages] || languages["en"];
@@ -69,7 +72,7 @@ function getPathForLanguage(targetLang: string) {
     <button
         id="lang-toggle-btn"
         class="lang-btn"
-        aria-label="Select Language"
+        aria-label={t("common.select_language")}
         aria-expanded="false"
     >
         <span class="lang-icon">
@@ -83,7 +86,8 @@ function getPathForLanguage(targetLang: string) {
         <div class="lang-dropdown">
             <div class="dropdown-header">
                 <span class="header-title">
-                    <i class="fas fa-language"></i> Select Language
+                    <i class="fas fa-language"></i>
+                    {t("common.select_language")}
                 </span>
                 <button
                     id="close-lang-btn"

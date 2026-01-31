@@ -1,4 +1,12 @@
 {
+  "common": {
+    "select_language": "Choisir la langue",
+    "toggle_theme": "Changer le mode sombre/clair"
+  },
+  "404": {
+    "title": "Page non trouvée",
+    "home_btn": "Aller à l'accueil"
+  },
   "meta": {
     "title": "SaveTikFast 2026 - Télécharger vidéo TikTok sans filigrane (HD & 4K)",
     "description": "Téléchargez des vidéos TikTok sans filigrane gratuitement en qualité HD/4K. Le téléchargeur TikTok le plus rapide de 2026. MP4 & MP3 sur iPhone, Android et PC."
