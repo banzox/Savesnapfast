@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Schema from "../components/Schema.astro";
 import Footer from "../components/Footer.astro";
+import NativeAd from "../components/NativeAd.astro";
 import { languages } from "../i18n/ui";
 
 interface Props {
@@ -170,6 +171,7 @@ const baseSlug = isLangPrefix
             <slot />
         </main>
 
+        <NativeAd />
         <Footer lang={lang} />
 
         <!-- PART 3: Bulletproof Toggle Script -->
