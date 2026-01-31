@@ -1,9 +1,8 @@
 ---
-export const prerender = true;
 import TextPage from "../components/TextPage.astro";
-import { getLangFromUrl } from "../utils/i18n";
+import { defaultLang } from "../i18n/ui";
 
-const lang = getLangFromUrl(Astro.url);
+const lang = defaultLang;
 ---
 
 <TextPage

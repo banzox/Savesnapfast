@@ -1,15 +1,12 @@
 ---
-export const prerender = true;
 import DownloadPage from "../../components/DownloadPage.astro";
-import { languages, defaultLang } from "../../i18n/ui";
-
-export async function getStaticPaths() {
-    return Object.keys(languages)
-        .filter((l) => l !== defaultLang)
-        .map((lang) => ({ params: { lang } }));
-}
+import { languages } from "../../i18n/ui";
 
 const { lang } = Astro.params;
+
+if (!lang || !languages[lang as keyof typeof languages]) {
+    return Astro.redirect("/404");
+}
 ---
 
 <DownloadPage lang={lang} pagePrefix="" mode="video" showAd={true} />

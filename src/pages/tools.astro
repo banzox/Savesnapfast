@@ -1,16 +1,11 @@
 ---
-export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
-import { languages, defaultLang } from "../i18n/ui";
-import {
-    useTranslations,
-    getTranslations,
-    getLangFromUrl,
-} from "../utils/i18n";
+import { defaultLang } from "../i18n/ui";
+import { useTranslations, getTranslations } from "../utils/i18n";
 import AdBanner from "../components/AdBanner.astro";
 
-const currentLang = getLangFromUrl(Astro.url);
+const currentLang = defaultLang;
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
 
