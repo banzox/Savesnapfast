@@ -14,6 +14,7 @@
   "nav": {
     "home": "Início",
     "about": "Sobre Nós",
+    "blog": "Blog",
     "contact": "Contato",
     "terms": "Termos de Uso",
     "privacy": "Privacidade",
@@ -525,5 +526,37 @@
       "a10": "Stories somem, Slideshows (carrosséis) são permanentes. Baixamos ambos."
     },
     "meta_desc": "Baixe histórias e apresentações de slides do TikTok anonimamente."
+  },
+  "blog": {
+    "meta_title": "Guia Download TikTok 2026 - Vídeos, MP3, Slideshows & Stories",
+    "meta_desc": "Guia completo para baixar conteúdo do TikTok em 2026. Aprenda a salvar vídeos sem marca d'água, converter para MP3, baixar slideshows e stories.",
+    "keywords": "como baixar vídeos TikTok sem marca d'água 2026, TikTok downloader iPhone iOS 18, salvar vídeos TikTok Android 15, conversor TikTok MP3 online grátis",
+    "title": "Guia Definitivo Download TikTok 2026",
+    "subtitle": "Tudo o que você precisa saber sobre baixar vídeos, MP3, slideshows e stories do TikTok. Atualizado para 2026.",
+    "updated": "Última atualização: Fevereiro",
+    "back_home": "Voltar ao Baixador",
+    "tools_heading": "Escolha Seu Tipo de Download",
+    "try_now": "Experimentar Agora",
+    "card_video_title": "Baixador de Vídeo",
+    "card_video_desc": "Baixe vídeos do TikTok sem marca d'água em qualidade HD/4K. Funciona no iPhone 16, Samsung Galaxy S25 e todos os dispositivos.",
+    "card_mp3_title": "Conversor MP3",
+    "card_mp3_desc": "Extraia áudio de vídeos TikTok em alta qualidade 320kbps. Perfeito para toques.",
+    "card_slideshow_title": "Salvador de Slideshows",
+    "card_slideshow_desc": "Baixe todas as fotos de slideshows e carrosséis do TikTok como arquivo ZIP.",
+    "card_story_title": "Baixador de Stories",
+    "card_story_desc": "Salve stories do TikTok antes de desaparecerem em 24h. Download anônimo.",
+    "section1_title": "Como Baixar Vídeos TikTok em 2026",
+    "section1_content": "<strong>Baixar vídeos do TikTok sem marca d'água</strong> nunca foi tão fácil. Em 2026, SaveTikFast continua sendo a solução mais rápida e confiável.",
+    "section2_title": "Guia de Conversão TikTok para MP3",
+    "section2_content": "Quer <strong>converter TikTok para MP3</strong>? Nosso extrator de áudio obtém o som de qualquer vídeo em <strong>alta qualidade até 320kbps</strong>.",
+    "section3_title": "Baixando Slideshows e Stories do TikTok",
+    "section3_content": "Os <strong>Slideshows do TikTok</strong> são muito populares em 2026. Nosso baixador salva <strong>cada imagem do carrossel</strong> em qualidade original.",
+    "section4_title": "Privacidade e Segurança",
+    "section4_content": "No SaveTikFast, levamos sua <strong>privacidade a sério</strong>. Sem registro necessário, sem armazenamento de vídeos, conexão SSL segura.",
+    "section5_title": "Por que Escolher SaveTikFast?",
+    "section5_content": "SaveTikFast se destaca por: processamento mais rápido, qualidade máxima até 4K, sem marca d'água, todos os tipos de conteúdo, compatível com todos dispositivos, sempre grátis.",
+    "cta_title": "Pronto para Baixar?",
+    "cta_desc": "Comece a baixar vídeos, MP3, slideshows e stories do TikTok agora. 100% grátis, sem registro.",
+    "cta_button": "Começar a Baixar"
   }
 }

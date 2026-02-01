@@ -1,0 +1,428 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { useTranslations } from "../utils/i18n";
+
+interface Props {
+    lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+// Download type cards
+const downloadCards = [
+    {
+        id: "video",
+        icon: "fas fa-video",
+        color: "linear-gradient(135deg, #ff0050 0%, #ff2d78 100%)",
+        href: lang === "en" ? "/" : `/${lang}`,
+    },
+    {
+        id: "mp3",
+        icon: "fas fa-music",
+        color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+        href: lang === "en" ? "/mp3" : `/${lang}/mp3`,
+    },
+    {
+        id: "slideshow",
+        icon: "fas fa-layer-group",
+        color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        href: lang === "en" ? "/slideshow" : `/${lang}/slideshow`,
+    },
+    {
+        id: "story",
+        icon: "fas fa-images",
+        color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+        href: lang === "en" ? "/story" : `/${lang}/story`,
+    },
+];
+
+const homeHref = lang === "en" ? "/" : `/${lang}`;
+---
+
+<Layout
+    title={t("blog.meta_title")}
+    description={t("blog.meta_desc")}
+    lang={lang}
+    keywords={t("blog.keywords")}
+>
+    <div class="blog-container">
+        <!-- Hero Section -->
+        <section class="blog-hero">
+            <a href={homeHref} class="back-home">
+                <i class="fas fa-arrow-left"></i>
+                {t("blog.back_home")}
+            </a>
+            <h1 class="blog-title">
+                <i class="fas fa-blog"></i>
+                {t("blog.title")}
+            </h1>
+            <p class="blog-subtitle">{t("blog.subtitle")}</p>
+            <p class="blog-date">
+                <i class="fas fa-calendar-alt"></i>
+                {t("blog.updated")} 2026
+            </p>
+        </section>
+
+        <!-- Download Type Cards -->
+        <section class="cards-section">
+            <h2 class="section-heading">{t("blog.tools_heading")}</h2>
+            <div class="cards-grid">
+                {
+                    downloadCards.map((card) => (
+                        <a
+                            href={card.href}
+                            class="download-card"
+                            style={`--card-gradient: ${card.color}`}
+                        >
+                            <div class="card-icon">
+                                <i class={card.icon} />
+                            </div>
+                            <h3>{t(`blog.card_${card.id}_title`)}</h3>
+                            <p>{t(`blog.card_${card.id}_desc`)}</p>
+                            <span class="card-cta">
+                                {t("blog.try_now")}{" "}
+                                <i class="fas fa-chevron-right" />
+                            </span>
+                        </a>
+                    ))
+                }
+            </div>
+        </section>
+
+        <!-- Main Content with SEO Keywords -->
+        <article class="blog-content">
+            <section class="content-section">
+                <h2>
+                    <i class="fas fa-download"></i>
+                    {t("blog.section1_title")}
+                </h2>
+                <p set:html={t("blog.section1_content")} />
+            </section>
+
+            <section class="content-section">
+                <h2>
+                    <i class="fas fa-mobile-alt"></i>
+                    {t("blog.section2_title")}
+                </h2>
+                <p set:html={t("blog.section2_content")} />
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-globe"></i> {t("blog.section3_title")}</h2>
+                <p set:html={t("blog.section3_content")} />
+            </section>
+
+            <section class="content-section">
+                <h2>
+                    <i class="fas fa-shield-alt"></i>
+                    {t("blog.section4_title")}
+                </h2>
+                <p set:html={t("blog.section4_content")} />
+            </section>
+
+            <section class="content-section">
+                <h2><i class="fas fa-star"></i> {t("blog.section5_title")}</h2>
+                <p set:html={t("blog.section5_content")} />
+            </section>
+        </article>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>{t("blog.cta_title")}</h2>
+            <p>{t("blog.cta_desc")}</p>
+            <a href={homeHref} class="cta-btn">
+                <i class="fas fa-download"></i>
+                {t("blog.cta_button")}
+            </a>
+        </section>
+    </div>
+</Layout>
+
+<style>
+    .blog-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Hero */
+    .blog-hero {
+        text-align: center;
+        padding: 3rem 1rem;
+        position: relative;
+    }
+
+    .back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-dim);
+        text-decoration: none;
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        padding: 10px 20px;
+        border-radius: 25px;
+        background: var(--glass);
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+    }
+
+    .back-home:hover {
+        color: var(--secondary);
+        border-color: var(--secondary);
+        transform: translateX(-5px);
+    }
+
+    .blog-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(
+            135deg,
+            var(--primary) 0%,
+            var(--secondary) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .blog-title i {
+        margin-right: 10px;
+    }
+
+    .blog-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-dim);
+        max-width: 700px;
+        margin: 0 auto 1rem;
+        line-height: 1.7;
+    }
+
+    .blog-date {
+        color: var(--text-dim);
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    .blog-date i {
+        margin-right: 6px;
+        color: var(--secondary);
+    }
+
+    /* Cards Section */
+    .cards-section {
+        margin: 3rem 0;
+    }
+
+    .section-heading {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: var(--text-main);
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .download-card {
+        background: var(--glass);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 30px;
+        text-decoration: none;
+        color: var(--text-main);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .download-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--card-gradient);
+    }
+
+    .download-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        border-color: var(--border-bright);
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        background: var(--card-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .download-card h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .download-card p {
+        color: var(--text-dim);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .card-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--secondary);
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .card-cta i {
+        transition: transform 0.3s ease;
+    }
+
+    .download-card:hover .card-cta i {
+        transform: translateX(5px);
+    }
+
+    /* Content */
+    .blog-content {
+        margin: 4rem 0;
+    }
+
+    .content-section {
+        background: var(--glass);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 35px;
+        margin-bottom: 25px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--text-main);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .content-section h2 i {
+        color: var(--secondary);
+        font-size: 1.3rem;
+    }
+
+    .content-section p {
+        color: var(--text-dim);
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+
+    .content-section :global(strong) {
+        color: var(--text-main);
+        font-weight: 600;
+    }
+
+    /* CTA */
+    .cta-section {
+        text-align: center;
+        padding: 60px 30px;
+        background: linear-gradient(
+            135deg,
+            var(--glass) 0%,
+            rgba(255, 0, 80, 0.05) 100%
+        );
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        margin-bottom: 4rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .cta-section p {
+        color: var(--text-dim);
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+
+    .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 40px;
+        background: linear-gradient(
+            135deg,
+            var(--primary) 0%,
+            var(--secondary) 100%
+        );
+        color: white;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px var(--primary-glow);
+    }
+
+    .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px var(--primary-glow);
+    }
+
+    /* Light Mode */
+    :global([data-theme="light"]) .download-card {
+        background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    :global([data-theme="light"]) .content-section {
+        background: #ffffff;
+    }
+
+    :global([data-theme="light"]) .cta-section {
+        background: linear-gradient(
+            135deg,
+            #ffffff 0%,
+            rgba(37, 99, 235, 0.03) 100%
+        );
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        .blog-title {
+            font-size: 1.8rem;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+        }
+
+        .cards-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .content-section {
+            padding: 25px;
+        }
+    }
+</style>

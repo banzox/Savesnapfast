@@ -14,6 +14,7 @@
   "nav": {
     "home": "ホーム",
     "about": "私たちについて",
+    "blog": "ブログ",
     "contact": "お問い合わせ",
     "terms": "利用規約",
     "privacy": "プライバシー",
@@ -525,5 +526,37 @@
       "a10": "ストーリーは一時的(24h)、スライドショーは永続的です。"
     },
     "meta_desc": "TikTokストーリーとスライドショーを匿名でダウンロード。期限切れになる前に写真を保存。"
+  },
+  "blog": {
+    "meta_title": "TikTokダウンロードガイド2026 - 動画、MP3、スライドショー、ストーリー",
+    "meta_desc": "2026年TikTokコンテンツダウンロード完全ガイド。透かしなしで動画を保存、MP3に変換、スライドショーやストーリーをダウンロードする方法。",
+    "keywords": "透かしなしTikTok動画ダウンロード2026, TikTokダウンローダーiPhone iOS 18, TikTok動画保存Android 15, TikTok MP3変換無料オンライン",
+    "title": "TikTokダウンロード究極ガイド2026",
+    "subtitle": "TikTok動画、MP3、スライドショー、ストーリーのダウンロードについて知っておくべきすべて。2026年最新版。",
+    "updated": "最終更新：2月",
+    "back_home": "ダウンローダーに戻る",
+    "tools_heading": "ダウンロードタイプを選択",
+    "try_now": "今すぐ試す",
+    "card_video_title": "動画ダウンローダー",
+    "card_video_desc": "HD/4K品質で透かしなしTikTok動画をダウンロード。iPhone 16、Samsung Galaxy S25などすべてのデバイスで動作。",
+    "card_mp3_title": "MP3変換",
+    "card_mp3_desc": "TikTok動画から高音質320kbpsでオーディオを抽出。着信音に最適。",
+    "card_slideshow_title": "スライドショー保存",
+    "card_slideshow_desc": "TikTokスライドショーとカルーセルのすべての写真をZIPファイルでダウンロード。",
+    "card_story_title": "ストーリーダウンローダー",
+    "card_story_desc": "24時間で消える前にTikTokストーリーを保存。匿名ダウンロード。",
+    "section1_title": "2026年にTikTok動画をダウンロードする方法",
+    "section1_content": "<strong>透かしなしでTikTok動画をダウンロード</strong>することがこれまでになく簡単になりました。2026年、SaveTikFastは最も速く信頼性の高いソリューションです。",
+    "section2_title": "TikTokからMP3への変換ガイド",
+    "section2_content": "<strong>TikTokをMP3に変換</strong>したいですか？私たちのオーディオ抽出ツールは<strong>320kbpsまでの高音質</strong>でサウンドを取得します。",
+    "section3_title": "TikTokスライドショーとストーリーのダウンロード",
+    "section3_content": "<strong>TikTokスライドショー</strong>は2026年に非常に人気があります。私たちのダウンローダーは<strong>カルーセルのすべての画像</strong>をオリジナル品質で保存します。",
+    "section4_title": "プライバシーとセキュリティ",
+    "section4_content": "SaveTikFastでは<strong>プライバシーを重視</strong>しています。登録不要、動画保存なし、安全なSSL接続。",
+    "section5_title": "なぜSaveTikFastを選ぶのか？",
+    "section5_content": "SaveTikFastの特徴：最速処理、最高4K品質、透かしなし、すべてのコンテンツタイプ、すべてのデバイス互換、永久無料。",
+    "cta_title": "ダウンロードの準備はできましたか？",
+    "cta_desc": "TikTok動画、MP3、スライドショー、ストーリーのダウンロードを今すぐ開始。100%無料、登録不要。",
+    "cta_button": "ダウンロード開始"
   }
 }

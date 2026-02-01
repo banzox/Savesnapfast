@@ -14,6 +14,7 @@
   "nav": {
     "home": "Hjem",
     "about": "Om os",
+    "blog": "Blog",
     "contact": "Kontakt",
     "terms": "Vilkår",
     "privacy": "Privatliv",
@@ -525,5 +526,37 @@
       "a10": "Stories er midlertidige (24t), Diasshows er permanente."
     },
     "meta_desc": "Download TikTok-historier og diasshows anonymt. Gem fotokarruseller, før de udløber."
+  },
+  "blog": {
+    "meta_title": "TikTok Download Guide 2026 - Videoer, MP3, Diasshow & Historier",
+    "meta_desc": "Komplet guide til download af TikTok-indhold i 2026. Lær at gemme videoer uden vandmærke, konvertere til MP3, downloade diasshow og historier.",
+    "keywords": "hvordan downloades tiktok videoer uden vandmærke 2026, tiktok downloader iphone ios 18, gem tiktok videoer android 15, tiktok mp3 konverter gratis online",
+    "title": "Den Ultimative TikTok Download Guide 2026",
+    "subtitle": "Alt hvad du behøver at vide om at downloade TikTok-videoer, MP3'er, diasshow og historier. Opdateret til 2026.",
+    "updated": "Sidst opdateret: Februar",
+    "back_home": "Tilbage til Downloader",
+    "tools_heading": "Vælg din downloadtype",
+    "try_now": "Prøv nu",
+    "card_video_title": "Video Downloader",
+    "card_video_desc": "Download TikTok-videoer uden vandmærke i HD/4K-kvalitet. Fungerer på iPhone 16, Samsung Galaxy S25 og alle enheder.",
+    "card_mp3_title": "MP3 Konverter",
+    "card_mp3_desc": "Udtræk lyd fra TikTok-videoer i høj kvalitet 320kbps. Perfekt til ringetoner.",
+    "card_slideshow_title": "Gem Diasshow",
+    "card_slideshow_desc": "Download alle billeder fra TikTok-diasshow og karruseller som en ZIP-fil.",
+    "card_story_title": "Historie Downloader",
+    "card_story_desc": "Gem TikTok-historier før de forsvinder efter 24 timer. Anonym download.",
+    "section1_title": "Sådan downloader du TikTok-videoer i 2026",
+    "section1_content": "<strong>Download af TikTok-videoer uden vandmærke</strong> har aldrig været nemmere. I 2026 forbliver SaveTikFast den hurtigste og mest pålidelige løsning.",
+    "section2_title": "Guide til TikTok til MP3-konvertering",
+    "section2_content": "Vil du <strong>konvertere TikTok til MP3</strong>? Vores lydekstrakteur henter lyden fra enhver video i <strong>høj kvalitet op til 320kbps</strong>.",
+    "section3_title": "Download af TikTok Diasshow & Historier",
+    "section3_content": "<strong>TikTok Diasshow</strong> er enormt populære i 2026. Vores downloader gemmer <strong>hvert billede fra karrusellen</strong> i original kvalitet.",
+    "section4_title": "Privatliv og sikkerhed",
+    "section4_content": "Hos SaveTikFast tager vi dit <strong>privatliv alvorligt</strong>. Ingen registrering påkrævet, ingen videolagring, sikker SSL-forbindelse.",
+    "section5_title": "Hvorfor vælge SaveTikFast?",
+    "section5_content": "SaveTikFast skiller sig ud med: hurtigste behandling, højeste kvalitet op til 4K, intet vandmærke, alle indholdstyper, kompatibel med alle enheder, altid gratis.",
+    "cta_title": "Klar til at downloade?",
+    "cta_desc": "Begynd at downloade TikTok-videoer, MP3, diasshow og historier nu. 100% gratis, ingen registrering.",
+    "cta_button": "Start Download"
   }
 }

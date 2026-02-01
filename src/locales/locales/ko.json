@@ -14,6 +14,7 @@
   "nav": {
     "home": "홈",
     "about": "소개",
+    "blog": "블로그",
     "contact": "문의하기",
     "terms": "이용약관",
     "privacy": "개인정보처리방침",
@@ -525,5 +526,37 @@
       "a10": "스토리는 일시적(24시간), 슬라이드쇼는 영구적입니다."
     },
     "meta_desc": "TikTok 스토리와 슬라이드쇼를 익명으로 다운로드하세요. 만료되기 전에 사진을 저장하세요."
+  },
+  "blog": {
+    "meta_title": "틱톡 다운로드 가이드 2026 - 동영상, MP3, 슬라이드쇼, 스토리",
+    "meta_desc": "2026년 틱톡 콘텐츠 다운로드 완벽 가이드. 워터마크 없이 동영상 저장, MP3 변환, 슬라이드쇼 및 스토리 다운로드 방법.",
+    "keywords": "워터마크 없이 틱톡 동영상 다운로드 2026, 틱톡 다운로더 아이폰 iOS 18, 틱톡 동영상 저장 안드로이드 15, 틱톡 MP3 변환기 무료 온라인",
+    "title": "틱톡 다운로드 완벽 가이드 2026",
+    "subtitle": "틱톡 동영상, MP3, 슬라이드쇼, 스토리 다운로드에 대해 알아야 할 모든 것. 2026년 최신 버전.",
+    "updated": "최종 업데이트: 2월",
+    "back_home": "다운로더로 돌아가기",
+    "tools_heading": "다운로드 유형 선택",
+    "try_now": "지금 사용해보기",
+    "card_video_title": "동영상 다운로더",
+    "card_video_desc": "HD/4K 품질로 워터마크 없이 틱톡 동영상 다운로드. 아이폰 16, 삼성 갤럭시 S25 등 모든 기기 지원.",
+    "card_mp3_title": "MP3 변환기",
+    "card_mp3_desc": "틱톡 동영상에서 고음질 320kbps로 오디오 추출. 벨소리에 딱 좋아요.",
+    "card_slideshow_title": "슬라이드쇼 저장",
+    "card_slideshow_desc": "틱톡 슬라이드쇼와 캐러셀의 모든 사진을 ZIP 파일로 다운로드.",
+    "card_story_title": "스토리 다운로더",
+    "card_story_desc": "24시간 후 사라지기 전에 틱톡 스토리 저장. 익명 다운로드.",
+    "section1_title": "2026년 틱톡 동영상 다운로드 방법",
+    "section1_content": "<strong>워터마크 없이 틱톡 동영상 다운로드</strong>하기가 이보다 쉬웠던 적이 없습니다. 2026년에도 SaveTikFast가 가장 빠르고 신뢰할 수 있는 솔루션입니다.",
+    "section2_title": "틱톡 MP3 변환 가이드",
+    "section2_content": "<strong>틱톡을 MP3로 변환</strong>하고 싶으세요? 저희 오디오 추출기가 <strong>최대 320kbps 고음질</strong>로 소리를 가져옵니다.",
+    "section3_title": "틱톡 슬라이드쇼 및 스토리 다운로드",
+    "section3_content": "<strong>틱톡 슬라이드쇼</strong>는 2026년에 매우 인기입니다. 저희 다운로더는 <strong>캐러셀의 모든 이미지</strong>를 원본 품질로 저장합니다.",
+    "section4_title": "개인정보 보호 및 보안",
+    "section4_content": "SaveTikFast는 여러분의 <strong>개인정보를 중요하게</strong> 생각합니다. 가입 필요 없음, 동영상 저장 안 함, 안전한 SSL 연결.",
+    "section5_title": "왜 SaveTikFast를 선택해야 할까요?",
+    "section5_content": "SaveTikFast의 장점: 가장 빠른 처리, 최대 4K 품질, 워터마크 없음, 모든 콘텐츠 유형, 모든 기기 호환, 영원히 무료.",
+    "cta_title": "다운로드 준비되셨나요?",
+    "cta_desc": "지금 틱톡 동영상, MP3, 슬라이드쇼, 스토리 다운로드를 시작하세요. 100% 무료, 가입 불필요.",
+    "cta_button": "다운로드 시작"
   }
 }

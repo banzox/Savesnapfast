@@ -14,6 +14,7 @@
   "nav": {
     "home": "Domů",
     "about": "O nás",
+    "blog": "Blog",
     "contact": "Kontakt",
     "terms": "Podmínky",
     "privacy": "Soukromí",
@@ -526,5 +527,37 @@
       "a10": "Stories jsou dočasné (24h), prezentace trvalé."
     },
     "meta_desc": "Stahujte příběhy a prezentace z TikToku anonymně. Uložte fotky před vypršením platnosti."
+  },
+  "blog": {
+    "meta_title": "Průvodce stahováním z TikToku 2026 - Videa, MP3, Prezentace a Příběhy",
+    "meta_desc": "Kompletní průvodce stahováním obsahu z TikToku v roce 2026. Naučte se ukládat videa bez vodoznaku, převádět na MP3, stahovat prezentace a příběhy.",
+    "keywords": "jak stáhnout tiktok videa bez vodoznaku 2026, tiktok downloader iphone ios 18, uložit tiktok videa android 15, tiktok mp3 konvertor zdarma online",
+    "title": "Ultimátní průvodce stahováním z TikToku 2026",
+    "subtitle": "Vše, co potřebujete vědět o stahování videí, MP3, prezentací a příběhů z TikToku. Aktualizováno pro rok 2026.",
+    "updated": "Poslední aktualizace: Únor",
+    "back_home": "Zpět na stahování",
+    "tools_heading": "Vyberte typ stahování",
+    "try_now": "Vyzkoušet nyní",
+    "card_video_title": "Stahovač videí",
+    "card_video_desc": "Stahujte videa z TikToku bez vodoznaku v HD/4K kvalitě. Funguje na iPhone 16, Samsung Galaxy S25 a všech zařízeních.",
+    "card_mp3_title": "MP3 Konvertor",
+    "card_mp3_desc": "Extrahujte zvuk z TikTok videí ve vysoké kvalitě 320kbps. Ideální pro vyzvánění.",
+    "card_slideshow_title": "Ukládání prezentací",
+    "card_slideshow_desc": "Stáhněte si všechny fotky z TikTok prezentací a karuselů jako soubor ZIP.",
+    "card_story_title": "Stahovač příběhů",
+    "card_story_desc": "Uložte si TikTok příběhy dříve, než zmizí po 24 hodinách. Anonymní stahování.",
+    "section1_title": "Jak stahovat videa z TikToku v roce 2026",
+    "section1_content": "<strong>Stahování videí z TikToku bez vodoznaku</strong> nikdy nebylo jednodušší. V roce 2026 zůstává SaveTikFast nejrychlejším a nejspolehlivějším řešením.",
+    "section2_title": "Průvodce převodem TikToku na MP3",
+    "section2_content": "Chcete <strong>převést TikTok na MP3</strong>? Náš audio extraktor získá zvuk z jakéhokoli videa ve <strong>vysoké kvalitě až 320kbps</strong>.",
+    "section3_title": "Stahování prezentací a příběhů z TikToku",
+    "section3_content": "<strong>TikTok prezentace</strong> jsou v roce 2026 velmi populární. Náš stahovač ukládá <strong>každý obrázek z karuselu</strong> v původní kvalitě.",
+    "section4_title": "Soukromí a bezpečnost",
+    "section4_content": "V SaveTikFast bereme vaše <strong>soukromí vážně</strong>. Žádná registrace, žádné ukládání videí, zabezpečené SSL připojení.",
+    "section5_title": "Proč zvolit SaveTikFast?",
+    "section5_content": "SaveTikFast vyniká: nejrychlejší zpracování, nejvyšší kvalita až 4K, bez vodoznaku, všechny typy obsahu, kompatibilní se všemi zařízeními, vždy zdarma.",
+    "cta_title": "Připraveni ke stahování?",
+    "cta_desc": "Začněte stahovat TikTok videa, MP3, prezentace a příběhy hned teď. 100% zdarma, bez registrace.",
+    "cta_button": "Začít stahovat"
   }
 }

@@ -120,20 +120,23 @@ body {
     -webkit-text-fill-color: transparent;
     transition: 0.3s;
     font-weight: 900;
-    /* STRICT: Extra Bold */
     text-transform: uppercase;
-    /* STRICT: Uppercase */
     letter-spacing: 1px;
 }
 
+/* Light Mode Logo - Enhanced Colors */
 [data-theme='light'] .logo-text {
-    background: linear-gradient(135deg, #1877f2 0%, #4267b2 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #3b82f6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 950;
-    /* Slightly thicker for premium look */
+    font-weight: 900;
     text-transform: uppercase;
+}
+
+[data-theme='light'] .logo i {
+    color: #2563eb;
+    filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.3));
 }
 
 .logo:hover i {

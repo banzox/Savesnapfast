@@ -14,6 +14,7 @@
   "nav": {
     "home": "Strona główna",
     "about": "O nas",
+    "blog": "Blog",
     "contact": "Kontakt",
     "terms": "Regulamin",
     "privacy": "Prywatność",
@@ -525,5 +526,37 @@
       "a10": "Stories są tymczasowe (24h), slajdy stałe."
     },
     "meta_desc": "Pobieraj historie i pokazy slajdów TikTok anonimowo. Zapisz zdjęcia, zanim wygasną."
+  },
+  "blog": {
+    "meta_title": "Przewodnik TikTok Download 2026 - Wideo, MP3, Pokazy Slajdów i Stories",
+    "meta_desc": "Kompletny przewodnik pobierania treści TikTok w 2026. Dowiedz się jak zapisać filmy bez znaku wodnego, konwertować na MP3, pobierać pokazy slajdów i stories.",
+    "keywords": "jak pobrać wideo TikTok bez znaku wodnego 2026, TikTok downloader iPhone iOS 18, zapisać wideo TikTok Android 15, konwerter TikTok MP3 online za darmo",
+    "title": "Kompletny Przewodnik TikTok Download 2026",
+    "subtitle": "Wszystko co musisz wiedzieć o pobieraniu filmów, MP3, pokazów slajdów i stories z TikToka. Zaktualizowane na 2026.",
+    "updated": "Ostatnia aktualizacja: Luty",
+    "back_home": "Powrót do Pobierania",
+    "tools_heading": "Wybierz Typ Pobierania",
+    "try_now": "Wypróbuj Teraz",
+    "card_video_title": "Pobieranie Wideo",
+    "card_video_desc": "Pobieraj filmy TikTok bez znaku wodnego w jakości HD/4K. Działa na iPhone 16, Samsung Galaxy S25 i wszystkich urządzeniach.",
+    "card_mp3_title": "Konwerter MP3",
+    "card_mp3_desc": "Wyodrębnij dźwięk z filmów TikTok w wysokiej jakości 320kbps. Idealny na dzwonki.",
+    "card_slideshow_title": "Zapis Pokazu Slajdów",
+    "card_slideshow_desc": "Pobierz wszystkie zdjęcia z pokazów slajdów i karuzel TikTok jako plik ZIP.",
+    "card_story_title": "Pobieranie Stories",
+    "card_story_desc": "Zapisz stories TikTok zanim znikną po 24h. Anonimowe pobieranie.",
+    "section1_title": "Jak Pobierać Filmy TikTok w 2026",
+    "section1_content": "<strong>Pobieranie filmów TikTok bez znaku wodnego</strong> nigdy nie było prostsze. W 2026 SaveTikFast pozostaje najszybszym i najbardziej niezawodnym rozwiązaniem.",
+    "section2_title": "Przewodnik Konwersji TikTok na MP3",
+    "section2_content": "Chcesz <strong>konwertować TikTok na MP3</strong>? Nasz ekstraktor audio pobiera dźwięk z każdego wideo w <strong>wysokiej jakości do 320kbps</strong>.",
+    "section3_title": "Pobieranie Pokazów Slajdów i Stories TikTok",
+    "section3_content": "<strong>Pokazy slajdów TikTok</strong> są bardzo popularne w 2026. Nasz downloader zapisuje <strong>każdy obraz z karuzeli</strong> w oryginalnej jakości.",
+    "section4_title": "Prywatność i Bezpieczeństwo",
+    "section4_content": "W SaveTikFast traktujemy Twoją <strong>prywatność poważnie</strong>. Bez rejestracji, bez przechowywania filmów, bezpieczne połączenie SSL.",
+    "section5_title": "Dlaczego Wybrać SaveTikFast?",
+    "section5_content": "SaveTikFast wyróżnia się: najszybsze przetwarzanie, najwyższa jakość do 4K, bez znaku wodnego, wszystkie typy treści, kompatybilny ze wszystkimi urządzeniami, zawsze za darmo.",
+    "cta_title": "Gotowy do Pobrania?",
+    "cta_desc": "Zacznij pobierać filmy, MP3, pokazy slajdów i stories TikTok teraz. 100% za darmo, bez rejestracji.",
+    "cta_button": "Rozpocznij Pobieranie"
   }
 }

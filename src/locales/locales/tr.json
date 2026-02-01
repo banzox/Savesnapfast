@@ -14,6 +14,7 @@
   "nav": {
     "home": "Anasayfa",
     "about": "Hakkımızda",
+    "blog": "Blog",
     "contact": "İletişim",
     "terms": "Kullanım Şartları",
     "privacy": "Gizlilik Politikası",
@@ -525,5 +526,37 @@
       "a10": "Hikayeler geçicidir (24s), Slaytlar kalıcıdır."
     },
     "meta_desc": "TikTok Hikayelerini ve Slayt Gösterilerini anonim olarak indirin."
+  },
+  "blog": {
+    "meta_title": "TikTok İndirme Rehberi 2026 - Video, MP3, Slayt ve Hikayeler",
+    "meta_desc": "2026'da TikTok içerik indirme tam rehberi. Filigransız video kaydetme, MP3'e dönüştürme, slayt ve hikaye indirme.",
+    "keywords": "filigransız TikTok video indirme 2026, TikTok indirici iPhone iOS 18, TikTok video kaydetme Android 15, TikTok MP3 dönüştürücü ücretsiz online",
+    "title": "TikTok İndirme Tam Rehberi 2026",
+    "subtitle": "TikTok video, MP3, slayt gösterisi ve hikaye indirme hakkında bilmeniz gereken her şey. 2026 için güncel.",
+    "updated": "Son güncelleme: Şubat",
+    "back_home": "İndirici'ye Dön",
+    "tools_heading": "İndirme Türünü Seçin",
+    "try_now": "Şimdi Dene",
+    "card_video_title": "Video İndirici",
+    "card_video_desc": "HD/4K kalitesinde filigransız TikTok videoları indirin. iPhone 16, Samsung Galaxy S25 ve tüm cihazlarda çalışır.",
+    "card_mp3_title": "MP3 Dönüştürücü",
+    "card_mp3_desc": "TikTok videolarından yüksek kalitede 320kbps ses çıkarın. Zil sesi için mükemmel.",
+    "card_slideshow_title": "Slayt Kaydetme",
+    "card_slideshow_desc": "TikTok slayt gösterisi ve karusellerinden tüm fotoğrafları ZIP olarak indirin.",
+    "card_story_title": "Hikaye İndirici",
+    "card_story_desc": "24 saat içinde kaybolmadan önce TikTok hikayelerini kaydedin. Anonim indirme.",
+    "section1_title": "2026'da TikTok Videoları Nasıl İndirilir",
+    "section1_content": "<strong>Filigransız TikTok videoları indirmek</strong> hiç bu kadar kolay olmamıştı. 2026'da SaveTikFast en hızlı ve güvenilir çözüm olmaya devam ediyor.",
+    "section2_title": "TikTok'tan MP3'e Dönüştürme Rehberi",
+    "section2_content": "<strong>TikTok'u MP3'e dönüştürmek</strong> mi istiyorsunuz? Ses çıkarıcımız her videodan <strong>320kbps'ye kadar yüksek kalitede</strong> ses alır.",
+    "section3_title": "TikTok Slayt ve Hikaye İndirme",
+    "section3_content": "<strong>TikTok Slayt Gösterileri</strong> 2026'da çok popüler. İndiricimiz <strong>karuseldeki her resmi</strong> orijinal kalitede kaydeder.",
+    "section4_title": "Gizlilik ve Güvenlik",
+    "section4_content": "SaveTikFast'te <strong>gizliliğinizi ciddiye alıyoruz</strong>. Kayıt gerekmez, video depolama yok, güvenli SSL bağlantısı.",
+    "section5_title": "Neden SaveTikFast'i Seçmelisiniz?",
+    "section5_content": "SaveTikFast'in farkı: en hızlı işlem, 4K'ya kadar en yüksek kalite, filigransız, tüm içerik türleri, tüm cihazlarla uyumlu, her zaman ücretsiz.",
+    "cta_title": "İndirmeye Hazır mısınız?",
+    "cta_desc": "Şimdi TikTok video, MP3, slayt ve hikaye indirmeye başlayın. %100 ücretsiz, kayıt gerektirmez.",
+    "cta_button": "İndirmeye Başla"
   }
 }
