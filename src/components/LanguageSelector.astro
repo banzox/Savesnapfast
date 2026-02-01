@@ -423,21 +423,42 @@ function getPathForLanguage(targetLang: string) {
     /* Mobile */
     @media (max-width: 640px) {
         .lang-modal {
-            padding: 15px;
+            padding: 10px;
         }
 
         .lang-modal-dialog {
             width: 100%;
-            max-height: calc(100vh - 60px);
+            /* Compact height for mobile */
+            max-height: calc(100vh - 40px);
+        }
+
+        .lang-modal-header {
+            padding: 12px 16px;
+        }
+
+        .lang-modal-title {
+            font-size: 1rem;
+        }
+
+        .lang-modal-body {
+            padding: 12px;
         }
 
         .lang-grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
         }
 
         .lang-option {
-            padding: 14px;
-            font-size: 1rem;
+            padding: 10px 12px;
+            font-size: 0.9rem;
+            min-height: 48px; /* Accessible touch target */
+        }
+
+        .lang-close-btn {
+            width: 32px;
+            height: 32px;
+            font-size: 0.9rem;
         }
     }
 </style>
