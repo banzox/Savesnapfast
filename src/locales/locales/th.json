@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - ดาวน์โหลดวิดีโอ TikTok ไม่มีลายน้ำ (HD & 4K)",
     "description": "โหลดคลิป TikTok ไม่มีลายน้ำ ฟรี คุณภาพสูง Ultra HD/4K เครื่องมือดาวน์โหลดที่เร็วที่สุดปี 2026 รองรับ MP4 & MP3 บน iPhone, Android และ PC"
   },
+  "common": {
+    "select_language": "เลือกภาษา",
+    "toggle_theme": "สลับธีม"
+  },
   "nav": {
     "home": "หน้าแรก",
     "about": "เกี่ยวกับเรา",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "วางลิงก์วิดีโอที่นี่...",
     "btn_download": "ดาวน์โหลดทันที",
+    "btn_paste": "วาง",
+    "btn_copy": "คัดลอก",
+    "btn_clear": "ล้าง",
     "processing": "กำลังประมวลผล...",
     "download_video": "ดาวน์โหลดวิดีโอ",
     "download_audio": "ดาวน์โหลด MP3",
@@ -111,16 +118,16 @@
       "desc": "ดาวน์โหลดวิดีโอได้มากเท่าที่คุณต้องการโดยไม่มีข้อจำกัดใดๆ"
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "ไม่มีลายน้ำ",
+      "desc": "ดาวน์โหลดวิดีโอ TikTok โดยไม่มีลายน้ำที่น่ารำคาญ วิดีโอสะอาดพร้อมแชร์"
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "คุณภาพ HD และ 4K",
+      "desc": "บันทึกวิดีโอในคุณภาพต้นฉบับ - สูงสุดความละเอียด 4K พร้อมเสียงใสสะอาด"
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "ทุกอุปกรณ์",
+      "desc": "ทำงานได้ดีบน iPhone, Android, PC, Mac และแท็บเล็ต ไม่ต้องติดตั้ง"
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "คัดลอกลิงก์วิดีโอ TikTok ที่คุณต้องการบันทึก",
     "step2": "วางลิงก์ลงในช่องดาวน์โหลดที่ด้านบนของหน้านี้",
     "step3": "คลิกปุ่ม 'ดาวน์โหลด' และวิดีโอของคุณจะถูกบันทึกทันที",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "คัดลอกลิงก์",
+    "step2_title": "วาง URL",
+    "step3_title": "ดาวน์โหลด"
   },
   "tools": {
     "backToDownloader": "กลับไปที่เครื่องมือดาวน์โหลด",

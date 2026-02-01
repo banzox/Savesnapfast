@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - TikTok Video Downloader ohne Wasserzeichen (HD & 4K)",
     "description": "Lade TikTok Videos ohne Wasserzeichen kostenlos in Ultra HD/4K Qualität herunter. Der schnellste Downloader 2026. Speichern als MP4 & MP3 auf iPhone, Android und PC."
   },
+  "common": {
+    "select_language": "Sprache wählen",
+    "toggle_theme": "Design wechseln"
+  },
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Video-Link hier einfügen...",
     "btn_download": "Herunterladen",
+    "btn_paste": "Einfügen",
+    "btn_copy": "Kopieren",
+    "btn_clear": "Löschen",
     "processing": "Wird bearbeitet...",
     "download_video": "Video herunterladen",
     "download_audio": "MP3 herunterladen",
@@ -111,16 +118,16 @@
       "desc": "Laden Sie so viele Videos herunter, wie Sie möchten, ohne Einschränkungen."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Ohne Wasserzeichen",
+      "desc": "TikTok Videos ohne das nervige Wasserzeichen herunterladen. Saubere Videos zum Teilen."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K Qualität",
+      "desc": "Videos in Originalqualität speichern - bis zu 4K Auflösung mit kristallklarem Ton."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Alle Geräte",
+      "desc": "Funktioniert perfekt auf iPhone, Android, PC, Mac und Tablets. Keine Installation nötig."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Kopieren Sie den TikTok-Videolink, den Sie speichern möchten.",
     "step2": "Fügen Sie den Link in das Download-Feld oben auf dieser Seite ein.",
     "step3": "Klicken Sie auf die Schaltfläche 'Download' und Ihr Video wird sofort gespeichert.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Link kopieren",
+    "step2_title": "Link einfügen",
+    "step3_title": "Herunterladen"
   },
   "tools": {
     "backToDownloader": "Zurück zum Downloader",

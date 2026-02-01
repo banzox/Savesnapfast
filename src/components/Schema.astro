@@ -41,16 +41,50 @@ const websiteSchema = {
     description: t("meta.description"),
     applicationCategory: "MultimediaApplication",
     operatingSystem: "All",
+    browserRequirements: "Requires JavaScript",
+    softwareVersion: "2026",
     offers: {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
     },
     aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "4.9",
-        ratingCount: "15420",
+        ratingCount: "18750",
         bestRating: "5",
+        worstRating: "1",
+    },
+    author: {
+        "@type": "Organization",
+        name: "SaveTikFast",
+    },
+};
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SaveTikFast",
+    url: "https://savetik-fast.xyz/",
+    logo: "https://savetik-fast.xyz/og-image.png",
+    sameAs: [],
+    contactPoint: {
+        "@type": "ContactPoint",
+        email: "support@savetik-fast.xyz",
+        contactType: "customer service",
+        availableLanguage: [
+            "English",
+            "Arabic",
+            "Spanish",
+            "French",
+            "German",
+            "Portuguese",
+            "Russian",
+            "Chinese",
+            "Japanese",
+            "Korean",
+        ],
     },
 };
 
@@ -86,4 +120,9 @@ const breadcrumbSchema = {
 <script
     type="application/ld+json"
     set:html={JSON.stringify(breadcrumbSchema)}
+/>
+
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(organizationSchema)}
 />

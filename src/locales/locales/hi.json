@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - TikTok Video Download Bina Watermark (HD & 4K)",
     "description": "TikTok video bina watermark ke free mein download karein Ultra HD/4K quality mein. 2026 ka sabse tez downloader. MP4 aur MP3 save karein iPhone, Android aur PC par."
   },
+  "common": {
+    "select_language": "भाषा चुनें",
+    "toggle_theme": "थीम बदलें"
+  },
   "nav": {
     "home": "Home",
     "about": "Hmare Bare Mein",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "वीडियो लिंक यहाँ पेस्ट करें...",
     "btn_download": "अभी डाउनलोड करें",
+    "btn_paste": "पेस्ट करें",
+    "btn_copy": "कॉपी करें",
+    "btn_clear": "साफ़ करें",
     "processing": "प्रसंस्करण हो रहा है...",
     "download_video": "वीडियो डाउनलोड करें",
     "download_audio": "MP3 डाउनलोड करें",
@@ -111,16 +118,16 @@
       "desc": "बिना किसी प्रतिबंध के जितने चाहें उतने वीडियो डाउनलोड करें।"
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "बिना वॉटरमार्क",
+      "desc": "टिकटॉक वीडियो बिना वॉटरमार्क डाउनलोड करें। साझा करने के लिए तैयार क्लीन वीडियो।"
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD और 4K क्वालिटी",
+      "desc": "ओरिजिनल क्वालिटी में वीडियो सेव करें - 4K रिजोल्यूशन और क्रिस्टल क्लियर ऑडियो।"
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "सभी डिवाइस",
+      "desc": "iPhone, Android, PC, Mac और टैबलेट पर पर्फेक्टली काम करता है। कोई इंस्टॉलेशन नहीं।"
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "उस टिकटॉक वीडियो का लिंक कॉपी करें जिसे आप सेव करना चाहते हैं।",
     "step2": "इस पेज के शीर्ष पर स्थित डाउनलोड बॉक्स में लिंक पेस्ट करें।",
     "step3": "'डाउनलोड' बटन पर क्लिक करें और आपका वीडियो तुरंत सेव हो जाएगा।",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "लिंक कॉपी करें",
+    "step2_title": "URL पेस्ट करें",
+    "step3_title": "डाउनलोड"
   },
   "tools": {
     "backToDownloader": "डाउनलोडर पर वापस जाएं",

@@ -243,6 +243,9 @@
   "downloader": {
     "placeholder": "ضع رابط الفيديو هنا...",
     "btn_download": "تحميل الآن",
+    "btn_paste": "لصق",
+    "btn_copy": "نسخ",
+    "btn_clear": "مسح",
     "processing": "جاري التحليل...",
     "download_video": "تحميل فيديو",
     "download_audio": "تحميل MP3",

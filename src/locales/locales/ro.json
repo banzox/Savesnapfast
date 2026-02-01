@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Descarcă video TikTok fără filigran (HD & 4K)",
     "description": "Descarcă videoclipuri TikTok fără filigran gratuit la calitate Ultra HD/4K. Cel mai rapid downloader din 2026. Salvează ca MP4 și MP3 pe iPhone, Android și PC."
   },
+  "common": {
+    "select_language": "Selectează limba",
+    "toggle_theme": "Schimbă tema"
+  },
   "nav": {
     "home": "Acasă",
     "about": "Despre noi",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Lipește link-ul video aici...",
     "btn_download": "Descarcă acum",
+    "btn_paste": "Lipește",
+    "btn_copy": "Copiază",
+    "btn_clear": "Șterge",
     "processing": "Se procesează...",
     "download_video": "Descarcă Video",
     "download_audio": "Descarcă MP3",
@@ -111,16 +118,16 @@
       "desc": "Descărcați oricâte videoclipuri doriți, fără nicio restricție."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Fără filigran",
+      "desc": "Descarcă videoclipuri TikTok fără filigranul enervant. Videoclipuri curate gata de distribuit."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Calitate HD & 4K",
+      "desc": "Salvează videoclipurile în calitatea originală - până la rezoluție 4K cu audio clar."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Toate dispozitivele",
+      "desc": "Funcționează perfect pe iPhone, Android, PC, Mac și tablete. Fără instalare."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Copiați linkul videoclipului TikTok pe care doriți să îl salvați.",
     "step2": "Lipiți linkul în caseta de descărcare din partea de sus a acestei pagini.",
     "step3": "Faceți clic på butonul „Descărcare” și videoclipul va fi salvat imediat.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Copiază link",
+    "step2_title": "Lipește URL",
+    "step3_title": "Descarcă"
   },
   "tools": {
     "backToDownloader": "Înapoi la descărcare",

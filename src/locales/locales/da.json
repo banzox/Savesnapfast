@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Download TikTok Video Uden Vandmærke (HD & 4K)",
     "description": "Download TikTok-videoer uden vandmærke gratis i Ultra HD/4K-kvalitet. Den hurtigste downloader i 2026. Gem som MP4 & MP3 på iPhone, Android og PC."
   },
+  "common": {
+    "select_language": "Vælg sprog",
+    "toggle_theme": "Skift tema"
+  },
   "nav": {
     "home": "Hjem",
     "about": "Om os",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Indsæt video-link her...",
     "btn_download": "Download nu",
+    "btn_paste": "Indsæt",
+    "btn_copy": "Kopier",
+    "btn_clear": "Ryd",
     "processing": "Behandler...",
     "download_video": "Download video",
     "download_audio": "Download MP3",
@@ -111,16 +118,16 @@
       "desc": "Download lige så mange videoer, du vil, uden begrænsninger."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Uden vandmærke",
+      "desc": "Download TikTok-videoer uden det irriterende vandmærke. Rene videoer klar til deling."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K kvalitet",
+      "desc": "Gem videoer i original kvalitet - op til 4K opløsning med krystalklar lyd."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Alle enheder",
+      "desc": "Virker perfekt på iPhone, Android, PC, Mac og tablets. Ingen installation nødvendig."
     }
   },
   "how_to": {
@@ -128,8 +135,8 @@
     "step1": "Kopier det TikTok-videolink, du vil gemme.",
     "step2": "Indsæt linket i downloadboksen øverst på denne side.",
     "step3": "Klik på knappen 'Download', og din video gemmes med det samme.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
+    "step1_title": "Kopier link",
+    "step2_title": "Indsæt URL",
     "step3_title": "Download"
   },
   "tools": {

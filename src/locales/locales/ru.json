@@ -28,6 +28,9 @@
   "downloader": {
     "placeholder": "Вставьте ссылку на видео здесь...",
     "btn_download": "Скачать",
+    "btn_paste": "Вставить",
+    "btn_copy": "Копировать",
+    "btn_clear": "Очистить",
     "processing": "Обработка...",
     "download_video": "Скачать видео",
     "download_audio": "Скачать MP3",
@@ -115,16 +118,16 @@
       "desc": "Скачивайте столько видео, сколько хотите, без каких-либо ограничений."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Без водяного знака",
+      "desc": "Скачивайте видео TikTok без надоедливого водяного знака. Чистые видео, готовые к публикации."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Качество HD и 4K",
+      "desc": "Сохраняйте видео в оригинальном качестве - до разрешения 4K с кристально чистым звуком."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Все устройства",
+      "desc": "Отлично работает на iPhone, Android, ПК, Mac и планшетах. Установка не требуется."
     }
   },
   "how_to": {
@@ -132,9 +135,9 @@
     "step1": "Скопируйте ссылку на видео TikTok, которое хотите сохранить.",
     "step2": "Вставьте ссылку в поле загрузки в верхней части этой страницы.",
     "step3": "Нажмите кнопку «Скачать», и ваше видео будет немедленно сохранено.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Скопировать ссылку",
+    "step2_title": "Вставить URL",
+    "step3_title": "Скачать"
   },
   "tools": {
     "backToDownloader": "Назад к загрузчику",

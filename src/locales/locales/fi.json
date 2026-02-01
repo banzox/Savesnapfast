@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Lataa TikTok-video ilman vesileimaa (HD & 4K)",
     "description": "Lataa TikTok-videoita ilman vesileimaa ilmaiseksi Ultra HD/4K -laadulla. Vuoden 2026 nopein lataaja. Tallenna MP4 & MP3 muodossa iPhoneen, Androidiin ja PC:lle."
   },
+  "common": {
+    "select_language": "Valitse kieli",
+    "toggle_theme": "Vaihda teemaa"
+  },
   "nav": {
     "home": "Etusivu",
     "about": "Meistä",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Liitä videolinkki tähän...",
     "btn_download": "Lataa nyt",
+    "btn_paste": "Liitä",
+    "btn_copy": "Kopioi",
+    "btn_clear": "Tyhjennä",
     "processing": "Käsitellään...",
     "download_video": "Lataa video",
     "download_audio": "Lataa MP3",
@@ -111,16 +118,16 @@
       "desc": "Lataa niin monta videota kuin haluat ilman rajoituksia."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Ilman vesileimaa",
+      "desc": "Lataa TikTok-videoita ilman ärsyttävää vesileimaa. Puhtaita videoita jaettavaksi."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K -laatu",
+      "desc": "Tallenna videot alkuperäislaadulla - jopa 4K-tarkkuudella kristallinkirkkalla äänellä."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Kaikki laitteet",
+      "desc": "Toimii täydellisesti iPhonella, Androidilla, PC:llä, Macilla ja tableteilla. Ei asennusta."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Kopioi tallennettavan TikTok-videon linkki.",
     "step2": "Liitä linkki tämän sivun yläreunassa olevaan latauskenttään.",
     "step3": "Napsauta 'Lataa'-painiketta, niin videosi tallennεται välittömästi.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Kopioi linkki",
+    "step2_title": "Liitä URL",
+    "step3_title": "Lataa"
   },
   "tools": {
     "backToDownloader": "Takaisin lataajaan",

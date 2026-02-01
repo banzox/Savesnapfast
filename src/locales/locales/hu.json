@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - TikTok videó letöltés vízjel nélkül (HD & 4K)",
     "description": "Tölts le TikTok videókat vízjel nélkül ingyen Ultra HD/4K minőségben. A leggyorsabb letöltő 2026-ban. Mentés MP4 és MP3 formátumban iPhone-ra, Androidra és PC-re."
   },
+  "common": {
+    "select_language": "Nyelv választása",
+    "toggle_theme": "Téma váltása"
+  },
   "nav": {
     "home": "Kezdőlap",
     "about": "Rólunk",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Illessze be a videó linket ide...",
     "btn_download": "Letöltés most",
+    "btn_paste": "Beillesztés",
+    "btn_copy": "Másolás",
+    "btn_clear": "Törlés",
     "processing": "Feldolgozás...",
     "download_video": "Videó letöltése",
     "download_audio": "MP3 letöltése",
@@ -111,16 +118,16 @@
       "desc": "Töltsön le annyi videót, amennyit csak akar, korlátozások nélkül."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Vízjel nélkül",
+      "desc": "Töltsön le TikTok videókat az idegesítő vízjel nélkül. Tiszta videók megosztásra készen."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD és 4K minőség",
+      "desc": "Videók mentése eredeti minőségben - akár 4K felbontásban kristálytiszta hanggal."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Minden eszköz",
+      "desc": "Tökéletesen működik iPhone-on, Androidon, PC-n, Mac-en és tableteken. Nincs szükség telepítésre."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Másolja ki a menteni kívánt TikTok videó linkjét.",
     "step2": "Illessze be a linket az oldal tetején található letöltési mezőbe.",
     "step3": "Kattintson a 'Letöltés' gombra, és a videó azonnal mentésre kerül.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Link másolása",
+    "step2_title": "URL beillesztése",
+    "step3_title": "Letöltés"
   },
   "tools": {
     "backToDownloader": "Vissza a letöltőhöz",

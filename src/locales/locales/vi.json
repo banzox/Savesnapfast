@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Tải Video TikTok Không Logo (HD & 4K)",
     "description": "Tải video TikTok không có logo miễn phí với chất lượng Ultra HD/4K. Trình tải xuống nhanh nhất 2026. Lưu dưới dạng MP4 & MP3 trên iPhone, Android và PC."
   },
+  "common": {
+    "select_language": "Chọn ngôn ngữ",
+    "toggle_theme": "Đổi giao diện"
+  },
   "nav": {
     "home": "Trang chủ",
     "about": "Về chúng tôi",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Dán liên kết video vào đây...",
     "btn_download": "Tải ngay",
+    "btn_paste": "Dán",
+    "btn_copy": "Sao chép",
+    "btn_clear": "Xóa",
     "processing": "Đang xử lý...",
     "download_video": "Tải Video",
     "download_audio": "Tải MP3",
@@ -111,16 +118,16 @@
       "desc": "Tải xuống bao nhiêu video tùy thích mà không có bất kỳ hạn chế nào."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Không có watermark",
+      "desc": "Tải video TikTok mà không có watermark phiền phức. Video sạch sẵn sàng chia sẻ."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Chất lượng HD & 4K",
+      "desc": "Lưu video với chất lượng gốc - lên đến độ phân giải 4K với âm thanh trong trẻo."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Mọi thiết bị",
+      "desc": "Hoạt động hoàn hảo trên iPhone, Android, PC, Mac và máy tính bảng. Không cần cài đặt."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Sao chép liên kết video TikTok mà bạn muốn lưu.",
     "step2": "Dán liên kết vào hộp tải xuống ở đầu trang này.",
     "step3": "Nhấp vào nút 'Tải xuống' và video của bạn sẽ được lưu ngay lập tức.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Sao chép liên kết",
+    "step2_title": "Dán URL",
+    "step3_title": "Tải xuống"
   },
   "tools": {
     "backToDownloader": "Quay lại trình tải xuống",

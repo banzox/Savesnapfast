@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Λήψη βίντεο TikTok χωρίς υδατογράφημα (HD & 4K)",
     "description": "Κατεβάστε βίντεο TikTok χωρίς υδατογράφημα δωρεάν σε ποιότητα Ultra HD/4K. Ο γρηγορότερος τρόπος λήψης 2026. Αποθήκευση σε MP4 & MP3 σε iPhone, Android και PC."
   },
+  "common": {
+    "select_language": "Επιλογή γλώσσας",
+    "toggle_theme": "Αλλαγή θέματος"
+  },
   "nav": {
     "home": "Αρχική",
     "about": "Σχετικά",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Επικολλήστε τον σύνδεσμο του βίντεο εδώ...",
     "btn_download": "Λήψη τώρα",
+    "btn_paste": "Επικόλληση",
+    "btn_copy": "Αντιγραφή",
+    "btn_clear": "Εκκαθάριση",
     "processing": "Επεξεργασία...",
     "download_video": "Λήψη βίντεο",
     "download_audio": "Λήψη MP3",
@@ -111,16 +118,16 @@
       "desc": "Κατεβάστε όσα βίντεο θέλετε χωρίς περιορισμούς."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Χωρίς υδατογράφημα",
+      "desc": "Κατεβάστε βίντεο TikTok χωρίς το ενοχλητικό υδατογράφημα. Καθαρά βίντεο έτοιμα για κοινοποίηση."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Ποιότητα HD & 4K",
+      "desc": "Αποθηκεύστε βίντεο στην αρχική τους ποιότητα - έως 4K ανάλυση με κρυστάλλινο ήχο."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Όλες οι συσκευές",
+      "desc": "Λειτουργεί τέλεια σε iPhone, Android, PC, Mac και tablet. Δεν απαιτείται εγκατάσταση."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Αντιγράψτε τον σύνδεσμο του βίντεο TikTok που θέλετε να αποθηκεύσετε.",
     "step2": "Επικολλήστε τον σύνδεσμο στο πλαίσιο λήψης στο επάνω μέρος αυτής της σελίδας.",
     "step3": "Κάντε κλικ στο κουμπί 'Λήψη' και το βίντεό σας θα αποθηκευτεί αμέσως.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Αντιγραφή συνδέσμου",
+    "step2_title": "Επικόλληση URL",
+    "step3_title": "Λήψη"
   },
   "tools": {
     "backToDownloader": "Πίσω στη λήψη",

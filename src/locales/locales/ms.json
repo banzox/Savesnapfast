@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Muat Turun Video TikTok Tanpa Tanda Air (HD & 4K)",
     "description": "Muat turun video TikTok tanpa tanda air secara percuma dalam kualiti Ultra HD/4K. Pemuat turun terpantas 2026. Simpan sebagai MP4 & MP3 pada iPhone, Android dan PC."
   },
+  "common": {
+    "select_language": "Pilih bahasa",
+    "toggle_theme": "Tukar tema"
+  },
   "nav": {
     "home": "Laman Utama",
     "about": "Tentang Kami",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Tampal pautan video di sini...",
     "btn_download": "Muat turun sekarang",
+    "btn_paste": "Tampal",
+    "btn_copy": "Salin",
+    "btn_clear": "Padam",
     "processing": "Sedang diproses...",
     "download_video": "Muat Turun Video",
     "download_audio": "Muat Turun MP3",
@@ -111,16 +118,16 @@
       "desc": "Muat turun seberapa banyak video yang anda mahu tanpa sebarang sekatan."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Tanpa Tanda Air",
+      "desc": "Muat turun video TikTok tanpa tanda air yang menjengkelkan. Video bersih sedia untuk dikongsi."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Kualiti HD & 4K",
+      "desc": "Simpan video dalam kualiti asal - sehingga resolusi 4K dengan audio jernih."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Semua Peranti",
+      "desc": "Berfungsi sempurna pada iPhone, Android, PC, Mac dan tablet. Tiada pemasangan diperlukan."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Salin pautan video TikTok yang ingin anda simpan.",
     "step2": "Tampal pautan ke dalam kotak muat turun di bahagian atas halaman ini.",
     "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Salin Pautan",
+    "step2_title": "Tampal URL",
+    "step3_title": "Muat Turun"
   },
   "tools": {
     "backToDownloader": "Kembali ke Pemuat Turun",

@@ -28,6 +28,9 @@
   "downloader": {
     "placeholder": "Paste video link here...",
     "btn_download": "Download Now",
+    "btn_paste": "Paste",
+    "btn_copy": "Copy",
+    "btn_clear": "Clear",
     "processing": "Processing...",
     "download_video": "Download Video",
     "download_audio": "Download MP3",

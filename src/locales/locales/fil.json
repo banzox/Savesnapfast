@@ -4,8 +4,12 @@
     "home_btn": "Go to Homepage"
   },
   "meta": {
-    "title": "SaveTikFast 2026 - Best TikTok Downloader No Watermark (Fast & 4K)",
-    "description": "Download TikTok videos without watermark for free in Ultra HD/4K quality. The fastest TikTok Saver 2026. Save to MP4 & MP3 on iPhone, Android, and PC."
+    "title": "SaveTikFast 2026 - Pinakamahusay na TikTok Downloader Walang Watermark (Mabilis & 4K)",
+    "description": "Mag-download ng mga video sa TikTok nang walang watermark nang libre sa Ultra HD/4K na kalidad. Ang pinakamabilis na TikTok Saver 2026. I-save sa MP4 at MP3 sa iPhone, Android, at PC."
+  },
+  "common": {
+    "select_language": "Pumili ng wika",
+    "toggle_theme": "Baguhin ang tema"
   },
   "nav": {
     "home": "Home",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Paste video link here...",
     "btn_download": "Download Now",
+    "btn_paste": "I-paste",
+    "btn_copy": "Kopyahin",
+    "btn_clear": "I-clear",
     "processing": "Processing...",
     "download_video": "Download Video",
     "download_audio": "Download MP3",
@@ -254,26 +261,26 @@
       "desc": "Download as many videos as you want without restrictions."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Walang Watermark",
+      "desc": "Mag-download ng mga video sa TikTok nang walang nakakainis na watermark. Malinis na mga video na handang i-share."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD at 4K na Kalidad",
+      "desc": "I-save ang mga video sa kanilang orihinal na kalidad - hanggang 4K resolution na may malinaw na tunog."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Lahat ng Device",
+      "desc": "Gumagana nang perpekto sa iPhone, Android, PC, Mac, at tablets. Hindi na kailangan ng app installation."
     }
   },
   "how_to": {
-    "title": "How to Download TikTok Videos Without Watermark",
-    "step1": "Copy the TikTok video link you want to save.",
-    "step2": "Paste the link into the download box at the top of this page.",
-    "step3": "Click the 'Download' button and your video will be saved immediately.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "title": "Paano Mag-download ng TikTok Videos Nang Walang Watermark",
+    "step1": "Kopyahin ang link ng TikTok video na gusto mong i-save.",
+    "step2": "I-paste ang link sa download box sa itaas ng pahinang ito.",
+    "step3": "I-click ang 'Download' button at agad na mase-save ang iyong video.",
+    "step1_title": "Kopyahin ang Link",
+    "step2_title": "I-paste ang URL",
+    "step3_title": "I-download"
   },
   "tools": {
     "backToDownloader": "Back to TikTok Downloader",

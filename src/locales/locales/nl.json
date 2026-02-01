@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - TikTok Video Downloaden Zonder Watermerk (HD & 4K)",
     "description": "Download TikTok video's zonder watermerk gratis in Ultra HD/4K kwaliteit. De snelste downloader van 2026. Opslaan als MP4 & MP3 op iPhone, Android en PC."
   },
+  "common": {
+    "select_language": "Selecteer taal",
+    "toggle_theme": "Thema wisselen"
+  },
   "nav": {
     "home": "Home",
     "about": "Over Ons",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Plak hier de videolink...",
     "btn_download": "Nu downloaden",
+    "btn_paste": "Plakken",
+    "btn_copy": "Kopiëren",
+    "btn_clear": "Wissen",
     "processing": "Verwerken...",
     "download_video": "Video downloaden",
     "download_audio": "MP3 downloaden",
@@ -111,16 +118,16 @@
       "desc": "Download zoveel video's als je wilt zonder enige beperkingen."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Geen watermerk",
+      "desc": "Download TikTok video's zonder het irritante watermerk. Schone video's klaar om te delen."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K kwaliteit",
+      "desc": "Sla video's op in originele kwaliteit - tot 4K resolutie met kristalhelder geluid."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Alle apparaten",
+      "desc": "Werkt perfect op iPhone, Android, PC, Mac en tablets. Geen installatie nodig."
     }
   },
   "how_to": {

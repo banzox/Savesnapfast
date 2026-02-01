@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Last ned TikTok-video uten vannmerke (HD & 4K)",
     "description": "Last ned TikTok-videoer uten vannmerke gratis i Ultra HD/4K-kvalitet. Den raskeste nedlasteren i 2026. Lagre som MP4 & MP3 på iPhone, Android og PC."
   },
+  "common": {
+    "select_language": "Velg språk",
+    "toggle_theme": "Bytt tema"
+  },
   "nav": {
     "home": "Hjem",
     "about": "Om oss",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Lim inn videolenke her...",
     "btn_download": "Last ned nå",
+    "btn_paste": "Lim inn",
+    "btn_copy": "Kopier",
+    "btn_clear": "Slett",
     "processing": "Behandler...",
     "download_video": "Last ned video",
     "download_audio": "Last ned MP3",
@@ -111,16 +118,16 @@
       "desc": "Last ned så mange videoer du vil uten begrensninger."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Uten vannmerke",
+      "desc": "Last ned TikTok-videoer uten det irriterende vannmerket. Rene videoer klare til deling."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K-kvalitet",
+      "desc": "Lagre videoer i original kvalitet - opp til 4K-oppløsning med krystallklar lyd."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Alle enheter",
+      "desc": "Fungerer perfekt på iPhone, Android, PC, Mac og nettbrett. Ingen installasjon nødvendig."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Kopier TikTok-videolenken du vil lagre.",
     "step2": "Lim inn lenken i nedlastingsfeltet øverst på denne siden.",
     "step3": "Klikk på 'Last ned'-knappen og videoen din blir lagret umiddelbart.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Kopier lenke",
+    "step2_title": "Lim inn URL",
+    "step3_title": "Last ned"
   },
   "tools": {
     "backToDownloader": "Tilbake til laster",

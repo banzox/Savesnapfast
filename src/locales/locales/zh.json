@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - TikTok 影片下載 無浮水印 (HD & 4K)",
     "description": "免費下載無浮水印的 TikTok 影片，支援 Ultra HD/4K 高畫質。2026 年最快的下載器。支援 iPhone、Android 和 PC 儲存 MP4 與 MP3。"
   },
+  "common": {
+    "select_language": "选择语言",
+    "toggle_theme": "切换主题"
+  },
   "nav": {
     "home": "首頁",
     "about": "關於我們",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "在此处粘贴视频链接...",
     "btn_download": "立即下载",
+    "btn_paste": "粘贴",
+    "btn_copy": "复制",
+    "btn_clear": "清除",
     "processing": "正在处理...",
     "download_video": "下载视频",
     "download_audio": "下载 MP3",
@@ -111,16 +118,16 @@
       "desc": "每天可以无限制下载任意数量的视频。"
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "无水印",
+      "desc": "下载TikTok视频无烦人水印。干净视频随时分享。"
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "高清和4K画质",
+      "desc": "以原始质量保存视频 - 高达4K分辨率配以水晶般清晰音质。"
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "全平台支持",
+      "desc": "在iPhone、Android、PC、Mac和平板电脑上完美运行。无需安装。"
     }
   },
   "how_to": {

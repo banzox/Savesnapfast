@@ -28,6 +28,9 @@
   "downloader": {
     "placeholder": "Coller le lien de la vidéo ici...",
     "btn_download": "Télécharger",
+    "btn_paste": "Coller",
+    "btn_copy": "Copier",
+    "btn_clear": "Effacer",
     "processing": "Traitement...",
     "download_video": "Télécharger Vidéo",
     "download_audio": "Télécharger MP3",
@@ -115,16 +118,16 @@
       "desc": "Téléchargez autant de vidéos que vous le souhaitez sans aucune restriction."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Sans filigrane",
+      "desc": "Téléchargez des vidéos TikTok sans le filigrane ennuyeux. Vidéos propres prêtes à partager."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Qualité HD & 4K",
+      "desc": "Sauvegardez les vidéos dans leur qualité originale - jusqu'à la résolution 4K avec un son cristallin."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Tous les appareils",
+      "desc": "Fonctionne parfaitement sur iPhone, Android, PC, Mac et tablettes. Aucune installation requise."
     }
   },
   "how_to": {
@@ -132,9 +135,9 @@
     "step1": "Copiez le lien de la vidéo TikTok que vous souhaitez enregistrer.",
     "step2": "Collez le lien dans la zone de téléchargement en haut de cette page.",
     "step3": "Cliquez sur le bouton 'Télécharger' et votre vidéo sera enregistrée immédiatement.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Copier le lien",
+    "step2_title": "Coller l'URL",
+    "step3_title": "Télécharger"
   },
   "tools": {
     "backToDownloader": "Retour au téléchargeur",

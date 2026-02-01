@@ -1,11 +1,15 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Nie znaleziono strony",
+    "home_btn": "Przejdź do strony głównej"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Pobierz wideo z TikToka bez znaku wodnego (HD & 4K)",
     "description": "Pobieraj filmy z TikToka bez znaku wodnego za darmo w jakości Ultra HD/4K. Najszybszy downloader 2026. Zapisz jako MP4 i MP3 na iPhone, Android i PC."
+  },
+  "common": {
+    "select_language": "Wybierz język",
+    "toggle_theme": "Zmień motyw"
   },
   "nav": {
     "home": "Strona główna",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Wklej link do wideo tutaj...",
     "btn_download": "Pobierz teraz",
+    "btn_paste": "Wklej",
+    "btn_copy": "Kopiuj",
+    "btn_clear": "Wyczyść",
     "processing": "Przetwarzanie...",
     "download_video": "Pobierz wideo",
     "download_audio": "Pobierz MP3",
@@ -111,16 +118,16 @@
       "desc": "Pobieraj tyle filmów, ile chcesz, bez żadnych ograniczeń."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Bez znaku wodnego",
+      "desc": "Pobieraj filmy TikTok bez irytującego znaku wodnego. Czyste wideo gotowe do udostępnienia."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Jakość HD i 4K",
+      "desc": "Zapisuj filmy w oryginalnej jakości - do rozdzielczości 4K z krystalicznie czystym dźwiękiem."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Wszystkie urządzenia",
+      "desc": "Działa idealnie na iPhone, Android, PC, Mac i tabletach. Nie wymaga instalacji."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Skopiuj link do filmu na TikToku, który chcesz zapisać.",
     "step2": "Wklej link do pola pobierania u góry tej strony.",
     "step3": "Kliknij przycisk „Pobierz”, a Twój film zostanie natychmiast zapisany.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Skopiuj link",
+    "step2_title": "Wklej URL",
+    "step3_title": "Pobierz"
   },
   "tools": {
     "backToDownloader": "Wróć do pobierania",

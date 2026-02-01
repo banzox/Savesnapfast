@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Baixar Vídeo TikTok Sem Marca D'água (HD & 4K)",
     "description": "Baixe vídeos do TikTok sem marca d'água gratuitamente em qualidade Ultra HD/4K. O baixador mais rápido de 2026. Salve em MP4 e MP3 no iPhone, Android e PC."
   },
+  "common": {
+    "select_language": "Selecionar idioma",
+    "toggle_theme": "Alternar tema"
+  },
   "nav": {
     "home": "Início",
     "about": "Sobre Nós",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Cole o link do vídeo aqui...",
     "btn_download": "Baixar agora",
+    "btn_paste": "Colar",
+    "btn_copy": "Copiar",
+    "btn_clear": "Limpar",
     "processing": "Processando...",
     "download_video": "Baixar Vídeo",
     "download_audio": "Baixar MP3",
@@ -111,16 +118,16 @@
       "desc": "Baixe quantos vídeos quiser, sem restrições."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Sem marca d'água",
+      "desc": "Baixe vídeos do TikTok sem a marca d'água irritante. Vídeos limpos prontos para compartilhar."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Qualidade HD & 4K",
+      "desc": "Salve vídeos na qualidade original - até resolução 4K com áudio cristalino."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Todos os dispositivos",
+      "desc": "Funciona perfeitamente no iPhone, Android, PC, Mac e tablets. Sem instalação necessária."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Copie o link do vídeo do TikTok que você deseja salvar.",
     "step2": "Cole o link na caixa de download no topo desta página.",
     "step3": "Clique no botão 'Download' e seu vídeo será salvo imediatamente.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Copiar link",
+    "step2_title": "Colar URL",
+    "step3_title": "Baixar"
   },
   "tools": {
     "backToDownloader": "Voltar ao Baixador",

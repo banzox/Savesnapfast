@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - TikTok動画ダウンロード 透かしなし (HD & 4K)",
     "description": "TikTokの動画を透かしなし（ロゴなし）で無料でダウンロード。2026年最速の保存ツール。iPhone、Android、PCでMP4とMP3を高画質で保存できます。"
   },
+  "common": {
+    "select_language": "言語を選択",
+    "toggle_theme": "テーマを切り替え"
+  },
   "nav": {
     "home": "ホーム",
     "about": "私たちについて",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "ここにビデオリンクを貼り付け...",
     "btn_download": "今すぐダウンロード",
+    "btn_paste": "貼り付け",
+    "btn_copy": "コピー",
+    "btn_clear": "クリア",
     "processing": "処理中...",
     "download_video": "ビデオをダウンロード",
     "download_audio": "MP3をダウンロード",
@@ -111,16 +118,16 @@
       "desc": "制限なしで、1日に好きなだけ動画をダウンロードできます。"
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "ウォーターマークなし",
+      "desc": "邪魔なTikTokウォーターマークなしで動画をダウンロード。共有準備ができたクリーンな動画。"
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K 画質",
+      "desc": "オリジナル品質で動画を保存 - クリスタルクリアなオーディオで最大4K解像度。"
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "全デバイス対応",
+      "desc": "iPhone、Android、PC、Mac、タブレットで完璧に動作。インストール不要。"
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "保存したいTikTok動画のリンクをコピーします。",
     "step2": "このページ上部の入力ボックスにリンクを貼り付けます。",
     "step3": "「ダウンロード」ボタンをクリックすると、すぐに保存されます。",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "リンクをコピー",
+    "step2_title": "URLを貼り付け",
+    "step3_title": "ダウンロード"
   },
   "tools": {
     "backToDownloader": "ダウンローダーに戻る",

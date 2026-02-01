@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Stáhnout TikTok video bez vodoznaku (HD & 4K)",
     "description": "Stahujte videa z TikToku bez vodoznaku zdarma v kvalitě Ultra HD/4K. Nejrychlejší stahovač 2026. Uložte jako MP4 a MP3 na iPhone, Android a PC."
   },
+  "common": {
+    "select_language": "Vyberte jazyk",
+    "toggle_theme": "Přepnout téma"
+  },
   "nav": {
     "home": "Domů",
     "about": "O nás",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Vložte odkaz na video zde...",
     "btn_download": "Stáhnout nyní",
+    "btn_paste": "Vložit",
+    "btn_copy": "Kopírovat",
+    "btn_clear": "Vymazat",
     "processing": "Zpracovávání...",
     "download_video": "Stáhnout video",
     "download_audio": "Stáhnout MP3",
@@ -111,16 +118,16 @@
       "desc": "Stahujte tolik videí, kolik chcete, bez jakýchkoli omezení."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Bez vodoznaku",
+      "desc": "Stahujte videa z TikToku bez obtěžujícího vodoznaku. Čistá videa připravená ke sdílení."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K kvalita",
+      "desc": "Ukládejte videa v původní kvalitě - až 4K rozlišení s krystalicky čistým zvukem."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Všechna zařízení",
+      "desc": "Funguje perfektně na iPhone, Android, PC, Mac a tabletech. Žádná instalace."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Zkopírujte odkaz na video TikTok, které chcete uložit.",
     "step2": "Vložte odkaz do pole pro stahování v horní části této stránky.",
     "step3": "Klikněte na tlačítko „Stáhnout“ a vaše video se okamžitě uloží.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Kopírovat odkaz",
+    "step2_title": "Vložit URL",
+    "step3_title": "Stáhnout"
   },
   "tools": {
     "backToDownloader": "Zpět na stahovač",

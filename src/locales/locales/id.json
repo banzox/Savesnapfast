@@ -28,6 +28,9 @@
   "downloader": {
     "placeholder": "Tempel tautan video di sini...",
     "btn_download": "Unduh sekarang",
+    "btn_paste": "Tempel",
+    "btn_copy": "Salin",
+    "btn_clear": "Hapus",
     "processing": "Memproses...",
     "download_video": "Unduh Video",
     "download_audio": "Unduh MP3",
@@ -115,16 +118,16 @@
       "desc": "Unduh video sebanyak yang Anda inginkan tanpa batasan apa pun."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Tanpa Watermark",
+      "desc": "Unduh video TikTok tanpa watermark yang mengganggu. Video bersih siap dibagikan."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Kualitas HD & 4K",
+      "desc": "Simpan video dalam kualitas asli - hingga resolusi 4K dengan audio jernih."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Semua Perangkat",
+      "desc": "Berfungsi sempurna di iPhone, Android, PC, Mac, dan tablet. Tanpa instalasi."
     }
   },
   "how_to": {
@@ -132,9 +135,9 @@
     "step1": "Salin tautan video TikTok yang ingin Anda simpan.",
     "step2": "Tempel tautan ke kotak unduhan di bagian atas halaman ini.",
     "step3": "Klik tombol 'Unduh' dan video Anda akan segera disimpan.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Salin Tautan",
+    "step2_title": "Tempel URL",
+    "step3_title": "Unduh"
   },
   "tools": {
     "backToDownloader": "Kembali ke Pengunduh",

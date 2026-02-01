@@ -90,7 +90,20 @@ const baseSlug = isLangPrefix
 
         <Schema lang={lang} />
 
+        <!-- Search Engine Optimization -->
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta
+            name="googlebot"
+            content="index, follow, max-image-preview:large"
+        />
+        <meta name="bingbot" content="index, follow" />
         <meta name="author" content="SaveTikFast" />
+        <meta name="publisher" content="SaveTikFast" />
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="1 days" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
@@ -129,11 +142,24 @@ const baseSlug = isLangPrefix
         />
         <link rel="dns-prefetch" href="https://api.savetik-fast.xyz" />
 
-        <!-- Fonts -->
+        <!-- Fonts - Optimized Loading -->
         <link
-            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700;800&display=swap"
+            as="style"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
+        />
+        <noscript>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700;800&display=swap"
+                rel="stylesheet"
+            />
+        </noscript>
 
         <script is:inline>
             // Initialize theme
@@ -173,8 +199,9 @@ const baseSlug = isLangPrefix
             });
         </script>
 
-        <!-- Social Bar Ad -->
+        <!-- Social Bar Ad (async for better performance) -->
         <script
+            async
             src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js"
         ></script>
     </head>

@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Scarica Video TikTok Senza Filigrana (HD & 4K)",
     "description": "Scarica video TikTok senza filigrana gratuitamente in qualità Ultra HD/4K. Il downloader più veloce del 2026. Salva in MP4 e MP3 su iPhone, Android e PC."
   },
+  "common": {
+    "select_language": "Seleziona lingua",
+    "toggle_theme": "Cambia tema"
+  },
   "nav": {
     "home": "Home",
     "about": "Chi Siamo",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Incolla qui il link del video...",
     "btn_download": "Scarica ora",
+    "btn_paste": "Incolla",
+    "btn_copy": "Copia",
+    "btn_clear": "Cancella",
     "processing": "Elaborazione...",
     "download_video": "Scarica Video",
     "download_audio": "Scarica MP3",
@@ -111,16 +118,16 @@
       "desc": "Scarica tutti i video che vuoi senza alcuna restrizione."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Senza filigrana",
+      "desc": "Scarica video TikTok senza la fastidiosa filigrana. Video puliti pronti da condividere."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "Qualità HD e 4K",
+      "desc": "Salva video in qualità originale - fino a risoluzione 4K con audio cristallino."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Tutti i dispositivi",
+      "desc": "Funziona perfettamente su iPhone, Android, PC, Mac e tablet. Nessuna installazione richiesta."
     }
   },
   "how_to": {

@@ -4,8 +4,12 @@
     "home_btn": "Go to Homepage"
   },
   "meta": {
-    "title": "SaveTikFast 2026 - Best TikTok Downloader No Watermark (Fast & 4K)",
-    "description": "Download TikTok videos without watermark for free in Ultra HD/4K quality. The fastest TikTok Saver 2026. Save to MP4 & MP3 on iPhone, Android, and PC."
+    "title": "SaveTikFast 2026 - Изтегляне на TikTok видео без воден знак (HD & 4K)",
+    "description": "Изтегляне на TikTok видеоклипове без воден знак безплатно в качество Ultra HD/4K. Най-бързият инструмент за изтегляне 2026. Запазете като MP4 и MP3 на iPhone, Android и PC."
+  },
+  "common": {
+    "select_language": "Изберете език",
+    "toggle_theme": "Смяна на темата"
   },
   "nav": {
     "home": "Home",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Поставете линк към видеото тук...",
     "btn_download": "Download Now",
+    "btn_paste": "Поставяне",
+    "btn_copy": "Копиране",
+    "btn_clear": "Изчистване",
     "processing": "Processing...",
     "download_video": "Download Video",
     "download_audio": "Download MP3",
@@ -254,26 +261,26 @@
       "desc": "Download as many videos as you want without restrictions."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Без воден знак",
+      "desc": "Изтеглете TikTok видеоклипове без досадния воден знак. Чисти видеоклипове, готови за споделяне."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD и 4K качество",
+      "desc": "Запазете видеоклипове в оригиналното им качество - до 4K резолюция с кристално чист звук."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Всички устройства",
+      "desc": "Работи перфектно на iPhone, Android, PC, Mac и таблети. Не е необходима инсталация."
     }
   },
   "how_to": {
-    "title": "How to Download TikTok Videos Without Watermark",
-    "step1": "Copy the TikTok video link you want to save.",
-    "step2": "Paste the link into the download box at the top of this page.",
-    "step3": "Click the 'Download' button and your video will be saved immediately.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "title": "Как да изтеглите TikTok видеоклипове без воден знак",
+    "step1": "Копирайте линка на TikTok видеото, което искате да запазите.",
+    "step2": "Поставете линка в полето за изтегляне в горната част на тази страница.",
+    "step3": "Кликнете върху бутона 'Изтегли' и вашето видео ще бъде запазено веднага.",
+    "step1_title": "Копиране на линк",
+    "step2_title": "Поставяне на URL",
+    "step3_title": "Изтегляне"
   },
   "tools": {
     "backToDownloader": "Back to TikTok Downloader",

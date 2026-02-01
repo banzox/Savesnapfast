@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - 틱톡 동영상 다운로드 워터마크 없음 (HD & 4K)",
     "description": "워터마크 없는 틱톡 영상을 무료로 다운로드하세요. 2026년 가장 빠른 틱톡 다운로더. 아이폰, 안드로이드, PC에서 MP4 및 MP3 고화질 저장."
   },
+  "common": {
+    "select_language": "언어 선택",
+    "toggle_theme": "테마 전환"
+  },
   "nav": {
     "home": "홈",
     "about": "소개",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "여기에 비디오 링크를 붙여넣으세요...",
     "btn_download": "지금 다운로드",
+    "btn_paste": "붙여넣기",
+    "btn_copy": "복사",
+    "btn_clear": "지우기",
     "processing": "처리 중...",
     "download_video": "비디오 다운로드",
     "download_audio": "MP3 다운로드",
@@ -111,16 +118,16 @@
       "desc": "제한 없이 원하는 만큼 동영상을 다운로드하세요."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "워터마크 없음",
+      "desc": "성가신 워터마크 없이 TikTok 동영상을 다운로드하세요. 공유할 준비가 된 깨끗한 동영상."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K 품질",
+      "desc": "원본 품질로 동영상 저장 - 크리스탈 클리어 오디오로 최대 4K 해상도."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "모든 기기",
+      "desc": "iPhone, Android, PC, Mac, 태블릿에서 완벽하게 작동. 설치 필요 없음."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "저장하려는 TikTok 동영상 링크를 복사합니다.",
     "step2": "이 페이지 상단의 다운로드 상자에 링크를 붙여넣습니다.",
     "step3": "'다운로드' 버튼을 클릭하면 동영상이 즉시 저장됩니다.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "링크 복사",
+    "step2_title": "URL 붙여넣기",
+    "step3_title": "다운로드"
   },
   "tools": {
     "backToDownloader": "다운로더로 돌아가기",

@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Ladda ner TikTok-video utan vattenstämpel (HD & 4K)",
     "description": "Ladda ner TikTok-videor utan vattenstämpel gratis i Ultra HD/4K-kvalitet. Den snabbaste nedladdaren 2026. Spara som MP4 & MP3 på iPhone, Android och PC."
   },
+  "common": {
+    "select_language": "Välj språk",
+    "toggle_theme": "Byt tema"
+  },
   "nav": {
     "home": "Hem",
     "about": "Om oss",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Klistra in videolänk här...",
     "btn_download": "Ladda ner nu",
+    "btn_paste": "Klistra in",
+    "btn_copy": "Kopiera",
+    "btn_clear": "Rensa",
     "processing": "Bearbetar...",
     "download_video": "Ladda ner video",
     "download_audio": "Ladda ner MP3",
@@ -111,16 +118,16 @@
       "desc": "Ladda ner så många videor du vill utan några begränsningar."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Utan vattenstämpel",
+      "desc": "Ladda ner TikTok-videor utan den irriterande vattenstämpeln. Rena videor redo att delas."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K-kvalitet",
+      "desc": "Spara videor i originalkvalitet - upp till 4K-upplösning med kristallklart ljud."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Alla enheter",
+      "desc": "Fungerar perfekt på iPhone, Android, PC, Mac och surfplattor. Ingen installation."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Kopiera länken till TikTok-videon du vill spara.",
     "step2": "Klistra in länken i nedladdningsrutan högst upp på denna sida.",
     "step3": "Klicka på knappen 'Ladda ner' så sparas din video omedelbart.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Kopiera länk",
+    "step2_title": "Klistra in URL",
+    "step3_title": "Ladda ner"
   },
   "tools": {
     "backToDownloader": "Tillbaka till nedladdare",

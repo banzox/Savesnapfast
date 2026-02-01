@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - Завантажити відео з TikTok без водяного знака (HD & 4K)",
     "description": "Завантажуйте відео TikTok без водяного знака безкоштовно в якості Ultra HD/4K. Найшвидший завантажувач 2026. Зберігайте в MP4 та MP3 на iPhone, Android та ПК."
   },
+  "common": {
+    "select_language": "Вибрати мову",
+    "toggle_theme": "Змінити тему"
+  },
   "nav": {
     "home": "Головна",
     "about": "Про нас",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Вставте посилання на відео тут...",
     "btn_download": "Завантажити зараз",
+    "btn_paste": "Вставити",
+    "btn_copy": "Копіювати",
+    "btn_clear": "Очистити",
     "processing": "Обробка...",
     "download_video": "Завантажити відео",
     "download_audio": "Завантажити MP3",
@@ -111,16 +118,16 @@
       "desc": "Завантажуйте скільки завгодно відео без будь-яких обмежень."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Без водяного знака",
+      "desc": "Завантажуйте відео TikTok без дратівливого водяного знака. Чисті відео готові до поширення."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD та 4K якість",
+      "desc": "Зберігайте відео в оригінальній якості - до 4K роздільної здатності з кришталево чистим звуком."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Усі пристрої",
+      "desc": "Ідеально працює на iPhone, Android, ПК, Mac та планшетах. Без встановлення."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Скопіюйте посилання на відео TikTok, яке ви хочете зберегти.",
     "step2": "Вставте посилання в поле завантаження у верхній частині цієї сторінки.",
     "step3": "Натисніть кнопку «Завантажити», і ваше відео буде негайно збережено.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Копіювати посилання",
+    "step2_title": "Вставити URL",
+    "step3_title": "Завантажити"
   },
   "tools": {
     "backToDownloader": "Назад до завантажувача",

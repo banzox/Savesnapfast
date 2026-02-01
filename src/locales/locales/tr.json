@@ -7,6 +7,10 @@
     "title": "SaveTikFast 2026 - TikTok Video İndir Filigransız (HD & 4K)",
     "description": "Filigransız TikTok videolarını ücretsiz indirin. En hızlı TikTok İndirici 2026. iPhone, Android ve PC için MP4 & MP3 desteği. Programsız ve sınırsız."
   },
+  "common": {
+    "select_language": "Dil seçin",
+    "toggle_theme": "Tema değiştir"
+  },
   "nav": {
     "home": "Anasayfa",
     "about": "Hakkımızda",
@@ -24,6 +28,9 @@
   "downloader": {
     "placeholder": "Video bağlantısını buraya yapıştırın...",
     "btn_download": "İndir",
+    "btn_paste": "Yapıştır",
+    "btn_copy": "Kopyala",
+    "btn_clear": "Temizle",
     "processing": "İşleniyor...",
     "download_video": "Videoyu İndir",
     "download_audio": "MP3 İndir",
@@ -111,16 +118,16 @@
       "desc": "Günde istediğiniz kadar videoyu kısıtlama olmadan indirin."
     },
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without the annoying TikTok watermark. Clean videos ready to share."
+      "title": "Filigransız",
+      "desc": "Rahatsız edici TikTok filigranı olmadan videoları indirin. Paylaşıma hazır temiz videolar."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Save videos in their original quality - up to 4K resolution with crystal clear audio."
+      "title": "HD & 4K Kalite",
+      "desc": "Videoları orijinal kalitede kaydedin - kristal netliğinde sesle 4K çözünürlüğe kadar."
     },
     "device": {
-      "title": "All Devices",
-      "desc": "Works perfectly on iPhone, Android, PC, Mac, and tablets. No app installation needed."
+      "title": "Tüm Cihazlar",
+      "desc": "iPhone, Android, PC, Mac ve tabletlerde mükemmel çalışır. Kurulum gerektirmez."
     }
   },
   "how_to": {
@@ -128,9 +135,9 @@
     "step1": "Kaydetmek istediğiniz TikTok videosunun bağlantısını kopyalayın.",
     "step2": "Bağlantıyı bu sayفن صفحة التحميل في الأعلى.",
     "step3": "'İndir' butonuna tıklayın, videonuz anında cihazınıza kaydedilecektir.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Linki Kopyala",
+    "step2_title": "URL Yapıştır",
+    "step3_title": "İndir"
   },
   "tools": {
     "backToDownloader": "TikTok İndiriciye Dön",
