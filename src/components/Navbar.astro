@@ -224,9 +224,12 @@ const currentPath = Astro.url.pathname;
     }
 
     :global([data-theme="light"]) .logo-icon-wrapper {
-        background: #2563eb; /* Blue Box */
-        color: #000000; /* Black Icon */
-        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+        background: #0a0a0a; /* Black Box */
+        color: #ff0050; /* Red Icon */
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.25),
+            0 0 0 1px rgba(255, 0, 80, 0.2);
+        border: 1px solid rgba(255, 0, 80, 0.3);
     }
 
     .logo:hover .logo-icon-wrapper {
