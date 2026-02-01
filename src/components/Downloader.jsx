@@ -57,10 +57,8 @@ export default function Downloader(props) {
     const downloadFile = async (fileUrl, fileName) => {
         if (!fileUrl) return;
 
-        // Show ad in background if applicable
-        if (SMART_LINK) window.open(SMART_LINK, '_blank');
-
         setDownloadingUrl(fileUrl);
+
         try {
             const response = await fetch(fileUrl);
             if (!response.ok) throw new Error("Network issues. Opening in new tab...");
@@ -75,6 +73,11 @@ export default function Downloader(props) {
             document.body.appendChild(a);
             a.click();
 
+            // فتح الإعلان بعد نجاح التحميل
+            setTimeout(() => {
+                if (SMART_LINK) window.open(SMART_LINK, '_blank');
+            }, 500);
+
             setTimeout(() => {
                 window.URL.revokeObjectURL(blobUrl);
                 document.body.removeChild(a);
@@ -87,6 +90,11 @@ export default function Downloader(props) {
             link.target = '_blank';
             link.download = fileName;
             link.click();
+
+            // فتح الإعلان حتى في حالة الـ fallback
+            setTimeout(() => {
+                if (SMART_LINK) window.open(SMART_LINK, '_blank');
+            }, 500);
         } finally {
             setDownloadingUrl(null);
         }
@@ -94,8 +102,6 @@ export default function Downloader(props) {
 
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
-
-        if (SMART_LINK) window.open(SMART_LINK, '_blank');
 
         setZipping(true);
         try {
@@ -119,6 +125,11 @@ export default function Downloader(props) {
 
             const content = await zip.generateAsync({ type: "blob" });
             saveAs(content, `TikTok_Slideshow_${author}.zip`);
+
+            // فتح الإعلان بعد نجاح إنشاء الـ ZIP
+            setTimeout(() => {
+                if (SMART_LINK) window.open(SMART_LINK, '_blank');
+            }, 500);
 
         } catch (err) {
             console.error("Zip failed", err);
@@ -230,35 +241,27 @@ export default function Downloader(props) {
                     />
 
                     <div className="input-controls">
-                        {url && (
-                            <>
-                                <button
-                                    type="button"
-                                    className="action-btn copy-btn"
-                                    onClick={handleCopyInput}
-                                    title={t('btn_copy', "Copy")}
-                                >
-                                    <i className="fas fa-copy"></i>
-                                </button>
-                                <button
-                                    type="button"
-                                    className="action-btn clear-btn"
-                                    onClick={() => setUrl('')}
-                                    title={t('btn_clear', "Clear")}
-                                >
-                                    <i className="fas fa-times"></i>
-                                </button>
-                            </>
-                        )}
-
+                        {/* زر ذكي: لصق عند الفراغ، نسخ عند وجود نص */}
                         <button
                             type="button"
-                            className="action-btn paste-btn"
-                            onClick={handlePaste}
-                            title={t('btn_paste', "Paste")}
+                            className={`action-btn ${url ? 'copy-btn' : 'paste-btn'}`}
+                            onClick={url ? handleCopyInput : handlePaste}
+                            title={url ? t('btn_copy', "Copy") : t('btn_paste', "Paste")}
                         >
-                            <i className="fas fa-paste"></i>
+                            <i className={`fas ${url ? 'fa-copy' : 'fa-paste'}`}></i>
                         </button>
+
+                        {/* زر المسح - يظهر فقط عند وجود نص */}
+                        {url && (
+                            <button
+                                type="button"
+                                className="action-btn clear-btn"
+                                onClick={() => setUrl('')}
+                                title={t('btn_clear', "Clear")}
+                            >
+                                <i className="fas fa-times"></i>
+                            </button>
+                        )}
                     </div>
                 </div>
 
