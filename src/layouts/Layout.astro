@@ -34,6 +34,42 @@ const baseSlug = isLangPrefix
         <meta name="description" content={description} />
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Critical CSS: Inline for faster FCP -->
+        <style is:inline>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                background: #0a0a0a;
+                color: #fff;
+                font-family: "Inter", "Tajawal", system-ui, sans-serif;
+                line-height: 1.6;
+                min-height: 100vh;
+            }
+            [data-theme="light"] body {
+                background: #f8fafc;
+                color: #0f172a;
+            }
+            .hero-section {
+                min-height: 50vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem 1rem;
+            }
+            .downloader-wrapper {
+                width: 100%;
+                max-width: 48rem;
+                margin: 0 auto;
+            }
+        </style>
         <link
             rel="icon"
             type="image/png"
@@ -142,21 +178,21 @@ const baseSlug = isLangPrefix
         />
         <link rel="dns-prefetch" href="https://api.savetik-fast.xyz" />
 
-        <!-- Fonts - Optimized Loading -->
+        <!-- Fonts - Optimized Loading (Reduced weights for performance) -->
         <link
             rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;700&display=swap"
             as="style"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;700&display=swap"
             rel="stylesheet"
             media="print"
             onload="this.media='all'"
         />
         <noscript>
             <link
-                href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700;800&display=swap"
+                href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;700&display=swap"
                 rel="stylesheet"
             />
         </noscript>
@@ -198,12 +234,6 @@ const baseSlug = isLangPrefix
                 }
             });
         </script>
-
-        <!-- Social Bar Ad (async for better performance) -->
-        <script
-            async
-            src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js"
-        ></script>
     </head>
     <body>
         <Navbar lang={lang} />
@@ -246,5 +276,11 @@ const baseSlug = isLangPrefix
                 }
             });
         </script>
+
+        <!-- Social Bar Ad (moved to end for better performance) -->
+        <script
+            defer
+            src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js"
+        ></script>
     </body>
 </html>

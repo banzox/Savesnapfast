@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import JSZip from 'jszip';
 import fileSaver from 'file-saver';
 const { saveAs } = fileSaver;
+
+// Dynamic import for JSZip - only loads when needed (better mobile performance)
+const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "https://api.savetik-fast.xyz";
 const SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
@@ -83,7 +85,6 @@ export default function Downloader(props) {
                 document.body.removeChild(a);
             }, 1000);
         } catch (err) {
-            console.warn("Direct download failed, falling back to new tab", err);
             // Fallback: Open directly if blob creation fails (CORS or other)
             const link = document.createElement('a');
             link.href = fileUrl;
@@ -105,6 +106,7 @@ export default function Downloader(props) {
 
         setZipping(true);
         try {
+            const { default: JSZip } = await loadJSZip();
             const zip = new JSZip();
             const author = sanitizeName(result.author || 'User');
             const folder = zip.folder(`TikTok_Slideshow_${author}`);
@@ -117,7 +119,7 @@ export default function Downloader(props) {
                     const fileName = `slide_${index + 1}.jpg`;
                     folder.file(fileName, blob);
                 } catch (e) {
-                    console.error("Failed to fetch image", imgUrl);
+                    // Silent fail for individual images
                 }
             });
 
@@ -132,7 +134,6 @@ export default function Downloader(props) {
             }, 500);
 
         } catch (err) {
-            console.error("Zip failed", err);
             setError(t('error_busy', "Failed to create ZIP file."));
         } finally {
             setZipping(false);

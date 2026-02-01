@@ -1381,3 +1381,134 @@ footer {
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
 }
+
+/* =========================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   ========================================= */
+
+/* Disable heavy animations on mobile for better performance */
+@media (max-width: 768px),
+(prefers-reduced-motion: reduce) {
+
+    body::before,
+    body::after {
+        animation: none !important;
+        opacity: 0.03 !important;
+    }
+
+    .lightning-icon {
+        animation: pulseBolt 0.8s ease-in-out infinite alternate !important;
+        /* Remove shakeBolt - too heavy */
+    }
+
+    .lightning-bolt-wrapper {
+        animation: none !important;
+    }
+
+    .lightning-loader-container {
+        animation: fadeIn 0.5s ease !important;
+        /* Remove pulseGlow */
+    }
+
+    .lightning-loader-container::before {
+        animation: none !important;
+    }
+
+    /* Reduce backdrop-filter intensity on mobile */
+    .nav-container,
+    .footer-glass,
+    .nav-links {
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+    }
+}
+
+/* Content-visibility for below-the-fold elements (reduces initial render work) */
+.features-grid,
+.how-to-box,
+.faq-item,
+.about-section,
+footer,
+.footer-glass {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 300px;
+}
+
+/* =========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ========================================= */
+
+/* Visible focus states for keyboard navigation */
+:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+}
+
+[data-theme='light'] :focus-visible {
+    outline-color: var(--primary);
+}
+
+/* Skip animation transitions when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================
+   CLS (Cumulative Layout Shift) PREVENTION
+   ========================================= */
+
+/* Reserve space for hero section to prevent layout shift */
+.hero-section {
+    min-height: 350px;
+}
+
+/* Reserve space for downloader box */
+.downloader-box {
+    min-height: 120px;
+}
+
+/* Reserve space for feature cards */
+.feature-card {
+    min-height: 180px;
+}
+
+/* Reserve space for navigation bar */
+#main-header {
+    min-height: 110px;
+}
+
+/* Reserve space for nav-bar buttons */
+.nav-bar {
+    min-height: 52px;
+}
+
+/* Images should have aspect-ratio to prevent CLS */
+.result-thumbnail img,
+.slide-item img {
+    aspect-ratio: 9/16;
+    object-fit: cover;
+}
+
+/* Ad container reserved space */
+.ad-container {
+    min-height: 250px;
+}
+
+/* Footer reserved space */
+.footer-glass {
+    min-height: 200px;
+}

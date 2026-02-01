@@ -61,6 +61,8 @@ const currentPath = Astro.url.pathname;
             <button
                 class="theme-toggle"
                 id="theme-btn"
+                role="switch"
+                aria-checked="false"
                 aria-label={t("common.toggle_theme")}
                 title={t("common.toggle_theme")}
             >
@@ -119,8 +121,10 @@ const currentPath = Astro.url.pathname;
             if (btn) {
                 if (theme === "light") {
                     btn.classList.add("light-mode-active");
+                    btn.setAttribute("aria-checked", "true");
                 } else {
                     btn.classList.remove("light-mode-active");
+                    btn.setAttribute("aria-checked", "false");
                 }
             }
         }

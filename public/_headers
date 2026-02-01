@@ -1,4 +1,10 @@
 # Cloudflare Pages Headers
+# Security Headers (Best Practices)
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
 # Cache static assets for 1 year
 
 /*.js
