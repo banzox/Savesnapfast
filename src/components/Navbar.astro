@@ -91,70 +91,44 @@ const currentPath = Astro.url.pathname;
 </header>
 
 <script is:inline>
-    // Theme Logic
+    // Theme Toggle Button Logic (uses global __theme from Layout)
     (function () {
-        function getTheme() {
-            if (
-                typeof localStorage !== "undefined" &&
-                localStorage.getItem("theme")
-            ) {
-                return localStorage.getItem("theme");
-            }
-            if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-                return "light";
-            }
-            return "dark";
-        }
-
-        function applyTheme(theme) {
-            if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-            } else {
-                document.documentElement.removeAttribute("data-theme");
-            }
-            localStorage.setItem("theme", theme);
-            updateThemeIcon(theme);
-        }
-
-        function updateThemeIcon(theme) {
+        function updateIcon(theme) {
             const btn = document.getElementById("theme-btn");
-            if (btn) {
-                if (theme === "light") {
-                    btn.classList.add("light-mode-active");
-                    btn.setAttribute("aria-checked", "true");
-                } else {
-                    btn.classList.remove("light-mode-active");
-                    btn.setAttribute("aria-checked", "false");
-                }
-            }
+            if (!btn) return;
+            btn.classList.toggle("light-mode-active", theme === "light");
+            btn.setAttribute(
+                "aria-checked",
+                theme === "light" ? "true" : "false",
+            );
         }
 
-        function initTheme() {
-            const currentTheme = getTheme();
-            applyTheme(currentTheme);
-
+        function initToggle() {
             const btn = document.getElementById("theme-btn");
-            if (btn) {
-                // Remove any existing listeners by using a named function or replacing the element
-                // But replacing element is slow. Better check if we already initialized.
-                if (btn.dataset.initialized) return;
+            if (!btn) return;
 
+            // Update icon to match current theme
+            const currentTheme = window.__theme?.getTheme() || "dark";
+            updateIcon(currentTheme);
+
+            // Only add listener if not already initialized
+            if (!btn.dataset.themeInit) {
                 btn.addEventListener("click", () => {
-                    const current = getTheme();
-                    const next = current === "dark" ? "light" : "dark";
-                    applyTheme(next);
+                    const newTheme = window.__theme?.toggle();
+                    if (newTheme) updateIcon(newTheme);
                 });
-                btn.dataset.initialized = "true";
+                btn.dataset.themeInit = "true";
             }
         }
 
-        initTheme();
-        document.addEventListener("astro:after-swap", () => {
-            initTheme();
+        // Listen for theme changes (from anywhere)
+        window.addEventListener("theme-changed", (e) => {
+            updateIcon(e.detail?.theme);
         });
-        document.addEventListener("astro:page-load", () => {
-            initTheme();
-        });
+
+        // Initialize on load and after page transitions
+        initToggle();
+        document.addEventListener("astro:page-load", initToggle);
     })();
 </script>
 

@@ -5,6 +5,7 @@ import Schema from "../components/Schema.astro";
 import Footer from "../components/Footer.astro";
 import NativeAd from "../components/NativeAd.astro";
 import { languages } from "../i18n/ui";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
     title: string;
@@ -74,6 +75,7 @@ const baseSlug = isLangPrefix
         <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+        <ViewTransitions />
         <!-- Font Awesome - Async loading for better performance -->
         <link
             rel="preload"
@@ -183,41 +185,82 @@ const baseSlug = isLangPrefix
         </noscript>
 
         <script is:inline>
-            // Initialize theme
-            const theme = (() => {
-                if (
-                    typeof localStorage !== "undefined" &&
-                    localStorage.getItem("theme")
-                ) {
-                    return localStorage.getItem("theme");
+            // ===============================================
+            // UNIFIED THEME SYSTEM - Persistent across pages
+            // ===============================================
+            (function () {
+                const THEME_KEY = "theme";
+
+                function getStoredTheme() {
+                    try {
+                        return localStorage.getItem(THEME_KEY);
+                    } catch {
+                        return null;
+                    }
                 }
-                if (
-                    window.matchMedia("(prefers-color-scheme: light)").matches
-                ) {
-                    return "light";
+
+                function getSystemTheme() {
+                    return window.matchMedia("(prefers-color-scheme: light)")
+                        .matches
+                        ? "light"
+                        : "dark";
                 }
-                return "dark";
-            })();
 
-            if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-            } else {
-                document.documentElement.removeAttribute("data-theme");
-            }
+                function getTheme() {
+                    return getStoredTheme() || getSystemTheme();
+                }
 
-            window.localStorage.setItem("theme", theme);
-
-            document.addEventListener("astro:after-swap", () => {
-                const theme = localStorage.getItem("theme");
-                if (theme === "light") {
-                    document.documentElement.setAttribute(
-                        "data-theme",
-                        "light",
+                function applyTheme(theme, save = true) {
+                    if (theme === "light") {
+                        document.documentElement.setAttribute(
+                            "data-theme",
+                            "light",
+                        );
+                    } else {
+                        document.documentElement.removeAttribute("data-theme");
+                    }
+                    if (save) {
+                        try {
+                            localStorage.setItem(THEME_KEY, theme);
+                        } catch {}
+                    }
+                    // Dispatch custom event for icon updates
+                    window.dispatchEvent(
+                        new CustomEvent("theme-changed", { detail: { theme } }),
                     );
-                } else {
-                    document.documentElement.removeAttribute("data-theme");
                 }
-            });
+
+                // Apply immediately on first load
+                applyTheme(getTheme());
+
+                // Expose globally for Navbar toggle
+                window.__theme = {
+                    getTheme,
+                    applyTheme,
+                    toggle: function () {
+                        const current = getTheme();
+                        const next = current === "dark" ? "light" : "dark";
+                        applyTheme(next);
+                        return next;
+                    },
+                };
+
+                // Re-apply on View Transitions swap
+                document.addEventListener("astro:after-swap", () => {
+                    applyTheme(getTheme(), false);
+                });
+
+                // Also handle before swap to prevent flash
+                document.addEventListener("astro:before-swap", (e) => {
+                    const theme = getTheme();
+                    if (theme === "light") {
+                        e.newDocument.documentElement.setAttribute(
+                            "data-theme",
+                            "light",
+                        );
+                    }
+                });
+            })();
         </script>
     </head>
     <body>

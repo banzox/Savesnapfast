@@ -1,11 +1,9 @@
 ---
 import { languages, defaultLang } from "../i18n/ui";
-
 import { useTranslations } from "../utils/i18n";
 
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
-// Ensure we use the languages map imported from the source of truth
 const currentLangName =
     languages[lang as keyof typeof languages] || languages["en"];
 
@@ -14,35 +12,26 @@ const search = Astro.url.search;
 
 function getPathForLanguage(targetLang: string) {
     let currentPath = pathname;
-
-    // Remove trailing slash
     if (currentPath.endsWith("/") && currentPath.length > 1) {
         currentPath = currentPath.slice(0, -1);
     }
 
-    // --- EXPLICIT FORCE FIX FOR TOOLS ---
-    // Verify if we are on a specific tool page regardless of current language prefix
     const isMp3 = currentPath.includes("/mp3");
     const isStory = currentPath.includes("/story");
     const isSlideshow = currentPath.includes("/slideshow");
 
-    // If we are on a known tool page, FORCE the correct path structure
     if (isMp3 || isStory || isSlideshow) {
         let toolSlug = "";
         if (isMp3) toolSlug = "/mp3";
         if (isStory) toolSlug = "/story";
         if (isSlideshow) toolSlug = "/slideshow";
 
-        // If target is default (English), return clean slug (e.g. /mp3)
         if (targetLang === defaultLang) {
             return toolSlug + search;
         }
-        // If target is other, return /lang/slug (e.g. /es/mp3)
         return `/${targetLang}${toolSlug}${search}`;
     }
 
-    // --- STANDARD LOGIC FOR OTHER PAGES (Home, Legal, etc) ---
-    // 1. Strip existing language prefix
     let pathNoLang = currentPath;
     const langCodes = Object.keys(languages).filter((k) => k !== defaultLang);
 
@@ -56,7 +45,6 @@ function getPathForLanguage(targetLang: string) {
 
     if (!pathNoLang.startsWith("/")) pathNoLang = "/" + pathNoLang;
 
-    // 2. Construct New Path
     if (targetLang === defaultLang) {
         return pathNoLang === "/" ? "/" : pathNoLang + search;
     } else {
@@ -68,7 +56,8 @@ function getPathForLanguage(targetLang: string) {
 }
 ---
 
-<div class="language-wrapper">
+<!-- Trigger Button -->
+<div class="lang-trigger-wrapper">
     <button
         id="lang-toggle-btn"
         class="lang-btn"
@@ -81,23 +70,26 @@ function getPathForLanguage(targetLang: string) {
         <span class="lang-text">{currentLangName}</span>
         <i class="fas fa-chevron-down arrow-icon"></i>
     </button>
+</div>
 
-    <div id="lang-menu-container" class="lang-menu-container">
-        <div class="lang-dropdown">
-            <div class="dropdown-header">
-                <span class="header-title">
-                    <i class="fas fa-language"></i>
-                    {t("common.select_language")}
-                </span>
-                <button
-                    id="close-lang-btn"
-                    class="close-btn"
-                    aria-label="Close"
-                >
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
+<!-- Modal (Outside wrapper for proper z-index) -->
+<div id="lang-modal" class="lang-modal" aria-hidden="true">
+    <div class="lang-modal-backdrop" id="lang-backdrop"></div>
+    <div class="lang-modal-dialog">
+        <div class="lang-modal-header">
+            <span class="lang-modal-title">
+                <i class="fas fa-language"></i>
+                {t("common.select_language")}
+            </span>
+            <button
+                id="lang-close-btn"
+                class="lang-close-btn"
+                aria-label="Close"
+            >
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="lang-modal-body">
             <div class="lang-grid">
                 {
                     Object.entries(languages).map(([code, name]) => (
@@ -115,108 +107,83 @@ function getPathForLanguage(targetLang: string) {
                 }
             </div>
         </div>
-        <div id="lang-overlay" class="lang-overlay"></div>
     </div>
 </div>
 
 <script>
-    function initLanguageSelector() {
+    function initLangModal() {
         const btn = document.getElementById("lang-toggle-btn");
-        const container = document.getElementById("lang-menu-container");
-        const dropdown = container?.querySelector(".lang-dropdown");
-        const overlay = document.getElementById("lang-overlay");
-        const closeBtn = document.getElementById("close-lang-btn");
+        const modal = document.getElementById("lang-modal");
+        const backdrop = document.getElementById("lang-backdrop");
+        const closeBtn = document.getElementById("lang-close-btn");
 
-        if (!btn || !container || !overlay || !closeBtn || !dropdown) return;
-        if (btn.dataset.initialized) return;
+        if (!btn || !modal || !backdrop || !closeBtn) return;
 
-        // --- CLIENT SIDE FIX FOR LINKS (Preserved) ---
-        const currentPath = window.location.pathname;
-        const isMp3 = currentPath.includes("/mp3");
-        const isStory = currentPath.includes("/story");
-        const isSlideshow = currentPath.includes("/slideshow");
-
-        if (isMp3 || isStory || isSlideshow) {
-            const langLinks = document.querySelectorAll(".lang-option");
-            const toolSlug = isMp3 ? "/mp3" : isStory ? "/story" : "/slideshow";
-
-            langLinks.forEach((link) => {
-                const originalHref = link.getAttribute("href");
-                if (originalHref && !originalHref.includes(toolSlug)) {
-                    const cleanHref =
-                        originalHref.endsWith("/") && originalHref.length > 1
-                            ? originalHref.slice(0, -1)
-                            : originalHref;
-                    link.setAttribute("href", cleanHref + toolSlug);
-                }
-            });
+        // Move modal to body to avoid stacking context issues with footer backdrop-filter
+        if (modal.parentElement !== document.body) {
+            document.body.appendChild(modal);
         }
-        // ----------------------------------
 
-        const toggleMenu = (show) => {
-            const isShow =
-                show === true ||
-                (show === undefined && !container.classList.contains("show"));
+        if (btn.dataset.langInit) return;
 
-            btn.setAttribute("aria-expanded", isShow ? "true" : "false");
-            btn.classList.toggle("active", isShow);
-            container.classList.toggle("show", isShow);
+        const openModal = () => {
+            modal.classList.add("show");
+            // Force redraw/recalc
+            void modal.offsetWidth;
+            modal.setAttribute("aria-hidden", "false");
+            btn.setAttribute("aria-expanded", "true");
+            document.body.style.overflow = "hidden";
         };
 
-        const closeMenu = () => toggleMenu(false);
+        const closeModal = () => {
+            modal.classList.remove("show");
+
+            // Wait for transition to finish before hiding (optional improvement, keeping simple for now)
+            setTimeout(() => {
+                if (!modal.classList.contains("show")) {
+                    modal.setAttribute("aria-hidden", "true");
+                }
+            }, 300);
+
+            btn.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+        };
 
         btn.addEventListener("click", (e) => {
             e.stopPropagation();
-            toggleMenu();
+            if (modal.classList.contains("show")) {
+                closeModal();
+            } else {
+                openModal();
+            }
         });
 
-        closeBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            closeMenu();
-        });
-
-        overlay.addEventListener("click", closeMenu);
-        container.addEventListener("click", (e) => {
-            if (e.target === container) closeMenu();
-        });
+        closeBtn.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", closeModal);
 
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && container.classList.contains("show")) {
-                closeMenu();
+            if (e.key === "Escape" && modal.classList.contains("show")) {
+                closeModal();
             }
         });
 
-        document.addEventListener("click", (e) => {
-            if (
-                container.classList.contains("show") &&
-                !dropdown.contains(e.target) &&
-                !btn.contains(e.target)
-            ) {
-                closeMenu();
-            }
-        });
-
-        btn.dataset.initialized = "true";
+        btn.dataset.langInit = "true";
     }
 
-    // Run on load
-    initLanguageSelector();
-    document.addEventListener("astro:page-load", initLanguageSelector);
-    document.addEventListener("astro:after-swap", initLanguageSelector);
+    initLangModal();
+    document.addEventListener("astro:page-load", initLangModal);
+    document.addEventListener("astro:after-swap", initLangModal);
 </script>
 
 <style>
-    /* Wrapper */
-    .language-wrapper {
+    /* ==========================================
+       LANGUAGE TRIGGER BUTTON
+       ========================================== */
+    .lang-trigger-wrapper {
         position: relative;
-        z-index: 2001;
+        z-index: 100;
     }
 
-    /* 
-    ========================================
-    TRIGGER BUTTON (VIP STYLE)
-    ========================================
-    */
     .lang-btn {
         display: flex;
         align-items: center;
@@ -227,12 +194,11 @@ function getPathForLanguage(targetLang: string) {
         border-radius: 8px;
         color: var(--text-main, #fff);
         cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: all 0.3s ease;
         font-family: "Inter", sans-serif;
         font-weight: 600;
         font-size: 0.9rem;
         backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
     }
 
     :global([data-theme="light"]) .lang-btn {
@@ -241,30 +207,9 @@ function getPathForLanguage(targetLang: string) {
         color: #333;
     }
 
-    .lang-btn:hover,
-    .lang-btn.active {
-        background: rgba(15, 12, 41, 0.95); /* Match dropdown bg */
-        border-color: rgba(255, 255, 255, 0.1);
-        transform: none; /* No movement when active */
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .lang-btn.active {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-bottom: 1px solid transparent; /* Hide separator */
-        z-index: 3001; /* Above menu */
-    }
-
-    :global([data-theme="light"]) .lang-btn:hover,
-    :global([data-theme="light"]) .lang-btn.active {
-        background: rgba(255, 255, 255, 0.95);
-        color: #000;
-        border-color: rgba(0, 0, 0, 0.1);
-    }
-
-    :global([data-theme="light"]) .lang-btn.active {
-        border-bottom-color: transparent;
+    .lang-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
     }
 
     :global([data-theme="light"]) .lang-btn:hover {
@@ -277,182 +222,222 @@ function getPathForLanguage(targetLang: string) {
     }
 
     :global([data-theme="light"]) .lang-icon {
-        color: #ff0050;
+        color: var(--primary);
     }
 
     .arrow-icon {
-        font-size: 0.75rem;
-        transition: transform 0.3s ease;
+        font-size: 0.7rem;
         opacity: 0.7;
+        transition: transform 0.3s ease;
     }
 
-    .lang-btn.active .arrow-icon {
+    .lang-btn[aria-expanded="true"] .arrow-icon {
         transform: rotate(180deg);
     }
 
-    /* 
-    ========================================
-    LANDSCAPE / GRID MENU (Unified)
-    ========================================
-    */
-    .lang-menu-container {
+    /* ==========================================
+       MODAL OVERLAY (FULLSCREEN)
+       ========================================== */
+    .lang-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999999; /* VERY HIGH - above everything */
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .lang-modal.show {
+        display: flex;
+    }
+
+    .lang-modal-backdrop {
         position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 600px; /* Wide Landscape */
-        max-width: 90vw;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        z-index: 3000;
-        pointer-events: none;
-        margin-top: 10px; /* Slight gap for floating effect, or 0 for merge? User said merged. */
-        margin-top: 0;
-        padding-top: 10px; /* Invisible hover bridge */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
 
-    .lang-menu-container.show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) translateY(0);
-        pointer-events: auto;
-    }
-
-    .lang-dropdown {
-        background: rgba(15, 12, 41, 0.95);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px; /* Sharp corners */
-        padding: 15px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    /* ==========================================
+       MODAL DIALOG (CENTERED CARD)
+       ========================================== */
+    .lang-modal-dialog {
+        position: relative;
+        z-index: 1;
+        width: min(650px, 95vw);
+        max-height: calc(100vh - 80px);
+        background: rgba(15, 12, 41, 0.98);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+        box-shadow: 0 30px 100px rgba(0, 0, 0, 0.7);
         display: flex;
         flex-direction: column;
-        /* Create a "Tab" effect pointing to button? Or just nice floating card */
+        overflow: hidden;
+        animation: modalEnter 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Connect button to menu visually? 
-       Since menu is much wider, direct border connection looks weird. 
-       A nice floating landscape card is usually better for 'Premium'. 
-       I will stick to floating close to it.
-    */
+    @keyframes modalEnter {
+        from {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
 
-    :global([data-theme="light"]) .lang-dropdown {
+    :global([data-theme="light"]) .lang-modal-dialog {
         background: rgba(255, 255, 255, 0.98);
         border-color: rgba(0, 0, 0, 0.1);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 30px 100px rgba(0, 0, 0, 0.25);
     }
 
-    .dropdown-header {
-        display: none !important;
+    /* Header */
+    .lang-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 22px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Grid Layout */
+    :global([data-theme="light"]) .lang-modal-header {
+        border-bottom-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .lang-modal-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text-main, #fff);
+    }
+
+    .lang-modal-title i {
+        color: var(--primary, #ff0050);
+    }
+
+    .lang-close-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        border: none;
+        color: var(--text-main, #fff);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+    }
+
+    :global([data-theme="light"]) .lang-close-btn {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .lang-close-btn:hover {
+        background: rgba(255, 0, 80, 0.2);
+        color: #ff0050;
+        transform: rotate(90deg);
+    }
+
+    /* Body */
+    .lang-modal-body {
+        padding: 20px;
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    /* Grid */
     .lang-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
-        gap: 8px;
-        max-height: 400px;
-        overflow-y: auto;
-        padding-right: 5px;
-    }
-
-    /* Scrollbar */
-    .lang-grid::-webkit-scrollbar {
-        width: 4px;
-    }
-    .lang-grid::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 4px;
-    }
-    :global([data-theme="light"]) .lang-grid::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.2);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
 
     .lang-option {
         display: flex;
         align-items: center;
         gap: 10px;
-        padding: 10px 14px;
-        border-radius: 4px;
-        background: rgba(255, 255, 255, 0.03);
-        color: var(--text-dim);
-        font-size: 0.9rem;
+        padding: 12px 16px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-dim, rgba(255, 255, 255, 0.7));
+        font-size: 0.95rem;
         transition: all 0.2s ease;
         text-decoration: none;
         border: 1px solid transparent;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     :global([data-theme="light"]) .lang-option {
         background: rgba(0, 0, 0, 0.03);
-        color: #444;
+        color: #555;
     }
 
     .lang-option:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.12);
         color: #fff;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     :global([data-theme="light"]) .lang-option:hover {
         background: #fff;
         color: #000;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .lang-option.active {
-        background: var(--primary);
+        background: linear-gradient(
+            135deg,
+            var(--primary, #ff0050) 0%,
+            #ff2d78 100%
+        );
         color: white !important;
         font-weight: 600;
-        border: none;
-        box-shadow: 0 4px 10px rgba(var(--primary-rgb), 0.3);
+        box-shadow: 0 4px 15px rgba(255, 0, 80, 0.4);
     }
 
     .lang-name {
+        flex: 1;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .check-icon {
-        margin-left: auto;
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
-    /* Overlay */
-    .lang-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        background: transparent;
-        display: none;
-    }
-    .lang-menu-container.show .lang-overlay {
-        display: block;
-    }
+    /* Mobile */
+    @media (max-width: 640px) {
+        .lang-modal {
+            padding: 15px;
+        }
 
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-        .lang-menu-container {
-            width: 95vw; /* Full width minus margin */
-            left: 50%;
-            transform: translateX(-50%);
-            top: 100%;
-            margin-top: 10px;
+        .lang-modal-dialog {
+            width: 100%;
+            max-height: calc(100vh - 60px);
         }
 
         .lang-grid {
-            grid-template-columns: repeat(2, 1fr); /* 2 Columns on mobile */
-            max-height: 50vh;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .lang-option {
-            padding: 12px;
-            font-size: 0.95rem; /* Larger text for touch */
+            padding: 14px;
+            font-size: 1rem;
         }
     }
 </style>
