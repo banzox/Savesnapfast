@@ -183,13 +183,19 @@ export default function Downloader(props) {
         setResult(null);
 
         try {
-            const apiUrl = `${WORKER_URL}/?url=${encodeURIComponent(url)}`;
-            const response = await fetch(apiUrl);
+            // Updated to use POST request as per new API requirements
+            const response = await fetch(WORKER_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: url })
+            });
+
             const data = await response.json();
 
             if (data.error) throw new Error(data.error);
 
-            const res = data.result || data;
+            // New API returns data directly (video, cover, author, etc.)
+            const res = data;
 
             // STRICT MODE VALIDATION
             const validation = validateResultType(res, mode);
