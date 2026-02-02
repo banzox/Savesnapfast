@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Siden ble ikke funnet",
+    "home_btn": "Gå til hjemmesiden"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Last ned TikTok-video uten vannmerke (HD & 4K)",
@@ -50,27 +50,27 @@
     "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
-    "title": "Frequently Asked Questions (FAQ)",
-    "q1": "How do I download TikTok videos without watermark?",
-    "a1": "Downloading TikTok videos without watermark is easy with SaveTikFast. Simply copy the TikTok video link from the app, paste it into our download box, and click the download button. Our advanced technology automatically removes the TikTok watermark, giving you a clean video file. This works on all devices including iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac, and Windows PC. You can use any browser like Chrome, Safari, Firefox, or Edge. Unlike SSSTik or SnapTik, SaveTikFast provides the highest quality output with instant processing.",
-    "q2": "Is SaveTikFast completely free to use?",
-    "a2": "Yes, SaveTikFast is 100% free and will always remain free. There are no hidden fees, no premium subscriptions, and no daily download limits. You can download unlimited TikTok videos without watermark, convert to MP3, save stories, and download slideshows - all completely free. We don't require registration or login. Our service is supported by minimal ads, allowing us to offer free TikTok downloads to millions of users worldwide on any device.",
-    "q3": "What devices and browsers are supported?",
-    "a3": "SaveTikFast works on virtually every device and browser. Supported devices include iPhone (all models including iPhone 15, 14, 13), Android phones (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), tablets (iPad, Samsung Tab), and computers (MacBook, iMac, Windows PC, Chromebook). Supported browsers include Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, and UC Browser. No app installation is needed - everything works directly in your web browser.",
-    "q4": "What video quality can I download?",
-    "a4": "SaveTikFast downloads TikTok videos in the highest quality available. This includes 720p HD, 1080p Full HD, 2K, and even 4K resolution when the original video supports it. We never compress or reduce video quality - you get the exact same quality as the original TikTok upload. This makes SaveTikFast superior to other downloaders like TikMate, SaveFrom, or MusicallyDown which often compress videos.",
-    "q5": "Is it safe to use SaveTikFast?",
-    "a5": "Absolutely. SaveTikFast is completely safe and secure. We use SSL encryption to protect your connection, we don't store any of your personal data, and we don't require login or registration. Your downloaded videos are processed instantly and not stored on our servers. We don't install anything on your device. SaveTikFast has been trusted by millions of users since 2024 for safe TikTok video downloads.",
-    "q6": "How is SaveTikFast better than SSSTik or SnapTik?",
-    "a6": "SaveTikFast offers several advantages over SSSTik, SnapTik, TikMate, and other TikTok downloaders. Our service is faster (downloads complete in 3 seconds), provides higher quality output (up to 4K), has a cleaner interface with fewer ads, works more reliably on all devices, and offers additional features like MP3 conversion, story downloads, and slideshow extraction. Many users switch to SaveTikFast after experiencing issues with other downloaders.",
-    "q7": "Can I download TikTok videos on iPhone?",
-    "a7": "Yes, downloading TikTok videos on iPhone is easy with SaveTikFast. Open TikTok, copy the video link, then open Safari or Chrome and go to SaveTikFast. Paste the link and tap download. The video will save directly to your iPhone's Photos app or Files. This works on all iPhone models including iPhone 15, 14, 13, 12, and older. No app installation required - everything works in your browser.",
-    "q8": "Can I download private TikTok videos?",
-    "a8": "SaveTikFast can only download public TikTok videos. Private videos (visible only to the creator or approved followers) cannot be downloaded by any online tool due to TikTok's privacy settings. If you have permission from the creator, ask them to make the video public temporarily or share it directly with you through TikTok's built-in sharing features.",
-    "q9": "How do I download TikTok on Samsung or Android?",
-    "a9": "Downloading TikTok videos on Samsung Galaxy or any Android phone is simple. Open the TikTok app, tap Share on the video you want, and copy the link. Then open Chrome, Firefox, or Samsung Internet browser and visit SaveTikFast. Paste the link in the download box and tap the download button. The video will save to your Downloads folder or Gallery. Works on all Android devices including Samsung, Huawei, Xiaomi, OPPO, and Google Pixel.",
-    "q10": "Why choose SaveTikFast over other TikTok downloaders?",
-    "a10": "SaveTikFast is the best choice for TikTok downloads because we combine speed, quality, and reliability. We offer the fastest download speeds (3 seconds), highest video quality (up to 4K), watermark removal, MP3 conversion, story downloads, and slideshow extraction - all in one free tool. Our clean interface works perfectly on all devices and browsers. We're trusted by millions of users as the best alternative to SSSTik, SnapTik, TikMate, SaveFrom, and MusicallyDown."
+    "title": "Ofte stilte spørsmål (FAQ)",
+    "q1": "Hvordan laster jeg ned TikTok-videoer uten vannmerke?",
+    "a1": "Å laste ned TikTok-videoer uten vannmerke er enkelt med SaveTikFast. Bare kopier TikTok-videolenken fra appen, lim den inn i nedlastingsboksen vår og klikk på nedlastingsknappen. Vår avanserte teknologi fjerner automatisk TikTok-vannmerket, og gir deg en ren videofil. Dette fungerer på alle enheter inkludert iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac og Windows PC. Du kan bruke hvilken som helst nettleser som Chrome, Safari, Firefox eller Edge. I motsetning til SSSTik eller SnapTik gir SaveTikFast høyeste kvalitet med umiddelbar prosessering.",
+    "q2": "Er SaveTikFast helt gratis å bruke?",
+    "a2": "Ja, SaveTikFast er 100% gratis og vil alltid forbli gratis. Det er ingen skjulte avgifter, ingen premiumabonnementer og ingen daglige nedlastingsgrenser. Du kan laste ned ubegrensede TikTok-videoer uten vannmerke, konvertere til MP3, lagre stories og laste ned lysbildefremvisninger - alt helt gratis. Vi krever ikke registrering eller innlogging. Tjenesten vår støttes av minimale annonser, noe som gjør det mulig for oss å tilby gratis TikTok-nedlastinger til millioner av brukere over hele verden på alle enheter.",
+    "q3": "Hvilke enheter og nettlesere støttes?",
+    "a3": "SaveTikFast fungerer på praktisk talt alle enheter og nettlesere. Støttede enheter inkluderer iPhone (alle modeller inkludert iPhone 15, 14, 13), Android-telefoner (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), nettbrett (iPad, Samsung Tab) og datamaskiner (MacBook, iMac, Windows PC, Chromebook). Støttede nettlesere inkluderer Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet og UC Browser. Ingen appinstallasjon nødvendig - alt fungerer direkte i nettleseren din.",
+    "q4": "Hvilken videokvalitet kan jeg laste ned?",
+    "a4": "SaveTikFast laster ned TikTok-videoer i høyeste tilgjengelige kvalitet. Dette inkluderer 720p HD, 1080p Full HD, 2K og til og med 4K-oppløsning når den originale videoen støtter det. Vi komprimerer eller reduserer aldri videokvaliteten - du får nøyaktig samme kvalitet som den originale TikTok-opplastingen. Dette gjør SaveTikFast overlegen i forhold til andre nedlastere som TikMate, SaveFrom eller MusicallyDown som ofte komprimerer videoer.",
+    "q5": "Er det trygt å bruke SaveTikFast?",
+    "a5": "Absolutt. SaveTikFast er helt trygt og sikkert. Vi bruker SSL-kryptering for å beskytte tilkoblingen din, vi lagrer ikke noen av dine personlige data, og vi krever ikke innlogging eller registrering. Nedlastede videoer behandles umiddelbart og lagres ikke på våre servere. Vi installerer ingenting på enheten din. SaveTikFast har vært klarert av millioner av brukere siden 2024 for sikker nedlasting av TikTok-videoer.",
+    "q6": "Hvordan er SaveTikFast bedre enn SSSTik eller SnapTik?",
+    "a6": "SaveTikFast tilbyr flere fordeler i forhold til SSSTik, SnapTik, TikMate og andre TikTok-nedlastere. Tjenesten vår er raskere (nedlastinger fullføres på 3 sekunder), gir høyere kvalitet (opptil 4K), har et renere grensesnitt med færre annonser, fungerer mer pålitelig på alle enheter, og tilbyr tilleggsfunksjoner som MP3-konvertering, story-nedlastinger og lysbildeutvinning. Mange brukere bytter til SaveTikFast etter å ha opplevd problemer med andre nedlastere.",
+    "q7": "Kan jeg laste ned TikTok-videoer på iPhone?",
+    "a7": "Ja, å laste ned TikTok-videoer på iPhone er enkelt med SaveTikFast. Åpne TikTok, kopier videolenken, åpne deretter Safari eller Chrome og gå til SaveTikFast. Lim inn lenken og trykk på nedlastingsknappen. Videoen vil lagres direkte til iPhone-ens Photos-app eller Filer. Dette fungerer på alle iPhone-modeller inkludert iPhone 15, 14, 13, 12 og eldre. Ingen appinstallasjon nødvendig - alt fungerer i nettleseren din.",
+    "q8": "Kan jeg laste ned private TikTok-videoer?",
+    "a8": "SaveTikFast kan bare laste ned offentlige TikTok-videoer. Private videoer (kun synlige for skaperen eller godkjente følgere) kan ikke lastes ned av noe nettbasert verktøy på grunn av TikToks personverninnstillinger. Hvis du har tillatelse fra skaperen, be dem om å gjøre videoen offentlig midlertidig eller dele den direkte med deg gjennom TikToks innebygde delingsfunksjoner.",
+    "q9": "Hvordan laster jeg ned TikTok på Samsung eller Android?",
+    "a9": "Å laste ned TikTok-videoer på Samsung Galaxy eller hvilken som helst Android-telefon er enkelt. Åpne TikTok-appen, trykk på Del på videoen du vil ha, og kopier lenken. Åpne deretter Chrome, Firefox eller Samsung Internet-nettleseren og besøk SaveTikFast. Lim inn lenken i nedlastingsboksen og trykk på nedlastingsknappen. Videoen vil lagres i Downloads-mappen eller Galleriet. Fungerer på alle Android-enheter inkludert Samsung, Huawei, Xiaomi, OPPO og Google Pixel.",
+    "q10": "Hvorfor velge SaveTikFast fremfor andre TikTok-nedlastere?",
+    "a10": "SaveTikFast er det beste valget for TikTok-nedlastinger fordi vi kombinerer hastighet, kvalitet og pålitelighet. Vi tilbyr de raskeste nedlastingshastighetene (3 sekunder), høyeste videokvalitet (opptil 4K), fjerning av vannmerke, MP3-konvertering, story-nedlastinger og lysbildeutvinning - alt i ett gratis verktøy. Vårt rene grensesnitt fungerer perfekt på alle enheter og nettlesere. Vi er klarert av millioner av brukere som det beste alternativet til SSSTik, SnapTik, TikMate, SaveFrom og MusicallyDown."
   },
   "pages": {
     "about": {
@@ -103,36 +103,36 @@
   },
   "features": {
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without watermark in original HD quality. SaveTikFast removes the TikTok logo automatically, giving you cleaner videos than SSSTik, SnapTik, or TikMate. Perfect for reposting on Instagram, YouTube Shorts, or saving to your gallery."
+      "title": "Uten vannmerke",
+      "desc": "Last ned TikTok-videoer uten vannmerke i original HD-kvalitet. SaveTikFast fjerner automatisk TikTok-logoen, og gir deg renere videoer enn SSSTik, SnapTik eller TikMate. Perfekt for å publisere på nytt på Instagram, YouTube Shorts eller lagre i galleriet ditt."
     },
     "fast": {
-      "title": "Lightning Fast",
-      "desc": "The fastest TikTok video downloader online. Save any TikTok video in just 3 seconds on iPhone, Android, Samsung, Huawei, iPad, PC, or Mac. Our servers are optimized for speed, making us faster than SaveFrom and MusicallyDown."
+      "title": "Lynrask hastighet",
+      "desc": "Den raskeste TikTok-videonedlasteren på nettet. Lagre hvilken som helst TikTok-video på bare 3 sekunder på iPhone, Android, Samsung, Huawei, iPad, PC eller Mac. Våre servere er optimalisert for hastighet, noe som gjør oss raskere enn SaveFrom og MusicallyDown."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Download TikTok videos in the highest quality available - 720p, 1080p Full HD, 2K, and even 4K when available. We preserve the original video quality without compression, unlike other TikTok downloaders."
+      "title": "HD &amp; 4K-kvalitet",
+      "desc": "Last ned TikTok-videoer i høyeste tilgjengelige kvalitet - 720p, 1080p Full HD, 2K og til og med 4K når tilgjengelig. Vi bevarer den originale videokvaliteten uten komprimering, i motsetning til andre TikTok-nedlastere."
     },
     "device": {
-      "title": "All Devices Supported",
-      "desc": "Works perfectly on every device - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC, and Chromebook. No app installation required."
+      "title": "Alle enheter støttes",
+      "desc": "Fungerer perfekt på alle enheter - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC og Chromebook. Ingen appinstallasjon nødvendig."
     },
     "free": {
-      "title": "100% Free Forever",
-      "desc": "Unlimited TikTok video downloads with no hidden fees, no registration required, and no daily limits. SaveTikFast is completely free and will always remain free for all users worldwide."
+      "title": "100% gratis for alltid",
+      "desc": "Ubegrensede TikTok-videonedlastinger uten skjulte kostnader, ingen registrering nødvendig og ingen daglige begrensninger. SaveTikFast er helt gratis og vil alltid forbli gratis for alle brukere over hele verden."
     },
     "secure": {
-      "title": "Private & Secure",
-      "desc": "Your privacy matters. We don't store your data, don't require login, and don't track your downloads. Safe and anonymous TikTok video downloading with SSL encryption."
+      "title": "Privat &amp; sikker",
+      "desc": "Ditt personvern betyr noe. Vi lagrer ikke dataene dine, krever ikke innlogging og sporer ikke nedlastingene dine. Sikker og anonym nedlasting av TikTok-videoer med SSL-kryptering."
     },
     "browser": {
-      "title": "All Browsers",
-      "desc": "Works instantly on Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, and UC Browser. No extensions or plugins needed - just paste and download."
+      "title": "Alle nettlesere",
+      "desc": "Fungerer umiddelbart på Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet og UC Browser. Ingen utvidelser eller plugins nødvendig - bare lim inn og last ned."
     },
     "batch": {
-      "title": "Batch Download",
-      "desc": "Save multiple TikTok videos quickly. Download your favorite creator's entire collection faster than any other tool. Better bulk downloading than SSSTik or SnapTik."
+      "title": "Flernedlasting",
+      "desc": "Lagre flere TikTok-videoer raskt. Last ned hele samlingen til din favoritt-creator raskere enn noe annet verktøy. Bedre massednedlasting enn SSSTik eller SnapTik."
     }
   },
   "how_to": {
