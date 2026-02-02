@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "页面未找到",
+      "home_btn": "回到首页"
     },
     "fast": {
       "title": "极速下载",

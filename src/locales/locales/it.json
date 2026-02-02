@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Pagina non trovata",
+      "home_btn": "Torna alla Home"
     },
     "fast": {
       "title": "Download Super Veloce",

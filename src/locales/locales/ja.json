@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "ページが見つかりません",
+      "home_btn": "ホームへ戻る"
     },
     "fast": {
       "title": "超高速ダウンロード",

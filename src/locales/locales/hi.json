@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "पृष्ठ नहीं मिला",
+      "home_btn": "होमपेज پر जाएं"
     },
     "fast": {
       "title": "सुपर फास्ट डाउनलोड",

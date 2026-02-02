@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Sayfa Bulunamadı",
+      "home_btn": "Ana Sayfaya Git"
     },
     "fast": {
       "title": "Süper Hızlı İndirme",

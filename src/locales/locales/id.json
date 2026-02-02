@@ -1,11 +1,11 @@
 {
-  "common": {
-    "select_language": "Pilih Bahasa",
-    "toggle_theme": "Alihkan mode gelap/terang"
-  },
   "404": {
     "title": "Halaman tidak ditemukan",
     "home_btn": "Kembali ke Beranda"
+  },
+  "common": {
+    "select_language": "Pilih Bahasa",
+    "toggle_theme": "Alihkan mode gelap/terang"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Download Video TikTok Tanpa Watermark (HD & 4K)",
@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Halaman tidak ditemukan",
+      "home_btn": "Kembali ke Beranda"
     },
     "fast": {
       "title": "Unduhan Super Cepat",

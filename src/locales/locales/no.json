@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Siden ble ikke funnet",
+    "home_btn": "Gå til startsiden"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Last ned TikTok-video uten vannmerke (HD & 4K)",
@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Siden ble ikke funnet",
+      "home_btn": "Gå til startsiden"
     },
     "fast": {
       "title": "Superrask nedlasting",

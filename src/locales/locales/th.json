@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "ไม่พบหน้านี้",
+      "home_btn": "กลับสู่หน้าหลัก"
     },
     "fast": {
       "title": "ดาวน์โหลดเร็วสุดขีด",

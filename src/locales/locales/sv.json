@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Sidan hittades inte",
+    "home_btn": "Gå till startsidan"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Ladda ner TikTok-video utan vattenstämpel (HD & 4K)",
@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Sidan hittades inte",
+      "home_btn": "Gå till startsidan"
     },
     "fast": {
       "title": "Supersnabb nedladdning",

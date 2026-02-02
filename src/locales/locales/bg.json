@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Страницата не е намерена",
+    "home_btn": "Към началната страница"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Изтегляне на TikTok видео без воден знак (HD & 4K)",
@@ -246,8 +246,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Страницата не е намерена",
+      "home_btn": "Към началната страница"
     },
     "fast": {
       "title": "Fast Download",

@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Không tìm thấy trang",
+      "home_btn": "Về trang chủ"
     },
     "fast": {
       "title": "Tải xuống cực nhanh",

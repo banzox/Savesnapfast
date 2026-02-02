@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Halaman Tidak Ditemui",
+    "home_btn": "Kembali ke Halaman Utama"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Muat Turun Video TikTok Tanpa Tanda Air (HD & 4K)",
@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Halaman Tidak Ditemui",
+      "home_btn": "Kembali ke Halaman Utama"
     },
     "fast": {
       "title": "Muat Turun Sangat Pantas",

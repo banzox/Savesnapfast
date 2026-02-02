@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Seite nicht gefunden",
+      "home_btn": "Zur Startseite"
     },
     "fast": {
       "title": "Superschneller Download",

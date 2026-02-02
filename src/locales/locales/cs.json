@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Stránka nenalezena",
+    "home_btn": "Zpět na hlavní stránku"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Stáhnout TikTok video bez vodoznaku (HD & 4K)",
@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Stránka nenalezena",
+      "home_btn": "Zpět na hlavní stránku"
     },
     "fast": {
       "title": "Super rychlé stahování",

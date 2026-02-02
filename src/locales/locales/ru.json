@@ -1,11 +1,11 @@
 {
-  "common": {
-    "select_language": "Выбрать язык",
-    "toggle_theme": "Переключить темную/светлую тему"
-  },
   "404": {
     "title": "Страница не найдена",
     "home_btn": "На главную"
+  },
+  "common": {
+    "select_language": "Выбрать язык",
+    "toggle_theme": "Переключить темную/светлую тему"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Скачать видео с Тик Ток без водяного знака (HD & 4K)",
@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Страница не найдена",
+      "home_btn": "На главную"
     },
     "fast": {
       "title": "Быстрая загрузка",

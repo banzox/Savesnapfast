@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Η σελίδα δεν βρέθηκε",
+    "home_btn": "Επιστροφή στην αρχική"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Λήψη βίντεο TikTok χωρίς υδατογράφημα (HD & 4K)",
@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Η σελίδα δεν βρέθηκε",
+      "home_btn": "Επιστροφή στην αρχική"
     },
     "fast": {
       "title": "Εξαιρετικά γρήγορη λήψη",

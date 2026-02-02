@@ -1,11 +1,11 @@
 {
-  "common": {
-    "select_language": "Seleccionar idioma",
-    "toggle_theme": "Alternar modo claro/oscuro"
-  },
   "404": {
     "title": "Página no encontrada",
     "home_btn": "Ir al inicio"
+  },
+  "common": {
+    "select_language": "Seleccionar idioma",
+    "toggle_theme": "Alternar modo claro/oscuro"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Descargar Videos de TikTok Sin Marca de Agua (HD & 4K)",
@@ -103,8 +103,8 @@
   },
   "features": {
     "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+      "title": "Página no encontrada",
+      "home_btn": "Ir al inicio"
     },
     "fast": {
       "title": "Descarga Súper Rápida",
