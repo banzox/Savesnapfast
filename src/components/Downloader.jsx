@@ -56,49 +56,19 @@ export default function Downloader(props) {
         navigator.clipboard.writeText(url);
     };
 
-    const downloadFile = async (fileUrl, fileName) => {
+    const downloadFile = (fileUrl, fileName) => {
         if (!fileUrl) return;
 
-        setDownloadingUrl(fileUrl);
+        // Use server-side streaming proxy for immediate start and custom naming
+        const downloadUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName)}`;
 
-        try {
-            const response = await fetch(fileUrl);
-            if (!response.ok) throw new Error("Network issues. Opening in new tab...");
+        // Trigger download via navigation (safest cross-browser method for attachments)
+        window.location.href = downloadUrl;
 
-            const blob = await response.blob();
-            const blobUrl = window.URL.createObjectURL(blob);
-
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = blobUrl;
-            a.download = fileName;
-            document.body.appendChild(a);
-            a.click();
-
-            // فتح الإعلان بعد نجاح التحميل
-            setTimeout(() => {
-                if (SMART_LINK) window.open(SMART_LINK, '_blank');
-            }, 500);
-
-            setTimeout(() => {
-                window.URL.revokeObjectURL(blobUrl);
-                document.body.removeChild(a);
-            }, 1000);
-        } catch (err) {
-            // Fallback: Open directly if blob creation fails (CORS or other)
-            const link = document.createElement('a');
-            link.href = fileUrl;
-            link.target = '_blank';
-            link.download = fileName;
-            link.click();
-
-            // فتح الإعلان حتى في حالة الـ fallback
-            setTimeout(() => {
-                if (SMART_LINK) window.open(SMART_LINK, '_blank');
-            }, 500);
-        } finally {
-            setDownloadingUrl(null);
-        }
+        // Open ad in new tab
+        setTimeout(() => {
+            if (SMART_LINK) window.open(SMART_LINK, '_blank');
+        }, 1000);
     };
 
     const downloadAllImages = async () => {
