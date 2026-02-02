@@ -70,23 +70,53 @@ const baseSlug = isLangPrefix
                 max-width: 48rem;
                 margin: 0 auto;
             }
+            /* Font Display Optimization */
+            @font-face {
+                font-display: swap;
+            }
         </style>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
         <ViewTransitions />
-        <!-- Font Awesome - Async loading for better performance -->
+
+        <!-- Preconnect hints for external resources -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+        <link rel="preconnect" href="https://pl28502654.effectivegatecpm.com" crossorigin />
+
+        <!-- Font Awesome - Optimized subsets for better performance -->
         <link
             rel="preload"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <link
+            rel="preload"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <link
+            rel="preload"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
             as="style"
             onload="this.onload=null;this.rel='stylesheet'"
         />
         <noscript>
             <link
                 rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+            />
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+            />
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
             />
         </noscript>
 
@@ -158,11 +188,6 @@ const baseSlug = isLangPrefix
         <!-- Preconnect & Prefetch -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="preconnect"
-            href="https://cdnjs.cloudflare.com"
-            crossorigin
-        />
         <link rel="dns-prefetch" href="https://api.savetik-fast.xyz" />
 
         <!-- Fonts - Optimized Loading (Reduced weights for performance) -->
