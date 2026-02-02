@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Az oldal nem található",
+    "home_btn": "Vissza a Főoldalra"
   },
   "meta": {
     "title": "SaveTikFast 2026 - TikTok videó letöltés vízjel nélkül (HD & 4K)",
@@ -50,27 +50,27 @@
     "error_invalid_link": "Invalid Link. Please check and try again."
   },
   "faq": {
-    "title": "Frequently Asked Questions (FAQ)",
-    "q1": "How do I download TikTok videos without watermark?",
-    "a1": "Downloading TikTok videos without watermark is easy with SaveTikFast. Simply copy the TikTok video link from the app, paste it into our download box, and click the download button. Our advanced technology automatically removes the TikTok watermark, giving you a clean video file. This works on all devices including iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac, and Windows PC. You can use any browser like Chrome, Safari, Firefox, or Edge. Unlike SSSTik or SnapTik, SaveTikFast provides the highest quality output with instant processing.",
-    "q2": "Is SaveTikFast completely free to use?",
-    "a2": "Yes, SaveTikFast is 100% free and will always remain free. There are no hidden fees, no premium subscriptions, and no daily download limits. You can download unlimited TikTok videos without watermark, convert to MP3, save stories, and download slideshows - all completely free. We don't require registration or login. Our service is supported by minimal ads, allowing us to offer free TikTok downloads to millions of users worldwide on any device.",
-    "q3": "What devices and browsers are supported?",
-    "a3": "SaveTikFast works on virtually every device and browser. Supported devices include iPhone (all models including iPhone 15, 14, 13), Android phones (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), tablets (iPad, Samsung Tab), and computers (MacBook, iMac, Windows PC, Chromebook). Supported browsers include Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, and UC Browser. No app installation is needed - everything works directly in your web browser.",
-    "q4": "What video quality can I download?",
-    "a4": "SaveTikFast downloads TikTok videos in the highest quality available. This includes 720p HD, 1080p Full HD, 2K, and even 4K resolution when the original video supports it. We never compress or reduce video quality - you get the exact same quality as the original TikTok upload. This makes SaveTikFast superior to other downloaders like TikMate, SaveFrom, or MusicallyDown which often compress videos.",
-    "q5": "Is it safe to use SaveTikFast?",
-    "a5": "Absolutely. SaveTikFast is completely safe and secure. We use SSL encryption to protect your connection, we don't store any of your personal data, and we don't require login or registration. Your downloaded videos are processed instantly and not stored on our servers. We don't install anything on your device. SaveTikFast has been trusted by millions of users since 2024 for safe TikTok video downloads.",
-    "q6": "How is SaveTikFast better than SSSTik or SnapTik?",
-    "a6": "SaveTikFast offers several advantages over SSSTik, SnapTik, TikMate, and other TikTok downloaders. Our service is faster (downloads complete in 3 seconds), provides higher quality output (up to 4K), has a cleaner interface with fewer ads, works more reliably on all devices, and offers additional features like MP3 conversion, story downloads, and slideshow extraction. Many users switch to SaveTikFast after experiencing issues with other downloaders.",
-    "q7": "Can I download TikTok videos on iPhone?",
-    "a7": "Yes, downloading TikTok videos on iPhone is easy with SaveTikFast. Open TikTok, copy the video link, then open Safari or Chrome and go to SaveTikFast. Paste the link and tap download. The video will save directly to your iPhone's Photos app or Files. This works on all iPhone models including iPhone 15, 14, 13, 12, and older. No app installation required - everything works in your browser.",
-    "q8": "Can I download private TikTok videos?",
-    "a8": "SaveTikFast can only download public TikTok videos. Private videos (visible only to the creator or approved followers) cannot be downloaded by any online tool due to TikTok's privacy settings. If you have permission from the creator, ask them to make the video public temporarily or share it directly with you through TikTok's built-in sharing features.",
-    "q9": "How do I download TikTok on Samsung or Android?",
-    "a9": "Downloading TikTok videos on Samsung Galaxy or any Android phone is simple. Open the TikTok app, tap Share on the video you want, and copy the link. Then open Chrome, Firefox, or Samsung Internet browser and visit SaveTikFast. Paste the link in the download box and tap the download button. The video will save to your Downloads folder or Gallery. Works on all Android devices including Samsung, Huawei, Xiaomi, OPPO, and Google Pixel.",
-    "q10": "Why choose SaveTikFast over other TikTok downloaders?",
-    "a10": "SaveTikFast is the best choice for TikTok downloads because we combine speed, quality, and reliability. We offer the fastest download speeds (3 seconds), highest video quality (up to 4K), watermark removal, MP3 conversion, story downloads, and slideshow extraction - all in one free tool. Our clean interface works perfectly on all devices and browsers. We're trusted by millions of users as the best alternative to SSSTik, SnapTik, TikMate, SaveFrom, and MusicallyDown."
+    "title": "Gyakran Ismételt Kérdések (GYIK)",
+    "q1": "Hogyan tölthetek le TikTok videókat vízjel nélkül?",
+    "a1": "TikTok videók letöltése vízjel nélkül egyszerű a SaveTikFast segítségével. Csak másold ki a TikTok videó linkjét az alkalmazásból, illeszd be a letöltő mezőnkbe és kattints a letöltés gombra. Fejlett technológiánk automatikusan eltávolítja a TikTok vízjelet, tiszta videófájlt adva neked. Működik minden eszközön, beleértve az iPhone-t, Androidot, Samsung Galaxyt, Huaweit, iPadet, Macet és Windows PC-t. Bármely böngészőt használhatsz, mint a Chrome, Safari, Firefox vagy Edge. Az SSSTikkel vagy SnapTikkel ellentétben a SaveTikFast a legmagasabb kimeneti minőséget nyújtja azonnali feldolgozással.",
+    "q2": "A SaveTikFast teljesen ingyenes?",
+    "a2": "Igen, a SaveTikFast 100%-ban ingyenes és mindig is ingyenes marad. Nincsenek rejtett költségek, prémium előfizetések vagy napi letöltési korlátok. Korlátlan számú TikTok videót tölthetsz le vízjel nélkül, konvertálhatsz MP3-ra, menthetsz történeteket és tölthetsz le diavetítéseket - mindez teljesen ingyen. Nem követeljük meg a regisztrációt vagy bejelentkezést. Szolgáltatásunkat minimális hirdetés támogatja, lehetővé téve számunkra, hogy ingyenes TikTok letöltéseket kínáljunk világszerte milliók számára bármely eszközön.",
+    "q3": "Milyen eszközök és böngészők támogatottak?",
+    "a3": "A SaveTikFast gyakorlatilag minden eszközön és böngészőben működik. A támogatott eszközök közé tartoznak az iPhone-ok (minden modell, beleértve az iPhone 15, 14, 13-at), Android telefonok (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), táblagépek (iPad, Samsung Tab) és számítógépek (MacBook, iMac, Windows PC, Chromebook). A támogatott böngészők közé tartozik a Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet és UC Browser. Nincs szükség alkalmazás telepítésére - minden közvetlenül a webböngésződben működik.",
+    "q4": "Milyen videó minőséget tölthetek le?",
+    "a4": "A SaveTikFast a TikTok videókat a legmagasabb elérhető minőségben tölti le. Ez magában foglalja a 720p HD felbontást, 1080p Full HD-t, 2K-t és akár 4K-t is, amikor az eredeti videó támogatja. Soha nem tömörítjük vagy csökkentjük a videó minőségét - pontosan ugyanazt a minőséget kapod, mint az eredeti TikTok feltöltés. Ez teszi a SaveTikFast-ot jobbá más letöltőknél, mint a TikMate, SaveFrom vagy MusicallyDown, amelyek gyakran tömörítik a videókat.",
+    "q5": "Biztonságos a SaveTikFast használata?",
+    "a5": "Abszolút. A SaveTikFast teljesen biztonságos és védett. SSL titkosítást használunk a kapcsolatod védelmére, nem tároljuk a személyes adataidat és nem követeljük meg a bejelentkezést vagy regisztrációt. A letöltött videóid azonnal feldolgozásra kerülnek és nem tárolódnak a szervereinken. Nem telepítünk semmit az eszközödre. A SaveTikFast 2024 óta milliók bizalmát élvezi a biztonságos TikTok videó letöltésekben.",
+    "q6": "Miben jobb a SaveTikFast az SSSTiknél vagy SnapTiknél?",
+    "a6": "A SaveTikFast számos előnyt kínál az SSSTikkel, SnapTikkel, TikMate-tel és más TikTok letöltőkkel szemben. Szolgáltatásunk gyorsabb (a letöltések 3 másodperc alatt befejeződnek), magasabb kimeneti minőséget nyújt (akár 4K), tisztább felülettel rendelkezik kevesebb hirdetéssel, megbízhatóbban működik minden eszközön és extra funkciókat kínál, mint MP3 konverzió, történetek letöltése és diavetítés kinyerése. Sok felhasználó vált át SaveTikFast-ra más letöltőkkel kapcsolatos problémák után.",
+    "q7": "Letölthetek TikTok videókat iPhone-ra?",
+    "a7": "Igen, TikTok videók letöltése iPhone-ra egyszerű a SaveTikFast segítségével. Nyisd meg a TikTokot, másold ki a videó linkjét, majd nyisd meg a Safarit vagy Chrome-ot és menj a SaveTikFast-ra. Illeszd be a linket és érintsd meg a letöltést. A videó közvetlenül az iPhone Fotók vagy Fájlok alkalmazásába kerül mentésre. Működik minden iPhone modellen, beleértve az iPhone 15, 14, 13, 12 és régebbi modelleket. Nincs szükség alkalmazás telepítésére - minden a böngésződben működik.",
+    "q8": "Letölthetek privát TikTok videókat?",
+    "a8": "A SaveTikFast csak nyilvános TikTok videókat tud letölteni. A privát videók (csak az alkotó vagy jóváhagyott követők számára láthatók) nem tölthetők le semmilyen online eszközzel a TikTok adatvédelmi beállításai miatt. Ha megvan az alkotó engedélye, kérd meg, hogy ideiglenesen tegye nyilvánossá a videót vagy ossza meg veled közvetlenül a TikTok beépített megosztási funkcióin keresztül.",
+    "q9": "Hogyan tölthetek le TikTokot Samsungra vagy Androidra?",
+    "a9": "TikTok videók letöltése Samsung Galaxyra vagy bármely Android telefonra egyszerű. Nyisd meg a TikTok alkalmazást, érintsd meg a Megosztás gombot a kívánt videónál és másold ki a linket. Majd nyisd meg a Chrome, Firefox vagy Samsung Internet böngészőt és látogasd meg a SaveTikFast-ot. Illeszd be a linket a letöltő mezőbe és érintsd meg a letöltés gombot. A videó a Letöltések vagy Galéria mappádba kerül mentésre. Működik minden Android eszközön, beleértve a Samsungot, Huaweit, Xiaomit, OPPO-t és Google Pixelt.",
+    "q10": "Miért válasszam a SaveTikFast-ot más TikTok letöltők helyett?",
+    "a10": "A SaveTikFast a legjobb választás TikTok letöltésekhez, mert a sebességet, minőséget és megbízhatóságot kombináljuk. A leggyorsabb letöltési sebességeket kínáljuk (3 másodperc), a legmagasabb videó minőséget (akár 4K), vízjel eltávolítást, MP3 konverziót, történetek letöltését és diavetítés kinyerését - mindezt egy ingyenes eszközben. Tiszta felületünk tökéletesen működik minden eszközön és böngészőben. Milliók bizalmát élvezzük, mint a legjobb alternatíva az SSSTik, SnapTik, TikMate, SaveFrom és MusicallyDown helyett."
   },
   "pages": {
     "about": {
@@ -103,36 +103,36 @@
   },
   "features": {
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without watermark in original HD quality. SaveTikFast removes the TikTok logo automatically, giving you cleaner videos than SSSTik, SnapTik, or TikMate. Perfect for reposting on Instagram, YouTube Shorts, or saving to your gallery."
+      "title": "Vízjel Nélkül",
+      "desc": "Töltsd le a TikTok videókat vízjel nélkül eredeti HD minőségben. A SaveTikFast automatikusan eltávolítja a TikTok logót, tisztább videókat adva, mint az SSSTik, SnapTik vagy TikMate. Tökéletes újramegosztásra Instagramon, YouTube Shorts-on vagy a galériádba mentéshez."
     },
     "fast": {
-      "title": "Lightning Fast",
-      "desc": "The fastest TikTok video downloader online. Save any TikTok video in just 3 seconds on iPhone, Android, Samsung, Huawei, iPad, PC, or Mac. Our servers are optimized for speed, making us faster than SaveFrom and MusicallyDown."
+      "title": "Villámgyors Sebesség",
+      "desc": "A leggyorsabb TikTok videóletöltő online. Mentsd el bármely TikTok videót mindössze 3 másodperc alatt iPhone-on, Androidon, Samsungon, Huawein, iPaden, PC-n vagy Macen. Szervereink sebességre optimalizáltak, gyorsabbak vagyunk, mint a SaveFrom és a MusicallyDown."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Download TikTok videos in the highest quality available - 720p, 1080p Full HD, 2K, and even 4K when available. We preserve the original video quality without compression, unlike other TikTok downloaders."
+      "title": "HD &amp; 4K Minőség",
+      "desc": "Töltsd le a TikTok videókat a legmagasabb elérhető minőségben - 720p, 1080p Full HD, 2K és akár 4K is, ha elérhető. Megőrizzük az eredeti videó minőségét tömörítés nélkül, ellentétben más TikTok letöltőkkel."
     },
     "device": {
-      "title": "All Devices Supported",
-      "desc": "Works perfectly on every device - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC, and Chromebook. No app installation required."
+      "title": "Minden Eszköz Támogatott",
+      "desc": "Tökéletesen működik minden eszközön - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC és Chromebook. Nincs szükség alkalmazás telepítésére."
     },
     "free": {
-      "title": "100% Free Forever",
-      "desc": "Unlimited TikTok video downloads with no hidden fees, no registration required, and no daily limits. SaveTikFast is completely free and will always remain free for all users worldwide."
+      "title": "100% Ingyenes Örökre",
+      "desc": "Korlátlan TikTok videó letöltés rejtett költségek, regisztráció vagy napi korlátok nélkül. A SaveTikFast teljesen ingyenes és ingyenes is marad minden felhasználó számára világszerte."
     },
     "secure": {
-      "title": "Private & Secure",
-      "desc": "Your privacy matters. We don't store your data, don't require login, and don't track your downloads. Safe and anonymous TikTok video downloading with SSL encryption."
+      "title": "Privát &amp; Biztonságos",
+      "desc": "Az adatvédelem számít. Nem tároljuk az adataidat, nem követeljük meg a bejelentkezést és nem követjük nyomon a letöltéseidet. Biztonságos és névtelen TikTok videó letöltés SSL titkosítással."
     },
     "browser": {
-      "title": "All Browsers",
-      "desc": "Works instantly on Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, and UC Browser. No extensions or plugins needed - just paste and download."
+      "title": "Minden Böngésző",
+      "desc": "Azonnal működik Chrome-on, Safarin, Firefoxon, Microsoft Edge-en, Operán, Brave-en, Samsung Interneten és UC Browserben. Nincs szükség bővítményre vagy pluginra - csak illeszd be és töltsd le."
     },
     "batch": {
-      "title": "Batch Download",
-      "desc": "Save multiple TikTok videos quickly. Download your favorite creator's entire collection faster than any other tool. Better bulk downloading than SSSTik or SnapTik."
+      "title": "Tömeges Letöltés",
+      "desc": "Mentsd el gyorsan több TikTok videót. Töltsd le a kedvenc alkotód teljes kollekcióját gyorsabban, mint bármely más eszközzel. Jobb tömeges letöltés, mint az SSSTik vagy SnapTik."
     }
   },
   "how_to": {
