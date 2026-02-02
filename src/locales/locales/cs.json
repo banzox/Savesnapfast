@@ -326,63 +326,63 @@
     "btn_download": "Stáhnout Obrázky",
     "about_title": "Stahovač Fotek TikTok",
     "about_content": "Ukládejte prezentace fotek z TikToku v originální HD kvalitě bez vodoznaků.",
-    "features": {
-      "all": {
-        "title": "All Photos at Once",
-        "desc": "Download all slideshow images in one click. SaveTikFast extracts every photo from TikTok photo carousels and saves them as a convenient ZIP file. Faster than saving each image manually."
-      },
-      "quality": {
-        "title": "Original Resolution",
-        "desc": "Save slideshow photos in full original resolution without any compression. Get the highest quality images exactly as the creator uploaded them to TikTok."
-      },
-      "audio": {
-        "title": "With Background Audio",
-        "desc": "Download TikTok slideshows with the background music included. Get both the images and the audio track together. Perfect for preserving the complete slideshow experience."
-      },
-      "fast": {
-        "title": "Lightning Speed",
-        "desc": "Extract all slideshow photos in just 3 seconds. The fastest TikTok slideshow downloader available - faster than SSSTik, SnapTik, or any other tool."
-      },
-      "device": {
-        "title": "Universal Compatibility",
-        "desc": "Works on iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook. Download TikTok slideshows on any device with Chrome, Safari, Firefox, or Edge."
-      },
-      "free": {
-        "title": "Always Free",
-        "desc": "Unlimited slideshow downloads with no fees, no registration, and no daily limits. SaveTikFast slideshow downloader is completely free forever."
-      },
-      "nowatermark": {
-        "title": "Watermark Free",
-        "desc": "Download slideshow images without TikTok watermarks. Clean photos ready for your gallery, Instagram, Pinterest, or any other platform."
-      },
-      "browser": {
-        "title": "Any Browser",
-        "desc": "No app needed. Download TikTok slideshows directly in Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet. Works on mobile and desktop browsers."
-      }
-    },
     "how_to": {
       "title": "Jak stahovat",
       "step1": "Zkopírujte odkaz TikTok.",
       "step2": "Vložte odkaz výše.",
       "step3": "Klikněte na Stáhnout."
     },
+    "features": {
+      "all": {
+        "title": "Všechny Fotky Najednou",
+        "desc": "Stáhněte všechny obrázky prezentace jedním kliknutím. SaveTikFast extrahuje každou fotku z foto karuselů TikTok a uloží je jako pohodlný ZIP soubor. Rychlejší než ruční ukládání každého obrázku."
+      },
+      "quality": {
+        "title": "Původní Rozlišení",
+        "desc": "Ukládejte fotky prezentace v plném původním rozlišení bez komprese. Získejte obrázky nejvyšší kvality přesně tak, jak je tvůrce nahrál na TikTok."
+      },
+      "audio": {
+        "title": "S Audio Na Pozadí",
+        "desc": "Stahujte prezentace TikTok s hudbu na pozadí včetně. Získejte jak obrázky, tak audio stopu společně. Perfektní pro zachování kompletního zážitku z prezentace."
+      },
+      "fast": {
+        "title": "Bleskově Rychlé",
+        "desc": "Extrahujte všechny fotky prezentace za pouhé 3 sekundy. Nejrychlejší stahovač prezentací TikTok dostupný - rychlejší než SSSTik, SnapTik nebo jakýkoli jiný nástroj."
+      },
+      "device": {
+        "title": "Univerzální Kompatibilita",
+        "desc": "Funguje na iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook. Stahujte prezentace TikTok na jakémkoli zařízení s Chrome, Safari, Firefox nebo Edge."
+      },
+      "free": {
+        "title": "Vždy Zdarma",
+        "desc": "Neomezená stahování prezentací bez poplatků, bez registrace a bez denních limitů. Stahovač prezentací SaveTikFast je zcela zdarma navždy."
+      },
+      "nowatermark": {
+        "title": "Bez Vodoznaku",
+        "desc": "Stahujte obrázky prezentace bez vodoznaků TikTok. Čisté fotky připravené pro vaši galerii, Instagram, Pinterest nebo jakoukoli jinou platformu."
+      },
+      "browser": {
+        "title": "Jakýkoli Prohlížeč",
+        "desc": "Bez potřeby aplikace. Stahujte prezentace TikTok přímo v Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet. Funguje na mobilních i desktopových prohlížečích."
+      }
+    },
     "faq": {
-      "q1": "How do I download TikTok slideshows?",
-      "a1": "Downloading TikTok photo slideshows is easy with SaveTikFast. Copy the slideshow link from TikTok, paste it in our slideshow downloader, and click download. All images will be extracted and downloaded together - either as individual photos or a convenient ZIP file. Works on iPhone, Android, Samsung, iPad, Mac, Windows using any browser.",
-      "q2": "Can I download all slideshow photos at once?",
-      "a2": "Yes! SaveTikFast downloads all TikTok slideshow photos in one click. No need to save each image manually. Our tool extracts every photo from the carousel and packages them together. For slideshows with many images, we provide a ZIP file for easy downloading. Much faster than other methods.",
-      "q3": "Does SaveTikFast download slideshow audio too?",
-      "a3": "Yes, SaveTikFast can download TikTok slideshows with the background music included. You get both the images and the audio track that plays with the slideshow. This preserves the complete slideshow experience exactly as the creator intended.",
-      "q4": "What quality are downloaded slideshow images?",
-      "a4": "SaveTikFast extracts TikTok slideshow photos in full original resolution. We don't compress or reduce image quality. You get the exact same high-quality photos as uploaded by the creator - perfect for saving, sharing, or printing.",
-      "q5": "Can I download TikTok slideshows on iPhone?",
-      "a5": "Yes, downloading TikTok slideshows on iPhone is simple. Copy the link from TikTok, open Safari or Chrome, visit SaveTikFast, paste the link, and download. Photos save to your Photos app. Works on all iPhone models without needing to install any app.",
-      "q6": "Is the slideshow downloader free?",
-      "a6": "Yes, SaveTikFast slideshow downloader is 100% free. Download unlimited TikTok slideshows without fees, subscriptions, or daily limits. Our free service works on iPhone, Android, Samsung, PC, Mac, and all devices using Chrome, Safari, Firefox, or any browser.",
-      "q7": "Are downloaded slideshow images watermark-free?",
-      "a7": "SaveTikFast downloads TikTok slideshow images without watermarks when possible. You get clean photos without the TikTok logo, ready for your gallery, Instagram, Pinterest, or any platform. Perfect for saving aesthetic content.",
-      "q8": "Why choose SaveTikFast for slideshow downloads?",
-      "a8": "SaveTikFast is the best TikTok slideshow downloader because we extract all photos instantly, maintain original quality, include audio, and offer completely free unlimited downloads. Our tool works faster and more reliably than SSSTik, SnapTik, or other slideshow extractors. Download entire photo carousels in seconds."
+      "q1": "Jak stáhnout prezentace TikTok?",
+      "a1": "Stahování foto prezentací TikTok je snadné s SaveTikFast. Zkopírujte odkaz na prezentaci z TikTok, vložte ho do našeho stahovače prezentací a klikněte na stáhnout. Všechny obrázky budou extrahovány a staženy společně - buď jako jednotlivé fotky nebo pohodlný ZIP soubor. Funguje na iPhone, Android, Samsung, iPad, Mac, Windows pomocí jakéhokoli prohlížeče.",
+      "q2": "Mohu stáhnout všechny fotky prezentace najednou?",
+      "a2": "Ano! SaveTikFast stahuje všechny fotky prezentace TikTok jedním kliknutím. Není třeba ukládat každý obrázek ručně. Náš nástroj extrahuje každou fotku z karuselu a zabalí je dohromady. Pro prezentace s mnoha obrázky poskytujeme ZIP soubor pro snadné stahování. Mnohem rychlejší než jiné metody.",
+      "q3": "Stahuje SaveTikFast také audio prezentace?",
+      "a3": "Ano, SaveTikFast může stahovat prezentace TikTok s hudbu na pozadí včetně. Dostanete jak obrázky, tak audio stopu, která se přehrává s prezentací. To zachovává kompletní zážitek z prezentace přesně tak, jak tvůrce zamýšlel.",
+      "q4": "Jakou kvalitu mají stažené obrázky prezentace?",
+      "a4": "SaveTikFast extrahuje fotky prezentace TikTok v plném původním rozlišení. Nekomprimujeme ani nesnižujeme kvalitu obrázku. Získáte přesně stejné vysoce kvalitní fotky nahrané tvůrcem - perfektní pro ukládání, sdílení nebo tisk.",
+      "q5": "Mohu stahovat prezentace TikTok na iPhone?",
+      "a5": "Ano, stahování prezentací TikTok na iPhone je jednoduché. Zkopírujte odkaz z TikTok, otevřete Safari nebo Chrome, navštivte SaveTikFast, vložte odkaz a stáhněte. Fotky se ukládají do vaší aplikace Fotky. Funguje na všech modelech iPhone bez nutnosti instalace jakékoli aplikace.",
+      "q6": "Je stahovač prezentací zdarma?",
+      "a6": "Ano, stahovač prezentací SaveTikFast je 100% zdarma. Stahujte neomezené prezentace TikTok bez poplatků, předplatného nebo denních limitů. Naše bezplatná služba funguje na iPhone, Android, Samsung, PC, Mac a všech zařízeních pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče.",
+      "q7": "Jsou stažené obrázky prezentace bez vodoznaku?",
+      "a7": "SaveTikFast stahuje obrázky prezentace TikTok bez vodoznaků, když je to možné. Dostanete čisté fotky bez loga TikTok, připravené pro vaši galerii, Instagram, Pinterest nebo jakoukoli platformu. Perfektní pro ukládání estetického obsahu.",
+      "q8": "Proč zvolit SaveTikFast pro stahování prezentací?",
+      "a8": "SaveTikFast je nejlepší stahovač prezentací TikTok, protože extrahujeme všechny fotky okamžitě, udržujeme původní kvalitu, zahrnujeme audio a nabízíme zcela bezplatná neomezená stahování. Náš nástroj funguje rychleji a spolehlivěji než SSSTik, SnapTik nebo jiné extraktory prezentací. Stahujte celé foto karusely během sekund."
     }
   },
   "nav_menu": {
@@ -400,69 +400,69 @@
     "btn_download": "Extrahovat MP3",
     "about_title": "Nejlepší TikTok MP3 Konvertor 2026",
     "about_content": "SaveTikFast MP3 vám umožní okamžitě extrahovat zvuk z jakéhokoli videa TikTok. Stahujte trendy písně a virální zvuky.",
-    "features": {
-      "quality": {
-        "title": "HD Audio 320kbps",
-        "desc": "Convert TikTok videos to MP3 in crystal clear 320kbps studio quality. The highest audio bitrate available online, perfect for music lovers who want the best sound on their iPhone, Android, or PC."
-      },
-      "fast": {
-        "title": "Instant Conversion",
-        "desc": "TikTok to MP3 conversion in just 2 seconds. The fastest TikTok audio extractor online - faster than SSSTik MP3, SnapTik audio, or any other converter. Works instantly on all devices."
-      },
-      "ringtone": {
-        "title": "Ringtone Ready",
-        "desc": "Perfect audio length for iPhone ringtones and Android notification sounds. Create custom ringtones from viral TikTok sounds and trending audio clips. Easy to set up on any smartphone."
-      },
-      "device": {
-        "title": "All Devices",
-        "desc": "Extract TikTok audio on iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC, and any device with a browser. No app download required."
-      },
-      "original": {
-        "title": "Original Sound",
-        "desc": "Preserve the original TikTok audio quality without any compression or quality loss. Get the exact same sound as the original video, including trending songs and viral audio."
-      },
-      "unlimited": {
-        "title": "Free & Unlimited",
-        "desc": "No limits on TikTok to MP3 conversions. Convert as many TikTok videos to audio as you want - completely free, no signup, no daily restrictions."
-      },
-      "secure": {
-        "title": "Safe & Private",
-        "desc": "Secure MP3 conversion with no data collection. We don't store your converted files or track your activity. Your privacy is 100% protected."
-      },
-      "nobapp": {
-        "title": "No App Needed",
-        "desc": "Works directly in your browser - Chrome, Safari, Firefox, Edge, Opera. No app installation, no storage space needed. Better than TikTok MP3 downloader apps."
-      }
-    },
     "how_to": {
       "title": "Jak převést TikTok na MP3",
       "step1": "Najděte video. Klepněte na Sdílet → Kopírovat odkaz.",
       "step2": "Vložte odkaz do pole výše.",
       "step3": "Klikněte na 'Extrahovat MP3' pro stažení."
     },
-    "faq": {
-      "q1": "How do I convert TikTok videos to MP3?",
-      "a1": "Converting TikTok to MP3 is simple with SaveTikFast. Copy the TikTok video link, paste it in our MP3 converter, and click convert. The audio will be extracted in high-quality 320kbps MP3 format instantly. This works on iPhone, Android, Samsung, PC, Mac, and all devices using Chrome, Safari, Firefox, or any browser. Our TikTok to MP3 converter is faster and higher quality than SSSTik or SnapTik audio extractors.",
-      "q2": "What audio quality does SaveTikFast MP3 converter provide?",
-      "a2": "SaveTikFast extracts TikTok audio in premium 320kbps MP3 quality - the highest bitrate available for MP3 files. This provides crystal clear, studio-quality sound perfect for music playback, ringtones, or audio projects. We preserve the original TikTok audio without compression or quality loss, unlike other converters that reduce bitrate to save bandwidth.",
-      "q3": "Can I use TikTok audio as a ringtone?",
-      "a3": "Yes! TikTok audio downloaded from SaveTikFast is perfect for ringtones. The MP3 format works with both iPhone and Android ringtone settings. On iPhone, use GarageBand or iTunes to set custom ringtones. On Android, simply go to Settings > Sound > Ringtone and select the downloaded MP3. Create unique ringtones from viral TikTok sounds and trending audio.",
-      "q4": "Is TikTok to MP3 conversion free?",
-      "a4": "Absolutely free. SaveTikFast MP3 converter has no fees, no subscription, and no daily limits. Convert unlimited TikTok videos to MP3 without registration. Our free service works on all devices - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - using any browser including Chrome, Safari, and Firefox.",
-      "q5": "How long does MP3 conversion take?",
-      "a5": "SaveTikFast converts TikTok to MP3 in approximately 2-3 seconds. We use powerful servers optimized for fast audio extraction. This makes us the fastest TikTok MP3 converter available - significantly faster than SSSTik MP3, SnapTik audio, TikMate, or other conversion tools.",
-      "q6": "Can I download TikTok music on iPhone?",
-      "a6": "Yes, you can easily download TikTok music and audio on iPhone using SaveTikFast. Copy the TikTok link, open Safari or Chrome, visit our MP3 converter, paste the link, and tap download. The MP3 file will save to your Files app. From there, add it to Apple Music, use as ringtone, or share anywhere. Works on all iPhone models.",
-      "q7": "Does the MP3 include the full audio track?",
-      "a7": "Yes, SaveTikFast extracts the complete audio from TikTok videos - including background music, voice, sound effects, and all audio elements. The full length audio is preserved exactly as it plays in the original TikTok video. Perfect for saving trending songs, viral sounds, and your favorite TikTok audio.",
-      "q8": "Is SaveTikFast MP3 converter safe?",
-      "a8": "Completely safe. SaveTikFast MP3 converter uses secure SSL encryption, doesn't store your data or converted files, requires no login, and installs nothing on your device. We've safely converted millions of TikTok videos to MP3 for users worldwide. Your privacy and security are our priority.",
-      "q9": "Can I convert TikTok to MP3 on Android?",
-      "a9": "Yes, TikTok to MP3 conversion works perfectly on all Android devices. This includes Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus, and all other Android phones and tablets. Simply use Chrome, Firefox, or Samsung Internet browser to access SaveTikFast and convert any TikTok to MP3 instantly.",
-      "q10": "Why is SaveTikFast the best TikTok to MP3 converter?",
-      "a10": "SaveTikFast offers the best TikTok MP3 conversion because of our superior speed (2 seconds), highest audio quality (320kbps), universal device support, and completely free service. Unlike SSSTik, SnapTik, or other converters, we provide consistent high-quality results without annoying ads or download limits. Millions of users trust SaveTikFast for their TikTok audio needs."
+    "meta_desc": "Převod videa z TikToku na MP3 audio. Stahujte skladby a hudbu ve vysoké kvalitě 320kbps.",
+    "features": {
+      "quality": {
+        "title": "HD Audio 320kbps",
+        "desc": "Převeďte videa TikTok na MP3 v křišťálově čisté studiové kvalitě 320kbps. Nejvyšší audio bitrate dostupný online, perfektní pro milovníky hudby, kteří chtějí nejlepší zvuk na svém iPhone, Android nebo PC."
+      },
+      "fast": {
+        "title": "Okamžitá Konverze",
+        "desc": "Konverze TikTok na MP3 za pouhé 2 sekundy. Nejrychlejší extraktor audia TikTok online - rychlejší než SSSTik MP3, SnapTik audio nebo jakýkoli jiný převodník. Funguje okamžitě na všech zařízeních."
+      },
+      "ringtone": {
+        "title": "Připraveno Pro Vyzvánění",
+        "desc": "Perfektní délka audia pro vyzvánění iPhone a zvuky oznámení Android. Vytvářejte vlastní vyzvánění z virálních zvuků TikTok a trendových audio klipů. Snadné nastavení na jakémkoli smartphonu."
+      },
+      "device": {
+        "title": "Všechna Zařízení",
+        "desc": "Extrahujte audio TikTok na iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC a jakémkoli zařízení s prohlížečem. Nevyžaduje stahování aplikace."
+      },
+      "original": {
+        "title": "Originální Zvuk",
+        "desc": "Zachovejte původní kvalitu audia TikTok bez komprese nebo ztráty kvality. Získejte přesně stejný zvuk jako v původním videu, včetně trendových písní a virálního audia."
+      },
+      "unlimited": {
+        "title": "Zdarma &amp; Neomezené",
+        "desc": "Žádné limity na konverze TikTok na MP3. Převádějte tolik videí TikTok na audio, kolik chcete - zcela zdarma, bez registrace, bez denních omezení."
+      },
+      "secure": {
+        "title": "Bezpečné &amp; Soukromé",
+        "desc": "Bezpečná konverze MP3 bez shromažďování dat. Neukládáme vaše převedené soubory ani nesledujeme vaši aktivitu. Vaše soukromí je 100% chráněno."
+      },
+      "nobapp": {
+        "title": "Bez Aplikace",
+        "desc": "Funguje přímo ve vašem prohlížeči - Chrome, Safari, Firefox, Edge, Opera. Bez instalace aplikace, bez potřeby úložného prostoru. Lepší než aplikace pro stahování TikTok MP3."
+      }
     },
-    "meta_desc": "Převod videa z TikToku na MP3 audio. Stahujte skladby a hudbu ve vysoké kvalitě 320kbps."
+    "faq": {
+      "q1": "Jak převést videa TikTok na MP3?",
+      "a1": "Převod TikTok na MP3 je jednoduchý s SaveTikFast. Zkopírujte odkaz na video TikTok, vložte ho do našeho převodníku MP3 a klikněte na převést. Audio bude okamžitě extrahováno ve vysoké kvalitě formátu MP3 320kbps. Funguje na iPhone, Android, Samsung, PC, Mac a všech zařízeních pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče. Náš převodník TikTok na MP3 je rychlejší a vyšší kvality než audio extraktory SSSTik nebo SnapTik.",
+      "q2": "Jakou kvalitu audia poskytuje převodník MP3 SaveTikFast?",
+      "a2": "SaveTikFast extrahuje audio TikTok v prémiové kvalitě MP3 320kbps - nejvyšším bitrate dostupném pro MP3 soubory. To poskytuje křišťálově čistý zvuk studiové kvality perfektní pro přehrávání hudby, vyzvánění nebo audio projekty. Zachováváme původní audio TikTok bez komprese nebo ztráty kvality, na rozdíl od jiných převodníků, které snižují bitrate pro úsporu šířky pásma.",
+      "q3": "Mohu použít audio TikTok jako vyzvánění?",
+      "a3": "Ano! Audio TikTok stažené ze SaveTikFast je perfektní pro vyzvánění. Formát MP3 funguje jak s nastavením vyzvánění iPhone, tak Android. Na iPhone použijte GarageBand nebo iTunes pro nastavení vlastních vyzvánění. Na Androidu jednoduše přejděte do Nastavení > Zvuk > Vyzvánění a vyberte stažený MP3. Vytvářejte jedinečná vyzvánění z virálních zvuků TikTok a trendového audia.",
+      "q4": "Je konverze TikTok na MP3 zdarma?",
+      "a4": "Absolutně zdarma. Převodník MP3 SaveTikFast nemá žádné poplatky, předplatné ani denní limity. Převádějte neomezená videa TikTok na MP3 bez registrace. Naše bezplatná služba funguje na všech zařízeních - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - pomocí jakéhokoli prohlížeče včetně Chrome, Safari a Firefox.",
+      "q5": "Jak dlouho trvá konverze MP3?",
+      "a5": "SaveTikFast převádí TikTok na MP3 přibližně za 2-3 sekundy. Používáme výkonné servery optimalizované pro rychlou extrakci audia. To z nás dělá nejrychlejší dostupný převodník TikTok MP3 - výrazně rychlejší než SSSTik MP3, SnapTik audio, TikMate nebo jiné nástroje pro konverzi.",
+      "q6": "Mohu stahovat hudbu TikTok na iPhone?",
+      "a6": "Ano, můžete snadno stahovat hudbu a audio TikTok na iPhone pomocí SaveTikFast. Zkopírujte odkaz TikTok, otevřete Safari nebo Chrome, navštivte náš převodník MP3, vložte odkaz a klepněte na stáhnout. MP3 soubor se uloží do vaší aplikace Soubory. Odtud ho přidejte do Apple Music, použijte jako vyzvánění nebo sdílejte kdekoli. Funguje na všech modelech iPhone.",
+      "q7": "Obsahuje MP3 kompletní audio stopu?",
+      "a7": "Ano, SaveTikFast extrahuje kompletní audio z videí TikTok - včetně hudby na pozadí, hlasu, zvukových efektů a všech audio prvků. Audio plné délky je zachováno přesně tak, jak zní v původním videu TikTok. Perfektní pro ukládání trendových písní, virálních zvuků a vašeho oblíbeného audia TikTok.",
+      "q8": "Je převodník MP3 SaveTikFast bezpečný?",
+      "a8": "Zcela bezpečný. Převodník MP3 SaveTikFast používá bezpečné SSL šifrování, neukládá vaše data nebo převedené soubory, nevyžaduje přihlášení a nic neinstaluje na vaše zařízení. Bezpečně jsme převedli miliony videí TikTok na MP3 pro uživatele po celém světě. Vaše soukromí a bezpečnost jsou naší prioritou.",
+      "q9": "Mohu převádět TikTok na MP3 na Androidu?",
+      "a9": "Ano, konverze TikTok na MP3 funguje perfektně na všech zařízeních Android. To zahrnuje Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus a všechny ostatní Android telefony a tablety. Jednoduše použijte prohlížeč Chrome, Firefox nebo Samsung Internet pro přístup k SaveTikFast a převádějte jakýkoli TikTok na MP3 okamžitě.",
+      "q10": "Proč je SaveTikFast nejlepší převodník TikTok na MP3?",
+      "a10": "SaveTikFast nabízí nejlepší konverzi TikTok MP3 díky naší vynikající rychlosti (2 sekundy), nejvyšší kvalitě audia (320kbps), univerzální podpoře zařízení a zcela bezplatné službě. Na rozdíl od SSSTik, SnapTik nebo jiných převodníků poskytujeme konzistentní vysoce kvalitní výsledky bez otravných reklam nebo limitů stahování. Miliony uživatelů důvěřují SaveTikFast pro jejich potřeby audio TikTok."
+    }
   },
   "story_page": {
     "meta_title": "Stáhnout Story z TikToku - Anonymně",
@@ -472,65 +472,65 @@
     "btn_download": "Uložit Story",
     "about_title": "Stahovač Stories 2026",
     "about_content": "SaveTikFast Story Downloader vám umožní uložit stories a karusely fotek, než zmizí po 24 hodinách.",
-    "features": {
-      "expire": {
-        "title": "Save Before Gone",
-        "desc": "Download TikTok stories before they disappear after 24 hours. Never miss your favorite creator's stories again. SaveTikFast lets you save expiring content permanently to your device."
-      },
-      "quality": {
-        "title": "Original Quality",
-        "desc": "Save TikTok stories in full HD quality - exactly as uploaded by the creator. No quality reduction, no compression. Get the same resolution on iPhone, Android, or PC."
-      },
-      "anonymous": {
-        "title": "Anonymous Viewing",
-        "desc": "View and download TikTok stories completely anonymously. The creator won't know you saved their story. 100% private and discreet story downloading."
-      },
-      "fast": {
-        "title": "Super Fast",
-        "desc": "Download any TikTok story in just 2 seconds. Instant story saving that works faster than any other TikTok story downloader online."
-      },
-      "device": {
-        "title": "Works Everywhere",
-        "desc": "Save TikTok stories on iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows, and any device. Compatible with Chrome, Safari, Firefox, and all browsers."
-      },
-      "nowatermark": {
-        "title": "No Watermark",
-        "desc": "Download TikTok stories without the TikTok watermark or logo. Clean story downloads ready to save or share on Instagram, Snapchat, or WhatsApp."
-      },
-      "free": {
-        "title": "Free Forever",
-        "desc": "Unlimited TikTok story downloads at no cost. No registration, no fees, no daily limits. SaveTikFast story downloader is 100% free."
-      },
-      "noapp": {
-        "title": "Browser Only",
-        "desc": "No app installation required. Download TikTok stories directly from Chrome, Safari, Firefox, Edge on your phone or computer. Faster and safer than apps."
-      }
-    },
     "how_to": {
       "title": "Jak stáhnout Story z TikToku",
       "step1": "Otevřete Story, Sdílet → Kopírovat odkaz.",
       "step2": "Vložte odkaz výše.",
       "step3": "Klikněte na 'Uložit Story'."
     },
-    "faq": {
-      "q1": "How do I download TikTok stories?",
-      "a1": "To download TikTok stories, first copy the story link from TikTok (tap Share on the story). Then visit SaveTikFast, paste the link in our story downloader, and click download. The story will save to your device in original HD quality. Works on iPhone, Android, Samsung, iPad, Mac, PC using Chrome, Safari, Firefox, or any browser. Save stories before they disappear after 24 hours.",
-      "q2": "Can I download TikTok stories anonymously?",
-      "a2": "Yes, SaveTikFast allows completely anonymous TikTok story downloads. The creator will not receive any notification or know that you downloaded their story. Your identity remains private. This is perfect for saving content discreetly without interacting with the creator's account.",
-      "q3": "Do TikTok stories expire after download?",
-      "a3": "No, once you download a TikTok story with SaveTikFast, it's saved permanently on your device. Even though TikTok stories disappear after 24 hours on the platform, your downloaded copy remains forever. Save important stories before they expire so you never lose access to the content.",
-      "q4": "What quality are downloaded TikTok stories?",
-      "a4": "SaveTikFast downloads TikTok stories in full original quality - the same HD resolution uploaded by the creator. We don't compress or reduce quality. Your downloaded stories look exactly like they appear on TikTok, perfect for saving memories or reposting.",
-      "q5": "Can I download TikTok stories on iPhone?",
-      "a5": "Yes, downloading TikTok stories on iPhone is easy. Copy the story link from TikTok, open Safari or Chrome, go to SaveTikFast, paste the link, and tap download. Stories save directly to your Photos or Files app. Works on iPhone 15, 14, 13, 12, and all models without installing any app.",
-      "q6": "Is the TikTok story downloader free?",
-      "a6": "Completely free. SaveTikFast story downloader has no charges, no premium plans, and no download limits. Save unlimited TikTok stories at no cost on any device - iPhone, Android, Samsung, PC, Mac. No registration or account required.",
-      "q7": "Can I download private TikTok stories?",
-      "a7": "SaveTikFast can only download public TikTok stories. Private stories shared only with specific followers cannot be accessed by external download tools due to TikTok's privacy protections. For private content, you'll need the creator's direct permission.",
-      "q8": "Why use SaveTikFast for TikTok stories?",
-      "a8": "SaveTikFast is the best TikTok story downloader because we offer instant downloads, original HD quality, anonymous saving, and free unlimited access. Our tool works reliably on all devices and browsers, making it better than other story downloaders. Save expiring stories before they're gone forever."
+    "meta_desc": "Stahujte příběhy a prezentace z TikToku anonymně. Uložte fotky před vypršením platnosti.",
+    "features": {
+      "expire": {
+        "title": "Uložit Před Zmizením",
+        "desc": "Stahujte příběhy TikTok předtím, než zmizí po 24 hodinách. Už nikdy nezmeškejte příběhy vašeho oblíbeného tvůrce. SaveTikFast vám umožní uložit obsah s vypršením platnosti trvale na vaše zařízení."
+      },
+      "quality": {
+        "title": "Originální Kvalita",
+        "desc": "Ukládejte příběhy TikTok v plné HD kvalitě - přesně tak, jak je nahrál tvůrce. Bez snížení kvality, bez komprese. Získejte stejné rozlišení na iPhone, Android nebo PC."
+      },
+      "anonymous": {
+        "title": "Anonymní Sledování",
+        "desc": "Prohlížejte a stahujte příběhy TikTok zcela anonymně. Tvůrce nebude vědět, že jste uložili jeho příběh. 100% soukromé a diskrétní stahování příběhů."
+      },
+      "fast": {
+        "title": "Super Rychlé",
+        "desc": "Stáhněte jakýkoli příběh TikTok za pouhé 2 sekundy. Okamžité ukládání příběhů, které funguje rychleji než jakýkoli jiný stahovač příběhů TikTok online."
+      },
+      "device": {
+        "title": "Funguje Všude",
+        "desc": "Ukládejte příběhy TikTok na iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows a jakémkoli zařízení. Kompatibilní s Chrome, Safari, Firefox a všemi prohlížeči."
+      },
+      "nowatermark": {
+        "title": "Bez Vodoznaku",
+        "desc": "Stahujte příběhy TikTok bez vodoznaku nebo loga TikTok. Čistá stahování příběhů připravená k uložení nebo sdílení na Instagram, Snapchat nebo WhatsApp."
+      },
+      "free": {
+        "title": "Navždy Zdarma",
+        "desc": "Neomezená stahování příběhů TikTok bez nákladů. Bez registrace, bez poplatků, bez denních limitů. Stahovač příběhů SaveTikFast je 100% zdarma."
+      },
+      "noapp": {
+        "title": "Pouze Prohlížeč",
+        "desc": "Bez potřeby instalace aplikace. Stahujte příběhy TikTok přímo z Chrome, Safari, Firefox, Edge na vašem telefonu nebo počítači. Rychlejší a bezpečnější než aplikace."
+      }
     },
-    "meta_desc": "Stahujte příběhy a prezentace z TikToku anonymně. Uložte fotky před vypršením platnosti."
+    "faq": {
+      "q1": "Jak stáhnout příběhy TikTok?",
+      "a1": "Pro stažení příběhů TikTok nejprve zkopírujte odkaz na příběh z TikTok (klepněte na Sdílet u příběhu). Poté navštivte SaveTikFast, vložte odkaz do našeho stahovače příběhů a klikněte na stáhnout. Příběh se uloží na vaše zařízení v původní HD kvalitě. Funguje na iPhone, Android, Samsung, iPad, Mac, PC pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče. Ukládejte příběhy předtím, než zmizí po 24 hodinách.",
+      "q2": "Mohu stahovat příběhy TikTok anonymně?",
+      "a2": "Ano, SaveTikFast umožňuje zcela anonymní stahování příběhů TikTok. Tvůrce neobdrží žádné oznámení a nebude vědět, že jste stáhli jeho příběh. Vaše identita zůstane soukromá. To je perfektní pro diskrétní ukládání obsahu bez interakce s účtem tvůrce.",
+      "q3": "Vyprší platnost příběhů TikTok po stažení?",
+      "a3": "Ne, jakmile stáhnete příběh TikTok pomocí SaveTikFast, je trvale uložen na vašem zařízení. I když příběhy TikTok zmizí po 24 hodinách na platformě, vaše stažená kopie zůstane navždy. Ukládejte důležité příběhy předtím, než vyprší jejich platnost, abyste nikdy neztratili přístup k obsahu.",
+      "q4": "Jakou kvalitu mají stažené příběhy TikTok?",
+      "a4": "SaveTikFast stahuje příběhy TikTok v plné původní kvalitě - stejném HD rozlišení nahraném tvůrcem. Nekomprimujeme ani nesnižujeme kvalitu. Vaše stažené příběhy vypadají přesně tak, jak se objevují na TikTok, perfektní pro ukládání vzpomínek nebo opětovné zveřejnění.",
+      "q5": "Mohu stahovat příběhy TikTok na iPhone?",
+      "a5": "Ano, stahování příběhů TikTok na iPhone je snadné. Zkopírujte odkaz na příběh z TikTok, otevřete Safari nebo Chrome, přejděte na SaveTikFast, vložte odkaz a klepněte na stáhnout. Příběhy se ukládají přímo do vaší aplikace Fotky nebo Soubory. Funguje na iPhone 15, 14, 13, 12 a všech modelech bez instalace jakékoli aplikace.",
+      "q6": "Je stahovač příběhů TikTok zdarma?",
+      "a6": "Zcela zdarma. Stahovač příběhů SaveTikFast nemá žádné poplatky, prémiové plány nebo limity stahování. Ukládejte neomezené příběhy TikTok bez nákladů na jakémkoli zařízení - iPhone, Android, Samsung, PC, Mac. Bez požadované registrace nebo účtu.",
+      "q7": "Mohu stahovat soukromé příběhy TikTok?",
+      "a7": "SaveTikFast může stahovat pouze veřejné příběhy TikTok. Soukromé příběhy sdílené pouze s konkrétními sledujícími nejsou dostupné externím nástrojům pro stahování kvůli ochraně soukromí TikTok. Pro soukromý obsah budete potřebovat přímé povolení tvůrce.",
+      "q8": "Proč používat SaveTikFast pro příběhy TikTok?",
+      "a8": "SaveTikFast je nejlepší stahovač příběhů TikTok, protože nabízíme okamžitá stahování, původní HD kvalitu, anonymní ukládání a bezplatný neomezený přístup. Náš nástroj funguje spolehlivě na všech zařízeních a prohlížečích, což jej činí lepším než jiné stahovače příběhů. Ukládejte příběhy s vypršením platnosti předtím, než zmizí navždy."
+    }
   },
   "blog": {
     "meta_title": "Průvodce stahováním z TikToku 2026 - Videa, MP3, Prezentace a Příběhy",
