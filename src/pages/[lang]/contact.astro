@@ -1,21 +1,30 @@
 ---
 import TextPage from "../../components/TextPage.astro";
 import { languages } from "../../i18n/ui";
+import NotFound from "../../components/NotFound.astro";
 
 const { lang } = Astro.params;
+const isValidLang = lang && languages[lang as keyof typeof languages];
 
-if (!lang || !languages[lang as keyof typeof languages]) {
-    return Astro.redirect("/404");
+if (!isValidLang) {
+    Astro.response.status = 404;
+    Astro.response.statusText = "Not Found";
 }
 ---
 
-<TextPage
-    titleKey="pages.contact.title"
-    contentKey="pages.contact.content"
-    lang={lang}
->
-    contact@savetik-fast.xyz
-</TextPage>
+{
+    isValidLang ? (
+        <TextPage
+            titleKey="pages.contact.title"
+            contentKey="pages.contact.content"
+            lang={lang}
+        >
+            contact@savetik-fast.xyz
+        </TextPage>
+    ) : (
+        <NotFound />
+    )
+}
 
 <style>
     .contact-link-wrapper {

@@ -4,14 +4,17 @@ import Downloader from "../../components/Downloader.jsx";
 import { languages } from "../../i18n/ui";
 import { useTranslations, getTranslations } from "../../utils/i18n";
 import AdBanner from "../../components/AdBanner.astro";
+import NotFound from "../../components/NotFound.astro";
 
 const { lang } = Astro.params;
+const isValidLang = lang && languages[lang as keyof typeof languages];
 
-if (!lang || !languages[lang as keyof typeof languages]) {
-    return Astro.redirect("/404");
+if (!isValidLang) {
+    Astro.response.status = 404;
+    Astro.response.statusText = "Not Found";
 }
 
-const currentLang = lang as keyof typeof languages;
+const currentLang = (isValidLang ? lang : "en") as keyof typeof languages;
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
 
@@ -22,39 +25,43 @@ const tools = [
 ];
 ---
 
-<Layout
-    title={t("tools.meta.title")}
-    description={t("tools.meta.description")}
-    lang={currentLang}
->
-    <article class="hero-section">
-        <h1>
-            <i class="fas fa-tools accent-icon"></i>
-            {t("tools.hero.title")}
-        </h1>
-        <p>{t("tools.hero.desc")}</p>
+{
+    isValidLang ? (
+        <Layout
+            title={t("tools.meta.title")}
+            description={t("tools.meta.description")}
+            lang={currentLang}
+        >
+            <article class="hero-section">
+                <h1>
+                    <i class="fas fa-tools accent-icon" />
+                    {t("tools.hero.title")}
+                </h1>
+                <p>{t("tools.hero.desc")}</p>
 
-        <Downloader
-            client:load
-            messages={translations.downloader}
-            placeholder={t("downloader.placeholder")}
-        />
-    </article>
+                <Downloader
+                    client:load
+                    messages={translations.downloader}
+                    placeholder={t("downloader.placeholder")}
+                />
+            </article>
 
-    <AdBanner />
+            <AdBanner />
 
-    <div class="container features-grid">
-        {
-            tools.map((tool) => (
-                <div class="feature-card">
-                    <i class={tool.icon} />
-                    <h3>{t(`tools.tabs.${tool.key}`)}</h3>
-                    <p>{t(`tools.${tool.key}.desc`)}</p>
-                </div>
-            ))
-        }
-    </div>
-</Layout>
+            <div class="container features-grid">
+                {tools.map((tool) => (
+                    <div class="feature-card">
+                        <i class={tool.icon} />
+                        <h3>{t(`tools.tabs.${tool.key}`)}</h3>
+                        <p>{t(`tools.${tool.key}.desc`)}</p>
+                    </div>
+                ))}
+            </div>
+        </Layout>
+    ) : (
+        <NotFound />
+    )
+}
 
 <style>
     .accent-icon {

@@ -1,12 +1,26 @@
 ---
 import DownloadPage from "../../components/DownloadPage.astro";
 import { languages } from "../../i18n/ui";
+import NotFound from "../../components/NotFound.astro";
 
 const { lang } = Astro.params;
+const isValidLang = lang && languages[lang as keyof typeof languages];
 
-if (!lang || !languages[lang as keyof typeof languages]) {
-    return Astro.redirect("/404");
+if (!isValidLang) {
+    Astro.response.status = 404;
+    Astro.response.statusText = "Not Found";
 }
 ---
 
-<DownloadPage lang={lang} pagePrefix="mp3_page" mode="mp3" showAd={true} />
+{
+    isValidLang ? (
+        <DownloadPage
+            lang={lang}
+            pagePrefix="mp3_page"
+            mode="mp3"
+            showAd={true}
+        />
+    ) : (
+        <NotFound />
+    )
+}

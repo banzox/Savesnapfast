@@ -1,6 +1,8 @@
 ---
 import BlogPage from "../../components/BlogPage.astro";
 import { languages } from "../../i18n/ui";
+import { useTranslations } from "../../utils/i18n";
+import NotFound from "../../components/NotFound.astro";
 
 export function getStaticPaths() {
     return Object.keys(languages)
@@ -9,6 +11,12 @@ export function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
+const isValidLang = lang && languages[lang as keyof typeof languages];
+
+if (!isValidLang) {
+    Astro.response.status = 404;
+    Astro.response.statusText = "Not Found";
+}
 ---
 
-<BlogPage lang={lang} />
+{isValidLang ? <BlogPage lang={lang} /> : <NotFound />}
