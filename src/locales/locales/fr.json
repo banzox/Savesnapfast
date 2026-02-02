@@ -1,11 +1,11 @@
 {
-  "common": {
-    "select_language": "Choisir la langue",
-    "toggle_theme": "Changer le mode sombre/clair"
-  },
   "404": {
     "title": "Page non trouvée",
     "home_btn": "Retour à l'accueil"
+  },
+  "common": {
+    "select_language": "Choisir la langue",
+    "toggle_theme": "Changer le mode sombre/clair"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Télécharger vidéo TikTok sans filigrane (HD & 4K)",
@@ -386,8 +386,8 @@
   },
   "nav_menu": {
     "slideshow": "Diaporama",
-    "video": "Video",
-    "mp3": "MP3 Audio",
+    "video": "Vidéo",
+    "mp3": "Audio MP3",
     "stories": "Stories"
   },
   "mp3_page": {

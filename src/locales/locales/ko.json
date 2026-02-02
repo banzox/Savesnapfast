@@ -386,9 +386,9 @@
   },
   "nav_menu": {
     "slideshow": "슬라이드쇼",
-    "video": "Video",
-    "mp3": "MP3 Audio",
-    "stories": "Stories"
+    "video": "동영상",
+    "mp3": "MP3 오디오",
+    "stories": "스토리"
   },
   "mp3_page": {
     "meta_title": "TikTok MP3 변환기 - 오디오 다운로드 (고음질)",

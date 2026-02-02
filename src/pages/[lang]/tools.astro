@@ -14,6 +14,10 @@ if (!isValidLang) {
     Astro.response.statusText = "Not Found";
 }
 
+export function getStaticPaths() {
+    return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
 const currentLang = (isValidLang ? lang : "en") as keyof typeof languages;
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);

@@ -10,6 +10,10 @@ if (!isValidLang) {
     Astro.response.status = 404;
     Astro.response.statusText = "Not Found";
 }
+
+export function getStaticPaths() {
+    return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
 ---
 
 {

@@ -1,11 +1,11 @@
 {
-  "common": {
-    "select_language": "Pilih Bahasa",
-    "toggle_theme": "Alihkan mode gelap/terang"
-  },
   "404": {
     "title": "Halaman tidak ditemukan",
     "home_btn": "Kembali ke Beranda"
+  },
+  "common": {
+    "select_language": "Pilih Bahasa",
+    "toggle_theme": "Alihkan mode gelap/terang"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Download Video TikTok Tanpa Watermark (HD & 4K)",
@@ -385,10 +385,10 @@
     }
   },
   "nav_menu": {
-    "slideshow": "Slideshow",
+    "slideshow": "Tayangan Slide",
     "video": "Video",
-    "mp3": "MP3 Audio",
-    "stories": "Stories"
+    "mp3": "Audio MP3",
+    "stories": "Cerita"
   },
   "mp3_page": {
     "meta_title": "Konverter MP3 TikTok - Download Audio (Kualitas Tinggi)",
