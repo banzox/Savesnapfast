@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Страницата не е намерена",
+    "home_btn": "Към Начална Страница"
   },
   "meta": {
     "title": "SaveTikFast 2026 - Изтегляне на TikTok видео без воден знак (HD & 4K)",
@@ -250,36 +250,36 @@
   },
   "features": {
     "no_watermark": {
-      "title": "No Watermark",
-      "desc": "Download TikTok videos without watermark in original HD quality. SaveTikFast removes the TikTok logo automatically, giving you cleaner videos than SSSTik, SnapTik, or TikMate. Perfect for reposting on Instagram, YouTube Shorts, or saving to your gallery."
+      "title": "Без Воден Знак",
+      "desc": "Изтеглете TikTok видеоклипове без воден знак в оригинално HD качество. SaveTikFast премахва TikTok логото автоматично, предоставяйки ви по-чисти видеоклипове от SSSTik, SnapTik или TikMate. Перфектни за повторно публикуване в Instagram, YouTube Shorts или запазване в галерията ви."
     },
     "fast": {
-      "title": "Lightning Fast",
-      "desc": "The fastest TikTok video downloader online. Save any TikTok video in just 3 seconds on iPhone, Android, Samsung, Huawei, iPad, PC, or Mac. Our servers are optimized for speed, making us faster than SaveFrom and MusicallyDown."
+      "title": "Светкавична Скорост",
+      "desc": "Най-бързият TikTok видео инструмент за изтегляне онлайн. Запазете всяко TikTok видео само за 3 секунди на iPhone, Android, Samsung, Huawei, iPad, PC или Mac. Нашите сървъри са оптимизирани за скорост, което ни прави по-бърzi от SaveFrom и MusicallyDown."
     },
     "quality": {
-      "title": "HD & 4K Quality",
-      "desc": "Download TikTok videos in the highest quality available - 720p, 1080p Full HD, 2K, and even 4K when available. We preserve the original video quality without compression, unlike other TikTok downloaders."
+      "title": "HD &amp; 4K Качество",
+      "desc": "Изтеглете TikTok видеоклипове в най-високото налично качество - 720p, 1080p Full HD, 2K и дори 4K, когато е налично. Запазваме оригиналното видео качество без компресия, за разлика от други TikTok инструменти за изтегляне."
     },
     "device": {
-      "title": "All Devices Supported",
-      "desc": "Works perfectly on every device - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC, and Chromebook. No app installation required."
+      "title": "Всички Устройства Поддържани",
+      "desc": "Работи безупречно на всяко устройство - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC и Chromebook. Не се изисква инсталиране на приложение."
     },
     "free": {
-      "title": "100% Free Forever",
-      "desc": "Unlimited TikTok video downloads with no hidden fees, no registration required, and no daily limits. SaveTikFast is completely free and will always remain free for all users worldwide."
+      "title": "100% Безплатно Завинаги",
+      "desc": "Неограничени изтегляния на TikTok видеоклипове без скрити такси, без изискване за регистрация и без дневни лимити. SaveTikFast е напълно безплатен и винаги ще остане безплатен за всички потребители по света."
     },
     "secure": {
-      "title": "Private & Secure",
-      "desc": "Your privacy matters. We don't store your data, don't require login, and don't track your downloads. Safe and anonymous TikTok video downloading with SSL encryption."
+      "title": "Поверително &amp; Сигурно",
+      "desc": "Вашата поверителност е важна. Не съхраняваме вашите данни, не изискваме вход и не проследяваме вашите изтегляния. Сигурно и анонимно изтегляне на TikTok видеоклипове със SSL криптиране."
     },
     "browser": {
-      "title": "All Browsers",
-      "desc": "Works instantly on Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, and UC Browser. No extensions or plugins needed - just paste and download."
+      "title": "Всички Браузъри",
+      "desc": "Работи незабавно в Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet и UC Browser. Не са необходими разширения или плъгини - просто поставете и изтеглете."
     },
     "batch": {
-      "title": "Batch Download",
-      "desc": "Save multiple TikTok videos quickly. Download your favorite creator's entire collection faster than any other tool. Better bulk downloading than SSSTik or SnapTik."
+      "title": "Множествено Изтегляне",
+      "desc": "Запазете множество TikTok видеоклипове бързо. Изтеглете цялата колекция на любимия си създател по-бързо от всеки друг инструмент. По-добро масово изтегляне от SSSTik или SnapTik."
     }
   },
   "how_to": {
