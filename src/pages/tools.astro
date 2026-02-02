@@ -10,9 +10,9 @@ const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
 
 const tools = [
-    { icon: "fas fa-compress-arrows-alt", key: "compressor" },
-    { icon: "fas fa-exchange-alt", key: "converter" },
-    { icon: "fas fa-qrcode", key: "qrcode" },
+    { icon: "fas fa-history", key: "story_downloader", href: "/story" },
+    { icon: "fas fa-headphones", key: "mp3_downloader", href: "/mp3" },
+    { icon: "fas fa-images", key: "slideshow_downloader", href: "/slideshow" },
 ];
 ---
 
@@ -40,11 +40,13 @@ const tools = [
     <div class="container features-grid">
         {
             tools.map((tool) => (
-                <div class="feature-card">
-                    <i class={tool.icon} />
-                    <h3>{t(`tools.tabs.${tool.key}`)}</h3>
-                    <p>{t(`tools.${tool.key}.desc`)}</p>
-                </div>
+                <a href={tool.href} class="feature-card">
+                    <div class="icon-box">
+                        <i class={tool.icon} />
+                    </div>
+                    <h3>{t(`tools.${tool.key}`)}</h3>
+                    <p>{t(`tools.${tool.key}_desc`)}</p>
+                </a>
             ))
         }
     </div>

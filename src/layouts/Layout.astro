@@ -75,16 +75,25 @@ const baseSlug = isLangPrefix
                 font-display: swap;
             }
         </style>
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
         <ViewTransitions />
 
         <!-- Preconnect hints for external resources -->
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+        <link
+            rel="preconnect"
+            href="https://cdnjs.cloudflare.com"
+            crossorigin
+        />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-        <link rel="preconnect" href="https://pl28502654.effectivegatecpm.com" crossorigin />
+        <link
+            rel="preconnect"
+            href="https://pl28502654.effectivegatecpm.com"
+            crossorigin
+        />
 
         <!-- Font Awesome - Optimized subsets for better performance -->
         <link
