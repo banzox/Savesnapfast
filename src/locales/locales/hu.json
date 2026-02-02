@@ -1,7 +1,7 @@
 {
   "404": {
-    "title": "Page Not Found",
-    "home_btn": "Go to Homepage"
+    "title": "Az oldal nem található",
+    "home_btn": "Vissza a Főoldalra"
   },
   "meta": {
     "title": "SaveTikFast 2026 - TikTok videó letöltés vízjel nélkül (HD & 4K)",
@@ -51,26 +51,26 @@
   },
   "faq": {
     "title": "Gyakran Ismételt Kérdések (GYIK)",
-    "q1": "Hogyan tölthetek le TikTok videót vízjel nélkül 2026-ban?",
-    "a1": "Nagyon egyszerű: 1. Nyisd meg a TikTok alkalmazást, és válaszd ki a videót. 2. Koppints a 'Megosztás', majd a 'Link másolása' gombra. 3. Illeszd be a linket a fenti mezőbe, és nyomd meg a 'Letöltés' gombot. A videó logó nélkül kerül mentésre.",
+    "q1": "Hogyan tölthetek le TikTok videókat vízjel nélkül?",
+    "a1": "TikTok videók letöltése vízjel nélkül egyszerű a SaveTikFast segítségével. Csak másold ki a TikTok videó linkjét az alkalmazásból, illeszd be a letöltő mezőnkbe és kattints a letöltés gombra. Fejlett technológiánk automatikusan eltávolítja a TikTok vízjelet, tiszta videófájlt adva neked. Működik minden eszközön, beleértve az iPhone-t, Androidot, Samsung Galaxyt, Huaweit, iPadet, Macet és Windows PC-t. Bármely böngészőt használhatsz, mint a Chrome, Safari, Firefox vagy Edge. Az SSSTikkel vagy SnapTikkel ellentétben a SaveTikFast a legmagasabb kimeneti minőséget nyújtja azonnali feldolgozással.",
     "q2": "A SaveTikFast teljesen ingyenes?",
-    "a2": "Igen, a SaveTikFast 100%-ban ingyenes, és mindig az is marad. Nem kérünk előfizetést, regisztrációt vagy rejtett díjakat kedvenc tartalmaid letöltéséért.",
-    "q3": "Működik iPhone-on (iOS) és Androidon?",
-    "a3": "Természetesen! Eszközünk minden készülékre optimalizálva van. Legyen szó iPhone-ról, iPadről, Android okostelefonról vagy PC/Mac-ről, a SaveTikFast tökéletesen működik a böngésződben.",
-    "q4": "Letölthetek videókat 4K vagy HD minőségben?",
-    "a4": "Igen, fejlett algoritmusunk automatikusan megkeresi az elérhető legmagasabb felbontást (HD, Full HD vagy 4K) közvetlenül a forrásszerverről, és biztosítja azt számodra.",
-    "q5": "Elmenthetem csak a zenét/hangot (MP3)?",
-    "a5": "Igen, kínálunk egy dedikált 'Hang letöltése (MP3)' funkciót. Csak illeszd be a videó linkjét, és látni fogsz egy opciót a hangfájl kiváló minőségben történő kinyerésére és mentésére.",
-    "q6": "Hová menti a videókat az eszközömön?",
-    "a6": "A fájlok általában a böngésződ alapértelmezett 'Letöltések' (Downloads) mappájába kerülnek. Mobilon a fájlkezelőben vagy a galériában is megtalálhatod őket.",
-    "q7": "A SaveTikFast tárol másolatot a videóimról?",
-    "a7": "Soha. Tiszteletben tartjuk a magánéletedet. Nem tárolunk videókat a szervereinken, és nem őrizzük meg a letöltési előzményeidet. Minden névtelen.",
-    "q8": "Miért nem működik néha a letöltési link?",
-    "a8": "Kérjük, győződj meg arról, hogy a TikTok fiók, ahonnan letölteni próbálsz, 'Nyilvános' és nem 'Privát'. Ellenőrizd azt is, hogy a megfelelő videó linket másoltad-e ki.",
-    "q9": "Kell alkalmazást vagy bővítményt telepítenem?",
-    "a9": "Nincs szükség telepítésre. A SaveTikFast egy webalapú eszköz. Csak egy webböngészőre (Chrome, Safari stb.) és internetkapcsolatra van szükséged.",
-    "q10": "Legális ennek a letöltőnek a használata?",
-    "a10": "Igen, amíg a letöltött tartalmat személyes, nem kereskedelmi célokra használod (például offline megtekintés). Kérjük, tartsd tiszteletben az alkotók szerzői jogait."
+    "a2": "Igen, a SaveTikFast 100%-ban ingyenes és mindig is ingyenes marad. Nincsenek rejtett költségek, prémium előfizetések vagy napi letöltési korlátok. Korlátlan számú TikTok videót tölthetsz le vízjel nélkül, konvertálhatsz MP3-ra, menthetsz történeteket és tölthetsz le diavetítéseket - mindez teljesen ingyen. Nem követeljük meg a regisztrációt vagy bejelentkezést. Szolgáltatásunkat minimális hirdetés támogatja, lehetővé téve számunkra, hogy ingyenes TikTok letöltéseket kínáljunk világszerte milliók számára bármely eszközön.",
+    "q3": "Milyen eszközök és böngészők támogatottak?",
+    "a3": "A SaveTikFast gyakorlatilag minden eszközön és böngészőben működik. A támogatott eszközök közé tartoznak az iPhone-ok (minden modell, beleértve az iPhone 15, 14, 13-at), Android telefonok (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), táblagépek (iPad, Samsung Tab) és számítógépek (MacBook, iMac, Windows PC, Chromebook). A támogatott böngészők közé tartozik a Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet és UC Browser. Nincs szükség alkalmazás telepítésére - minden közvetlenül a webböngésződben működik.",
+    "q4": "Milyen videó minőséget tölthetek le?",
+    "a4": "A SaveTikFast a TikTok videókat a legmagasabb elérhető minőségben tölti le. Ez magában foglalja a 720p HD felbontást, 1080p Full HD-t, 2K-t és akár 4K-t is, amikor az eredeti videó támogatja. Soha nem tömörítjük vagy csökkentjük a videó minőségét - pontosan ugyanazt a minőséget kapod, mint az eredeti TikTok feltöltés. Ez teszi a SaveTikFast-ot jobbá más letöltőknél, mint a TikMate, SaveFrom vagy MusicallyDown, amelyek gyakran tömörítik a videókat.",
+    "q5": "Biztonságos a SaveTikFast használata?",
+    "a5": "Abszolút. A SaveTikFast teljesen biztonságos és védett. SSL titkosítást használunk a kapcsolatod védelmére, nem tároljuk a személyes adataidat és nem követeljük meg a bejelentkezést vagy regisztrációt. A letöltött videóid azonnal feldolgozásra kerülnek és nem tárolódnak a szervereinken. Nem telepítünk semmit az eszközödre. A SaveTikFast 2024 óta milliók bizalmát élvezi a biztonságos TikTok videó letöltésekben.",
+    "q6": "Miben jobb a SaveTikFast az SSSTiknél vagy SnapTiknél?",
+    "a6": "A SaveTikFast számos előnyt kínál az SSSTikkel, SnapTikkel, TikMate-tel és más TikTok letöltőkkel szemben. Szolgáltatásunk gyorsabb (a letöltések 3 másodperc alatt befejeződnek), magasabb kimeneti minőséget nyújt (akár 4K), tisztább felülettel rendelkezik kevesebb hirdetéssel, megbízhatóbban működik minden eszközön és extra funkciókat kínál, mint MP3 konverzió, történetek letöltése és diavetítés kinyerése. Sok felhasználó vált át SaveTikFast-ra más letöltőkkel kapcsolatos problémák után.",
+    "q7": "Letölthetek TikTok videókat iPhone-ra?",
+    "a7": "Igen, TikTok videók letöltése iPhone-ra egyszerű a SaveTikFast segítségével. Nyisd meg a TikTokot, másold ki a videó linkjét, majd nyisd meg a Safarit vagy Chrome-ot és menj a SaveTikFast-ra. Illeszd be a linket és érintsd meg a letöltést. A videó közvetlenül az iPhone Fotók vagy Fájlok alkalmazásába kerül mentésre. Működik minden iPhone modellen, beleértve az iPhone 15, 14, 13, 12 és régebbi modelleket. Nincs szükség alkalmazás telepítésére - minden a böngésződben működik.",
+    "q8": "Letölthetek privát TikTok videókat?",
+    "a8": "A SaveTikFast csak nyilvános TikTok videókat tud letölteni. A privát videók (csak az alkotó vagy jóváhagyott követők számára láthatók) nem tölthetők le semmilyen online eszközzel a TikTok adatvédelmi beállításai miatt. Ha megvan az alkotó engedélye, kérd meg, hogy ideiglenesen tegye nyilvánossá a videót vagy ossza meg veled közvetlenül a TikTok beépített megosztási funkcióin keresztül.",
+    "q9": "Hogyan tölthetek le TikTokot Samsungra vagy Androidra?",
+    "a9": "TikTok videók letöltése Samsung Galaxyra vagy bármely Android telefonra egyszerű. Nyisd meg a TikTok alkalmazást, érintsd meg a Megosztás gombot a kívánt videónál és másold ki a linket. Majd nyisd meg a Chrome, Firefox vagy Samsung Internet böngészőt és látogasd meg a SaveTikFast-ot. Illeszd be a linket a letöltő mezőbe és érintsd meg a letöltés gombot. A videó a Letöltések vagy Galéria mappádba kerül mentésre. Működik minden Android eszközön, beleértve a Samsungot, Huaweit, Xiaomit, OPPO-t és Google Pixelt.",
+    "q10": "Miért válasszam a SaveTikFast-ot más TikTok letöltők helyett?",
+    "a10": "A SaveTikFast a legjobb választás TikTok letöltésekhez, mert a sebességet, minőséget és megbízhatóságot kombináljuk. A leggyorsabb letöltési sebességeket kínáljuk (3 másodperc), a legmagasabb videó minőséget (akár 4K), vízjel eltávolítást, MP3 konverziót, történetek letöltését és diavetítés kinyerését - mindezt egy ingyenes eszközben. Tiszta felületünk tökéletesen működik minden eszközön és böngészőben. Milliók bizalmát élvezzük, mint a legjobb alternatíva az SSSTik, SnapTik, TikMate, SaveFrom és MusicallyDown helyett."
   },
   "pages": {
     "about": {
@@ -102,33 +102,37 @@
     "rights": "© 2026 SaveTikFast. Minden jog fenntartva."
   },
   "features": {
-    "404": {
-      "title": "Page Not Found",
-      "home_btn": "Go Back Home"
+    "no_watermark": {
+      "title": "Vízjel Nélkül",
+      "desc": "Töltsd le a TikTok videókat vízjel nélkül eredeti HD minőségben. A SaveTikFast automatikusan eltávolítja a TikTok logót, tisztább videókat adva, mint az SSSTik, SnapTik vagy TikMate. Tökéletes újramegosztásra Instagramon, YouTube Shorts-on vagy a galériádba mentéshez."
     },
     "fast": {
-      "title": "Szupergyors letöltés",
-      "desc": "Töltsön le TikTok videókat másodpercek alatt nagy sebességű szervereinkkel."
-    },
-    "safe": {
-      "title": "Biztonságos és privát",
-      "desc": "Nem tároljuk videóit, és nem követjük nyomon személyes adatait."
-    },
-    "unlimited": {
-      "title": "Korlátlan használat",
-      "desc": "Töltsön le annyi videót, amennyit csak akar, korlátozások nélkül."
-    },
-    "no_watermark": {
-      "title": "Vízjel nélkül",
-      "desc": "Töltsön le TikTok videókat az idegesítő vízjel nélkül. Tiszta videók megosztásra készen."
+      "title": "Villámgyors Sebesség",
+      "desc": "A leggyorsabb TikTok videóletöltő online. Mentsd el bármely TikTok videót mindössze 3 másodperc alatt iPhone-on, Androidon, Samsungon, Huawein, iPaden, PC-n vagy Macen. Szervereink sebességre optimalizáltak, gyorsabbak vagyunk, mint a SaveFrom és a MusicallyDown."
     },
     "quality": {
-      "title": "HD és 4K minőség",
-      "desc": "Videók mentése eredeti minőségben - akár 4K felbontásban kristálytiszta hanggal."
+      "title": "HD &amp; 4K Minőség",
+      "desc": "Töltsd le a TikTok videókat a legmagasabb elérhető minőségben - 720p, 1080p Full HD, 2K és akár 4K is, ha elérhető. Megőrizzük az eredeti videó minőségét tömörítés nélkül, ellentétben más TikTok letöltőkkel."
     },
     "device": {
-      "title": "Minden eszköz",
-      "desc": "Tökéletesen működik iPhone-on, Androidon, PC-n, Mac-en és tableteken. Nincs szükség telepítésre."
+      "title": "Minden Eszköz Támogatott",
+      "desc": "Tökéletesen működik minden eszközön - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC és Chromebook. Nincs szükség alkalmazás telepítésére."
+    },
+    "free": {
+      "title": "100% Ingyenes Örökre",
+      "desc": "Korlátlan TikTok videó letöltés rejtett költségek, regisztráció vagy napi korlátok nélkül. A SaveTikFast teljesen ingyenes és ingyenes is marad minden felhasználó számára világszerte."
+    },
+    "secure": {
+      "title": "Privát &amp; Biztonságos",
+      "desc": "Az adatvédelem számít. Nem tároljuk az adataidat, nem követeljük meg a bejelentkezést és nem követjük nyomon a letöltéseidet. Biztonságos és névtelen TikTok videó letöltés SSL titkosítással."
+    },
+    "browser": {
+      "title": "Minden Böngésző",
+      "desc": "Azonnal működik Chrome-on, Safarin, Firefoxon, Microsoft Edge-en, Operán, Brave-en, Samsung Interneten és UC Browserben. Nincs szükség bővítményre vagy pluginra - csak illeszd be és töltsd le."
+    },
+    "batch": {
+      "title": "Tömeges Letöltés",
+      "desc": "Mentsd el gyorsan több TikTok videót. Töltsd le a kedvenc alkotód teljes kollekcióját gyorsabban, mint bármely más eszközzel. Jobb tömeges letöltés, mint az SSSTik vagy SnapTik."
     }
   },
   "how_to": {
@@ -322,37 +326,37 @@
     "about_title": "TikTok Fotó Letöltő",
     "about_content": "Mentse el a TikTok fotó diavetítéseket eredeti HD minőségben vízjelek nélkül.",
     "features": {
-      "bulk": {
-        "title": "Bulk Download",
-        "desc": "Save all photos at once."
+      "all": {
+        "title": "Minden Fotó Egyszerre",
+        "desc": "Töltsd le az összes diavetítés képet egy kattintással. A SaveTikFast kinyeri minden fotót a TikTok fotókaruszelekből és kényelmes ZIP fájlként menti őket. Gyorsabb, mint minden képet külön-külön menteni."
       },
-      "original": {
-        "title": "Eredeti minőség",
-        "desc": "Full resolution."
+      "quality": {
+        "title": "Eredeti Felbontás",
+        "desc": "Mentsd a diavetítés fotókat teljes eredeti felbontásban, tömörítés nélkül. Kapd a legmagasabb minőségű képeket pontosan úgy, ahogy az alkotó feltöltötte a TikTok-ra."
+      },
+      "audio": {
+        "title": "Háttérzenével",
+        "desc": "Töltsd le a TikTok diavetítéseket a háttérzenével együtt. Kapd meg a képeket és az audio sávot együtt. Tökéletes a teljes diavetítés élmény megőrzéséhez."
       },
       "fast": {
-        "title": "Fast Speed",
-        "desc": "Instant processing."
-      },
-      "format": {
-        "title": "Okos formátumok",
-        "desc": "JPG/PNG."
+        "title": "Villámgyors",
+        "desc": "Nyerd ki az összes diavetítés fotót mindössze 3 másodperc alatt. A leggyorsabb elérhető TikTok diavetítés letöltő - gyorsabb, mint az SSSTik, SnapTik vagy bármely más eszköz."
       },
       "device": {
-        "title": "Minden eszköz",
-        "desc": "iOS, Android, PC."
+        "title": "Univerzális Kompatibilitás",
+        "desc": "Működik iPhone-on, Samsung-on, Huawei-n, Xiaomi-n, iPad-en, MacBooken, Windows PC-n, Chromebooken. Töltsd le a TikTok diavetítéseket bármely eszközön Chrome-mal, Safari-val, Firefoxszal vagy Edge-dzsel."
       },
-      "unlimited": {
-        "title": "Unlimited",
-        "desc": "Free unlimited downloads."
+      "free": {
+        "title": "Mindig Ingyenes",
+        "desc": "Korlátlan diavetítés letöltés díjmentesen, regisztráció nélkül és napi limit nélkül. A SaveTikFast diavetítés letöltő örökre teljesen ingyenes."
       },
-      "safe": {
-        "title": "100% Biztonságos",
-        "desc": "Privát letöltések."
+      "nowatermark": {
+        "title": "Vízjel Nélkül",
+        "desc": "Töltsd le a diavetítés képeket TikTok vízjel nélkül. Tiszta fotók készen a galériádhoz, Instagram-hoz, Pinterest-hez vagy bármely más platformhoz."
       },
-      "anonymous": {
-        "title": "Névtelen",
-        "desc": "Nézd meg értesítés nélkül."
+      "browser": {
+        "title": "Bármely Böngésző",
+        "desc": "Nincs szükség alkalmazásra. Töltsd le a TikTok diavetítéseket közvetlenül Chrome-ban, Safari-ban, Firefoxban, Microsoft Edge-ben, Operában, Samsung Internetben. Működik mobil és asztali böngészőkben."
       }
     },
     "how_to": {
@@ -362,26 +366,22 @@
       "step3": "Kattintson a Letöltés gombra."
     },
     "faq": {
-      "q1": "Letölthetem az összes képet egyszerre?",
-      "a1": "Igen, eszközünk letölti a teljes képkészletet.",
-      "q2": "Jó a minőség?",
-      "a2": "Abszolút! Eredeti HD felbontásban mentünk.",
-      "q3": "Van vízjel?",
-      "a3": "Nem, eltávolítjuk a vízjeleket.",
-      "q4": "Ingyenes?",
-      "a4": "Igen, 100% ingyenes.",
-      "q5": "Működik mobilon?",
-      "a5": "Igen, iOS és Android rendszeren.",
-      "q6": "Kell alkalmazás?",
-      "a6": "Nem, telepítés nélkül.",
-      "q7": "Privát fiókok?",
-      "a7": "Nem, csak nyilvános.",
-      "q8": "Milyen formátum?",
-      "a8": "JPG vagy PNG.",
-      "q9": "Van korlát?",
-      "a9": "Nincs korlát.",
-      "q10": "És a zene?",
-      "a10": "Igen, a hang külön MP3-ként elérhető."
+      "q1": "Hogyan töltsek le TikTok diavetítéseket?",
+      "a1": "TikTok fotó diavetítések letöltése egyszerű a SaveTikFast-tal. Másold ki a diavetítés linkjét a TikTok-ról, illeszd be diavetítés letöltőnkbe és kattints a letöltésre. Minden kép kinyerésre és együtt letöltésre kerül - akár egyedi fotókként, akár kényelmes ZIP fájlként. Működik iPhone-on, Android-on, Samsung-on, iPad-en, Mac-en, Windows-on bármely böngésző használatával.",
+      "q2": "Letölthetem az összes diavetítés fotót egyszerre?",
+      "a2": "Igen! A SaveTikFast egy kattintással letölti az összes TikTok diavetítés fotót. Nem kell minden képet külön-külön menteni. Eszközünk kinyeri minden fotót a karuszelből és összecsomagolja őket. Sok képet tartalmazó diavetítéseknél ZIP fájlt biztosítunk az egyszerű letöltéshez. Sokkal gyorsabb, mint más módszerek.",
+      "q3": "A SaveTikFast letölti a diavetítés audiót is?",
+      "a3": "Igen, a SaveTikFast letöltheti a TikTok diavetítéseket a háttérzenével együtt. Megkapod a képeket és a diavetítéssel játszó audio sávot is. Ez megőrzi a teljes diavetítés élményt pontosan úgy, ahogy az alkotó szánta.",
+      "q4": "Milyen minőségűek a letöltött diavetítés képek?",
+      "a4": "A SaveTikFast teljes eredeti felbontásban nyeri ki a TikTok diavetítés fotókat. Nem tömörítünk és nem csökkentjük a képminőséget. Pontosan ugyanazokat a magas minőségű fotókat kapod, amit az alkotó feltöltött - tökéletesek mentéshez, megosztáshoz vagy nyomtatáshoz.",
+      "q5": "Letölthetek TikTok diavetítéseket iPhone-ra?",
+      "a5": "Igen, TikTok diavetítések letöltése iPhone-ra egyszerű. Másold ki a linket a TikTok-ról, nyisd meg a Safari-t vagy Chrome-ot, látogasd meg a SaveTikFast-ot, illeszd be a linket és töltsd le. A fotók a Fotók alkalmazásba kerülnek. Működik minden iPhone modellen alkalmazás telepítése nélkül.",
+      "q6": "Ingyenes a diavetítés letöltő?",
+      "a6": "Igen, a SaveTikFast diavetítés letöltő 100%-ban ingyenes. Tölts le korlátlan számú TikTok diavetítést díjmentesen, előfizetés vagy napi limit nélkül. Ingyenes szolgáltatásunk működik iPhone-on, Android-on, Samsung-on, PC-n, Mac-en és minden eszközön Chrome, Safari, Firefox vagy bármely böngésző használatával.",
+      "q7": "A letöltött diavetítés képek vízjel nélküliek?",
+      "a7": "A SaveTikFast amikor lehetséges, vízjel nélkül tölti le a TikTok diavetítés képeket. Tiszta fotókat kapsz TikTok logó nélkül, készen a galériádhoz, Instagram-hoz, Pinterest-hez vagy bármely platformhoz. Tökéletes esztétikus tartalom mentéséhez.",
+      "q8": "Miért válasszam a SaveTikFast-ot diavetítés letöltéshez?",
+      "a8": "A SaveTikFast a legjobb TikTok diavetítés letöltő, mert azonnal kinyerjük az összes fotót, megőrizzük az eredeti minőséget, mellékeljük az audiót és korlátlan letöltést kínálunk teljesen ingyen. Eszközünk gyorsabban és megbízhatóbban működik, mint az SSSTik, SnapTik vagy más diavetítés kinyerők. Tölts le teljes fotókaruszeleket másodpercek alatt."
     }
   },
   "nav_menu": {
@@ -401,36 +401,36 @@
     "about_content": "A SaveTikFast MP3 lehetővé teszi a hang azonnali kinyerését bármely TikTok videóból. Töltsön le felkapott dalokat és virális hangokat.",
     "features": {
       "quality": {
-        "title": "Kiváló Minőségű Hang",
-        "desc": "A legjobb hangminőség, akár 320kbps."
+        "title": "HD Audio 320kbps",
+        "desc": "Konvertáld a TikTok videókat kristálytiszta 320kbps stúdió minőségű MP3-má. A legnagyobb elérhető audio bitráta online, tökéletes zeneszeretőknek, akik a legjobb hangzást akarják iPhone-on, Android-on vagy PC-n."
       },
       "fast": {
-        "title": "Gyors Konvertálás",
-        "desc": "TikTok-ból MP3 másodpercek alatt."
-      },
-      "trending": {
-        "title": "Felkapott Hangok",
-        "desc": "Töltsön le zenét, ami most népszerű a TikTok-on."
-      },
-      "device": {
-        "title": "Működik Mindenhol",
-        "desc": "iPhone-on, Androidon, PC-n és Mac-en."
+        "title": "Azonnali Konvertálás",
+        "desc": "TikTok-ból MP3 konvertálás mindössze 2 másodperc alatt. A leggyorsabb online TikTok audio kinyerő - gyorsabb mint az SSSTik MP3, SnapTik audio vagy bármely más konverter. Azonnal működik minden eszközön."
       },
       "ringtone": {
-        "title": "Csengőhangnak",
-        "desc": "Használja az MP3-at csengőhangként vagy ébresztőként."
+        "title": "Csengőhang Kész",
+        "desc": "Tökéletes audio hossz iPhone csengőhangokhoz és Android értesítési hangokhoz. Készíts egyedi csengőhangokat virális TikTok hangokból és trendi audio klipekből. Könnyen beállítható bármely okostelefonon."
+      },
+      "device": {
+        "title": "Minden Eszköz",
+        "desc": "Nyerd ki a TikTok audiót iPhone-on, Samsung Galaxy-n, Google Pixelen, Huawei-n, iPad-en, MacBooken, Windows PC-n és bármely böngészővel rendelkező eszközön. Nincs szükség alkalmazás letöltésére."
+      },
+      "original": {
+        "title": "Eredeti Hang",
+        "desc": "Megőrzi az eredeti TikTok audio minőséget tömörítés vagy minőségromlás nélkül. Pontosan ugyanazt a hangot kapod, mint az eredeti videóban, beleértve a trendi dalokat és virális audiót."
       },
       "unlimited": {
-        "title": "Ingyenes és Korlátlan",
-        "desc": "Nincs letöltési korlát."
+        "title": "Ingyenes &amp; Korlátlan",
+        "desc": "Nincs limit a TikTok-ból MP3 konverziókra. Konvertálj annyi TikTok videót audiová, amennyit csak akarsz - teljesen ingyen, regisztráció nélkül, napi korlátozás nélkül."
       },
-      "safe": {
-        "title": "Biztonságos",
-        "desc": "Adatvédelem."
+      "secure": {
+        "title": "Biztonságos &amp; Privát",
+        "desc": "Biztonságos MP3 konverzió adatgyűjtés nélkül. Nem tároljuk a konvertált fájljaidat és nem követjük a tevékenységedet. Az adatvédelem 100%-ban garantált."
       },
-      "no_watermark": {
-        "title": "Tiszta Hang",
-        "desc": "Vízjel nélkül."
+      "nobapp": {
+        "title": "Nincs Szükség Alkalmazásra",
+        "desc": "Működik közvetlenül a böngésződben - Chrome, Safari, Firefox, Edge, Opera. Nincs alkalmazás telepítés, nincs szükség tárolóhelyre. Jobb mint a TikTok MP3 letöltő alkalmazások."
       }
     },
     "how_to": {
@@ -440,26 +440,26 @@
       "step3": "Kattintson az 'MP3 Kinyerése' gombra a letöltéshez."
     },
     "faq": {
-      "q1": "Hogyan tölthetek le MP3-at TikTok-ról?",
-      "a1": "Másolja ki a linket, illessze be a SaveTikFast-re, és kattintson az MP3 Kinyerése gombra.",
-      "q2": "Milyen a hangminőség?",
-      "a2": "A lehető legjobb eredeti minőséget nyerjük ki.",
-      "q3": "Letölthetek népszerű dalokat?",
-      "a3": "Igen, bármilyen hangot vagy zenét letölthet.",
-      "q4": "Biztonságos ez?",
-      "a4": "Igen, 100%-ban biztonságos és névtelen.",
-      "q5": "Használhatom csengőhangként?",
-      "a5": "Igen, az MP3 fájlok tökéletesek csengőhangnak.",
-      "q6": "Működik iPhone-on?",
-      "a6": "Igen, működik iOS-en és Androidon.",
-      "q7": "Van valami korlát?",
-      "a7": "Nincs, teljesen korlátlan.",
-      "q8": "Miért nincs hang?",
-      "a8": "Ellenőrizze, hogy az eredeti videónak van-e hangja.",
-      "q9": "Legális ez?",
-      "a9": "Csak személyes használatra.",
-      "q10": "Mi a különbség a videó letöltőhöz képest?",
-      "a10": "Az MP3 konvertáló csak a hangot menti, a képet nem."
+      "q1": "Hogyan konvertáljak TikTok videót MP3-má?",
+      "a1": "A TikTok-ból MP3 konvertálás egyszerű a SaveTikFast-tal. Másold ki a TikTok videó linket, illeszd be az MP3 konverterünkbe és kattints a konvertálásra. Az audio azonnal kinyerésre kerül kiváló 320kbps MP3 minőségben. Működik iPhone-on, Android-on, Samsung-on, PC-n, Mac-en és minden eszközön Chrome, Safari, Firefox vagy bármely böngésző használatával. A TikTok-ból MP3 konverterünk gyorsabb és jobb minőségű, mint az SSSTik vagy SnapTik audio kinyerők.",
+      "q2": "Milyen audio minőséget nyújt a SaveTikFast MP3 konverter?",
+      "a2": "A SaveTikFast prémium 320kbps MP3 minőségben nyeri ki a TikTok audiót - a legmagasabb elérhető bitráta MP3 fájlokhoz. Ez kristálytiszta, stúdió minőségű hangot biztosít, tökéletes zenehallgatáshoz, csengőhangokhoz vagy audio projektekhez. Megőrizzük az eredeti TikTok audiót tömörítés vagy minőségromlás nélkül, ellentétben más konverterekkel, amelyek csökkentik a bitrátát a sávszélesség spórolása érdekében.",
+      "q3": "Használhatom a TikTok audiót csengőhangként?",
+      "a3": "Igen! A SaveTikFast-ról letöltött TikTok audio tökéletes csengőhangokhoz. Az MP3 formátum működik iPhone és Android csengőhang beállításokkal is. iPhone-on használd a GarageBand-et vagy iTunes-t az egyedi csengőhangok beállításához. Android-on egyszerűen menj a Beállítások > Hang > Csengőhang menüpontra és válaszd ki a letöltött MP3-at. Készíts egyedi csengőhangokat virális TikTok hangokból és trendi audiókból.",
+      "q4": "Ingyenes a TikTok-ból MP3 konvertálás?",
+      "a4": "Teljesen ingyenes. A SaveTikFast MP3 konverternek nincsenek díjai, előfizetései vagy napi limitjei. Konvertálj korlátlan számú TikTok videót MP3-má regisztráció nélkül. Ingyenes szolgáltatásunk minden eszközön működik - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - bármely böngészővel, beleértve a Chrome-ot, Safari-t és Firefoxot.",
+      "q5": "Mennyi időbe telik az MP3 konvertálás?",
+      "a5": "A SaveTikFast körülbelül 2-3 másodperc alatt konvertál TikTok-ból MP3-má. Erős szervereket használunk, amelyek a gyors audio kinyerésre vannak optimalizálva. Ez tesz minket a leggyorsabb elérhető TikTok MP3 konverterré - jelentősen gyorsabb, mint az SSSTik MP3, SnapTik audio, TikMate vagy más konverziós eszközök.",
+      "q6": "Tudok TikTok zenét letölteni iPhone-ra?",
+      "a6": "Igen, könnyen letölthetsz TikTok zenét és audiót iPhone-ra a SaveTikFast használatával. Másold ki a TikTok linket, nyisd meg a Safari-t vagy Chrome-ot, látogasd meg az MP3 konverterünket, illeszd be a linket és érintsd meg a letöltést. Az MP3 fájl a Fájlok alkalmazásba kerül. Onnan hozzáadhatod az Apple Music-hoz, használhatod csengőhangként vagy bárhová megoszthatod. Működik minden iPhone modellen.",
+      "q7": "Az MP3 tartalmazza a teljes audio sávot?",
+      "a7": "Igen, a SaveTikFast kinyeri a teljes audiót a TikTok videókból - beleértve a háttérzenét, hangot, hangeffekteket és minden audio elemet. A teljes hosszúságú audio pontosan úgy van megőrizve, ahogy az eredeti TikTok videóban hallható. Tökéletes trendi dalok, virális hangok és kedvenc TikTok audióid mentéséhez.",
+      "q8": "Biztonságos a SaveTikFast MP3 konverter?",
+      "a8": "Teljesen biztonságos. A SaveTikFast MP3 konverter biztonságos SSL titkosítást használ, nem tárolja az adataidat vagy konvertált fájljaidat, nem igényel bejelentkezést és semmit sem telepít az eszközödre. Biztonságosan konvertáltunk millió TikTok videót MP3-má felhasználók számára világszerte. Az adatvédelem és biztonság a prioritásunk.",
+      "q9": "Konvertálhatok TikTok-ot MP3-má Android-on?",
+      "a9": "Igen, a TikTok-ból MP3 konvertálás tökéletesen működik minden Android eszközön. Ez magában foglalja a Samsung Galaxy-t, Google Pixelt, Huawei-t, Xiaomi-t, OPPO-t, OnePlus-t és minden más Android telefont és tabletet. Csak használd a Chrome, Firefox vagy Samsung Internet böngészőt a SaveTikFast eléréséhez és konvertálj bármely TikTok-ot MP3-má azonnal.",
+      "q10": "Miért a SaveTikFast a legjobb TikTok-ból MP3 konverter?",
+      "a10": "A SaveTikFast a legjobb TikTok MP3 konvertálást kínálja kiváló sebességünk (2 másodperc), maximális audio minőségünk (320kbps), univerzális eszköztámogatásunk és teljesen ingyenes szolgáltatásunk miatt. Az SSSTik-kel, SnapTik-kel vagy más konverterekkel ellentétben következetesen magas minőségű eredményeket nyújtunk bosszantó hirdetések vagy letöltési limitek nélkül. Milliók bíznak a SaveTikFast-ban TikTok audio igényeikhez."
     },
     "meta_desc": "TikTok videók konvertálása MP3 hanggá. Dalok és zene kinyerése kiváló minőségben."
   },
@@ -472,29 +472,37 @@
     "about_title": "Story Letöltő 2026",
     "about_content": "A SaveTikFast Story Downloader lehetővé teszi sztorik és fotó körhinták mentését, mielőtt azok 24 óra után eltűnnének.",
     "features": {
-      "anonymous": {
-        "title": "100% Névtelen",
-        "desc": "Töltsön le anélkül, hogy a szerző tudna róla."
-      },
-      "slides": {
-        "title": "Teljes Diavetítés",
-        "desc": "Töltse le az összes képet egyszerre."
-      },
       "expire": {
-        "title": "Mielőtt Lejár",
-        "desc": "Őrizze meg az átmeneti tartalmat örökre."
+        "title": "Mentsd El Mielőtt Eltűnnek",
+        "desc": "Töltsd le a TikTok történeteket, mielőtt 24 óra után eltűnnek. Soha többé ne veszítsd el kedvenc alkotód történeteit. A SaveTikFast lehetővé teszi a lejáró tartalom végleges mentését az eszközödre."
       },
       "quality": {
         "title": "Eredeti Minőség",
-        "desc": "Nagy felbontás tömörítés nélkül."
+        "desc": "Mentsd a TikTok történeteket teljes HD minőségben - pontosan úgy, ahogy az alkotó feltöltötte. Nincs minőségromlás, nincs tömörítés. Kapd ugyanazt a felbontást iPhone-on, Android-on vagy PC-n."
+      },
+      "anonymous": {
+        "title": "Névtelen Megtekintés",
+        "desc": "Nézd meg és töltsd le a TikTok történeteket teljesen névtelenül. Az alkotó nem tudja meg, hogy elmentetted a történetét. 100%-ban privát és diszkrét történet letöltés."
+      },
+      "fast": {
+        "title": "Szupergyors",
+        "desc": "Tölts le bármely TikTok történetet mindössze 2 másodperc alatt. Azonnali történet mentés, ami gyorsabb, mint bármely más online TikTok történet letöltő."
       },
       "device": {
-        "title": "Minden Eszköz",
-        "desc": "Kompatibilis mobillal és PC-vel."
+        "title": "Működik Bárhol",
+        "desc": "Mentsd a TikTok történeteket iPhone 15-ön, Samsung Galaxy-n, Google Pixelen, Huawei-n, iPad-en, Mac-en, Windows-on és bármely eszközön. Kompatibilis Chrome-mal, Safari-val, Firefoxszal és minden böngészővel."
       },
-      "favorites": {
-        "title": "Kedvencei",
-        "desc": "Mentse el a legjobb sztorikat."
+      "nowatermark": {
+        "title": "Vízjel Nélkül",
+        "desc": "Töltsd le a TikTok történeteket vízjel vagy TikTok logó nélkül. Tiszta történet letöltések, készen a mentésre vagy megosztásra Instagram-on, Snapchat-en vagy WhatsApp-on."
+      },
+      "free": {
+        "title": "Örökre Ingyenes",
+        "desc": "Korlátlan TikTok történet letöltés díjmentesen. Nincs regisztráció, nincs díj, nincs napi limit. A SaveTikFast történet letöltő 100%-ban ingyenes."
+      },
+      "noapp": {
+        "title": "Csak Böngésző",
+        "desc": "Nincs szükség alkalmazás telepítésre. Töltsd le a TikTok történeteket közvetlenül Chrome-ból, Safari-ból, Firefoxból, Edge-ből a telefonodon vagy számítógépeden. Gyorsabb és biztonságosabb, mint az alkalmazások."
       }
     },
     "how_to": {
@@ -504,26 +512,22 @@
       "step3": "Kattintson a 'Story Mentése' gombra."
     },
     "faq": {
-      "q1": "Hogyan tölthetek le sztorit?",
-      "a1": "Illessze be a linket és töltse le.",
-      "q2": "Ez névtelen?",
-      "a2": "Igen, a készítő nem fogja tudni.",
-      "q3": "Támogatják a diavetítéseket?",
-      "a3": "Igen, letöltjük az összes képet a körhintából.",
-      "q4": "Mikor járnak le a sztorik?",
-      "a4": "24 óra után.",
-      "q5": "Milyen minőség?",
-      "a5": "Eredeti HD minőség.",
-      "q6": "Működik iPhone-on?",
-      "a6": "Igen, böngészőn keresztül.",
-      "q7": "Privát fiókok?",
-      "a7": "Nem, csak nyilvánosak.",
-      "q8": "Ingyenes?",
-      "a8": "Igen, teljesen ingyenes.",
-      "q9": "Miért nem sikerül?",
-      "a9": "A sztori lehet, hogy lejárt vagy a fiók privát.",
-      "q10": "Story vs Diavetítés különbség?",
-      "a10": "A sztorik átmenetiek (24ó), a diavetítések állandóak."
+      "q1": "Hogyan töltsek le TikTok történeteket?",
+      "a1": "TikTok történetek letöltéséhez először másold ki a történet linkjét a TikTok-ról (érintsd meg a Megosztás gombot a történeten). Majd látogasd meg a SaveTikFast-ot, illeszd be a linket történet letöltőnkbe és kattints a letöltésre. A történet az eszközödre kerül eredeti HD minőségben. Működik iPhone-on, Android-on, Samsung-on, iPad-en, Mac-en, PC-n Chrome, Safari, Firefox vagy bármely böngésző használatával. Mentsd el a történeteket, mielőtt 24 óra után eltűnnek.",
+      "q2": "Letölthetem a TikTok történeteket névtelenül?",
+      "a2": "Igen, a SaveTikFast teljesen névtelen TikTok történet letöltést tesz lehetővé. Az alkotó nem kap értesítést, és nem tudja meg, hogy letöltötted a történetét. Az identitásod privát marad. Ez tökéletes a tartalom diszkrét mentéséhez anélkül, hogy interakcióba lépnél az alkotó fiókjával.",
+      "q3": "Lejárnak a TikTok történetek letöltés után?",
+      "a3": "Nem, ha egyszer letöltöttél egy TikTok történetet a SaveTikFast-tal, az véglegesen az eszközödön van tárolva. Bár a TikTok történetek 24 óra után eltűnnek a platformon, a letöltött másolatod örökre megmarad. Mentsd el a fontos történeteket lejárat előtt, így soha nem veszíted el a hozzáférést a tartalomhoz.",
+      "q4": "Milyen minőségűek a letöltött TikTok történetek?",
+      "a4": "A SaveTikFast eredeti teljes minőségben tölti le a TikTok történeteket - ugyanabban a HD felbontásban, amit az alkotó feltöltött. Nem tömörítünk és nem csökkentjük a minőséget. A letöltött történeteid pontosan úgy néznek ki, ahogy a TikTok-on, tökéletesek emlékek megőrzéséhez vagy újra publikáláshoz.",
+      "q5": "Letölthetek TikTok történeteket iPhone-ra?",
+      "a5": "Igen, TikTok történetek letöltése iPhone-ra egyszerű. Másold ki a történet linkjét a TikTok-ról, nyisd meg a Safari-t vagy Chrome-ot, menj a SaveTikFast-ra, illeszd be a linket és érintsd meg a letöltést. A történetek közvetlenül a Fotók vagy Fájlok alkalmazásba kerülnek. Működik iPhone 15, 14, 13, 12 és minden modellen alkalmazás telepítése nélkül.",
+      "q6": "Ingyenes a TikTok történet letöltő?",
+      "a6": "Teljesen ingyenes. A SaveTikFast történet letöltőnek nincsenek költségei, prémium csomagjai vagy letöltési limitjei. Mentsd el korlátlan számú TikTok történetet díjmentesen bármely eszközön - iPhone, Android, Samsung, PC, Mac. Nincs szükség regisztrációra vagy fiókra.",
+      "q7": "Letölthetek privát TikTok történeteket?",
+      "a7": "A SaveTikFast csak nyilvános TikTok történeteket tud letölteni. A csak meghatározott követőkkel megosztott privát történetek nem érhetők el külső letöltő eszközök számára a TikTok adatvédelmi védelme miatt. Privát tartalomhoz az alkotó közvetlen engedélye szükséges.",
+      "q8": "Miért használjam a SaveTikFast-ot TikTok történetekhez?",
+      "a8": "A SaveTikFast a legjobb TikTok történet letöltő, mert azonnali letöltést, eredeti HD minőséget, névtelen mentést és korlátlan ingyenes hozzáférést kínálunk. Eszközünk megbízhatóan működik minden eszközön és böngészőn, így jobb, mint más történet letöltők. Mentsd el a lejáró történeteket, mielőtt örökre eltűnnek."
     },
     "meta_desc": "TikTok történetek és diavetítések névtelen letöltése. Mentse el a fotókat, mielőtt lejárnak."
   },

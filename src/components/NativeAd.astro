@@ -2,14 +2,41 @@
 
 ---
 
-<div class="native-ad-container">
-    <script
-        async="async"
-        data-cfasync="false"
-        src="https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"
-    ></script>
-    <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
+<div class="native-ad-container" id="ad-container">
+    <!-- الإعلان سيتم تحميله عند الظهور -->
 </div>
+
+<script>
+    const loadAd = () => {
+        const container = document.getElementById('ad-container');
+        if (!container || container.dataset.loaded) return;
+        container.dataset.loaded = 'true';
+        
+        const script = document.createElement('script');
+        script.async = true;
+        script.setAttribute('data-cfasync', 'false');
+        script.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+        container.appendChild(script);
+        
+        const adDiv = document.createElement('div');
+        adDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
+        container.appendChild(adDiv);
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                loadAd();
+                observer.disconnect();
+            }
+        }, { rootMargin: '200px' });
+        
+        const container = document.getElementById('ad-container');
+        if (container) observer.observe(container);
+    } else {
+        setTimeout(loadAd, 3000);
+    }
+</script>
 
 <style>
     .native-ad-container {
@@ -23,7 +50,6 @@
         overflow: hidden;
     }
 
-    /* Support for Cloudflare's Rocket Loader and different ad sizes */
     .native-ad-container :global(iframe) {
         max-width: 100% !important;
     }
