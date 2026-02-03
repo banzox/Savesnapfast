@@ -44,10 +44,10 @@
     "download_zip": "Muat Turun Semua (ZIP)",
     "creating_zip": "Mencipta ZIP...",
     "save_image": "Simpan",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "Pautan tidak sah! Sila gunakan pemuat turun video.",
+    "error_wrong_type_slideshow": "Pautan tidak sah! Sila gunakan pemuat turun slideshow.",
+    "error_wrong_type_story": "Pautan tidak sah! Sila gunakan pemuat turun story.",
+    "error_invalid_link": "Pautan tidak sah. Semak dan cuba lagi."
   },
   "faq": {
     "title": "Soalan Lazim (FAQ)",

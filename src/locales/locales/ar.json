@@ -259,10 +259,10 @@
     "creating_zip": "جاري إنشاء الملف...",
     "save_image": "حفظ الصورة",
     "error_busy": "الخدمة مشغولة، يرجى المحاولة مرة أخرى لاحقاً.",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "رابط غير صالح! الرجاء استخدام محمل الفيديو.",
+    "error_wrong_type_slideshow": "رابط غير صالح! الرجاء استخدام محمل الصور (سلايد شو).",
+    "error_wrong_type_story": "رابط غير صالح! الرجاء استخدام محمل الستوري.",
+    "error_invalid_link": "رابط غير صالح. تحقق من الرابط وحاول مرة أخرى."
   },
   "faq": {
     "title": "الأسئلة الشائعة",

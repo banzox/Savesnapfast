@@ -44,10 +44,10 @@
     "download_zip": "Scarica Tutto (ZIP)",
     "creating_zip": "Creazione ZIP...",
     "save_image": "Salva",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "Link non valido! Usa il downloader video.",
+    "error_wrong_type_slideshow": "Link non valido! Usa il downloader slideshow.",
+    "error_wrong_type_story": "Link non valido! Usa il downloader story.",
+    "error_invalid_link": "Link non valido. Controlla e riprova."
   },
   "faq": {
     "title": "Domande Frequenti (FAQ)",

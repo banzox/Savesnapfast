@@ -44,10 +44,10 @@
     "download_zip": "Stáhnout vše (ZIP)",
     "creating_zip": "Vytvářím ZIP...",
     "save_image": "Uložit",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "Neplatný odkaz! Použijte prosím stahování videa.",
+    "error_wrong_type_slideshow": "Neplatný odkaz! Použijte prosím stahování prezentace.",
+    "error_wrong_type_story": "Neplatný odkaz! Použijte prosím stahování příběhu.",
+    "error_invalid_link": "Neplatný odkaz. Zkontrolujte a zkuste znovu."
   },
   "faq": {
     "title": "Často Kladené Otázky (FAQ)",

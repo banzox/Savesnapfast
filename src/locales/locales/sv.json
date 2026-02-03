@@ -44,10 +44,10 @@
     "download_zip": "Ladda ner alla (ZIP)",
     "creating_zip": "Skapar ZIP...",
     "save_image": "Spara",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "Ogiltig länk! Använd video-nedladdaren.",
+    "error_wrong_type_slideshow": "Ogiltig länk! Använd bildspel-nedladdaren.",
+    "error_wrong_type_story": "Ogiltig länk! Använd story-nedladdaren.",
+    "error_invalid_link": "Ogiltig länk. Kontrollera och försök igen."
   },
   "faq": {
     "title": "Vanliga Frågor (FAQ)",

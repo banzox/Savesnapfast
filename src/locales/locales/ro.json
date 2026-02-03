@@ -44,10 +44,10 @@
     "download_zip": "Descarcă Tot (ZIP)",
     "creating_zip": "Creare ZIP...",
     "save_image": "Salvează",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "Link invalid! Vă rugăm să folosiți descărcarea video.",
+    "error_wrong_type_slideshow": "Link invalid! Vă rugăm să folosiți descărcarea slideshow.",
+    "error_wrong_type_story": "Link invalid! Vă rugăm să folosiți descărcarea story.",
+    "error_invalid_link": "Link invalid. Verificați și încercați din nou."
   },
   "faq": {
     "title": "Întrebări Frecvente (FAQ)",

@@ -4,6 +4,8 @@ import { languages } from "../../i18n/ui";
 import { useTranslations } from "../../utils/i18n";
 import NotFound from "../../components/NotFound.astro";
 
+export const prerender = true;
+
 export function getStaticPaths() {
     return Object.keys(languages)
         .filter((l) => l !== "en")

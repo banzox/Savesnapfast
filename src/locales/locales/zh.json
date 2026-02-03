@@ -44,10 +44,10 @@
     "download_zip": "全部下载 (ZIP)",
     "creating_zip": "生成 ZIP...",
     "save_image": "保存",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "链接无效！请使用视频下载器。",
+    "error_wrong_type_slideshow": "链接无效！请使用幻灯片下载器。",
+    "error_wrong_type_story": "链接无效！请使用故事下载器。",
+    "error_invalid_link": "链接无效。请检查并重试。"
   },
   "faq": {
     "title": "常见问题 (FAQ)",

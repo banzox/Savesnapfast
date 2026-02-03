@@ -44,10 +44,10 @@
     "download_zip": "Összes letöltése (ZIP)",
     "creating_zip": "ZIP készítése...",
     "save_image": "Mentés",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "Érvénytelen link! Használd a videó letöltőt.",
+    "error_wrong_type_slideshow": "Érvénytelen link! Használd a diavetítés letöltőt.",
+    "error_wrong_type_story": "Érvénytelen link! Használd a story letöltőt.",
+    "error_invalid_link": "Érvénytelen link. Ellenőrizd és próbáld újra."
   },
   "faq": {
     "title": "Gyakran Ismételt Kérdések (GYIK)",

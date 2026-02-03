@@ -5,6 +5,8 @@ import { defaultLang } from "../i18n/ui";
 import { useTranslations, getTranslations } from "../utils/i18n";
 import AdBanner from "../components/AdBanner.astro";
 
+export const prerender = true;
+
 const currentLang = defaultLang;
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);

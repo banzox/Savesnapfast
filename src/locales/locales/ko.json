@@ -44,10 +44,10 @@
     "download_zip": "모두 다운로드 (ZIP)",
     "creating_zip": "ZIP 생성 중...",
     "save_image": "저장",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "잘못된 링크! 비디오 다운로더를 사용해주세요.",
+    "error_wrong_type_slideshow": "잘못된 링크! 슬라이드쇼 다운로더를 사용해주세요.",
+    "error_wrong_type_story": "잘못된 링크! 스토리 다운로더를 사용해주세요.",
+    "error_invalid_link": "잘못된 링크입니다. 확인 후 다시 시도해주세요."
   },
   "faq": {
     "title": "자주 묻는 질문 (FAQ)",

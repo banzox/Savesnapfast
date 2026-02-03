@@ -44,10 +44,10 @@
     "download_zip": "Lataa kaikki (ZIP)",
     "creating_zip": "Luodaan ZIP...",
     "save_image": "Tallenna",
-    "error_wrong_type_video": "Invalid Link! Please use the Video Downloader.",
-    "error_wrong_type_slideshow": "Invalid Link! Please use the Slideshow Downloader.",
-    "error_wrong_type_story": "Invalid Link! Please use the Story Downloader.",
-    "error_invalid_link": "Invalid Link. Please check and try again."
+    "error_wrong_type_video": "Virheellinen linkki! Käytä videoiden latausta.",
+    "error_wrong_type_slideshow": "Virheellinen linkki! Käytä diaesityksen latausta.",
+    "error_wrong_type_story": "Virheellinen linkki! Käytä tarinan latausta.",
+    "error_invalid_link": "Virheellinen linkki. Tarkista ja yritä uudelleen."
   },
   "faq": {
     "title": "Usein kysytyt kysymykset (UKK)",
