@@ -147,173 +147,209 @@
   "tools": {
     "backToDownloader": "다운로더로 돌아가기",
     "meta": {
-      "title": "무료 이미지 및 QR 도구",
-      "description": "이미지 압축, 형식 변환 및 QR 코드 생성을 위한 무료 도구."
+      "title": "무료 이미지 및 QR 도구 - SaveTikFast",
+      "description": "무료 온라인 도구: 이미지 압축, 형식 변환(WebP, JPG, PNG) 및 QR 코드 생성. 100% 브라우저 내 로컬 처리, 업로드 불필요."
     },
     "hero": {
-      "title": "이미지 및 QR 도구",
-      "desc": "브라우저에서 직접 압축, 변환 및 QR 코드를 생성하세요."
+      "title": "무료 이미지 및 QR 도구",
+      "desc": "이미지 압축, 형식 변환 및 QR 코드 생성 — 모든 작업이 브라우저에서 로컬로 처리되어 100% 개인정보가 보호됩니다."
     },
     "tabs": {
       "compressor": "이미지 압축",
-      "converter": "변환기",
-      "qrcode": "QR 생성기"
+      "converter": "형식 변환",
+      "qrcode": "QR 생성기",
+      "engagement": "참여율 계산",
+      "money": "수익 계산",
+      "font": "폰트 생성",
+      "hashtag": "태그 생성"
     },
     "dropzone": {
       "text": "이미지를 여기로 드래그",
-      "hint": "또는 클릭하여 선택",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+      "hint": "또는 클릭하여 선택 (JPG, PNG, WebP — 최대 15MB)",
+      "hint_convert": "또는 클릭하여 탐색 (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "지금 다운로드",
+      "downloadPng": "PNG 다운로드"
     },
     "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
+      "title": "온라인 이미지 압축기",
+      "desc": "품질 손실 없이 이미지 파일 크기를 줄이세요. 최대 15MB의 JPG, PNG 및 WebP 형식을 지원합니다.",
+      "quality": "압축 품질",
+      "maxWidth": "최대 너비 (px)",
+      "btn": "이미지 압축하기",
       "howto": {
-        "title": "How to Compress Images Online",
+        "title": "온라인에서 이미지를 압축하는 방법",
         "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+          "title": "이미지 업로드",
+          "desc": "이미지(JPG, PNG, WebP — 최대 15MB)를 드래그 앤 드롭하거나 클릭하여 선택하세요."
         },
         "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
+          "title": "설정 조정",
+          "desc": "원하는 품질 레벨(10-100%)과 최대 너비를 설정하세요."
         },
         "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
+          "title": "다운로드",
+          "desc": "압축 버튼을 클릭하고 최적화된 이미지를 즉시 다운로드하세요."
         }
       },
       "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+        "title": "왜 이미지를 압축해야 하나요?",
+        "p1": "이미지 압축은 웹사이트 성능 향상, 로딩 시간 단축 및 대역폭 사용량 절감에 필수적입니다. 저희의 무료 온라인 이미지 압축기는 시각적 품질을 유지하면서 파일 크기를 줄이기 위해 고급 알고리즘을 사용합니다.",
+        "p2": "이미지 압축의 장점은 다음과 같습니다:",
+        "benefit1": "더 빠른 웹사이트 로딩 속도 (SEO 향상)",
+        "benefit2": "저장 공간 및 대역폭 비용 절감",
+        "benefit3": "모바일 기기에서의 더 나은 사용자 경험",
+        "benefit4": "소셜 미디어 공유에 최적화된 이미지",
+        "p3": "모든 처리는 Web Workers를 사용하여 브라우저 내에서 이루어집니다. 이미지가 서버로 업로드되지 않아 완벽한 보안과 개인정보 보호가 보장됩니다."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+        "title": "자주 묻는 질문",
+        "q1": "내 이미지가 서버에 업로드되나요?",
+        "a1": "아니요! 모든 압축은 브라우저에서 직접 이루어집니다. 이미지가 기기를 떠나지 않으므로 개인정보가 완벽하게 보호됩니다.",
+        "q2": "어떤 파일 형식을 지원하나요?",
+        "a2": "최대 15MB 용량의 JPG/JPEG, PNG, WebP 형식을 지원합니다.",
+        "q3": "파일 크기를 얼마나 줄일 수 있나요?",
+        "a3": "원본 이미지와 선택한 품질 설정에 따라 다르지만 보통 50-80% 정도 줄일 수 있습니다."
       }
     },
     "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
+      "title": "이미지 형식 변환기",
+      "desc": "브라우저에서 JPG, PNG, WebP 형식 간의 변환을 즉시 수행하세요.",
+      "output": "출력 형식",
+      "quality": "출력 품질",
+      "btn": "이미지 변환하기",
       "howto": {
-        "title": "How to Convert Image Formats",
+        "title": "이미지 형식을 변환하는 방법",
         "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+          "title": "이미지 선택",
+          "desc": "이미지 파일을 업로드하세요 (JPG, PNG, WebP, GIF, BMP 지원)."
         },
         "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+          "title": "형식 선택",
+          "desc": "원하는 출력 형식(WebP, JPG 또는 PNG)을 선택하세요."
         },
         "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
+          "title": "변환 및 저장",
+          "desc": "변환 버튼을 클릭하고 새 이미지를 즉시 다운로드하세요."
         }
       },
       "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+        "title": "이미지 형식 이해하기",
+        "p1": "웹 성능과 품질을 위해 적절한 이미지 형식을 선택하는 것은 매우 중요합니다. 다음은 비교 분석입니다:",
+        "webp": "Google에서 개발한 현대적인 형식으로, JPG/PNG보다 25-35% 더 작은 파일 크기에서 비슷한 품질을 유지합니다. 웹 사용에 가장 적합합니다.",
+        "jpg": "사진이나 복잡한 색상의 이미지에 이상적입니다. 손실 압축을 사용합니다.",
+        "png": "투명도가 필요하거나 테두리가 선명해야 하는 이미지(로고, 그래픽)에 적합합니다. 무손실 압축을 사용합니다.",
+        "p2": "저희 변환기는 즉각적인 클라이언트 측 변환을 위해 HTML5 Canvas API를 사용합니다. 이미지가 기기를 떠나지 않습니다."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+        "title": "자주 묻는 질문",
+        "q1": "왜 WebP로 변환해야 하나요?",
+        "a1": "WebP는 JPG/PNG보다 25-35% 더 작은 파일 크기를 제공하면서도 품질은 비슷하여 웹사이트 로딩 속도를 높여줍니다.",
+        "q2": "이미지 품질이 손실되나요?",
+        "a2": "품질 슬라이더를 통해 제어할 수 있습니다. 높은 값일수록 품질은 좋아지지만 파일 크기가 커집니다.",
+        "q3": "움직이는 GIF를 변환할 수 있나요?",
+        "a3": "현재 애니메이션 GIF는 정지된 이미지(첫 번째 프레임)로 변환됩니다."
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
+      "title": "온라인 QR 코드 생성기",
+      "desc": "URL, 텍스트 또는 모든 콘텐츠에 대해 고해상도 QR 코드를 즉시 생성하세요.",
+      "input": "텍스트 또는 URL",
+      "placeholder": "https://example.com 또는 아무 텍스트",
+      "size": "QR 코드 크기",
+      "color": "QR 색상",
+      "btn": "QR 코드 생성",
       "howto": {
-        "title": "How to Generate QR Codes",
+        "title": "QR 코드를 생성하는 방법",
         "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
+          "title": "콘텐츠 입력",
+          "desc": "인코딩하려는 URL, 텍스트, 전화번호 또는 기타 콘텐츠를 입력하세요."
         },
         "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
+          "title": "스타일 설정",
+          "desc": "QR 코드의 원하는 크기와 색상을 선택하세요."
         },
         "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
+          "title": "생성 및 다운로드",
+          "desc": "생성 버튼을 클릭하고 고해상도 QR 코드를 PNG로 다운로드하세요."
         }
       },
       "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+        "title": "QR 코드 활용 사례",
+        "p1": "QR 코드는 비즈니스와 개인 생활의 필수품이 되었습니다. 일반적인 활용 사례:",
+        "use1": "웹사이트 URL - 사용자를 즉시 웹사이트로 연결",
+        "use2": "명함 - 연락처 정보를 디지털로 공유",
+        "use3": "제품 패키징 - 메뉴얼이나 지원 페이지 링크",
+        "use4": "마케팅 자료 - 캠페인 참여도 추적",
+        "use5": "식당 메뉴 - 비접촉식 메뉴 확인",
+        "use6": "이벤트 티켓 - 빠른 입장 확인",
+        "p2": "저희 QR 생성기는 모든 기기에서 안정적으로 스캔할 수 있는 고해상도 코드를 생성합니다."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+        "title": "자주 묻는 질문",
+        "q1": "QR 코드에 무엇을 담을 수 있나요?",
+        "a1": "URL, 일반 텍스트, 전화번호, 이메일 주소, WiFi 정보 등을 인코딩할 수 있습니다.",
+        "q2": "어떤 크기를 선택해야 하나요?",
+        "a2": "디지털용으로는 256px가 적당합니다. 인쇄물에는 512px 또는 1024px를 권장합니다.",
+        "q3": "QR 코드가 만료되나요?",
+        "a3": "아니요! 여기서 생성된 QR 코드는 정적이며 만료되지 않습니다. 데이터가 직접 포함되어 있습니다."
       }
     },
+    "engagement": {
+      "title": "TikTok 참여율 계산기",
+      "desc": "좋아요, 댓글, 공유 수를 기반으로 참여율을 계산합니다.",
+      "followers": "팔로워 수",
+      "likes": "좋아요 수",
+      "comments": "댓글 수",
+      "shares": "공유 수",
+      "btn": "지금 계산하기",
+      "result": "참여율 결과",
+      "excellent": "매우 훌륭합니다! 🚀",
+      "good": "좋음 👍",
+      "poor": "개선 필요 📉"
+    },
+    "money": {
+      "title": "TikTok 수익 예측기",
+      "desc": "비디오 조회수를 기반으로 예상 수익을 산출합니다.",
+      "views": "비디오 조회수 입력",
+      "btn": "수익 계산하기",
+      "result": "예상 수익"
+    },
+    "font": {
+      "title": "TikTok 폰트 생성기",
+      "desc": "프로필과 비디오 설명을 위한 독특한 글꼴 스타일을 만듭니다.",
+      "placeholder": "여기에 텍스트 입력...",
+      "copy": "복사"
+    },
+    "hashtag": {
+      "title": "TikTok 인기 해시태그 생성기",
+      "desc": "비디오를 위한 트렌드 해시태그를 찾아 생성합니다.",
+      "btn": "지금 생성하기",
+      "copy": "모두 복사"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "이미지 압축 중...",
+      "converting": "형식 변환 중..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "압축 완료!",
+      "converted": "변환 완료!",
+      "qrReady": "QR 코드가 준비되었습니다!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "원본 크기",
+      "compressed": "압축 후 크기",
+      "saved": "절약됨",
+      "originalFormat": "원본 형식",
+      "newFormat": "새 형식",
+      "newSize": "새 크기"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
-      "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "다운로드",
-      "downloadPng": "Download PNG"
+      "before": "이전",
+      "after": "이후",
+      "original": "원본",
+      "converted": "변환됨"
     }
   },
   "slideshow_page": {

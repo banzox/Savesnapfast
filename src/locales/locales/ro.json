@@ -147,173 +147,202 @@
   "tools": {
     "backToDownloader": "Înapoi la descărcare",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "Instrumente Imagine și QR Online Gratuite - SaveTikFast",
+      "description": "Instrumente online gratuite: Comprimă imagini, convertește formate (WebP, JPG, PNG) și generează coduri QR. 100% în browser, fără încărcări necesare."
     },
     "hero": {
-      "title": "Instrumente Imagine & QR",
-      "desc": "Comprimă, convertește și generează coduri QR."
+      "title": "Instrumente Imagine și QR Online Gratuite",
+      "desc": "Comprimă imagini, convertește formate și creează coduri QR — totul procesat local în browser. 100% privat."
     },
     "tabs": {
       "compressor": "Compresor",
       "converter": "Convertor",
-      "qrcode": "Generator QR"
+      "qrcode": "Generator QR",
+      "engagement": "Angajament",
+      "money": "Venituri",
+      "font": "Fonturi",
+      "hashtag": "Hashtag-uri"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+      "text": "Trage imaginea aici",
+      "hint": "sau fă clic pentru a alege (JPG, PNG, WebP - Max 15MB)",
+      "hint_convert": "sau fă clic pentru a alege (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "Descarcă acum",
+      "downloadPng": "Descarcă PNG"
     },
     "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
+      "title": "Compresor de Imagini",
+      "desc": "Redu dimensiunea fișierelor de imagine fără a pierde calitatea. Suportă JPG, PNG și WebP până la 15MB.",
+      "quality": "Calitate compresie",
+      "maxWidth": "Lățime maximă (px)",
+      "btn": "Comprimă imaginea",
       "howto": {
-        "title": "How to Compress Images Online",
+        "title": "Cum să comprimi imagini online",
         "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+          "title": "Încarcă imaginea",
+          "desc": "Trage și plasează sau fă clic pentru a selecta imaginea JPG, PNG sau WebP (până la 15MB)."
         },
         "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
+          "title": "Ajustează setările",
+          "desc": "Setează nivelul de calitate dorit (10-100%) și lățimea maximă."
         },
         "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
+          "title": "Descarcă",
+          "desc": "Fă clic pe comprimă și descarcă instantaneu imaginea optimizată."
         }
       },
       "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+        "title": "De ce să comprimi imaginile?",
+        "p1": "Comprimarea imaginilor este esențială pentru performanța site-ului, timp de încărcare mai rapid și consum redus de lățime de bandă. Compresorul nostru gratuit de imagini online folosește algoritmi avansați pentru a reduce dimensiunile fișierelor păstrând în același timp calitatea vizuală.",
+        "p2": "Beneficiile compresiei de imagini includ:",
+        "benefit1": "Viteză mai mare de încărcare a site-ului (îmbunătățește SEO)",
+        "benefit2": "Costuri reduse de stocare și lățime de bandă",
+        "benefit3": "Experiență mai bună a utilizatorului pe dispozitive mobile",
+        "benefit4": "Imagini optimizate pentru partajarea pe rețelele sociale",
+        "p3": "Toată procesarea are loc în browserul tău — imaginile tale nu sunt niciodată încărcate pe vreun server, asigurând confidențialitate și securitate completă."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+        "title": "Întrebări Frecvente",
+        "q1": "Imaginea mea este încărcată pe un server?",
+        "a1": "Nu! Toată compresia are loc direct în browserul tău. Imaginile tale nu părăsesc niciodată dispozitivul."
       }
     },
     "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
+      "title": "Convertor Format Imagine",
+      "desc": "Convertește imagini între formatele JPG, PNG și WebP instantaneu în browser.",
+      "output": "Format de ieșire",
+      "quality": "Calitate de ieșire",
+      "btn": "Convertește imaginea",
       "howto": {
-        "title": "How to Convert Image Formats",
+        "title": "Cum să convertești formatele de imagine",
         "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+          "title": "Selectează imaginea",
+          "desc": "Încarcă orice fișier de imagine (suportă JPG, PNG, WebP, GIF, BMP)."
         },
         "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+          "title": "Alege formatul",
+          "desc": "Selectează formatul de ieșire dorit (WebP, JPG sau PNG)."
         },
         "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
+          "title": "Convertește și salvează",
+          "desc": "Fă clic pe convertire și descarcă instantaneu noua imagine."
         }
       },
       "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+        "title": "Înțelegerea formatelor de imagine",
+        "p1": "Alegerea formatului corect de imagine este crucială pentru performanța și calitatea web-ului. Iată o comparație:",
+        "webp": "Format modern de la Google care oferă dimensiuni de fișiere cu 25-35% mai mici decât JPG/PNG cu calitate similară. Cel mai bun pentru utilizare web.",
+        "jpg": "Ideal pentru fotografii și imagini complexe cu multe culori. Folosește compresie cu pierderi.",
+        "png": "Perfect pentru imagini care necesită transparență sau margini clare (logo-uri, grafică). Folosește compresie fără pierderi.",
+        "p2": "Convertorul nostru folosește HTML5 Canvas API pentru conversie instantanee pe partea clientului. Imaginile tale nu părăsesc niciodată dispozitivul."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+        "title": "Întrebări Frecvente",
+        "q1": "De ce să convertești în WebP?",
+        "a1": "WebP oferă dimensiuni de fișiere cu 25-35% mai mici decât JPG/PNG cu calitate similară, făcând site-ul tău să se încarce mai repede.",
+        "q2": "Voi pierde calitatea imaginii?",
+        "a2": "Tu controlezi glisorul de calitate. Valorile mai mari păstrează mai multă calitate dar rezultă în fișiere mai mari.",
+        "q3": "Pot converti GIF-uri animate?",
+        "a3": "În prezent, GIF-urile animate vor fi convertite într-o imagine statică (primul cadru)."
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
+      "title": "Generator de Coduri QR",
+      "desc": "Generează instantaneu coduri QR de înaltă rezoluție pentru URL-uri, text sau orice conținut.",
+      "input": "Text sau URL",
+      "placeholder": "https://example.com sau orice text",
+      "size": "Dimensiune Cod QR",
+      "color": "Culoare QR",
+      "btn": "Generează Cod QR",
       "howto": {
-        "title": "How to Generate QR Codes",
+        "title": "Cum să generezi coduri QR",
         "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
+          "title": "Introdu conținut",
+          "desc": "Scrie URL-ul, textul, numărul de telefon sau orice conținut dorești să codezi."
         },
         "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
+          "title": "Personalizează",
+          "desc": "Alege dimensiunea și culoarea preferată pentru codul QR."
         },
         "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
+          "title": "Generează & Descarcă",
+          "desc": "Fă clic pe generează și descarcă codul QR de înaltă rezoluție ca PNG."
         }
       },
       "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+        "title": "Cazuri de utilizare Coduri QR",
+        "p1": "Codurile QR au devenit esențiale pentru companii și persoane fizice. Cazurile comune de utilizare includ:",
+        "use1": "URL-uri site-uri web - Direcționează utilizatorii instantaneu către site-ul tău",
+        "use2": "Cărți de vizită - Partajează informațiile de contact digital",
+        "use3": "Ambalaje produse - Link către manuale sau pagini de suport",
+        "p2": "Generatorul nostru de coduri QR creează coduri de înaltă rezoluție care se scanează fiabil pe orice dispozitiv."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+        "title": "Întrebări Frecvente",
+        "q1": "Ce pot coda într-un cod QR?",
+        "a1": "URL-uri, text simplu, numere de telefon, adrese de email, date WiFi și multe altele.",
+        "q2": "Ce dimensiune ar trebui să aleg?",
+        "a2": "256px este bun pentru utilizare digitală. Alege 512px sau 1024px pentru materiale tipărite.",
+        "q3": "Expiră codurile QR?",
+        "a3": "Nu! Codurile QR generate aici sunt statice și nu expiră niciodată. Acestea conțin datele direct."
       }
     },
+    "engagement": {
+      "title": "Calculator Angajament TikTok",
+      "desc": "Calculează rata de angajament pe baza aprecierilor, comentariilor și distribuirilor.",
+      "followers": "Urmăritori",
+      "likes": "Aprecieri",
+      "comments": "Comentarii",
+      "shares": "Distribuiri",
+      "btn": "Calculează acum",
+      "result": "Rata de angajament",
+      "excellent": "Excelent! 🚀",
+      "good": "Bine 👍",
+      "poor": "Poate fi îmbunătățit 📉"
+    },
+    "money": {
+      "title": "Calculator Venituri TikTok",
+      "desc": "Estimează veniturile potențiale din vizualizările video.",
+      "views": "Număr vizualizări",
+      "btn": "Calculează venituri",
+      "result": "Venituri estimate"
+    },
+    "font": {
+      "title": "Generator de Fonturi TikTok",
+      "desc": "Creează stiluri de font unice pentru profilul tău și descrierile video.",
+      "placeholder": "Scrie textul aici...",
+      "copy": "Copiază"
+    },
+    "hashtag": {
+      "title": "Generator de Hashtag-uri TikTok",
+      "desc": "Găsește și generează hashtag-uri în tendințe pentru videoclipurile tale.",
+      "btn": "Generează hashtag-uri",
+      "copy": "Copiază tot"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "Comprimare imagine...",
+      "converting": "Convertire imagine..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "Comprimare completă!",
+      "converted": "Convertire completă!",
+      "qrReady": "Codul tău QR este gata!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "Dimensiune originală",
+      "compressed": "Dimensiune comprimată",
+      "saved": "Salvat",
+      "originalFormat": "Format original",
+      "newFormat": "Format nou",
+      "newSize": "Dimensiune nouă"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
+      "before": "Înainte",
+      "after": "După",
       "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "Descarcă",
-      "downloadPng": "Download PNG"
+      "converted": "Convertit"
     }
   },
   "slideshow_page": {

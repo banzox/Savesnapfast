@@ -147,173 +147,209 @@
   "tools": {
     "backToDownloader": "Takaisin lataajaan",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "Ilmaiset online-kuva- ja QR-työkalut - SaveTikFast",
+      "description": "Ilmaiset verkkotyökalut: Pakkaa kuvia, muunna muotoja (WebP, JPG, PNG) ja luo QR-koodeja. 100 % selainpohjainen, latauksia ei tarvita."
     },
     "hero": {
-      "title": "Kuva- ja QR-työkalut",
-      "desc": "Pakkaa, muunna ja luo QR-koodeja selaimessa."
+      "title": "Ilmaiset online-kuva- ja QR-työkalut",
+      "desc": "Pakkaa kuvia, muunna muotoja ja luo QR-koodeja — kaikki käsitellään paikallisesti selaimessasi. 100 % yksityinen."
     },
     "tabs": {
       "compressor": "Pakkaaja",
       "converter": "Muunnin",
-      "qrcode": "QR-generaattori"
+      "qrcode": "QR-generaattori",
+      "engagement": "Sitoutuminen",
+      "money": "Tulot",
+      "font": "Fontit",
+      "hashtag": "Hashtagit"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+      "text": "Vedä ja pudota kuvasi tähän",
+      "hint": "tai napsauta selataksesi (JPG, PNG, WebP - Enintään 15MB)",
+      "hint_convert": "tai napsauta selataksesi (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "Lataa nyt",
+      "downloadPng": "Lataa PNG"
     },
     "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
+      "title": "Kuvapakkaaja",
+      "desc": "Pienennä kuvatiedoston kokoa laadun kärsimättä. Tukee JPG-, PNG- ja WebP-muotoja 15 megatavuun asti.",
+      "quality": "Pakkauslaatu",
+      "maxWidth": "Enimmäisleveys (px)",
+      "btn": "Pakkaa kuva",
       "howto": {
-        "title": "How to Compress Images Online",
+        "title": "Kuinka pakata kuvia verkossa",
         "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+          "title": "Lataa kuva",
+          "desc": "Vedä ja pudota tai valitse JPG-, PNG- tai WebP-kuvasi (enintään 15MB)."
         },
         "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
+          "title": "Säädä asetuksia",
+          "desc": "Aseta haluamasi laatutaso (10-100 %) ja enimmäisleveys."
         },
         "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
+          "title": "Lataa",
+          "desc": "Napsauta pakkaa ja lataa optimoitu kuvasi välittömästi."
         }
       },
       "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+        "title": "Miksi pakata kuvia?",
+        "p1": "Kuvien pakkaaminen on välttämätöntä verkkosivuston suorituskyvyn, nopeampien latausaikojen ja pienemmän kaistanleveyden käytön kannalta. Ilmainen online-kuvien pakkaajamme käyttää kehittyneitä algoritmeja tiedostokokojen pienentämiseen säilyttäen samalla visuaalisen laadun.",
+        "p2": "Kuvien pakkauksen edut ovat:",
+        "benefit1": "Nopeammat verkkosivuston latausnopeudet (parantaa SEO:ta)",
+        "benefit2": "Pienemmät tallennus- ja kaistanleveysustannukset",
+        "benefit3": "Parempi käyttökokemus mobiililaitteilla",
+        "benefit4": "Optimoidut kuvat sosiaaliseen mediaan",
+        "p3": "Kaikki käsittely tapahtuu selaimessasi — kuviasi ei koskaan ladata millekään palvelimelle, mikä takaa täydellisen yksityisyyden ja turvallisuuden."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+        "title": "Usein kysytyt kysymykset",
+        "q1": "Ladataanko kuvani palvelimelle?",
+        "a1": "Ei! Kaikki pakkaaminen tapahtuu suoraan selaimessasi. Kuvasi eivät koskaan lähde laitteeltasi.",
+        "q2": "Mitä tiedostomuotoja tuetaan?",
+        "a2": "Tuemme JPG/JPEG-, PNG- ja WebP-muotoja 15 megatavun tiedostokokoon asti.",
+        "q3": "Kuinka paljon voin pienentää tiedostokokoa?",
+        "a3": "Yleensä 50-80 % vähennys riippuen alkuperäisestä kuvasta ja valituista laatuasetuksista."
       }
     },
     "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
+      "title": "Kuvamuodon muunnin",
+      "desc": "Muunna kuvat JPG-, PNG- ja WebP-muotojen välillä välittömästi selaimessasi.",
+      "output": "Tulostusmuoto",
+      "quality": "Tulostuslaatu",
+      "btn": "Muunna kuva",
       "howto": {
-        "title": "How to Convert Image Formats",
+        "title": "Kuinka muuntaa kuvamuotoja",
         "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+          "title": "Valitse kuva",
+          "desc": "Lataa mikä tahansa kuvatiedosto (JPG, PNG, WebP, GIF, BMP tuettu)."
         },
         "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+          "title": "Valitse muoto",
+          "desc": "Valitse haluamasi tulostusmuoto (WebP, JPG tai PNG)."
         },
         "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
+          "title": "Muunna ja tallenna",
+          "desc": "Napsauta muunna ja lataa uusi kuvasi välittömästi."
         }
       },
       "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+        "title": "Kuvamuotojen ymmärtäminen",
+        "p1": "Oikean kuvamuodon valitseminen on ratkaisevan tärkeää verkkosivun suorituskyvyn ja laadun kannalta. Tässä on vertailu:",
+        "webp": "Googlen nykyaikainen muoto, joka tarjoaa 25-35 % pienemmät tiedostokoot kuin JPG/PNG vastaavalla laadulla. Paras verkkokäyttöön.",
+        "jpg": "Ihanteellinen valokuville ja monimutkaisille kuville, joissa on paljon värejä. Käyttää häviöllistä pakkausta.",
+        "png": "Täydellinen kuville, jotka vaativat läpinäkyvyyttä tai teräviä reunoja (logot, grafiikka). Käyttää häviötöntä pakkausta.",
+        "p2": "Muuntimemme käyttää HTML5 Canvas API -rajapintaa välittömään, asiakaspuolen muunnokseen. Kuvasi eivät koskaan lähde laitteeltasi."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+        "title": "Usein kysytyt kysymykset",
+        "q1": "Miksi muuntaa WebP-muotoon?",
+        "a1": "WebP tarjoaa 25-35 % pienemmät tiedostokoot kuin JPG/PNG vastaavalla laadulla, mikä nopeuttaa verkkosivustosi latautumista.",
+        "q2": "Menetänkö kuvanlaatua?",
+        "a2": "Hallitset laatuliukusäädintä. Korkeammat arvot säilyttävät enemmän laatua, mutta johtavat suurempiin tiedostoihin.",
+        "q3": "Voinko muuntaa animoituja GIF-kuvia?",
+        "a3": "Tällä hetkellä animoidut GIF-kuvat muunnetaan staattiseksi kuvaksi (ensimmäinen kehys)."
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
+      "title": "QR-koodigeneraattori",
+      "desc": "Luo korkearesoluutioisia QR-koodeja URL-osoitteille, tekstille tai mille tahansa sisällölle välittömästi.",
+      "input": "Teksti tai URL-osoite",
+      "placeholder": "https://example.com tai mikä tahansa teksti",
+      "size": "QR-koodin koko",
+      "color": "QR-koodin väri",
+      "btn": "Luo QR-koodi",
       "howto": {
-        "title": "How to Generate QR Codes",
+        "title": "Kuinka luoda QR-koodeja",
         "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
+          "title": "Syötä sisältö",
+          "desc": "Kirjoita URL-osoite, teksti, puhelinnumero tai mikä tahansa sisältö, jonka haluat koodata."
         },
         "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
+          "title": "Mukauta",
+          "desc": "Valitse haluamasi koko ja väri QR-koodille."
         },
         "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
+          "title": "Luo ja lataa",
+          "desc": "Napsauta luo ja lataa korkearesoluutioinen QR-koodisi PNG-muodossa."
         }
       },
       "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+        "title": "QR-koodin käyttötapaukset",
+        "p1": "QR-koodeista on tullut välttämättömiä yrityksille ja yksilöille. Yleisiä käyttötapauksia ovat:",
+        "use1": "Sivuston URL-osoitteet - Ohjaa käyttäjät sivustollesi välittömästi",
+        "use2": "Käyntikortit - Jaa yhteystiedot digitaalisesti",
+        "use3": "Tuotepakkaukset - Linkki käyttöoppaisiin tai tukisivuille",
+        "use4": "Markkinointimateriaalit - Seuraa kampanjan sitoutumista",
+        "use5": "Ravintolamenut - Kosketusvapaa pääsy menuun",
+        "use6": "Tapahtumaliput - Nopea sisäänpääsyn tarkistus",
+        "p2": "QR-generaattorimme luo korkearesoluutioisia koodeja, jotka skannautuvat luotettavasti millä tahansa laitteella."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+        "title": "Usein kysytyt kysymykset",
+        "q1": "Mitä voin koodata QR-koodiin?",
+        "a1": "URL-osoitteet, tavallinen teksti, puhelinnumerot, sähköpostiosoitteet, WiFi-kirjautumistiedot ja paljon muuta.",
+        "q2": "Mikä koko minun pitäisi valita?",
+        "a2": "256px on hyvä digitaaliseen käyttöön. Valitse 512px tai 1024px tulostusmateriaaleille.",
+        "q3": "Vanhenevatko QR-koodit?",
+        "a3": "Ei! Täällä luodut QR-koodit ovat staattisia eivätkä ne vanhene koskaan. Ne sisältävät tiedot suoraan."
       }
     },
+    "engagement": {
+      "title": "TikTok-vuorovaikutuslaskin",
+      "desc": "Laske vuorovaikutusasteesi tykkäysten, kommenttien ja jakojen perusteella.",
+      "followers": "Seuraajat",
+      "likes": "Tykkäykset",
+      "comments": "Kommentit",
+      "shares": "Jaot",
+      "btn": "Laske nyt",
+      "result": "Vuorovaikutusaste",
+      "excellent": "Erinomainen! 🚀",
+      "good": "Hyvä 👍",
+      "poor": "Parannettavaa 📉"
+    },
+    "money": {
+      "title": "TikTok-tulolaskin",
+      "desc": "Arvioi videoidesi katselukerroista saatavat mahdolliset tulot.",
+      "views": "Katselukertojen määrä",
+      "btn": "Laske tulot",
+      "result": "Arvioidut tulot"
+    },
+    "font": {
+      "title": "TikTok-fonttigeneraattori",
+      "desc": "Luo ainutlaatuisia fonttityylejä profiiliisi ja videoiden kuvauksiin.",
+      "placeholder": "Kirjoita tekstisi tähän...",
+      "copy": "Kopioi"
+    },
+    "hashtag": {
+      "title": "TikTok-hashtaggeneraattori",
+      "desc": "Etsi ja luo trendaavia hashtageja videoillesi.",
+      "btn": "Luo hashtageja",
+      "copy": "Kopioi kaikki"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "Pakataan kuvaa...",
+      "converting": "Muunnetaan kuvaa..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "Pakkaus valmis!",
+      "converted": "Muunnos valmis!",
+      "qrReady": "QR-koodisi on valmis!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "Alkuperäinen koko",
+      "compressed": "Pakattu koko",
+      "saved": "Säästetty",
+      "originalFormat": "Alkuperäinen muoto",
+      "newFormat": "Uusi muoto",
+      "newSize": "Uusi koko"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
-      "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "Lataa",
-      "downloadPng": "Download PNG"
+      "before": "Ennen",
+      "after": "Jälkeen",
+      "original": "Alkuperäinen",
+      "converted": "Muunnettu"
     }
   },
   "slideshow_page": {

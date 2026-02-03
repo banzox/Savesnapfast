@@ -147,173 +147,209 @@
   "tools": {
     "backToDownloader": "Πίσω στη λήψη",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "Δωρεάν online εργαλεία εικόνας & QR - SaveTikFast",
+      "description": "Δωρεάν online εργαλεία: Συμπίεση εικόνων, μετατροπή μορφών (WebP, JPG, PNG) και δημιουργία κωδικών QR. 100% βασισμένο στον περιηγητή, δεν απαιτείται μεταφόρτωση."
     },
     "hero": {
-      "title": "Εργαλεία Εικόνας & QR",
-      "desc": "Συμπίεση, μετατροπή και δημιουργία QR κωδικών."
+      "title": "Δωρεάν online εργαλεία εικόνας & QR",
+      "desc": "Συμπίεση εικόνων, μετατροπή μορφών και δημιουργία κωδικών QR — όλα επεξεργάζονται τοπικά στον περιηγητή σας. 100% ιδιωτικό."
     },
     "tabs": {
       "compressor": "Συμπίεση",
       "converter": "Μετατροπή",
-      "qrcode": "QR Κώδικας"
+      "qrcode": "QR Κώδικας",
+      "engagement": "Engagement",
+      "money": "Κέρδη",
+      "font": "Γραμματοσειρές",
+      "hashtag": "Hashtags"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+      "text": "Σύρετε και αποθέστε την εικόνα σας εδώ",
+      "hint": "ή κάντε κλικ για επιλογή (JPG, PNG, WebP - Μέγιστο 15MB)",
+      "hint_convert": "ή κάντε κλικ για επιλογή (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "Λήψη τώρα",
+      "downloadPng": "Λήψη PNG"
     },
     "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
+      "title": "Συμπιεστής Εικόνας",
+      "desc": "Μειώστε το μέγεθος του αρχείου εικόνας χωρίς απώλεια ποιότητας. Υποστηρίζει JPG, PNG και WebP έως 15MB.",
+      "quality": "Ποιότητα Συμπίεσης",
+      "maxWidth": "Μέγιστο Πλάτος (px)",
+      "btn": "Συμπίεση Εικόνας",
       "howto": {
-        "title": "How to Compress Images Online",
+        "title": "Πώς να συμπιέσετε εικόνες online",
         "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+          "title": "Μεταφόρτωση Εικόνας",
+          "desc": "Σύρετε και αποθέστε ή κάντε κλικ για να επιλέξετε την εικόνα JPG, PNG ή WebP (έως 15MB)."
         },
         "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
+          "title": "Προσαρμογή Ρυθμίσεων",
+          "desc": "Ορίστε το επιθυμητό επίπεδο ποιότητας (10-100%) και το μέγιστο πλάτος."
         },
         "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
+          "title": "Λήψη",
+          "desc": "Κάντε κλικ στη συμπίεση και κατεβάστε την βελτιστοποιημένη εικόνα σας αμέσως."
         }
       },
       "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+        "title": "Γιατί να συμπιέσετε εικόνες;",
+        "p1": "Η συμπίεση εικόνας είναι απαραίτητη για την απόδοση του ιστότοπου, τους ταχύτερους χρόνους φόρτωσης και τη μειωμένη χρήση εύρους ζώνης. Ο δωρεάν online συμπιεστής εικόνων μας χρησιμοποιεί προηγμένους αλγόριθμους για τη μείωση του μεγέθους των αρχείων, διατηρώντας παράλληλα την οπτική ποιότητα.",
+        "p2": "Τα οφέλη της συμπίεσης εικόνας περιλαμβάνουν:",
+        "benefit1": "Ταχύτερες ταχύτητες φόρτωσης ιστότοπου (βελτιώνει το SEO)",
+        "benefit2": "Μειωμένο κόστος αποθήκευσης και εύρους ζώνης",
+        "benefit3": "Καλύτερη εμπειρία χρήστη σε κινητές συσκευές",
+        "benefit4": "Βελτιστοποιημένες εικόνες για κοινή χρήση στα μέσα κοινωνικής δικτύωσης",
+        "p3": "Όλη η επεξεργασία γίνεται στον περιηγητή σας — οι εικόνες σας δεν ανεβαίνουν ποτέ σε κανέναν διακομιστή, διασφαλίζοντας πλήρη ιδιωτικότητα και ασφάλεια."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+        "title": "Συχνές Ερωτήσεις",
+        "q1": "Ανεβαίνει η εικόνα μου σε διακομιστή;",
+        "a1": "Όχι! Όλη η συμπίεση γίνεται απευθείας στον περιηγητή σας. Οι εικόνες σας δεν φεύγουν ποτέ από τη συσκευή σας.",
+        "q2": "Ποιες μορφές αρχείων υποστηρίζονται;",
+        "a2": "Υποστηρίζουμε μορφές JPG/JPEG, PNG και WebP με μέγεθος αρχείου έως 15MB.",
+        "q3": "Πόσο μπορώ να μειώσω το μέγεθος του αρχείου;",
+        "a3": "Συνήθως 50-80% μείωση, ανάλογα με την αρχική εικόνα και τις επιλεγμένες ρυθμίσεις ποιότητας."
       }
     },
     "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
+      "title": "Μετατροπέας Μορφής Εικόνας",
+      "desc": "Μετατρέψτε εικόνες μεταξύ των μορφών JPG, PNG και WebP αμέσως στον περιηγητή σας.",
+      "output": "Μορφή Εξόδου",
+      "quality": "Ποιότητα Εξόδου",
+      "btn": "Μετατροπή Εικόνας",
       "howto": {
-        "title": "How to Convert Image Formats",
+        "title": "Πώς να μετατρέψετε μορφές εικόνας",
         "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+          "title": "Επιλογή Εικόνας",
+          "desc": "Ανεβάστε οποιοδήποτε αρχείο εικόνας (υποστηρίζονται JPG, PNG, WebP, GIF, BMP)."
         },
         "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+          "title": "Επιλογή Μορφής",
+          "desc": "Επιλέξτε την επιθυμητή μορφή εξόδου (WebP, JPG ή PNG)."
         },
         "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
+          "title": "Μετατροπή & Αποθήκευση",
+          "desc": "Κάντε κλικ στη μετατροπή και κατεβάστε τη νέα σας εικόνα αμέσως."
         }
       },
       "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+        "title": "Κατανόηση των μορφών εικόνας",
+        "p1": "Η επιλογή της σωστής μορφής εικόνας είναι κρίσιμη για την απόδοση και την ποιότητα του ιστού. Εδώ είναι μια σύγκριση:",
+        "webp": "Σύγχρονη μορφή από την Google που προσφέρει 25-35% μικρότερα μεγέθη αρχείων από τα JPG/PNG με παρόμοια ποιότητα. Καλύτερο για χρήση στον ιστό.",
+        "jpg": "Ιδανικό για φωτογραφίες και σύνθετες εικόνες με πολλά χρώματα. Χρησιμοποιεί συμπίεση με απώλειες.",
+        "png": "Ιδανικό για εικόνες που απαιτούν διαφάνεια ή αιχμηρές άκρες (λογότυπα, γραφικά). Χρησιμοποιεί συμπίεση χωρίς απώλειες.",
+        "p2": "Ο μετατροπέας μας χρησιμοποιεί το HTML5 Canvas API για άμεση μετατροπή από την πλευρά του πελάτη. Οι εικόνες σας δεν φεύγουν ποτέ από τη συσκευή σας."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+        "title": "Συχνές Ερωτήσεις",
+        "q1": "Γιατί να μετατρέψω σε WebP;",
+        "a1": "Το WebP προσφέρει 25-35% μικρότερα μεγέθη αρχείων από τα JPG/PNG με παρόμοια ποιότητα, κάνοντας τον ιστότοπό σας να φορτώνει γρηγορότερα.",
+        "q2": "Θα χάσω την ποιότητα της εικόνας;",
+        "a2": "Εσείς ελέγχετε το ρυθμιστικό ποιότητας. Υψηλότερες τιμές διατηρούν περισσότερη ποιότητα, αλλά οδηγούν σε μεγαλύτερα αρχεία.",
+        "q3": "Μπορώ να μετατρέψω κινούμενα GIF;",
+        "a3": "Επί του παρόντος, τα κινούμενα GIF θα μετατραπούν σε στατική εικόνα (πρώτο καρέ)."
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
+      "title": "Γεννήτρια Κώδικα QR",
+      "desc": "Δημιουργήστε κωδικούς QR υψηλής ανάλυσης για URL, κείμενο ή οποιοδήποτε περιεχόμενο αμέσως.",
+      "input": "Κείμενο ή URL",
+      "placeholder": "https://example.com ή οποιοδήποτε κείμενο",
+      "size": "Μέγεθος Κώδικα QR",
+      "color": "Χρώμα QR",
+      "btn": "Δημιουργία Κώδικα QR",
       "howto": {
-        "title": "How to Generate QR Codes",
+        "title": "Πώς να δημιουργήσετε κωδικούς QR",
         "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
+          "title": "Εισαγωγή Περιεχομένου",
+          "desc": "Πληκτρολογήστε το URL, το κείμενο, τον αριθμό τηλεφώνου ή οποιοδήποτε περιεχόμενο θέλετε να κωδικοποιήσετε."
         },
         "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
+          "title": "Προσαρμογή",
+          "desc": "Επιλέξτε το προτιμώμενο μέγεθος και χρώμα για τον κωδικό QR."
         },
         "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
+          "title": "Δημιουργία & Λήψη",
+          "desc": "Κάντε κλικ στη δημιουργία και κατεβάστε τον κωδικό QR υψηλής ανάλυσης ως PNG."
         }
       },
       "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+        "title": "Περιπτώσεις χρήσης κώδικα QR",
+        "p1": "Οι κωδικοί QR έχουν γίνει απαραίτητοι για επιχειρήσεις και ιδιώτες. Οι κοινές περιπτώσεις χρήσης περιλαμβάνουν:",
+        "use1": "URL ιστότοπου - Κατευθύνετε τους χρήστες στον ιστότοπό σας αμέσως",
+        "use2": "Επαγγελματικές κάρτες - Μοιραστείτε στοιχεία επικοινωνίας ψηφιακά",
+        "use3": "Συσκευασία προϊόντος - Σύνδεση με εγχειρίδια ή σελίδες υποστήριξης",
+        "use4": "Υλικό μάρκετινγκ - Παρακολούθηση της αλληλεπίδρασης της καμπάνιας",
+        "use5": "Μενού εστιατορίων - Ανέπαφη πρόσβαση στο μενού",
+        "use6": "Εισιτήρια εκδηλώσεων - Γρήγορη επαλήθευση εισόδου",
+        "p2": "Η γεννήτρια QR μας δημιουργεί κωδικούς υψηλής ανάλυσης που σαρώνουν αξιόπιστα σε οποιαδήποτε συσκευή."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+        "title": "Συχνές Ερωτήσεις",
+        "q1": "Τι μπορώ να κωδικοποιήσω σε έναν κωδικό QR;",
+        "a1": "URL, απλό κείμενο, αριθμούς τηλεφώνου, διευθύνσεις email, διαπιστευτήρια WiFi και πολλά άλλα.",
+        "q2": "Ποιο μέγεθος πρέπει να επιλέξω;",
+        "a2": "Τα 256px είναι καλά για ψηφιακή χρήση. Επιλέξτε 512px ή 1024px για έντυπο υλικό.",
+        "q3": "Λήγουν οι κωδικοί QR;",
+        "a3": "Όχι! Οι κωδικοί QR που δημιουργούνται εδώ είναι στατικοί και δεν λήγουν ποτέ. Περιέχουν τα δεδομένα απευθείας."
       }
     },
+    "engagement": {
+      "title": "Υπολογιστής Αλληλεπίδρασης TikTok",
+      "desc": "Υπολογίστε το ποσοστό αλληλεπίδρασής σας με βάση τα likes, τα σχόλια και τις κοινοποιήσεις.",
+      "followers": "Ακόλουθοι",
+      "likes": "Likes",
+      "comments": "Σχόλια",
+      "shares": "Κοινοποιήσεις",
+      "btn": "Υπολογισμός τώρα",
+      "result": "Ποσοστό Αλληλεπίδρασης",
+      "excellent": "Εξαιρετικό! 🚀",
+      "good": "Καλό 👍",
+      "poor": "Χρειάζεται βελτίωση 📉"
+    },
+    "money": {
+      "title": "Υπολογιστής Κερδών TikTok",
+      "desc": "Εκτιμήστε τα πιθανά κέρδη από τις προβολές των βίντεό σας.",
+      "views": "Αριθμός Προβολών",
+      "btn": "Υπολογισμός Κερδών",
+      "result": "Εκτιμώμενα Κέρδη"
+    },
+    "font": {
+      "title": "Γεννήτρια Γραμματοσειρών TikTok",
+      "desc": "Δημιουργήστε μοναδικά στυλ γραμματοσειρών για το προφίλ σας και τις λεζάντες των βίντεο.",
+      "placeholder": "Πληκτρολογήστε το κείμενό σας εδώ...",
+      "copy": "Αντιγραφή"
+    },
+    "hashtag": {
+      "title": "Γεννήτρια Hashtag TikTok",
+      "desc": "Βρείτε και δημιουργήστε δημοφιλή hashtags για τα βίντεό σας.",
+      "btn": "Δημιουργία hashtags",
+      "copy": "Αντιγραφή όλων"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "Συμπίεση εικόνας...",
+      "converting": "Μετατροπή εικόνας..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "Η συμπίεση ολοκληρώθηκε!",
+      "converted": "Η μετατροπή ολοκληρώθηκε!",
+      "qrReady": "Ο κώδικας QR είναι έτοιμος!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "Αρχικό Μέγεθος",
+      "compressed": "Συμπιεσμένο Μέγεθος",
+      "saved": "Εξοικονόμηση",
+      "originalFormat": "Αρχική Μορφή",
+      "newFormat": "Νέα Μορφή",
+      "newSize": "Νέο Μέγεθος"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
-      "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "Λήψη",
-      "downloadPng": "Download PNG"
+      "before": "Πριν",
+      "after": "Μετά",
+      "original": "Πρωτότυπο",
+      "converted": "Μετατράπηκε"
     }
   },
   "slideshow_page": {

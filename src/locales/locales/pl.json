@@ -147,173 +147,209 @@
   "tools": {
     "backToDownloader": "Wróć do pobierania",
     "meta": {
-      "title": "Narzędzia Obrazu i QR",
-      "description": "Kompresuj obrazy, konwertuj formaty i generuj kody QR."
+      "title": "Darmowe Narzędzia Obrazu i QR Online - SaveTikFast",
+      "description": "Darmowe narzędzia online: Kompresuj obrazy, konwertuj formaty (WebP, JPG, PNG) i generuj kody QR. 100% w przeglądarce, bez przesyłania plików."
     },
     "hero": {
-      "title": "Narzędzia Obrazu i QR",
-      "desc": "Wszystko przetwarzane lokalnie w przeglądarce."
+      "title": "Darmowe Narzędzia Obrazu i QR Online",
+      "desc": "Kompresuj obrazy, konwertuj formaty i twórz kody QR — wszystko przetwarzane lokalnie w przeglądarce. 100% prywatności."
     },
     "tabs": {
       "compressor": "Kompresor",
       "converter": "Konwerter",
-      "qrcode": "Generator QR"
+      "qrcode": "Generator QR",
+      "engagement": "Zaangażowanie",
+      "money": "Zarobki",
+      "font": "Czcionki",
+      "hashtag": "Hashtagi"
     },
     "dropzone": {
       "text": "Przeciągnij zdjęcie tutaj",
-      "hint": "lub kliknij, aby wybrać",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+      "hint": "lub kliknij, aby wybrać (JPG, PNG, WebP - Maks 15MB)",
+      "hint_convert": "lub kliknij, aby wybrać (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "Pobierz teraz",
+      "downloadPng": "Pobierz PNG"
     },
     "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
+      "title": "Kompresor Obrazów",
+      "desc": "Zmniejsz rozmiar plików graficznych bez utraty jakości. Obsługuje JPG, PNG i WebP do 15MB.",
+      "quality": "Jakość kompresji",
+      "maxWidth": "Maks. szerokość (px)",
+      "btn": "Kompresuj obraz",
       "howto": {
-        "title": "How to Compress Images Online",
+        "title": "Jak kompresować obrazy online",
         "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+          "title": "Prześlij obraz",
+          "desc": "Przeciągnij i upuść lub kliknij, aby wybrać obraz JPG, PNG lub WebP (do 15MB)."
         },
         "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
+          "title": "Dostosuj ustawienia",
+          "desc": "Ustaw żądany poziom jakości (10-100%) i maksymalną szerokość."
         },
         "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
+          "title": "Pobierz",
+          "desc": "Kliknij kompresuj i natychmiast pobierz zoptymalizowany obraz."
         }
       },
       "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+        "title": "Dlaczego warto kompresować obrazy?",
+        "p1": "Kompresja obrazów jest kluczowa dla wydajności witryny, szybszego czasu ładowania i mniejszego zużycia transferu. Nasz darmowy kompresor obrazów online wykorzystuje zaawansowane algorytmy do zmniejszania rozmiarów plików przy zachowaniu jakości wizualnej.",
+        "p2": "Korzyści z kompresji obrazów obejmują:",
+        "benefit1": "Szybsze ładowanie strony (poprawia SEO)",
+        "benefit2": "Zmniejszone koszty przechowywania i transferu",
+        "benefit3": "Lepsze wrażenia użytkownika na urządzeniach mobilnych",
+        "benefit4": "Zoptymalizowane obrazy do udostępniania w mediach społecznościowych",
+        "p3": "Całe przetwarzanie odbywa się w przeglądarce — Twoje zdjęcia nigdy nie są przesyłane na serwer, co zapewnia pełną prywatność i bezpieczeństwo."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+        "title": "Często Zadawane Pytania",
+        "q1": "Czy mój obraz jest przesyłany na serwer?",
+        "a1": "Nie! Cała kompresja odbywa się bezpośrednio w przeglądarce. Twoje zdjęcia nigdy nie opuszczają Twojego urządzenia.",
+        "q2": "Jakie formaty plików są obsługiwane?",
+        "a2": "Obsługujemy formaty JPG/JPEG, PNG i WebP o rozmiarze pliku do 15MB.",
+        "q3": "O ile mogę zmniejszyć rozmiar pliku?",
+        "a3": "Zazwyczaj o 50-80% w zależności od oryginalnego obrazu i wybranych ustawień jakości."
       }
     },
     "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
+      "title": "Konwerter Formatów Obrazu",
+      "desc": "Konwertuj obrazy między formatami JPG, PNG i WebP natychmiast w przeglądarce.",
+      "output": "Format wyjściowy",
+      "quality": "Jakość wyjściowa",
+      "btn": "Konwertuj obraz",
       "howto": {
-        "title": "How to Convert Image Formats",
+        "title": "Jak konwertować formaty obrazu",
         "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+          "title": "Wybierz obraz",
+          "desc": "Prześlij dowolny plik graficzny (obsługiwane JPG, PNG, WebP, GIF, BMP)."
         },
         "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+          "title": "Wybierz format",
+          "desc": "Wybierz żądany format wyjściowy (WebP, JPG lub PNG)."
         },
         "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
+          "title": "Konwertuj i zapisz",
+          "desc": "Kliknij konwertuj i natychmiast pobierz nowe zdjęcie."
         }
       },
       "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+        "title": "Zrozumienie formatów obrazu",
+        "p1": "Wybór odpowiedniego formatu obrazu jest kluczowy dla wydajności i jakości strony. Oto porównanie:",
+        "webp": "Nowoczesny format od Google oferujący o 25-35% mniejszy rozmiar pliku niż JPG/PNG przy podobnej jakości. Najlepszy do użytku w sieci.",
+        "jpg": "Idealny do fotografii i złożonych zdjęć z wieloma kolorami. Wykorzystuje kompresję stratną.",
+        "png": "Idealny dla obrazów wymagających przezroczystości lub ostrych krawędzi (logo, grafika). Wykorzystuje kompresję bezstratną.",
+        "p2": "Nasz konwerter wykorzystuje HTML5 Canvas API do natychmiastowej konwersji po stronie klienta. Twoje zdjęcia nigdy nie opuszczają Twojego urządzenia."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+        "title": "Często Zadawane Pytania",
+        "q1": "Dlaczego warto konwertować na WebP?",
+        "a1": "WebP oferuje o 25-35% mniejszy rozmiar pliku niż JPG/PNG przy podobnej jakości, dzięki czemu Twoja strona ładuje się szybciej.",
+        "q2": "Czy stracę na jakości obrazu?",
+        "a2": "Ty kontrolujesz suwak jakości. Wyższe wartości zachowują lepszą jakość, ale skutkują większymi plikami.",
+        "q3": "Czy mogę konwertować animowane GIF-y?",
+        "a3": "Obecnie animowane GIF-y są konwertowane na obraz statyczny (pierwsza klatka)."
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
+      "title": "Generator Kodów QR",
+      "desc": "Natychmiastowo generuj kody QR o wysokiej rozdzielczości dla adresów URL, tekstu lub dowolnej treści.",
+      "input": "Tekst lub adres URL",
+      "placeholder": "https://example.com lub dowolny tekst",
+      "size": "Rozmiar kodu QR",
+      "color": "Kolor QR",
+      "btn": "Generuj kod QR",
       "howto": {
-        "title": "How to Generate QR Codes",
+        "title": "Jak generować kody QR",
         "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
+          "title": "Wprowadź treść",
+          "desc": "Wpisz swój adres URL, tekst, numer telefonu lub dowolną treść do zakodowania."
         },
         "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
+          "title": "Dostosuj",
+          "desc": "Wybierz preferowany rozmiar i kolor kodu QR."
         },
         "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
+          "title": "Generuj i pobierz",
+          "desc": "Kliknij generuj i pobierz kod QR o wysokiej rozdzielczości jako PNG."
         }
       },
       "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+        "title": "Zastosowania kodów QR",
+        "p1": "Kody QR stały się niezbędne dla firm i osób prywatnych. Typowe zastosowania obejmują:",
+        "use1": "Adresy URL stron internetowych - Natychmiastowe kierowanie użytkowników do witryny",
+        "use2": "Wizytówki - Cyfrowe udostępnianie informacji kontaktowych",
+        "use3": "Opakowania produktów - Linki do instrukcji lub stron wsparcia",
+        "use4": "Materiały marketingowe - Śledzenie zaangażowania w kampanię",
+        "use5": "Menu restauracji - Bezkontaktowy dostęp do menu",
+        "use6": "Bilety na wydarzenia - Szybka weryfikacja biletów",
+        "p2": "Nasz generator QR tworzy kody o wysokiej rozdzielczości, które są niezawodnie skanowane na każdym urządzeniu."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+        "title": "Często Zadawane Pytania",
+        "q1": "Co mogę zakodować w kodzie QR?",
+        "a1": "Adresy URL, zwykły tekst, numery telefonów, adresy e-mail, dane WiFi i inne.",
+        "q2": "Jaki rozmiar wybrać?",
+        "a2": "256px jest dobre do użytku cyfrowego. Wybierz 512px lub 1024px dla materiałów drukowanych.",
+        "q3": "Czy kody QR wygasają?",
+        "a3": "Nie! Kody QR wygenerowane tutaj są statyczne i nigdy nie wygasają. Bezpośrednio zawierają dane."
       }
     },
+    "engagement": {
+      "title": "Kalkulator Zaangażowania TikTok",
+      "desc": "Oblicz swój współczynnik zaangażowania na podstawie polubień, komentarzy i udostępnień.",
+      "followers": "Obserwujący",
+      "likes": "Polubienia",
+      "comments": "Komentarze",
+      "shares": "Udostępnienia",
+      "btn": "Oblicz teraz",
+      "result": "Współczynnik zaangażowania",
+      "excellent": "Doskonale! 🚀",
+      "good": "Dobrze 👍",
+      "poor": "Może być lepiej 📉"
+    },
+    "money": {
+      "title": "Kalkulator Zarobków TikTok",
+      "desc": "Oszacuj potencjalne zarobki na podstawie wyświetleń wideo.",
+      "views": "Liczba wyświetleń",
+      "btn": "Oblicz zarobki",
+      "result": "Szacunkowe zarobki"
+    },
+    "font": {
+      "title": "Generator Czcionek TikTok",
+      "desc": "Twórz unikalne style czcionek dla swojego profilu i opisów wideo.",
+      "placeholder": "Wpisz swój tekst tutaj...",
+      "copy": "Kopiuj"
+    },
+    "hashtag": {
+      "title": "Generator Hashtagów TikTok",
+      "desc": "Znajdź i generuj trendy hashtagów dla swoich filmów.",
+      "btn": "Generuj hashtagi",
+      "copy": "Kopiuj wszystkie"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "Kompresowanie obrazu...",
+      "converting": "Konwertowanie obrazu..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "Kompresja zakończona!",
+      "converted": "Konwersja zakończona!",
+      "qrReady": "Twój kod QR jest gotowy!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "Oryginalny rozmiar",
+      "compressed": "Skompresowany rozmiar",
+      "saved": "Zaoszczędzono",
+      "originalFormat": "Oryginalny format",
+      "newFormat": "Nowy format",
+      "newSize": "Nowy rozmiar"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
-      "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "Pobierz",
-      "downloadPng": "Download PNG"
+      "before": "Przed",
+      "after": "Po",
+      "original": "Oryginał",
+      "converted": "Przekonwertowano"
     }
   },
   "slideshow_page": {

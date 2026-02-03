@@ -148,172 +148,208 @@
     "backToDownloader": "TikTok İndiriciye Dön",
     "meta": {
       "title": "Ücretsiz Resim ve QR Araçları - SaveTikFast",
-      "description": "Ücretsiz çevrimiçi araçlar: Resim sıkıştırın, format dönüştürün ve QR kodları oluşturun."
+      "description": "Ücretsiz çevrimiçi araçlar: Resim sıkıştırın, format dönüştürün (WebP, JPG, PNG) ve QR kodları oluşturun. Dosya yüklemeden %100 tarayıcı içi işleme."
     },
     "hero": {
       "title": "Ücretsiz Resim ve QR Araçları",
-      "desc": "Resimleri sıkıştırın, format dönüştürün ve QR kodları oluşturun."
+      "desc": "Resimleri sıkıştırın, format dönüştürün ve QR kodları oluşturun — tüm işlemler doğrudan tarayıcınızda yapılır. %100 gizli."
     },
     "tabs": {
       "compressor": "Resim Sıkıştırıcı",
       "converter": "Format Dönüştürücü",
-      "qrcode": "QR Kod Oluşturucu"
+      "qrcode": "QR Oluşturucu",
+      "engagement": "Etkileşim Hesaplayıcı",
+      "money": "Kazanç Hesaplayıcı",
+      "font": "Yazı Tipi Oluşturucu",
+      "hashtag": "Etiket Oluşturucu"
     },
     "dropzone": {
       "text": "Resminizi buraya sürükleyin",
-      "hint": "veya seçmek için tıklayın",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
-    },
-    "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
-      "howto": {
-        "title": "How to Compress Images Online",
-        "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
-        },
-        "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
-        },
-        "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
-        }
-      },
-      "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
-      },
-      "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
-      }
-    },
-    "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
-      "howto": {
-        "title": "How to Convert Image Formats",
-        "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
-        },
-        "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
-        },
-        "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
-        }
-      },
-      "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
-      },
-      "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
-      }
-    },
-    "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
-      "howto": {
-        "title": "How to Generate QR Codes",
-        "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
-        },
-        "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
-        },
-        "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
-        }
-      },
-      "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
-      },
-      "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
-      }
-    },
-    "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
-    },
-    "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
-    },
-    "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
-    },
-    "preview": {
-      "before": "Before",
-      "after": "After",
-      "original": "Original",
-      "converted": "Converted"
+      "hint": "veya seçmek için tıklayın (JPG, PNG, WebP — maks. 15MB)",
+      "hint_convert": "veya göz atmak için tıklayın (JPG, PNG, WebP, GIF, BMP)"
     },
     "btn": {
       "download": "İndir",
-      "downloadPng": "Download PNG"
+      "downloadPng": "PNG İndir"
+    },
+    "compressor": {
+      "title": "Resim Sıkıştırıcı",
+      "desc": "Kaliteden ödün vermeden resim dosya boyutunu küçültün. 15MB'a kadar JPG, PNG ve WebP desteği.",
+      "quality": "Sıkıştırma Kalitesi",
+      "maxWidth": "Maksimum Genişlik (px)",
+      "btn": "Resmi Sıkıştır",
+      "howto": {
+        "title": "Resimler Çevrimiçi Nasıl Sıkıştırılır",
+        "step1": {
+          "title": "Resim Yükle",
+          "desc": "JPG, PNG veya WebP resminizi (15MB'a kadar) sürükleyip bırakın veya seçmek için tıklayın."
+        },
+        "step2": {
+          "title": "Ayarları Yapılandır",
+          "desc": "İstediğiniz kalite seviyesini (%10-100) ve maksimum genişliği ayarlayın."
+        },
+        "step3": {
+          "title": "İndir",
+          "desc": "Sıkıştır'a tıklayın ve optimize edilmiş resminizi anında indirin."
+        }
+      },
+      "seo": {
+        "title": "Neden Resim Sıkıştırılmalı?",
+        "p1": "Resim sıkıştırma, web sitesi performansı, daha hızlı yükleme süreleri ve daha az bant genişliği kullanımı için gereklidir. Ücretsiz çevrimiçi resim sıkıştırıcımız, görsel kaliteyi korurken dosya boyutlarını küçültmek için gelişmiş algoritmalar kullanır.",
+        "p2": "Resim sıkıştırmanın faydaları şunlardır:",
+        "benefit1": "Daha hızlı web sitesi yükleme hızları (SEO'yu iyileştirir)",
+        "benefit2": "Azaltılmış depolama ve bant genişliği maliyetleri",
+        "benefit3": "Mobil cihazlarda daha iyi kullanıcı deneyimi",
+        "benefit4": "Sosyal medya paylaşımı için optimize edilmiş resimler",
+        "p3": "Tüm işlemler Web Workers kullanılarak tarayıcınızda gerçekleşir - resimleriniz asla bir sunucuya yüklenmez, tam gizlilik ve güvenlik sağlanır."
+      },
+      "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "q1": "Resmim bir sunucuya yükleniyor mu?",
+        "a1": "Hayır! Tüm sıkıştırma işlemleri doğrudan tarayıcınızda gerçekleşir. Resimleriniz asla cihazınızdan ayrılmaz, tam gizlilik sağlanır.",
+        "q2": "Hangi dosya formatları destekleniyor?",
+        "a2": "15MB dosya boyutuna kadar JPG/JPEG, PNG ve WebP formatlarını destekliyoruz.",
+        "q3": "Dosya boyutunu ne kadar küçültebilirim?",
+        "a3": "Orijinal resme ve seçilen kalite ayarlarına bağlı olarak genellikle %50-80 oranında azalma sağlanır."
+      }
+    },
+    "converter": {
+      "title": "Resim Formatı Dönüştürücü",
+      "desc": "Tarayıcınızda JPG, PNG ve WebP formatları arasında anında dönüşüm yapın.",
+      "output": "Çıktı Formatı",
+      "quality": "Çıktı Kalitesi",
+      "btn": "Resmi Dönüştür",
+      "howto": {
+        "title": "Resim Formatları Nasıl Dönüştürülür",
+        "step1": {
+          "title": "Resim Seç",
+          "desc": "Herhangi bir resim dosyası yükleyin (JPG, PNG, WebP, GIF, BMP desteklenir)."
+        },
+        "step2": {
+          "title": "Format Seç",
+          "desc": "İstediğiniz çıktı formatını seçin (WebP, JPG veya PNG)."
+        },
+        "step3": {
+          "title": "Dönüştür ve Kaydet",
+          "desc": "Dönüştür'e tıklayın ve yeni resminizi anında indirin."
+        }
+      },
+      "seo": {
+        "title": "Resim Formatlarını Anlamak",
+        "p1": "Web performansı ve kalitesi için doğru resim formatını seçmek çok önemlidir. İşte bir karşılaştırma:",
+        "webp": "Google tarafından geliştirilen, benzer kalitede JPG/PNG'den %25-35 daha küçük dosya boyutları sunan modern format. Web kullanımı için en iyisidir.",
+        "jpg": "Fotoğraflar ve çok renkli karmaşık resimler için idealdir. Kayıplı sıkıştırma kullanır.",
+        "png": "Şeffaflık veya keskin kenarlar (logolar, grafikler) gerektiren resimler için mükemmeldir. Kayıpsız sıkıştırma kullanır.",
+        "p2": "Dönüştürücümüz, anında kullanıcı tarafı dönüşüm için HTML5 Canvas API'sini kullanır. Resimleriniz asla cihazınızdan ayrılmaz."
+      },
+      "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "q1": "Neden WebP'ye dönüştürmeli?",
+        "a1": "WebP, benzer kalitede JPG/PNG'den %25-35 daha küçük dosya boyutları sunarak web sitenizin daha hızlı yüklenmesini sağlar.",
+        "q2": "Resim kalitesini kaybeder miyim?",
+        "a2": "Kalite sürgüsünü siz kontrol edersiniz. Daha yüksek değerler daha fazla kaliteyi korur ancak daha büyük dosyalara neden olur.",
+        "q3": "Animasyonlu GIF'leri dönüştürebilir miyim?",
+        "a3": "Şu anda animasyonlu GIF'ler statik bir resme (ilk kare) dönüştürülecektir."
+      }
+    },
+    "qrcode": {
+      "title": "QR Kod Oluşturucu",
+      "desc": "URL'ler, metinler veya herhangi bir içerik için anında yüksek çözünürlüklü QR kodları oluşturun.",
+      "input": "Metin veya URL",
+      "placeholder": "https://example.com veya herhangi bir metin",
+      "size": "QR Kod Boyutu",
+      "color": "QR Rengi",
+      "btn": "QR Kod Oluştur",
+      "howto": {
+        "title": "QR Kodlar Nasıl Oluşturulur",
+        "step1": {
+          "title": "İçeriği Girin",
+          "desc": "Kodlamak istediğiniz URL'yi, metni, telefon numarasını veya herhangi bir içeriği yazın."
+        },
+        "step2": {
+          "title": "Özelleştir",
+          "desc": "QR kodu için tercih ettiğiniz boyutu ve rengi seçin."
+        },
+        "step3": {
+          "title": "Oluştur ve İndir",
+          "desc": "Oluştur'a tıklayın ve yüksek çözünürlüklü QR kodunuzu PNG olarak indirin."
+        }
+      },
+      "seo": {
+        "title": "QR Kod Kullanım Alanları",
+        "p1": "QR kodlar işletmeler ve bireyler için temel hale geldi. Yaygın kullanım alanları şunlardır:",
+        "use1": "Web Sitesi URL'leri - Kullanıcıları anında sitenize yönlendirin",
+        "use2": "Kartvizitler - İletişim bilgilerini dijital olarak paylaşın",
+        "use3": "Ürün Paketleme - Kılavuzlara veya destek sayfalarına bağlantı verin",
+        "use4": "Pazarlama Materyalleri - Kampanya etkileşimini takip edin",
+        "use5": "Restoran Menüleri - Temassız menü erişimi",
+        "use6": "Etkinlik Biletleri - Hızlı giriş doğrulama",
+        "p2": "QR oluşturucumuz, her cihazda güvenilir şekilde taranan yüksek çözünürlüklü kodlar oluşturur."
+      },
+      "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "q1": "Bir QR koduna ne kodlayabilirim?",
+        "a1": "URL'ler, düz metin, telefon numaraları, e-posta adresleri, WiFi bilgileri ve daha fazlası.",
+        "q2": "Hangi boyutu seçmeliyim?",
+        "a2": "Dijital kullanım için 256px iyidir. Baskı materyalleri için 512px veya 1024px seçin.",
+        "q3": "QR kodların süresi dolar mı?",
+        "a3": "Hayır! Burada oluşturulan QR kodlar statiktir ve asla süresi dolmaz. Verileri doğrudan içerirler."
+      }
+    },
+    "engagement": {
+      "title": "TikTok Etkileşim Hesaplayıcı",
+      "desc": "Beğeni, yorum ve paylaşım sayılarına göre etkileşim oranınızı hesaplayın.",
+      "followers": "Takipçiler",
+      "likes": "Beğeniler",
+      "comments": "Yorumlar",
+      "shares": "Paylaşımlar",
+      "btn": "Hesapla",
+      "result": "Etkileşim Oranı",
+      "excellent": "Mükemmel! 🚀",
+      "good": "İyi 👍",
+      "poor": "Düşük 📉"
+    },
+    "money": {
+      "title": "TikTok Kazanç Hesaplayıcı",
+      "desc": "İzlenme sayılarına göre potansiyel kazancınızı tahmin edin.",
+      "views": "Video izlenmelerini girin",
+      "btn": "Kazancı Hesapla",
+      "result": "Tahmini Kazanç"
+    },
+    "font": {
+      "title": "TikTok Yazı Tipi Oluşturucu",
+      "desc": "Biyografiniz ve açıklamalarınız için şık yazı tipleri oluşturun.",
+      "placeholder": "Metni buraya girin...",
+      "copy": "Kopyala"
+    },
+    "hashtag": {
+      "title": "TikTok Etiket Oluşturucu",
+      "desc": "Videolarınız için trend olan etiketler oluşturun.",
+      "btn": "Oluştur",
+      "copy": "Hepsini Kopyala"
+    },
+    "progress": {
+      "compressing": "Resim sıkıştırılıyor...",
+      "converting": "Resim dönüştürülüyor..."
+    },
+    "result": {
+      "success": "Sıkıştırma Tamamlandı!",
+      "converted": "Dönüşüm Tamamlandı!",
+      "qrReady": "QR Kodunuz Hazır!"
+    },
+    "stats": {
+      "original": "Orijinal Boyut",
+      "compressed": "Sıkıştırılmış Boyut",
+      "saved": "Tasarruf",
+      "originalFormat": "Orijinal Format",
+      "newFormat": "Yeni Format",
+      "newSize": "Yeni Boyut"
+    },
+    "preview": {
+      "before": "Önce",
+      "after": "Sonra",
+      "original": "Orijinal",
+      "converted": "Dönüştürülen"
     }
   },
   "slideshow_page": {

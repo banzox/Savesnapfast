@@ -147,173 +147,202 @@
   "tools": {
     "backToDownloader": "Tillbaka till nedladdare",
     "meta": {
-      "title": "Free Online Image & QR Tools - SaveTikFast Tools Hub",
-      "description": "Free online tools: Compress images, convert formats (WebP, JPG, PNG), and generate QR codes. 100% browser-based, no uploads required."
+      "title": "Gratis bild- och QR-verktyg online - SaveTikFast",
+      "description": "Gratis onlineverktyg: Komprimera bilder, konvertera format (WebP, JPG, PNG) och skapa QR-koder. 100 % webbläsarbaserat, ingen uppladdning krävs."
     },
     "hero": {
-      "title": "Bild- och QR-verktyg",
-      "desc": "Komprimera, konvertera och skapa QR-koder."
+      "title": "Gratis bild- och QR-verktyg online",
+      "desc": "Komprimera bilder, konvertera format och skapa QR-koder — allt bearbetas lokalt i din webbläsare. 100 % privat."
     },
     "tabs": {
       "compressor": "Kompressor",
       "converter": "Konverterare",
-      "qrcode": "QR-generator"
+      "qrcode": "QR-generator",
+      "engagement": "Engagemang",
+      "money": "Inkomster",
+      "font": "Typsnitt",
+      "hashtag": "Hashtaggar"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+      "text": "Dra och släpp din bild här",
+      "hint": "eller klicka för att välja (JPG, PNG, WebP - Max 15 MB)",
+      "hint_convert": "eller klicka för att välja (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "Ladda ner nu",
+      "downloadPng": "Ladda ner PNG"
     },
     "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
+      "title": "Bildkompressor",
+      "desc": "Minska bildfilens storlek utan att förlora kvalitet. Stöder JPG, PNG och WebP upp till 15 MB.",
+      "quality": "Komprimeringskvalitet",
+      "maxWidth": "Max bredd (px)",
+      "btn": "Komprimera bild",
       "howto": {
-        "title": "How to Compress Images Online",
+        "title": "Hur man komprimerar bilder online",
         "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+          "title": "Ladda upp bild",
+          "desc": "Dra och släpp eller klicka för att välja din JPG-, PNG- eller WebP-bild (upp till 15 MB)."
         },
         "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
+          "title": "Justera inställningar",
+          "desc": "Ange önskad kvalitetsnivå (10-100 %) och maximal bredd."
         },
         "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
+          "title": "Ladda ner",
+          "desc": "Klicka på komprimera och ladda ner din optimerade bild omedelbart."
         }
       },
       "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+        "title": "Varför komprimera bilder?",
+        "p1": "Bildkomprimering är avgörande för webbplatsens prestanda, snabbare laddningstider och minskad bandbreddsanvändning. Vår gratis online-bildkompressor använder avancerade algoritmer för att minska filstorlekar med bibehållen visuell kvalitet.",
+        "p2": "Fördelar med bildkomprimering inkluderar:",
+        "benefit1": "Snabbare laddningshastighet för webbplatsen (förbättrar SEO)",
+        "benefit2": "Minskade lagrings- och bandbreddskostnader",
+        "benefit3": "Bättre användarupplevelse på mobila enheter",
+        "benefit4": "Optimerade bilder för delning i sociala medier",
+        "p3": "All bearbetning sker i din webbläsare — dina bilder laddas aldrig upp till någon server, vilket garanterar fullständig integritet och säkerhet."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+        "title": "Vanliga frågor",
+        "q1": "Laddas min bild upp till en server?",
+        "a1": "Nej! All komprimering sker direkt i din webbläsare. Dina bilder lämnar aldrig din enhet."
       }
     },
     "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
+      "title": "Bildformatkonverterare",
+      "desc": "Konvertera bilder mellan JPG-, PNG- och WebP-format omedelbart i din webbläsare.",
+      "output": "Utdataformat",
+      "quality": "Utkvalitet",
+      "btn": "Konvertera bild",
       "howto": {
-        "title": "How to Convert Image Formats",
+        "title": "Hur man konverterar bildformat",
         "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+          "title": "Välj bild",
+          "desc": "Ladda upp valfri bildfil (JPG, PNG, WebP, GIF, BMP stöds)."
         },
         "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+          "title": "Välj format",
+          "desc": "Välj önskat utdataformat (WebP, JPG eller PNG)."
         },
         "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
+          "title": "Konvertera och spara",
+          "desc": "Klicka på konvertera och ladda ner din nya bild omedelbart."
         }
       },
       "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+        "title": "Förståelse för bildformat",
+        "p1": "Att välja rätt bildformat är avgörande för webbprestanda och kvalitet. Här är en jämförelse:",
+        "webp": "Modernt format från Google som erbjuder 25-35 % mindre filstorlekar än JPG/PNG med liknande kvalitet. Bäst för webbanvändning.",
+        "jpg": "Idealisk för fotografier och komplexa bilder med många färger. Använder förstörande komprimering.",
+        "png": "Perfekt för bilder som kräver transparens eller skarpa kanter (logotyper, grafik). Använder förlustfri komprimering.",
+        "p2": "Vår konverterare använder HTML5 Canvas API för omedelbar konvertering på klientsidan. Dina bilder lämnar aldrig din enhet."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+        "title": "Vanliga frågor",
+        "q1": "Varför konvertera till WebP?",
+        "a1": "WebP erbjuder 25-35 % mindre filstorlekar än JPG/PNG med liknande kvalitet, vilket gör att din webbplats laddas snabbare.",
+        "q2": "Kommer jag att förlora bildkvalitet?",
+        "a2": "Du styr kvalitetsreglaget. Högre värden bevarar mer kvalitet men resulterar i större filer.",
+        "q3": "Kan jag konvertera animerade GIF-bilder?",
+        "a3": "För närvarande kommer animerade GIF-bilder att konverteras till en statisk bild (första bilden)."
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
+      "title": "QR-kodgenerator",
+      "desc": "Skapa högupplösta QR-koder för webbadresser, text eller annat innehåll omedelbart.",
+      "input": "Text eller URL",
+      "placeholder": "https://example.com eller valfri text",
+      "size": "QR-kodstorlek",
+      "color": "QR-färg",
+      "btn": "Skapa QR-kod",
       "howto": {
-        "title": "How to Generate QR Codes",
+        "title": "Hur man skapar QR-koder",
         "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
+          "title": "Ange innehåll",
+          "desc": "Skriv din URL, text, telefonnummer eller annat innehåll du vill koda."
         },
         "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
+          "title": "Anpassa",
+          "desc": "Välj önskad storlek och färg för QR-koden."
         },
         "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
+          "title": "Skapa och ladda ner",
+          "desc": "Klicka på skapa och ladda ner din högupplösta QR-kod som PNG."
         }
       },
       "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+        "title": "Användningsområden för QR-koder",
+        "p1": "QR-koder har blivit oumbärliga för företag och privatpersoner. Vanliga användningsområden inkluderar:",
+        "use1": "Webbadresser - Led användare till din webbplats omedelbart",
+        "use2": "Visitkort - Dela kontaktinformation digitalt",
+        "use3": "Produktförpackningar - Länka till manualer eller supportsidor",
+        "p2": "Vår QR-generator skapar högupplösta koder som skannas tillförlitligt på alla enheter."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+        "title": "Vanliga frågor",
+        "q1": "Vad kan jag koda i en QR-kod?",
+        "a1": "URL:er, vanlig text, telefonnummer, e-postadresser, WiFi-uppgifter och mer.",
+        "q2": "Vilken storlek ska jag välja?",
+        "a2": "256 px är bra för digital användning. Välj 512 px eller 1024 px för tryckt material.",
+        "q3": "Upphör QR-koder att gälla?",
+        "a3": "Nej! QR-koder som genereras här är statiska och upphör aldrig att gälla. De innehåller data direkt."
       }
     },
+    "engagement": {
+      "title": "TikTok Engagemangskalkylator",
+      "desc": "Beräkna din engagemangsgrad baserat på likes, kommentarer och delningar.",
+      "followers": "Följare",
+      "likes": "Gilla-markeringar",
+      "comments": "Kommentarer",
+      "shares": "Delningar",
+      "btn": "Beräkna nu",
+      "result": "Engagemangsgrad",
+      "excellent": "Utmärkt! 🚀",
+      "good": "Bra 👍",
+      "poor": "Kan bli bättre 📉"
+    },
+    "money": {
+      "title": "TikTok Inkomstkalkylator",
+      "desc": "Uppskatta potentiella inkomster baserat på videovisningar.",
+      "views": "Antal visningar",
+      "btn": "Beräkna inkomst",
+      "result": "Uppskattad inkomst"
+    },
+    "font": {
+      "title": "TikTok Typsnittsgenerator",
+      "desc": "Skapa unika typsnittsstilar för din profil och videobeskrivningar.",
+      "placeholder": "Skriv din text här...",
+      "copy": "Kopiera"
+    },
+    "hashtag": {
+      "title": "TikTok Hashtag-generator",
+      "desc": "Hitta och generera trendiga hashtaggar för dina videor.",
+      "btn": "Generera hashtaggar",
+      "copy": "Kopiera alla"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "Komprimerar bild...",
+      "converting": "Konverterar bild..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "Komprimering klar!",
+      "converted": "Konvertering klar!",
+      "qrReady": "Din QR-kod är klar!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "Originalstorlek",
+      "compressed": "Komprimerad storlek",
+      "saved": "Sparat",
+      "originalFormat": "Originalformat",
+      "newFormat": "Nytt format",
+      "newSize": "Ny storlek"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
+      "before": "Före",
+      "after": "Efter",
       "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "Ladda ner",
-      "downloadPng": "Download PNG"
+      "converted": "Konverterad"
     }
   },
   "slideshow_page": {

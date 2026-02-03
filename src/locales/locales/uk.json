@@ -147,173 +147,202 @@
   "tools": {
     "backToDownloader": "Назад до завантажувача",
     "meta": {
-      "title": "Інструменти для зображень та QR",
-      "description": "Стискання, конвертація та створення QR-кодів."
+      "title": "Безкоштовні онлайн-інструменти для фото та QR - SaveTikFast",
+      "description": "Безкоштовні онлайн-інструменти: Стиснення зображень, конвертація форматів (WebP, JPG, PNG) та створення QR-кодів. 100% у браузері, без завантаження на сервер."
     },
     "hero": {
-      "title": "Інструменти для фото та QR",
-      "desc": "Обробка в браузері. Швидко та приватно."
+      "title": "Безкоштовні онлайн-інструменти для фото та QR",
+      "desc": "Стискайте зображення, конвертуйте формати та створюйте QR-коди — все обробляється локально у браузері. 100% приватно."
     },
     "tabs": {
-      "compressor": "Стискання",
+      "compressor": "Стиснення",
       "converter": "Конвертер",
-      "qrcode": "QR-код"
+      "qrcode": "QR-код",
+      "engagement": "Залученість",
+      "money": "Доходи",
+      "font": "Шрифти",
+      "hashtag": "Хештеги"
     },
     "dropzone": {
-      "text": "Drag & drop your image here",
-      "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+      "text": "Перетягніть зображення сюди",
+      "hint": "або натисніть, щоб вибрати (JPG, PNG, WebP - Макс 15МБ)",
+      "hint_convert": "або натисніть, щоб вибрати (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "Завантажити зараз",
+      "downloadPng": "Завантажити PNG"
     },
     "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
+      "title": "Стиснення зображень",
+      "desc": "Зменшуйте розмір файлу зображення без втрати якості. Підтримує JPG, PNG та WebP до 15МБ.",
+      "quality": "Якість стиснення",
+      "maxWidth": "Макс. ширина (px)",
+      "btn": "Стиснути зображення",
       "howto": {
-        "title": "How to Compress Images Online",
+        "title": "Як стиснути зображення онлайн",
         "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+          "title": "Завантажте фото",
+          "desc": "Перетягніть або натисніть, щоб вибрати зображення JPG, PNG або WebP (до 15МБ)."
         },
         "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
+          "title": "Налаштуйте параметри",
+          "desc": "Встановіть бажаний рівень якості (10-100%) та максимальну ширину."
         },
         "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
+          "title": "Завантажте",
+          "desc": "Натисніть «Стиснути» і миттєво завантажте оптимізоване зображення."
         }
       },
       "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+        "title": "Навіщо стискати зображення?",
+        "p1": "Стиснення зображень є важливим для продуктивності сайту, швидшого завантаження та зменшення використання трафіку. Наш безкоштовний онлайн-сервіс використовує передові алгоритми для зменшення розміру файлів зі збереженням візуальної якості.",
+        "p2": "Переваги стиснення зображень включають:",
+        "benefit1": "Швидше завантаження сайту (покращує SEO)",
+        "benefit2": "Зменшення витрат на зберігання та трафік",
+        "benefit3": "Кращий досвід користувачів на мобільних пристроях",
+        "benefit4": "Оптимізовані зображення для соцмереж",
+        "p3": "Вся обробка відбувається у вашому браузері — ваші зображення ніколи не завантажуються на сервер, що гарантує повну конфіденційність."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+        "title": "Часті запитання",
+        "q1": "Чи завантажується моє зображення на сервер?",
+        "a1": "Ні! Все стиснення відбувається безпосередньо у вашому браузері. Ваші фото ніколи не покидають ваш пристрій."
       }
     },
     "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
+      "title": "Конвертер форматів зображень",
+      "desc": "Миттєво конвертуйте зображення між форматами JPG, PNG та WebP у своєму браузері.",
+      "output": "Вихідний формат",
+      "quality": "Вихідна якість",
+      "btn": "Конвертувати зображення",
       "howto": {
-        "title": "How to Convert Image Formats",
+        "title": "Як змінити формат зображення",
         "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+          "title": "Виберіть фото",
+          "desc": "Завантажте будь-який файл (підтримуються JPG, PNG, WebP, GIF, BMP)."
         },
         "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+          "title": "Виберіть формат",
+          "desc": "Виберіть бажаний вихідний формат (WebP, JPG або PNG)."
         },
         "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
+          "title": "Конвертуйте та збережіть",
+          "desc": "Натисніть «Конвертувати» та миттєво завантажте нове зображення."
         }
       },
       "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+        "title": "Розуміння форматів зображень",
+        "p1": "Вибір правильного формату є вирішальним для продуктивності та якості. Ось порівняння:",
+        "webp": "Сучасний формат від Google, що забезпечує на 25-35% менший розмір файлу, ніж JPG/PNG, при подібній якості. Найкраще для вебу.",
+        "jpg": "Ідеально для фотографій та складних зображень з багатьма кольорами. Використовує стиснення з втратами.",
+        "png": "Ідеально для зображень, що потребують прозорості або чітких країв (логотипи, графіка). Використовує стиснення без втрат.",
+        "p2": "Наш конвертер використовує HTML5 Canvas API для миттєвої конвертації на стороні клієнта. Ваші фото не залишають пристрій."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+        "title": "Часті запитання",
+        "q1": "Навіщо конвертувати у WebP?",
+        "a1": "WebP забезпечує на 25-35% менший розмір файлу, ніж JPG/PNG, що прискорює завантаження вашого сайту.",
+        "q2": "Чи втрачу я якість зображення?",
+        "a2": "Ви керуєте рівнем якості. Вищі значення зберігають кращу якість, але збільшують розмір файлу.",
+        "q3": "Чи можна конвертувати анімовані GIF?",
+        "a3": "Наразі анімовані GIF будуть конвертовані у статичне зображення (перший кадр)."
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
+      "title": "Генератор QR-кодів",
+      "desc": "Миттєво створюйте QR-коди високої роздільної здатності для посилань, тексту або іншого контенту.",
+      "input": "Текст або URL",
+      "placeholder": "https://example.com або будь-який текст",
+      "size": "Розмір QR-коду",
+      "color": "Колір QR",
+      "btn": "Згенерувати QR-код",
       "howto": {
-        "title": "How to Generate QR Codes",
+        "title": "Як створити QR-код",
         "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
+          "title": "Введіть контент",
+          "desc": "Введіть URL, текст, номер телефону або будь-який інший вміст."
         },
         "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
+          "title": "Налаштуйте",
+          "desc": "Виберіть бажаний розмір та колір для QR-коду."
         },
         "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
+          "title": "Згенеруйте та завантажте",
+          "desc": "Натисніть «Згенерувати» та завантажте свій QR-код у форматі PNG."
         }
       },
       "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+        "title": "Випадки використання QR-кодів",
+        "p1": "QR-коди стали незамінними для бізнесу та особистого використання:",
+        "use1": "Посилання на сайти - миттєво направляйте користувачів",
+        "use2": "Візитки - діліться контактами в цифровому вигляді",
+        "use3": "Упаковка продуктів - посилання на інструкції або підтримку",
+        "p2": "Наш генератор створює коди, які надійно зчитуються будь-яким пристроєм."
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+        "title": "Часті запитання",
+        "q1": "Що можна закодувати в QR-код?",
+        "a1": "URL, текст, номери телефонів, e-mail, дані Wi-Fi та інше.",
+        "q2": "Який розмір вибрати?",
+        "a2": "256px добре для цифрового використання. Вибирайте 512px або 1024px для друку.",
+        "q3": "Чи мають QR-коди термін дії?",
+        "a3": "Ні! Згенеровані тут коди є статичними і ніколи не закінчуються. Вони містять дані безпосередньо."
       }
     },
+    "engagement": {
+      "title": "Калькулятор залученості TikTok",
+      "desc": "Розрахуйте свій рівень залученості на основі лайків, коментарів та поширень.",
+      "followers": "Підписники",
+      "likes": "Лайки",
+      "comments": "Коментарі",
+      "shares": "Поширення",
+      "btn": "Розрахувати зараз",
+      "result": "Рівень залученості",
+      "excellent": "Чудово! 🚀",
+      "good": "Добре 👍",
+      "poor": "Можна краще 📉"
+    },
+    "money": {
+      "title": "Калькулятор доходів TikTok",
+      "desc": "Оцініть потенційний дохід на основі переглядів відео.",
+      "views": "Кількість переглядів",
+      "btn": "Розрахувати дохід",
+      "result": "Оціночний дохід"
+    },
+    "font": {
+      "title": "Генератор шрифтів TikTok",
+      "desc": "Створюйте унікальні стилі шрифтів для свого профілю та описів відео.",
+      "placeholder": "Введіть текст сюди...",
+      "copy": "Копіювати"
+    },
+    "hashtag": {
+      "title": "Генератор хештегів TikTok",
+      "desc": "Знаходьте та створюйте трендові хештеги для ваших відео.",
+      "btn": "Згенерувати хештеги",
+      "copy": "Копіювати всі"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "Стискання зображення...",
+      "converting": "Конвертація зображення..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "Стиснення завершено!",
+      "converted": "Конвертація завершена!",
+      "qrReady": "Ваш QR-код готовий!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "Оригінальний розмір",
+      "compressed": "Стиснений розмір",
+      "saved": "Збережено",
+      "originalFormat": "Оригінальний формат",
+      "newFormat": "Новий формат",
+      "newSize": "Новий розмір"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
-      "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "Завантажити",
-      "downloadPng": "Download PNG"
+      "before": "До",
+      "after": "Після",
+      "original": "Оригінал",
+      "converted": "Конвертовано"
     }
   },
   "slideshow_page": {

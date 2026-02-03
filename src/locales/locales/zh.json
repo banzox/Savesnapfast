@@ -147,173 +147,209 @@
   "tools": {
     "backToDownloader": "返回下载器",
     "meta": {
-      "title": "免费图片和QR工具",
-      "description": "在线压缩图片，转换格式和生成二维码。"
+      "title": "免费图片和 QR 工具 - SaveTikFast",
+      "description": "免费在线工具：压缩图片、转换格式 (WebP, JPG, PNG) 和生成二维码。100% 浏览器内本地处理，无需上传。"
     },
     "hero": {
-      "title": "免费图片和QR工具",
-      "desc": "在浏览器中本地处理。快速且隐私安全。"
+      "title": "免费图片和 QR 工具",
+      "desc": "压缩图片、转换格式和生成二维码 — 所有处理都在您的浏览器中进行，100% 隐私安全。"
     },
     "tabs": {
-      "compressor": "压缩工具",
-      "converter": "转换工具",
-      "qrcode": "QR生成器"
+      "compressor": "图片压缩",
+      "converter": "格式转换",
+      "qrcode": "QR 生成器",
+      "engagement": "互动计算器",
+      "money": "收入计算器",
+      "font": "字体生成",
+      "hashtag": "标签生成"
     },
     "dropzone": {
-      "text": "将图片拖放到此处",
-      "hint": "或点击选择",
-      "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+      "text": "将图片拖到此处",
+      "hint": "或点击选择 (JPG, PNG, WebP — 最大 15MB)",
+      "hint_convert": "或点击浏览 (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "立即下载",
+      "downloadPng": "下载 PNG"
     },
     "compressor": {
-      "title": "Image Compressor",
-      "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
-      "maxWidth": "Max Width (px)",
-      "btn": "Compress Image",
+      "title": "图片在线压缩器",
+      "desc": "在不损失质量的情况下减小图片文件大小。支持高达 15MB 的 JPG、PNG 和 WebP 格式。",
+      "quality": "压缩质量",
+      "maxWidth": "最大宽度 (px)",
+      "btn": "立即压缩",
       "howto": {
-        "title": "How to Compress Images Online",
+        "title": "如何在线压缩图片",
         "step1": {
-          "title": "Upload Image",
-          "desc": "Drag & drop or click to select your JPG, PNG, or WebP image (up to 15MB)."
+          "title": "上传图片",
+          "desc": "拖放或点击选择您的 JPG、PNG 或 WebP 图片（最大 15MB）。"
         },
         "step2": {
-          "title": "Adjust Settings",
-          "desc": "Set your desired quality level (10-100%) and maximum width."
+          "title": "调整设置",
+          "desc": "设置您想要的质量等级（10-100%）和最大宽度。"
         },
         "step3": {
-          "title": "Download",
-          "desc": "Click compress and download your optimized image instantly."
+          "title": "点击下载",
+          "desc": "点击压缩按钮并立即下载优化后的图片。"
         }
       },
       "seo": {
-        "title": "Why Compress Images?",
-        "p1": "Image compression is essential for website performance, faster loading times, and reduced bandwidth usage. Our free online image compressor uses advanced algorithms to reduce file sizes while maintaining visual quality.",
-        "p2": "Benefits of image compression include:",
-        "benefit1": "Faster website loading speeds (improves SEO)",
-        "benefit2": "Reduced storage and bandwidth costs",
-        "benefit3": "Better user experience on mobile devices",
-        "benefit4": "Optimized images for social media sharing",
-        "p3": "All processing happens in your browser using Web Workers - your images are never uploaded to any server, ensuring complete privacy and security."
+        "title": "为什么要压缩图片？",
+        "p1": "图片压缩对于网站性能、提高加载速度和减少带宽消耗至关重要。我们的免费在线图片压缩器使用先进算法，在保持视觉质量的同时减小文件大小。",
+        "p2": "图片压缩的优势包括：",
+        "benefit1": "更快的网站加载速度（有利于 SEO）",
+        "benefit2": "减少存储空间和带宽成本",
+        "benefit3": "提升移动设备上的用户体验",
+        "benefit4": "优化适合社交媒体分享的图片",
+        "p3": "所有处理都在您的浏览器中使用 Web Workers 进行 - 您的图片永远不会上传到任何服务器，确保完全的隐私和安全。"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Is my image uploaded to a server?",
-        "a1": "No! All compression happens directly in your browser. Your images never leave your device, ensuring complete privacy.",
-        "q2": "What file formats are supported?",
-        "a2": "We support JPG/JPEG, PNG, and WebP formats up to 15MB file size.",
-        "q3": "How much can I reduce file size?",
-        "a3": "Typically 50-80% reduction depending on the original image and quality settings chosen."
+        "title": "常见问题",
+        "q1": "我的图片会上传到服务器吗？",
+        "a1": "不会！所有压缩过程都直接在您的浏览器中完成。您的图片永远不会离开您的设备，确保完全的隐私。",
+        "q2": "支持哪些文件格式？",
+        "a2": "我们支持最大 15MB 的 JPG/JPEG、PNG 和 WebP 格式。",
+        "q3": "文件大小可以减小多少？",
+        "a3": "通常可以减小 50-80%，具体取决于原始图片和所选的质量设置。"
       }
     },
     "converter": {
-      "title": "Image Format Converter",
-      "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
-      "output": "Output Format",
-      "quality": "Output Quality",
-      "btn": "Convert Image",
+      "title": "图片格式转换器",
+      "desc": "在您的浏览器中即时在 JPG、PNG 和 WebP 格式之间进行转换。",
+      "output": "输出格式",
+      "quality": "输出质量",
+      "btn": "立即转换",
       "howto": {
-        "title": "How to Convert Image Formats",
+        "title": "如何转换图片格式",
         "step1": {
-          "title": "Select Image",
-          "desc": "Upload any image file (JPG, PNG, WebP, GIF, BMP supported)."
+          "title": "选择图片",
+          "desc": "上传任何图片文件（支持 JPG, PNG, WebP, GIF, BMP）。"
         },
         "step2": {
-          "title": "Choose Format",
-          "desc": "Select your desired output format (WebP, JPG, or PNG)."
+          "title": "选择格式",
+          "desc": "选择您想要的输出格式（WebP, JPG 或 PNG）。"
         },
         "step3": {
-          "title": "Convert & Save",
-          "desc": "Click convert and download your new image instantly."
+          "title": "转换并保存",
+          "desc": "点击转换并立即下载您的新图片。"
         }
       },
       "seo": {
-        "title": "Understanding Image Formats",
-        "p1": "Choosing the right image format is crucial for web performance and quality. Here's a comparison:",
-        "webp": "Modern format by Google offering 25-35% smaller file sizes than JPG/PNG with similar quality. Best for web use.",
-        "jpg": "Ideal for photographs and complex images with many colors. Uses lossy compression.",
-        "png": "Perfect for images requiring transparency or sharp edges (logos, graphics). Uses lossless compression.",
-        "p2": "Our converter uses HTML5 Canvas API for instant, client-side conversion. Your images never leave your device."
+        "title": "了解图片格式",
+        "p1": "选择正确的图片格式对于网络性能和质量至关重要。以下是对比：",
+        "webp": "Google 推出的现代格式，在保持相近质量的情况下，文件大小比 JPG/PNG 小 25-35%。是网页使用的最佳选择。",
+        "jpg": "非常适合照片和颜色复杂的图片。使用有损压缩。",
+        "png": "非常适合需要透明度或清晰轮廓的图片（如 Logo、图形）。使用无损压缩。",
+        "p2": "我们的转换器使用 HTML5 Canvas API 进行即时客户端转换。您的图片永远不会离开您的设备。"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "Why convert to WebP?",
-        "a1": "WebP offers 25-35% smaller file sizes than JPG/PNG with similar quality, making your website load faster.",
-        "q2": "Will I lose image quality?",
-        "a2": "You control the quality slider. Higher values preserve more quality but result in larger files.",
-        "q3": "Can I convert animated GIFs?",
-        "a3": "Currently, animated GIFs will be converted to a static image (first frame)."
+        "title": "常见问题",
+        "q1": "为什么要转换为 WebP？",
+        "a1": "WebP 提供比 JPG/PNG 小 25-35% 的文件大小，且质量相近，从而使您的网站加载速度更快。",
+        "q2": "转换后会损失图片质量吗？",
+        "a2": "您可以控制质量滑块。较高的数值可以保留更多质量，但文件体积也会更大。",
+        "q3": "我可以转换动图 GIF 吗？",
+        "a3": "目前，动态 GIF 将被转换为静态图片（第一帧）。"
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
-      "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
-      "input": "Text or URL",
-      "placeholder": "https://example.com or any text",
-      "size": "QR Code Size",
-      "color": "QR Color",
-      "btn": "Generate QR Code",
+      "title": "在线二维码生成器",
+      "desc": "即时为 URL、文本或任何内容生成高分辨率二维码。",
+      "input": "文本或 URL",
+      "placeholder": "https://example.com 或任何文本",
+      "size": "二维码大小",
+      "color": "二维码颜色",
+      "btn": "生成二维码",
       "howto": {
-        "title": "How to Generate QR Codes",
+        "title": "如何生成二维码",
         "step1": {
-          "title": "Enter Content",
-          "desc": "Type your URL, text, phone number, or any content you want to encode."
+          "title": "输入内容",
+          "desc": "输入您想要编码的 URL、文本、电话号码或任何内容。"
         },
         "step2": {
-          "title": "Customize",
-          "desc": "Choose your preferred size and color for the QR code."
+          "title": "自定义设置",
+          "desc": "选择您喜欢的二维码尺寸和颜色。"
         },
         "step3": {
-          "title": "Generate & Download",
-          "desc": "Click generate and download your high-resolution QR code as PNG."
+          "title": "生成并下载",
+          "desc": "点击生成并以 PNG 格式下载您的高清二维码。"
         }
       },
       "seo": {
-        "title": "QR Code Use Cases",
-        "p1": "QR codes have become essential for businesses and individuals. Common use cases include:",
-        "use1": "Website URLs - Direct users to your website instantly",
-        "use2": "Business cards - Share contact information digitally",
-        "use3": "Product packaging - Link to manuals or support pages",
-        "use4": "Marketing materials - Track campaign engagement",
-        "use5": "Restaurant menus - Contactless menu access",
-        "use6": "Event tickets - Fast entry verification",
-        "p2": "Our QR generator creates high-resolution codes that scan reliably on any device."
+        "title": "二维码使用场景",
+        "p1": "二维码已成为商业和个人生活的必需品。常见的使用场景包括：",
+        "use1": "网站链接 - 让用户立即访问您的网站",
+        "use2": "电子名片 - 数字化分享联系详情",
+        "use3": "产品包装 - 链接到说明书或支持页面",
+        "use4": "营销材料 - 追踪广告活动的互动情况",
+        "use5": "餐厅菜单 - 非接触式快速查看菜谱",
+        "use6": "电子门票 - 快速入场验证",
+        "p2": "我们的 QR 生成器可创建高分辨率代码，可在任何设备上可靠扫描。"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": "What can I encode in a QR code?",
-        "a1": "URLs, plain text, phone numbers, email addresses, WiFi credentials, and more.",
-        "q2": "What size should I choose?",
-        "a2": "256px is good for digital use. Choose 512px or 1024px for print materials.",
-        "q3": "Do QR codes expire?",
-        "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
+        "title": "常见问题",
+        "q1": "二维码可以包含什么内容？",
+        "a1": "链接、纯文本、电话号码、电子邮件地址、WiFi 凭据等。",
+        "q2": "我应该选择什么尺寸？",
+        "a2": "数字用途建议 256px。印刷材料建议选择 512px 或 1024px。",
+        "q3": "二维码会过期吗？",
+        "a3": "不会！此处生成的二维码是静态的，永远不会过期。它们直接包含数据。"
       }
     },
+    "engagement": {
+      "title": "TikTok 互动率计算器",
+      "desc": "根据点赞、评论和分享计算您的互动率。",
+      "followers": "粉丝数",
+      "likes": "点赞数",
+      "comments": "评论数",
+      "shares": "分享数",
+      "btn": "立即计算",
+      "result": "互动率结果",
+      "excellent": "非常出色! 🚀",
+      "good": "表现良好 👍",
+      "poor": "需努力 📉"
+    },
+    "money": {
+      "title": "TikTok 收益估算器",
+      "desc": "根据视频播放量估算您的潜在收入。",
+      "views": "输入视频播放量",
+      "btn": "计算收益",
+      "result": "预计收入"
+    },
+    "font": {
+      "title": "TikTok 字体生成器",
+      "desc": "为您的个人资料和视频描述生成独特的字体样式。",
+      "placeholder": "在此输入文本...",
+      "copy": "复制"
+    },
+    "hashtag": {
+      "title": "TikTok 热门标签生成器",
+      "desc": "为您的视频寻找和生成趋势标签。",
+      "btn": "立即生成",
+      "copy": "全部复制"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "正在压缩图片...",
+      "converting": "正在转换文件..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "压缩已完成!",
+      "converted": "转换已完成!",
+      "qrReady": "您的二维码已就绪!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "原始大小",
+      "compressed": "压缩后大小",
+      "saved": "节省空间",
+      "originalFormat": "原始格式",
+      "newFormat": "新格式",
+      "newSize": "新大小"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
-      "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "下载",
-      "downloadPng": "Download PNG"
+      "before": "压缩前",
+      "after": "压缩后",
+      "original": "原图",
+      "converted": "转换结果"
     }
   },
   "slideshow_page": {
