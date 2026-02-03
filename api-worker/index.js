@@ -1,5 +1,6 @@
-// Cloudflare Worker - Multi-Source TikTok Downloader
-// Sources extracted from FusionTik: Zell API & Sanka API
+// ================================
+// SavetikFast Ultimate Worker PRO (7 Sources)
+// ================================
 
 const CORS_HEADERS = {
     "Access-Control-Allow-Origin": "*",
@@ -7,145 +8,223 @@ const CORS_HEADERS = {
     "Access-Control-Allow-Headers": "Content-Type",
 };
 
+// ---- إعدادات ----
+const RATE_LIMIT = 10;          // عدد الطلبات المسموحة
+const RATE_WINDOW = 60;         // خلال كم ثانية (دقيقة واحدة)
+const CACHE_TTL = 3600;         // مدة بقاء الرابط في الكاش (ساعة كاملة)
+
 export default {
     async fetch(request, env, ctx) {
-        // 1. Handle CORS preflight
+
+        // 1. التعامل مع CORS
         if (request.method === "OPTIONS") {
             return new Response(null, { headers: CORS_HEADERS });
         }
 
-        // 2. Extract TikTok URL (Support both GET and POST)
+        // 2. استخراج الرابط (يدعم GET و POST)
         let videoUrl = null;
-        const url = new URL(request.url);
+        const reqUrl = new URL(request.url);
 
         if (request.method === "POST") {
             try {
                 const body = await request.json();
                 videoUrl = body.url;
-            } catch (e) {
-                // Fallback if JSON parsing fails
-            }
+            } catch (e) { }
         }
-
+        
         if (!videoUrl) {
-            videoUrl = url.searchParams.get("url");
+            videoUrl = reqUrl.searchParams.get("url");
         }
 
-        if (!videoUrl) {
-            return new Response(JSON.stringify({ error: "Missing 'url' parameter" }), {
-                status: 400,
-                headers: { ...CORS_HEADERS, "Content-Type": "application/json" }
-            });
+        // التحقق من صحة الرابط
+        if (!videoUrl || !videoUrl.includes("tiktok.com")) {
+            return json({ error: "Invalid TikTok URL" }, 400);
         }
 
-        // 3. Failover Logic (Source 1 -> Source 2)
-        let data = null;
-
-        // Try Source 1: Zell
-        try {
-            data = await fetchFromZell(videoUrl);
-        } catch (e1) {
-            // If Source 1 fails, Try Source 2: Sanka
+        // 3. نظام الحماية (Rate Limiting)
+        // ملاحظة: يعمل فقط إذا قمت بربط قاعدة بيانات KV باسم RATE
+        if (env.RATE) {
+            const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+            const rateKey = `rate:${ip}`;
+            const now = Math.floor(Date.now() / 1000);
+            
             try {
-                data = await fetchFromSanka(videoUrl);
-            } catch (e2) {
-                // If both fail
-                return new Response(JSON.stringify({ error: "All providers failed", details: e2.message }), {
-                    status: 500,
-                    headers: { ...CORS_HEADERS, "Content-Type": "application/json" }
-                });
+                const rateData = await env.RATE.get(rateKey, "json");
+                if (rateData && now - rateData.time < RATE_WINDOW && rateData.count >= RATE_LIMIT) {
+                    return json({ error: "Too many requests, please wait a moment." }, 429);
+                }
+    
+                await env.RATE.put(
+                    rateKey,
+                    JSON.stringify({
+                        count: rateData ? rateData.count + 1 : 1,
+                        time: rateData ? rateData.time : now,
+                    }),
+                    { expirationTtl: RATE_WINDOW }
+                );
+            } catch (e) {
+                // تجاوز الخطأ إذا كانت قاعدة البيانات غير جاهزة
             }
         }
 
-        // 4. Return Success Response
-        return new Response(JSON.stringify(data), {
-            headers: {
-                ...CORS_HEADERS,
-                "Content-Type": "application/json",
-                "Cache-Control": "public, max-age=3600" // Cache for 1 hour
+        // 4. التخزين المؤقت (Cache)
+        const cacheKey = new Request(reqUrl.toString(), request);
+        const cache = caches.default;
+        
+        // محاولة جلب الاستجابة من الكاش
+        let response = await cache.match(cacheKey);
+        if (response) {
+            return response;
+        }
+
+        // 5. المصادر (The 7 Providers)
+        // يتم استخدام خلط عشوائي (Shuffle) لتوزيع الضغط وتجنب الحظر
+        
+        // مفتاح Sanka (نستخدم المفتاح من البيئة أو المفتاح الموجود في كودك القديم كاحتياطي)
+        const sankaKey = env.SANKA_KEY || "planaai"; 
+
+        const providers = shuffle([
+            // 5 سيرفرات Cobalt مختلفة وقوية
+            () => fetchFromCobalt("https://alpha.wolfy.love", videoUrl),
+            () => fetchFromCobalt("https://melon.clxxped.lol", videoUrl),
+            () => fetchFromCobalt("https://cessi-c.meowing.de", videoUrl),
+            () => fetchFromCobalt("https://mega.wolfy.love", videoUrl),
+            () => fetchFromCobalt("https://grapefruit.clxxped.lol", videoUrl),
+            
+            // المصدرين القديمين
+            () => fetchFromZell(videoUrl),
+            () => fetchFromSanka(videoUrl, sankaKey),
+        ]);
+
+        let lastError = null;
+
+        // حلقة التجربة (Failover Loop)
+        for (const provider of providers) {
+            try {
+                const data = await provider();
+                
+                // التأكد أن البيانات صالحة قبل إرجاعها
+                if (data && (data.video || (data.images && data.images.length > 0))) {
+                    response = json(data, 200, {
+                        "Cache-Control": `public, max-age=${CACHE_TTL}`,
+                    });
+
+                    // حفظ النسخة الناجحة في الكاش
+                    ctx.waitUntil(cache.put(cacheKey, response.clone()));
+                    return response;
+                }
+            } catch (e) {
+                lastError = e;
+                // فشل هذا المصدر، ننتقل للتالي بصمت
             }
-        });
+        }
+
+        // إذا فشلت جميع الـ 7 مصادر
+        return json(
+            { error: "Server is busy, please try again.", details: lastError?.message },
+            503
+        );
     }
 };
 
-// --- Helper Functions ---
+// ================================
+// دوال مساعدة (Helpers)
+// ================================
 
-async function fetchFromZell(url) {
-    const baseUrl = "https://apizell.web.id/download/tiktok";
-    const apiUrl = `${baseUrl}?url=${encodeURIComponent(url)}`;
+function json(data, status = 200, extraHeaders = {}) {
+    return new Response(JSON.stringify(data), {
+        status,
+        headers: {
+            ...CORS_HEADERS,
+            "Content-Type": "application/json",
+            ...extraHeaders,
+        },
+    });
+}
 
-    const res = await fetch(apiUrl, {
-        headers: { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" }
+function shuffle(arr) {
+    return arr.sort(() => Math.random() - 0.5);
+}
+
+// ================================
+// دوال المصادر (Providers Functions)
+// ================================
+
+// ---- 1. Cobalt API (Multiple Instances) ----
+async function fetchFromCobalt(baseUrl, url) {
+    const res = await fetch(`${baseUrl}/api/json`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        },
+        body: JSON.stringify({ url, filenamePattern: "basic" }),
     });
 
-    if (!res.ok) throw new Error(`Zell API Error: ${res.status}`);
-
-    const json = await res.json();
-    if (!json || json.status !== true || !json.result) {
-        throw new Error("Invalid Zell Response");
+    if (!res.ok) throw new Error("Cobalt API Error");
+    
+    const data = await res.json();
+    if (!data || data.status === "error" || !data.url) {
+        throw new Error("Cobalt returned invalid data");
     }
 
-    const result = json.result;
-
-    // Music handling
-    let musicUrl = "";
-    if (typeof result.music === 'string') musicUrl = result.music;
-    else if (result.music?.url) musicUrl = result.music.url;
-    else if (result.music?.play_url) musicUrl = result.music.play_url;
-
-    // Video handling
-    let videoUrlResult = "";
-    if (Array.isArray(result.video)) videoUrlResult = result.video[0];
-    else if (typeof result.video === 'string') videoUrlResult = result.video;
-    else if (result.video?.url) videoUrlResult = result.video.url;
-
-    // Normalize Data
     return {
-        provider: "zell",
-        title: result.title || "No Title",
-        author: result.author?.username || result.author?.nickname || "TikTok User",
-        cover: result.thumbnail || "",
-        video: videoUrlResult,
-        music: musicUrl,
-        // Handle Images/Slideshows
-        images: Array.isArray(result.images) ? result.images : [],
-        type: (Array.isArray(result.images) && result.images.length > 0) ? "image" : "video"
+        provider: "cobalt",
+        title: data.filename || "TikTok Video",
+        author: "TikTok User", // Cobalt لا يعيد اسم المؤلف دائماً
+        cover: "", // Cobalt لا يعيد الصورة دائماً
+        video: data.url,
+        music: "",
+        images: [], // Cobalt يدعم الصور أحياناً في picker، نركز هنا على الفيديو
+        type: "video",
     };
 }
 
-async function fetchFromSanka(url) {
-    const baseUrl = "https://www.sankavollerei.com/download/tiktok";
-    // Key extracted from FusionTik source code
-    const apiKey = "planaai";
-
-    const apiUrl = `${baseUrl}?apikey=${apiKey}&url=${encodeURIComponent(url)}`;
-
-    const res = await fetch(apiUrl, {
-        headers: { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" }
-    });
-
-    if (!res.ok) throw new Error(`Sanka API Error: ${res.status}`);
-
+// ---- 2. Zell API ----
+async function fetchFromZell(url) {
+    const res = await fetch(
+        `https://apizell.web.id/download/tiktok?url=${encodeURIComponent(url)}`,
+        { headers: { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" } }
+    );
+    
+    if (!res.ok) throw new Error("Zell API Error");
     const json = await res.json();
-    if (!json || json.status !== true || !json.result) {
-        throw new Error("Invalid Sanka Response");
-    }
+    if (!json.status || !json.result) throw new Error("Zell failed");
 
-    const result = json.result;
+    const r = json.result;
+    return {
+        provider: "zell",
+        title: r.title || "",
+        author: r.author?.username || "User",
+        cover: r.thumbnail || "",
+        video: Array.isArray(r.video) ? r.video[0] : (r.video?.url || r.video),
+        music: r.music?.url || r.music || "",
+        images: r.images || [],
+        type: (r.images && r.images.length > 0) ? "image" : "video"
+    };
+}
 
-    // Music handling for Sanka
-    let musicUrl = result.music || "";
-    if (typeof musicUrl !== 'string' && result.music_info?.play) musicUrl = result.music_info.play;
+// ---- 3. Sanka API ----
+async function fetchFromSanka(url, apiKey) {
+    const res = await fetch(
+        `https://www.sankavollerei.com/download/tiktok?apikey=${apiKey}&url=${encodeURIComponent(url)}`,
+        { headers: { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" } }
+    );
+    
+    if (!res.ok) throw new Error("Sanka API Error");
+    const json = await res.json();
+    if (!json.status || !json.result) throw new Error("Sanka failed");
 
-    // Normalize Data to match Zell format
+    const r = json.result;
     return {
         provider: "sanka",
-        title: result.title || "No Title",
-        author: result.author?.unique_id || result.author?.nickname || "TikTok User",
-        cover: result.cover || result.thumbnail || "",
-        video: result.play || result.video || "",
-        music: musicUrl,
-        images: Array.isArray(result.images) ? result.images : [],
-        type: (Array.isArray(result.images) && result.images.length > 0) ? "image" : "video"
+        title: r.title || "",
+        author: r.author?.unique_id || "User",
+        cover: r.cover || r.thumbnail || "",
+        video: r.play || r.video || "",
+        music: r.music?.url || r.music || "", // Sanka أحياناً يعيد object
+        images: r.images || [],
+        type: (r.images && r.images.length > 0) ? "image" : "video"
     };
 }
