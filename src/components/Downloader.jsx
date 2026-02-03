@@ -38,6 +38,13 @@ export default function Downloader(props) {
 
     const handlePaste = async () => {
         try {
+            // Check for clipboard-read permission first
+            if (navigator.permissions && navigator.permissions.query) {
+                const status = await navigator.permissions.query({ name: 'clipboard-read' });
+                if (status.state === 'denied') {
+                    throw new Error('Permission Denied');
+                }
+            }
             const text = await navigator.clipboard.readText();
             if (text) setUrl(text);
         } catch (err) {
@@ -45,7 +52,6 @@ export default function Downloader(props) {
             const input = document.getElementById('url-input');
             if (input) {
                 input.focus();
-                // try to use document.execCommand('paste') though deprecated
                 try { document.execCommand('paste'); } catch (e) { }
             }
         }
@@ -62,8 +68,13 @@ export default function Downloader(props) {
         // Use server-side streaming proxy for immediate start and custom naming
         const downloadUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName)}`;
 
-        // Trigger download via navigation (safest cross-browser method for attachments)
-        window.location.href = downloadUrl;
+        // Trigger download via hidden <a> tag (smoother experience)
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.setAttribute('download', fileName);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
 
         // Open ad in new tab
         setTimeout(() => {
@@ -249,11 +260,22 @@ export default function Downloader(props) {
 
             <div id="result-area" role="region" aria-live="polite">
                 {loading && (
-                    <div className="lightning-loader-container">
-                        <div className="lightning-bolt-wrapper">
-                            <i className="fas fa-bolt lightning-icon"></i>
+                    <div className="skeleton-loading-card">
+                        <div className="skeleton-thumbnail"></div>
+                        <div className="skeleton-info">
+                            <div className="skeleton-line author"></div>
+                            <div className="skeleton-line title"></div>
+                            <div className="skeleton-buttons">
+                                <div className="skeleton-btn"></div>
+                                <div className="skeleton-btn"></div>
+                            </div>
                         </div>
-                        <p className="processing-text">{t('processing', "Processing...")}</p>
+                        <div className="lightning-loader-container">
+                            <div className="lightning-bolt-wrapper">
+                                <i className="fas fa-bolt lightning-icon"></i>
+                            </div>
+                            <p className="processing-text">{t('processing', "Processing...")}</p>
+                        </div>
                     </div>
                 )}
 
@@ -268,7 +290,14 @@ export default function Downloader(props) {
                     <div className="result-card">
                         {(result.cover || result.thumbnail) && mode !== 'slideshow' && (
                             <div className="result-thumbnail">
-                                <img src={result.cover || result.thumbnail} alt="Cover" loading="lazy" />
+                                <img
+                                    src={result.cover || result.thumbnail}
+                                    alt="Cover"
+                                    loading="lazy"
+                                    width="100%"
+                                    height="auto"
+                                    style={{ aspectRatio: '9/16', objectFit: 'cover' }}
+                                />
                                 <div className="play-overlay"><i className="fas fa-play"></i></div>
                             </div>
                         )}
@@ -343,7 +372,13 @@ export default function Downloader(props) {
                                     <div className="slideshow-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '10px' }}>
                                         {images.map((img, index) => (
                                             <div key={index} className="slide-item">
-                                                <img src={img} style={{ width: '100%', borderRadius: '8px', aspectRatio: '9/16', objectFit: 'cover' }} loading="lazy" />
+                                                <img
+                                                    src={img}
+                                                    style={{ width: '100%', borderRadius: '8px', aspectRatio: '9/16', objectFit: 'cover' }}
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="266"
+                                                />
                                                 <button className="btn-download btn-sm"
                                                     style={{ fontSize: '0.85rem', width: '100%', marginTop: '5px' }}
                                                     onClick={() => downloadFile(img, generateProName(result.author, 'jpg', `slide_${index + 1}`))}>

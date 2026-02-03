@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Downloader from "../components/Downloader.jsx";
+import ToolsTabs from "../components/tools/ToolsTabs.jsx";
 import { defaultLang } from "../i18n/ui";
 import { useTranslations, getTranslations } from "../utils/i18n";
 import AdBanner from "../components/AdBanner.astro";
@@ -30,14 +31,14 @@ const tools = [
         </h1>
         <p>{t("tools.hero.desc")}</p>
 
-        <Downloader
-            client:load
-            messages={translations.downloader}
-            placeholder={t("downloader.placeholder")}
-        />
+        <ToolsTabs client:load translations={translations} />
     </article>
 
     <AdBanner />
+
+    <div class="section-divider">
+        <h3>{t("blog.tools_heading") || "More Tools"}</h3>
+    </div>
 
     <div class="container features-grid">
         {
@@ -46,7 +47,7 @@ const tools = [
                     <div class="icon-box">
                         <i class={tool.icon} />
                     </div>
-                    <h3>{t(`tools.${tool.key}`)}</h3>
+                    <h3>{t(`tools.${tool.key}`) || tool.key}</h3>
                     <p>{t(`tools.${tool.key}_desc`)}</p>
                 </a>
             ))

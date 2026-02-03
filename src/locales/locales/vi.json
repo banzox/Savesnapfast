@@ -313,7 +313,71 @@
     },
     "btn": {
       "download": "Tải xuống",
-      "downloadPng": "Download PNG"
+      "downloadPng": "Tải PNG"
+    },
+    "tabs": {
+      "compressor": "Nén Ảnh",
+      "converter": "Đổi Đuôi Ảnh",
+      "qrcode": "Tạo Mã QR",
+      "engagement": "Tính Tương Tác",
+      "money": "Tính Thu Nhập",
+      "font": "Tạo Font Chữ",
+      "hashtag": "Tạo Hashtag"
+    },
+    "compressor": {
+      "title": "Công Cụ Nén Ảnh",
+      "desc": "Giảm dung lượng ảnh mà không giảm chất lượng.",
+      "quality": "Chất lượng",
+      "maxWidth": "Rộng Tối Đa (px)",
+      "btn": "Nén Ảnh"
+    },
+    "converter": {
+      "title": "Công Cụ Chuyển Đổi Ảnh",
+      "desc": "Chuyển đổi ảnh giữa các định dạng.",
+      "output": "Định dạng ra",
+      "quality": "Chất lượng",
+      "btn": "Chuyển Đổi"
+    },
+    "qrcode": {
+      "title": "Trình Tạo Mã QR",
+      "desc": "Tạo mã QR tùy chỉnh ngay lập tức.",
+      "input": "Văn bản hoặc URL",
+      "placeholder": "https://vidu.com",
+      "size": "Kích thước",
+      "color": "Màu sắc",
+      "btn": "Tạo QR"
+    },
+    "engagement": {
+      "title": "Tính Tỷ Lệ Tương Tác TikTok",
+      "desc": "Tính tỷ lệ tương tác dựa trên like, bình luận và chia sẻ.",
+      "followers": "Người theo dõi",
+      "likes": "Lượt thích",
+      "comments": "Bình luận",
+      "shares": "Chia sẻ",
+      "btn": "Tính Toán",
+      "result": "Tỷ Lệ Tương Tác",
+      "excellent": "Tuyệt vời! 🚀",
+      "good": "Tốt 👍",
+      "poor": "Cần cải thiện 📉"
+    },
+    "money": {
+      "title": "Tính Thu Nhập TikTok",
+      "desc": "Ước tính thu nhập từ lượt xem.",
+      "views": "Nhập số lượt xem",
+      "btn": "Ước Tính",
+      "result": "Thu Nhập Ước Tính"
+    },
+    "font": {
+      "title": "Tạo Font TikTok",
+      "desc": "Tạo font chữ đẹp cho bio của bạn.",
+      "placeholder": "Nhập văn bản...",
+      "copy": "Sao chép"
+    },
+    "hashtag": {
+      "title": "Tạo Hashtag TikTok",
+      "desc": "Tạo hashtag xu hướng cho video của bạn.",
+      "btn": "Tạo",
+      "copy": "Sao chép tất cả"
     }
   },
   "slideshow_page": {

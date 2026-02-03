@@ -34,6 +34,13 @@ const t = useTranslations(lang);
             >
         </div>
 
+        <!-- Tools Link (Separate Row) -->
+        <div class="footer-links" style="margin-top: -15px;">
+            <a href={`/${lang === "en" ? "tools" : lang + "/tools"}`}
+                >{t("nav.tools")}</a
+            >
+        </div>
+
         <p class="copyright">{t("footer.rights")}</p>
     </div>
 </footer>

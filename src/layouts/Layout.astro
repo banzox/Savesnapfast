@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Schema from "../components/Schema.astro";
 import Footer from "../components/Footer.astro";
 import NativeAd from "../components/NativeAd.astro";
+import SEOHead from "../components/SEOHead.astro";
 import { languages } from "../i18n/ui";
 import { ViewTransitions } from "astro:transitions";
 
@@ -150,6 +151,7 @@ const baseSlug = isLangPrefix
         }
 
         <Schema lang={lang} />
+        <SEOHead lang={lang} />
 
         <!-- Search Engine Optimization -->
         <meta

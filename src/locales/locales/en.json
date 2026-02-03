@@ -372,12 +372,20 @@
     "tabs": {
       "compressor": "Image Compressor",
       "converter": "Image Converter",
-      "qrcode": "QR Code Generator"
+      "qrcode": "QR Code Generator",
+      "engagement": "Engagement Calc",
+      "money": "Money Calc",
+      "font": "Font Generator",
+      "hashtag": "Hashtag Generator"
     },
     "dropzone": {
       "text": "Drag & drop your image here",
       "hint": "or click to browse (JPG, PNG, WebP - Max 15MB)",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
+    },
+    "btn": {
+      "download": "Download",
+      "downloadPng": "Download PNG"
     },
     "compressor": {
       "title": "Image Compressor",
@@ -503,6 +511,38 @@
         "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
       }
     },
+    "engagement": {
+      "title": "TikTok Engagement Rate Calculator",
+      "desc": "Calculate engagement rate based on likes, comments, and shares.",
+      "followers": "Followers",
+      "likes": "Likes",
+      "comments": "Comments",
+      "shares": "Shares",
+      "btn": "Calculate",
+      "result": "Engagement Rate",
+      "excellent": "Excellent! 🚀",
+      "good": "Good 👍",
+      "poor": "Needs Improvement 📉"
+    },
+    "money": {
+      "title": "TikTok Money Calculator",
+      "desc": "Estimate potential earnings from views.",
+      "views": "Enter Video Views",
+      "btn": "Estimate Earnings",
+      "result": "Estimated Earnings"
+    },
+    "font": {
+      "title": "TikTok Font Generator",
+      "desc": "Generate stylish fonts for your bio and captions.",
+      "placeholder": "Type your text here...",
+      "copy": "Copy"
+    },
+    "hashtag": {
+      "title": "TikTok Hashtag Generator",
+      "desc": "Generate trending hashtags for your videos.",
+      "btn": "Generate",
+      "copy": "Copy All"
+    },
     "progress": {
       "compressing": "Compressing image...",
       "converting": "Converting image..."
@@ -525,10 +565,6 @@
       "after": "After",
       "original": "Original",
       "converted": "Converted"
-    },
-    "btn": {
-      "download": "Download",
-      "downloadPng": "Download PNG"
     }
   },
   "blog": {

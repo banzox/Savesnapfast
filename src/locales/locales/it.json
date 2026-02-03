@@ -36,10 +36,10 @@
     "download_video": "Scarica Video",
     "download_audio": "Scarica MP3",
     "hd_quality": "Senza filigrana",
-    "download_nwm": "Scarica senza filigrana",
-    "download_hd": "Scarica HD",
-    "download_story_vid": "Scarica Storia (Video)",
-    "download_story_img": "Scarica Storia (Immagine)",
+    "download_nwm": "Download No Watermark",
+    "download_hd": "Download HD",
+    "download_story_vid": "Download Story (Video)",
+    "download_story_img": "Download Story (Image)",
     "error_busy": "Servizio occupato, riprova più tardi.",
     "download_zip": "Scarica Tutto (ZIP)",
     "creating_zip": "Creazione ZIP...",
@@ -91,7 +91,7 @@
     },
     "dmca": {
       "title": "Politica DMCA",
-      "content": "SaveTikFast rispetta i diritti di proprietà intellettuale altrui.\n\nOperiamo come fornitore di servizi tecnici e non ospitiamo contenuti protetti da copyright. Tutti i video sono serviti direttamente da server di terze parti (TikTok).\n\nSe ritieni che la tua opera protetta da copyright sia stata mostrata sul nostro servizio senza autorizzazione, invia una notifica DMCA formale a: support@savetik-fast.xyz."
+      "content": "SaveTikFast rispetta i diritti di proprietà intellettuale altrui.\n\nOperamos come fornitore di servizi tecnici e non ospitiamo contenuti protetti da copyright. Tutti i video sono serviti direttamente da server di terze parti (TikTok).\n\nSi ritieni che la tua opera protetta da copyright sia stata mostrata sul nostro servizio senza autorizzazione, invia una notifica DMCA formale a: support@savetik-fast.xyz."
     },
     "disclaimer": {
       "title": "Disclaimer",
@@ -111,7 +111,7 @@
       "desc": "Il downloader di video TikTok più veloce online. Salva qualsiasi video TikTok in soli 3 secondi su iPhone, Android, Samsung, Huawei, iPad, PC o Mac. I nostri server sono ottimizzati per la velocità, rendendoci più veloci di SaveFrom e MusicallyDown."
     },
     "quality": {
-      "title": "Qualità HD &amp; 4K",
+      "title": "Qualità HD & 4K",
       "desc": "Scarica video TikTok nella massima qualità disponibile - 720p, 1080p Full HD, 2K e persino 4K quando disponibile. Preserviamo la qualità video originale senza compressione, a differenza di altri downloader TikTok."
     },
     "device": {
@@ -123,7 +123,7 @@
       "desc": "Download illimitati di video TikTok senza costi nascosti, senza registrazione richiesta e senza limiti giornalieri. SaveTikFast è completamente gratuito e rimarrà sempre gratuito per tutti gli utenti in tutto il mondo."
     },
     "secure": {
-      "title": "Privato &amp; Sicuro",
+      "title": "Privato & Sicuro",
       "desc": "La tua privacy è importante. Non memorizziamo i tuoi dati, non richiediamo login e non tracciamo i tuoi download. Download di video TikTok sicuri e anonimi con crittografia SSL."
     },
     "browser": {
@@ -140,34 +140,42 @@
     "step1": "Copia il link del video TikTok che desideri salvare.",
     "step2": "Incolla il link nella casella di download in alto in questa pagina.",
     "step3": "Fai clic sul pulsante 'Download' e il tuo video verrà salvato immediatamente.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Copia Link",
+    "step2_title": "Incolla URL",
+    "step3_title": "Scarica"
   },
   "tools": {
     "backToDownloader": "Torna al downloader",
     "meta": {
       "title": "Strumenti Immagini e QR",
-      "description": "Comprimi immagini, converti formati e genera codici QR."
+      "description": "Comprimi immagini, converti formati e genera codici QR gratis."
     },
     "hero": {
       "title": "Strumenti Immagini e QR",
-      "desc": "Tutto elaborato localmente nel tuo browser."
+      "desc": "Elaborazione locale 100% privata nel tuo browser."
     },
     "tabs": {
       "compressor": "Compressore",
       "converter": "Convertitore",
-      "qrcode": "Generatore QR"
+      "qrcode": "Generatore QR",
+      "engagement": "Calc. Engagement",
+      "money": "Calc. Guadagni",
+      "font": "Gen. Font",
+      "hashtag": "Gen. Hashtag"
     },
     "dropzone": {
-      "text": "Trascina l'immagine qui",
+      "text": "Trascina la tua immagine qui",
       "hint": "o clicca per selezionare",
       "hint_convert": "or click to browse (JPG, PNG, WebP, GIF, BMP)"
     },
+    "btn": {
+      "download": "Scarica",
+      "downloadPng": "Scarica PNG"
+    },
     "compressor": {
-      "title": "Image Compressor",
+      "title": "Compressore Immagini",
       "desc": "Reduce image file size without losing quality. Supports JPG, PNG, and WebP up to 15MB.",
-      "quality": "Compression Quality",
+      "quality": "Quality",
       "maxWidth": "Max Width (px)",
       "btn": "Compress Image",
       "howto": {
@@ -206,7 +214,7 @@
       }
     },
     "converter": {
-      "title": "Image Format Converter",
+      "title": "Convertitore Immagini",
       "desc": "Convert images between JPG, PNG, and WebP formats instantly in your browser.",
       "output": "Output Format",
       "quality": "Output Quality",
@@ -245,7 +253,7 @@
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
+      "title": "Generatore QR",
       "desc": "Generate high-resolution QR codes for URLs, text, or any content instantly.",
       "input": "Text or URL",
       "placeholder": "https://example.com or any text",
@@ -288,32 +296,60 @@
         "a3": "No! QR codes generated here are static and never expire. They contain the data directly."
       }
     },
+    "engagement": {
+      "title": "Calcolatore Engagement",
+      "desc": "Calcola il tasso di engagement in base a like, commenti e condivisioni.",
+      "followers": "Follower",
+      "likes": "Like",
+      "comments": "Commenti",
+      "shares": "Condivisioni",
+      "btn": "Calcola",
+      "result": "Tasso di Engagement",
+      "excellent": "Eccellente! 🚀",
+      "good": "Buono 👍",
+      "poor": "Scarso 📉"
+    },
+    "money": {
+      "title": "Calcolatore Guadagni",
+      "desc": "Stima i potenziali guadagni dalle visualizzazioni.",
+      "views": "Inserisci visualizzazioni video",
+      "btn": "Stima Guadagni",
+      "result": "Guadagni Stimati"
+    },
+    "font": {
+      "title": "Generatore di Font",
+      "desc": "Genera font eleganti per la tua bio.",
+      "placeholder": "Scrivi il tuo testo qui...",
+      "copy": "Copia"
+    },
+    "hashtag": {
+      "title": "Generatore di Hashtag",
+      "desc": "Genera hashtag di tendenza per i tuoi video.",
+      "btn": "Genera",
+      "copy": "Copia Tutto"
+    },
     "progress": {
-      "compressing": "Compressing image...",
-      "converting": "Converting image..."
+      "compressing": "Compressione immagine...",
+      "converting": "Conversione immagine..."
     },
     "result": {
-      "success": "Compression Complete!",
-      "converted": "Conversion Complete!",
-      "qrReady": "Your QR Code is Ready!"
+      "success": "Compressione Completata!",
+      "converted": "Conversione Completata!",
+      "qrReady": "Il tuo QR Code è pronto!"
     },
     "stats": {
-      "original": "Original Size",
-      "compressed": "Compressed Size",
-      "saved": "Saved",
-      "originalFormat": "Original Format",
-      "newFormat": "New Format",
-      "newSize": "New Size"
+      "original": "Dimensioni Originali",
+      "compressed": "Dimensioni Compresse",
+      "saved": "Risparmiato",
+      "originalFormat": "Formato Originale",
+      "newFormat": "Nuovo Formato",
+      "newSize": "Nuova Dimensione"
     },
     "preview": {
-      "before": "Before",
-      "after": "After",
-      "original": "Original",
-      "converted": "Converted"
-    },
-    "btn": {
-      "download": "Scarica",
-      "downloadPng": "Download PNG"
+      "before": "Prima",
+      "after": "Dopo",
+      "original": "Originale",
+      "converted": "Convertito"
     }
   },
   "slideshow_page": {
@@ -421,11 +457,11 @@
         "desc": "Preserva la qualità audio TikTok originale senza compressione o perdita di qualità. Ottieni esattamente lo stesso suono del video originale, incluse canzoni di tendenza e audio virale."
       },
       "unlimited": {
-        "title": "Gratis &amp; Illimitato",
+        "title": "Gratis & Illimitato",
         "desc": "Nessun limite alle conversioni TikTok in MP3. Converti tutti i video TikTok in audio che desideri - completamente gratuito, senza registrazione, senza restrizioni giornaliere."
       },
       "secure": {
-        "title": "Sicuro &amp; Privato",
+        "title": "Sicuro & Privato",
         "desc": "Conversione MP3 sicura senza raccolta di dati. Non memorizziamo i tuoi file convertiti né tracciamo la tua attività. La tua privacy è protetta al 100%."
       },
       "nobapp": {
@@ -456,7 +492,7 @@
       "a7": "Sì, SaveTikFast estrae l'audio completo dai video TikTok - inclusi musica di sottofondo, voce, effetti sonori e tutti gli elementi audio. L'audio di lunghezza completa viene preservato esattamente come suona nel video TikTok originale. Perfetto per salvare canzoni di tendenza, suoni virali e il tuo audio TikTok preferito.",
       "q8": "Il convertitore MP3 SaveTikFast è sicuro?",
       "a8": "Completamente sicuro. Il convertitore MP3 SaveTikFast utilizza crittografia SSL sicura, non memorizza i tuoi dati o file convertiti, non richiede login e non installa nulla sul tuo dispositivo. Abbiamo convertito in sicurezza milioni di video TikTok in MP3 per utenti in tutto il mondo. La tua privacy e sicurezza sono la nostra priorità.",
-      "q9": "Posso convertire TikTok in MP3 su Android?",
+      "q9": "Posso convertire TikTok in MP3 on Android?",
       "a9": "Sì, la conversione TikTok in MP3 funziona perfettamente su tutti i dispositivi Android. Questo include Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus e tutti gli altri telefoni e tablet Android. Basta usare il browser Chrome, Firefox o Samsung Internet per accedere a SaveTikFast e convertire qualsiasi TikTok in MP3 istantaneamente.",
       "q10": "Perché SaveTikFast è il miglior convertitore TikTok in MP3?",
       "a10": "SaveTikFast offre la migliore conversione MP3 TikTok grazie alla nostra velocità superiore (2 secondi), la massima qualità audio (320kbps), supporto universale per dispositivi e servizio completamente gratuito. A differenza di SSSTik, SnapTik o altri convertitori, forniamo risultati costanti di alta qualità senza pubblicità fastidiose o limiti di download. Milioni di utenti si fidano di SaveTikFast per le loro esigenze audio TikTok."
@@ -515,7 +551,7 @@
       "q1": "Come scaricare le storie TikTok?",
       "a1": "Per scaricare le storie TikTok, prima copia il link della storia da TikTok (tocca Condividi sulla storia). Quindi visita SaveTikFast, incolla il link nel nostro downloader di storie e fai clic su scarica. La storia verrà salvata sul tuo dispositivo in qualità HD originale. Funziona su iPhone, Android, Samsung, iPad, Mac, PC utilizzando Chrome, Safari, Firefox o qualsiasi browser. Salva le storie prima che scompaiano dopo 24 ore.",
       "q2": "Posso scaricare le storie TikTok in modo anonimo?",
-      "a2": "Sì, SaveTikFast consente download di storie TikTok completamente anonimi. Il creator non riceverà alcuna notifica né saprà che hai scaricato la sua storia. La tua identità rimane privata. Questo è perfetto per salvare contenuti in modo discreto senza interagire con l'account del creator.",
+      "a2": "Sì, SaveTikFast consente download di storie TikTok completamente anonimi. Il creator non riceverà alcuna notifica né saprà che hai scaricato la sua storia. La tua identity rimane privata. Questo è perfetto per salvare contenuti in modo discreto senza interagire con l'account del creator.",
       "q3": "Le storie TikTok scadono dopo il download?",
       "a3": "No, una volta scaricata una storia TikTok con SaveTikFast, viene salvata permanentemente sul tuo dispositivo. Anche se le storie TikTok scompaiono dopo 24 ore sulla piattaforma, la tua copia scaricata rimane per sempre. Salva le storie importanti prima che scadano così non perderai mai l'accesso al contenuto.",
       "q4": "Quale qualità hanno le storie TikTok scaricate?",

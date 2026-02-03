@@ -1,0 +1,33 @@
+---
+interface Props {
+    lang?: string;
+}
+
+const { lang = "en" } = Astro.props;
+
+// Schema for SoftwareApplication (Specific for SEO Task 3)
+const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "SaveTikFast TikTok Downloader",
+    operatingSystem: "Windows, macOS, Android, iOS",
+    applicationCategory: "MultimediaApplication",
+    aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        ratingCount: "18750",
+    },
+    offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+    },
+    description:
+        "Free online TikTok Video Downloader to download TikTok videos without watermark in HD/4K quality. Save as MP4 or MP3.",
+    applicationSubCategory: "TikTok Video Downloader",
+    permissions: "Internet access, Storage access",
+    softwareVersion: "2026.1",
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
