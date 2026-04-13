@@ -32,7 +32,10 @@ function shuffle(arr: any[]) {
 // 1. TikWM (Primary Master Node)
 async function fetchTikWM(url: string) {
     const res = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(url)}`, {
-        headers: { "Accept": "application/json" }
+        headers: { 
+            "Accept": "application/json",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        }
     });
     if (!res.ok) throw new Error("TikWM API Error");
     
@@ -84,6 +87,29 @@ async function fetchCobalt(baseUrl: string, url: string) {
     };
 }
 
+// 3. Zell API
+async function fetchZell(url: string) {
+    const res = await fetch(`https://apizell.web.id/download/tiktok?url=${encodeURIComponent(url)}`, {
+        headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0" }
+    });
+    
+    if (!res.ok) throw new Error("Zell API Error");
+    const json = await res.json();
+    if (!json.status || !json.result) throw new Error("Zell failed");
+
+    const r = json.result;
+    return {
+        provider: "zell",
+        title: r.title || "TikTok Video",
+        author: r.author?.nickname || r.author?.username || "User",
+        cover: r.thumbnail || "",
+        video: Array.isArray(r.video) ? r.video[0] : (r.video?.url || r.video),
+        music: r.music?.url || r.music || "",
+        images: r.images || [],
+        type: (r.images && r.images.length > 0) ? "image" : "video"
+    };
+}
+
 // الدالة الرئيسية للمسار
 export const POST: APIRoute = async ({ request }) => {
     if (request.method === "OPTIONS") {
@@ -100,6 +126,7 @@ export const POST: APIRoute = async ({ request }) => {
 
         // بناء الـ 5 مصادر
         const providers = [
+            () => fetchZell(videoUrl), // Zell fallback returns full author
             () => fetchTikWM(videoUrl), // الأساسي: الأقوى والأدق (يعطيك اسم المؤلف الفعلي)
             ...shuffle([ // الاحتياطيات
                 () => fetchCobalt("https://alpha.wolfy.love", videoUrl),
@@ -109,7 +136,7 @@ export const POST: APIRoute = async ({ request }) => {
             ])
         ];
 
-        let lastError = null;
+        let errors: any[] = [];
 
         // حلقة التجربة (Failover): إذا فشل الأول، ينتقل للثاني مباشرة بشفافية تامة
         for (const provider of providers) {
@@ -123,14 +150,15 @@ export const POST: APIRoute = async ({ request }) => {
                         "Cache-Control": "public, max-age=3600"
                     });
                 }
+                errors.push("Invalid data: " + JSON.stringify(data));
             } catch (e: any) {
-                lastError = e;
+                errors.push(e.message);
             }
         }
 
         // إذا لا قدر الله تعطلت الـ 5 سيرفرات (شبه مستحيل)
         return jsonResponse(
-            { error: "جميع سيرفرات التحميل مشغولة، جرب مرة أخرى." },
+            { error: "جميع سيرفرات التحميل مشغولة، جرب مرة أخرى.", details: errors },
             503
         );
 
