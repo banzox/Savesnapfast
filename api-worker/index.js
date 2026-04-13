@@ -1,5 +1,6 @@
 // ================================
-// SavetikFast Ultimate Worker PRO (7 Sources)
+// SavetikFast Ultimate Worker PRO (8 Sources)
+// RapidAPI (Primary) + 7 Free Fallbacks
 // ================================
 
 const CORS_HEADERS = {
@@ -77,13 +78,20 @@ export default {
             return response;
         }
 
-        // 5. المصادر (The 7 Providers)
-        // يتم استخدام خلط عشوائي (Shuffle) لتوزيع الضغط وتجنب الحظر
+        // 5. المصادر (8 Providers: 1 Primary + 7 Fallback)
+        // RapidAPI يُجرّب أولاً (بيانات أدق: اسم المؤلف الحقيقي + الصورة)
+        // ثم المصادر المجانية كاحتياط مع خلط عشوائي (Shuffle)
         
-        // مفتاح Sanka (نستخدم المفتاح من البيئة أو المفتاح الموجود في كودك القديم كاحتياطي)
-        const sankaKey = env.SANKA_KEY || "planaai"; 
+        const sankaKey = env.SANKA_KEY || "planaai";
 
-        const providers = shuffle([
+        // المصدر الأساسي: RapidAPI (يُجرّب أولاً إذا المفتاح موجود)
+        const primaryProviders = [];
+        if (env.RAPIDAPI_KEY) {
+            primaryProviders.push(() => fetchFromRapidAPI(videoUrl, env.RAPIDAPI_KEY));
+        }
+
+        // المصادر الاحتياطية (مجانية، مع خلط عشوائي)
+        const fallbackProviders = shuffle([
             // 5 سيرفرات Cobalt مختلفة وقوية
             () => fetchFromCobalt("https://alpha.wolfy.love", videoUrl),
             () => fetchFromCobalt("https://melon.clxxped.lol", videoUrl),
@@ -95,6 +103,9 @@ export default {
             () => fetchFromZell(videoUrl),
             () => fetchFromSanka(videoUrl, sankaKey),
         ]);
+
+        // دمج: الأساسي أولاً، ثم الاحتياطي
+        const providers = [...primaryProviders, ...fallbackProviders];
 
         let lastError = null;
 
@@ -119,7 +130,7 @@ export default {
             }
         }
 
-        // إذا فشلت جميع الـ 7 مصادر
+        // إذا فشلت جميع الـ 8 مصادر
         return json(
             { error: "Server is busy, please try again.", details: lastError?.message },
             503
@@ -226,5 +237,38 @@ async function fetchFromSanka(url, apiKey) {
         music: r.music?.url || r.music || "", // Sanka أحياناً يعيد object
         images: r.images || [],
         type: (r.images && r.images.length > 0) ? "image" : "video"
+    };
+}
+
+// ---- 4. RapidAPI TikTok Data Scraper (Primary - المصدر الأساسي) ----
+// يُعطي بيانات أدق: اسم المؤلف الحقيقي، الصورة الرمزية، الغلاف
+// يحتاج مفتاح: أضف RAPIDAPI_KEY في Cloudflare Variables
+async function fetchFromRapidAPI(url, apiKey) {
+    const res = await fetch(
+        `https://tiktok-data-srapper.p.rapidapi.com/api/v1/tiktok/video?url=${encodeURIComponent(url)}`,
+        {
+            method: 'GET',
+            headers: {
+                'x-rapidapi-key': apiKey,
+                'x-rapidapi-host': 'tiktok-data-srapper.p.rapidapi.com'
+            }
+        }
+    );
+
+    if (!res.ok) throw new Error(`RapidAPI Error: ${res.status}`);
+    
+    const json = await res.json();
+    if (!json.data) throw new Error("RapidAPI returned no data");
+
+    const v = json.data;
+    return {
+        provider: "rapidapi",
+        title: v.title || "TikTok Video",
+        author: v.author?.nickname || v.author?.unique_id || "TikTok User",
+        cover: v.cover || "",
+        video: v.play || "",
+        music: (typeof v.music === 'string') ? v.music : (v.music?.url || ""),
+        images: v.images || [],
+        type: (v.images && v.images.length > 0) ? "image" : "video"
     };
 }
