@@ -254,7 +254,7 @@ export default function Downloader(props) {
             setTimeout(() => {
                 const el = document.getElementById('result-area');
                 if (el) {
-                    const offset = el.getBoundingClientRect().top + window.scrollY - 100;
+                    const offset = el.getBoundingClientRect().top + window.scrollY - 20; // Changed from -100 to -20
                     window.scrollTo({ top: offset, behavior: "smooth" });
                 }
             }, 500);
