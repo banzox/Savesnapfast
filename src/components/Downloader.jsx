@@ -164,19 +164,44 @@ export default function Downloader(props) {
         setResult(null);
 
         try {
-            // Updated to use POST request as per new API requirements
-            const response = await fetch(WORKER_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ url: url })
-            });
+            let res = null;
 
-            const data = await response.json();
+            // 1. Client-Side Fetch (Bypasses Cloudflare Server IP blocking perfectly!)
+            try {
+                const tmRes = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(url)}`, {
+                    headers: { "Accept": "application/json" }
+                });
+                const tmJson = await tmRes.json();
+                
+                if (tmJson.code === 0 && tmJson.data) {
+                    const v = tmJson.data;
+                    res = {
+                        provider: "tikwm_client",
+                        title: v.title || v.desc || "TikTok Video",
+                        author: v.author?.unique_id || v.author?.nickname || "User",
+                        cover: v.cover || v.origin_cover || "",
+                        video: v.play || v.wmplay || "", 
+                        music: typeof v.music === 'string' ? v.music : (v.music?.play_url || v.music_info?.play || ""),
+                        images: v.images || [],
+                        type: (v.images && v.images.length > 0) ? "image" : "video"
+                    };
+                }
+            } catch (e) {
+                console.warn("Client fetch failed, falling back to server...", e);
+            }
 
-            if (data.error) throw new Error(data.error);
+            // 2. Server-Side Fallback (/api/tiktok) -> RapidAPI + Fallbacks
+            if (!res || (!res.video && (!res.images || res.images.length === 0))) {
+                const response = await fetch(WORKER_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: url })
+                });
 
-            // New API returns data directly (video, cover, author, etc.)
-            const res = data;
+                const data = await response.json();
+                if (data.error) throw new Error(data.error);
+                res = data;
+            }
 
             // STRICT MODE VALIDATION
             const validation = validateResultType(res, mode);
@@ -196,7 +221,6 @@ export default function Downloader(props) {
 
         } catch (err) {
             let msg = err.message;
-            // Map some common API errors to user friendly text if needed
             if (msg === 'Failed to fetch') msg = t('error_invalid_link', "Invalid Link or Network Error.");
             setError(msg);
         } finally {
