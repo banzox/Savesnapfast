@@ -110,8 +110,24 @@ async function fetchZell(url: string) {
     };
 }
 
+// 4. RapidAPI (Metadata Only)
+async function fetchRapidAPI(url: string) {
+    const res = await fetch(`https://tiktok-data-srapper.p.rapidapi.com/api/v1/tiktok/video?url=${encodeURIComponent(url)}`, {
+        method: "GET",
+        headers: {
+            "x-rapidapi-key": process.env.RAPIDAPI_KEY || "3e57b80e46mshe510b59abca6429p1875adjsne7df30921005",
+            "x-rapidapi-host": "tiktok-data-srapper.p.rapidapi.com",
+            "Content-Type": "application/json"
+        }
+    });
+    if (!res.ok) throw new Error("RapidAPI Error");
+    const json = await res.json();
+    if (!json.author_name) throw new Error("RapidAPI No Data");
+    return json;
+}
+
 // الدالة الرئيسية للمسار
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
     if (request.method === "OPTIONS") {
         return new Response(null, { headers: CORS_HEADERS });
     }
@@ -124,11 +140,22 @@ export const POST: APIRoute = async ({ request }) => {
             return jsonResponse({ error: "Invalid TikTok URL" }, 400);
         }
 
-        // بناء الـ 5 مصادر
+        let errors: any[] = [];
+        let finalData: any = null;
+
+        // 1. محاولة جلب الايدي والاسم من RapidAPI بناء على طلبك
+        let rapidMetadata: any = null;
+        try {
+            rapidMetadata = await fetchRapidAPI(videoUrl);
+        } catch (e: any) {
+            errors.push("RapidAPI: " + e.message);
+        }
+
+        // بناء الـ 5 مصادر لجلب رابط الفيديو (الـ RapidAPI ما يعطي فيديو)
         const providers = [
-            () => fetchZell(videoUrl), // Zell fallback returns full author
-            () => fetchTikWM(videoUrl), // الأساسي: الأقوى والأدق (يعطيك اسم المؤلف الفعلي)
-            ...shuffle([ // الاحتياطيات
+            () => fetchZell(videoUrl),
+            () => fetchTikWM(videoUrl),
+            ...shuffle([
                 () => fetchCobalt("https://alpha.wolfy.love", videoUrl),
                 () => fetchCobalt("https://melon.clxxped.lol", videoUrl),
                 () => fetchCobalt("https://cessi-c.meowing.de", videoUrl),
@@ -136,27 +163,33 @@ export const POST: APIRoute = async ({ request }) => {
             ])
         ];
 
-        let errors: any[] = [];
-
-        // حلقة التجربة (Failover): إذا فشل الأول، ينتقل للثاني مباشرة بشفافية تامة
+        // حلقة التجربة للحصول على رابط الفيديو الصافي
         for (const provider of providers) {
             try {
                 const data = await provider();
-                
-                // التأكد أن البيانات حقيقية وكاملة
                 if (data && (data.video || (data.images && data.images.length > 0))) {
-                    // تم العثور على النتيجة بنجاح!
-                    return jsonResponse(data, 200, {
-                        "Cache-Control": "public, max-age=3600"
-                    });
+                    finalData = data;
+                    break;
                 }
-                errors.push("Invalid data: " + JSON.stringify(data));
             } catch (e: any) {
-                errors.push(e.message);
+                errors.push("Provider: " + e.message);
             }
         }
 
-        // إذا لا قدر الله تعطلت الـ 5 سيرفرات (شبه مستحيل)
+        // دمج النتائج (RapidAPI للاسم + Providers للفيديو)
+        if (finalData) {
+            if (rapidMetadata) {
+                finalData.author = rapidMetadata.author_name || finalData.author;
+                finalData.title = rapidMetadata.title || finalData.title;
+                if (!finalData.cover) finalData.cover = rapidMetadata.thumbnail_url;
+                finalData.provider = "RapidAPI + " + finalData.provider;
+            }
+
+            return jsonResponse(finalData, 200, {
+                "Cache-Control": "public, max-age=3600"
+            });
+        }
+
         return jsonResponse(
             { error: "جميع سيرفرات التحميل مشغولة، جرب مرة أخرى.", details: errors },
             503
