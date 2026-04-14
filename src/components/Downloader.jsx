@@ -153,7 +153,6 @@ export default function Downloader(props) {
     const handleDownload = async () => {
         if (!url) return;
 
-        // Basic URL Validation
         if (!url.includes('tiktok.com')) {
             setError(t('error_invalid_link', "Invalid Link. Please check and try again."));
             return;
@@ -165,19 +164,86 @@ export default function Downloader(props) {
 
         try {
             let res = null;
+            let rapidApiData = null;
 
-            // 1. Server-Side Fetch (/api/tiktok) -> RapidAPI Only
-            const response = await fetch(WORKER_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ url: url })
-            });
+            // 1. طلب بيانات الاسم والصورة من RapidAPI عبر السيرفر الداخلي
+            try {
+                const rapidRes = await fetch(WORKER_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: url })
+                });
+                const rData = await rapidRes.json();
+                if (!rData.error && rData.author) {
+                    rapidApiData = rData;
+                }
+            } catch (e) {
+                console.warn("RapidAPI metadata failed", e);
+            }
 
-            const data = await response.json();
-            if (data.error) throw new Error(data.error);
-            res = data;
+            // 2. طلب روابط التحميل (الفيديو والصوت) مباشرة من جهاز المستخدم (تخطي حظر كلاودفلير)
+            try {
+                const tmRes = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(url)}`, {
+                    headers: { "Accept": "application/json" }
+                });
+                const tmJson = await tmRes.json();
+                
+                if (tmJson.code === 0 && tmJson.data) {
+                    const v = tmJson.data;
+                    res = {
+                        provider: "tikwm_client",
+                        title: v.title || v.desc || "TikTok Video",
+                        author: v.author?.unique_id || v.author?.nickname || "User",
+                        cover: v.cover || v.origin_cover || "",
+                        video: v.play || v.wmplay || "", 
+                        music: typeof v.music === 'string' ? v.music : (v.music?.play_url || v.music_info?.play || ""),
+                        images: v.images || [],
+                        type: (v.images && v.images.length > 0) ? "image" : "video"
+                    };
+                }
+            } catch (e) {
+                console.warn("TikWM video fetch failed", e);
+            }
 
-            // STRICT MODE VALIDATION
+            // 3. كود الطوارئ (لو فشل TikWM) يجرب Zell
+            if (!res || !res.video) {
+                try {
+                    const zellRes = await fetch(`https://apizell.web.id/download/tiktok?url=${encodeURIComponent(url)}`, {
+                        headers: { "Accept": "application/json" }
+                    });
+                    const zJson = await zellRes.json();
+                    
+                    if (zJson.status && zJson.result) {
+                        const r = zJson.result;
+                        res = {
+                            provider: "zell_client",
+                            title: r.title || "TikTok Video",
+                            author: r.author?.nickname || r.author?.username || "User",
+                            cover: r.thumbnail || "",
+                            video: Array.isArray(r.video) ? r.video[0] : (r.video?.url || r.video),
+                            music: r.music?.url || r.music || "",
+                            images: r.images || [],
+                            type: (r.images && r.images.length > 0) ? "image" : "video"
+                        };
+                    }
+                } catch (e) {
+                    console.warn("Zell video fetch failed", e);
+                }
+            }
+
+            // 4. دمج بيانات RapidAPI (الاسم المؤكد) مع السيرفرات السابقة
+            if (res) {
+                if (rapidApiData) {
+                    res.author = rapidApiData.author || res.author;
+                    res.title = rapidApiData.title || res.title;
+                    if (!res.cover) res.cover = rapidApiData.cover;
+                    res.provider = `RapidAPI + ${res.provider}`;
+                }
+            } else {
+                throw new Error("Unable to fetch video links. Please try again.");
+            }
+
+            // التحقق النهائي من نوع المحتوى
             const validation = validateResultType(res, mode);
             if (!validation.valid) {
                 throw new Error(validation.error);
