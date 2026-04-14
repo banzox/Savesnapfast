@@ -185,12 +185,12 @@ if (!pagePrefix) {
                     placeholder={pagePrefix
                         ? t(`${pagePrefix}.placeholder`)
                         : t("downloader.placeholder")}
-                />
+                >
+                    {showAd && <AdBanner />}
+                </Downloader>
             </div>
         </article>
     </div>
-
-    {showAd && <AdBanner />}
 
     <section class="container features-grid">
         {

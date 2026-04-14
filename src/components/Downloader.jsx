@@ -252,7 +252,7 @@ export default function Downloader(props) {
             setResult(res);
 
             setTimeout(() => {
-                const el = document.getElementById('result-area');
+                const el = document.getElementById('scroll-target');
                 if (el) {
                     const offset = el.getBoundingClientRect().top + window.scrollY - 80;
                     window.scrollTo({ top: offset, behavior: "smooth" });
@@ -322,7 +322,15 @@ export default function Downloader(props) {
                 </button>
             </div>
 
-            <div id="result-area" role="region" aria-live="polite">
+            <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
+                {/* الإعلان سيظهر هنا، وسينزل الموقع للتمركز عليه لضمان رؤيته قبل النتيجة */}
+                {props.children && (
+                    <div className="ad-container-top" style={{ width: '100%', marginBottom: '20px' }}>
+                        {props.children}
+                    </div>
+                )}
+
+                <div id="result-area" role="region" aria-live="polite">
                 {loading && (
                     <div className="skeleton-loading-card">
                         <div className="skeleton-thumbnail"></div>
@@ -456,6 +464,7 @@ export default function Downloader(props) {
                         </div>
                     </div>
                 )}
+                </div>
             </div>
         </div>
     );
