@@ -6,7 +6,7 @@ const { saveAs } = fileSaver;
 const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
-const SMART_LINK = "https://www.effectivegatecpm.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
+const SMART_LINK = "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
 export default function Downloader(props) {
     const { messages = {}, mode = 'video' } = props;
