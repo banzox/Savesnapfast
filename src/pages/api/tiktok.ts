@@ -36,6 +36,26 @@ export const POST: APIRoute = async ({ request }) => {
             return jsonResponse({ error: "Invalid TikTok URL" }, 400);
         }
 
+        // ==========================================
+        // EDGE CACHE: Check if we already have this video
+        // ==========================================
+        const edgeCache = (globalThis as any).caches?.default;
+        const cacheKeyUrl = new URL(request.url);
+        cacheKeyUrl.pathname = "/_edge_cache/tiktok"; // Virtual cache path
+        cacheKeyUrl.searchParams.set("url", videoUrl);
+        
+        const cacheRequest = new Request(cacheKeyUrl.toString(), { method: "GET" });
+
+        if (edgeCache) {
+            const cachedResponse = await edgeCache.match(cacheRequest);
+            if (cachedResponse) {
+                // Add a header to prove it came from Edge Cache
+                const cachedResObj = new Response(cachedResponse.body, cachedResponse);
+                cachedResObj.headers.set("X-Cache", "HIT-EDGE");
+                return cachedResObj;
+            }
+        }
+
         // استخدام RapidAPI المرفوع من قبلك بالحرف الواحد
         const res = await fetch(`https://tiktok-data-srapper.p.rapidapi.com/api/v1/tiktok/video?url=${encodeURIComponent(videoUrl)}`, {
             method: "GET",
@@ -62,16 +82,22 @@ export const POST: APIRoute = async ({ request }) => {
             title: rapidMetadata.title || "TikTok Video",
             author: rapidMetadata.author_name || "User",
             cover: rapidMetadata.thumbnail_url || "",
-            // السيرفر هذا ما يرجع روابط فيديو نهائياً (فقط اسم وصورة وعنوان)
             video: "", 
             music: "",
             images: [],
             type: "video"
         };
 
-        return jsonResponse(finalData, 200, {
-            "Cache-Control": "public, max-age=3600"
+        const finalResponse = jsonResponse(finalData, 200, {
+            "Cache-Control": "public, s-maxage=14400, max-age=3600" // Cache for 4 hours on Edge
         });
+
+        // Save to Edge Cache
+        if (edgeCache) {
+            await edgeCache.put(cacheRequest, finalResponse.clone());
+        }
+
+        return finalResponse;
 
     } catch (error: any) {
         return jsonResponse({ error: "Server Error", details: [error.message] }, 500);

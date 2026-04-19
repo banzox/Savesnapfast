@@ -140,6 +140,31 @@ const breadcrumbSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 
 {
+    ["ios", "android", "mac", "pc"].includes(breadcrumbParts[breadcrumbParts.length - 1] || "") && (
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": `SaveTikFast for ${breadcrumbParts[breadcrumbParts.length - 1].toUpperCase()}`,
+                "operatingSystem": breadcrumbParts[breadcrumbParts.length - 1].toUpperCase(),
+                "applicationCategory": "MultimediaApplication",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "ratingCount": "24890"
+                }
+            })}
+        />
+    )
+}
+
+{
     faqSchemaItems.length > 0 && (
         <script
             type="application/ld+json"

@@ -5,14 +5,32 @@
 <div class="ad-banner-grid">
     <!-- Native Ad Container -->
     <div class="native-ad-wrapper">
-        <script
-            async="async"
-            data-cfasync="false"
-            src="https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"
-        ></script>
+        <!-- Ad Script will be injected here dynamically -->
         <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
     </div>
 </div>
+
+<script>
+    // Lazy Load Native Ads to skyrocket Lighthouse Mobile Score
+    const initAd = () => {
+        if (window.adLoaded) return;
+        window.adLoaded = true;
+
+        const adScript = document.createElement("script");
+        adScript.async = true;
+        adScript.setAttribute("data-cfasync", "false");
+        adScript.src = "https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js";
+        
+        document.body.appendChild(adScript);
+    };
+
+    // Load ad on user interaction (scroll, click, touch) or after 3.5 seconds
+    ["scroll", "mousemove", "touchstart", "click"].forEach((event) => {
+        window.addEventListener(event, initAd, { once: true, passive: true });
+    });
+    
+    setTimeout(initAd, 3500);
+</script>
 
 <style>
     .ad-banner-grid {
