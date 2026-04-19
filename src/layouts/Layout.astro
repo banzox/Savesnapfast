@@ -5,7 +5,7 @@ import Schema from "../components/Schema.astro";
 import Footer from "../components/Footer.astro";
 import NativeAd from "../components/NativeAd.astro";
 import SEOHead from "../components/SEOHead.astro";
-import { languages } from "../i18n/ui";
+import SEOConfig from "../components/SEOConfig.astro";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -16,17 +16,7 @@ interface Props {
 }
 
 const { title, description, lang = "en", keywords } = Astro.props;
-const site = Astro.site || "https://savetik-fast.xyz";
-const canonicalURL = new URL(Astro.url.pathname, site);
-
-// Logic to get the path without language prefix for hreflang
-const pathname = Astro.url.pathname;
-const pathParts = pathname.split("/").filter(Boolean);
-const firstPart = pathParts[0];
-const isLangPrefix = Object.keys(languages).includes(firstPart);
-const baseSlug = isLangPrefix
-    ? pathParts.slice(1).join("/")
-    : pathParts.join("/");
+const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").href;
 ---
 
 <!doctype html>
@@ -129,26 +119,7 @@ const baseSlug = isLangPrefix
             />
         </noscript>
 
-        <!-- Hreflang Tags for SEO -->
-        <link
-            rel="alternate"
-            hreflang="x-default"
-            href={new URL("/", Astro.site || "https://savetik-fast.xyz").href}
-        />
-        {
-            Object.keys(languages).map((l) => {
-                const langPath =
-                    l === "en" ? `/${baseSlug}` : `/${l}/${baseSlug}`;
-                const cleanLangPath = langPath.replace(/\/+$/, ""); // Remove trailing slash
-                return (
-                    <link
-                        rel="alternate"
-                        hreflang={l}
-                        href={new URL(cleanLangPath || "/", site).href}
-                    />
-                );
-            })
-        }
+        <SEOConfig />
 
         <Schema lang={lang} />
         <SEOHead lang={lang} />
@@ -170,7 +141,7 @@ const baseSlug = isLangPrefix
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:url" content={currentPageURL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
@@ -182,16 +153,13 @@ const baseSlug = isLangPrefix
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={canonicalURL} />
+        <meta name="twitter:url" content={currentPageURL} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta
             name="twitter:image"
             content="https://savetik-fast.xyz/og-image.png"
         />
-
-        <!-- Canonical URL -->
-        <link rel="canonical" href={canonicalURL} />
 
         <link rel="manifest" href="/manifest.json" />
 

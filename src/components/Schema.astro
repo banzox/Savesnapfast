@@ -88,17 +88,52 @@ const organizationSchema = {
     },
 };
 
+const pathname = Astro.url.pathname;
+const pathParts = pathname.split("/").filter(Boolean);
+const siteOrigin = "https://savetik-fast.xyz";
+
+// We need languages imported to verify if the first part is a lang code.
+// Instead of full import, we just use the lang prop which is passed to the component.
+// Wait, the lang prop tells us the current language!
+// If lang is not "en", then the first part is guaranteed to be the lang code.
+const isLangPrefix = lang !== "en" && pathParts.length > 0 && pathParts[0] === lang;
+
+const itemListElement = [
+    {
+        "@type": "ListItem",
+        position: 1,
+        name: t("nav.home") || "Home",
+        item: isLangPrefix ? `${siteOrigin}/${lang}/` : `${siteOrigin}/`,
+    },
+];
+
+let currentPath = isLangPrefix ? `/${lang}` : "";
+const breadcrumbParts = isLangPrefix ? pathParts.slice(1) : pathParts;
+
+breadcrumbParts.forEach((part, index) => {
+    currentPath += `/${part}`;
+    
+    // Try to get translation if exists (e.g. nav.about -> About Us)
+    let name = part.charAt(0).toUpperCase() + part.slice(1);
+    const transName = t(`nav.${part}`);
+    if (transName && transName !== `nav.${part}`) {
+        name = transName;
+    } else if (part === 'mp3') {
+        name = "MP3";
+    }
+
+    itemListElement.push({
+        "@type": "ListItem",
+        position: index + 2,
+        name: name,
+        item: `${siteOrigin}${currentPath}/`,
+    });
+});
+
 const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-        {
-            "@type": "ListItem",
-            position: 1,
-            name: t("nav.home") || "Home",
-            item: `https://savetik-fast.xyz${lang === "en" ? "" : "/" + lang}`,
-        },
-    ],
+    itemListElement: itemListElement,
 };
 ---
 

@@ -11,9 +11,18 @@ interface Props {
 
 const { titleKey, contentKey, lang } = Astro.props;
 const t = useTranslations(lang);
+
+// Auto-generate meta description from page content
+// Strip HTML tags and take the first 160 characters for SEO
+const rawContent = t(contentKey) || "";
+const plainText = rawContent.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+const autoDescription = plainText.length > 160
+    ? plainText.substring(0, 157) + "..."
+    : plainText;
+const metaDescription = autoDescription || t(titleKey);
 ---
 
-<Layout title={t(titleKey)} description={t(titleKey)} lang={lang}>
+<Layout title={t(titleKey)} description={metaDescription} lang={lang}>
     <section class="page-header">
         <div class="container">
             <h1>{t(titleKey)}</h1>

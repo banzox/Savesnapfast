@@ -13,11 +13,11 @@
   },
   "nav": {
     "home": "Home",
-    "about": "About Us",
+    "about": "Tungkol sa Amin",
     "blog": "Blog",
     "contact": "Contact",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy",
+    "terms": "Mga Tuntunin ng Serbisyo",
+    "privacy": "Patakaran sa Privacy",
     "dmca": "DMCA",
     "disclaimer": "Disclaimer",
     "tools": "Tools"
@@ -74,8 +74,8 @@
   },
   "pages": {
     "about": {
-      "title": "About Us",
-      "content": "Welcome to SaveTikFast, the leading TikTok Downloader for 2026.\n\nWe built SaveTikFast with one goal in mind: to provide the fastest, safest, and most reliable way to save TikTok videos without watermarks. Unlike other tools, we prioritize user experience—no annoying pop-ups, no registration, and no software installation required.\n\nOur technology ensures you get the pristine quality of the original video (up to 4K) while stripping away the overlay logos. We are committed to keeping this service free and accessible to everyone worldwide."
+      "title": "Tungkol sa Amin",
+      "content": "Maligayang pagdating sa SaveTikFast, ang nangungunang TikTok Downloader para sa 2026.<br/><br/>Binuo namin ang SaveTikFast nang may isang layunin: upang magbigay ng pinakamabilis, pinakamataas na kalidad, at pinaka-maaasahang karanasan sa pag-download ng TikTok sa internet nang walang anumang nakakainis na watermark.<br/><br/>Napansin ng aming team ng mga developer na ang karamihan sa mga nangda-download ng TikTok ay mabagal, puno ng mga popup, o nagpapababa ng kalidad ng video. Nagpasya kaming baguhin iyon. Pinoproseso ng SaveTikFast ang mga video sa loob ng milliseconds, kinukuha ang mga direktang link ng CDN upang ibigay sa iyo ang eksaktong orihinal na file sa buong Ultra HD na kalidad.<br/><br/>Kailangan mo mang i-save ang isang viral dance, isang cooking tutorial, isang multi-image slideshow, o kunin ang MP3 audio para sa isang ringtone, pinangangasiwaan ng SaveTikFast ang lahat ng ito nang walang putol sa lahat ng device."
     },
     "contact": {
       "title": "Contact Us",

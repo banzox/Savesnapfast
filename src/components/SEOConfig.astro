@@ -1,0 +1,72 @@
+---
+/**
+ * SEOConfig.astro
+ * Advanced SEO component that programmatically generates:
+ * 1. Canonical URL tag (absolute, using Astro.url)
+ * 2. Dynamic hreflang tags for all 30 supported languages
+ * 3. Self-referencing hreflang for the current language
+ * 4. x-default hreflang pointing to the English version
+ *
+ * All generated URLs are absolute (https://savetik-fast.xyz/...)
+ */
+import { languages } from "../i18n/ui";
+
+const SITE_ORIGIN = "https://savetik-fast.xyz";
+
+// --- Helper: ensure consistent trailing slash ---
+// Astro generates paths with trailing slashes (e.g. /ar/mp3/)
+// All SEO URLs must match this convention for consistency with canonical & sitemap
+function ensureTrailingSlash(path: string): string {
+    return path === "/" ? path : path.endsWith("/") ? path : path + "/";
+}
+
+// --- 1. Extract the base slug (path without language prefix) ---
+const pathname = Astro.url.pathname;
+const pathParts = pathname.split("/").filter(Boolean);
+const firstPart = pathParts[0];
+const isLangPrefix = firstPart && Object.keys(languages).includes(firstPart);
+const baseSlug = isLangPrefix
+    ? pathParts.slice(1).join("/")
+    : pathParts.join("/");
+
+// --- 2. Build canonical URL (absolute, with trailing slash) ---
+const canonicalURL = new URL(ensureTrailingSlash(pathname), SITE_ORIGIN).href;
+
+// --- 3. Build hreflang entries for ALL languages ---
+const hreflangs = Object.keys(languages).map((langCode) => {
+    // English lives at root: /slug/
+    // Other languages: /lang/slug/
+    const langPath =
+        langCode === "en"
+            ? baseSlug
+                ? `/${baseSlug}/`
+                : "/"
+            : baseSlug
+              ? `/${langCode}/${baseSlug}/`
+              : `/${langCode}/`;
+
+    return {
+        lang: langCode,
+        href: new URL(langPath, SITE_ORIGIN).href,
+    };
+});
+
+// --- 4. x-default always points to the English version of the same page ---
+const xDefaultHref = new URL(
+    baseSlug ? `/${baseSlug}/` : "/",
+    SITE_ORIGIN,
+).href;
+---
+
+<!-- SEOConfig: Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- SEOConfig: hreflang x-default (English fallback) -->
+<link rel="alternate" hreflang="x-default" href={xDefaultHref} />
+
+<!-- SEOConfig: hreflang for all 30 languages (including self-reference) -->
+{
+    hreflangs.map(({ lang, href }) => (
+        <link rel="alternate" hreflang={lang} href={href} />
+    ))
+}
