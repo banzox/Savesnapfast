@@ -18,7 +18,13 @@ export const onRequest = defineMiddleware(async (context, next) => {
     const path = url.pathname;
 
     // Clean trailing slash and .html for checking
-    let cleanPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
+    let cleanPath = path;
+
+    // FORCE 301 instead of Astro's default 308 for trailing slashes
+    if (path.endsWith("/") && path.length > 1) {
+        cleanPath = path.slice(0, -1);
+        return context.redirect(cleanPath + url.search, 301);
+    }
 
     // REDIRECT .html to clean path
     if (cleanPath.endsWith(".html")) {
