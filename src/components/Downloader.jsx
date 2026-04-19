@@ -287,6 +287,7 @@ export default function Downloader(props) {
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
                         placeholder={placeholderText}
+                        aria-label={placeholderText}
                         onKeyDown={(e) => e.key === 'Enter' && handleDownload()}
                         autoComplete="off"
                         spellCheck="false"
@@ -299,6 +300,7 @@ export default function Downloader(props) {
                             className={`action-btn ${url ? 'copy-btn' : 'paste-btn'}`}
                             onClick={url ? handleCopyInput : handlePaste}
                             title={url ? t('btn_copy', "Copy") : t('btn_paste', "Paste")}
+                            aria-label={url ? t('btn_copy', "Copy") : t('btn_paste', "Paste")}
                         >
                             <i className={`fas ${url ? 'fa-copy' : 'fa-paste'}`}></i>
                         </button>
@@ -310,6 +312,7 @@ export default function Downloader(props) {
                                 className="action-btn clear-btn"
                                 onClick={() => setUrl('')}
                                 title={t('btn_clear', "Clear")}
+                                aria-label={t('btn_clear', "Clear")}
                             >
                                 <i className="fas fa-times"></i>
                             </button>
@@ -364,7 +367,7 @@ export default function Downloader(props) {
                             <div className="result-thumbnail">
                                 <img
                                     src={result.cover || result.thumbnail}
-                                    alt="Cover"
+                                    alt={t('cover_desc', 'TikTok Video Thumbnail')}
                                     loading="lazy"
                                     width="100%"
                                     height="auto"
@@ -446,6 +449,7 @@ export default function Downloader(props) {
                                             <div key={index} className="slide-item">
                                                 <img
                                                     src={img}
+                                                    alt={`${t('slide_desc', 'TikTok Slideshow Image')} ${index + 1}`}
                                                     style={{ width: '100%', borderRadius: '8px', aspectRatio: '9/16', objectFit: 'cover' }}
                                                     loading="lazy"
                                                     width="150"
