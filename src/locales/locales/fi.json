@@ -4,8 +4,8 @@
     "home_btn": "Palaa etusivulle"
   },
   "meta": {
-    "title": "SaveTikFast 2026 - Lataa TikTok-video ilman vesileimaa (HD & 4K)",
-    "description": "Lataa TikTok-videoita ilman vesileimaa ilmaiseksi Ultra HD/4K -laadulla. Vuoden 2026 nopein lataaja. Tallenna MP4 & MP3 muodossa iPhoneen, Androidiin ja PC:lle."
+    "title": "SaveTikFast 2026 – Paras TikTok-lataaja ilman vesileimaa (4K)",
+    "description": "Lataa TikTok-videoita ilman vesileimaa ilmaiseksi Ultra HD/4K-laadulla. Nopein TikTok-lataaja 2026. Tallenna MP4:nä ja MP3:na iPhonellesi, Androidille ja PC:lle."
   },
   "common": {
     "select_language": "Valitse kieli",
@@ -147,8 +147,8 @@
   "tools": {
     "backToDownloader": "Takaisin lataajaan",
     "meta": {
-      "title": "Ilmaiset online-kuva- ja QR-työkalut - SaveTikFast",
-      "description": "Ilmaiset verkkotyökalut: Pakkaa kuvia, muunna muotoja (WebP, JPG, PNG) ja luo QR-koodeja. 100 % selainpohjainen, latauksia ei tarvita."
+      "title": "Ilmaiset verkkotyökalut – Kuvapakkaus, muunnin ja QR-koodit",
+      "description": "Ilmaiset selainpohjaiset työkalut: pakkaa kuvia, muunna tiedostomuotoja (WebP, JPG, PNG) ja luo QR-koodeja välittömästi. Ei tiedostojen latausta tai rekisteröitymistä."
     },
     "hero": {
       "title": "Ilmaiset online-kuva- ja QR-työkalut",
@@ -353,8 +353,8 @@
     }
   },
   "slideshow_page": {
-    "meta_title": "TikTok Slideshow Lataaja - Tallenna Kuvia",
-    "meta_desc": "Lataa TikTok-kuvaesitykset HD-laadulla ilman vesileimaa.",
+    "meta_title": "TikTok Slideshow -lataaja – Kuvat HD-laadulla ilman vesileimaa",
+    "meta_desc": "Lataa TikTok-kuvaesitykset ja -galleriat HD-laadulla ilman vesileimaa. Tallenna kaikki kuvat mistä tahansa TikTok-julkaisusta välittömästi. Ilmainen, nopea, ei rekisteröintiä.",
     "title": "TikTok Slideshow Lataaja",
     "desc": "Tallenna kuvakarusellit korkealaatuisina.",
     "placeholder": "Liitä linkki tähän...",
@@ -427,7 +427,7 @@
     "stories": "Stories"
   },
   "mp3_page": {
-    "meta_title": "TikTok MP3 Muunnin - Lataa Ääntä (Korkea Laatu)",
+    "meta_title": "TikTok MP3-muunnin – Ilmainen äänilataus 320kbps",
     "title": "Lataa TikTok MP3",
     "subtitle": "(Vain Ääni)",
     "desc": "Muunna TikTok-videot MP3-äänitiedostoiksi. Erota kappaleet ja musiikki korkealla laadulla 320kbps.",
@@ -497,10 +497,10 @@
       "q10": "Miksi SaveTikFast on paras TikTok MP3-muunnin?",
       "a10": "SaveTikFast tarjoaa parhaan TikTok MP3-muunnoksen ylivoimaisen nopeutemme (2 sekuntia), maksimaalisen äänenlaadun (320kbps), yleisen laitetuen ja täysin ilmaisen palvelun ansiosta. Toisin kuin SSSTik, SnapTik tai muut muuntimet, tarjoamme johdonmukaisesti korkealaatuisia tuloksia ilman ärsyttäviä mainoksia tai latausrajoituksia. Miljoonat luottavat SaveTikFast-palveluun TikTok-äänitarpeissaan."
     },
-    "meta_desc": "Muunna TikTok-videot MP3-ääneksi. Pura kappaleita ja musiikkia korkealaatuisena."
+    "meta_desc": "Muunna TikTok-videot MP3-äänitiedostoiksi korkealaatuisena 320kbps. Pura kappaleita ja musiikkia ilmaiseksi verkossa. Ei sovellusta tai rekisteröitymistä tarvita."
   },
   "story_page": {
-    "meta_title": "Lataa TikTok Story - Tallenna Anonyymisti",
+    "meta_title": "TikTok Story -lataaja – Kuvat ja tarinat anonyymisti ilmaiseksi",
     "title": "Lataa TikTok Story",
     "desc": "Tallenna TikTok Stories ja Diaesitykset ennen kuin ne vanhenevat.",
     "placeholder": "Liitä Story-linkki...",
@@ -565,11 +565,11 @@
       "q8": "Miksi käyttää SaveTikFast-palvelua TikTok-tarinoihin?",
       "a8": "SaveTikFast on paras TikTok-tarinan lataaja, koska tarjoamme välittömät lataukset, alkuperäisen HD-laadun, anonyymin tallennuksen ja rajattoman ilmaisen pääsyn. Työkalumme toimii luotettavasti kaikilla laitteilla ja selaimilla, mikä tekee siitä paremman kuin muut tarinan lataajat. Tallenna vanhentuvat tarinat ennen kuin ne häviävät ikuisesti."
     },
-    "meta_desc": "Lataa TikTok-tarinoita ja diaesityksiä nimettömästi. Tallenna kuvat ennen kuin ne vanhenevat."
+    "meta_desc": "Lataa TikTok-tarinoita ja esityksiä anonyymisti ja ilmaiseksi. Tallenna kuvagalleriat ja tarinat ennen kuin ne vanhenevat. Nopeaa, ilmaista, ei kirjautumista."
   },
   "blog": {
-    "meta_title": "TikTok-latausopas 2026 - Videot, MP3, Kuvaesitykset ja Tarinat",
-    "meta_desc": "Täydellinen opas TikTok-sisällön lataamiseen vuonna 2026. Opi tallentamaan videoita ilman vesileimaa, muuntamaan MP3:ksi, lataamaan kuvaesityksiä ja tarinoita.",
+    "meta_title": "TikTok-latausopas 2026 – Videot, MP3, diaesitykset ja tarinat",
+    "meta_desc": "Täydellinen opas TikTok-sisällön lataamiseen 2026. Tallenna videoita ilman vesileimaa, muunna MP3:ksi, lataa esityksiä iPhonelle, Androidille ja PC:lle.",
     "keywords": "miten ladata tiktok-videoita ilman vesileimaa 2026, tiktok lataaja iphone ios 18, tallenna tiktok-videoita android 15, tiktok mp3 muunnin ilmainen online",
     "title": "Lopullinen TikTok-latausopas 2026",
     "subtitle": "Kaikki mitä sinun tulee tietää TikTok-videoiden, MP3-tiedostojen, kuvaesitysten ja tarinoiden lataamisesta. Päivitetty vuodelle 2026.",

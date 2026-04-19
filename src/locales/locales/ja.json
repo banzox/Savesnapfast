@@ -4,8 +4,8 @@
     "home_btn": "ホームへ戻る"
   },
   "meta": {
-    "title": "SaveTikFast 2026 - TikTok動画ダウンロード 透かしなし (HD & 4K)",
-    "description": "TikTokの動画を透かしなし（ロゴなし）で無料でダウンロード。2026年最速の保存ツール。iPhone、Android、PCでMP4とMP3を高画質で保存できます。"
+    "title": "SaveTikFast 2026 – TikTok動画ダウンロード 透かしなし 4K対応",
+    "description": "TikTok動画を透かしなしで無料でUltra HD/4Kでダウンロード。2026年最速のTikTokセーバー。iPhone、Android、PCでMP4・MP3として保存できます。"
   },
   "common": {
     "select_language": "言語を選択",
@@ -147,8 +147,8 @@
   "tools": {
     "backToDownloader": "ダウンローダーに戻る",
     "meta": {
-      "title": "無料の画像＆QRツール - SaveTikFast",
-      "description": "無料オンラインツール：画像の圧縮、形式変換 (WebP, JPG, PNG)、QRコード作成。すべてブラウザ内で完結し、サーバーへのアップロードは不要です。"
+      "title": "無料オンラインツール – 画像圧縮・変換・QRコード生成",
+      "description": "無料のブラウザ内ツール：画像を圧縮、形式変換（WebP、JPG、PNG）、QRコード生成が即座にできます。ファイルのアップロードや登録は一切不要。完全無料。"
     },
     "hero": {
       "title": "無料の画像＆QRツール",
@@ -353,8 +353,8 @@
     }
   },
   "slideshow_page": {
-    "meta_title": "TikTokスライドショーダウンローダー - 写真を保存",
-    "meta_desc": "TikTokの写真スライドショーを透かしなしのHDでダウンロード。",
+    "meta_title": "TikTokスライドショー保存 – HD画質・透かしなしで写真を一括ダウンロード",
+    "meta_desc": "TikTokのフォトスライドショーやカルーセルをHD画質で透かしなしでダウンロード。TikTokの投稿からすべての画像を即座に保存。無料・高速・登録不要。",
     "title": "TikTokスライドショーダウンローダー",
     "desc": "高品質で写真カルーセルを保存。",
     "placeholder": "リンクをここに貼り付け...",
@@ -427,7 +427,7 @@
     "stories": "ストーリー"
   },
   "mp3_page": {
-    "meta_title": "TikTok MP3変換 - 音声をダウンロード (高音質)",
+    "meta_title": "TikTok MP3変換 – 320kbps高音質無料ダウンロード",
     "title": "TikTok MP3 ダウンロード",
     "subtitle": "(音声のみ)",
     "desc": "TikTok動画をMP3オーディオファイルに変換します。高音質(320kbps)で曲や音楽を抽出します。",
@@ -497,10 +497,10 @@
       "q10": "なぜSaveTikFastが最高のTikTokからMP3へのコンバーターなのですか？",
       "a10": "SaveTikFastは、優れた速度（2秒）、最高のオーディオ品質（320kbps）、ユニバーサルデバイスサポート、完全に無料のサービスにより、最高のTikTok MP3変換を提供します。SSSTik、SnapTik、または他のコンバーターとは異なり、煩わしい広告やダウンロード制限なしで一貫した高品質の結果を提供します。数百万人のユーザーが、TikTokオーディオのニーズにSaveTikFastを信頼しています。"
     },
-    "meta_desc": "TikTok動画をMP3オーディオに変換。高音質320kbpsで曲や音楽を抽出。"
+    "meta_desc": "TikTok動画を高音質320kbpsのMP3ファイルに変換。楽曲や音楽を無料でオンライン抽出。アプリや登録不要。すべてのデバイスで動作します。"
   },
   "story_page": {
-    "meta_title": "TikTokストーリーダウンローダー - 匿名保存",
+    "meta_title": "TikTokストーリー保存 – 写真とスライドを匿名で無料ダウンロード",
     "title": "TikTokストーリー保存",
     "desc": "期限切れになる前にTikTokストーリーやスライドショーを保存しましょう。",
     "placeholder": "ストーリーのリンクを貼り付け...",
@@ -565,11 +565,11 @@
       "q8": "TikTokストーリーにSaveTikFastを使用する理由は？",
       "a8": "SaveTikFastは、即座のダウンロード、オリジナルのHD品質、匿名の保存、無料の無制限アクセスを提供するため、最高のTikTokストーリーダウンローダーです。当社のツールはすべてのデバイスとブラウザで確実に動作し、他のストーリーダウンローダーよりも優れています。永久に消える前に期限切れのストーリーを保存します。"
     },
-    "meta_desc": "TikTokストーリーとスライドショーを匿名でダウンロード。期限切れになる前に写真を保存。"
+    "meta_desc": "TikTokストーリーとスライドショーを匿名で無料でダウンロード。期限切れになる前にフォトアルバムや動画を保存。ログイン不要、素早くかんたん。"
   },
   "blog": {
-    "meta_title": "TikTokダウンロードガイド2026 - 動画、MP3、スライドショー、ストーリー",
-    "meta_desc": "2026年TikTokコンテンツダウンロード完全ガイド。透かしなしで動画を保存、MP3に変換、スライドショーやストーリーをダウンロードする方法。",
+    "meta_title": "TikTokダウンロード完全ガイド2026 – 動画・MP3・スライドショー",
+    "meta_desc": "2026年版TikTokコンテンツダウンロード完全ガイド。透かしなし動画保存、MP3変換、スライドショー・ストーリーをiPhone、Android、PCでダウンロードする方法。",
     "keywords": "透かしなしTikTok動画ダウンロード2026, TikTokダウンローダーiPhone iOS 18, TikTok動画保存Android 15, TikTok MP3変換無料オンライン",
     "title": "TikTokダウンロード究極ガイド2026",
     "subtitle": "TikTok動画、MP3、スライドショー、ストーリーのダウンロードについて知っておくべきすべて。2026年最新版。",

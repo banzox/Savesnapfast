@@ -4,8 +4,8 @@
     "home_btn": "回到首页"
   },
   "meta": {
-    "title": "SaveTikFast 2026 - TikTok 影片下載 無浮水印 (HD & 4K)",
-    "description": "免費下載無浮水印的 TikTok 影片，支援 Ultra HD/4K 高畫質。2026 年最快的下載器。支援 iPhone、Android 和 PC 儲存 MP4 與 MP3。"
+    "title": "SaveTikFast 2026 - TikTok视频下载器 无水印 4K高清免费",
+    "description": "免费下载TikTok视频，无水印，超高清4K/HD画质。2026年最快的TikTok下载工具。支持MP4和MP3格式，兼容iPhone、Android和电脑。操作简单，即开即用。"
   },
   "common": {
     "select_language": "选择语言",
@@ -147,8 +147,8 @@
   "tools": {
     "backToDownloader": "返回下载器",
     "meta": {
-      "title": "免费图片和 QR 工具 - SaveTikFast",
-      "description": "免费在线工具：压缩图片、转换格式 (WebP, JPG, PNG) 和生成二维码。100% 浏览器内本地处理，无需上传。"
+      "title": "免费在线工具 - 图片压缩、格式转换和二维码生成",
+      "description": "免费浏览器工具：压缩图片、转换格式（WebP、JPG、PNG）、即时生成二维码。无需上传文件或注册账号。100%免费，所有功能在浏览器本地完成。"
     },
     "hero": {
       "title": "免费图片和 QR 工具",
@@ -353,8 +353,8 @@
     }
   },
   "slideshow_page": {
-    "meta_title": "TikTok Slideshow Downloader - Save Photos",
-    "meta_desc": "Download TikTok photo slideshows in HD. Save all images without watermark.",
+    "meta_title": "TikTok相册下载器 - 高清无水印保存轮播图片 免费",
+    "meta_desc": "下载TikTok照片幻灯片和轮播相册，高清无水印。立即保存TikTok帖子中的所有图片。完全免费，速度快，无需注册。支持批量下载多张图片。",
     "title": "TikTok 幻灯片下载器",
     "desc": "Download TikTok photo carousels in high quality.",
     "placeholder": "Paste link...",
@@ -427,7 +427,7 @@
     "stories": "故事"
   },
   "mp3_page": {
-    "meta_title": "TikTok MP3 转换器 - 下载音频 (高品质)",
+    "meta_title": "TikTok转MP3 - 免费下载高质量音频 320kbps",
     "title": "TikTok MP3 下载",
     "subtitle": "(仅音频)",
     "desc": "将 TikTok 视频转换为 MP3 音频文件。提取高品质 320kbps 的歌曲和音乐。",
@@ -497,10 +497,10 @@
       "q10": "为什么SaveTikFast是最好的TikTok转MP3转换器?",
       "a10": "SaveTikFast提供最佳的TikTok MP3转换,因为我们具有卓越的速度(2秒)、最高的音频质量(320kbps)、通用设备支持和完全免费的服务。与SSSTik、SnapTik或其他转换器不同,我们提供一致的高质量结果,没有恼人的广告或下载限制。数百万用户信任SaveTikFast满足他们的TikTok音频需求。"
     },
-    "meta_desc": "将 TikTok 视频转换为 MP3 音频。提取高质量的歌曲和音乐。"
+    "meta_desc": "将TikTok视频转换为高质量320kbps MP3音频文件。在线免费提取歌曲和音乐。无需安装应用程序，无需注册账号。支持所有设备和浏览器。快速便捷。"
   },
   "story_page": {
-    "meta_title": "下载 TikTok 快拍 - 匿名保存",
+    "meta_title": "TikTok故事下载器 - 匿名保存照片和幻灯片 免费",
     "title": "下载 TikTok 快拍",
     "desc": "在 TikTok 快拍 (Story) 和幻灯片过期前保存它们。",
     "placeholder": "粘贴快拍链接...",
@@ -565,11 +565,11 @@
       "q8": "为什么使用SaveTikFast下载TikTok故事?",
       "a8": "SaveTikFast是最好的TikTok故事下载器,因为我们提供即时下载、原始高清质量、匿名保存和免费无限访问。我们的工具在所有设备和浏览器上可靠运行,使其优于其他故事下载器。在过期故事永久消失之前保存它们。"
     },
-    "meta_desc": "匿名下载 TikTok 故事和幻灯片。在过期前保存照片。"
+    "meta_desc": "匿名免费下载TikTok故事和幻灯片。在过期前保存相册和故事视频。快速、免费，无需登录或安装任何应用程序。一键保存所有TikTok故事内容。"
   },
   "blog": {
-    "meta_title": "TikTok 下载指南 2026 - 视频、MP3、幻灯片和快拍",
-    "meta_desc": "2026年TikTok内容下载完整指南。学习如何保存无水印视频、转换为MP3、下载幻灯片和快拍。",
+    "meta_title": "TikTok下载完全指南2026 - 视频 MP3 幻灯片和故事",
+    "meta_desc": "2026年TikTok内容下载完整指南。学会无水印保存视频、转换MP3、在iPhone、Android和电脑上下载幻灯片和故事。简单易用，完全免费。",
     "keywords": "如何下载无水印TikTok视频2026, TikTok下载器iPhone iOS 18, 保存TikTok视频Android 15, TikTok MP3转换器在线免费",
     "title": "TikTok 下载终极指南 2026",
     "subtitle": "关于下载TikTok视频、MP3、幻灯片和快拍的所有知识。2026年最新更新。",

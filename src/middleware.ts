@@ -30,6 +30,12 @@ export const onRequest = defineMiddleware(async (context, next) => {
     const parts = cleanPath.split("/").filter(Boolean);
 
     if (parts.length > 0) {
+        // Redirect legacy tl to fil
+        if (parts[0] === "tl") {
+            parts[0] = "fil";
+            const newPath = "/" + parts.join("/");
+            return context.redirect(newPath + url.search, 301);
+        }
         const lastPart = parts[parts.length - 1]; // Get the slug (e.g. 'about-us')
 
         // Check if the last part is a legacy slug
