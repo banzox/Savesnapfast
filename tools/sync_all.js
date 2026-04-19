@@ -73,8 +73,8 @@ files.forEach(file => {
 
     // Merge 404
     content["404"] = {
-        ...defaultKeys.404,
-        ...(localized[lang] ? .404 || {}),
+        ...defaultKeys["404"],
+        ...(localized[lang]?.["404"] || {}),
         ...(content["404"] || {})
     };
 
