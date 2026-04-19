@@ -598,5 +598,49 @@
     "cta_title": "Έτοιμοι για Λήψη;",
     "cta_desc": "Ξεκινήστε να κατεβάζετε βίντεο TikTok, MP3, slideshows και stories τώρα. 100% δωρεάν, χωρίς εγγραφή.",
     "cta_button": "Έναρξη Λήψης"
+  },
+  "ios_page": {
+    "title": "TikTok Downloader for iOS",
+    "desc": "Download TikTok videos without watermark directly to your iPhone or iPad in HD quality. The fastest way to save videos using Safari on iOS.",
+    "placeholder": "Paste TikTok link from your iPhone...",
+    "meta_title": "TikTok Downloader for iPhone/iPad - SaveTikFast",
+    "meta_desc": "Free tool to save TikTok videos without watermark on iOS (iPhone & iPad). No app installation required. Download in MP4 or MP3 format instantly.",
+    "faq": {
+      "q1": "How do I download TikTok videos on iPhone/iPad?",
+      "a1": "Open the TikTok app, tap Share, and choose Copy Link. Open Safari and go to SaveTikFast, paste the link into the box, and tap Download to save it directly to your Photos."
+    }
+  },
+  "android_page": {
+    "title": "TikTok Downloader for Android",
+    "desc": "The best Android TikTok video saver! Download any TikTok video without watermark directly to your mobile gallery in MP4 format.",
+    "placeholder": "Paste TikTok link from your Android phone...",
+    "meta_title": "TikTok Downloader for Android Devices - SaveTikFast",
+    "meta_desc": "Save any TikTok video without logo to your Android phone gallery. 100% free, no watermark, fast, and secure. Download in HD quality.",
+    "faq": {
+      "q1": "How to save TikTok videos on Android?",
+      "a1": "Copy the video link from the TikTok app, open Chrome or any browser on your Android device, go to our website, paste the link, and hit Download."
+    }
+  },
+  "mac_page": {
+    "title": "TikTok Downloader for Mac",
+    "desc": "Download high-quality TikTok videos without watermark on your MacBook or iMac. Works perfectly on Safari and Chrome.",
+    "placeholder": "Drop TikTok link here to download on Mac...",
+    "meta_title": "TikTok Video Downloader for Mac/MacBook (HD) - SaveTikFast",
+    "meta_desc": "Easily download TikTok videos without watermark to your Mac. Free online saver supporting macOS Safari, Chrome, and Firefox in 4K quality.",
+    "faq": {
+      "q1": "How to download TikToks on macOS?",
+      "a1": "Open TikTok in your Mac browser, copy the URL of the video, head over to SaveTikFast, paste it in the search bar, and download."
+    }
+  },
+  "pc_page": {
+    "title": "TikTok Downloader for PC",
+    "desc": "Save TikTok videos directly to your Windows PC or Laptop. Get clean, watermark-free videos in ultra-fast speeds.",
+    "placeholder": "Paste the TikTok video link from your PC...",
+    "meta_title": "TikTok Downloader for Windows PC/Laptop - SaveTikFast",
+    "meta_desc": "The fastest TikTok video downloader for Windows PC. Save unlimited TikTok videos without watermark to your computer for free.",
+    "faq": {
+      "q1": "How do I use SaveTikFast on Windows?",
+      "a1": "Watch the TikTok video on your computer, copy its link from the address bar, paste it on this page, and click download to get your file."
+    }
   }
 }

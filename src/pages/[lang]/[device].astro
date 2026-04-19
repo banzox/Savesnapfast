@@ -1,0 +1,25 @@
+---
+import DownloadPage from "../../components/DownloadPage.astro";
+import { languages } from "../../i18n/ui";
+
+export const prerender = true;
+
+// Generate paths for ALL 30 languages and ALL 4 devices
+export function getStaticPaths() {
+    const devices = ["ios", "android", "mac", "pc"];
+    const paths = [];
+    
+    // Loop through all 30 languages from our i18n config
+    for (const lang of Object.keys(languages)) {
+        for (const device of devices) {
+            paths.push({ params: { lang, device } });
+        }
+    }
+    
+    return paths;
+}
+
+const { lang, device } = Astro.params;
+---
+
+<DownloadPage lang={lang} pagePrefix={`${device}_page`} mode="video" showAd={true} />

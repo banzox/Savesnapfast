@@ -1,0 +1,21 @@
+---
+import DownloadPage from "../components/DownloadPage.astro";
+import { defaultLang } from "../i18n/ui";
+
+export const prerender = true;
+
+// Define allowed devices
+export function getStaticPaths() {
+    return [
+        { params: { device: "ios" } },
+        { params: { device: "android" } },
+        { params: { device: "mac" } },
+        { params: { device: "pc" } }
+    ];
+}
+
+const { device } = Astro.params;
+const lang = defaultLang;
+---
+
+<DownloadPage lang={lang} pagePrefix={`${device}_page`} mode="video" showAd={true} />
