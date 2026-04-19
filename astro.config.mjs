@@ -9,7 +9,7 @@ export default defineConfig({
     site: 'https://savetik-fast.xyz',
     trailingSlash: 'never',
     build: {
-        format: 'file'
+        format: 'directory'
     },
     output: 'server',
     adapter: cloudflare(),

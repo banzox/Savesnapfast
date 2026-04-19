@@ -26,11 +26,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
         return context.redirect(cleanPath + url.search, 301);
     }
 
-    // REDIRECT .html to clean path
-    if (cleanPath.endsWith(".html")) {
-        const targetPath = cleanPath.slice(0, -5);
-        return context.redirect(targetPath + url.search, 301);
-    }
 
     // Split path parts
     const parts = cleanPath.split("/").filter(Boolean);

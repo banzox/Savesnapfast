@@ -103,7 +103,7 @@ const itemListElement = [
         "@type": "ListItem",
         position: 1,
         name: t("nav.home") || "Home",
-        item: isLangPrefix ? `${siteOrigin}/${lang}/` : `${siteOrigin}/`,
+        item: isLangPrefix ? `${siteOrigin}/${lang}` : `${siteOrigin}/`,
     },
 ];
 
@@ -126,7 +126,7 @@ breadcrumbParts.forEach((part, index) => {
         "@type": "ListItem",
         position: index + 2,
         name: name,
-        item: `${siteOrigin}${currentPath}/`,
+        item: `${siteOrigin}${currentPath}`,
     });
 });
 

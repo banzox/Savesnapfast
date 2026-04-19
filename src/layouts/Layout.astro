@@ -124,20 +124,12 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
         <Schema lang={lang} />
         <SEOHead lang={lang} />
 
-        <!-- Search Engine Optimization -->
-        <meta
-            name="robots"
-            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-        />
-        <meta
-            name="googlebot"
-            content="index, follow, max-image-preview:large"
-        />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large" />
         <meta name="bingbot" content="index, follow" />
         <meta name="author" content="SaveTikFast" />
         <meta name="publisher" content="SaveTikFast" />
         <meta name="rating" content="general" />
-        <meta name="revisit-after" content="1 days" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
@@ -149,7 +141,18 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
             content="https://savetik-fast.xyz/og-image.png"
         />
         <meta property="og:site_name" content="SaveTikFast" />
-        <meta property="og:locale" content={lang} />
+        <meta property="og:locale" content={
+            lang === "ar" ? "ar_AR" :
+            lang === "zh" ? "zh_CN" :
+            lang === "fil" ? "fil_PH" :
+            lang === "uk" ? "uk_UA" :
+            lang === "vi" ? "vi_VN" :
+            lang === "hi" ? "hi_IN" :
+            lang === "ko" ? "ko_KR" :
+            lang === "ja" ? "ja_JP" :
+            lang === "th" ? "th_TH" :
+            `${lang}_${lang.toUpperCase()}`
+        } />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
