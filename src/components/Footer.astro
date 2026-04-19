@@ -44,6 +44,14 @@ const t = useTranslations(lang);
             >
         </div>
 
+        <!-- Devices Links (Separate Row) -->
+        <div class="footer-links" style="margin-top: -15px; font-size: 0.85rem; opacity: 0.8;">
+            <a href={`/${lang === "en" ? "ios" : lang + "/ios"}`}>iOS</a>
+            <a href={`/${lang === "en" ? "android" : lang + "/android"}`}>Android</a>
+            <a href={`/${lang === "en" ? "mac" : lang + "/mac"}`}>Mac</a>
+            <a href={`/${lang === "en" ? "pc" : lang + "/pc"}`}>PC</a>
+        </div>
+
         <p class="copyright">{t("footer.rights")}</p>
     </div>
 </footer>
