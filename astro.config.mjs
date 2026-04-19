@@ -8,6 +8,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     site: 'https://savetik-fast.xyz',
     trailingSlash: 'never',
+    build: {
+        format: 'file'
+    },
     output: 'server',
     adapter: cloudflare(),
     integrations: [react(), sitemap()],
