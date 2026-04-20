@@ -8,23 +8,6 @@ const loadJSZip = () => import('jszip');
 const WORKER_URL = "/api/tiktok";
 const SMART_LINK = "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
-// Native Ad Slot Loader — defined outside component to avoid re-creation on render
-function loadNativeAd() {
-    if (typeof window === 'undefined') return;
-    const wrapper = document.getElementById('ad-slot-main');
-    if (!wrapper || wrapper.dataset.loaded) return;
-    wrapper.dataset.loaded = 'true';
-
-    const innerDiv = document.createElement('div');
-    innerDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
-    wrapper.appendChild(innerDiv);
-
-    const script = document.createElement('script');
-    script.async = true;
-    script.setAttribute('data-cfasync', 'false');
-    script.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
-    wrapper.appendChild(script);
-}
 
 export default function Downloader(props) {
     const { messages = {}, mode = 'video' } = props;
@@ -81,11 +64,7 @@ export default function Downloader(props) {
         navigator.clipboard.writeText(url);
     };
 
-    // Load the Native Banner immediately on mount
-    useEffect(() => {
-        const t1 = setTimeout(() => loadNativeAd(), 800);
-        return () => clearTimeout(t1);
-    }, []);
+
 
     const downloadFile = (fileUrl, fileName) => {
         if (!fileUrl) return;
@@ -351,7 +330,9 @@ export default function Downloader(props) {
                 </button>
 
                 {/* ─── Native Banner Ad (Visible immediately below URL box) ─── */}
-                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', borderRadius: '10px', marginTop: '10px' }} />
+                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', borderRadius: '10px', marginTop: '10px' }}>
+                    {props.children}
+                </div>
             </div>
 
             <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
