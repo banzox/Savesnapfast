@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import fileSaver from 'file-saver';
 const { saveAs } = fileSaver;
 
@@ -7,6 +7,24 @@ const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
 const SMART_LINK = "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
+
+// Native Ad Slot Loader — defined outside component to avoid re-creation on render
+function loadNativeAd(slotId) {
+    if (typeof window === 'undefined') return;
+    const wrapper = document.getElementById(slotId);
+    if (!wrapper || wrapper.dataset.loaded) return;
+    wrapper.dataset.loaded = 'true';
+
+    const innerDiv = document.createElement('div');
+    innerDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
+    wrapper.appendChild(innerDiv);
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.setAttribute('data-cfasync', 'false');
+    script.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+    wrapper.appendChild(script);
+}
 
 export default function Downloader(props) {
     const { messages = {}, mode = 'video' } = props;
@@ -23,6 +41,7 @@ export default function Downloader(props) {
     const [downloadingUrl, setDownloadingUrl] = useState(null); // New: Tracks individual file downloads
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
+    const [hasStartedDownload, setHasStartedDownload] = useState(false);
 
     // --- دالة تنظيف وتسمية الملفات ---
     const sanitizeName = (name) => {
@@ -61,6 +80,20 @@ export default function Downloader(props) {
         if (!url) return;
         navigator.clipboard.writeText(url);
     };
+
+    // Load below-input ad on mount (2s delay for Lighthouse performance)
+    useEffect(() => {
+        const timer = setTimeout(() => loadNativeAd('ad-slot-below-input'), 2000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    // Load around-loader ads the first time user presses Download
+    useEffect(() => {
+        if (!hasStartedDownload) return;
+        loadNativeAd('ad-slot-above-loader');
+        const timer = setTimeout(() => loadNativeAd('ad-slot-below-loader'), 800);
+        return () => clearTimeout(timer);
+    }, [hasStartedDownload]);
 
     const downloadFile = (fileUrl, fileName) => {
         if (!fileUrl) return;
@@ -161,6 +194,7 @@ export default function Downloader(props) {
         setLoading(true);
         setError(null);
         setResult(null);
+        setHasStartedDownload(true);
 
         try {
             let res = null;
@@ -320,6 +354,21 @@ export default function Downloader(props) {
                     </div>
                 </div>
 
+                {/* ─── Native Banner Ad: Below URL Input ─── */}
+                <div
+                    id="ad-slot-below-input"
+                    style={{
+                        width: '100%',
+                        minHeight: '90px',
+                        margin: '10px 0',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        overflow: 'hidden',
+                        borderRadius: '10px',
+                    }}
+                />
+
                 <button id="download-btn" onClick={handleDownload} disabled={loading}>
                     <i className="fas fa-download"></i> {t('btn_download', "Download Now")}
                 </button>
@@ -334,6 +383,24 @@ export default function Downloader(props) {
                 )}
 
                 <div id="result-area" role="region" aria-live="polite">
+
+                {/* ─── Native Banner Ad: Above Loading Indicator ─── */}
+                {hasStartedDownload && (
+                    <div
+                        id="ad-slot-above-loader"
+                        style={{
+                            width: '100%',
+                            minHeight: '90px',
+                            margin: '0 0 14px 0',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            overflow: 'hidden',
+                            borderRadius: '10px',
+                        }}
+                    />
+                )}
+
                 {loading && (
                     <div className="skeleton-loading-card">
                         <div className="skeleton-thumbnail"></div>
@@ -352,6 +419,23 @@ export default function Downloader(props) {
                             <p className="processing-text">{t('processing', "Processing...")}</p>
                         </div>
                     </div>
+                )}
+
+                {/* ─── Native Banner Ad: Below Loading Indicator ─── */}
+                {hasStartedDownload && (
+                    <div
+                        id="ad-slot-below-loader"
+                        style={{
+                            width: '100%',
+                            minHeight: '90px',
+                            margin: '14px 0',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            overflow: 'hidden',
+                            borderRadius: '10px',
+                        }}
+                    />
                 )}
 
                 {error && (
