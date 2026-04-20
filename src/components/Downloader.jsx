@@ -81,11 +81,12 @@ export default function Downloader(props) {
         navigator.clipboard.writeText(url);
     };
 
-    // Load the single 1:1 ad below the download button
+    // Load the 2:2 ad below the result buttons when result is ready
     useEffect(() => {
-        const t1 = setTimeout(() => loadNativeAd(), 1000);
+        if (!result) return;
+        const t1 = setTimeout(() => loadNativeAd(), 800);
         return () => clearTimeout(t1);
-    }, []);
+    }, [result]);
 
     const downloadFile = (fileUrl, fileName) => {
         if (!fileUrl) return;
@@ -278,7 +279,7 @@ export default function Downloader(props) {
             setResult(res);
 
             setTimeout(() => {
-                const el = document.getElementById('ad-slot-above-result') || document.getElementById('result-area');
+                const el = document.getElementById('result-area');
                 if (el) {
                     const offset = el.getBoundingClientRect().top + window.scrollY - 12;
                     window.scrollTo({ top: offset, behavior: "smooth" });
@@ -349,9 +350,6 @@ export default function Downloader(props) {
                 <button id="download-btn" onClick={handleDownload} disabled={loading}>
                     <i className="fas fa-download"></i> {t('btn_download', "Download Now")}
                 </button>
-
-                {/* ─── Native Banner Ad (1:1 Ratio) Below Download Button ─── */}
-                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', borderRadius: '10px', marginTop: '10px' }} />
             </div>
 
             <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
@@ -465,6 +463,9 @@ export default function Downloader(props) {
                                     </div>
                                 )}
                             </div>
+
+                            {/* ─── Native Banner Ad (2:2 Ratio) Below Result Buttons ─── */}
+                            <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', borderRadius: '10px', marginTop: '15px' }} />
 
                             {(mode === 'slideshow' || (mode === 'video' && images)) && images && (
                                 <div className="slideshow-container" style={{ marginTop: '0px' }}>
