@@ -9,9 +9,9 @@ const WORKER_URL = "/api/tiktok";
 const SMART_LINK = "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
 
 // Native Ad Slot Loader — defined outside component to avoid re-creation on render
-function loadNativeAd(slotId) {
+function loadNativeAd() {
     if (typeof window === 'undefined') return;
-    const wrapper = document.getElementById(slotId);
+    const wrapper = document.getElementById('ad-slot-main');
     if (!wrapper || wrapper.dataset.loaded) return;
     wrapper.dataset.loaded = 'true';
 
@@ -22,7 +22,7 @@ function loadNativeAd(slotId) {
     const script = document.createElement('script');
     script.async = true;
     script.setAttribute('data-cfasync', 'false');
-    script.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+    script.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
     wrapper.appendChild(script);
 }
 
@@ -81,19 +81,11 @@ export default function Downloader(props) {
         navigator.clipboard.writeText(url);
     };
 
-    // Load below-input ad on mount (2s delay for Lighthouse performance)
+    // Load the single 1:1 ad below the download button
     useEffect(() => {
-        const timer = setTimeout(() => loadNativeAd('ad-slot-below-input'), 2000);
-        return () => clearTimeout(timer);
+        const t1 = setTimeout(() => loadNativeAd(), 1000);
+        return () => clearTimeout(t1);
     }, []);
-
-    // Load ads around result when result is ready
-    useEffect(() => {
-        if (!result) return;
-        loadNativeAd('ad-slot-above-result');
-        const timer = setTimeout(() => loadNativeAd('ad-slot-below-result'), 600);
-        return () => clearTimeout(timer);
-    }, [result]);
 
     const downloadFile = (fileUrl, fileName) => {
         if (!fileUrl) return;
@@ -358,31 +350,11 @@ export default function Downloader(props) {
                     <i className="fas fa-download"></i> {t('btn_download', "Download Now")}
                 </button>
 
-                {/* ─── Native Banner Ad: Below URL Input (4:1 ratio) ─── */}
-                <div
-                    id="ad-slot-below-input"
-                    style={{
-                        width: '100%',
-                        aspectRatio: '4 / 1',
-                        minHeight: '90px',
-                        margin: '14px 0 0',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        overflow: 'hidden',
-                        borderRadius: '10px',
-                        background: 'rgba(255,255,255,0.02)',
-                    }}
-                />
+                {/* ─── Native Banner Ad (1:1 Ratio) Below Download Button ─── */}
+                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', borderRadius: '10px', marginTop: '10px' }} />
             </div>
 
             <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
-                {/* الإعلان سيظهر هنا، وسينزل الموقع للتمركز عليه لضمان رؤيته قبل النتيجة */}
-                {props.children && (
-                    <div className="ad-container-top" style={{ width: '100%', marginBottom: '20px' }}>
-                        {props.children}
-                    </div>
-                )}
 
                 <div id="result-area" role="region" aria-live="polite">
 
@@ -405,31 +377,12 @@ export default function Downloader(props) {
                         </div>
                     </div>
                 )}
-
+                
                 {error && (
                     <div className="error-banner">
                         <i className="fas fa-exclamation-circle"></i>
                         <span>{error}</span>
                     </div>
-                )}
-
-                {/* ─── Native Banner Ad: Above Result Card (4:1 ratio) ─── */}
-                {result && (
-                    <div
-                        id="ad-slot-above-result"
-                        style={{
-                            width: '100%',
-                            aspectRatio: '4 / 1',
-                            minHeight: '90px',
-                            margin: '0 0 14px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            overflow: 'hidden',
-                            borderRadius: '10px',
-                            background: 'rgba(255,255,255,0.02)',
-                        }}
-                    />
                 )}
 
                 {result && (
@@ -538,25 +491,6 @@ export default function Downloader(props) {
                             )}
                         </div>
                     </div>
-                )}
-
-                {/* ─── Native Banner Ad: Below Result Card (4:1 ratio) ─── */}
-                {result && (
-                    <div
-                        id="ad-slot-below-result"
-                        style={{
-                            width: '100%',
-                            aspectRatio: '4 / 1',
-                            minHeight: '90px',
-                            margin: '14px 0 0',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            overflow: 'hidden',
-                            borderRadius: '10px',
-                            background: 'rgba(255,255,255,0.02)',
-                        }}
-                    />
                 )}
 
                 </div>

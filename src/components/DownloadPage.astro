@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Downloader from "./Downloader.jsx";
 import FAQ from "./FAQ.astro";
-import AdBanner from "./AdBanner.astro";
 import { getTranslations, useTranslations } from "../utils/i18n";
 
 interface Props {
@@ -185,9 +184,7 @@ if (!pagePrefix) {
                     placeholder={pagePrefix
                         ? t(`${pagePrefix}.placeholder`)
                         : t("downloader.placeholder")}
-                >
-                    {showAd && <AdBanner />}
-                </Downloader>
+                />
             </div>
         </article>
     </div>
