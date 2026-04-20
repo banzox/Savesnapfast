@@ -87,13 +87,13 @@ export default function Downloader(props) {
         return () => clearTimeout(timer);
     }, []);
 
-    // Load around-loader ads the first time user presses Download
+    // Load ads around result when result is ready
     useEffect(() => {
-        if (!hasStartedDownload) return;
-        loadNativeAd('ad-slot-above-loader');
-        const timer = setTimeout(() => loadNativeAd('ad-slot-below-loader'), 800);
+        if (!result) return;
+        loadNativeAd('ad-slot-above-result');
+        const timer = setTimeout(() => loadNativeAd('ad-slot-below-result'), 600);
         return () => clearTimeout(timer);
-    }, [hasStartedDownload]);
+    }, [result]);
 
     const downloadFile = (fileUrl, fileName) => {
         if (!fileUrl) return;
@@ -286,9 +286,9 @@ export default function Downloader(props) {
             setResult(res);
 
             setTimeout(() => {
-                const el = document.getElementById('result-area');
+                const el = document.getElementById('ad-slot-above-result') || document.getElementById('result-area');
                 if (el) {
-                    const offset = el.getBoundingClientRect().top + window.scrollY - 20; // Changed from -100 to -20
+                    const offset = el.getBoundingClientRect().top + window.scrollY - 12;
                     window.scrollTo({ top: offset, behavior: "smooth" });
                 }
             }, 500);
@@ -354,24 +354,26 @@ export default function Downloader(props) {
                     </div>
                 </div>
 
-                {/* ─── Native Banner Ad: Below URL Input ─── */}
+                <button id="download-btn" onClick={handleDownload} disabled={loading}>
+                    <i className="fas fa-download"></i> {t('btn_download', "Download Now")}
+                </button>
+
+                {/* ─── Native Banner Ad: Below URL Input (4:1 ratio) ─── */}
                 <div
                     id="ad-slot-below-input"
                     style={{
                         width: '100%',
+                        aspectRatio: '4 / 1',
                         minHeight: '90px',
-                        margin: '10px 0',
+                        margin: '14px 0 0',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                         overflow: 'hidden',
                         borderRadius: '10px',
+                        background: 'rgba(255,255,255,0.02)',
                     }}
                 />
-
-                <button id="download-btn" onClick={handleDownload} disabled={loading}>
-                    <i className="fas fa-download"></i> {t('btn_download', "Download Now")}
-                </button>
             </div>
 
             <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
@@ -383,23 +385,6 @@ export default function Downloader(props) {
                 )}
 
                 <div id="result-area" role="region" aria-live="polite">
-
-                {/* ─── Native Banner Ad: Above Loading Indicator ─── */}
-                {hasStartedDownload && (
-                    <div
-                        id="ad-slot-above-loader"
-                        style={{
-                            width: '100%',
-                            minHeight: '90px',
-                            margin: '0 0 14px 0',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            overflow: 'hidden',
-                            borderRadius: '10px',
-                        }}
-                    />
-                )}
 
                 {loading && (
                     <div className="skeleton-loading-card">
@@ -421,28 +406,30 @@ export default function Downloader(props) {
                     </div>
                 )}
 
-                {/* ─── Native Banner Ad: Below Loading Indicator ─── */}
-                {hasStartedDownload && (
-                    <div
-                        id="ad-slot-below-loader"
-                        style={{
-                            width: '100%',
-                            minHeight: '90px',
-                            margin: '14px 0',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            overflow: 'hidden',
-                            borderRadius: '10px',
-                        }}
-                    />
-                )}
-
                 {error && (
                     <div className="error-banner">
                         <i className="fas fa-exclamation-circle"></i>
                         <span>{error}</span>
                     </div>
+                )}
+
+                {/* ─── Native Banner Ad: Above Result Card (4:1 ratio) ─── */}
+                {result && (
+                    <div
+                        id="ad-slot-above-result"
+                        style={{
+                            width: '100%',
+                            aspectRatio: '4 / 1',
+                            minHeight: '90px',
+                            margin: '0 0 14px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            overflow: 'hidden',
+                            borderRadius: '10px',
+                            background: 'rgba(255,255,255,0.02)',
+                        }}
+                    />
                 )}
 
                 {result && (
@@ -552,6 +539,26 @@ export default function Downloader(props) {
                         </div>
                     </div>
                 )}
+
+                {/* ─── Native Banner Ad: Below Result Card (4:1 ratio) ─── */}
+                {result && (
+                    <div
+                        id="ad-slot-below-result"
+                        style={{
+                            width: '100%',
+                            aspectRatio: '4 / 1',
+                            minHeight: '90px',
+                            margin: '14px 0 0',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            overflow: 'hidden',
+                            borderRadius: '10px',
+                            background: 'rgba(255,255,255,0.02)',
+                        }}
+                    />
+                )}
+
                 </div>
             </div>
         </div>
