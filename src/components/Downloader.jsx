@@ -25,6 +25,9 @@ export default function Downloader(props) {
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
     const resultRef = useRef(null);
+    const [downloadPending, setDownloadPending] = useState(null);
+    const [countdown, setCountdown] = useState(0);
+    const COUNTDOWN_DURATION = 5;
 
     // --- دالة تنظيف وتسمية الملفات ---
     const sanitizeName = (name) => {
@@ -65,22 +68,24 @@ export default function Downloader(props) {
     };
 
 
-    const downloadFile = (fileUrl, fileName) => {
+    // Internal: executes the actual file download (called after countdown finishes or on skip)
+    const executeDownload = (fileUrl, fileName) => {
         if (!fileUrl) return;
-
-        // Open Smartlink immediately — must be called directly from click (browsers block delayed window.open)
-        if (SMART_LINK) window.open(SMART_LINK, '_blank');
-
-        // Use server-side streaming proxy for immediate start and custom naming
         const downloadUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName)}`;
-
-        // Trigger download via hidden <a> tag (smoother experience)
         const link = document.createElement('a');
         link.href = downloadUrl;
         link.setAttribute('download', fileName);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+    };
+
+    // Public: opens Smartlink immediately (user gesture) then shows countdown interstitial
+    const initiateDownload = (fileUrl, fileName) => {
+        if (!fileUrl) return;
+        if (SMART_LINK) window.open(SMART_LINK, '_blank');
+        setDownloadPending({ fileUrl, fileName });
+        setCountdown(COUNTDOWN_DURATION);
     };
 
     // Robust Ad Loading to ensure counting across SPA navigations
@@ -156,6 +161,18 @@ export default function Downloader(props) {
             return () => clearTimeout(timer);
         }
     }, [result]);
+
+    // Countdown interstitial timer
+    useEffect(() => {
+        if (!downloadPending) return;
+        if (countdown > 0) {
+            const timer = setTimeout(() => setCountdown(c => c - 1), 1000);
+            return () => clearTimeout(timer);
+        } else {
+            executeDownload(downloadPending.fileUrl, downloadPending.fileName);
+            setDownloadPending(null);
+        }
+    }, [countdown, downloadPending]);
 
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
@@ -439,20 +456,20 @@ export default function Downloader(props) {
                             <div ref={resultRef} id="result-buttons" className="result-buttons">
                                 {(!mode || mode === 'video') && videoUrl && !images && (
                                     <>
-                                        <button className="btn-download btn-video" onClick={() => downloadFile(videoUrl, generateProName(result.author, 'mp4'))} disabled={downloadingUrl === videoUrl}>
-                                            {downloadingUrl === videoUrl ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-check-circle"></i>}
+                                        <button className="btn-download btn-video" onClick={() => initiateDownload(videoUrl, generateProName(result.author, 'mp4'))}>
+                                            <i className="fas fa-check-circle"></i>
                                             {t('download_nwm', "Download No Watermark")}
                                         </button>
-                                        <button className="btn-download btn-hd" onClick={() => downloadFile(videoUrl, generateProName(result.author + '_HD', 'mp4'))} disabled={downloadingUrl === videoUrl}>
-                                            {downloadingUrl === videoUrl ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-crown"></i>}
+                                        <button className="btn-download btn-hd" onClick={() => initiateDownload(videoUrl, generateProName(result.author + '_HD', 'mp4'))}>
+                                            <i className="fas fa-crown"></i>
                                             {t('download_hd', "Download HD 1080p")}
                                         </button>
                                     </>
                                 )}
 
                                 {mode === 'mp3' && musicUrl && (
-                                    <button className="btn-download btn-audio" onClick={() => downloadFile(musicUrl, generateProName(result.author, 'mp3'))} disabled={downloadingUrl === musicUrl}>
-                                        {downloadingUrl === musicUrl ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-music"></i>}
+                                    <button className="btn-download btn-audio" onClick={() => initiateDownload(musicUrl, generateProName(result.author, 'mp3'))}>
+                                        <i className="fas fa-music"></i>
                                         {t('download_audio', "Download MP3 Audio")}
                                     </button>
                                 )}
@@ -460,11 +477,11 @@ export default function Downloader(props) {
                                 {mode === 'story' && (
                                     <>
                                         {videoUrl ? (
-                                            <button className="btn-download btn-video" onClick={() => downloadFile(videoUrl, generateProName(result.author, 'mp4', 'story'))}>
+                                            <button className="btn-download btn-video" onClick={() => initiateDownload(videoUrl, generateProName(result.author, 'mp4', 'story'))}>
                                                 <i className="fas fa-history"></i> {t('download_story_vid', "Download Story (Video)")}
                                             </button>
                                         ) : (images && images.length > 0) ? (
-                                            <button className="btn-download btn-sm" style={{ width: '100%' }} onClick={() => downloadFile(images[0], generateProName(result.author, 'jpg', 'story'))}>
+                                            <button className="btn-download btn-sm" style={{ width: '100%' }} onClick={() => initiateDownload(images[0], generateProName(result.author, 'jpg', 'story'))}>
                                                 <i className="fas fa-image"></i> {t('download_story_img', "Download Story (Image)")}
                                             </button>
                                         ) : null}
@@ -508,7 +525,7 @@ export default function Downloader(props) {
                                                 />
                                                 <button className="btn-download btn-sm"
                                                     style={{ fontSize: '0.85rem', width: '100%', marginTop: '5px' }}
-                                                    onClick={() => downloadFile(img, generateProName(result.author, 'jpg', `slide_${index + 1}`))}>
+                                                    onClick={() => initiateDownload(img, generateProName(result.author, 'jpg', `slide_${index + 1}`))}>
                                                     <i className="fas fa-download"></i> {t('save_image', "Save Image")}
                                                 </button>
                                             </div>
@@ -522,6 +539,68 @@ export default function Downloader(props) {
 
                 </div>
             </div>
+
+            {/* ── Countdown Interstitial Modal ── */}
+            {downloadPending && (
+                <div style={{
+                    position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+                    background: 'rgba(0,0,0,0.88)', backdropFilter: 'blur(10px)',
+                    zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+                    <div style={{
+                        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)',
+                        borderRadius: '24px', padding: '40px 32px', textAlign: 'center',
+                        border: '1px solid rgba(255,255,255,0.12)', maxWidth: '340px', width: '90%',
+                        boxShadow: '0 30px 80px rgba(0,0,0,0.6)'
+                    }}>
+                        <i className="fab fa-tiktok" style={{ fontSize: '2.2rem', color: '#00F2EA', marginBottom: '14px', display: 'block' }}></i>
+                        <p style={{ color: '#fff', fontSize: '1.1rem', fontWeight: 700, marginBottom: '6px' }}>
+                            {t('preparing_download', 'Preparing your download...')}
+                        </p>
+                        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem', marginBottom: '28px' }}>
+                            {t('countdown_msg', 'File will download automatically')}
+                        </p>
+
+                        {/* SVG Circular Countdown */}
+                        <div style={{ position: 'relative', width: '110px', height: '110px', margin: '0 auto 26px' }}>
+                            <svg width="110" height="110" style={{ transform: 'rotate(-90deg)' }}>
+                                <defs>
+                                    <linearGradient id="cdGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stopColor="#FF0050" />
+                                        <stop offset="100%" stopColor="#00F2EA" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="55" cy="55" r="44" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="7" />
+                                <circle
+                                    cx="55" cy="55" r="44" fill="none"
+                                    stroke="url(#cdGrad)" strokeWidth="7" strokeLinecap="round"
+                                    strokeDasharray="276.5"
+                                    strokeDashoffset={276.5 * (1 - countdown / COUNTDOWN_DURATION)}
+                                    style={{ transition: 'stroke-dashoffset 0.9s linear' }}
+                                />
+                            </svg>
+                            <div style={{
+                                position: 'absolute', top: '50%', left: '50%',
+                                transform: 'translate(-50%, -50%)',
+                                fontSize: '2.4rem', fontWeight: 800, color: '#fff', lineHeight: 1
+                            }}>{countdown}</div>
+                        </div>
+
+                        <button
+                            onClick={() => { executeDownload(downloadPending.fileUrl, downloadPending.fileName); setDownloadPending(null); }}
+                            style={{
+                                background: 'linear-gradient(45deg, #FF0050, #00F2EA)',
+                                border: 'none', borderRadius: '14px', padding: '13px 0',
+                                color: '#fff', fontSize: '1rem', fontWeight: 700,
+                                cursor: 'pointer', width: '100%', letterSpacing: '0.3px'
+                            }}
+                        >
+                            <i className="fas fa-download" style={{ marginRight: '8px' }}></i>
+                            {t('skip_download', 'Skip & Download Now')}
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

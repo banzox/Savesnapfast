@@ -1,5 +1,21 @@
 import type { APIRoute } from 'astro';
 
+// TikTok CDN domains whitelist — prevents proxy abuse for non-TikTok content
+const ALLOWED_DOMAINS = [
+    'tiktokcdn.com', 'tiktokcdn-us.com', 'tiktok.com',
+    'akamaized.net', 'snssdk.com', 'muscdn.com',
+    'byteoversea.com', 'ibytedtos.com', 'ttwstatic.com', 'pstatp.com'
+];
+
+const isAllowedUrl = (url: string): boolean => {
+    try {
+        const { hostname } = new URL(url);
+        return ALLOWED_DOMAINS.some(domain => hostname === domain || hostname.endsWith(`.${domain}`));
+    } catch {
+        return false;
+    }
+};
+
 const USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -21,6 +37,10 @@ export const GET: APIRoute = async ({ request }) => {
 
     if (!fileUrl) {
         return new Response('Missing URL parameter', { status: 400 });
+    }
+
+    if (!isAllowedUrl(fileUrl)) {
+        return new Response('Forbidden: URL not from an allowed domain', { status: 403 });
     }
 
     try {
