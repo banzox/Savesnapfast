@@ -21,10 +21,9 @@ export default function Downloader(props) {
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
     const [zipping, setZipping] = useState(false);
-    const [downloadingUrl, setDownloadingUrl] = useState(null); // New: Tracks individual file downloads
+    const [downloadingUrl, setDownloadingUrl] = useState(null);
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
-    const [hasStartedDownload, setHasStartedDownload] = useState(false);
     const resultRef = useRef(null);
 
     // --- دالة تنظيف وتسمية الملفات ---

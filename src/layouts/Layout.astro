@@ -85,6 +85,7 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
             crossorigin
         />
         <link rel="preconnect" href="https://ferocitycandour.com" crossorigin />
+        <link rel="preconnect" href="https://pl28502619.effectivegatecpm.com" crossorigin />
 
         <!-- Font Awesome - Optimized subsets for better performance -->
         <link
@@ -329,12 +330,21 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
         <!-- Re-inject Popunder after Astro View Transitions (page swap resets click listeners) -->
         <script is:inline>
             document.addEventListener('astro:after-swap', () => {
-                const old = document.querySelector('script[src*="69449082ba48897a611fdb5f17c66001"]');
-                if (old) old.remove();
-                const s = document.createElement('script');
-                s.setAttribute('data-cfasync', 'false');
-                s.src = 'https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js';
-                document.body.appendChild(s);
+                // Re-inject Popunder
+                const oldPop = document.querySelector('script[src*="69449082ba48897a611fdb5f17c66001"]');
+                if (oldPop) oldPop.remove();
+                const pop = document.createElement('script');
+                pop.setAttribute('data-cfasync', 'false');
+                pop.src = 'https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js';
+                document.body.appendChild(pop);
+
+                // Re-inject Social Bar (removed by ViewTransitions body swap)
+                const oldBar = document.querySelector('script[src*="403009a90d32a66dcba80b1e5510e001"]');
+                if (oldBar) oldBar.remove();
+                const bar = document.createElement('script');
+                bar.setAttribute('data-cfasync', 'false');
+                bar.src = 'https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js';
+                document.body.appendChild(bar);
             });
         </script>
     </body>

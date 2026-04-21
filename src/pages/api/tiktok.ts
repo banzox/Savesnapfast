@@ -28,6 +28,12 @@ export const POST: APIRoute = async ({ request }) => {
         return new Response(null, { headers: CORS_HEADERS });
     }
 
+    // التحقق من وجود المفتاح في Environment Variables
+    const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
+    if (!RAPIDAPI_KEY) {
+        return jsonResponse({ error: "Service temporarily unavailable" }, 503);
+    }
+
     try {
         const body = await request.json();
         let videoUrl = body.url;
@@ -56,11 +62,11 @@ export const POST: APIRoute = async ({ request }) => {
             }
         }
 
-        // استخدام RapidAPI المرفوع من قبلك بالحرف الواحد
+        // استخدام RapidAPI
         const res = await fetch(`https://tiktok-data-srapper.p.rapidapi.com/api/v1/tiktok/video?url=${encodeURIComponent(videoUrl)}`, {
             method: "GET",
             headers: {
-                "x-rapidapi-key": process.env.RAPIDAPI_KEY || "3e57b80e46mshe510b59abca6429p1875adjsne7df30921005",
+                "x-rapidapi-key": RAPIDAPI_KEY,
                 "x-rapidapi-host": "tiktok-data-srapper.p.rapidapi.com",
                 "Content-Type": "application/json"
             }
