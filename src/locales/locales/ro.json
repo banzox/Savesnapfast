@@ -52,7 +52,10 @@
     "preparing_download": "Se pregătește fișierul...",
     "countdown_msg": "Descărcarea va începe automat",
     "modal_ad_text": "Ofertă specială pentru tine — atinge pentru a o revendica!",
-    "skip_download": "Sari și Descarcă Acum"
+    "skip_download": "Sari și Descarcă Acum",
+    "download_another": "Descarcă alt videoclip",
+    "thank_you_title": "Descărcarea a început!",
+    "thank_you_msg": "Verifică folderul de descărcări"
   },
   "faq": {
     "title": "Întrebări Frecvente (FAQ)",

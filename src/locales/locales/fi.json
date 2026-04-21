@@ -52,7 +52,10 @@
     "preparing_download": "Valmistellaan tiedostoasi...",
     "countdown_msg": "Lataus alkaa automaattisesti",
     "modal_ad_text": "Erikoistarjous juuri sinulle — napauta lunastaksesi!",
-    "skip_download": "Ohita ja lataa nyt"
+    "skip_download": "Ohita ja lataa nyt",
+    "download_another": "Lataa toinen video",
+    "thank_you_title": "Lataus aloitettu!",
+    "thank_you_msg": "Tarkista latauskansiosi"
   },
   "faq": {
     "title": "Usein kysytyt kysymykset (UKK)",

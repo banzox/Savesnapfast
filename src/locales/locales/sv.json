@@ -52,7 +52,10 @@
     "preparing_download": "Förbereder din fil...",
     "countdown_msg": "Nedladdningen startar automatiskt",
     "modal_ad_text": "Specialerbjudande bara för dig — tryck för att hämta!",
-    "skip_download": "Hoppa över och Ladda Ner nu"
+    "skip_download": "Hoppa över och Ladda Ner nu",
+    "download_another": "Ladda ner en annan video",
+    "thank_you_title": "Nedladdning startad!",
+    "thank_you_msg": "Kolla din nedladdningsmapp"
   },
   "faq": {
     "title": "Vanliga Frågor (FAQ)",

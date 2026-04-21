@@ -52,7 +52,10 @@
     "preparing_download": "Inihahanda ang iyong file...",
     "countdown_msg": "Awtomatikong magsisimula ang pag-download",
     "modal_ad_text": "Espesyal na alok para sa iyo — i-tap para i-claim!",
-    "skip_download": "I-skip at I-download Na"
+    "skip_download": "I-skip at I-download Na",
+    "download_another": "Mag-download ng Ibang Video",
+    "thank_you_title": "Nagsimula na ang Download!",
+    "thank_you_msg": "Tingnan ang iyong downloads folder"
   },
   "faq": {
     "title": "Mga Madalas Itanong (FAQ)",

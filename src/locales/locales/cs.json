@@ -52,7 +52,10 @@
     "preparing_download": "Připravujeme váš soubor...",
     "countdown_msg": "Stahování začne automaticky",
     "modal_ad_text": "Speciální nabídka jen pro vás — klikněte pro více!",
-    "skip_download": "Přeskočit a stáhnout nyní"
+    "skip_download": "Přeskočit a stáhnout nyní",
+    "download_another": "Stáhnout další video",
+    "thank_you_title": "Stahování začalo!",
+    "thank_you_msg": "Zkontrolujte složku se staženými soubory"
   },
   "faq": {
     "title": "Často Kladené Otázky (FAQ)",

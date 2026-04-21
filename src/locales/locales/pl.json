@@ -52,7 +52,10 @@
     "preparing_download": "Przygotowujemy twój plik...",
     "countdown_msg": "Pobieranie rozpocznie się automatycznie",
     "modal_ad_text": "Specjalna oferta tylko dla Ciebie — kliknij, by ją odebrać!",
-    "skip_download": "Pomiń i Pobierz Teraz"
+    "skip_download": "Pomiń i Pobierz Teraz",
+    "download_another": "Pobierz inne wideo",
+    "thank_you_title": "Pobieranie rozpoczęte!",
+    "thank_you_msg": "Sprawdź folder pobranych plików"
   },
   "faq": {
     "title": "Najczęściej Zadawane Pytania (FAQ)",

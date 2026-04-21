@@ -52,7 +52,10 @@
     "preparing_download": "Preparing your download...",
     "countdown_msg": "File will download automatically",
     "modal_ad_text": "Special offer just for you — tap to claim!",
-    "skip_download": "Skip & Download Now"
+    "skip_download": "Skip & Download Now",
+    "download_another": "Download Another Video",
+    "thank_you_title": "Download Started!",
+    "thank_you_msg": "Check your downloads folder"
   },
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",

@@ -52,7 +52,10 @@
     "preparing_download": "Menyediakan fail anda...",
     "countdown_msg": "Muat turun akan bermula secara automatik",
     "modal_ad_text": "Tawaran istimewa untuk anda — ketik untuk tuntut!",
-    "skip_download": "Langkau & Muat Turun Sekarang"
+    "skip_download": "Langkau & Muat Turun Sekarang",
+    "download_another": "Muat Turun Video Lain",
+    "thank_you_title": "Muat Turun Bermula!",
+    "thank_you_msg": "Semak folder muat turun anda"
   },
   "faq": {
     "title": "Soalan Lazim (FAQ)",

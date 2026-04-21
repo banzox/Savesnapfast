@@ -52,7 +52,10 @@
     "preparing_download": "Dosyanız hazırlanıyor...",
     "countdown_msg": "İndirme otomatik olarak başlayacak",
     "modal_ad_text": "Sana özel teklif — almak için dokun!",
-    "skip_download": "Atla ve Şimdi İndir"
+    "skip_download": "Atla ve Şimdi İndir",
+    "download_another": "Başka Bir Video İndir",
+    "thank_you_title": "İndirme Başladı!",
+    "thank_you_msg": "İndirmeler klasörünüzü kontrol edin"
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular (SSS)",

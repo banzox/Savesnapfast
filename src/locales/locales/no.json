@@ -52,7 +52,10 @@
     "preparing_download": "Forbereder filen din...",
     "countdown_msg": "Nedlastingen starter automatisk",
     "modal_ad_text": "Spesialtilbud bare for deg — trykk for å kreve det!",
-    "skip_download": "Hopp over og last ned nå"
+    "skip_download": "Hopp over og last ned nå",
+    "download_another": "Last ned en annen video",
+    "thank_you_title": "Nedlasting startet!",
+    "thank_you_msg": "Sjekk nedlastingsmappen din"
   },
   "faq": {
     "title": "Ofte stilte spørsmål (FAQ)",

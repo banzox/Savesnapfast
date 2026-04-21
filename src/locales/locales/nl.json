@@ -52,7 +52,10 @@
     "preparing_download": "Je bestand wordt voorbereid...",
     "countdown_msg": "Download start automatisch",
     "modal_ad_text": "Speciaal aanbod voor jou — tik om te claimen!",
-    "skip_download": "Overslaan & Nu Downloaden"
+    "skip_download": "Overslaan & Nu Downloaden",
+    "download_another": "Nog een video downloaden",
+    "thank_you_title": "Download gestart!",
+    "thank_you_msg": "Controleer je downloadsmap"
   },
   "faq": {
     "title": "Veelgestelde Vragen (FAQ)",

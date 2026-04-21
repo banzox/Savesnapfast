@@ -52,7 +52,10 @@
     "preparing_download": "Forbereder din fil...",
     "countdown_msg": "Downloaden starter automatisk",
     "modal_ad_text": "Specialtilbud til dig — tryk for at kræve det!",
-    "skip_download": "Spring over og download nu"
+    "skip_download": "Spring over og download nu",
+    "download_another": "Download en anden video",
+    "thank_you_title": "Download startet!",
+    "thank_you_msg": "Tjek din downloadmappe"
   },
   "faq": {
     "title": "Ofte stillede spørgsmål (FAQ)",

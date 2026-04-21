@@ -52,7 +52,10 @@
     "preparing_download": "Deine Datei wird vorbereitet...",
     "countdown_msg": "Download startet automatisch",
     "modal_ad_text": "Exklusives Angebot für dich — jetzt ansehen!",
-    "skip_download": "Überspringen & Jetzt downloaden"
+    "skip_download": "Überspringen & Jetzt downloaden",
+    "download_another": "Anderes Video herunterladen",
+    "thank_you_title": "Download gestartet!",
+    "thank_you_msg": "Überprüfe deinen Download-Ordner"
   },
   "faq": {
     "title": "Häufig gestellte Fragen (FAQ)",

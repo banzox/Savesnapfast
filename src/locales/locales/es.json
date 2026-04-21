@@ -52,7 +52,10 @@
     "preparing_download": "Preparando tu archivo...",
     "countdown_msg": "La descarga comenzará automáticamente",
     "modal_ad_text": "¡Oferta especial para ti — toca para reclamar!",
-    "skip_download": "Omitir y Descargar Ahora"
+    "skip_download": "Omitir y Descargar Ahora",
+    "download_another": "Descargar otro video",
+    "thank_you_title": "¡Descarga iniciada!",
+    "thank_you_msg": "Revisa tu carpeta de descargas"
   },
   "faq": {
     "title": "Preguntas Frecuentes (FAQ)",

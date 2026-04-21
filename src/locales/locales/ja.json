@@ -52,7 +52,10 @@
     "preparing_download": "ファイルを準備しています...",
     "countdown_msg": "ダウンロードが自動的に開始されます",
     "modal_ad_text": "あなただけの特別オファー — タップして入手！",
-    "skip_download": "スキップして今すぐダウンロード"
+    "skip_download": "スキップして今すぐダウンロード",
+    "download_another": "別の動画をダウンロード",
+    "thank_you_title": "ダウンロード開始！",
+    "thank_you_msg": "ダウンロードフォルダを確認してください"
   },
   "faq": {
     "title": "よくある質問（FAQ）",

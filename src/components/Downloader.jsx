@@ -27,6 +27,7 @@ export default function Downloader(props) {
     const resultRef = useRef(null);
     const [downloadPending, setDownloadPending] = useState(null);
     const [countdown, setCountdown] = useState(0);
+    const [downloadComplete, setDownloadComplete] = useState(false);
 
     // --- دالة تنظيف وتسمية الملفات ---
     const sanitizeName = (name) => {
@@ -77,6 +78,7 @@ export default function Downloader(props) {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        setDownloadComplete(true); // Show Thank You toast
     };
 
     // Public: opens Smartlink immediately (user gesture) then shows countdown interstitial
@@ -178,6 +180,13 @@ export default function Downloader(props) {
         // Cleanup on unmount (e.g. SPA page navigation)
         return () => { document.body.style.overflow = ''; };
     }, [countdown, downloadPending]);
+
+    // Auto-dismiss Thank You toast after 8 seconds
+    useEffect(() => {
+        if (!downloadComplete) return;
+        const timer = setTimeout(() => setDownloadComplete(false), 8000);
+        return () => clearTimeout(timer);
+    }, [downloadComplete]);
 
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
@@ -515,6 +524,23 @@ export default function Downloader(props) {
                                 )}
                             </div>
 
+                            {/* ── Download Another Button ── */}
+                            <button
+                                onClick={() => { setResult(null); setUrl(''); setError(null); setDownloadComplete(false); }}
+                                style={{
+                                    width: '100%', marginTop: '10px',
+                                    background: 'rgba(255,255,255,0.05)',
+                                    border: '1px solid rgba(255,255,255,0.1)',
+                                    borderRadius: '12px', padding: '10px 0',
+                                    color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem', fontWeight: 600,
+                                    cursor: 'pointer', display: 'flex', alignItems: 'center',
+                                    justifyContent: 'center', gap: '8px'
+                                }}
+                            >
+                                <i className="fas fa-redo"></i>
+                                {t('download_another', 'Download Another Video')}
+                            </button>
+
                             {(mode === 'slideshow' || (mode === 'video' && images)) && images && (
                                 <div className="slideshow-container" style={{ marginTop: '0px' }}>
                                     <div className="slideshow-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '10px' }}>
@@ -544,6 +570,41 @@ export default function Downloader(props) {
 
                 </div>
             </div>
+
+            {/* ── Thank You Toast ── */}
+            {downloadComplete && (
+                <div style={{
+                    position: 'fixed', bottom: '24px', left: '50%', transform: 'translateX(-50%)',
+                    background: 'linear-gradient(135deg, #0d1b2a, #1a2f45)',
+                    border: '1px solid rgba(0,242,234,0.35)',
+                    borderRadius: '18px', padding: '14px 18px',
+                    zIndex: 8888, display: 'flex', alignItems: 'center', gap: '14px',
+                    maxWidth: '440px', width: '92%',
+                    boxShadow: '0 20px 60px rgba(0,0,0,0.55)'
+                }}>
+                    <span style={{ fontSize: '1.8rem', flexShrink: 0 }}>🎉</span>
+                    <div style={{ flex: 1 }}>
+                        <p style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 700, margin: '0 0 2px' }}>
+                            {t('thank_you_title', 'Download Started!')}
+                        </p>
+                        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.78rem', margin: 0 }}>
+                            {t('thank_you_msg', 'Check your downloads folder')}
+                        </p>
+                    </div>
+                    <button
+                        onClick={() => { setResult(null); setUrl(''); setError(null); setDownloadComplete(false); }}
+                        style={{
+                            background: 'linear-gradient(45deg, #FF0050, #00F2EA)',
+                            border: 'none', borderRadius: '10px', padding: '8px 12px',
+                            color: '#fff', fontSize: '0.78rem', fontWeight: 700,
+                            cursor: 'pointer', flexShrink: 0, whiteSpace: 'nowrap'
+                        }}
+                    >
+                        <i className="fas fa-redo" style={{ marginRight: '5px' }}></i>
+                        {t('download_another', 'Try Another')}
+                    </button>
+                </div>
+            )}
 
             {/* ── Countdown Interstitial Modal ── */}
             {downloadPending && (

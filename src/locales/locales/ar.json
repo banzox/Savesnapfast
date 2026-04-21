@@ -52,7 +52,10 @@
     "preparing_download": "جارٍ تحضير ملفك...",
     "countdown_msg": "سيبدأ التحميل تلقائياً",
     "modal_ad_text": "عرض حصري لك — انقر للمطالبة!",
-    "skip_download": "تخطَّ وحمِّل الآن"
+    "skip_download": "تخطَّ وحمِّل الآن",
+    "download_another": "تحميل فيديو آخر",
+    "thank_you_title": "بدأ التحميل!",
+    "thank_you_msg": "تحقق من مجلد التنزيلات الخاصة بك"
   },
   "faq": {
     "title": "الأسئلة الشائعة",

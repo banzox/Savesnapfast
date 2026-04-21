@@ -52,7 +52,10 @@
     "preparing_download": "A fájlod előkészítése...",
     "countdown_msg": "A letöltés automatikusan indul",
     "modal_ad_text": "Különleges ajánlat neked — kattints a részletekért!",
-    "skip_download": "Kihagyás és Letöltés most"
+    "skip_download": "Kihagyás és Letöltés most",
+    "download_another": "Másik videó letöltése",
+    "thank_you_title": "Letöltés elindítva!",
+    "thank_you_msg": "Ellenőrizd a letöltések mappát"
   },
   "faq": {
     "title": "Gyakran Ismételt Kérdések (GYIK)",

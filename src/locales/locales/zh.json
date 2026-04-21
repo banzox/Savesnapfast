@@ -52,7 +52,10 @@
     "preparing_download": "正在准备您的文件...",
     "countdown_msg": "下载将自动开始",
     "modal_ad_text": "专属特别优惠 — 点击立即领取！",
-    "skip_download": "跳过并立即下载"
+    "skip_download": "跳过并立即下载",
+    "download_another": "下载另一个视频",
+    "thank_you_title": "下载已开始！",
+    "thank_you_msg": "请检查您的下载文件夹"
   },
   "faq": {
     "title": "常见问题 (FAQ)",

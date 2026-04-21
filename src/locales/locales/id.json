@@ -52,7 +52,10 @@
     "preparing_download": "Menyiapkan file Anda...",
     "countdown_msg": "Unduhan akan dimulai secara otomatis",
     "modal_ad_text": "Penawaran spesial untukmu — tap untuk klaim!",
-    "skip_download": "Lewati & Unduh Sekarang"
+    "skip_download": "Lewati & Unduh Sekarang",
+    "download_another": "Unduh Video Lain",
+    "thank_you_title": "Unduhan Dimulai!",
+    "thank_you_msg": "Periksa folder unduhan Anda"
   },
   "faq": {
     "title": "Pertanyaan yang Sering Diajukan (FAQ)",
