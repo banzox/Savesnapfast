@@ -125,8 +125,8 @@ export default function Downloader(props) {
         const target = document.getElementById(targetId);
         if (!target) return;
 
-        // Add 180px top spacing so the scroll stops higher up (lifting the result down to show the ad)
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 180;
+        // Add 220px top spacing to frame the ad perfectly without clipping its top edge
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 220;
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
         let startTime = null;
