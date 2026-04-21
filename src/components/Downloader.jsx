@@ -86,27 +86,15 @@ export default function Downloader(props) {
         }, 1000);
     };
 
-    // Robust Ad Loading to ensure counting
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-        
-        // Ensure script is injected only once
-        if (!document.querySelector('script[src*="ferocitycandour.com"]')) {
-            const script = document.createElement('script');
-            script.async = true;
-            script.setAttribute('data-cfasync', 'false');
-            script.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
-            document.body.appendChild(script);
-        }
-    }, []);
+
 
     // Reliable Scroll to results
     useEffect(() => {
         if (result && resultRef.current) {
             const timer = setTimeout(() => {
-                // Use scrollIntoView with block start for precision
-                resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 800); // 800ms to allow ad to potentially start rendering/occupying space
+                // Use scrollIntoView with block center to show both the buttons and the ad above them
+                resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 600); // 600ms is perfectly timed for layout settlement
             return () => clearTimeout(timer);
         }
     }, [result]);
