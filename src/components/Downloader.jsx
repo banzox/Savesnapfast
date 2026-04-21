@@ -161,25 +161,16 @@ export default function Downloader(props) {
         }
     }, [result]);
 
-    // Countdown interstitial timer + inject ad into modal on open
+    // Countdown interstitial timer + body scroll lock
     useEffect(() => {
-        if (!downloadPending) return;
-
-        // On modal open (countdown = COUNTDOWN_DURATION): inject ad into the modal slot
-        if (countdown === COUNTDOWN_DURATION) {
-            const slot = document.getElementById('modal-ad-slot');
-            if (slot && !slot.dataset.loaded) {
-                slot.dataset.loaded = 'true';
-                const adDiv = document.createElement('div');
-                adDiv.id = 'container-modal-2d1b844';
-                slot.appendChild(adDiv);
-                const adScript = document.createElement('script');
-                adScript.async = true;
-                adScript.setAttribute('data-cfasync', 'false');
-                adScript.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
-                slot.appendChild(adScript);
-            }
+        if (!downloadPending) {
+            // Restore scroll when modal closes
+            document.body.style.overflow = '';
+            return;
         }
+
+        // Lock scroll when modal is open
+        document.body.style.overflow = 'hidden';
 
         if (countdown > 0) {
             const timer = setTimeout(() => setCountdown(c => c - 1), 1000);
@@ -568,8 +559,23 @@ export default function Downloader(props) {
                         background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)',
                         borderRadius: '24px', padding: '28px 24px', textAlign: 'center',
                         border: '1px solid rgba(255,255,255,0.12)', maxWidth: '500px', width: '100%',
-                        boxShadow: '0 30px 80px rgba(0,0,0,0.7)'
+                        boxShadow: '0 30px 80px rgba(0,0,0,0.7)', position: 'relative'
                     }}>
+
+                        {/* ─ X Close Button ─ */}
+                        <button
+                            onClick={() => setDownloadPending(null)}
+                            style={{
+                                position: 'absolute', top: '14px', right: '16px',
+                                background: 'rgba(255,255,255,0.08)', border: 'none',
+                                borderRadius: '50%', width: '32px', height: '32px',
+                                color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem',
+                                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center'
+                            }}
+                            title="Cancel"
+                        >
+                            <i className="fas fa-times"></i>
+                        </button>
 
                         {/* ─ Alert: Check the new tab ─ */}
                         <div style={{
@@ -584,9 +590,8 @@ export default function Downloader(props) {
                             </p>
                         </div>
 
-                        {/* ─ Title + Countdown row ─ */}
+                        {/* ─ Countdown row ─ */}
                         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px' }}>
-                            {/* SVG Circular Countdown */}
                             <div style={{ position: 'relative', width: '90px', height: '90px', flexShrink: 0 }}>
                                 <svg width="90" height="90" style={{ transform: 'rotate(-90deg)' }}>
                                     <defs>
@@ -610,7 +615,6 @@ export default function Downloader(props) {
                                     fontSize: '2rem', fontWeight: 800, color: '#fff', lineHeight: 1
                                 }}>{countdown}</div>
                             </div>
-
                             <div style={{ textAlign: 'left', flex: 1 }}>
                                 <p style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, marginBottom: '4px' }}>
                                     {t('preparing_download', 'Preparing your download...')}
@@ -621,14 +625,26 @@ export default function Downloader(props) {
                             </div>
                         </div>
 
-                        {/* ─ Native Ad inside modal ─ */}
-                        <div id="modal-ad-slot" style={{
-                            width: '100%', minHeight: '120px',
-                            borderRadius: '12px', marginBottom: '18px',
-                            background: 'rgba(255,255,255,0.03)',
-                            border: '1px dashed rgba(255,255,255,0.08)',
-                            overflow: 'hidden'
-                        }} />
+                        {/* ─ Smartlink Sponsored Banner ─ */}
+                        <a
+                            href={SMART_LINK}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                display: 'block', width: '100%', marginBottom: '16px',
+                                background: 'linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.08))',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px', padding: '14px 16px',
+                                textDecoration: 'none', cursor: 'pointer'
+                            }}
+                        >
+                            <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '1px', margin: '0 0 6px' }}>
+                                Sponsored
+                            </p>
+                            <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: 0 }}>
+                                🎁 {t('modal_ad_text', 'Special offer just for you — tap to claim!')}
+                            </p>
+                        </a>
 
                         <button
                             onClick={() => { executeDownload(downloadPending.fileUrl, downloadPending.fileName); setDownloadPending(null); }}
