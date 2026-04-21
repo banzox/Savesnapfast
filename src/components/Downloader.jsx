@@ -161,9 +161,26 @@ export default function Downloader(props) {
         }
     }, [result]);
 
-    // Countdown interstitial timer
+    // Countdown interstitial timer + inject ad into modal on open
     useEffect(() => {
         if (!downloadPending) return;
+
+        // On modal open (countdown = COUNTDOWN_DURATION): inject ad into the modal slot
+        if (countdown === COUNTDOWN_DURATION) {
+            const slot = document.getElementById('modal-ad-slot');
+            if (slot && !slot.dataset.loaded) {
+                slot.dataset.loaded = 'true';
+                const adDiv = document.createElement('div');
+                adDiv.id = 'container-modal-2d1b844';
+                slot.appendChild(adDiv);
+                const adScript = document.createElement('script');
+                adScript.async = true;
+                adScript.setAttribute('data-cfasync', 'false');
+                adScript.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+                slot.appendChild(adScript);
+            }
+        }
+
         if (countdown > 0) {
             const timer = setTimeout(() => setCountdown(c => c - 1), 1000);
             return () => clearTimeout(timer);
@@ -543,47 +560,75 @@ export default function Downloader(props) {
             {downloadPending && (
                 <div style={{
                     position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-                    background: 'rgba(0,0,0,0.88)', backdropFilter: 'blur(10px)',
-                    zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    background: 'rgba(0,0,0,0.92)', backdropFilter: 'blur(12px)',
+                    zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    padding: '16px'
                 }}>
                     <div style={{
                         background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)',
-                        borderRadius: '24px', padding: '40px 32px', textAlign: 'center',
-                        border: '1px solid rgba(255,255,255,0.12)', maxWidth: '340px', width: '90%',
-                        boxShadow: '0 30px 80px rgba(0,0,0,0.6)'
+                        borderRadius: '24px', padding: '28px 24px', textAlign: 'center',
+                        border: '1px solid rgba(255,255,255,0.12)', maxWidth: '500px', width: '100%',
+                        boxShadow: '0 30px 80px rgba(0,0,0,0.7)'
                     }}>
-                        <i className="fab fa-tiktok" style={{ fontSize: '2.2rem', color: '#00F2EA', marginBottom: '14px', display: 'block' }}></i>
-                        <p style={{ color: '#fff', fontSize: '1.1rem', fontWeight: 700, marginBottom: '6px' }}>
-                            {t('preparing_download', 'Preparing your download...')}
-                        </p>
-                        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem', marginBottom: '28px' }}>
-                            {t('countdown_msg', 'File will download automatically')}
-                        </p>
 
-                        {/* SVG Circular Countdown */}
-                        <div style={{ position: 'relative', width: '110px', height: '110px', margin: '0 auto 26px' }}>
-                            <svg width="110" height="110" style={{ transform: 'rotate(-90deg)' }}>
-                                <defs>
-                                    <linearGradient id="cdGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stopColor="#FF0050" />
-                                        <stop offset="100%" stopColor="#00F2EA" />
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="55" cy="55" r="44" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="7" />
-                                <circle
-                                    cx="55" cy="55" r="44" fill="none"
-                                    stroke="url(#cdGrad)" strokeWidth="7" strokeLinecap="round"
-                                    strokeDasharray="276.5"
-                                    strokeDashoffset={276.5 * (1 - countdown / COUNTDOWN_DURATION)}
-                                    style={{ transition: 'stroke-dashoffset 0.9s linear' }}
-                                />
-                            </svg>
-                            <div style={{
-                                position: 'absolute', top: '50%', left: '50%',
-                                transform: 'translate(-50%, -50%)',
-                                fontSize: '2.4rem', fontWeight: 800, color: '#fff', lineHeight: 1
-                            }}>{countdown}</div>
+                        {/* ─ Alert: Check the new tab ─ */}
+                        <div style={{
+                            background: 'linear-gradient(90deg, rgba(255,0,80,0.15), rgba(0,242,234,0.15))',
+                            border: '1px solid rgba(0,242,234,0.3)',
+                            borderRadius: '12px', padding: '10px 16px',
+                            marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px'
+                        }}>
+                            <i className="fas fa-external-link-alt" style={{ color: '#00F2EA', fontSize: '1rem', flexShrink: 0 }}></i>
+                            <p style={{ color: '#fff', fontSize: '0.85rem', fontWeight: 600, margin: 0, textAlign: 'left' }}>
+                                {t('check_new_tab', 'A new tab just opened — check it out while you wait!')}
+                            </p>
                         </div>
+
+                        {/* ─ Title + Countdown row ─ */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px' }}>
+                            {/* SVG Circular Countdown */}
+                            <div style={{ position: 'relative', width: '90px', height: '90px', flexShrink: 0 }}>
+                                <svg width="90" height="90" style={{ transform: 'rotate(-90deg)' }}>
+                                    <defs>
+                                        <linearGradient id="cdGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stopColor="#FF0050" />
+                                            <stop offset="100%" stopColor="#00F2EA" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="45" cy="45" r="36" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="6" />
+                                    <circle
+                                        cx="45" cy="45" r="36" fill="none"
+                                        stroke="url(#cdGrad)" strokeWidth="6" strokeLinecap="round"
+                                        strokeDasharray="226.2"
+                                        strokeDashoffset={226.2 * (1 - countdown / COUNTDOWN_DURATION)}
+                                        style={{ transition: 'stroke-dashoffset 0.9s linear' }}
+                                    />
+                                </svg>
+                                <div style={{
+                                    position: 'absolute', top: '50%', left: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    fontSize: '2rem', fontWeight: 800, color: '#fff', lineHeight: 1
+                                }}>{countdown}</div>
+                            </div>
+
+                            <div style={{ textAlign: 'left', flex: 1 }}>
+                                <p style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, marginBottom: '4px' }}>
+                                    {t('preparing_download', 'Preparing your download...')}
+                                </p>
+                                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', margin: 0 }}>
+                                    {t('countdown_msg', 'File will download automatically')}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* ─ Native Ad inside modal ─ */}
+                        <div id="modal-ad-slot" style={{
+                            width: '100%', minHeight: '120px',
+                            borderRadius: '12px', marginBottom: '18px',
+                            background: 'rgba(255,255,255,0.03)',
+                            border: '1px dashed rgba(255,255,255,0.08)',
+                            overflow: 'hidden'
+                        }} />
 
                         <button
                             onClick={() => { executeDownload(downloadPending.fileUrl, downloadPending.fileName); setDownloadPending(null); }}
