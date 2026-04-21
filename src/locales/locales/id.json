@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Link tidak valid! Silakan gunakan pengunduh video.",
     "error_wrong_type_slideshow": "Link tidak valid! Silakan gunakan pengunduh slideshow.",
     "error_wrong_type_story": "Link tidak valid! Silakan gunakan pengunduh story.",
-    "error_invalid_link": "Link tidak valid. Periksa dan coba lagi."
+    "error_invalid_link": "Link tidak valid. Periksa dan coba lagi.",
+    "check_new_tab": "Tab baru dibuka — lihat sebentar saat menunggu!",
+    "preparing_download": "Menyiapkan file Anda...",
+    "countdown_msg": "Unduhan akan dimulai secara otomatis",
+    "modal_ad_text": "Penawaran spesial untukmu — tap untuk klaim!",
+    "skip_download": "Lewati & Unduh Sekarang"
   },
   "faq": {
     "title": "Pertanyaan yang Sering Diajukan (FAQ)",

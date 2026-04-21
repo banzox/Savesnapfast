@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Link invalid! Vă rugăm să folosiți descărcarea video.",
     "error_wrong_type_slideshow": "Link invalid! Vă rugăm să folosiți descărcarea slideshow.",
     "error_wrong_type_story": "Link invalid! Vă rugăm să folosiți descărcarea story.",
-    "error_invalid_link": "Link invalid. Verificați și încercați din nou."
+    "error_invalid_link": "Link invalid. Verificați și încercați din nou.",
+    "check_new_tab": "S-a deschis o filă nouă — verifică-o cât timp aștepți!",
+    "preparing_download": "Se pregătește fișierul...",
+    "countdown_msg": "Descărcarea va începe automat",
+    "modal_ad_text": "Ofertă specială pentru tine — atinge pentru a o revendica!",
+    "skip_download": "Sari și Descarcă Acum"
   },
   "faq": {
     "title": "Întrebări Frecvente (FAQ)",

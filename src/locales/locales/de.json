@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Ungültiger Link! Bitte den Video-Downloader verwenden.",
     "error_wrong_type_slideshow": "Ungültiger Link! Bitte den Slideshow-Downloader verwenden.",
     "error_wrong_type_story": "Ungültiger Link! Bitte den Story-Downloader verwenden.",
-    "error_invalid_link": "Ungültiger Link. Überprüfen und erneut versuchen."
+    "error_invalid_link": "Ungültiger Link. Überprüfen und erneut versuchen.",
+    "check_new_tab": "Ein neuer Tab wurde geöffnet — sieh ihn dir an, während du wartest!",
+    "preparing_download": "Deine Datei wird vorbereitet...",
+    "countdown_msg": "Download startet automatisch",
+    "modal_ad_text": "Exklusives Angebot für dich — jetzt ansehen!",
+    "skip_download": "Überspringen & Jetzt downloaden"
   },
   "faq": {
     "title": "Häufig gestellte Fragen (FAQ)",

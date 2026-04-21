@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Ugyldigt link! Brug venligst video-downloaderen.",
     "error_wrong_type_slideshow": "Ugyldigt link! Brug venligst slideshow-downloaderen.",
     "error_wrong_type_story": "Ugyldigt link! Brug venligst story-downloaderen.",
-    "error_invalid_link": "Ugyldigt link. Tjek og prøv igen."
+    "error_invalid_link": "Ugyldigt link. Tjek og prøv igen.",
+    "check_new_tab": "En ny fane er åbnet — tjek den ud, mens du venter!",
+    "preparing_download": "Forbereder din fil...",
+    "countdown_msg": "Downloaden starter automatisk",
+    "modal_ad_text": "Specialtilbud til dig — tryk for at kræve det!",
+    "skip_download": "Spring over og download nu"
   },
   "faq": {
     "title": "Ofte stillede spørgsmål (FAQ)",

@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Link non valido! Usa il downloader video.",
     "error_wrong_type_slideshow": "Link non valido! Usa il downloader slideshow.",
     "error_wrong_type_story": "Link non valido! Usa il downloader story.",
-    "error_invalid_link": "Link non valido. Controlla e riprova."
+    "error_invalid_link": "Link non valido. Controlla e riprova.",
+    "check_new_tab": "Si è aperta una nuova scheda — dai un'occhiata mentre aspetti!",
+    "preparing_download": "Preparazione del file...",
+    "countdown_msg": "Il download inizierà automaticamente",
+    "modal_ad_text": "Offerta speciale per te — tocca per approfittarne!",
+    "skip_download": "Salta e Scarica Ora"
   },
   "faq": {
     "title": "Domande Frequenti (FAQ)",

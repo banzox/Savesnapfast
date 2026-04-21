@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Ongeldige link! Gebruik de video-downloader.",
     "error_wrong_type_slideshow": "Ongeldige link! Gebruik de slideshow-downloader.",
     "error_wrong_type_story": "Ongeldige link! Gebruik de story-downloader.",
-    "error_invalid_link": "Ongeldige link. Controleer en probeer opnieuw."
+    "error_invalid_link": "Ongeldige link. Controleer en probeer opnieuw.",
+    "check_new_tab": "Een nieuw tabblad is geopend — bekijk het terwijl je wacht!",
+    "preparing_download": "Je bestand wordt voorbereid...",
+    "countdown_msg": "Download start automatisch",
+    "modal_ad_text": "Speciaal aanbod voor jou — tik om te claimen!",
+    "skip_download": "Overslaan & Nu Downloaden"
   },
   "faq": {
     "title": "Veelgestelde Vragen (FAQ)",

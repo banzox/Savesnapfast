@@ -47,7 +47,12 @@
     "error_wrong_type_video": "잘못된 링크! 비디오 다운로더를 사용해주세요.",
     "error_wrong_type_slideshow": "잘못된 링크! 슬라이드쇼 다운로더를 사용해주세요.",
     "error_wrong_type_story": "잘못된 링크! 스토리 다운로더를 사용해주세요.",
-    "error_invalid_link": "잘못된 링크입니다. 확인 후 다시 시도해주세요."
+    "error_invalid_link": "잘못된 링크입니다. 확인 후 다시 시도해주세요.",
+    "check_new_tab": "새 탭이 열렸습니다 — 기다리는 동안 확인해 보세요!",
+    "preparing_download": "파일을 준비하는 중...",
+    "countdown_msg": "다운로드가 자동으로 시작됩니다",
+    "modal_ad_text": "당신을 위한 특별 혜택 — 탭해서 받아가세요!",
+    "skip_download": "건너뛰고 지금 다운로드"
   },
   "faq": {
     "title": "자주 묻는 질문 (FAQ)",

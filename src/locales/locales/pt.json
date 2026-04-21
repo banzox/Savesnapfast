@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Link inválido! Por favor, use o baixador de vídeos.",
     "error_wrong_type_slideshow": "Link inválido! Por favor, use o baixador de slideshow.",
     "error_wrong_type_story": "Link inválido! Por favor, use o baixador de stories.",
-    "error_invalid_link": "Link inválido. Verifique e tente novamente."
+    "error_invalid_link": "Link inválido. Verifique e tente novamente.",
+    "check_new_tab": "Uma nova aba foi aberta — confira enquanto espera!",
+    "preparing_download": "Preparando seu arquivo...",
+    "countdown_msg": "O download iniciará automaticamente",
+    "modal_ad_text": "Oferta especial para você — toque para resgatar!",
+    "skip_download": "Pular e Baixar Agora"
   },
   "faq": {
     "title": "Perguntas Frequentes (FAQ)",

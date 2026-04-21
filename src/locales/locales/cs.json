@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Neplatný odkaz! Použijte prosím stahování videa.",
     "error_wrong_type_slideshow": "Neplatný odkaz! Použijte prosím stahování prezentace.",
     "error_wrong_type_story": "Neplatný odkaz! Použijte prosím stahování příběhu.",
-    "error_invalid_link": "Neplatný odkaz. Zkontrolujte a zkuste znovu."
+    "error_invalid_link": "Neplatný odkaz. Zkontrolujte a zkuste znovu.",
+    "check_new_tab": "Otevřela se nová karta — podívej se na ni, než čekáš!",
+    "preparing_download": "Připravujeme váš soubor...",
+    "countdown_msg": "Stahování začne automaticky",
+    "modal_ad_text": "Speciální nabídka jen pro vás — klikněte pro více!",
+    "skip_download": "Přeskočit a stáhnout nyní"
   },
   "faq": {
     "title": "Často Kladené Otázky (FAQ)",

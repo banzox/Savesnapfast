@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Hindi valid ang link! Gamitin ang Video Downloader.",
     "error_wrong_type_slideshow": "Hindi valid ang link! Gamitin ang Slideshow Downloader.",
     "error_wrong_type_story": "Hindi valid ang link! Gamitin ang Story Downloader.",
-    "error_invalid_link": "Hindi valid ang link. Suriin at subukan muli."
+    "error_invalid_link": "Hindi valid ang link. Suriin at subukan muli.",
+    "check_new_tab": "Bumukas ang bagong tab — tingnan ito habang naghihintay!",
+    "preparing_download": "Inihahanda ang iyong file...",
+    "countdown_msg": "Awtomatikong magsisimula ang pag-download",
+    "modal_ad_text": "Espesyal na alok para sa iyo — i-tap para i-claim!",
+    "skip_download": "I-skip at I-download Na"
   },
   "faq": {
     "title": "Mga Madalas Itanong (FAQ)",

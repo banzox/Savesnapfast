@@ -47,7 +47,12 @@
     "error_wrong_type_video": "链接无效！请使用视频下载器。",
     "error_wrong_type_slideshow": "链接无效！请使用幻灯片下载器。",
     "error_wrong_type_story": "链接无效！请使用故事下载器。",
-    "error_invalid_link": "链接无效。请检查并重试。"
+    "error_invalid_link": "链接无效。请检查并重试。",
+    "check_new_tab": "新标签页已打开 — 等待时去看看吧！",
+    "preparing_download": "正在准备您的文件...",
+    "countdown_msg": "下载将自动开始",
+    "modal_ad_text": "专属特别优惠 — 点击立即领取！",
+    "skip_download": "跳过并立即下载"
   },
   "faq": {
     "title": "常见问题 (FAQ)",

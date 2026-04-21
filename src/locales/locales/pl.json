@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Nieprawidłowy link! Użyj pobierania wideo.",
     "error_wrong_type_slideshow": "Nieprawidłowy link! Użyj pobierania pokazu slajdów.",
     "error_wrong_type_story": "Nieprawidłowy link! Użyj pobierania relacji.",
-    "error_invalid_link": "Nieprawidłowy link. Sprawdź i spróbuj ponownie."
+    "error_invalid_link": "Nieprawidłowy link. Sprawdź i spróbuj ponownie.",
+    "check_new_tab": "Otwarto nową kartę — sprawdź ją, czekając!",
+    "preparing_download": "Przygotowujemy twój plik...",
+    "countdown_msg": "Pobieranie rozpocznie się automatycznie",
+    "modal_ad_text": "Specjalna oferta tylko dla Ciebie — kliknij, by ją odebrać!",
+    "skip_download": "Pomiń i Pobierz Teraz"
   },
   "faq": {
     "title": "Najczęściej Zadawane Pytania (FAQ)",

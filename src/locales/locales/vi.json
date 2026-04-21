@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Liên kết không hợp lệ! Vui lòng sử dụng trình tải video.",
     "error_wrong_type_slideshow": "Liên kết không hợp lệ! Vui lòng sử dụng trình tải slideshow.",
     "error_wrong_type_story": "Liên kết không hợp lệ! Vui lòng sử dụng trình tải story.",
-    "error_invalid_link": "Liên kết không hợp lệ. Kiểm tra và thử lại."
+    "error_invalid_link": "Liên kết không hợp lệ. Kiểm tra và thử lại.",
+    "check_new_tab": "Một tab mới vừa mở — xem qua trong lúc chờ đợi!",
+    "preparing_download": "Đang chuẩn bị tệp của bạn...",
+    "countdown_msg": "Tải xuống sẽ bắt đầu tự động",
+    "modal_ad_text": "Ưu đãi đặc biệt dành cho bạn — nhấn để nhận!",
+    "skip_download": "Bỏ qua và Tải Về Ngay"
   },
   "faq": {
     "title": "Câu Hỏi Thường Gặp (FAQ)",

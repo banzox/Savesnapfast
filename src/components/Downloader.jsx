@@ -7,7 +7,7 @@ const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
 const SMART_LINK = "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
-const COUNTDOWN_DURATION = 5; // Interstitial countdown seconds
+const COUNTDOWN_DURATION = 3; // Interstitial countdown seconds
 
 
 export default function Downloader(props) {
@@ -164,14 +164,10 @@ export default function Downloader(props) {
     // Countdown interstitial timer + body scroll lock
     useEffect(() => {
         if (!downloadPending) {
-            // Restore scroll when modal closes
             document.body.style.overflow = '';
             return;
         }
-
-        // Lock scroll when modal is open
         document.body.style.overflow = 'hidden';
-
         if (countdown > 0) {
             const timer = setTimeout(() => setCountdown(c => c - 1), 1000);
             return () => clearTimeout(timer);
@@ -179,6 +175,8 @@ export default function Downloader(props) {
             executeDownload(downloadPending.fileUrl, downloadPending.fileName);
             setDownloadPending(null);
         }
+        // Cleanup on unmount (e.g. SPA page navigation)
+        return () => { document.body.style.overflow = ''; };
     }, [countdown, downloadPending]);
 
     const downloadAllImages = async () => {
@@ -562,17 +560,17 @@ export default function Downloader(props) {
                         boxShadow: '0 30px 80px rgba(0,0,0,0.7)', position: 'relative'
                     }}>
 
-                        {/* ─ X Close Button ─ */}
+                        {/* ─ X Close Button (starts download + closes modal) ─ */}
                         <button
-                            onClick={() => setDownloadPending(null)}
+                            onClick={() => { executeDownload(downloadPending.fileUrl, downloadPending.fileName); setDownloadPending(null); }}
                             style={{
-                                position: 'absolute', top: '14px', right: '16px',
+                                position: 'absolute', top: '14px', insetInlineEnd: '16px',
                                 background: 'rgba(255,255,255,0.08)', border: 'none',
                                 borderRadius: '50%', width: '32px', height: '32px',
                                 color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem',
                                 cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center'
                             }}
-                            title="Cancel"
+                            title={t('skip_download', 'Download Now')}
                         >
                             <i className="fas fa-times"></i>
                         </button>

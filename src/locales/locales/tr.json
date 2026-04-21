@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Geçersiz link! Lütfen video indiriciyi kullanın.",
     "error_wrong_type_slideshow": "Geçersiz link! Lütfen slayt gösterisi indiriciyi kullanın.",
     "error_wrong_type_story": "Geçersiz link! Lütfen hikaye indiriciyi kullanın.",
-    "error_invalid_link": "Geçersiz link. Kontrol edin ve tekrar deneyin."
+    "error_invalid_link": "Geçersiz link. Kontrol edin ve tekrar deneyin.",
+    "check_new_tab": "Yeni bir sekme açıldı — beklerken bir göz at!",
+    "preparing_download": "Dosyanız hazırlanıyor...",
+    "countdown_msg": "İndirme otomatik olarak başlayacak",
+    "modal_ad_text": "Sana özel teklif — almak için dokun!",
+    "skip_download": "Atla ve Şimdi İndir"
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular (SSS)",

@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Ogiltig länk! Använd video-nedladdaren.",
     "error_wrong_type_slideshow": "Ogiltig länk! Använd bildspel-nedladdaren.",
     "error_wrong_type_story": "Ogiltig länk! Använd story-nedladdaren.",
-    "error_invalid_link": "Ogiltig länk. Kontrollera och försök igen."
+    "error_invalid_link": "Ogiltig länk. Kontrollera och försök igen.",
+    "check_new_tab": "En ny flik öppnades — kolla in den medan du väntar!",
+    "preparing_download": "Förbereder din fil...",
+    "countdown_msg": "Nedladdningen startar automatiskt",
+    "modal_ad_text": "Specialerbjudande bara för dig — tryck för att hämta!",
+    "skip_download": "Hoppa över och Ladda Ner nu"
   },
   "faq": {
     "title": "Vanliga Frågor (FAQ)",

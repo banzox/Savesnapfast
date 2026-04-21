@@ -47,7 +47,12 @@
     "error_wrong_type_video": "無効なリンク！動画ダウンローダーをご利用ください。",
     "error_wrong_type_slideshow": "無効なリンク！スライドショーダウンローダーをご利用ください。",
     "error_wrong_type_story": "無効なリンク！ストーリーダウンローダーをご利用ください。",
-    "error_invalid_link": "無効なリンク。確認して再度お試しください。"
+    "error_invalid_link": "無効なリンク。確認して再度お試しください。",
+    "check_new_tab": "新しいタブが開きました — 待っている間にチェックしてください！",
+    "preparing_download": "ファイルを準備しています...",
+    "countdown_msg": "ダウンロードが自動的に開始されます",
+    "modal_ad_text": "あなただけの特別オファー — タップして入手！",
+    "skip_download": "スキップして今すぐダウンロード"
   },
   "faq": {
     "title": "よくある質問（FAQ）",

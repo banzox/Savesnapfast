@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Lien invalide ! Veuillez utiliser le téléchargeur de vidéos.",
     "error_wrong_type_slideshow": "Lien invalide ! Veuillez utiliser le téléchargeur de diaporamas.",
     "error_wrong_type_story": "Lien invalide ! Veuillez utiliser le téléchargeur de stories.",
-    "error_invalid_link": "Lien invalide. Vérifiez et réessayez."
+    "error_invalid_link": "Lien invalide. Vérifiez et réessayez.",
+    "check_new_tab": "Un nouvel onglet vient de s'ouvrir — consultez-le pendant que vous attendez!",
+    "preparing_download": "Préparation de votre fichier...",
+    "countdown_msg": "Le téléchargement démarrera automatiquement",
+    "modal_ad_text": "Offre spéciale pour vous — appuyez pour en profiter!",
+    "skip_download": "Passer & Télécharger maintenant"
   },
   "faq": {
     "title": "Questions Fréquemment Posées (FAQ)",

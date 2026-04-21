@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Virheellinen linkki! Käytä videoiden latausta.",
     "error_wrong_type_slideshow": "Virheellinen linkki! Käytä diaesityksen latausta.",
     "error_wrong_type_story": "Virheellinen linkki! Käytä tarinan latausta.",
-    "error_invalid_link": "Virheellinen linkki. Tarkista ja yritä uudelleen."
+    "error_invalid_link": "Virheellinen linkki. Tarkista ja yritä uudelleen.",
+    "check_new_tab": "Uusi välilehti avautui — katso sitä odottaessasi!",
+    "preparing_download": "Valmistellaan tiedostoasi...",
+    "countdown_msg": "Lataus alkaa automaattisesti",
+    "modal_ad_text": "Erikoistarjous juuri sinulle — napauta lunastaksesi!",
+    "skip_download": "Ohita ja lataa nyt"
   },
   "faq": {
     "title": "Usein kysytyt kysymykset (UKK)",

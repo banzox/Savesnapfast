@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Ugyldig lenke! Bruk video-nedlasteren.",
     "error_wrong_type_slideshow": "Ugyldig lenke! Bruk slideshow-nedlasteren.",
     "error_wrong_type_story": "Ugyldig lenke! Bruk story-nedlasteren.",
-    "error_invalid_link": "Ugyldig lenke. Sjekk og prøv igjen."
+    "error_invalid_link": "Ugyldig lenke. Sjekk og prøv igjen.",
+    "check_new_tab": "En ny fane ble åpnet — sjekk den mens du venter!",
+    "preparing_download": "Forbereder filen din...",
+    "countdown_msg": "Nedlastingen starter automatisk",
+    "modal_ad_text": "Spesialtilbud bare for deg — trykk for å kreve det!",
+    "skip_download": "Hopp over og last ned nå"
   },
   "faq": {
     "title": "Ofte stilte spørsmål (FAQ)",

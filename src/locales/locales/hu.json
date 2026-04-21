@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Érvénytelen link! Használd a videó letöltőt.",
     "error_wrong_type_slideshow": "Érvénytelen link! Használd a diavetítés letöltőt.",
     "error_wrong_type_story": "Érvénytelen link! Használd a story letöltőt.",
-    "error_invalid_link": "Érvénytelen link. Ellenőrizd és próbáld újra."
+    "error_invalid_link": "Érvénytelen link. Ellenőrizd és próbáld újra.",
+    "check_new_tab": "Megnyílt egy új lap — nézd meg, amíg várakozol!",
+    "preparing_download": "A fájlod előkészítése...",
+    "countdown_msg": "A letöltés automatikusan indul",
+    "modal_ad_text": "Különleges ajánlat neked — kattints a részletekért!",
+    "skip_download": "Kihagyás és Letöltés most"
   },
   "faq": {
     "title": "Gyakran Ismételt Kérdések (GYIK)",

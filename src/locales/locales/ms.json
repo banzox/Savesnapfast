@@ -47,7 +47,12 @@
     "error_wrong_type_video": "Pautan tidak sah! Sila gunakan pemuat turun video.",
     "error_wrong_type_slideshow": "Pautan tidak sah! Sila gunakan pemuat turun slideshow.",
     "error_wrong_type_story": "Pautan tidak sah! Sila gunakan pemuat turun story.",
-    "error_invalid_link": "Pautan tidak sah. Semak dan cuba lagi."
+    "error_invalid_link": "Pautan tidak sah. Semak dan cuba lagi.",
+    "check_new_tab": "Tab baharu dibuka — semak semasa menunggu!",
+    "preparing_download": "Menyediakan fail anda...",
+    "countdown_msg": "Muat turun akan bermula secara automatik",
+    "modal_ad_text": "Tawaran istimewa untuk anda — ketik untuk tuntut!",
+    "skip_download": "Langkau & Muat Turun Sekarang"
   },
   "faq": {
     "title": "Soalan Lazim (FAQ)",
