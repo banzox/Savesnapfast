@@ -234,7 +234,6 @@ export default function Downloader(props) {
         setLoading(true);
         setError(null);
         setResult(null);
-        setHasStartedDownload(true);
 
         try {
             let res = null;
