@@ -86,7 +86,39 @@ export default function Downloader(props) {
         }, 1000);
     };
 
+    // Robust Ad Loading to ensure counting across SPA navigations
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
+        // Remove old scripts from previous SPA navigation to force full reload of ad rendering
+        const oldScripts = document.querySelectorAll('script[src*="ferocitycandour.com"]');
+        oldScripts.forEach(s => s.remove());
 
+        // Find container and wipe it clean before triggering the new script
+        const adContainer = document.getElementById('ad-slot-main');
+        if (!adContainer) return;
+
+        // Ensure the inner container exists
+        let innerDiv = document.getElementById('container-2d1b844eacef7f58a020be44e8239ff9');
+        if (!innerDiv) {
+             innerDiv = document.createElement('div');
+             innerDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
+             adContainer.appendChild(innerDiv);
+        }
+
+        // Add the script inside the ad slot to ensure structural integrity
+        const script = document.createElement('script');
+        script.async = true;
+        script.setAttribute('data-cfasync', 'false');
+        script.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+        
+        adContainer.appendChild(script);
+        
+        return () => {
+             // Cleanup on unmount to prevent ghost ad loading errors during rapid clicks
+             if (script.parentNode) script.parentNode.removeChild(script);
+        };
+    }, []);
 
     // Reliable Scroll to results
     useEffect(() => {
@@ -336,9 +368,7 @@ export default function Downloader(props) {
                 </button>
 
                 {/* ─── Native Banner Ad (Visible immediately below URL box) ─── */}
-                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', minHeight: '180px', borderRadius: '10px', marginTop: '10px' }}>
-                    <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
-                </div>
+                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', minHeight: '180px', borderRadius: '10px', marginTop: '10px' }} />
             </div>
 
             <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
