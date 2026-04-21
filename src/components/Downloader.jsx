@@ -526,7 +526,10 @@ export default function Downloader(props) {
 
                             {/* ── Download Another Button ── */}
                             <button
-                                onClick={() => { setResult(null); setUrl(''); setError(null); setDownloadComplete(false); }}
+                                onClick={() => { 
+                                    setResult(null); setUrl(''); setError(null); setDownloadComplete(false); 
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}
                                 style={{
                                     width: '100%', marginTop: '10px',
                                     background: 'rgba(255,255,255,0.05)',
@@ -592,7 +595,10 @@ export default function Downloader(props) {
                         </p>
                     </div>
                     <button
-                        onClick={() => { setResult(null); setUrl(''); setError(null); setDownloadComplete(false); }}
+                        onClick={() => { 
+                            setResult(null); setUrl(''); setError(null); setDownloadComplete(false); 
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
                         style={{
                             background: 'linear-gradient(45deg, #FF0050, #00F2EA)',
                             border: 'none', borderRadius: '10px', padding: '8px 12px',
