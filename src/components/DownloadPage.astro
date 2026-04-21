@@ -8,10 +8,9 @@ interface Props {
     lang: string;
     pagePrefix: string;
     mode?: "video" | "mp3" | "story" | "slideshow" | undefined;
-    showAd?: boolean;
 }
 
-const { lang, pagePrefix, mode, showAd = true } = Astro.props;
+const { lang, pagePrefix, mode } = Astro.props;
 const t = useTranslations(lang);
 const translations = getTranslations(lang);
 
@@ -88,7 +87,7 @@ for (const key of featureKeys) {
 const howToSteps = [];
 let s = 1;
 while (true) {
-    const titleKey = `how_to.step${s}_title`;
+    const titleKey = getKey(`how_to.step${s}_title`);
     const descKey = getKey(`how_to.step${s}`);
     const desc = t(descKey);
 

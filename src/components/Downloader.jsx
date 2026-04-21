@@ -7,6 +7,7 @@ const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
 const SMART_LINK = "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
+const COUNTDOWN_DURATION = 5; // Interstitial countdown seconds
 
 
 export default function Downloader(props) {
@@ -21,13 +22,11 @@ export default function Downloader(props) {
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
     const [zipping, setZipping] = useState(false);
-    const [downloadingUrl, setDownloadingUrl] = useState(null);
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
     const resultRef = useRef(null);
     const [downloadPending, setDownloadPending] = useState(null);
     const [countdown, setCountdown] = useState(0);
-    const COUNTDOWN_DURATION = 5;
 
     // --- دالة تنظيف وتسمية الملفات ---
     const sanitizeName = (name) => {
