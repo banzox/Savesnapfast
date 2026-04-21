@@ -120,13 +120,43 @@ export default function Downloader(props) {
         };
     }, []);
 
-    // Reliable Scroll to results
+    // Reliable Custom Slow Scroll to Results (1.5s / 1500ms)
+    const customSlowScroll = (targetId, duration = 1500) => {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        // Add 15px top spacing so the element isn't glued to the absolute top edge
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 15;
+        const startPosition = window.scrollY;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        // Custom easing curve (easeOutQuint) - starts fast, slows down beautifully at the end
+        const easing = (t) => 1 - Math.pow(1 - t, 5);
+
+        const animation = (currentTime) => {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            let progress = timeElapsed / duration;
+
+            if (progress > 1) progress = 1;
+
+            window.scrollTo(0, startPosition + distance * easing(progress));
+
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        };
+
+        requestAnimationFrame(animation);
+    };
+
     useEffect(() => {
         if (result && resultRef.current) {
             const timer = setTimeout(() => {
-                // Use scrollIntoView with block center to show both the buttons and the ad above them
-                resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 600); // 600ms is perfectly timed for layout settlement
+                // Focus explicitly on the AD SLOT, slowly scrolling down over 1.5s
+                customSlowScroll('ad-slot-main', 1500);
+            }, 600); // Wait 600ms for layout to settle before moving
             return () => clearTimeout(timer);
         }
     }, [result]);
