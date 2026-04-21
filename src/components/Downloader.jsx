@@ -120,13 +120,13 @@ export default function Downloader(props) {
         };
     }, []);
 
-    // Reliable Custom Slow Scroll to Results (1.5s / 1500ms)
-    const customSlowScroll = (targetId, duration = 1500) => {
+    // Reliable Custom Slow Scroll to Results (1.2s / 1200ms)
+    const customSlowScroll = (targetId, duration = 1200) => {
         const target = document.getElementById(targetId);
         if (!target) return;
 
-        // Add 15px top spacing so the element isn't glued to the absolute top edge
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 15;
+        // Add 180px top spacing so the scroll stops higher up (lifting the result down to show the ad)
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 180;
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
         let startTime = null;
@@ -154,8 +154,8 @@ export default function Downloader(props) {
     useEffect(() => {
         if (result && resultRef.current) {
             const timer = setTimeout(() => {
-                // Focus explicitly on the AD SLOT, slowly scrolling down over 1.5s
-                customSlowScroll('ad-slot-main', 1500);
+                // Focus explicitly on the RESULT Info, but raised higher up to reveal the ad
+                customSlowScroll('result-info-box', 1200);
             }, 600); // Wait 600ms for layout to settle before moving
             return () => clearTimeout(timer);
         }
@@ -435,7 +435,7 @@ export default function Downloader(props) {
                 {result && (
                     <div className="result-card">
 
-                        <div className="result-info" style={{ width: '100%' }}>
+                        <div id="result-info-box" className="result-info" style={{ width: '100%' }}>
                             <p className="result-author">
                                 <i className="fab fa-tiktok"></i> @{sanitizeName(result.author || 'User')}
                             </p>
