@@ -27,6 +27,20 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Google Analytics (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MK86W8GK18"></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MK86W8GK18');
+
+            // تسجيل الصفحات بدقة مع انتقالات Astro (ViewTransitions)
+            document.addEventListener('astro:page-load', () => {
+                gtag('config', 'G-MK86W8GK18', { page_path: window.location.pathname });
+            });
+        </script>
+
         <!-- Critical CSS: Inline for faster FCP -->
         <style is:inline>
             * {
