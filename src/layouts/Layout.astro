@@ -324,5 +324,17 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
             data-cfasync="false" 
             src="https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js"
         ></script>
+
+        <!-- Re-inject Popunder after Astro View Transitions (page swap resets click listeners) -->
+        <script is:inline>
+            document.addEventListener('astro:after-swap', () => {
+                const old = document.querySelector('script[src*="69449082ba48897a611fdb5f17c66001"]');
+                if (old) old.remove();
+                const s = document.createElement('script');
+                s.setAttribute('data-cfasync', 'false');
+                s.src = 'https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js';
+                document.body.appendChild(s);
+            });
+        </script>
     </body>
 </html>

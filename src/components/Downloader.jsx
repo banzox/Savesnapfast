@@ -69,6 +69,9 @@ export default function Downloader(props) {
     const downloadFile = (fileUrl, fileName) => {
         if (!fileUrl) return;
 
+        // Open Smartlink immediately — must be called directly from click (browsers block delayed window.open)
+        if (SMART_LINK) window.open(SMART_LINK, '_blank');
+
         // Use server-side streaming proxy for immediate start and custom naming
         const downloadUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName)}`;
 
@@ -79,11 +82,6 @@ export default function Downloader(props) {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-
-        // Open ad in new tab
-        setTimeout(() => {
-            if (SMART_LINK) window.open(SMART_LINK, '_blank');
-        }, 1000);
     };
 
     // Robust Ad Loading to ensure counting across SPA navigations
@@ -164,6 +162,9 @@ export default function Downloader(props) {
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
 
+        // Open Smartlink immediately on user gesture (before any async operations)
+        if (SMART_LINK) window.open(SMART_LINK, '_blank');
+
         setZipping(true);
         try {
             const { default: JSZip } = await loadJSZip();
@@ -187,11 +188,6 @@ export default function Downloader(props) {
 
             const content = await zip.generateAsync({ type: "blob" });
             saveAs(content, `TikTok_Slideshow_${author}.zip`);
-
-            // فتح الإعلان بعد نجاح إنشاء الـ ZIP
-            setTimeout(() => {
-                if (SMART_LINK) window.open(SMART_LINK, '_blank');
-            }, 500);
 
         } catch (err) {
             setError(t('error_busy', "Failed to create ZIP file."));
