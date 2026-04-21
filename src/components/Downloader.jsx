@@ -88,32 +88,31 @@ export default function Downloader(props) {
     useEffect(() => {
         if (typeof window === 'undefined') return;
         
-        // Remove old scripts from previous SPA navigation to force full reload of ad rendering
-        const oldScripts = document.querySelectorAll('script[src*="ferocitycandour.com"]');
+        // Remove ONLY the native banner script (by its unique hash), NOT the popunder or other scripts
+        const oldScripts = document.querySelectorAll('script[src*="2d1b844eacef7f58a020be44e8239ff9"]');
         oldScripts.forEach(s => s.remove());
 
         // Find container and wipe it clean before triggering the new script
         const adContainer = document.getElementById('ad-slot-main');
         if (!adContainer) return;
 
-        // Ensure the inner container exists
-        let innerDiv = document.getElementById('container-2d1b844eacef7f58a020be44e8239ff9');
-        if (!innerDiv) {
-             innerDiv = document.createElement('div');
-             innerDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
-             adContainer.appendChild(innerDiv);
-        }
+        // Wipe inner content to prevent ghost duplicate containers
+        adContainer.innerHTML = '';
 
-        // Add the script inside the ad slot to ensure structural integrity
+        // Create the required container div with the correct ID
+        const innerDiv = document.createElement('div');
+        innerDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
+        adContainer.appendChild(innerDiv);
+
+        // Add the script after the container (required order for Adsterra native banner)
         const script = document.createElement('script');
         script.async = true;
         script.setAttribute('data-cfasync', 'false');
         script.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
-        
         adContainer.appendChild(script);
         
         return () => {
-             // Cleanup on unmount to prevent ghost ad loading errors during rapid clicks
+             // Cleanup on unmount
              if (script.parentNode) script.parentNode.removeChild(script);
         };
     }, []);

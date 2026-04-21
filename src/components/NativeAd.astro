@@ -7,35 +7,49 @@
 </div>
 
 <script>
-    const loadAd = () => {
+    const loadNativeAd = () => {
         const container = document.getElementById('ad-container');
-        if (!container || container.dataset.loaded) return;
+        if (!container) return;
+
+        // Reset for ViewTransitions: wipe old content and flag
+        container.innerHTML = '';
+        delete container.dataset.loaded;
         container.dataset.loaded = 'true';
-        
+
+        // Container div MUST come before the script (Adsterra requirement)
+        const adDiv = document.createElement('div');
+        adDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
+        container.appendChild(adDiv);
+
         const script = document.createElement('script');
         script.async = true;
         script.setAttribute('data-cfasync', 'false');
         script.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
         container.appendChild(script);
-        
-        const adDiv = document.createElement('div');
-        adDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
-        container.appendChild(adDiv);
     };
 
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                loadAd();
-                observer.disconnect();
-            }
-        }, { rootMargin: '200px' });
-        
+    const observeAd = () => {
         const container = document.getElementById('ad-container');
-        if (container) observer.observe(container);
-    } else {
-        setTimeout(loadAd, 3000);
-    }
+        if (!container) return;
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    loadNativeAd();
+                    observer.disconnect();
+                }
+            }, { rootMargin: '200px' });
+            observer.observe(container);
+        } else {
+            setTimeout(loadNativeAd, 3000);
+        }
+    };
+
+    // Initial load
+    observeAd();
+
+    // Re-observe after every View Transition (resets loaded flag)
+    document.addEventListener('astro:after-swap', observeAd);
 </script>
 
 <style>
