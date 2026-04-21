@@ -184,10 +184,7 @@ if (!pagePrefix) {
                     placeholder={pagePrefix
                         ? t(`${pagePrefix}.placeholder`)
                         : t("downloader.placeholder")}
-                >
-                    <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
-                    <script is:inline async="async" data-cfasync="false" src="https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"></script>
-                </Downloader>
+                />
             </div>
         </article>
     </div>
@@ -246,28 +243,28 @@ if (!pagePrefix) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0.75rem 1rem 0;
+        padding: 0.25rem 0.5rem 0; /* Reduced padding further */
     }
 
     .hero-title {
-        font-size: 1.15rem;
+        font-size: 1rem; /* Smaller mobile title */
         font-weight: bold;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.15rem;
     }
 
     @media (min-width: 768px) {
         .hero-title {
-            font-size: 1.5rem;
+            font-size: 1.25rem; /* Smaller desktop title */
         }
     }
 
     .hero-desc {
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem;
-        max-width: 42rem;
+        font-size: 0.75rem; /* Smaller mobile description */
+        margin-bottom: 0.35rem;
+        max-width: 32rem;
         margin-left: auto;
         margin-right: auto;
-        opacity: 0.9;
+        opacity: 0.85;
     }
 
     @media (min-width: 768px) {

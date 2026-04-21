@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import fileSaver from 'file-saver';
 const { saveAs } = fileSaver;
 
@@ -25,6 +25,7 @@ export default function Downloader(props) {
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
     const [hasStartedDownload, setHasStartedDownload] = useState(false);
+    const resultRef = useRef(null);
 
     // --- دالة تنظيف وتسمية الملفات ---
     const sanitizeName = (name) => {
@@ -65,7 +66,6 @@ export default function Downloader(props) {
     };
 
 
-
     const downloadFile = (fileUrl, fileName) => {
         if (!fileUrl) return;
 
@@ -85,6 +85,31 @@ export default function Downloader(props) {
             if (SMART_LINK) window.open(SMART_LINK, '_blank');
         }, 1000);
     };
+
+    // Robust Ad Loading to ensure counting
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
+        // Ensure script is injected only once
+        if (!document.querySelector('script[src*="ferocitycandour.com"]')) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.setAttribute('data-cfasync', 'false');
+            script.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+            document.body.appendChild(script);
+        }
+    }, []);
+
+    // Reliable Scroll to results
+    useEffect(() => {
+        if (result && resultRef.current) {
+            const timer = setTimeout(() => {
+                // Use scrollIntoView with block start for precision
+                resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 800); // 800ms to allow ad to potentially start rendering/occupying space
+            return () => clearTimeout(timer);
+        }
+    }, [result]);
 
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
@@ -256,13 +281,6 @@ export default function Downloader(props) {
 
             setResult(res);
 
-            setTimeout(() => {
-                const el = document.getElementById('ad-slot-main');
-                if (el) {
-                    const offset = el.getBoundingClientRect().top + window.scrollY - 12;
-                    window.scrollTo({ top: offset, behavior: "smooth" });
-                }
-            }, 500);
 
         } catch (err) {
             let msg = err.message;
@@ -330,8 +348,8 @@ export default function Downloader(props) {
                 </button>
 
                 {/* ─── Native Banner Ad (Visible immediately below URL box) ─── */}
-                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', borderRadius: '10px', marginTop: '10px' }}>
-                    {props.children}
+                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', minHeight: '180px', borderRadius: '10px', marginTop: '10px' }}>
+                    <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
                 </div>
             </div>
 
@@ -377,7 +395,7 @@ export default function Downloader(props) {
                                 {result.title ? (result.title.length > 60 ? result.title.substring(0, 60) + '...' : result.title) : ''}
                             </p>
 
-                            <div className="result-buttons">
+                            <div ref={resultRef} id="result-buttons" className="result-buttons">
                                 {(!mode || mode === 'video') && videoUrl && !images && (
                                     <>
                                         <button className="btn-download btn-video" onClick={() => downloadFile(videoUrl, generateProName(result.author, 'mp4'))} disabled={downloadingUrl === videoUrl}>
