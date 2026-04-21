@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { useTranslations } from "../utils/i18n";
-import AdBanner from "./AdBanner.astro";
 
 interface Props {
     titleKey: string;
@@ -34,9 +33,6 @@ const metaDescription = autoDescription || t(titleKey);
             <div class="text-content">
                 <Fragment set:html={t(contentKey)} />
             </div>
-        </div>
-        <div class="container">
-            <AdBanner />
         </div>
     </section>
 </Layout>
