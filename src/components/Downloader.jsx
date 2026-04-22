@@ -113,7 +113,7 @@ export default function Downloader(props) {
         const script = document.createElement('script');
         script.async = true;
         script.setAttribute('data-cfasync', 'false');
-        script.src = 'https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+        script.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
         adContainer.appendChild(script);
         
         return () => {
