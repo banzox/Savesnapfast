@@ -127,8 +127,8 @@ export default function Downloader(props) {
         const target = document.getElementById(targetId);
         if (!target) return;
 
-        // Add 80px top spacing to frame the ad perfectly under the navbar
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 80;
+        // Add 220px top spacing to frame the ad perfectly without clipping its top edge
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 220;
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
         let startTime = null;
@@ -156,8 +156,8 @@ export default function Downloader(props) {
     useEffect(() => {
         if (result && resultRef.current) {
             const timer = setTimeout(() => {
-                // Focus explicitly on the AD Slot so it gets 100% visibility, results are right beneath it
-                customSlowScroll('ad-slot-main', 1200);
+                // Focus explicitly on the RESULT Info, but raised higher up to reveal the ad
+                customSlowScroll('result-info-box', 1200);
             }, 600); // Wait 600ms for layout to settle before moving
             return () => clearTimeout(timer);
         }
