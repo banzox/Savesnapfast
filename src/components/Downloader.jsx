@@ -690,26 +690,16 @@ export default function Downloader(props) {
                             </div>
                         </div>
 
-                        {/* ─ Smartlink Sponsored Banner ─ */}
-                        <a
-                            href={SMART_LINK}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                                display: 'block', width: '100%', marginBottom: '16px',
-                                background: 'linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.08))',
-                                border: '1px solid rgba(255,255,255,0.1)',
-                                borderRadius: '12px', padding: '14px 16px',
-                                textDecoration: 'none', cursor: 'pointer'
-                            }}
-                        >
-                            <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '1px', margin: '0 0 6px' }}>
-                                Sponsored
-                            </p>
-                            <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: 0 }}>
-                                🎁 {t('modal_ad_text', 'Special offer just for you — tap to claim!')}
-                            </p>
-                        </a>
+                        {/* ─ 300x250 Banner Ad ─ */}
+                        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', padding: '10px 0', border: '1px solid rgba(255,255,255,0.05)' }}>
+                            <iframe 
+                                src="/ad-300x250.html" 
+                                width="300" height="250" 
+                                frameBorder="0" scrolling="no" 
+                                style={{ display: 'block' }}
+                                title="Advertisement"
+                            ></iframe>
+                        </div>
 
                         <button
                             onClick={() => { executeDownload(downloadPending.fileUrl, downloadPending.fileName); setDownloadPending(null); }}
