@@ -127,8 +127,8 @@ export default function Downloader(props) {
         const target = document.getElementById(targetId);
         if (!target) return;
 
-        // Add 220px top spacing to frame the ad perfectly without clipping its top edge
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 220;
+        // Add 85px top spacing so the result starts exactly below the top Navbar
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 85;
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
         let startTime = null;
