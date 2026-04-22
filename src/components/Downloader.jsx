@@ -98,7 +98,7 @@ export default function Downloader(props) {
         oldScripts.forEach(s => s.remove());
 
         // Find container and wipe it clean before triggering the new script
-        const adContainer = document.getElementById('ad-slot-main');
+        const adContainer = document.getElementById('main-sponsor-widget');
         if (!adContainer) return;
 
         // Wipe inner content to prevent ghost duplicate containers
@@ -431,8 +431,8 @@ export default function Downloader(props) {
                     <i className="fas fa-download"></i> {t('btn_download', "Download Now")}
                 </button>
 
-                {/* ─── Native Banner Ad (Visible immediately below URL box) ─── */}
-                <div id="ad-slot-main" style={{ width: '100%', overflow: 'hidden', minHeight: '180px', borderRadius: '10px', marginTop: '10px' }} />
+                {/* ─── Native Banner Promo (Visible immediately below URL box) ─── */}
+                <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '180px', borderRadius: '10px', marginTop: '10px' }} />
             </div>
 
             <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
