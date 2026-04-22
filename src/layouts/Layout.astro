@@ -27,17 +27,28 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Google Analytics (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MK86W8GK18"></script>
+        <!-- Google Analytics - Deferred loading for better FCP -->
         <script is:inline>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-MK86W8GK18');
+            // Defer GA loading until after page becomes interactive
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    var gs = document.createElement('script');
+                    gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-MK86W8GK18';
+                    gs.async = true;
+                    document.head.appendChild(gs);
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    window.gtag = gtag;
+                    gtag('js', new Date());
+                    gtag('config', 'G-MK86W8GK18');
+                }, 100);
+            });
 
             // تسجيل الصفحات بدقة مع انتقالات Astro (ViewTransitions)
             document.addEventListener('astro:page-load', () => {
-                gtag('config', 'G-MK86W8GK18', { page_path: window.location.pathname });
+                if (window.gtag) {
+                    window.gtag('config', 'G-MK86W8GK18', { page_path: window.location.pathname });
+                }
             });
         </script>
 
@@ -75,9 +86,9 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
                 max-width: 48rem;
                 margin: 0 auto;
             }
-            /* Font Display Optimization */
+            /* Font Display Optimization - Override FA fonts */
             @font-face {
-                font-display: swap;
+                font-display: swap !important;
             }
         </style>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
@@ -86,40 +97,51 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
         <title>{title}</title>
         <ViewTransitions />
 
-        <!-- Preconnect hints for external resources -->
+        <!-- Preconnect hints for critical resources only -->
         <link
             rel="preconnect"
             href="https://cdnjs.cloudflare.com"
             crossorigin
         />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-        <link
-            rel="preconnect"
-            href="https://pl28502654.effectivegatecpm.com"
-            crossorigin
-        />
-        <link rel="preconnect" href="https://ferocitycandour.com" crossorigin />
-        <link rel="preconnect" href="https://pl28502619.effectivegatecpm.com" crossorigin />
+        <!-- Ad domains: dns-prefetch only (ads load lazily after page load) -->
+        <link rel="dns-prefetch" href="https://pl28502654.effectivegatecpm.com" />
+        <link rel="dns-prefetch" href="https://ferocitycandour.com" />
+        <link rel="dns-prefetch" href="https://pl28502619.effectivegatecpm.com" />
 
-        <!-- Font Awesome - Optimized subsets for better performance -->
+        <!-- Font Awesome - Async loading with font-display: swap -->
         <link
             rel="preload"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
             as="style"
+            crossorigin
             onload="this.onload=null;this.rel='stylesheet'"
         />
         <link
             rel="preload"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
             as="style"
+            crossorigin
             onload="this.onload=null;this.rel='stylesheet'"
         />
         <link
             rel="preload"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
             as="style"
+            crossorigin
             onload="this.onload=null;this.rel='stylesheet'"
         />
+        <!-- Override Font Awesome font-display to swap -->
+        <style is:inline>
+            @font-face {
+                font-family: 'Font Awesome 6 Free';
+                font-display: swap !important;
+            }
+            @font-face {
+                font-family: 'Font Awesome 6 Brands';
+                font-display: swap !important;
+            }
+        </style>
         <noscript>
             <link
                 rel="stylesheet"
@@ -182,16 +204,11 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
 
         <link rel="manifest" href="/manifest.json" />
 
-        <!-- Preconnect & Prefetch -->
+        <!-- Preconnect for font file origin -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <!-- Fonts - Optimized Loading (Reduced weights for performance) -->
-        <link
-            rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;700&display=swap"
-            as="style"
-        />
+        <!-- Fonts - Non-blocking async loading -->
         <link
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;700&display=swap"
             rel="stylesheet"
@@ -326,22 +343,34 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
             });
         </script>
 
-        <!-- Social Bar Ad -->
-        <script
-            defer
-            data-cfasync="false"
-            src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js"
-        ></script>
+        <!-- Social Bar Ad — Loaded after page render to avoid blocking -->
+        <script is:inline>
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    var bar = document.createElement('script');
+                    bar.setAttribute('data-cfasync', 'false');
+                    bar.src = 'https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js';
+                    document.body.appendChild(bar);
+                }, 300);
+            });
+        </script>
 
         <!-- In-Page Push Ad — أضف هنا كود وحدة In-Page Push من Adsterra بعد إنشائها -->
         <!-- <script async data-cfasync="false" src="YOUR_INPAGE_PUSH_SCRIPT_URL"></script> -->
 
-        <!-- Popunder Ad — NO defer: must load synchronously to register click listener before user interaction -->
-        <script 
-            type="text/javascript" 
-            data-cfasync="false" 
-            src="https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js"
-        ></script>
+        <!-- Popunder Ad — Loaded after page render to avoid blocking FCP/LCP -->
+        <script is:inline>
+            // Load popunder after page is fully rendered (not render-blocking)
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    var pop = document.createElement('script');
+                    pop.type = 'text/javascript';
+                    pop.setAttribute('data-cfasync', 'false');
+                    pop.src = 'https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js';
+                    document.body.appendChild(pop);
+                }, 200);
+            });
+        </script>
 
         <!-- Re-inject Popunder after Astro View Transitions (page swap resets click listeners) -->
         <script is:inline>
