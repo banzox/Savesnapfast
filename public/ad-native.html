@@ -17,5 +17,21 @@
 <body>
 <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
 <script async data-cfasync="false" src="https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"></script>
+<script>
+    function sendHeight() {
+        if (window.parent) {
+            // Get the actual height of the documents content
+            const height = document.getElementById('container-2d1b844eacef7f58a020be44e8239ff9').scrollHeight;
+            if (height > 50) { // Only resize if ad actually loaded
+                window.parent.postMessage({ type: 'resize-ad', height: height + 20 }, '*');
+            }
+        }
+    }
+    const observer = new MutationObserver(sendHeight);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+    window.addEventListener('load', sendHeight);
+    // Also poll a few times just in case Adsterra is slow
+    setInterval(sendHeight, 1000);
+</script>
 </body>
 </html>

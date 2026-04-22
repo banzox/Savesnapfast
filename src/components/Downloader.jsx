@@ -401,16 +401,31 @@ export default function Downloader(props) {
                 </button>
 
                 {/* ─── Native Banner Promo (Visible immediately below URL box) ─── */}
-                <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '180px', borderRadius: '10px', marginTop: '10px' }}>
+                <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '250px', borderRadius: '10px', marginTop: '10px', transition: 'height 0.3s ease' }}>
                     <iframe 
+                        id="native-ad-iframe"
                         src="/ad-native.html" 
                         width="100%" 
                         height="250" 
                         frameBorder="0" 
                         scrolling="no" 
                         allowTransparency="true"
-                        style={{ display: 'block', backgroundColor: 'transparent', maxWidth: '100%' }}
+                        style={{ display: 'block', backgroundColor: 'transparent', maxWidth: '100%', transition: 'height 0.3s ease' }}
                         title="Advertisement"
+                        onLoad={(e) => {
+                            // Listen for height updates from the iframe
+                            const handleMessage = (event) => {
+                                if (event.data && event.data.type === 'resize-ad') {
+                                    const newHeight = event.data.height;
+                                    if (e.target) {
+                                        e.target.style.height = `${newHeight}px`;
+                                        e.target.parentElement.style.height = `${newHeight}px`;
+                                    }
+                                }
+                            };
+                            window.addEventListener('message', handleMessage);
+                            // Cleanup is handled when window goes away or is handled loosely
+                        }}
                     ></iframe>
                 </div>
             </div>
