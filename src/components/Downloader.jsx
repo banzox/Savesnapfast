@@ -127,8 +127,18 @@ export default function Downloader(props) {
         const target = document.getElementById(targetId);
         if (!target) return;
 
-        // Add 85px top spacing so the result starts exactly below the top Navbar
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 85;
+        const rect = target.getBoundingClientRect();
+        let targetPosition;
+        
+        // إذا كان حجم النتيجة أصغر من الشاشة، نجعل أسفل النتيجة متوازياً مع أسفل الشاشة
+        // هذا سيعطي مساحة علوية لإظهار الإعلان بشكل مثالي
+        if (rect.height < window.innerHeight - 150) {
+            targetPosition = rect.bottom + window.scrollY - window.innerHeight + 40; // 40px margin at bottom
+        } else {
+            // أما إذا كانت النتيجة طويلة جداً (مثل الصور المتعددة)، نبدأ من الأعلى
+            targetPosition = rect.top + window.scrollY - 85;
+        }
+        
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
         let startTime = null;
