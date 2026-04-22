@@ -7,7 +7,7 @@ const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
 const SMART_LINK = "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
-const COUNTDOWN_DURATION = 3; // Interstitial countdown seconds
+const COUNTDOWN_DURATION = 4; // Interstitial countdown seconds
 
 
 export default function Downloader(props) {
@@ -690,13 +690,13 @@ export default function Downloader(props) {
                             </div>
                         </div>
 
-                        {/* ─ 300x250 Banner Ad ─ */}
                         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', padding: '10px 0', border: '1px solid rgba(255,255,255,0.05)' }}>
                             <iframe 
                                 src="/ad-300x250.html" 
                                 width="300" height="250" 
                                 frameBorder="0" scrolling="no" 
-                                style={{ display: 'block' }}
+                                allowTransparency="true"
+                                style={{ display: 'block', backgroundColor: 'transparent' }}
                                 title="Advertisement"
                             ></iframe>
                         </div>
