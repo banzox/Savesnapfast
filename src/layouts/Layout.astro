@@ -341,53 +341,34 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
             });
         </script>
 
-        <!-- Social Bar Ad — Loaded after page render to avoid blocking -->
-        <script is:inline>
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    var bar = document.createElement('script');
-                    bar.setAttribute('data-cfasync', 'false');
-                    bar.src = 'https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js';
-                    document.body.appendChild(bar);
-                }, 300);
-            });
-        </script>
+        <!-- Social Bar Ad -->
+        <script type="text/javascript" src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js" data-cfasync="false" async></script>
 
-        <!-- In-Page Push Ad — أضف هنا كود وحدة In-Page Push من Adsterra بعد إنشائها -->
-        <!-- <script async data-cfasync="false" src="YOUR_INPAGE_PUSH_SCRIPT_URL"></script> -->
-
-        <!-- Popunder Ad — Loaded after page render to avoid blocking FCP/LCP -->
-        <script is:inline>
-            // Load popunder after page is fully rendered (not render-blocking)
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    var pop = document.createElement('script');
-                    pop.type = 'text/javascript';
-                    pop.setAttribute('data-cfasync', 'false');
-                    pop.src = 'https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js';
-                    document.body.appendChild(pop);
-                }, 200);
-            });
-        </script>
-
-        <!-- Re-inject Popunder after Astro View Transitions (page swap resets click listeners) -->
+        <!-- Popunder Ad -->
+        <script type="text/javascript" src="https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js" data-cfasync="false" async></script>
+        
+        <!-- Re-initialize on View Transitions (if needed for SPAs usually it's handled by Adsterra automatically, but we can force it) -->
         <script is:inline>
             document.addEventListener('astro:after-swap', () => {
-                // Re-inject Popunder
                 const oldPop = document.querySelector('script[src*="69449082ba48897a611fdb5f17c66001"]');
-                if (oldPop) oldPop.remove();
-                const pop = document.createElement('script');
-                pop.setAttribute('data-cfasync', 'false');
-                pop.src = 'https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js';
-                document.body.appendChild(pop);
+                if (oldPop) {
+                    const newPop = document.createElement('script');
+                    newPop.type = 'text/javascript';
+                    newPop.setAttribute('data-cfasync', 'false');
+                    newPop.src = oldPop.src;
+                    oldPop.remove();
+                    document.body.appendChild(newPop);
+                }
 
-                // Re-inject Social Bar (removed by ViewTransitions body swap)
                 const oldBar = document.querySelector('script[src*="403009a90d32a66dcba80b1e5510e001"]');
-                if (oldBar) oldBar.remove();
-                const bar = document.createElement('script');
-                bar.setAttribute('data-cfasync', 'false');
-                bar.src = 'https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js';
-                document.body.appendChild(bar);
+                if (oldBar) {
+                    const newBar = document.createElement('script');
+                    newBar.type = 'text/javascript';
+                    newBar.setAttribute('data-cfasync', 'false');
+                    newBar.src = oldBar.src;
+                    oldBar.remove();
+                    document.body.appendChild(newBar);
+                }
             });
         </script>
     </body>

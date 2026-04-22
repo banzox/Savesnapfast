@@ -89,38 +89,7 @@ export default function Downloader(props) {
         setCountdown(COUNTDOWN_DURATION);
     };
 
-    // Robust Ad Loading to ensure counting across SPA navigations
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-        
-        // Remove ONLY the native banner script (by its unique hash), NOT the popunder or other scripts
-        const oldScripts = document.querySelectorAll('script[src*="2d1b844eacef7f58a020be44e8239ff9"]');
-        oldScripts.forEach(s => s.remove());
-
-        // Find container and wipe it clean before triggering the new script
-        const adContainer = document.getElementById('main-sponsor-widget');
-        if (!adContainer) return;
-
-        // Wipe inner content to prevent ghost duplicate containers
-        adContainer.innerHTML = '';
-
-        // Create the required container div with the correct ID
-        const innerDiv = document.createElement('div');
-        innerDiv.id = 'container-2d1b844eacef7f58a020be44e8239ff9';
-        adContainer.appendChild(innerDiv);
-
-        // Add the script after the container (required order for Adsterra native banner)
-        const script = document.createElement('script');
-        script.async = true;
-        script.setAttribute('data-cfasync', 'false');
-        script.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
-        adContainer.appendChild(script);
-        
-        return () => {
-             // Cleanup on unmount
-             if (script.parentNode) script.parentNode.removeChild(script);
-        };
-    }, []);
+    // Native Ad logic is now handled in an iframe directly in the render to prevent async document.write loading issues
 
     // Reliable Custom Slow Scroll to Results (1.2s / 1200ms)
     const customSlowScroll = (targetId, duration = 1200) => {
@@ -432,7 +401,18 @@ export default function Downloader(props) {
                 </button>
 
                 {/* ─── Native Banner Promo (Visible immediately below URL box) ─── */}
-                <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '180px', borderRadius: '10px', marginTop: '10px' }} />
+                <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '180px', borderRadius: '10px', marginTop: '10px' }}>
+                    <iframe 
+                        src="/ad-native.html" 
+                        width="100%" 
+                        height="250" 
+                        frameBorder="0" 
+                        scrolling="no" 
+                        allowTransparency="true"
+                        style={{ display: 'block', backgroundColor: 'transparent', maxWidth: '100%' }}
+                        title="Advertisement"
+                    ></iframe>
+                </div>
             </div>
 
             <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
