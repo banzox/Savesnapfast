@@ -1,6 +1,6 @@
 ---
 import DownloadPage from "../../components/DownloadPage.astro";
-import { languages } from "../../i18n/ui";
+import { languages, defaultLang } from "../../i18n/ui";
 
 export const prerender = true;
 
@@ -10,7 +10,7 @@ export function getStaticPaths() {
     const paths = [];
     
     // Loop through all 30 languages from our i18n config
-    for (const lang of Object.keys(languages)) {
+    for (const lang of Object.keys(languages).filter(l => l !== defaultLang)) {
         for (const device of devices) {
             paths.push({ params: { lang, device } });
         }

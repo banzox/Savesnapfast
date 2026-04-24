@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Downloader from "../../components/Downloader.jsx";
 import ToolsTabs from "../../components/tools/ToolsTabs.jsx";
-import { languages } from "../../i18n/ui";
+import { languages, defaultLang } from "../../i18n/ui";
 import { useTranslations, getTranslations } from "../../utils/i18n";
 import NotFound from "../../components/NotFound.astro";
 
@@ -17,7 +17,7 @@ if (!isValidLang) {
 }
 
 export function getStaticPaths() {
-    return Object.keys(languages).map((lang) => ({ params: { lang } }));
+    return Object.keys(languages).filter(l => l !== defaultLang).map((lang) => ({ params: { lang } }));
 }
 
 const currentLang = (isValidLang ? lang : "en") as keyof typeof languages;
