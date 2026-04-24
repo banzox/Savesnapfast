@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import SEOHead from "../components/SEOHead.astro";
 import SEOConfig from "../components/SEOConfig.astro";
 import { ViewTransitions } from "astro:transitions";
+import { ADS_CONFIG } from "../config";
 
 interface Props {
     title: string;
@@ -341,35 +342,39 @@ const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").h
             });
         </script>
 
-        <!-- Social Bar Ad -->
-        <script type="text/javascript" src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js" data-cfasync="false" async></script>
+        {ADS_CONFIG.enableAdsterra && (
+            <>
+                <!-- Social Bar Ad -->
+                <script type="text/javascript" src="https://pl28502619.effectivegatecpm.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js" data-cfasync="false" async></script>
 
-        <!-- Popunder Ad -->
-        <script type="text/javascript" src="https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js" data-cfasync="false" async></script>
-        
-        <!-- Re-initialize on View Transitions (if needed for SPAs usually it's handled by Adsterra automatically, but we can force it) -->
-        <script is:inline>
-            document.addEventListener('astro:after-swap', () => {
-                const oldPop = document.querySelector('script[src*="69449082ba48897a611fdb5f17c66001"]');
-                if (oldPop) {
-                    const newPop = document.createElement('script');
-                    newPop.type = 'text/javascript';
-                    newPop.setAttribute('data-cfasync', 'false');
-                    newPop.src = oldPop.src;
-                    oldPop.remove();
-                    document.body.appendChild(newPop);
-                }
+                <!-- Popunder Ad -->
+                <script type="text/javascript" src="https://ferocitycandour.com/69/44/90/69449082ba48897a611fdb5f17c66001.js" data-cfasync="false" async></script>
+                
+                <!-- Re-initialize on View Transitions -->
+                <script is:inline>
+                    document.addEventListener('astro:after-swap', () => {
+                        const oldPop = document.querySelector('script[src*="69449082ba48897a611fdb5f17c66001"]');
+                        if (oldPop) {
+                            const newPop = document.createElement('script');
+                            newPop.type = 'text/javascript';
+                            newPop.setAttribute('data-cfasync', 'false');
+                            newPop.src = oldPop.src;
+                            oldPop.remove();
+                            document.body.appendChild(newPop);
+                        }
 
-                const oldBar = document.querySelector('script[src*="403009a90d32a66dcba80b1e5510e001"]');
-                if (oldBar) {
-                    const newBar = document.createElement('script');
-                    newBar.type = 'text/javascript';
-                    newBar.setAttribute('data-cfasync', 'false');
-                    newBar.src = oldBar.src;
-                    oldBar.remove();
-                    document.body.appendChild(newBar);
-                }
-            });
-        </script>
+                        const oldBar = document.querySelector('script[src*="403009a90d32a66dcba80b1e5510e001"]');
+                        if (oldBar) {
+                            const newBar = document.createElement('script');
+                            newBar.type = 'text/javascript';
+                            newBar.setAttribute('data-cfasync', 'false');
+                            newBar.src = oldBar.src;
+                            oldBar.remove();
+                            document.body.appendChild(newBar);
+                        }
+                    });
+                </script>
+            </>
+        )}
     </body>
 </html>

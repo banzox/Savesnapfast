@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import fileSaver from 'file-saver';
+import { ADS_CONFIG } from '../config';
 const { saveAs } = fileSaver;
 
 // Dynamic import for JSZip - only loads when needed (better mobile performance)
 const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
-const SMART_LINK = "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308";
-const COUNTDOWN_DURATION = 4; // Interstitial countdown seconds
+const SMART_LINK = ADS_CONFIG.enableAdsterra ? "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308" : null;
+const COUNTDOWN_DURATION = ADS_CONFIG.enableAdsterra ? 4 : 0; // Skip countdown completely if ads are disabled
 
 
 export default function Downloader(props) {
@@ -401,33 +402,35 @@ export default function Downloader(props) {
                 </button>
 
                 {/* ─── Native Banner Promo (Visible immediately below URL box) ─── */}
-                <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '250px', borderRadius: '10px', marginTop: '10px', transition: 'height 0.3s ease' }}>
-                    <iframe 
-                        id="native-ad-iframe"
-                        src="/ad-native.html" 
-                        width="100%" 
-                        height="250" 
-                        frameBorder="0" 
-                        scrolling="no" 
-                        allowTransparency="true"
-                        style={{ display: 'block', backgroundColor: 'transparent', maxWidth: '100%', transition: 'height 0.3s ease' }}
-                        title="Advertisement"
-                        onLoad={(e) => {
-                            // Listen for height updates from the iframe
-                            const handleMessage = (event) => {
-                                if (event.data && event.data.type === 'resize-ad') {
-                                    const newHeight = event.data.height;
-                                    if (e.target) {
-                                        e.target.style.height = `${newHeight}px`;
-                                        e.target.parentElement.style.height = `${newHeight}px`;
+                {ADS_CONFIG.enableAdsterra && (
+                    <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '250px', borderRadius: '10px', marginTop: '10px', transition: 'height 0.3s ease' }}>
+                        <iframe 
+                            id="native-ad-iframe"
+                            src="/ad-native.html" 
+                            width="100%" 
+                            height="250" 
+                            frameBorder="0" 
+                            scrolling="no" 
+                            allowTransparency="true"
+                            style={{ display: 'block', backgroundColor: 'transparent', maxWidth: '100%', transition: 'height 0.3s ease' }}
+                            title="Advertisement"
+                            onLoad={(e) => {
+                                // Listen for height updates from the iframe
+                                const handleMessage = (event) => {
+                                    if (event.data && event.data.type === 'resize-ad') {
+                                        const newHeight = event.data.height;
+                                        if (e.target) {
+                                            e.target.style.height = `${newHeight}px`;
+                                            e.target.parentElement.style.height = `${newHeight}px`;
+                                        }
                                     }
-                                }
-                            };
-                            window.addEventListener('message', handleMessage);
-                            // Cleanup is handled when window goes away or is handled loosely
-                        }}
-                    ></iframe>
-                </div>
+                                };
+                                window.addEventListener('message', handleMessage);
+                                // Cleanup is handled when window goes away or is handled loosely
+                            }}
+                        ></iframe>
+                    </div>
+                )}
             </div>
 
             <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
@@ -695,16 +698,18 @@ export default function Downloader(props) {
                             </div>
                         </div>
 
-                        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', padding: '10px 0', border: '1px solid rgba(255,255,255,0.05)' }}>
-                            <iframe 
-                                src="/ad-300x250.html" 
-                                width="300" height="250" 
-                                frameBorder="0" scrolling="no" 
-                                allowTransparency="true"
-                                style={{ display: 'block', backgroundColor: 'transparent' }}
-                                title="Advertisement"
-                            ></iframe>
-                        </div>
+                        {ADS_CONFIG.enableAdsterra && (
+                            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', padding: '10px 0', border: '1px solid rgba(255,255,255,0.05)' }}>
+                                <iframe 
+                                    src="/ad-300x250.html" 
+                                    width="300" height="250" 
+                                    frameBorder="0" scrolling="no" 
+                                    allowTransparency="true"
+                                    style={{ display: 'block', backgroundColor: 'transparent' }}
+                                    title="Advertisement"
+                                ></iframe>
+                            </div>
+                        )}
 
                         <button
                             onClick={() => { executeDownload(downloadPending.fileUrl, downloadPending.fileName); setDownloadPending(null); }}
