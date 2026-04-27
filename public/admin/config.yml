@@ -1,0 +1,75 @@
+backend:
+  name: github
+  repo: banzox/Savesnapfast
+  branch: main
+
+site_url: https://savetik-fast.xyz
+
+media_folder: public/images/blog
+public_folder: /images/blog
+
+collections:
+  - name: blog
+    label: "📝 Blog Posts"
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    editor:
+      preview: false
+    fields:
+      - label: "Title"
+        name: title
+        widget: string
+        required: true
+
+      - label: "Description (SEO)"
+        name: description
+        widget: text
+        required: true
+
+      - label: "Cover Image"
+        name: cover
+        widget: image
+        required: false
+        media_folder: /public/images/blog
+        public_folder: /images/blog
+
+      - label: "Author"
+        name: author
+        widget: string
+        default: "SaveTikFast Editor"
+
+      - label: "Publish Date"
+        name: pubDate
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+
+      - label: "Language"
+        name: lang
+        widget: select
+        options:
+          - { label: "English", value: "en" }
+          - { label: "العربية", value: "ar" }
+          - { label: "Español", value: "es" }
+          - { label: "Português", value: "pt" }
+          - { label: "Bahasa Indonesia", value: "id" }
+          - { label: "Français", value: "fr" }
+          - { label: "Deutsch", value: "de" }
+          - { label: "Italiano", value: "it" }
+          - { label: "Türkçe", value: "tr" }
+          - { label: "Русский", value: "ru" }
+          - { label: "Tiếng Việt", value: "vi" }
+          - { label: "ไทย", value: "th" }
+          - { label: "日本語", value: "ja" }
+          - { label: "한국어", value: "ko" }
+          - { label: "हिन्दी", value: "hi" }
+          - { label: "中文", value: "zh" }
+        default: "en"
+
+      - label: "Content"
+        name: body
+        widget: markdown

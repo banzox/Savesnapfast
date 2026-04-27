@@ -11,8 +11,11 @@
   "dependencies": {
     "@astrojs/check": "^0.9.6",
     "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/markdoc": "^1.0.4",
     "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.7.0",
+    "@keystatic/astro": "^5.0.6",
+    "@keystatic/core": "^0.5.50",
     "astro": "^5.16.16",
     "cheerio": "^1.2.0",
     "file-saver": "^2.0.5",
