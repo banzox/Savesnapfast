@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { useTranslations } from "../utils/i18n";
+import { getCollection } from 'astro:content';
 
 interface Props {
     lang: string;
@@ -8,6 +9,14 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+// Fetch and filter blog posts
+const allPosts = await getCollection('blog', ({ data }) => {
+    return data.lang === lang;
+});
+
+// Sort by date descending
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Download type cards
 const downloadCards = [
@@ -64,6 +73,42 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
             </p>
         </section>
 
+        <!-- Articles Grid -->
+        <section class="posts-section">
+            <h2 class="section-heading">{t("blog.latest_posts") || "Latest Articles"}</h2>
+            <div class="posts-grid">
+                {
+                    posts.length > 0 ? (
+                        posts.map((post) => (
+                            <article class="post-card">
+                                {post.data.cover && (
+                                    <div class="post-card-image">
+                                        <img src={post.data.cover} alt={post.data.title} loading="lazy" />
+                                    </div>
+                                )}
+                                <div class="post-card-content">
+                                    <div class="post-card-meta">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        {new Intl.DateTimeFormat(lang === 'ar' ? 'ar-EG' : 'en-US').format(post.data.pubDate)}
+                                    </div>
+                                    <h3>{post.data.title}</h3>
+                                    <p>{post.data.description}</p>
+                                    <a href={lang === 'en' ? `/blog/${post.slug}` : `/${lang}/blog/${post.slug}`} class="read-more">
+                                        {t("blog.read_more") || "Read More"} <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        ))
+                    ) : (
+                        <div class="no-posts">
+                            <i class="fas fa-feather"></i>
+                            <p>No articles found in this language yet. Stay tuned!</p>
+                        </div>
+                    )
+                }
+            </div>
+        </section>
+
         <!-- Download Type Cards -->
         <section class="cards-section">
             <h2 class="section-heading">{t("blog.tools_heading")}</h2>
@@ -90,43 +135,6 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
             </div>
         </section>
 
-        <!-- Main Content with SEO Keywords -->
-        <article class="blog-content">
-            <section class="content-section">
-                <h2>
-                    <i class="fas fa-download"></i>
-                    {t("blog.section1_title")}
-                </h2>
-                <p set:html={t("blog.section1_content")} />
-            </section>
-
-            <section class="content-section">
-                <h2>
-                    <i class="fas fa-mobile-alt"></i>
-                    {t("blog.section2_title")}
-                </h2>
-                <p set:html={t("blog.section2_content")} />
-            </section>
-
-            <section class="content-section">
-                <h2><i class="fas fa-globe"></i> {t("blog.section3_title")}</h2>
-                <p set:html={t("blog.section3_content")} />
-            </section>
-
-            <section class="content-section">
-                <h2>
-                    <i class="fas fa-shield-alt"></i>
-                    {t("blog.section4_title")}
-                </h2>
-                <p set:html={t("blog.section4_content")} />
-            </section>
-
-            <section class="content-section">
-                <h2><i class="fas fa-star"></i> {t("blog.section5_title")}</h2>
-                <p set:html={t("blog.section5_content")} />
-            </section>
-        </article>
-
         <!-- CTA Section -->
         <section class="cta-section">
             <h2>{t("blog.cta_title")}</h2>
@@ -138,6 +146,7 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
         </section>
     </div>
 </Layout>
+
 
 <style>
     .blog-container {
@@ -300,43 +309,118 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
         transform: translateX(5px);
     }
 
-    /* Content */
-    .blog-content {
-        margin: 4rem 0;
+    /* Posts Section */
+    .posts-section {
+        margin: 3rem 0 5rem;
     }
 
-    .content-section {
+    .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+    .post-card {
         background: var(--glass);
         border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 35px;
-        margin-bottom: 25px;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
     }
 
-    .content-section h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        color: var(--text-main);
+    .post-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        border-color: var(--secondary);
+    }
+
+    .post-card-image {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .post-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .post-card:hover .post-card-image img {
+        transform: scale(1.1);
+    }
+
+    .post-card-content {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-card-meta {
+        font-size: 0.85rem;
+        color: var(--text-dim);
+        margin-bottom: 12px;
         display: flex;
         align-items: center;
+        gap: 6px;
+    }
+
+    .post-card-meta i {
+        color: var(--secondary);
+    }
+
+    .post-card h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        color: var(--text-main);
+    }
+
+    .post-card p {
+        color: var(--text-dim);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .read-more {
+        margin-top: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--secondary);
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: gap 0.3s;
+    }
+
+    .read-more:hover {
         gap: 12px;
     }
 
-    .content-section h2 i {
-        color: var(--secondary);
-        font-size: 1.3rem;
-    }
-
-    .content-section p {
+    .no-posts {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 60px;
+        background: var(--glass);
+        border-radius: 20px;
+        border: 1px dashed var(--border);
         color: var(--text-dim);
-        line-height: 1.8;
-        font-size: 1.05rem;
     }
 
-    .content-section :global(strong) {
-        color: var(--text-main);
-        font-weight: 600;
+    .no-posts i {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        opacity: 0.3;
     }
 
     /* CTA */
@@ -395,8 +479,21 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
-    :global([data-theme="light"]) .content-section {
+    :global([data-theme="light"]) .post-card {
         background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    :global([data-theme="light"]) .no-posts {
+        background: #ffffff;
+    }
+
+    :global([data-theme="light"]) .cta-section {
+        background: linear-gradient(
+            135deg,
+            #ffffff 0%,
+            rgba(37, 99, 235, 0.03) 100%
+        );
     }
 
     :global([data-theme="light"]) .cta-section {
