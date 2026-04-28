@@ -605,7 +605,14 @@
     "section5_content": "SaveTikFast的优势：最快处理速度，最高4K质量，无水印，所有内容类型，兼容所有设备，永久免费。",
     "cta_title": "准备好下载了吗？",
     "cta_desc": "立即开始下载TikTok视频、MP3、幻灯片和快拍。100%免费，无需注册。",
-    "cta_button": "开始下载"
+    "cta_button": "开始下载",
+    "latest_posts": "最新文章",
+    "read_more": "阅读更多",
+    "share": "分享这篇文章：",
+    "related_posts_title": "相关文章",
+    "toc_title": "目录",
+    "copy_link": "复制链接",
+    "link_copied": "已复制！"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",

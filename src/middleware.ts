@@ -37,6 +37,13 @@ export const onRequest = defineMiddleware(async (context, next) => {
             const newPath = "/" + parts.join("/");
             return context.redirect(newPath + url.search, 301);
         }
+
+        // Redirect /en to /
+        if (parts[0] === "en") {
+            parts.shift();
+            const newPath = "/" + parts.join("/");
+            return context.redirect(newPath + url.search, 301);
+        }
         const lastPart = parts[parts.length - 1]; // Get the slug (e.g. 'about-us')
 
         // Check if the last part is a legacy slug

@@ -605,7 +605,14 @@
     "section5_content": "SaveTikFast'in farkı: en hızlı işlem, 4K'ya kadar en yüksek kalite, filigransız, tüm içerik türleri, tüm cihazlarla uyumlu, her zaman ücretsiz.",
     "cta_title": "İndirmeye Hazır mısınız?",
     "cta_desc": "Şimdi TikTok video, MP3, slayt ve hikaye indirmeye başlayın. %100 ücretsiz, kayıt gerektirmez.",
-    "cta_button": "İndirmeye Başla"
+    "cta_button": "İndirmeye Başla",
+    "latest_posts": "Son gönderiler",
+    "read_more": "Devamını oku",
+    "share": "Bu makaleyi paylaş:",
+    "related_posts_title": "İlgili Makaleler",
+    "toc_title": "İçindekiler",
+    "copy_link": "Bağlantıyı kopyala",
+    "link_copied": "Kopyalandı!"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",

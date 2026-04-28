@@ -214,7 +214,11 @@
       "faq": {
         "title": "Vanliga frågor",
         "q1": "Laddas min bild upp till en server?",
-        "a1": "Nej! All komprimering sker direkt i din webbläsare. Dina bilder lämnar aldrig din enhet."
+        "a1": "Nej! All komprimering sker direkt i din webbläsare. Dina bilder lämnar aldrig din enhet.",
+        "q2": "Vilka format stöds?",
+        "a2": "Vi stöder JPG/JPEG, PNG och WebP upp till 15 MB.",
+        "q3": "Hur mycket kan jag minska storleken?",
+        "a3": "Normalt 50-80% beroende på originalbilden och kvalitetsinställningarna."
       }
     },
     "converter": {
@@ -285,7 +289,10 @@
         "use1": "Webbadresser - Led användare till din webbplats omedelbart",
         "use2": "Visitkort - Dela kontaktinformation digitalt",
         "use3": "Produktförpackningar - Länka till manualer eller supportsidor",
-        "p2": "Vår QR-generator skapar högupplösta koder som skannas tillförlitligt på alla enheter."
+        "p2": "Vår QR-generator skapar högupplösta koder som skannas tillförlitligt på alla enheter.",
+        "use4": "Marknadsföringsmaterial - Spåra kampanjengagemang",
+        "use5": "Restaurangmenyer - Kontaktlös åtkomst",
+        "use6": "Evenemangsbiljetter - Snabb skanning vid inträde"
       },
       "faq": {
         "title": "Vanliga frågor",
@@ -598,7 +605,14 @@
     "section5_content": "In a market full of TikTok downloaders, SaveTikFast stands out for several reasons:<br><br>• <strong>Fastest processing</strong> - downloads start in seconds, not minutes<br>• <strong>Highest quality</strong> - up to 4K resolution when available<br>• <strong>No watermark</strong> - clean videos ready for sharing<br>• <strong>All content types</strong> - videos, MP3, slideshows, and stories<br>• <strong>Universal compatibility</strong> - works on every device and browser<br>• <strong>Always free</strong> - no premium plans, no hidden fees<br>• <strong>Regular updates</strong> - continuously improved for 2026 and beyond<br><br>Whether you're a content creator, social media manager, or just someone who loves TikTok, SaveTikFast is your go-to solution for downloading and saving TikTok content.",
     "cta_title": "Ready to Download?",
     "cta_desc": "Start downloading TikTok videos, MP3 audio, slideshows, and stories now. 100% free, no registration required.",
-    "cta_button": "Start Downloading"
+    "cta_button": "Start Downloading",
+    "latest_posts": "Senaste inläggen",
+    "read_more": "Läs mer",
+    "share": "Dela denna artikel:",
+    "related_posts_title": "Relaterade artiklar",
+    "toc_title": "Innehållsförteckning",
+    "copy_link": "Kopiera länk",
+    "link_copied": "Kopierad!"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",

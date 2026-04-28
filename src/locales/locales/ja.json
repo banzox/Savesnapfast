@@ -605,7 +605,14 @@
     "section5_content": "SaveTikFastの特徴：最速処理、最高4K品質、透かしなし、すべてのコンテンツタイプ、すべてのデバイス互換、永久無料。",
     "cta_title": "ダウンロードの準備はできましたか？",
     "cta_desc": "TikTok動画、MP3、スライドショー、ストーリーのダウンロードを今すぐ開始。100%無料、登録不要。",
-    "cta_button": "ダウンロード開始"
+    "cta_button": "ダウンロード開始",
+    "latest_posts": "最新の投稿",
+    "read_more": "続きを読む",
+    "share": "この記事をシェア：",
+    "related_posts_title": "関連記事",
+    "toc_title": "目次",
+    "copy_link": "リンクをコピー",
+    "link_copied": "コピーしました！"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",

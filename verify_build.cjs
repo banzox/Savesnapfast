@@ -6,23 +6,23 @@ console.log('=== BUILD OUTPUT VERIFICATION ===\n');
 // Check directory format pages
 const checkPaths = ['mp3', 'about', 'privacy', 'terms', 'contact', 'dmca', 'disclaimer', 'blog', 'tools'];
 checkPaths.forEach(p => {
-  const dirFormat = fs.existsSync(distDir + '/' + p + '/index.html');
+  const dirFormat = fs.existsSync(distDir + '/' + p + '.html');
   const fileFormat = fs.existsSync(distDir + '/' + p + '.html');
-  const status = dirFormat ? 'OK (directory)' : fileFormat ? 'WARN (file.html)' : 'NOT FOUND';
+  const status = dirFormat ? 'OK (file)' : fileFormat ? 'WARN (file.html)' : 'NOT FOUND';
   console.log('/' + p + ': ' + status);
 });
 
 // Check lang pages
 console.log('\nLang pages /ar/:');
 ['', 'mp3', 'about', 'disclaimer'].forEach(p => {
-  const pathToCheck = p ? distDir + '/ar/' + p + '/index.html' : distDir + '/ar/index.html';
+  const pathToCheck = p ? distDir + '/ar/' + p + '.html' : distDir + '/ar.html';
   const exists = fs.existsSync(pathToCheck);
   console.log('  /ar/' + p + ': ' + (exists ? 'OK' : 'MISSING'));
 });
 
 // Check canonical
-console.log('\nCanonical + hreflang check (/mp3/index.html):');
-const mp3Html = fs.readFileSync(distDir + '/mp3/index.html', 'utf8');
+console.log('\nCanonical + hreflang check (/mp3.html):');
+const mp3Html = fs.readFileSync(distDir + '/mp3.html', 'utf8');
 
 const canonical = (mp3Html.match(/rel="canonical" href="([^"]+)"/) || [])[1];
 console.log('  Canonical:', canonical || 'NOT FOUND');

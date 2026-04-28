@@ -605,7 +605,14 @@
     "section5_content": "SaveTikFast wyróżnia się: najszybsze przetwarzanie, najwyższa jakość do 4K, bez znaku wodnego, wszystkie typy treści, kompatybilny ze wszystkimi urządzeniami, zawsze za darmo.",
     "cta_title": "Gotowy do Pobrania?",
     "cta_desc": "Zacznij pobierać filmy, MP3, pokazy slajdów i stories TikTok teraz. 100% za darmo, bez rejestracji.",
-    "cta_button": "Rozpocznij Pobieranie"
+    "cta_button": "Rozpocznij Pobieranie",
+    "latest_posts": "Najnowsze wpisy",
+    "read_more": "Czytaj więcej",
+    "share": "Udostępnij ten artykuł:",
+    "related_posts_title": "Powiązane artykuły",
+    "toc_title": "Spis treści",
+    "copy_link": "Kopiuj link",
+    "link_copied": "Skopiowano!"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",

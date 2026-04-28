@@ -605,7 +605,14 @@
     "section5_content": "SaveTikFast erottuu edukseen: nopein käsittely, korkein laatu jopa 4K:hon asti, ei vesileimaa, kaikki sisältötyypit, yhteensopiva kaikkien laitteiden kanssa, aina ilmainen.",
     "cta_title": "Valmis lataamaan?",
     "cta_desc": "Aloita TikTok-videoiden, MP3-tiedostojen, kuvaesitysten ja tarinoiden lataaminen nyt. 100% ilmainen, ei rekisteröitymistä.",
-    "cta_button": "Aloita lataus"
+    "cta_button": "Aloita lataus",
+    "latest_posts": "Uusimmat julkaisut",
+    "read_more": "Lue lisää",
+    "share": "Jaa tämä artikkeli:",
+    "related_posts_title": "Aiheeseen liittyvät artikkelit",
+    "toc_title": "Sisällysluettelo",
+    "copy_link": "Kopioi linkki",
+    "link_copied": "Kopioitu!"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",

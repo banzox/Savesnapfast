@@ -214,7 +214,11 @@
       "faq": {
         "title": "Часті запитання",
         "q1": "Чи завантажується моє зображення на сервер?",
-        "a1": "Ні! Все стиснення відбувається безпосередньо у вашому браузері. Ваші фото ніколи не покидають ваш пристрій."
+        "a1": "Ні! Все стиснення відбувається безпосередньо у вашому браузері. Ваші фото ніколи не покидають ваш пристрій.",
+        "q2": "Які формати підтримуються?",
+        "a2": "Ми підтримуємо JPG/JPEG, PNG та WebP до 15 МБ.",
+        "q3": "Наскільки я можу зменшити розмір?",
+        "a3": "Зазвичай на 50-80% залежно від оригінального зображення та налаштувань якості."
       }
     },
     "converter": {
@@ -285,7 +289,10 @@
         "use1": "Посилання на сайти - миттєво направляйте користувачів",
         "use2": "Візитки - діліться контактами в цифровому вигляді",
         "use3": "Упаковка продуктів - посилання на інструкції або підтримку",
-        "p2": "Наш генератор створює коди, які надійно зчитуються будь-яким пристроєм."
+        "p2": "Наш генератор створює коди, які надійно зчитуються будь-яким пристроєм.",
+        "use4": "Маркетингові матеріали - Відстежуйте залучення до кампаній",
+        "use5": "Меню ресторанів - Безконтактний доступ",
+        "use6": "Квитки на заходи - Швидке сканування при вході"
       },
       "faq": {
         "title": "Часті запитання",
@@ -598,7 +605,14 @@
     "section5_content": "In a market full of TikTok downloaders, SaveTikFast stands out for several reasons:<br><br>• <strong>Fastest processing</strong> - downloads start in seconds, not minutes<br>• <strong>Highest quality</strong> - up to 4K resolution when available<br>• <strong>No watermark</strong> - clean videos ready for sharing<br>• <strong>All content types</strong> - videos, MP3, slideshows, and stories<br>• <strong>Universal compatibility</strong> - works on every device and browser<br>• <strong>Always free</strong> - no premium plans, no hidden fees<br>• <strong>Regular updates</strong> - continuously improved for 2026 and beyond<br><br>Whether you're a content creator, social media manager, or just someone who loves TikTok, SaveTikFast is your go-to solution for downloading and saving TikTok content.",
     "cta_title": "Ready to Download?",
     "cta_desc": "Start downloading TikTok videos, MP3 audio, slideshows, and stories now. 100% free, no registration required.",
-    "cta_button": "Start Downloading"
+    "cta_button": "Start Downloading",
+    "latest_posts": "Останні записи",
+    "read_more": "Читати далі",
+    "share": "Поділитися статтею:",
+    "related_posts_title": "Схожі статті",
+    "toc_title": "Зміст",
+    "copy_link": "Копіювати посилання",
+    "link_copied": "Скопійовано!"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",

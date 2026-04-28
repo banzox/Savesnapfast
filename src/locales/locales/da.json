@@ -605,7 +605,14 @@
     "section5_content": "SaveTikFast skiller sig ud med: hurtigste behandling, højeste kvalitet op til 4K, intet vandmærke, alle indholdstyper, kompatibel med alle enheder, altid gratis.",
     "cta_title": "Klar til at downloade?",
     "cta_desc": "Begynd at downloade TikTok-videoer, MP3, diasshow og historier nu. 100% gratis, ingen registrering.",
-    "cta_button": "Start Download"
+    "cta_button": "Start Download",
+    "latest_posts": "Seneste indlæg",
+    "read_more": "Læs mere",
+    "share": "Del denne artikel:",
+    "related_posts_title": "Relaterede artikler",
+    "toc_title": "Indholdsfortegnelse",
+    "copy_link": "Kopier link",
+    "link_copied": "Kopieret!"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",
