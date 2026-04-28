@@ -1,7 +1,8 @@
 import { ui, defaultLang } from '../i18n/ui';
 
 export function getLangFromUrl(url) {
-    const [, lang] = url.pathname.split('/');
+    const cleanPath = url.pathname.replace(/\.html$/, '');
+    const [, lang] = cleanPath.split('/');
     if (lang in ui) return lang;
     const queryLang = url.searchParams.get('lang');
     if (queryLang && queryLang in ui) return queryLang;

@@ -35,7 +35,7 @@ const formattedDate = new Intl.DateTimeFormat(lang === 'ar' ? 'ar-EG' : 'en-US',
 
 const homeHref = lang === "en" ? "/" : `/${lang}`;
 const blogHref = lang === "en" ? "/blog" : `/${lang}/blog`;
-const currentUrl = new URL(Astro.url.pathname, Astro.site || "https://savetik-fast.xyz").href;
+const currentUrl = new URL(Astro.url.pathname.replace(/\.html$/, ""), Astro.site || "https://savetik-fast.xyz").href;
 
 // Fetch related posts
 const allPosts = await getCollection('blog');

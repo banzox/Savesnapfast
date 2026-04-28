@@ -88,7 +88,7 @@ const organizationSchema = {
     },
 };
 
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replace(/\.html$/, "");
 const pathParts = pathname.split("/").filter(Boolean);
 const siteOrigin = "https://savetik-fast.xyz";
 

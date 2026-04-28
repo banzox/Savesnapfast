@@ -16,7 +16,7 @@ interface Props {
 }
 
 const { title, description, lang = "en", keywords } = Astro.props;
-const currentPageURL = new URL(Astro.url.pathname, "https://savetik-fast.xyz").href;
+const currentPageURL = new URL(Astro.url.pathname.replace(/\.html$/, ""), "https://savetik-fast.xyz").href;
 ---
 
 <!doctype html>

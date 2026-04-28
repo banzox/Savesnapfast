@@ -7,8 +7,11 @@ const t = useTranslations(lang);
 const currentLangName =
     languages[lang as keyof typeof languages] || languages["en"];
 
-const pathname = Astro.url.pathname;
+const rawPathname = Astro.url.pathname;
 const search = Astro.url.search;
+
+// Strip .html extension that build.format:'file' adds to Astro.url.pathname
+const pathname = rawPathname.replace(/\.html$/, "");
 
 function getPathForLanguage(targetLang: string) {
     let currentPath = pathname;
@@ -43,7 +46,7 @@ function getPathForLanguage(targetLang: string) {
         }
     }
 
-    if (!pathNoLang.startsWith("/")) pathNoLang = "/" + pathNoLang;
+    if (!pathNoLang || !pathNoLang.startsWith("/")) pathNoLang = "/" + (pathNoLang || "");
 
     if (targetLang === defaultLang) {
         return pathNoLang === "/" ? "/" : pathNoLang + search;
