@@ -607,7 +607,12 @@
     "cta_desc": "ابدأ تحميل فيديوهات تيك توك، صوت MP3، صور سلايد شو، وقصص الآن. مجاني 100%، لا يلزم تسجيل.",
     "cta_button": "ابدأ التحميل",
     "latest_posts": "أحدث المقالات",
-    "read_more": "اقرأ المزيد"
+    "read_more": "اقرأ المزيد",
+    "share": "شارك هذا المقال:",
+    "related_posts_title": "مقالات ذات صلة",
+    "toc_title": "جدول المحتويات",
+    "copy_link": "نسخ الرابط",
+    "link_copied": "تم النسخ!"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",

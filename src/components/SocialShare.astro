@@ -1,0 +1,175 @@
+---
+import { useTranslations } from "../utils/i18n";
+
+interface Props {
+  lang: string;
+  url: string;
+  title: string;
+}
+
+const { lang, url, title } = Astro.props;
+const t = useTranslations(lang);
+
+const encodedUrl = encodeURIComponent(url);
+const encodedTitle = encodeURIComponent(title);
+
+const whatsappUrl = `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`;
+const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+const twitterUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`;
+const telegramUrl = `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`;
+---
+
+<div class="social-share">
+  <p class="share-title">{t("blog.share")}</p>
+  <div class="share-buttons">
+    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="share-btn whatsapp" aria-label="Share on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href={facebookUrl} target="_blank" rel="noopener noreferrer" class="share-btn facebook" aria-label="Share on Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href={twitterUrl} target="_blank" rel="noopener noreferrer" class="share-btn twitter" aria-label="Share on Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href={telegramUrl} target="_blank" rel="noopener noreferrer" class="share-btn telegram" aria-label="Share on Telegram">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+    <button class="share-btn copy-link" id="copy-link-btn" data-url={url} data-copied-text={t("blog.link_copied")} aria-label={t("blog.copy_link")}>
+      <i class="fas fa-link"></i>
+      <span class="tooltip">{t("blog.copy_link")}</span>
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('astro:page-load', () => {
+    const copyBtn = document.getElementById('copy-link-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        const url = copyBtn.getAttribute('data-url');
+        try {
+          await navigator.clipboard.writeText(url);
+          const tooltip = copyBtn.querySelector('.tooltip');
+          const originalText = tooltip.textContent;
+          // You could pass the "link_copied" translation via data attribute if needed, 
+          // but for simplicity we'll just show a generic checkmark or use a hardcoded fallback 
+          // if we can't inject the translation directly into the inline script easily.
+          // Since we want the translated text, let's inject it into a data attribute.
+          const copiedText = copyBtn.getAttribute('data-copied-text') || 'Copied!';
+          
+          tooltip.textContent = copiedText;
+          copyBtn.classList.add('copied');
+          
+          setTimeout(() => {
+            tooltip.textContent = originalText;
+            copyBtn.classList.remove('copied');
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  .social-share {
+    margin: 40px 0;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  :global([data-theme="light"]) .social-share {
+    background: #f8fafc;
+  }
+
+  .share-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+  }
+
+  .share-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .whatsapp { background: #25D366; }
+  .facebook { background: #1877F2; }
+  .twitter { background: #1DA1F2; }
+  .telegram { background: #0088cc; }
+  
+  .copy-link { 
+    background: var(--surface); 
+    color: var(--text-main);
+    border: 1px solid var(--border);
+  }
+  
+  .copy-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+
+  .copy-link.copied {
+    background: #25D366;
+    color: white;
+    border-color: #25D366;
+  }
+
+  /* Tooltip */
+  .tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 10;
+  }
+
+  .share-btn:hover .tooltip {
+    opacity: 1;
+  }
+
+  :global([data-theme="light"]) .tooltip {
+    background: rgba(0, 0, 0, 0.9);
+  }
+</style>

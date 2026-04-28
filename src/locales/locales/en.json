@@ -607,7 +607,12 @@
     "cta_desc": "Start downloading TikTok videos, MP3 audio, slideshows, and stories now. 100% free, no registration required.",
     "cta_button": "Start Downloading",
     "latest_posts": "Latest Articles",
-    "read_more": "Read More"
+    "read_more": "Read More",
+    "share": "Share this article:",
+    "related_posts_title": "Related Articles",
+    "toc_title": "Table of Contents",
+    "copy_link": "Copy Link",
+    "link_copied": "Link Copied!"
   },
   "ios_page": {
     "title": "TikTok Downloader for iOS",
