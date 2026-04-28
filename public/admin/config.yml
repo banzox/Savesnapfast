@@ -51,23 +51,40 @@ collections:
       - label: "Language"
         name: lang
         widget: select
+        multiple: false
         options:
-          - { label: "English", value: "en" }
-          - { label: "العربية", value: "ar" }
-          - { label: "Español", value: "es" }
-          - { label: "Português", value: "pt" }
-          - { label: "Bahasa Indonesia", value: "id" }
-          - { label: "Français", value: "fr" }
-          - { label: "Deutsch", value: "de" }
-          - { label: "Italiano", value: "it" }
-          - { label: "Türkçe", value: "tr" }
-          - { label: "Русский", value: "ru" }
-          - { label: "Tiếng Việt", value: "vi" }
-          - { label: "ไทย", value: "th" }
-          - { label: "日本語", value: "ja" }
-          - { label: "한국어", value: "ko" }
-          - { label: "हिन्दी", value: "hi" }
-          - { label: "中文", value: "zh" }
+          - label: "English"
+            value: "en"
+          - label: "العربية"
+            value: "ar"
+          - label: "Español"
+            value: "es"
+          - label: "Português"
+            value: "pt"
+          - label: "Bahasa Indonesia"
+            value: "id"
+          - label: "Français"
+            value: "fr"
+          - label: "Deutsch"
+            value: "de"
+          - label: "Italiano"
+            value: "it"
+          - label: "Türkçe"
+            value: "tr"
+          - label: "Русский"
+            value: "ru"
+          - label: "Tiếng Việt"
+            value: "vi"
+          - label: "ไทย"
+            value: "th"
+          - label: "日本語"
+            value: "ja"
+          - label: "한국어"
+            value: "ko"
+          - label: "हिन्दी"
+            value: "hi"
+          - label: "中文"
+            value: "zh"
         default: "en"
 
       - label: "Content"
