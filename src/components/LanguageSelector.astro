@@ -48,6 +48,13 @@ function getPathForLanguage(targetLang: string) {
 
     if (!pathNoLang || !pathNoLang.startsWith("/")) pathNoLang = "/" + (pathNoLang || "");
 
+    // Blog post pages: redirect to blog index when switching language
+    // because blog posts don't exist in all languages
+    const blogPostMatch = pathNoLang.match(/^\/blog\/.+/);
+    if (blogPostMatch) {
+        pathNoLang = "/blog";
+    }
+
     if (targetLang === defaultLang) {
         return pathNoLang === "/" ? "/" : pathNoLang + search;
     } else {

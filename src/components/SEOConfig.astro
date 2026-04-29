@@ -30,16 +30,20 @@ const baseSlug = isLangPrefix
 const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
 
 // --- 3. Build hreflang entries for ALL languages (NO trailing slashes) ---
+// For blog post pages, link to the blog index in other languages
+// since blog posts don't exist in all languages
+const isBlogPost = baseSlug && baseSlug.startsWith("blog/") && baseSlug !== "blog";
 const hreflangs = Object.keys(languages).map((langCode) => {
-    // English lives at root: /slug
-    // Other languages: /lang/slug
+    // For blog posts, other languages should point to /[lang]/blog
+    const slug = isBlogPost ? "blog" : baseSlug;
+    
     const langPath =
         langCode === "en"
-            ? baseSlug
-                ? `/${baseSlug}`
+            ? slug
+                ? `/${slug}`
                 : "/"
-            : baseSlug
-              ? `/${langCode}/${baseSlug}`
+            : slug
+              ? `/${langCode}/${slug}`
               : `/${langCode}`;
 
     return {
@@ -49,8 +53,9 @@ const hreflangs = Object.keys(languages).map((langCode) => {
 });
 
 // --- 4. x-default always points to the English version of the same page ---
+const xDefaultSlug = isBlogPost ? "blog" : baseSlug;
 const xDefaultHref = new URL(
-    baseSlug ? `/${baseSlug}` : "/",
+    xDefaultSlug ? `/${xDefaultSlug}` : "/",
     SITE_ORIGIN,
 ).href;
 ---
