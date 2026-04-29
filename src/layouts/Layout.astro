@@ -27,6 +27,9 @@ const currentPageURL = new URL(Astro.url.pathname.replace(/\.html$/, ""), "https
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2779375554237684" crossorigin="anonymous"></script>
+
 
         <!-- Google Analytics - Deferred loading for better FCP -->
         <script is:inline>
