@@ -188,7 +188,7 @@ if (!pagePrefix) {
         </article>
     </div>
 
-    <section class="container features-grid">
+    <section class="container features-grid" aria-label={t("features.title") || "Features"}>
         {
             features.map((feature) => (
                 <div class="feature-card">
@@ -202,8 +202,8 @@ if (!pagePrefix) {
 
     {
         showHowTo && (
-            <section class="container how-to-box shadow-box">
-                <h2 class="section-title">{howToTitle}</h2>
+            <section class="container how-to-box shadow-box" aria-labelledby="how-to-title">
+                <h2 id="how-to-title" class="section-title">{howToTitle}</h2>
                 <div class="steps-wrapper">
                     {howToSteps.map((step, index) => (
                         <div class="step">
@@ -219,9 +219,9 @@ if (!pagePrefix) {
 
     {
         showAbout && (
-            <section class="container shadow-box about-section">
+            <section class="container shadow-box about-section" aria-labelledby="about-title">
                 <div class="content-box">
-                    <h2>
+                    <h2 id="about-title">
                         <i class={`${aboutIcon} accent-text`} /> {aboutTitle}
                     </h2>
                     <p>{aboutContent}</p>

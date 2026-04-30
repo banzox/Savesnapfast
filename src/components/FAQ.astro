@@ -20,8 +20,10 @@ const { t, items } = Astro.props;
                           <div class="faq-question">
                               {item.question} <i class="fas fa-chevron-down" />
                           </div>
-                          <div class="faq-answer">
-                              <p>{item.answer}</p>
+                          <div class="faq-answer-wrapper">
+                              <div class="faq-answer">
+                                  <p>{item.answer}</p>
+                              </div>
                           </div>
                       </div>
                   ))
@@ -30,8 +32,10 @@ const { t, items } = Astro.props;
                           <div class="faq-question">
                               {t(`faq.q${i}`)} <i class="fas fa-chevron-down" />
                           </div>
-                          <div class="faq-answer">
-                              <p>{t(`faq.a${i}`)}</p>
+                          <div class="faq-answer-wrapper">
+                              <div class="faq-answer">
+                                  <p>{t(`faq.a${i}`)}</p>
+                              </div>
                           </div>
                       </div>
                   ))
