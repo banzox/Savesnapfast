@@ -33,7 +33,7 @@ while (true) {
     i++;
 }
 
-const websiteSchema = {
+const softwareAppSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "SaveTikFast",
@@ -60,6 +60,15 @@ const websiteSchema = {
         "@type": "Organization",
         name: "SaveTikFast",
     },
+};
+
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SaveTikFast",
+    "alternateName": ["SaveTik Fast", "Save Tik Fast", "TikTok Downloader"],
+    "url": "https://savetik-fast.xyz/",
+    "description": t("meta.description")
 };
 
 const organizationSchema = {
@@ -138,6 +147,7 @@ const breadcrumbSchema = {
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)} />
 
 {
     ["ios", "android", "mac", "pc"].includes(breadcrumbParts[breadcrumbParts.length - 1] || "") && (
