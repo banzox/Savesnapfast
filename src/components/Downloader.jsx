@@ -469,7 +469,7 @@ export default function Downloader(props) {
 
                         <div id="result-info-box" className="result-info" style={{ width: '100%' }}>
                             <p className="result-author">
-                                <i className="fab fa-tiktok"></i> @{sanitizeName(result.author || 'User')}
+                                <i className="fas fa-user-circle"></i> @{sanitizeName(result.author || 'User')}
                             </p>
                             <p className="result-desc">
                                 {result.title ? (result.title.length > 60 ? result.title.substring(0, 60) + '...' : result.title) : ''}

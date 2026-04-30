@@ -51,7 +51,7 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
                 aria-label="SaveTikFast"
             >
                 <div class="logo-icon-wrapper">
-                    <i class="fab fa-tiktok"></i>
+                    <i class="fas fa-bolt"></i>
                 </div>
                 <span class="logo-text"
                     >SaveTik<span class="highlight">Fast</span></span
@@ -186,24 +186,24 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
     .logo-icon-wrapper {
         width: 42px;
         height: 42px;
-        background: linear-gradient(135deg, #00f2ea 0%, #ff0050 100%);
+        background: linear-gradient(135deg, #ffe53b 0%, #ff2525 100%);
         border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.4rem;
         color: white;
-        box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+        box-shadow: 0 4px 15px rgba(255, 229, 59, 0.4);
         transition: all 0.3s ease;
     }
 
     :global([data-theme="light"]) .logo-icon-wrapper {
         background: #0a0a0a; /* Black Box */
-        color: #ff0050; /* Red Icon */
+        color: #ffcc00; /* Yellow Icon */
         box-shadow:
             0 4px 15px rgba(0, 0, 0, 0.25),
-            0 0 0 1px rgba(255, 0, 80, 0.2);
-        border: 1px solid rgba(255, 0, 80, 0.3);
+            0 0 0 1px rgba(255, 204, 0, 0.2);
+        border: 1px solid rgba(255, 204, 0, 0.3);
     }
 
     .logo:hover .logo-icon-wrapper {
