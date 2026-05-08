@@ -1,16 +1,11 @@
 {
-	"main": "dist/_worker.js/index.js",
-	"name": "afraid-apogee",
-  "compatibility_date": "2026-01-31",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "global_fetch_strictly_public"
-  ],
-	"assets": {
-		"binding": "ASSETS",
-		"directory": "./dist"
-	},
+	"name": "savesnapfast",
+	"pages_build_output_dir": "./dist",
+	"compatibility_date": "2026-01-31",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
 	"observability": {
-    "enabled": true
-  }
+		"enabled": true
+	}
 }
