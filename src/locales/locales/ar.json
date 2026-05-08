@@ -615,11 +615,11 @@
     "link_copied": "تم النسخ!"
   },
   "ios_page": {
-    "title": "TikTok Downloader for iOS",
-    "desc": "Download TikTok videos without watermark directly to your iPhone or iPad in HD quality. The fastest way to save videos using Safari on iOS.",
-    "placeholder": "Paste TikTok link from your iPhone...",
-    "meta_title": "TikTok Downloader for iPhone/iPad - SaveTikFast",
-    "meta_desc": "Free tool to save TikTok videos without watermark on iOS (iPhone & iPad). No app installation required. Download in MP4 or MP3 format instantly.",
+    "title": "تنزيل TikTok لنظام iOS",
+    "desc": "قم بتنزيل مقاطع فيديو TikTok بدون علامة مائية مباشرة على جهاز iPhone أو iPad بجودة HD. أسرع طريقة لحفظ مقاطع الفيديو باستخدام Safari على iOS.",
+    "placeholder": "الصق رابط TikTok من جهاز iPhone الخاص بك...",
+    "meta_title": "تنزيل TikTok لأجهزة iPhone/iPad - SaveTikFast",
+    "meta_desc": "أداة مجانية لحفظ مقاطع فيديو TikTok بدون علامة مائية على نظام iOS (iPhone وiPad). لا يلزم تثبيت التطبيق. قم بالتنزيل بتنسيق MP4 أو MP3 على الفور.",
     "faq": {
       "q1": "كيف أحمل فيديوهات تيك توك على الآيفون والآيباد بدون علامة مائية؟",
       "a1": "افتح تطبيق تيك توك على جهازك الآيفون أو الآيباد، واضغط على مشاركة ثم انسخ الرابط. افتح متصفح سفاري أو كروم وانتقل إلى موقع SaveTikFast، والصق رابط فيديو تيك توك واضغط تنزيل. سيتم حفظ الفيديو مباشرة في تطبيق الصور بجودة HD بدون علامة مائية. تعمل الطريقة على آيفون 16، آيفون 15، آيفون 14، آيباد برو، آيباد إير، وجميع أجهزة iOS التي تعمل بنظام iOS 17 أو iOS 18.",
@@ -634,11 +634,11 @@
     }
   },
   "android_page": {
-    "title": "TikTok Downloader for Android",
-    "desc": "The best Android TikTok video saver! Download any TikTok video without watermark directly to your mobile gallery in MP4 format.",
-    "placeholder": "Paste TikTok link from your Android phone...",
-    "meta_title": "TikTok Downloader for Android Devices - SaveTikFast",
-    "meta_desc": "Save any TikTok video without logo to your Android phone gallery. 100% free, no watermark, fast, and secure. Download in HD quality.",
+    "title": "برنامج تحميل تيك توك للاندرويد",
+    "desc": "أفضل برنامج حفظ فيديو TikTok لنظام Android! قم بتنزيل أي فيديو TikTok بدون علامة مائية مباشرة إلى معرض هاتفك المحمول بتنسيق MP4.",
+    "placeholder": "الصق رابط TikTok من هاتف Android الخاص بك...",
+    "meta_title": "تنزيل TikTok لأجهزة Android - SaveTikFast",
+    "meta_desc": "احفظ أي فيديو TikTok بدون شعار في معرض هاتف Android الخاص بك. مجاني 100%، بدون علامة مائية، سريع وآمن. التحميل بجودة HD .",
     "faq": {
       "q1": "كيف أحمل فيديوهات تيك توك على الأندرويد بدون علامة مائية؟",
       "a1": "افتح تيك توك على هاتف الأندرويد، واضغط على مشاركة وانسخ الرابط. افتح متصفح كروم أو سامسونج إنترنت أو فايرفوكس وانتقل إلى SaveTikFast، ثم الصق رابط الفيديو واضغط على تنزيل. سيتم حفظ فيديو تيك توك في مجلد التنزيلات أو الاستوديو بجودة HD وبدون علامة مائية. تعمل الطريقة بامتياز على أجهزة سامسونج جالاكسي S25، وجوجل بيكسل 9، وشاومي، وأوبو، وون بلس، وهواوي.",
@@ -653,11 +653,11 @@
     }
   },
   "mac_page": {
-    "title": "TikTok Downloader for Mac",
-    "desc": "Download high-quality TikTok videos without watermark on your MacBook or iMac. Works perfectly on Safari and Chrome.",
-    "placeholder": "Drop TikTok link here to download on Mac...",
-    "meta_title": "TikTok Video Downloader for Mac/MacBook (HD) - SaveTikFast",
-    "meta_desc": "Easily download TikTok videos without watermark to your Mac. Free online saver supporting macOS Safari, Chrome, and Firefox in 4K quality.",
+    "title": "تنزيل TikTok لنظام التشغيل Mac",
+    "desc": "قم بتنزيل مقاطع فيديو TikTok عالية الجودة بدون علامة مائية على جهاز MacBook أو iMac. يعمل بشكل مثالي على Safari وChrome.",
+    "placeholder": "أسقط رابط TikTok هنا للتنزيل على نظام Mac...",
+    "meta_title": "تنزيل فيديو TikTok لنظام التشغيل Mac/MacBook (HD) - SaveTikFast",
+    "meta_desc": "قم بتنزيل مقاطع فيديو TikTok بسهولة بدون علامة مائية على جهاز Mac الخاص بك. حافظة مجانية على الإنترنت تدعم macOS Safari وChrome وFirefox بجودة 4K.",
     "faq": {
       "q1": "كيف يمكنني تحميل فيديوهات تيك توك على الماك بدون علامة مائية؟",
       "a1": "افتح موقع تيك توك في متصفح سفاري أو كروم أو فايرفوكس على جهاز ماك بوك أو آي ماك الخاص بك. انسخ رابط فيديو تيك توك من شريط العناوين، ثم اذهب إلى موقع SaveTikFast، والصق الرابط واضغط على تنزيل. سيتم حفظ الفيديو في مجلد التنزيلات (Downloads) في الماك بجودة HD أو 4K بدون علامة مائية. الموقع متوافق مع macOS Sonoma و macOS Ventura و MacBook Pro و MacBook Air و iMac و Mac Mini.",
@@ -672,11 +672,11 @@
     }
   },
   "pc_page": {
-    "title": "TikTok Downloader for PC",
-    "desc": "Save TikTok videos directly to your Windows PC or Laptop. Get clean, watermark-free videos in ultra-fast speeds.",
-    "placeholder": "Paste the TikTok video link from your PC...",
-    "meta_title": "TikTok Downloader for Windows PC/Laptop - SaveTikFast",
-    "meta_desc": "The fastest TikTok video downloader for Windows PC. Save unlimited TikTok videos without watermark to your computer for free.",
+    "title": "برنامج تحميل تيك توك للكمبيوتر",
+    "desc": "احفظ مقاطع فيديو TikTok مباشرة على جهاز الكمبيوتر الشخصي أو الكمبيوتر المحمول الذي يعمل بنظام Windows. احصل على مقاطع فيديو نظيفة وخالية من العلامات المائية بسرعات فائقة السرعة.",
+    "placeholder": "الصق رابط فيديو TikTok من جهاز الكمبيوتر الخاص بك...",
+    "meta_title": "تنزيل TikTok للكمبيوتر الشخصي/الكمبيوتر المحمول الذي يعمل بنظام Windows - SaveTikFast",
+    "meta_desc": "أسرع برنامج تنزيل فيديو TikTok لأجهزة الكمبيوتر التي تعمل بنظام Windows. احفظ عددًا غير محدود من مقاطع فيديو TikTok بدون علامة مائية على جهاز الكمبيوتر الخاص بك مجانًا.",
     "faq": {
       "q1": "كيف يمكنني تحميل فيديوهات تيك توك على الكمبيوتر (ويندوز) بدون علامة مائية؟",
       "a1": "افتح تيك توك عبر متصفح كروم أو إيدج أو فايرفوكس على جهاز الكمبيوتر أو اللابتوب بنظام ويندوز. انسخ رابط فيديو تيك توك من شريط العناوين بالأعلى، ثم قم بزيارة موقع SaveTikFast، والصق الرابط واضغط على تنزيل. سيتم حفظ الفيديو في مجلد التنزيلات بالكمبيوتر بجودة HD أو 4K بدون علامة مائية. الموقع متوافق مع نظام تشغيل ويندوز 11، وويندوز 10، وأجهزة الكمبيوتر المكتبية، وأجهزة اللابتوب من ديل، إتش بي، لينوفو، أسوس، وآيسر.",

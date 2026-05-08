@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+hfport { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import react from '@astrojs/react';
 
@@ -17,14 +17,14 @@ export default defineConfig({
         filter: (page) => {
             const url = new URL(page);
             const path = url.pathname;
-            
+
             // Exclude /en/ prefixed paths (they redirect to root, causing GSC "redirect" errors)
             if (path.startsWith('/en/')) return false;
-            
+
             // Exclude device pages (ios/android/mac/pc) - they are duplicate content
             const deviceSuffixes = ['/ios', '/android', '/mac', '/pc'];
             if (deviceSuffixes.some(suffix => path.endsWith(suffix))) return false;
-            
+
             return true;
         }
     })],

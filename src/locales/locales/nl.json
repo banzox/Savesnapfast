@@ -12,18 +12,18 @@
     "toggle_theme": "Thema wisselen"
   },
   "nav": {
-    "home": "Home",
+    "home": "Thuis",
     "about": "Over Ons",
-    "blog": "Blog",
+    "blog": "Bloggen",
     "contact": "Contact",
     "terms": "Voorwaarden",
     "privacy": "Privacy",
     "dmca": "DMCA",
-    "disclaimer": "Disclaimer",
-    "tools": "Tools"
+    "disclaimer": "Vrijwaring",
+    "tools": "Hulpmiddelen"
   },
   "hero": {
-    "title": "TikTok Video Downloader",
+    "title": "TikTok-video-downloader",
     "desc": "Download TikTok video's zonder watermerk. Snel, Gratis en Onbeperkt HD Kwaliteit."
   },
   "downloader": {
@@ -37,7 +37,7 @@
     "download_audio": "MP3 downloaden",
     "hd_quality": "Zonder watermerk",
     "download_nwm": "Downloaden Zonder Watermerk",
-    "download_hd": "Download HD",
+    "download_hd": "HD downloaden",
     "download_story_vid": "Verhaal Downloaden (Video)",
     "download_story_img": "Verhaal Downloaden (Afbeelding)",
     "error_busy": "Service bezet, probeer het later opnieuw.",
@@ -102,7 +102,7 @@
       "content": "SaveTikFast respecteert de intellectuele eigendomsrechten van anderen.\n\nWij opereren als een technische dienstverlener en hosten geen auteursrechtelijk beschermde content. Alle video's worden rechtstreeks geleverd vanaf servers van derden (TikTok).\n\nAls je van mening bent dat jouw auteursrechtelijk beschermde werk zonder toestemming op onze dienst is weergegeven, stuur dan een formele DMCA-kennisgeving naar: support@savetik-fast.xyz."
     },
     "disclaimer": {
-      "title": "Disclaimer",
+      "title": "Vrijwaring",
       "content": "1. Geen Affiliatie:\nSaveTikFast is een onafhankelijke utility tool en is NIET gelieerd, geassocieerd, geautoriseerd, onderschreven door, of op enige wijze officieel verbonden met TikTok Inc. of ByteDance Ltd.\n\n2. Handelsmerken:\nDe namen 'TikTok' en zijn logo's zijn geregistreerde handelsmerken van hun respectievelijke eigenaren.\n\n3. Content:\nWij hebben geen controle over de content die wordt gehost op TikTok-servers."
     }
   },
@@ -148,9 +148,9 @@
     "step1": "Kopieer de link van de TikTok-video die je wilt opslaan.",
     "step2": "Plak de link in het downloadvak bovenaan deze pagina.",
     "step3": "Klik op de knop 'Downloaden' en je video wordt direct opgeslagen.",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "Kopieer link",
+    "step2_title": "Plak de URL",
+    "step3_title": "Downloaden"
   },
   "tools": {
     "backToDownloader": "Terug naar downloader",
@@ -178,7 +178,7 @@
     },
     "btn": {
       "download": "Nu downloaden",
-      "downloadPng": "Download PNG"
+      "downloadPng": "PNG downloaden"
     },
     "compressor": {
       "title": "Afbeelding Compressor",
@@ -261,7 +261,7 @@
       }
     },
     "qrcode": {
-      "title": "QR Code Generator",
+      "title": "QR-codegenerator",
       "desc": "Genereer direct QR-codes met hoge resolutie voor URL's, tekst of andere inhoud.",
       "input": "Tekst of URL",
       "placeholder": "https://example.com of andere tekst",
@@ -308,9 +308,9 @@
       "title": "TikTok Betrokkenheidscalculator",
       "desc": "Bereken je betrokkenheidspercentage op basis van likes, reacties en shares.",
       "followers": "Volgers",
-      "likes": "Likes",
+      "likes": "Vind ik leuk",
       "comments": "Reacties",
-      "shares": "Shares",
+      "shares": "Aandelen",
       "btn": "Nu berekenen",
       "result": "Betrokkenheidspercentage",
       "excellent": "Uitstekend! 🚀",
@@ -331,7 +331,7 @@
       "copy": "Kopiëren"
     },
     "hashtag": {
-      "title": "TikTok Hashtag Generator",
+      "title": "TikTok-hashtaggenerator",
       "desc": "Zoek en genereer trending hashtags voor je video's.",
       "btn": "Hashtags genereren",
       "copy": "Alles kopiëren"
@@ -432,7 +432,7 @@
     "slideshow": "Diavoorstelling",
     "video": "Video",
     "mp3": "MP3-audio",
-    "stories": "Stories"
+    "stories": "Verhalen"
   },
   "mp3_page": {
     "meta_title": "TikTok naar MP3 Converter – Gratis Audiodownload 320kbps",
@@ -452,7 +452,7 @@
     "meta_desc": "Converteer TikTok-video's naar MP3-audiobestanden in hoge kwaliteit 320kbps. Haal nummers en muziek gratis online op. Geen app of registratie nodig. Werkt op alle apparaten.",
     "features": {
       "quality": {
-        "title": "HD Audio 320kbps",
+        "title": "HD-audio 320 kbps",
         "desc": "Converteer TikTok-video's naar MP3 in kristalheldere 320kbps studiokwaliteit. De hoogste audiokwaliteit beschikbaar online, perfect voor muziekliefhebbers die het beste geluid willen op hun iPhone, Android of PC."
       },
       "fast": {
@@ -585,9 +585,9 @@
     "back_home": "Terug naar Downloader",
     "tools_heading": "Kies je Download Type",
     "try_now": "Nu Proberen",
-    "card_video_title": "Video Downloader",
+    "card_video_title": "Video-downloader",
     "card_video_desc": "Download TikTok video's zonder watermerk in HD/4K kwaliteit. Werkt op iPhone 16, Samsung Galaxy S25 en alle apparaten.",
-    "card_mp3_title": "MP3 Converter",
+    "card_mp3_title": "MP3-converter",
     "card_mp3_desc": "Extraheer audio uit TikTok video's in hoge kwaliteit 320kbps. Perfect voor ringtones.",
     "card_slideshow_title": "Slideshow Opslaan",
     "card_slideshow_desc": "Download alle foto's uit TikTok slideshows en carrousels als ZIP-bestand.",
@@ -615,79 +615,79 @@
     "link_copied": "Gekopieerd!"
   },
   "ios_page": {
-    "title": "TikTok Downloader for iOS",
-    "desc": "Download TikTok videos without watermark directly to your iPhone or iPad in HD quality. The fastest way to save videos using Safari on iOS.",
-    "placeholder": "Paste TikTok link from your iPhone...",
-    "meta_title": "TikTok Downloader for iPhone/iPad - SaveTikFast",
-    "meta_desc": "Free tool to save TikTok videos without watermark on iOS (iPhone & iPad). No app installation required. Download in MP4 or MP3 format instantly.",
+    "title": "TikTok-downloader voor iOS",
+    "desc": "Download TikTok-video's zonder watermerk rechtstreeks naar je iPhone of iPad in HD-kwaliteit. De snelste manier om video's op te slaan met Safari op iOS.",
+    "placeholder": "Plak de TikTok-link vanaf je iPhone...",
+    "meta_title": "TikTok-downloader voor iPhone/iPad - SaveTikFast",
+    "meta_desc": "Gratis tool om TikTok-video's zonder watermerk op iOS (iPhone en iPad) op te slaan. Geen app-installatie vereist. Direct downloaden in MP4- of MP3-formaat.",
     "faq": {
-      "q1": "How do I download TikTok videos on iPhone and iPad without watermark?",
-      "a1": "Open TikTok on your iPhone or iPad, tap Share and Copy Link. Open Safari or Chrome browser, visit SaveTikFast, paste the TikTok video URL, and tap Download. The video saves directly to your Photos app in HD quality without watermark. Works on iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air, and all iOS devices running iOS 17 or iOS 18.",
-      "q2": "Is SaveTikFast free to use on iPhone without installing any app?",
-      "a2": "Yes, SaveTikFast is 100% free for iPhone and iPad users. No app installation from App Store needed. Our TikTok video downloader works directly in Safari, Chrome, or Firefox browser on iOS. Download unlimited TikTok videos without watermark, convert TikTok to MP3, and save TikTok stories - all completely free with no registration or subscription required.",
-      "q3": "Can I save TikTok videos to my iPhone camera roll in HD 4K quality?",
-      "a3": "Absolutely. SaveTikFast downloads TikTok videos in the highest quality available including 720p HD, 1080p Full HD, and 4K resolution directly to your iPhone Photos or Files app. We never compress videos. Better quality than SSSTik, SnapTik, or TikMate on iOS devices. Perfect for saving TikTok content offline on iPhone for later viewing.",
-      "q4": "Why is SaveTikFast the best TikTok downloader for iOS devices?",
-      "a4": "SaveTikFast is the fastest TikTok video saver for iPhone and iPad with 3-second downloads, no watermark removal issues, HD and 4K support, MP3 audio extraction, story downloads, and slideshow saving. Unlike other iOS TikTok downloaders, we require no app install, no login, and no Apple Shortcuts. Works perfectly on Safari browser across all iOS versions.",
-      "q5": "How do I convert TikTok videos to MP3 audio on iPhone?",
-      "a5": "Copy the TikTok video link on your iPhone, open Safari or Chrome, visit SaveTikFast MP3 converter page, paste the URL, and tap Extract MP3. The audio file downloads in 320kbps quality to your iPhone Files app. Perfect for creating iPhone ringtones from TikTok sounds, saving trending TikTok music, and extracting viral audio clips on iOS devices."
+      "q1": "Hoe download ik TikTok-video's op iPhone en iPad zonder watermerk?",
+      "a1": "Open TikTok op uw iPhone of iPad, tik op Deel en kopieer link. Open de Safari- of Chrome-browser, ga naar SaveTikFast, plak de TikTok-video-URL en tik op Downloaden. De video wordt rechtstreeks in uw Foto's-app opgeslagen in HD-kwaliteit zonder watermerk. Werkt op iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air en alle iOS-apparaten met iOS 17 of iOS 18.",
+      "q2": "Is SaveTikFast gratis te gebruiken op de iPhone zonder een app te installeren?",
+      "a2": "Ja, SaveTikFast is 100% gratis voor iPhone- en iPad-gebruikers. Geen app-installatie uit de App Store nodig. Onze TikTok-video-downloader werkt rechtstreeks in de Safari-, Chrome- of Firefox-browser op iOS. Download onbeperkt TikTok-video's zonder watermerk, converteer TikTok naar MP3 en bewaar TikTok-verhalen - allemaal volledig gratis zonder registratie of abonnement.",
+      "q3": "Kan ik TikTok-video's in HD 4K-kwaliteit op de filmrol van mijn iPhone opslaan?",
+      "a3": "Absoluut. SaveTikFast downloadt TikTok-video's in de hoogst beschikbare kwaliteit, waaronder 720p HD, 1080p Full HD en 4K-resolutie, rechtstreeks naar de app Foto's of Bestanden van je iPhone. We comprimeren nooit video's. Betere kwaliteit dan SSSTik, SnapTik of TikMate op iOS-apparaten. Perfect om TikTok-inhoud offline op de iPhone op te slaan om later te bekijken.",
+      "q4": "Waarom is SaveTikFast de beste TikTok-downloader voor iOS-apparaten?",
+      "a4": "SaveTikFast is de snelste TikTok-videosaver voor iPhone en iPad met downloads van 3 seconden, geen problemen met het verwijderen van watermerken, HD- en 4K-ondersteuning, MP3-audio-extractie, verhaaldownloads en het opslaan van diavoorstellingen. In tegenstelling tot andere iOS TikTok-downloaders hebben we geen app-installatie, geen login en geen Apple-snelkoppelingen nodig. Werkt perfect in de Safari-browser in alle iOS-versies.",
+      "q5": "Hoe converteer ik TikTok-video's naar MP3-audio op de iPhone?",
+      "a5": "Kopieer de TikTok-videolink op uw iPhone, open Safari of Chrome, ga naar de SaveTikFast MP3-conversiepagina, plak de URL en tik op MP3 uitpakken. Het audiobestand wordt in 320 kbps-kwaliteit gedownload naar uw iPhone Bestanden-app. Perfect voor het maken van iPhone-beltonen van TikTok-geluiden, het opslaan van populaire TikTok-muziek en het extraheren van virale audioclips op iOS-apparaten."
     }
   },
   "android_page": {
-    "title": "TikTok Downloader for Android",
-    "desc": "The best Android TikTok video saver! Download any TikTok video without watermark directly to your mobile gallery in MP4 format.",
-    "placeholder": "Paste TikTok link from your Android phone...",
-    "meta_title": "TikTok Downloader for Android Devices - SaveTikFast",
-    "meta_desc": "Save any TikTok video without logo to your Android phone gallery. 100% free, no watermark, fast, and secure. Download in HD quality.",
+    "title": "TikTok-downloader voor Android",
+    "desc": "De beste Android TikTok-videosaver! Download elke TikTok-video zonder watermerk rechtstreeks naar uw mobiele galerij in MP4-formaat.",
+    "placeholder": "Plak de TikTok-link vanaf je Android-telefoon...",
+    "meta_title": "TikTok-downloader voor Android-apparaten - SaveTikFast",
+    "meta_desc": "Bewaar elke TikTok-video zonder logo in de galerij van je Android-telefoon. 100% gratis, geen watermerk, snel en veilig. Downloaden in HD-kwaliteit.",
     "faq": {
-      "q1": "How do I download TikTok videos on Android without watermark?",
-      "a1": "Open TikTok on your Android phone, tap Share and Copy Link. Open Chrome, Samsung Internet, or Firefox browser, visit SaveTikFast, paste the video URL, and tap Download. The TikTok video saves to your Downloads folder or Gallery in HD quality without watermark. Works on Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus, and Huawei devices.",
-      "q2": "Is SaveTikFast compatible with all Android phones and tablets?",
-      "a2": "Yes, SaveTikFast works on every Android device including Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia, and Android tablets. Compatible with Android 12, 13, 14, and 15. Use Chrome, Samsung Internet, Firefox, or any mobile browser to download TikTok videos without watermark for free. No APK installation required.",
-      "q3": "Can I save TikTok videos to my Android gallery in HD 4K?",
-      "a3": "Absolutely. SaveTikFast downloads TikTok videos in original HD, 1080p Full HD, and 4K quality directly to your Android phone Gallery or Downloads folder. We preserve the original video quality without compression. Better than SSSTik, SnapTik, or TikMate downloaders. Perfect for saving TikTok content offline on Samsung Galaxy, Pixel, or Xiaomi devices.",
-      "q4": "Why choose SaveTikFast over other Android TikTok downloaders?",
-      "a4": "SaveTikFast is the fastest TikTok downloader for Android with 3-second processing, watermark-free downloads, HD and 4K video support, TikTok MP3 converter, story saver, and slideshow downloader. No APK needed, no Google Play app required. Works in Chrome browser on Samsung Galaxy, Google Pixel, Xiaomi, OPPO, and all Android smartphones without registration.",
-      "q5": "How do I extract MP3 audio from TikTok on my Android phone?",
-      "a5": "Copy the TikTok video link on your Android device, open Chrome or Samsung Internet browser, visit SaveTikFast MP3 converter, paste the URL, and tap Extract MP3. Audio downloads in high-quality 320kbps format to your Downloads folder. Perfect for saving trending TikTok songs, creating Android ringtones, and extracting viral sounds on Samsung Galaxy and Pixel phones."
+      "q1": "Hoe download ik TikTok-video's op Android zonder watermerk?",
+      "a1": "Open TikTok op je Android-telefoon, tik op Deel en kopieer link. Open de Chrome-, Samsung Internet- of Firefox-browser, ga naar SaveTikFast, plak de video-URL en tik op Downloaden. De TikTok-video wordt in HD-kwaliteit zonder watermerk opgeslagen in uw map Downloads of galerij. Werkt op Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus en Huawei-apparaten.",
+      "q2": "Is SaveTikFast compatibel met alle Android-telefoons en -tablets?",
+      "a2": "Ja, SaveTikFast werkt op elk Android-apparaat, inclusief Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia en Android-tablets. Compatibel met Android 12, 13, 14 en 15. Gebruik Chrome, Samsung Internet, Firefox of een andere mobiele browser om TikTok-video's gratis zonder watermerk te downloaden. Geen APK-installatie vereist.",
+      "q3": "Kan ik TikTok-video's in HD 4K opslaan in mijn Android-galerij?",
+      "a3": "Absoluut. SaveTikFast downloadt TikTok-video's in originele HD, 1080p Full HD en 4K-kwaliteit rechtstreeks naar de Galerij of de map Downloads van uw Android-telefoon. We behouden de originele videokwaliteit zonder compressie. Beter dan SSSTik-, SnapTik- of TikMate-downloaders. Perfect voor het offline opslaan van TikTok-inhoud op Samsung Galaxy-, Pixel- of Xiaomi-apparaten.",
+      "q4": "Waarom SaveTikFast kiezen boven andere Android TikTok-downloaders?",
+      "a4": "SaveTikFast is de snelste TikTok-downloader voor Android met een verwerkingstijd van 3 seconden, watermerkvrije downloads, HD- en 4K-video-ondersteuning, TikTok MP3-converter, story saver en downloader voor diavoorstellingen. Geen APK nodig, geen Google Play-app vereist. Werkt in de Chrome-browser op Samsung Galaxy, Google Pixel, Xiaomi, OPPO en alle Android-smartphones zonder registratie.",
+      "q5": "Hoe extraheer ik MP3-audio van TikTok op mijn Android-telefoon?",
+      "a5": "Kopieer de TikTok-videolink op uw Android-apparaat, open de Chrome- of Samsung-internetbrowser, bezoek de SaveTikFast MP3-converter, plak de URL en tik op MP3 uitpakken. Audiodownloads in hoogwaardig 320 kbps-formaat naar uw map Downloads. Perfect voor het opslaan van populaire TikTok-nummers, het maken van Android-beltonen en het extraheren van virale geluiden op Samsung Galaxy- en Pixel-telefoons."
     }
   },
   "mac_page": {
-    "title": "TikTok Downloader for Mac",
-    "desc": "Download high-quality TikTok videos without watermark on your MacBook or iMac. Works perfectly on Safari and Chrome.",
-    "placeholder": "Drop TikTok link here to download on Mac...",
-    "meta_title": "TikTok Video Downloader for Mac/MacBook (HD) - SaveTikFast",
-    "meta_desc": "Easily download TikTok videos without watermark to your Mac. Free online saver supporting macOS Safari, Chrome, and Firefox in 4K quality.",
+    "title": "TikTok-downloader voor Mac",
+    "desc": "Download hoogwaardige TikTok-video's zonder watermerk op je MacBook of iMac. Werkt perfect op Safari en Chrome.",
+    "placeholder": "Zet de TikTok-link hier neer om te downloaden op Mac...",
+    "meta_title": "TikTok Video Downloader voor Mac/MacBook (HD) - SaveTikFast",
+    "meta_desc": "Download eenvoudig TikTok-video's zonder watermerk naar je Mac. Gratis online saver die macOS Safari, Chrome en Firefox ondersteunt in 4K-kwaliteit.",
     "faq": {
-      "q1": "How do I download TikTok videos on Mac without watermark?",
-      "a1": "Open TikTok in Safari, Chrome, or Firefox on your MacBook or iMac. Copy the TikTok video URL from the address bar, visit SaveTikFast, paste the link, and click Download. The video saves to your Mac Downloads folder in HD or 4K quality without watermark. Works on macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac, and Mac Mini.",
-      "q2": "Does SaveTikFast work on Safari and Chrome for macOS?",
-      "a2": "Yes, SaveTikFast works perfectly on all Mac browsers including Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera. No browser extension or plugin installation required. Our TikTok video downloader runs directly in your browser on macOS Sonoma, Ventura, and Monterey. Download unlimited TikTok videos without watermark completely free on any Mac.",
-      "q3": "Can I save TikTok videos in 4K quality on my MacBook?",
-      "a3": "Absolutely. SaveTikFast downloads TikTok videos in the highest quality available including 720p, 1080p Full HD, 2K, and 4K resolution on MacBook Pro, MacBook Air, iMac, and Mac Mini. We never compress or reduce video quality. Files save as MP4 to your Downloads folder. Better than SSSTik or SnapTik for Mac users wanting premium video quality.",
-      "q4": "Why is SaveTikFast the best TikTok downloader for Mac computers?",
-      "a4": "SaveTikFast is the fastest TikTok video downloader for Mac with instant 3-second processing, watermark removal, 4K quality support, MP3 audio extraction, TikTok story saving, and slideshow downloading. No software installation on macOS needed. Works in Safari and Chrome browser on MacBook Pro, MacBook Air, iMac, and Mac Mini without registration or subscription.",
-      "q5": "How do I convert TikTok to MP3 on my Mac?",
-      "a5": "Copy the TikTok video URL from Safari or Chrome on your Mac, visit SaveTikFast MP3 converter, paste the link, and click Extract MP3. The audio file downloads in studio-quality 320kbps MP3 format to your Mac Downloads folder. Perfect for saving trending TikTok music, creating playlists, and extracting sounds on MacBook Pro, MacBook Air, and iMac."
+      "q1": "Hoe download ik TikTok-video's op Mac zonder watermerk?",
+      "a1": "Open TikTok in Safari, Chrome of Firefox op je MacBook of iMac. Kopieer de TikTok-video-URL uit de adresbalk, ga naar SaveTikFast, plak de link en klik op Downloaden. De video wordt zonder watermerk opgeslagen in de map Downloads van uw Mac in HD- of 4K-kwaliteit. Werkt op macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac en Mac Mini.",
+      "q2": "Werkt SaveTikFast op Safari en Chrome voor macOS?",
+      "a2": "Ja, SaveTikFast werkt perfect in alle Mac-browsers, waaronder Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge en Opera. Geen browserextensie of installatie van plug-ins vereist. Onze TikTok-video-downloader werkt rechtstreeks in uw browser op macOS Sonoma, Ventura en Monterey. Download onbeperkt TikTok-video's zonder watermerk, volledig gratis op elke Mac.",
+      "q3": "Kan ik TikTok-video's in 4K-kwaliteit opslaan op mijn MacBook?",
+      "a3": "Absoluut. SaveTikFast downloadt TikTok-video's in de hoogst beschikbare kwaliteit, waaronder 720p, 1080p Full HD, 2K en 4K resolutie op MacBook Pro, MacBook Air, iMac en Mac Mini. We comprimeren of verminderen de videokwaliteit nooit. Bestanden worden opgeslagen als MP4 in uw map Downloads. Beter dan SSSTik of SnapTik voor Mac-gebruikers die premium videokwaliteit willen.",
+      "q4": "Waarom is SaveTikFast de beste TikTok-downloader voor Mac-computers?",
+      "a4": "SaveTikFast is de snelste TikTok-video-downloader voor Mac met onmiddellijke verwerking van 3 seconden, verwijdering van watermerken, ondersteuning voor 4K-kwaliteit, MP3-audio-extractie, opslaan van TikTok-verhalen en downloaden van diavoorstellingen. Geen software-installatie op macOS nodig. Werkt in Safari en Chrome-browser op MacBook Pro, MacBook Air, iMac en Mac Mini zonder registratie of abonnement.",
+      "q5": "Hoe converteer ik TikTok naar MP3 op mijn Mac?",
+      "a5": "Kopieer de TikTok-video-URL vanuit Safari of Chrome op uw Mac, bezoek de SaveTikFast MP3-converter, plak de link en klik op MP3 uitpakken. Het audiobestand wordt in studiokwaliteit 320 kbps MP3-formaat gedownload naar de map Downloads van uw Mac. Perfect voor het opslaan van populaire TikTok-muziek, het maken van afspeellijsten en het extraheren van geluiden op MacBook Pro, MacBook Air en iMac."
     }
   },
   "pc_page": {
-    "title": "TikTok Downloader for PC",
-    "desc": "Save TikTok videos directly to your Windows PC or Laptop. Get clean, watermark-free videos in ultra-fast speeds.",
-    "placeholder": "Paste the TikTok video link from your PC...",
-    "meta_title": "TikTok Downloader for Windows PC/Laptop - SaveTikFast",
-    "meta_desc": "The fastest TikTok video downloader for Windows PC. Save unlimited TikTok videos without watermark to your computer for free.",
+    "title": "TikTok-downloader voor pc",
+    "desc": "Bewaar TikTok-video's rechtstreeks op uw Windows-pc of laptop. Maak heldere, watermerkvrije video's met ultrahoge snelheden.",
+    "placeholder": "Plak de TikTok-videolink vanaf uw pc...",
+    "meta_title": "TikTok-downloader voor Windows-pc/laptop - SaveTikFast",
+    "meta_desc": "De snelste TikTok-video-downloader voor Windows-pc. Bewaar gratis onbeperkt TikTok-video's zonder watermerk op uw computer.",
     "faq": {
-      "q1": "How do I download TikTok videos on Windows PC without watermark?",
-      "a1": "Open TikTok in Chrome, Edge, or Firefox on your Windows PC or Laptop. Copy the TikTok video URL from the browser address bar, visit SaveTikFast, paste the link, and click Download. The video saves to your PC Downloads folder in HD or 4K quality without watermark. Works on Windows 11, Windows 10, desktop computers, and laptops from Dell, HP, Lenovo, ASUS, and Acer.",
-      "q2": "Is SaveTikFast free to use on Windows computers?",
-      "a2": "Yes, SaveTikFast is completely free for Windows PC users. No software installation or desktop application download needed. Our TikTok video downloader works directly in Chrome, Microsoft Edge, Firefox, and Opera browsers on Windows 11 and Windows 10. Download unlimited TikTok videos without watermark, convert to MP3, save stories, and download slideshows for free.",
-      "q3": "Can I save TikTok videos in HD 4K quality on my Windows PC?",
-      "a3": "Absolutely. SaveTikFast downloads TikTok videos in original quality including 720p HD, 1080p Full HD, 2K, and 4K resolution directly to your Windows PC Downloads folder as MP4 files. We never compress or reduce quality. Superior to SSSTik, SnapTik, or TikMate. Perfect for saving and editing TikTok content on desktop computers running Windows 11 or Windows 10.",
-      "q4": "Why is SaveTikFast the best TikTok downloader for PC?",
-      "a4": "SaveTikFast is the fastest TikTok video downloader for Windows PC with 3-second processing, no watermark, HD and 4K support, MP3 converter, story downloader, and slideshow saver. No desktop software installation required. Works in Chrome and Edge browser on Windows 11, Windows 10 laptops and desktops from HP, Dell, Lenovo, ASUS without registration or fees.",
-      "q5": "How do I convert TikTok to MP3 on my Windows computer?",
-      "a5": "Copy the TikTok video URL from Chrome or Edge on your Windows PC, visit SaveTikFast MP3 converter page, paste the link, and click Extract MP3. The audio downloads in high-quality 320kbps MP3 format to your PC Downloads folder. Perfect for saving TikTok songs, creating Windows ringtones, extracting viral audio, and building music collections on your desktop computer."
+      "q1": "Hoe download ik TikTok-video's op een Windows-pc zonder watermerk?",
+      "a1": "Open TikTok in Chrome, Edge of Firefox op uw Windows-pc of laptop. Kopieer de TikTok-video-URL uit de adresbalk van de browser, ga naar SaveTikFast, plak de link en klik op Downloaden. De video wordt zonder watermerk opgeslagen in de map Downloads van uw pc in HD- of 4K-kwaliteit. Werkt op Windows 11, Windows 10, desktopcomputers en laptops van Dell, HP, Lenovo, ASUS en Acer.",
+      "q2": "Is SaveTikFast gratis te gebruiken op Windows-computers?",
+      "a2": "Ja, SaveTikFast is volledig gratis voor Windows-pc-gebruikers. Geen software-installatie of downloaden van desktopapplicaties nodig. Onze TikTok-video-downloader werkt rechtstreeks in de Chrome-, Microsoft Edge-, Firefox- en Opera-browsers op Windows 11 en Windows 10. Download onbeperkt TikTok-video's zonder watermerk, converteer naar MP3, sla verhalen op en download gratis diavoorstellingen.",
+      "q3": "Kan ik TikTok-video's in HD 4K-kwaliteit opslaan op mijn Windows-pc?",
+      "a3": "Absoluut. SaveTikFast downloadt TikTok-video's in originele kwaliteit, waaronder 720p HD, 1080p Full HD, 2K en 4K resolutie rechtstreeks naar de map Downloads van uw Windows-pc als MP4-bestanden. Wij comprimeren of verminderen de kwaliteit nooit. Superieur aan SSSTik, SnapTik of TikMate. Perfect voor het opslaan en bewerken van TikTok-inhoud op desktopcomputers met Windows 11 of Windows 10.",
+      "q4": "Waarom is SaveTikFast de beste TikTok-downloader voor pc?",
+      "a4": "SaveTikFast is de snelste TikTok-video-downloader voor Windows-pc met verwerkingstijd van 3 seconden, geen watermerk, HD- en 4K-ondersteuning, MP3-converter, verhaaldownloader en slideshow-saver. Geen installatie van desktopsoftware vereist. Werkt in Chrome en Edge-browser op Windows 11, Windows 10-laptops en desktops van HP, Dell, Lenovo, ASUS zonder registratie of kosten.",
+      "q5": "Hoe converteer ik TikTok naar MP3 op mijn Windows-computer?",
+      "a5": "Kopieer de TikTok-video-URL vanuit Chrome of Edge op uw Windows-pc, ga naar de SaveTikFast MP3-conversiepagina, plak de link en klik op MP3 uitpakken. De audio wordt in hoogwaardig 320 kbps MP3-formaat gedownload naar de map Downloads op uw pc. Perfect voor het opslaan van TikTok-nummers, het maken van Windows-beltonen, het extraheren van virale audio en het opbouwen van muziekcollecties op uw desktopcomputer."
     }
   }
 }
