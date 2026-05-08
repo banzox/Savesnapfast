@@ -15,8 +15,8 @@ const { t, items } = Astro.props;
     <div class="faq-container">
         {
             items && items.length > 0
-                ? items.map((item) => (
-                      <div class="faq-item">
+                ? items.map((item, idx) => (
+                      <div class="faq-item" id={`faq-${idx + 1}`}>
                           <div class="faq-question">
                               {item.question} <i class="fas fa-chevron-down" />
                           </div>
@@ -28,7 +28,7 @@ const { t, items } = Astro.props;
                       </div>
                   ))
                 : [1, 2, 3, 4, 5, 6].map((i) => (
-                      <div class="faq-item">
+                      <div class="faq-item" id={`faq-${i}`}>
                           <div class="faq-question">
                               {t(`faq.q${i}`)} <i class="fas fa-chevron-down" />
                           </div>

@@ -376,7 +376,7 @@ export default function Downloader(props) {
                             type="button"
                             className={`action-btn ${url ? 'copy-btn' : 'paste-btn'}`}
                             onClick={url ? handleCopyInput : handlePaste}
-                            title={url ? t('btn_copy', "Copy") : t('btn_paste', "Paste")}
+                            data-tooltip={url ? t('btn_copy', "Copy") : t('btn_paste', "Paste")}
                             aria-label={url ? t('btn_copy', "Copy") : t('btn_paste', "Paste")}
                         >
                             <i className={`fas ${url ? 'fa-copy' : 'fa-paste'}`}></i>
@@ -388,7 +388,7 @@ export default function Downloader(props) {
                                 type="button"
                                 className="action-btn clear-btn"
                                 onClick={() => setUrl('')}
-                                title={t('btn_clear', "Clear")}
+                                data-tooltip={t('btn_clear', "Clear")}
                                 aria-label={t('btn_clear', "Clear")}
                             >
                                 <i className="fas fa-times"></i>
@@ -591,8 +591,15 @@ export default function Downloader(props) {
                     borderRadius: '18px', padding: '14px 18px',
                     zIndex: 8888, display: 'flex', alignItems: 'center', gap: '14px',
                     maxWidth: '440px', width: '92%',
-                    boxShadow: '0 20px 60px rgba(0,0,0,0.55)'
+                    boxShadow: '0 20px 60px rgba(0,0,0,0.55)',
+                    animation: 'toastSlideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards'
                 }}>
+                    <style>{`
+                        @keyframes toastSlideUp {
+                            from { transform: translate(-50%, 100px); opacity: 0; }
+                            to { transform: translate(-50%, 0); opacity: 1; }
+                        }
+                    `}</style>
                     <span style={{ fontSize: '1.8rem', flexShrink: 0 }}>🎉</span>
                     <div style={{ flex: 1 }}>
                         <p style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 700, margin: '0 0 2px' }}>

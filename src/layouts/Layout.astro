@@ -346,5 +346,35 @@ const robotsContent = noindex
                 }
             });
         </script>
+            <!-- Scroll to Top Button -->
+        <button id="scrollToTop" aria-label="Scroll to top" title="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <script is:inline>
+            (function() {
+                const initScrollToTop = () => {
+                    const btn = document.getElementById('scrollToTop');
+                    if (!btn) return;
+                    
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY > 300) {
+                            btn.classList.add('visible');
+                        } else {
+                            btn.classList.remove('visible');
+                        }
+                    }, { passive: true });
+
+                    btn.addEventListener('click', () => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                };
+                
+                initScrollToTop();
+                document.addEventListener('astro:page-load', initScrollToTop);
+            })();
+        </script>
     </body>
 </html>
