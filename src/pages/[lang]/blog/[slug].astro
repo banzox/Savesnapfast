@@ -6,10 +6,14 @@ import { languages } from '../../../i18n/ui';
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
+  // Only generate paths for NON-English blog posts
+  // English posts are served from /blog/[slug] (root, no lang prefix)
+  const blogEntries = await getCollection('blog', ({ data }) => {
+    return data.lang !== undefined && data.lang !== 'en';
+  });
   
   return blogEntries.map(entry => {
-    const lang = entry.data.lang || 'en';
+    const lang = entry.data.lang;
     return {
       params: { lang, slug: entry.slug },
       props: { entry },

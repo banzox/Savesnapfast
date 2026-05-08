@@ -13,10 +13,14 @@ interface Props {
     description: string;
     lang?: string;
     keywords?: string;
+    noindex?: boolean;
 }
 
-const { title, description, lang = "en", keywords } = Astro.props;
+const { title, description, lang = "en", keywords, noindex = false } = Astro.props;
 const currentPageURL = new URL(Astro.url.pathname.replace(/\.html$/, ""), "https://savetik-fast.xyz").href;
+const robotsContent = noindex 
+    ? "noindex, follow" 
+    : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 ---
 
 <!doctype html>
@@ -163,9 +167,9 @@ const currentPageURL = new URL(Astro.url.pathname.replace(/\.html$/, ""), "https
         <Schema lang={lang} />
         <SEOHead lang={lang} />
 
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow, max-image-preview:large" />
-        <meta name="bingbot" content="index, follow" />
+        <meta name="robots" content={robotsContent} />
+        <meta name="googlebot" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />
+        <meta name="bingbot" content={noindex ? "noindex, follow" : "index, follow"} />
         <meta name="author" content="SaveTikFast" />
         <meta name="publisher" content="SaveTikFast" />
         <meta name="rating" content="general" />

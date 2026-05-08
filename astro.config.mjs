@@ -13,7 +13,21 @@ export default defineConfig({
     },
     output: 'server',
     adapter: cloudflare(),
-    integrations: [react(), sitemap()],
+    integrations: [react(), sitemap({
+        filter: (page) => {
+            const url = new URL(page);
+            const path = url.pathname;
+            
+            // Exclude /en/ prefixed paths (they redirect to root, causing GSC "redirect" errors)
+            if (path.startsWith('/en/')) return false;
+            
+            // Exclude device pages (ios/android/mac/pc) - they are duplicate content
+            const deviceSuffixes = ['/ios', '/android', '/mac', '/pc'];
+            if (deviceSuffixes.some(suffix => path.endsWith(suffix))) return false;
+            
+            return true;
+        }
+    })],
     i18n: {
         defaultLocale: 'en',
         locales: ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'it', 'tr', 'ru', 'vi', 'th', 'ja', 'ko', 'pl', 'nl', 'ro', 'ms', 'fil', 'uk', 'cs', 'sv', 'hu', 'el', 'da', 'fi', 'no', 'bg', 'zh', 'hi'],
