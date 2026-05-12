@@ -26,14 +26,20 @@ const baseSlug = isLangPrefix
     ? pathParts.slice(1).join("/")
     : pathParts.join("/");
 
+// --- Device page detection (no hreflang for duplicate content pages) ---
+const devicePages = ["ios", "android", "mac", "pc"];
+const lastSegment = pathParts[pathParts.length - 1];
+const isDevicePage = devicePages.includes(lastSegment);
+
 // --- 2. Build canonical URL (absolute, NO trailing slash — matches trailingSlash:'never') ---
 const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
 
 // --- 3. Build hreflang entries for ALL languages (NO trailing slashes) ---
 // For blog post pages, link to the blog index in other languages
 // since blog posts don't exist in all languages
+// For device pages, skip hreflang entirely (they are noindex pages)
 const isBlogPost = baseSlug && baseSlug.startsWith("blog/") && baseSlug !== "blog";
-const hreflangs = Object.keys(languages).map((langCode) => {
+const hreflangs = isDevicePage ? [] : Object.keys(languages).map((langCode) => {
     // For blog posts, other languages should point to /[lang]/blog
     const slug = isBlogPost ? "blog" : baseSlug;
     
@@ -63,12 +69,17 @@ const xDefaultHref = new URL(
 <!-- SEOConfig: Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
-<!-- SEOConfig: hreflang x-default (English fallback) -->
-<link rel="alternate" hreflang="x-default" href={xDefaultHref} />
+{/* Only add hreflang for indexable pages (not device pages which are noindex) */}
+{!isDevicePage && (
+    <>
+        <!-- SEOConfig: hreflang x-default (English fallback) -->
+        <link rel="alternate" hreflang="x-default" href={xDefaultHref} />
 
-<!-- SEOConfig: hreflang for all 30 languages (including self-reference) -->
-{
-    hreflangs.map(({ lang, href }) => (
-        <link rel="alternate" hreflang={lang} href={href} />
-    ))
-}
+        <!-- SEOConfig: hreflang for all 30 languages (including self-reference) -->
+        {
+            hreflangs.map(({ lang, href }) => (
+                <link rel="alternate" hreflang={lang} href={href} />
+            ))
+        }
+    </>
+)}

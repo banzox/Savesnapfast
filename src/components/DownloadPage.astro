@@ -8,9 +8,11 @@ interface Props {
     lang: string;
     pagePrefix: string;
     mode?: "video" | "mp3" | "story" | "slideshow" | undefined;
+    showAd?: boolean;
+    noindex?: boolean;
 }
 
-const { lang, pagePrefix, mode } = Astro.props;
+const { lang, pagePrefix, mode, noindex = false } = Astro.props;
 const t = useTranslations(lang);
 const translations = getTranslations(lang);
 
@@ -143,7 +145,7 @@ if (!pagePrefix) {
 }
 ---
 
-<Layout title={metaTitle} description={metaDesc} lang={lang} noindex={isDevicePage}>
+<Layout title={metaTitle} description={metaDesc} lang={lang} noindex={isDevicePage || noindex}>
     <div class="main-wrapper">
         <article class="hero-section">
             <h1 class="hero-title">

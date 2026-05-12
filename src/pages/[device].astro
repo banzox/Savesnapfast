@@ -18,4 +18,5 @@ const { device } = Astro.params;
 const lang = defaultLang;
 ---
 
-<DownloadPage lang={lang} pagePrefix={`${device}_page`} mode="video" showAd={true} />
+{/* Device pages are duplicate content - always noindex to preserve crawl budget */}
+<DownloadPage lang={lang} pagePrefix={`${device}_page`} mode="video" showAd={true} noindex={true} />

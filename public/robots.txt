@@ -1,12 +1,22 @@
 User-agent: *
 Allow: /
 
-# Block sensitive paths
+# Block API endpoints
 Disallow: /api/
 Disallow: /_astro/
 
+# Block duplicate device pages (duplicate content - noindex)
+Disallow: /ios
+Disallow: /android
+Disallow: /mac
+Disallow: /pc
+Disallow: /*/ios
+Disallow: /*/android
+Disallow: /*/mac
+Disallow: /*/pc
+
+# Block legacy English prefix (redirects to root)
+Disallow: /en/
+
 # Sitemaps
 Sitemap: https://savetik-fast.xyz/sitemap-index.xml
-
-# Host
-Host: https://savetik-fast.xyz
