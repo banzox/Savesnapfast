@@ -17,50 +17,41 @@ export const onRequest = defineMiddleware(async (context, next) => {
     const url = new URL(context.request.url);
     const path = url.pathname;
 
-    // Clean trailing slash and .html for checking
-    let cleanPath = path;
-
-    // FORCE 301 instead of Astro's default 308 for trailing slashes
-    if (path.endsWith("/") && path.length > 1) {
-        cleanPath = path.slice(0, -1);
-        return context.redirect(cleanPath + url.search, 301);
-    }
-
+    // Clean trailing slash first (build clean path for all checks)
+    let cleanPath = (path.endsWith("/") && path.length > 1)
+        ? path.slice(0, -1)
+        : path;
 
     // Split path parts
     const parts = cleanPath.split("/").filter(Boolean);
+
+    let needsRedirect = cleanPath !== path; // trailing slash was removed
 
     if (parts.length > 0) {
         // Redirect legacy tl to fil
         if (parts[0] === "tl") {
             parts[0] = "fil";
-            const newPath = "/" + parts.join("/");
-            return context.redirect(newPath + url.search, 301);
+            needsRedirect = true;
         }
-
         // Redirect /en to /
-        if (parts[0] === "en") {
+        else if (parts[0] === "en") {
             parts.shift();
-            const newPath = "/" + parts.join("/");
-            return context.redirect(newPath + url.search, 301);
+            needsRedirect = true;
         }
-        const lastPart = parts[parts.length - 1]; // Get the slug (e.g. 'about-us')
 
         // Check if the last part is a legacy slug
-        if (redirects[lastPart]) {
-            const newSlug = redirects[lastPart];
-
-            // Reconstruct the new path
-            // If it has language prefix (e.g. /ar/about-us), keep /ar/
-            // parts.slice(0, -1) gives everything before the slug
-
-            const newPathParts = parts.slice(0, -1);
-            newPathParts.push(newSlug);
-
-            const newPath = "/" + newPathParts.join("/");
-
-            return context.redirect(newPath, 301);
+        if (parts.length > 0) {
+            const lastPart = parts[parts.length - 1];
+            if (redirects[lastPart]) {
+                parts[parts.length - 1] = redirects[lastPart];
+                needsRedirect = true;
+            }
         }
+    }
+
+    if (needsRedirect) {
+        const newPath = parts.length > 0 ? "/" + parts.join("/") : "/";
+        return context.redirect(newPath + url.search, 301);
     }
 
     return next();
