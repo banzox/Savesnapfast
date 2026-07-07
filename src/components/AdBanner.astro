@@ -13,8 +13,8 @@
 <script>
     // Lazy Load Native Ads to skyrocket Lighthouse Mobile Score
     const initAd = () => {
-        if (window.adLoaded) return;
-        window.adLoaded = true;
+        if ((window as any).adLoaded) return;
+        (window as any).adLoaded = true;
 
         const adScript = document.createElement("script");
         adScript.async = true;
