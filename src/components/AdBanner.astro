@@ -24,12 +24,12 @@
         document.body.appendChild(adScript);
     };
 
-    // Load ad on user interaction (scroll, click, touch) or after 3.5 seconds
+    // Load ad on user interaction (scroll, click, touch) or after 6 seconds
     ["scroll", "mousemove", "touchstart", "click"].forEach((event) => {
         window.addEventListener(event, initAd, { once: true, passive: true });
     });
     
-    setTimeout(initAd, 3500);
+    setTimeout(initAd, 6000);
 </script>
 
 <style>

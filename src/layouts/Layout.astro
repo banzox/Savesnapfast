@@ -31,11 +31,40 @@ const robotsContent = noindex
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Google AdSense -->
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2779375554237684" crossorigin="anonymous"></script>
+        <!-- Deferred Ad Loading to boost PageSpeed performance -->
+        <script is:inline>
+            (function() {
+                let adsLoaded = false;
+                function loadAds() {
+                    if (adsLoaded) return;
+                    adsLoaded = true;
 
-        <!-- Adsterra Social Bar -->
-        <script async defer src="https://ferocitycandour.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js"></script>
+                    // Load Google AdSense
+                    const adsense = document.createElement("script");
+                    adsense.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2779375554237684";
+                    adsense.async = true;
+                    adsense.crossOrigin = "anonymous";
+                    document.head.appendChild(adsense);
+
+                    // Load Adsterra Social Bar
+                    const adsterra = document.createElement("script");
+                    adsterra.src = "https://ferocitycandour.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js";
+                    adsterra.async = true;
+                    adsterra.defer = true;
+                    document.head.appendChild(adsterra);
+                }
+
+                // Trigger loading on user interaction (scroll, click, mousemove, touchstart)
+                ["scroll", "mousemove", "touchstart", "click"].forEach(event => {
+                    window.addEventListener(event, loadAds, { once: true, passive: true });
+                });
+
+                // Fallback: load ads after 6 seconds in case of no interaction
+                window.addEventListener('load', () => {
+                    setTimeout(loadAds, 6000);
+                });
+            })();
+        </script>
 
 
 
