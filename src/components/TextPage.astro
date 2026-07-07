@@ -6,9 +6,10 @@ interface Props {
     titleKey: string;
     contentKey: string;
     lang: string;
+    noindex?: boolean;
 }
 
-const { titleKey, contentKey, lang } = Astro.props;
+const { titleKey, contentKey, lang, noindex = false } = Astro.props;
 const t = useTranslations(lang);
 
 // Auto-generate meta description from page content
@@ -21,7 +22,7 @@ const autoDescription = plainText.length > 160
 const metaDescription = autoDescription || t(titleKey);
 ---
 
-<Layout title={t(titleKey)} description={metaDescription} lang={lang}>
+<Layout title={t(titleKey)} description={metaDescription} lang={lang} noindex={noindex}>
     <section class="page-header">
         <div class="container">
             <h1>{t(titleKey)}</h1>

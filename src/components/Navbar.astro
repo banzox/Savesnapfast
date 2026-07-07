@@ -46,7 +46,7 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
         {/* Top Row: Logo & Theme Toggle */}
         <div class="top-bar">
             <a
-                href={`/${lang === "en" ? "" : lang}`}
+                href={lang === "en" ? "/" : `/${lang}`}
                 class="logo"
                 aria-label="SaveTikFast"
             >

@@ -29,7 +29,17 @@ export default defineConfig({
             if (devicePaths.some(d => path === d || path.endsWith(d))) return false;
             if (['ios', 'android', 'mac', 'pc'].includes(lastSegment)) return false;
 
+            // Exclude non-English legal pages to avoid duplicate/thin content
+            const legalPages = ['about', 'privacy', 'terms', 'disclaimer', 'dmca', 'contact'];
+            if (pathSegments.length >= 2 && legalPages.includes(lastSegment)) {
+                return false;
+            }
+
             return true;
+        },
+        serialize(item) {
+            item.lastmod = new Date().toISOString();
+            return item;
         }
     })],
     i18n: {

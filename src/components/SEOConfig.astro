@@ -53,7 +53,7 @@ const hreflangs = isDevicePage ? [] : Object.keys(languages).map((langCode) => {
               : `/${langCode}`;
 
     return {
-        lang: langCode,
+        lang: langCode === "fil" ? "tl" : langCode,
         href: new URL(langPath, SITE_ORIGIN).href,
     };
 });

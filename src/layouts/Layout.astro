@@ -168,7 +168,7 @@ const robotsContent = noindex
 
         <SEOConfig />
 
-        <Schema lang={lang} />
+        <Schema lang={lang} noindex={noindex} />
         <SEOHead lang={lang} />
 
         <meta name="robots" content={robotsContent} />
@@ -189,7 +189,8 @@ const robotsContent = noindex
         />
         <meta property="og:site_name" content="SaveTikFast" />
         <meta property="og:locale" content={
-            lang === "ar" ? "ar_AR" :
+            lang === "en" ? "en_US" :
+            lang === "ar" ? "ar_SA" :
             lang === "zh" ? "zh_CN" :
             lang === "fil" ? "fil_PH" :
             lang === "uk" ? "uk_UA" :
@@ -198,6 +199,9 @@ const robotsContent = noindex
             lang === "ko" ? "ko_KR" :
             lang === "ja" ? "ja_JP" :
             lang === "th" ? "th_TH" :
+            lang === "pt" ? "pt_BR" :
+            lang === "ms" ? "ms_MY" :
+            lang === "id" ? "id_ID" :
             `${lang}_${lang.toUpperCase()}`
         } />
 

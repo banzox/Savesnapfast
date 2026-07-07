@@ -3,9 +3,10 @@ import { useTranslations } from "../utils/i18n";
 
 interface Props {
     lang?: string;
+    noindex?: boolean;
 }
 
-const { lang = "en" } = Astro.props;
+const { lang = "en", noindex = false } = Astro.props;
 const t = useTranslations(lang);
 
 // Dynamically generate FAQ Schema
@@ -150,7 +151,7 @@ const breadcrumbSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)} />
 
 {
-    ["ios", "android", "mac", "pc"].includes(breadcrumbParts[breadcrumbParts.length - 1] || "") && (
+    !noindex && ["ios", "android", "mac", "pc"].includes(breadcrumbParts[breadcrumbParts.length - 1] || "") && (
         <script
             type="application/ld+json"
             set:html={JSON.stringify({
@@ -175,7 +176,7 @@ const breadcrumbSchema = {
 }
 
 {
-    faqSchemaItems.length > 0 && (
+    !noindex && faqSchemaItems.length > 0 && (
         <script
             type="application/ld+json"
             set:html={JSON.stringify({
