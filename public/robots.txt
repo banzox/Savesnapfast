@@ -3,7 +3,6 @@ Allow: /
 
 # Block API endpoints
 Disallow: /api/
-Disallow: /_astro/
 
 # Sitemaps
 Sitemap: https://savetik-fast.xyz/sitemap-index.xml
