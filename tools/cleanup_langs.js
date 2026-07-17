@@ -13,7 +13,7 @@ const KEEP_LANGS = [
     'en.json', 'ar.json', 'es.json', 'pt.json', 'id.json',
     'fr.json', 'de.json', 'it.json', 'tr.json', 'ru.json',
     'vi.json', 'th.json', 'ja.json', 'ko.json', 'pl.json',
-    'nl.json', 'ro.json', 'ms.json', 'tl.json', 'uk.json',
+    'nl.json', 'ro.json', 'ms.json', 'fil.json', 'uk.json',
     'cs.json', 'sv.json', 'hu.json', 'el.json', 'da.json',
     'fi.json', 'no.json', 'bg.json', 'zh.json', 'hi.json'
 ];

@@ -11,30 +11,29 @@ const navItems = [
         label: t("nav_menu.video"),
         href: lang === "en" ? "/" : `/${lang}`,
         activeCheck: (path: string) =>
-            !path.includes("mp3") &&
-            !path.includes("story") &&
-            !path.includes("slideshow"),
+            path === "/" || path === `/${lang}` || path === `/${lang}/` ||
+            path.endsWith("/ios") || path.endsWith("/android") || path.endsWith("/mac") || path.endsWith("/pc"),
     },
     {
         id: "mp3",
         icon: "fas fa-music",
         label: t("nav_menu.mp3"),
         href: lang === "en" ? "/mp3" : `/${lang}/mp3`,
-        activeCheck: (path: string) => path.includes("mp3"),
+        activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/mp3"),
     },
     {
         id: "story",
         icon: "fas fa-images",
         label: t("nav_menu.stories"),
         href: lang === "en" ? "/story" : `/${lang}/story`,
-        activeCheck: (path: string) => path.includes("story"),
+        activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/story"),
     },
     {
         id: "slideshow",
         icon: "fas fa-layer-group",
         label: t("nav_menu.slideshow"),
         href: lang === "en" ? "/slideshow" : `/${lang}/slideshow`,
-        activeCheck: (path: string) => path.includes("slideshow"),
+        activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/slideshow"),
     },
 ];
 

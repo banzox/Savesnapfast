@@ -32,7 +32,7 @@ const robotsContent = noindex
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Deferred Ad Loading to boost PageSpeed performance -->
-        <script is:inline>
+        <script is:inline define:vars={{ enableAdsterra: ADS_CONFIG.enableAdsterra }}>
             (function() {
                 let adsLoaded = false;
                 function loadAds() {
@@ -46,12 +46,14 @@ const robotsContent = noindex
                     adsense.crossOrigin = "anonymous";
                     document.head.appendChild(adsense);
 
-                    // Load Adsterra Social Bar
-                    const adsterra = document.createElement("script");
-                    adsterra.src = "https://ferocitycandour.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js";
-                    adsterra.async = true;
-                    adsterra.defer = true;
-                    document.head.appendChild(adsterra);
+                    // Load Adsterra Social Bar if enabled
+                    if (enableAdsterra) {
+                        const adsterra = document.createElement("script");
+                        adsterra.src = "https://ferocitycandour.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js";
+                        adsterra.async = true;
+                        adsterra.defer = true;
+                        document.head.appendChild(adsterra);
+                    }
                 }
 
                 // Trigger loading on user interaction (scroll, click, mousemove, touchstart)

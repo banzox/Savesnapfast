@@ -1,8 +1,33 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import react from '@astrojs/react';
-
 import sitemap from '@astrojs/sitemap';
+import fs from 'fs';
+import path from 'path';
+
+const locales = ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'it', 'tr', 'ru', 'vi', 'th', 'ja', 'ko', 'pl', 'nl', 'ro', 'ms', 'fil', 'uk', 'cs', 'sv', 'hu', 'el', 'da', 'fi', 'no', 'bg', 'zh', 'hi'];
+
+// Dynamically compute the number of blog posts per language at build time
+const blogDir = './src/content/blog';
+const postCounts = {};
+locales.forEach(l => postCounts[l] = 0);
+
+if (fs.existsSync(blogDir)) {
+    const files = fs.readdirSync(blogDir);
+    files.forEach(file => {
+        if (!file.endsWith('.md')) return;
+        const nameWithoutExt = path.parse(file).name;
+        let matchedLocale = 'en';
+        for (const locale of locales) {
+            if (locale === 'en') continue;
+            if (nameWithoutExt.endsWith('-' + locale)) {
+                matchedLocale = locale;
+                break;
+            }
+        }
+        postCounts[matchedLocale]++;
+    });
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,35 +41,66 @@ export default defineConfig({
     integrations: [react(), sitemap({
         filter: (page) => {
             const url = new URL(page);
-            const path = url.pathname;
+            const pathStr = url.pathname;
 
             // Exclude /en/ prefixed paths (they redirect to root, causing GSC "redirect" errors)
-            if (path.startsWith('/en/') || path === '/en') return false;
+            if (pathStr.startsWith('/en/') || pathStr === '/en') return false;
 
-            // Exclude all device pages (ios/android/mac/pc) - they are duplicate content
-            // This covers: /ios, /android, /mac, /pc AND /{lang}/ios, /{lang}/android, etc.
-            const devicePaths = ['/ios', '/android', '/mac', '/pc'];
-            const pathSegments = path.split('/').filter(Boolean);
+            const pathSegments = pathStr.split('/').filter(Boolean);
             const lastSegment = pathSegments[pathSegments.length - 1];
-            if (devicePaths.some(d => path === d || path.endsWith(d))) return false;
-            if (['ios', 'android', 'mac', 'pc'].includes(lastSegment)) return false;
 
-            // Exclude non-English legal pages to avoid duplicate/thin content
-            const legalPages = ['about', 'privacy', 'terms', 'disclaimer', 'dmca', 'contact'];
-            if (pathSegments.length >= 2 && legalPages.includes(lastSegment)) {
-                return false;
+            // Exclude thin-content blog listing pages (fewer than 2 posts)
+            let isBlogList = false;
+            let blogListLang = 'en';
+
+            if (pathSegments.length === 1 && pathSegments[0] === 'blog') {
+                isBlogList = true;
+                blogListLang = 'en';
+            } else if (pathSegments.length === 2 && locales.includes(pathSegments[0]) && pathSegments[1] === 'blog') {
+                isBlogList = true;
+                blogListLang = pathSegments[0];
+            }
+
+            if (isBlogList) {
+                const count = postCounts[blogListLang] || 0;
+                if (count < 2) {
+                    return false;
+                }
             }
 
             return true;
         },
         serialize(item) {
+            // Set priority based on page importance
+            const url = new URL(item.url);
+            const pathStr = url.pathname;
+            const pathSegments = pathStr.split('/').filter(Boolean);
+            
+            // Homepage and language homepages get highest priority
+            if (pathSegments.length === 0) {
+                item.priority = 1.0;
+                item.changefreq = 'daily';
+            } else if (pathSegments.length === 1 && locales.includes(pathSegments[0])) {
+                // Language homepages like /ar, /es, /fr (not /mp3)
+                item.priority = 0.9;
+                item.changefreq = 'daily';
+            } else if (pathStr.includes('/blog/')) {
+                // Blog posts
+                item.priority = 0.7;
+                item.changefreq = 'weekly';
+            } else {
+                // Other pages (mp3, story, slideshow, tools, blog index)
+                item.priority = 0.8;
+                item.changefreq = 'weekly';
+            }
+            
             item.lastmod = new Date().toISOString();
             return item;
         }
     })],
     i18n: {
         defaultLocale: 'en',
-        locales: ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'it', 'tr', 'ru', 'vi', 'th', 'ja', 'ko', 'pl', 'nl', 'ro', 'ms', 'fil', 'uk', 'cs', 'sv', 'hu', 'el', 'da', 'fi', 'no', 'bg', 'zh', 'hi'],
+        locales: locales,
         routing: {
             prefixDefaultLocale: false
         }

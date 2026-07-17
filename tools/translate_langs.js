@@ -15,7 +15,7 @@ const TARGET_LANGS = [
     'es', 'pt', 'id', 'fr', 'de', 'it', 'tr', 'ru',
     'vi', 'th', 'ja', 'ko', 'pl', 'nl', 'ro', 'ms',
     'uk', 'cs', 'sv', 'hu', 'el', 'da', 'fi', 'no',
-    'bg', 'zh', 'hi', 'tl' // 'tl' for 'fil'
+    'bg', 'zh', 'hi', 'fil'
 ];
 
 const TRANSLATIONS = {
@@ -109,7 +109,7 @@ const TRANSLATIONS = {
         "slideshow_page": { "features": { "safe": { "title": "100% 安全", "desc": "私密下载。" }, "anonymous": { "title": "匿名", "desc": "查看时不通知。" } } },
         "mp3_page": { "features": { "safe": { "title": "安全", "desc": "隐私保护。" }, "no_watermark": { "title": "纯净音频", "desc": "无水印。" } } }
     },
-    "tl": { // Filipino
+    "fil": { // Filipino
         "downloader": { "download_zip": "I-download Lahat (ZIP)", "creating_zip": "Gumagawa ng ZIP...", "save_image": "I-save" },
         "slideshow_page": { "features": { "safe": { "title": "100% Ligtas", "desc": "Pribadong pag-download." }, "anonymous": { "title": "Incognito", "desc": "Manood nang hindi inaabisuhan." } } },
         "mp3_page": { "features": { "safe": { "title": "Ligtas", "desc": "Ginagalang ang privacy." }, "no_watermark": { "title": "Malinis na Audio", "desc": "Walang watermark." } } }

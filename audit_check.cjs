@@ -15,6 +15,7 @@ if (hasTrailingSlashInSEO && trailingSlashSetting === 'never') {
   console.log('[ERROR] MISMATCH: canonical URLs have trailing slash but pages dont!');
   console.log('   Source: SEOConfig.astro line with ensureTrailingSlash()');
   console.log('   This causes: 308/301 redirects on every page for search bots');
+  process.exitCode = 1;
 }
 
 // ===== 2. hreflang URLs CHECK =====
@@ -73,6 +74,7 @@ console.log('Lang pages:', langPages.join(', '));
 rootPages.forEach(p => {
   if (!langPages.includes(p) && p !== 'index' && p !== 'sitemap.xml') {
     console.log('[MISSING] /[lang]/' + p + '.astro - will cause 404 for non-English users!');
+    process.exitCode = 1;
   }
 });
 langPages.forEach(p => {
@@ -95,9 +97,18 @@ console.log(redirectsContent.trim());
 // ===== 8. ROBOTS.TXT =====
 console.log('\n--- 8. ROBOTS.TXT CHECKS ---');
 const robots = fs.readFileSync('public/robots.txt', 'utf8');
-console.log('Has sitemap:', robots.includes('Sitemap:'));
-console.log('Has disallow /api/:', robots.includes('Disallow: /api/'));
-console.log('Has disallow /_astro/:', robots.includes('Disallow: /_astro/'));
+const hasSitemap = robots.includes('Sitemap:');
+const hasApi = robots.includes('Disallow: /api/');
+const hasAdmin = robots.includes('Disallow: /admin');
+console.log('Has sitemap:', hasSitemap);
+console.log('Has disallow /api/:', hasApi);
+console.log('Has disallow /admin:', hasAdmin);
+if (!hasSitemap || !hasApi || !hasAdmin) {
+  if (!hasSitemap) console.log('[ERROR] robots.txt is missing Sitemap reference');
+  if (!hasApi) console.log('[ERROR] robots.txt is missing Disallow: /api/');
+  if (!hasAdmin) console.log('[ERROR] robots.txt is missing Disallow: /admin');
+  process.exitCode = 1;
+}
 // Check sitemap URL matches actual sitemap
 const sitemapUrl = (robots.match(/Sitemap: (.+)/) || [])[1];
 console.log('Sitemap URL in robots.txt:', sitemapUrl);
@@ -117,7 +128,18 @@ manifest.icons?.forEach(icon => {
 console.log('\n--- 10. STATIC ASSETS ---');
 const publicFiles = fs.readdirSync('public');
 ['robots.txt', 'sitemap-index.xml', 'favicon.ico', 'favicon.png', 'og-image.png', 'manifest.json'].forEach(f => {
-  console.log(f + ': ' + (publicFiles.includes(f) ? 'EXISTS' : '[MISSING]'));
+  let exists = false;
+  if (f === 'sitemap-index.xml') {
+    exists = fs.existsSync('public/sitemap-index.xml') || fs.existsSync('dist/sitemap-index.xml');
+  } else {
+    exists = publicFiles.includes(f);
+  }
+  if (exists) {
+    console.log(f + ': EXISTS');
+  } else {
+    console.log(f + ': [MISSING]');
+    process.exitCode = 1;
+  }
 });
 
 // ===== 11. SCHEMA MARKUP ISSUES =====

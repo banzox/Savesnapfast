@@ -1,0 +1,121 @@
+﻿[2m┘ت┘ت:┘ث┘ذ:┘ث┘ذ[22m [34m[@astrojs/cloudflare][39m Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+[2m┘ت┘ت:┘ث┘ذ:┘ث┘ذ[22m [34m[@astrojs/cloudflare][39m If you see the error "Invalid binding `SESSION`" in your build output, you need to add the binding to your wrangler config file.
+[33m[1m┘ت┘ت:┘ث┘ذ:┘ث┘ذ[22m [WARN] [adapter][39m Cloudflare does not support sharp at runtime. However, you can configure `imageService: "compile"` to optimize images with sharp on prerendered pages during build time.
+[2m┘ت┘ت:┘ث┘ذ:┘ث┘ذ[22m [34m[content][39m Syncing content
+[2m┘ت┘ت:┘ث┘ذ:┘ث┘ذ[22m [34m[content][39m Synced content
+[2m┘ت┘ت:┘ث┘ذ:┘ث┘ذ[22m [34m[types][39m Generated [2m44ms[22m
+[2m┘ت┘ت:┘ث┘ذ:┘ث┘ذ[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\newFUTURE\Desktop\xmax2\Savesnapfast...
+[96mlegacy_backup/expand_locales.js[0m:[93m1[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m1[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mlegacy_backup/generate_i18n.js[0m:[93m164[0m:[93m33[0m - [93mwarning[0m[90m ts(6133): [0m'i' is declared but its value is never read.
+
+[7m164[0m     $('link[rel="icon"]').each((i, el) => {
+[7m   [0m [93m                                ~[0m
+[96mlegacy_backup/generate_i18n.js[0m:[93m157[0m:[93m28[0m - [93mwarning[0m[90m ts(6133): [0m'i' is declared but its value is never read.
+
+[7m157[0m     $('script[src]').each((i, el) => {
+[7m   [0m [93m                           ~[0m
+[96mlegacy_backup/generate_i18n.js[0m:[93m150[0m:[93m39[0m - [93mwarning[0m[90m ts(6133): [0m'i' is declared but its value is never read.
+
+[7m150[0m     $('link[rel="stylesheet"]').each((i, el) => {
+[7m   [0m [93m                                      ~[0m
+[96mlegacy_backup/generate_i18n.js[0m:[93m94[0m:[93m28[0m - [93mwarning[0m[90m ts(6133): [0m'i' is declared but its value is never read.
+
+[7m94[0m     $('[data-i18n]').each((i, el) => {
+[7m  [0m [93m                           ~[0m
+[96mlegacy_backup/generate_i18n.js[0m:[93m61[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'depth' is declared but its value is never read.
+
+[7m61[0m     let depth = 0;
+[7m  [0m [93m        ~~~~~[0m
+[96mlegacy_backup/generate_i18n.js[0m:[93m1[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m1[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mlegacy_backup/generate_mp3_pages.js[0m:[93m142[0m:[93m37[0m - [93mwarning[0m[90m ts(6133): [0m'i' is declared but its value is never read.
+
+[7m142[0m     const faqsHTML = faqs.map((faq, i) => `
+[7m   [0m [93m                                    ~[0m
+[96mlegacy_backup/generate_mp3_pages.js[0m:[93m7[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m7[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mlegacy_backup/generate_pages.js[0m:[93m6[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m6[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mlegacy_backup/generate_story_pages.js[0m:[93m7[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m7[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mlegacy_backup/js/i18n-setup.js[0m:[93m195[0m:[93m11[0m - [93mwarning[0m[90m ts(6133): [0m'fragment' is declared but its value is never read.
+
+[7m195[0m     const fragment = document.createDocumentFragment();
+[7m   [0m [93m          ~~~~~~~~[0m
+
+[96msrc/components/Downloader.jsx[0m:[93m6[0m:[93m56[0m - [93mwarning[0m[90m ts(6133): [0m'mode' is declared but its value is never read.
+
+[7m6[0m export default function Downloader({ t = (key) => key, mode = 'video' }) { // Simple mockup translation function
+[7m [0m [93m                                                       ~~~~[0m
+
+[96msrc/components/Schema.astro[0m:[93m23[0m:[93m9[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m23[0m <script type="application/ld+json">
+[7m  [0m [93m        ~~~~[0m
+[96msrc/components/Schema.astro[0m:[93m1[0m:[93m9[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m1[0m <script type="application/ld+json">
+[7m [0m [93m        ~~~~[0m
+
+[96msrc/layouts/Layout.astro[0m:[93m4[0m:[93m10[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
+
+[7m4[0m import { ViewTransitions } from "astro:transitions";
+[7m [0m [93m         ~~~~~~~~~~~~~~~[0m
+[96msrc/layouts/Layout.astro[0m:[93m4[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'ViewTransitions' is declared but its value is never read.
+
+[7m4[0m import { ViewTransitions } from "astro:transitions";
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/pages/404.astro[0m:[93m5[0m:[93m2[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any; title: string; }' is not assignable to type 'IntrinsicAttributes & Props'.
+  Property 'description' is missing in type '{ children: any; title: string; }' but required in type 'Props'.
+
+[7m5[0m <Layout title="404 - Page Not Found">
+[7m [0m [91m ~~~~~~[0m
+
+[96msrc/pages/index.astro[0m:[93m15[0m:[93m12[0m - [91merror[0m[90m ts(7006): [0mParameter 'key' implicitly has an 'any' type.
+
+[7m15[0m const t = (key) => {
+[7m  [0m [91m           ~~~[0m
+[96msrc/pages/index.astro[0m:[93m5[0m:[93m10[0m - [91merror[0m[90m ts(2724): [0m'"../utils/i18n"' has no exported member named 'getTranslations'. Did you mean 'useTranslations'?
+
+[7m5[0m import { getTranslations } from "../utils/i18n";
+[7m [0m [91m         ~~~~~~~~~~~~~~~[0m
+
+[96msrc/pages/[lang]/index.astro[0m:[93m62[0m:[93m7[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m62[0m       async="async"
+[7m  [0m [93m      ~~~~~[0m
+
+Result (35 files): 
+- 3 errors
+- 0 warnings
+- 18 hints
+

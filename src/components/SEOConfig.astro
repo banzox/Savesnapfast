@@ -31,17 +31,20 @@ const devicePages = ["ios", "android", "mac", "pc"];
 const lastSegment = pathParts[pathParts.length - 1];
 const isDevicePage = devicePages.includes(lastSegment);
 
-// --- 2. Build canonical URL (absolute, NO trailing slash — matches trailingSlash:'never') ---
+// --- 2. Build canonical URL ---
 const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
 
 // --- 3. Build hreflang entries for ALL languages (NO trailing slashes) ---
-// For blog post pages, link to the blog index in other languages
-// since blog posts don't exist in all languages
-// For device pages, skip hreflang entirely (they are noindex pages)
+const currentLang = isLangPrefix ? firstPart : "en";
 const isBlogPost = baseSlug && baseSlug.startsWith("blog/") && baseSlug !== "blog";
-const hreflangs = isDevicePage ? [] : Object.keys(languages).map((langCode) => {
-    // For blog posts, other languages should point to /[lang]/blog
-    const slug = isBlogPost ? "blog" : baseSlug;
+const skipHreflang = false;
+const hreflangs = skipHreflang ? [] : Object.keys(languages).map((langCode) => {
+    // For blog posts, other languages should point to /[lang]/blog,
+    // but the current language must point to the exact canonical URL (baseSlug)
+    const isSelf = langCode === currentLang;
+    const slug = isBlogPost 
+        ? (isSelf ? baseSlug : "blog") 
+        : baseSlug;
     
     const langPath =
         langCode === "en"
@@ -59,7 +62,11 @@ const hreflangs = isDevicePage ? [] : Object.keys(languages).map((langCode) => {
 });
 
 // --- 4. x-default always points to the English version of the same page ---
-const xDefaultSlug = isBlogPost ? "blog" : baseSlug;
+// For English blog posts, it should point to the English blog post itself.
+// For translated blog posts, it should point to the English blog index.
+const xDefaultSlug = isBlogPost
+    ? (currentLang === "en" ? baseSlug : "blog")
+    : baseSlug;
 const xDefaultHref = new URL(
     xDefaultSlug ? `/${xDefaultSlug}` : "/",
     SITE_ORIGIN,
@@ -69,8 +76,8 @@ const xDefaultHref = new URL(
 <!-- SEOConfig: Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
-{/* Only add hreflang for indexable pages (not device pages which are noindex) */}
-{!isDevicePage && (
+{/* Only add hreflang for indexable pages (not device or translated legal pages) */}
+{!skipHreflang && (
     <>
         <!-- SEOConfig: hreflang x-default (English fallback) -->
         <link rel="alternate" hreflang="x-default" href={xDefaultHref} />

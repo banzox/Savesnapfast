@@ -58,6 +58,8 @@ async function main() {
     if (gLang === 'zh-CN') gLang = 'zh-cn';
     if (gLang === 'zh-TW') gLang = 'zh-tw';
     if (gLang === 'pt-BR') gLang = 'pt';
+    if (gLang === 'fil') gLang = 'tl';
+    if (gLang === 'zh') gLang = 'zh-cn';
     
     console.log(`\n--- Processing ${file} ---`);
     let targetData = {};

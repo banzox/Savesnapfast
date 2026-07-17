@@ -22,5 +22,4 @@ export function getStaticPaths() {
 const { lang, device } = Astro.params;
 ---
 
-{/* Device pages are duplicate content - always noindex to preserve crawl budget */}
-<DownloadPage lang={lang} pagePrefix={`${device}_page`} mode="video" showAd={true} noindex={true} />
+<DownloadPage lang={lang} pagePrefix={`${device}_page`} mode="video" showAd={true} />

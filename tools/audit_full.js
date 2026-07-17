@@ -13,7 +13,7 @@ const EN_DATA = JSON.parse(fs.readFileSync(EN_PATH, 'utf-8'));
 const TARGET_LANGS = [
     'ar', 'bg', 'cs', 'da', 'de', 'el', 'es', 'fi', 'fr', 'hi',
     'hu', 'id', 'it', 'ja', 'ko', 'ms', 'nl', 'no', 'pl', 'pt',
-    'ro', 'ru', 'sv', 'th', 'tl', 'tr', 'uk', 'vi', 'zh'
+    'ro', 'ru', 'sv', 'th', 'fil', 'tr', 'uk', 'vi', 'zh'
 ];
 
 function isObject(item) {

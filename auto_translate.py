@@ -45,7 +45,9 @@ def get_google_lang(lang_code):
         'zh-CN': 'zh-CN',
         'zh-TW': 'zh-TW',
         'in': 'id', # Indonesian
-        'pt-BR': 'pt'
+        'pt-BR': 'pt',
+        'fil': 'tl', # Filipino/Tagalog
+        'zh': 'zh-CN' # Chinese (Simplified)
     }
     return mapping.get(lang_code, lang_code.split('-')[0])
 

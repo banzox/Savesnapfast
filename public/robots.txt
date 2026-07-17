@@ -4,5 +4,12 @@ Allow: /
 # Block API endpoints
 Disallow: /api/
 
+# Block Keystatic admin control panels
+Disallow: /admin/
+Disallow: /admin
+
+# Block duplicate parameters to prevent crawl budget waste on duplicate URLs
+Disallow: /*?*
+
 # Sitemaps
 Sitemap: https://savetik-fast.xyz/sitemap-index.xml

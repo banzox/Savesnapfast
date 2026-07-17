@@ -1,0 +1,490 @@
+﻿Starting Audit...
+Audit Results (Summary):
+
+[AR] Issues:
+2 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[BG] Issues:
+43 untranslated text
+Untranslated FAQs: mp3_page, story_page
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.faq.q1",
+    "mp3_page.faq.a1",
+    "mp3_page.faq.q2",
+    "mp3_page.faq.a2",
+    "mp3_page.faq.q3",
+    "mp3_page.faq.a3",
+    "mp3_page.faq.q4",
+    "mp3_page.faq.a4",
+    "mp3_page.faq.q5",
+    "mp3_page.faq.a5",
+    "mp3_page.faq.q6",
+    "mp3_page.faq.a6",
+    "mp3_page.faq.q7",
+    "mp3_page.faq.a7",
+    "mp3_page.faq.q8",
+    "mp3_page.faq.a8",
+    "mp3_page.faq.q9",
+    "mp3_page.faq.a9",
+    "mp3_page.faq.q10",
+    "mp3_page.faq.a10",
+    "story_page.faq.q1",
+    "story_page.faq.a1",
+    "story_page.faq.q2",
+    "story_page.faq.a2",
+    "story_page.faq.q3",
+    "story_page.faq.a3",
+    "story_page.faq.q4",
+    "story_page.faq.a4",
+    "story_page.faq.q5",
+    "story_page.faq.a5",
+    "story_page.faq.q6",
+    "story_page.faq.a6",
+    "story_page.faq.q7",
+    "story_page.faq.a7",
+    "story_page.faq.q8",
+    "story_page.faq.a8",
+    "story_page.faq.q9",
+    "story_page.faq.a9",
+    "story_page.faq.q10",
+    "story_page.faq.a10",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [
+    "mp3_page",
+    "story_page"
+  ],
+  "incomplete_faq": []
+}
+
+[CS] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[DA] Issues:
+7 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "mp3_page.title",
+    "story_page.meta_desc",
+    "slideshow_page.title",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[DE] Issues:
+3 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[EL] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[ES] Issues:
+2 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[FI] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[FR] Issues:
+2 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[HI] Issues:
+3 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[HU] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[ID] Issues:
+3 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "mp3_page.title",
+    "story_page.meta_desc"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[IT] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[JA] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[KO] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[MS] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[NL] Issues:
+6 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.title",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[NO] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[PL] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[PT] Issues:
+2 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[RO] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[RU] Issues:
+2 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[SV] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[TH] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[TL] Issues:
+7 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "mp3_page.features.trending.title",
+    "story_page.meta_desc",
+    "story_page.features.anonymous.title",
+    "slideshow_page.title",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[TR] Issues:
+2 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[UK] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[VI] Issues:
+5 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}
+
+[ZH] Issues:
+6 untranslated text
+Details: {
+  "missing": [],
+  "untranslated": [
+    "mp3_page.meta_desc",
+    "story_page.meta_desc",
+    "slideshow_page.title",
+    "slideshow_page.features.original.title",
+    "slideshow_page.features.format.title",
+    "slideshow_page.features.device.title"
+  ],
+  "missing_faq": [],
+  "untranslated_faq": [],
+  "incomplete_faq": []
+}

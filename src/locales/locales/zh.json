@@ -20,7 +20,7 @@
     "privacy": "隱私權政策",
     "dmca": "DMCA",
     "disclaimer": "免責聲明",
-    "tools": "Tools"
+    "tools": "工具"
   },
   "hero": {
     "title": "TikTok 影片下載器",
@@ -148,9 +148,9 @@
     "step1": "复制您想要保存的 TikTok 视频链接。",
     "step2": "将链接粘贴到页面顶部的下载框中。",
     "step3": "点击“下载”按钮，您的视频将立即保存。",
-    "step1_title": "Copy Link",
-    "step2_title": "Paste URL",
-    "step3_title": "Download"
+    "step1_title": "复制链接",
+    "step2_title": "粘贴网址",
+    "step3_title": "下载"
   },
   "tools": {
     "backToDownloader": "返回下载器",
@@ -615,79 +615,79 @@
     "link_copied": "已复制！"
   },
   "ios_page": {
-    "title": "TikTok Downloader for iOS",
-    "desc": "Download TikTok videos without watermark directly to your iPhone or iPad in HD quality. The fastest way to save videos using Safari on iOS.",
-    "placeholder": "Paste TikTok link from your iPhone...",
-    "meta_title": "TikTok Downloader for iPhone/iPad - SaveTikFast",
-    "meta_desc": "Free tool to save TikTok videos without watermark on iOS (iPhone & iPad). No app installation required. Download in MP4 or MP3 format instantly.",
+    "title": "iOS 版 TikTok 下载器",
+    "desc": "将没有水印的 TikTok 视频以高清质量直接下载到您的 iPhone 或 iPad。在 iOS 上使用 Safari 保存视频的最快方法。",
+    "placeholder": "从您的 iPhone 粘贴 TikTok 链接...",
+    "meta_title": "iPhone/iPad 版 TikTok 下载器 - SaveTikFast",
+    "meta_desc": "在 iOS（iPhone 和 iPad）上保存没有水印的 TikTok 视频的免费工具。无需安装应用程序。立即下载 MP4 或 MP3 格式。",
     "faq": {
-      "q1": "How do I download TikTok videos on iPhone and iPad without watermark?",
-      "a1": "Open TikTok on your iPhone or iPad, tap Share and Copy Link. Open Safari or Chrome browser, visit SaveTikFast, paste the TikTok video URL, and tap Download. The video saves directly to your Photos app in HD quality without watermark. Works on iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air, and all iOS devices running iOS 17 or iOS 18.",
-      "q2": "Is SaveTikFast free to use on iPhone without installing any app?",
-      "a2": "Yes, SaveTikFast is 100% free for iPhone and iPad users. No app installation from App Store needed. Our TikTok video downloader works directly in Safari, Chrome, or Firefox browser on iOS. Download unlimited TikTok videos without watermark, convert TikTok to MP3, and save TikTok stories - all completely free with no registration or subscription required.",
-      "q3": "Can I save TikTok videos to my iPhone camera roll in HD 4K quality?",
-      "a3": "Absolutely. SaveTikFast downloads TikTok videos in the highest quality available including 720p HD, 1080p Full HD, and 4K resolution directly to your iPhone Photos or Files app. We never compress videos. Better quality than SSSTik, SnapTik, or TikMate on iOS devices. Perfect for saving TikTok content offline on iPhone for later viewing.",
-      "q4": "Why is SaveTikFast the best TikTok downloader for iOS devices?",
-      "a4": "SaveTikFast is the fastest TikTok video saver for iPhone and iPad with 3-second downloads, no watermark removal issues, HD and 4K support, MP3 audio extraction, story downloads, and slideshow saving. Unlike other iOS TikTok downloaders, we require no app install, no login, and no Apple Shortcuts. Works perfectly on Safari browser across all iOS versions.",
-      "q5": "How do I convert TikTok videos to MP3 audio on iPhone?",
-      "a5": "Copy the TikTok video link on your iPhone, open Safari or Chrome, visit SaveTikFast MP3 converter page, paste the URL, and tap Extract MP3. The audio file downloads in 320kbps quality to your iPhone Files app. Perfect for creating iPhone ringtones from TikTok sounds, saving trending TikTok music, and extracting viral audio clips on iOS devices."
+      "q1": "如何在 iPhone 和 iPad 上下载无水印的 TikTok 视频？",
+      "a1": "在 iPhone 或 iPad 上打开 TikTok，点击“共享并复制链接”。打开 Safari 或 Chrome 浏览器，访问 SaveTikFast，粘贴 TikTok 视频 URL，然后点击“下载”。视频以高清质量直接保存到您的照片应用程序，无水印。适用于 iPhone 16、iPhone 15、iPhone 14、iPad Pro、iPad Air 以及运行 iOS 17 或 iOS 18 的所有 iOS 设备。",
+      "q2": "SaveTikFast 可以在 iPhone 上免费使用，无需安装任何应用程序吗？",
+      "a2": "是的，SaveTikFast 对于 iPhone 和 iPad 用户是 100% 免费的。无需从 App Store 安装应用程序。我们的 TikTok 视频下载器可直接在 iOS 上的 Safari、Chrome 或 Firefox 浏览器中运行。下载无水印的无限 TikTok 视频、将 TikTok 转换为 MP3 并保存 TikTok 故事 - 全部完全免费，无需注册或订阅。",
+      "q3": "我可以将 TikTok 视频以高清 4K 质量保存到我的 iPhone 相机胶卷中吗？",
+      "a3": "绝对地。 SaveTikFast 可将最高质量的 TikTok 视频（包括 720p 高清、1080p 全高清和 4K 分辨率）直接下载到您的 iPhone 照片或文件应用程序中。我们从不压缩视频。质量比 iOS 设备上的 SSSTik、SnapTik 或 TikMate 更好。非常适合在 iPhone 上离线保存 TikTok 内容以供以后查看。",
+      "q4": "为什么 SaveTikFast 是 iOS 设备上最好的 TikTok 下载器？",
+      "a4": "SaveTikFast 是适用于 iPhone 和 iPad 的最快 TikTok 视频保存程序，下载仅需 3 秒，无水印删除问题，支持高清和 4K、MP3 音频提取、故事下载和幻灯片保存。与其他 iOS TikTok 下载器不同，我们不需要安装应用程序，不需要登录，也不需要 Apple 快捷方式。在所有 iOS 版本的 Safari 浏览器上完美运行。",
+      "q5": "如何在 iPhone 上将 TikTok 视频转换为 MP3 音频？",
+      "a5": "在 iPhone 上复制 TikTok 视频链接，打开 Safari 或 Chrome，访问 SaveTikFast MP3 转换器页面，粘贴 URL，然后点击提取 MP3。音频文件以 320kbps 的质量下载到您的 iPhone 文件应用程序。非常适合从 TikTok 声音创建 iPhone 铃声、保存流行的 TikTok 音乐以及在 iOS 设备上提取病毒式音频剪辑。"
     }
   },
   "android_page": {
-    "title": "TikTok Downloader for Android",
-    "desc": "The best Android TikTok video saver! Download any TikTok video without watermark directly to your mobile gallery in MP4 format.",
-    "placeholder": "Paste TikTok link from your Android phone...",
-    "meta_title": "TikTok Downloader for Android Devices - SaveTikFast",
-    "meta_desc": "Save any TikTok video without logo to your Android phone gallery. 100% free, no watermark, fast, and secure. Download in HD quality.",
+    "title": "Android 版 TikTok 下载器",
+    "desc": "最好的 Android TikTok 视频保护程序！将任何没有水印的 TikTok 视频以 MP4 格式直接下载到您的移动图库。",
+    "placeholder": "从您的 Android 手机粘贴 TikTok 链接...",
+    "meta_title": "适用于 Android 设备的 TikTok 下载器 - SaveTikFast",
+    "meta_desc": "将任何没有徽标的 TikTok 视频保存到您的 Android 手机图库中。 100% 免费、无水印、快速、安全。以高清画质下载。",
     "faq": {
-      "q1": "How do I download TikTok videos on Android without watermark?",
-      "a1": "Open TikTok on your Android phone, tap Share and Copy Link. Open Chrome, Samsung Internet, or Firefox browser, visit SaveTikFast, paste the video URL, and tap Download. The TikTok video saves to your Downloads folder or Gallery in HD quality without watermark. Works on Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus, and Huawei devices.",
-      "q2": "Is SaveTikFast compatible with all Android phones and tablets?",
-      "a2": "Yes, SaveTikFast works on every Android device including Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia, and Android tablets. Compatible with Android 12, 13, 14, and 15. Use Chrome, Samsung Internet, Firefox, or any mobile browser to download TikTok videos without watermark for free. No APK installation required.",
-      "q3": "Can I save TikTok videos to my Android gallery in HD 4K?",
-      "a3": "Absolutely. SaveTikFast downloads TikTok videos in original HD, 1080p Full HD, and 4K quality directly to your Android phone Gallery or Downloads folder. We preserve the original video quality without compression. Better than SSSTik, SnapTik, or TikMate downloaders. Perfect for saving TikTok content offline on Samsung Galaxy, Pixel, or Xiaomi devices.",
-      "q4": "Why choose SaveTikFast over other Android TikTok downloaders?",
-      "a4": "SaveTikFast is the fastest TikTok downloader for Android with 3-second processing, watermark-free downloads, HD and 4K video support, TikTok MP3 converter, story saver, and slideshow downloader. No APK needed, no Google Play app required. Works in Chrome browser on Samsung Galaxy, Google Pixel, Xiaomi, OPPO, and all Android smartphones without registration.",
-      "q5": "How do I extract MP3 audio from TikTok on my Android phone?",
-      "a5": "Copy the TikTok video link on your Android device, open Chrome or Samsung Internet browser, visit SaveTikFast MP3 converter, paste the URL, and tap Extract MP3. Audio downloads in high-quality 320kbps format to your Downloads folder. Perfect for saving trending TikTok songs, creating Android ringtones, and extracting viral sounds on Samsung Galaxy and Pixel phones."
+      "q1": "如何在 Android 上下载无水印的 TikTok 视频？",
+      "a1": "在 Android 手机上打开 TikTok，点击共享并复制链接。打开 Chrome、Samsung Internet 或 Firefox 浏览器，访问 SaveTikFast，粘贴视频 URL，然后点击“下载”。 TikTok 视频以高清质量保存到您的下载文件夹或图库，无水印。适用于三星 Galaxy S25、Google Pixel 9、小米、OPPO、OnePlus 和华为设备。",
+      "q2": "SaveTikFast 是否与所有 Android 手机和平板电脑兼容？",
+      "a2": "是的，SaveTikFast 适用于所有 Android 设备，包括三星 Galaxy、Google Pixel、小米红米、OPPO、OnePlus、华为、摩托罗拉、诺基亚和 Android 平板电脑。兼容 Android 12、13、14 和 15。使用 Chrome、Samsung Internet、Firefox 或任何移动浏览器免费下载无水印的 TikTok 视频。无需安装 APK。",
+      "q3": "我可以将 TikTok 视频以高清 4K 保存到我的 Android 图库中吗？",
+      "a3": "绝对地。 SaveTikFast 将原始高清、1080p 全高清和 4K 质量的 TikTok 视频直接下载到您的 Android 手机图库或下载文件夹中。我们保留原始视频质量而不进行压缩。比 SSSTik、SnapTik 或 TikMate 下载器更好。非常适合在 Samsung Galaxy、Pixel 或小米设备上离线保存 TikTok 内容。",
+      "q4": "为什么选择 SaveTikFast 而不是其他 Android TikTok 下载器？",
+      "a4": "SaveTikFast 是最快的 Android TikTok 下载器，处理时间为 3 秒，无水印下载，高清和 4K 视频支持，TikTok MP3 转换器，故事保护程序和幻灯片下载器。无需 APK，无需 Google Play 应用程序。适用于 Samsung Galaxy、Google Pixel、Xiaomi、OPPO 和所有 Android 智能手机上的 Chrome 浏览器，无需注册。",
+      "q5": "如何在 Android 手机上从 TikTok 中提取 MP3 音频？",
+      "a5": "在 Android 设备上复制 TikTok 视频链接，打开 Chrome 或三星互联网浏览器，访问 SaveTikFast MP3 转换器，粘贴 URL，然后点击提取 MP3。以高品质 320kbps 格式将音频下载到您的下载文件夹。非常适合在三星 Galaxy 和 Pixel 手机上保存热门 TikTok 歌曲、创建 Android 铃声以及提取病毒声音。"
     }
   },
   "mac_page": {
-    "title": "TikTok Downloader for Mac",
-    "desc": "Download high-quality TikTok videos without watermark on your MacBook or iMac. Works perfectly on Safari and Chrome.",
-    "placeholder": "Drop TikTok link here to download on Mac...",
-    "meta_title": "TikTok Video Downloader for Mac/MacBook (HD) - SaveTikFast",
-    "meta_desc": "Easily download TikTok videos without watermark to your Mac. Free online saver supporting macOS Safari, Chrome, and Firefox in 4K quality.",
+    "title": "Mac 版 TikTok 下载器",
+    "desc": "在 MacBook 或 iMac 上下载无水印的高质量 TikTok 视频。在 Safari 和 Chrome 上完美运行。",
+    "placeholder": "将 TikTok 链接放到此处即可在 Mac 上下载...",
+    "meta_title": "Mac/MacBook 版 TikTok 视频下载器（高清） - SaveTikFast",
+    "meta_desc": "轻松将没有水印的 TikTok 视频下载到您的 Mac。免费在线保护程序，支持 macOS Safari、Chrome 和 Firefox，4K 画质。",
     "faq": {
-      "q1": "How do I download TikTok videos on Mac without watermark?",
-      "a1": "Open TikTok in Safari, Chrome, or Firefox on your MacBook or iMac. Copy the TikTok video URL from the address bar, visit SaveTikFast, paste the link, and click Download. The video saves to your Mac Downloads folder in HD or 4K quality without watermark. Works on macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac, and Mac Mini.",
-      "q2": "Does SaveTikFast work on Safari and Chrome for macOS?",
-      "a2": "Yes, SaveTikFast works perfectly on all Mac browsers including Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera. No browser extension or plugin installation required. Our TikTok video downloader runs directly in your browser on macOS Sonoma, Ventura, and Monterey. Download unlimited TikTok videos without watermark completely free on any Mac.",
-      "q3": "Can I save TikTok videos in 4K quality on my MacBook?",
-      "a3": "Absolutely. SaveTikFast downloads TikTok videos in the highest quality available including 720p, 1080p Full HD, 2K, and 4K resolution on MacBook Pro, MacBook Air, iMac, and Mac Mini. We never compress or reduce video quality. Files save as MP4 to your Downloads folder. Better than SSSTik or SnapTik for Mac users wanting premium video quality.",
-      "q4": "Why is SaveTikFast the best TikTok downloader for Mac computers?",
-      "a4": "SaveTikFast is the fastest TikTok video downloader for Mac with instant 3-second processing, watermark removal, 4K quality support, MP3 audio extraction, TikTok story saving, and slideshow downloading. No software installation on macOS needed. Works in Safari and Chrome browser on MacBook Pro, MacBook Air, iMac, and Mac Mini without registration or subscription.",
-      "q5": "How do I convert TikTok to MP3 on my Mac?",
-      "a5": "Copy the TikTok video URL from Safari or Chrome on your Mac, visit SaveTikFast MP3 converter, paste the link, and click Extract MP3. The audio file downloads in studio-quality 320kbps MP3 format to your Mac Downloads folder. Perfect for saving trending TikTok music, creating playlists, and extracting sounds on MacBook Pro, MacBook Air, and iMac."
+      "q1": "如何在 Mac 上下载无水印的 TikTok 视频？",
+      "a1": "在 MacBook 或 iMac 上的 Safari、Chrome 或 Firefox 中打开 TikTok。从地址栏复制 TikTok 视频 URL，访问 SaveTikFast，粘贴链接，然后单击“下载”。视频以高清或 4K 质量保存到您的 Mac 下载文件夹，无水印。适用于 macOS Sonoma、macOS Ventura、MacBook Pro、MacBook Air、iMac 和 Mac Mini。",
+      "q2": "SaveTikFast 是否适用于 macOS 的 Safari 和 Chrome？",
+      "a2": "是的，SaveTikFast 可在所有 Mac 浏览器上完美运行，包括 Apple Safari、Google Chrome、Mozilla Firefox、Microsoft Edge 和 Opera。无需安装浏览器扩展或插件。我们的 TikTok 视频下载器直接在 macOS Sonoma、Ventura 和 Monterey 上的浏览​​器中运行。在任何 Mac 上完全免费下载无水印的无限 TikTok 视频。",
+      "q3": "我可以在 MacBook 上保存 4K 质量的 TikTok 视频吗？",
+      "a3": "绝对地。 SaveTikFast 在 MacBook Pro、MacBook Air、iMac 和 Mac Mini 上以最高质量下载 TikTok 视频，包括 720p、1080p 全高清、2K 和 4K 分辨率。我们从不压缩或降低视频质量。文件以 MP4 格式保存到您的“下载”文件夹中。对于想要优质视频质量的 Mac 用户来说，比 SSSTik 或 SnapTik 更好。",
+      "q4": "为什么 SaveTikFast 是 Mac 电脑上最好的 TikTok 下载器？",
+      "a4": "SaveTikFast 是 Mac 上最快的 TikTok 视频下载器，具有即时 3 秒处理、水印去除、4K 质量支持、MP3 音频提取、TikTok 故事保存和幻灯片下载。无需在 macOS 上安装软件。适用于 MacBook Pro、MacBook Air、iMac 和 Mac Mini 上的 Safari 和 Chrome 浏览器，无需注册或订阅。",
+      "q5": "如何在 Mac 上将 TikTok 转换为 MP3？",
+      "a5": "从 Mac 上的 Safari 或 Chrome 复制 TikTok 视频 URL，访问 SaveTikFast MP3 转换器，粘贴链接，然后单击“提取 MP3”。音频文件将以录音室品质的 320kbps MP3 格式下载到您的 Mac 下载文件夹中。非常适合在 MacBook Pro、MacBook Air 和 iMac 上保存热门 TikTok 音乐、创建播放列表以及提取声音。"
     }
   },
   "pc_page": {
-    "title": "TikTok Downloader for PC",
-    "desc": "Save TikTok videos directly to your Windows PC or Laptop. Get clean, watermark-free videos in ultra-fast speeds.",
-    "placeholder": "Paste the TikTok video link from your PC...",
-    "meta_title": "TikTok Downloader for Windows PC/Laptop - SaveTikFast",
-    "meta_desc": "The fastest TikTok video downloader for Windows PC. Save unlimited TikTok videos without watermark to your computer for free.",
+    "title": "PC 版 TikTok 下载器",
+    "desc": "将 TikTok 视频直接保存到您的 Windows PC 或笔记本电脑。以超快的速度获取干净、无水印的视频。",
+    "placeholder": "从您的 PC 粘贴 TikTok 视频链接...",
+    "meta_title": "适用于 Windows PC/笔记本电脑的 TikTok 下载器 - SaveTikFast",
+    "meta_desc": "Windows PC 上最快的 TikTok 视频下载器。免费将无限量无水印的 TikTok 视频保存到您的计算机上。",
     "faq": {
-      "q1": "How do I download TikTok videos on Windows PC without watermark?",
-      "a1": "Open TikTok in Chrome, Edge, or Firefox on your Windows PC or Laptop. Copy the TikTok video URL from the browser address bar, visit SaveTikFast, paste the link, and click Download. The video saves to your PC Downloads folder in HD or 4K quality without watermark. Works on Windows 11, Windows 10, desktop computers, and laptops from Dell, HP, Lenovo, ASUS, and Acer.",
-      "q2": "Is SaveTikFast free to use on Windows computers?",
-      "a2": "Yes, SaveTikFast is completely free for Windows PC users. No software installation or desktop application download needed. Our TikTok video downloader works directly in Chrome, Microsoft Edge, Firefox, and Opera browsers on Windows 11 and Windows 10. Download unlimited TikTok videos without watermark, convert to MP3, save stories, and download slideshows for free.",
-      "q3": "Can I save TikTok videos in HD 4K quality on my Windows PC?",
-      "a3": "Absolutely. SaveTikFast downloads TikTok videos in original quality including 720p HD, 1080p Full HD, 2K, and 4K resolution directly to your Windows PC Downloads folder as MP4 files. We never compress or reduce quality. Superior to SSSTik, SnapTik, or TikMate. Perfect for saving and editing TikTok content on desktop computers running Windows 11 or Windows 10.",
-      "q4": "Why is SaveTikFast the best TikTok downloader for PC?",
-      "a4": "SaveTikFast is the fastest TikTok video downloader for Windows PC with 3-second processing, no watermark, HD and 4K support, MP3 converter, story downloader, and slideshow saver. No desktop software installation required. Works in Chrome and Edge browser on Windows 11, Windows 10 laptops and desktops from HP, Dell, Lenovo, ASUS without registration or fees.",
-      "q5": "How do I convert TikTok to MP3 on my Windows computer?",
-      "a5": "Copy the TikTok video URL from Chrome or Edge on your Windows PC, visit SaveTikFast MP3 converter page, paste the link, and click Extract MP3. The audio downloads in high-quality 320kbps MP3 format to your PC Downloads folder. Perfect for saving TikTok songs, creating Windows ringtones, extracting viral audio, and building music collections on your desktop computer."
+      "q1": "如何在 Windows PC 上下载无水印的 TikTok 视频？",
+      "a1": "在 Windows PC 或笔记本电脑上的 Chrome、Edge 或 Firefox 中打开 TikTok。从浏览器地址栏中复制 TikTok 视频 URL，访问 SaveTikFast，粘贴链接，然后单击“下载”。视频以高清或 4K 质量保存到您的 PC 下载文件夹，无水印。适用于 Dell、HP、Lenovo、ASUS 和 Acer 的 Windows 11、Windows 10、台式电脑和笔记本电脑。",
+      "q2": "SaveTikFast 可以在 Windows 计算机上免费使用吗？",
+      "a2": "是的，SaveTikFast 对 Windows PC 用户完全免费。无需安装软件或下载桌面应用程序。我们的 TikTok 视频下载器可直接在 Windows 11 和 Windows 10 上的 Chrome、Microsoft Edge、Firefox 和 Opera 浏览器中运行。免费下载无限量的无水印 TikTok 视频、转换为 MP3、保存故事以及下载幻灯片。",
+      "q3": "我可以在 Windows PC 上以高清 4K 质量保存 TikTok 视频吗？",
+      "a3": "绝对地。 SaveTikFast 以原始质量（包括 720p 高清、1080p 全高清、2K 和 4K 分辨率）将 TikTok 视频作为 MP4 文件直接下载到您的 Windows PC 下载文件夹中。我们从不压缩或降低质量。优于 SSSTik、SnapTik 或 TikMate。非常适合在运行 Windows 11 或 Windows 10 的台式电脑上保存和编辑 TikTok 内容。",
+      "q4": "为什么 SaveTikFast 是 PC 上最好的 TikTok 下载器？",
+      "a4": "SaveTikFast 是 Windows PC 上最快的 TikTok 视频下载器，处理时间为 3 秒，无水印，支持高清和 4K，提供 MP3 转换器、故事下载器和幻灯片保存程序。无需安装桌面软件。适用于 HP、Dell、Lenovo、ASUS 的 Windows 11、Windows 10 笔记本电脑和台式机上的 Chrome 和 Edge 浏览器，无需注册或付费。",
+      "q5": "如何在 Windows 计算机上将 TikTok 转换为 MP3？",
+      "a5": "从 Windows PC 上的 Chrome 或 Edge 复制 TikTok 视频 URL，访问 SaveTikFast MP3 转换器页面，粘贴链接，然后单击“提取 MP3”。音频以高品质 320kbps MP3 格式下载到您的 PC 下载文件夹。非常适合保存 TikTok 歌曲、创建 Windows 铃声、提取病毒式音频以及在台式计算机上构建音乐收藏。"
     }
   }
 }

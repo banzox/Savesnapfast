@@ -113,8 +113,8 @@ if (pagePrefix.includes("mp3")) aboutIcon = "fas fa-headphones";
 if (pagePrefix.includes("story")) aboutIcon = "fas fa-photo-film";
 if (pagePrefix.includes("slideshow")) aboutIcon = "fas fa-layer-group";
 
-// --- Device page detection (noindex for duplicate content prevention) ---
-const isDevicePage = ['ios_page', 'android_page', 'mac_page', 'pc_page'].includes(pagePrefix);
+// --- Device page detection (allow indexation as they have unique platform instructions) ---
+const isDevicePage = false;
 
 // --- Meta Data ---
 // Smart fallback: Check if translated value is different from the key (means translation exists)
