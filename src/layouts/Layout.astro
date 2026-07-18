@@ -39,13 +39,6 @@ const robotsContent = noindex
                     if (adsLoaded) return;
                     adsLoaded = true;
 
-                    // Load Google AdSense
-                    const adsense = document.createElement("script");
-                    adsense.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2779375554237684";
-                    adsense.async = true;
-                    adsense.crossOrigin = "anonymous";
-                    document.head.appendChild(adsense);
-
                     // Load Adsterra Social Bar if enabled
                     if (enableAdsterra) {
                         const adsterra = document.createElement("script");

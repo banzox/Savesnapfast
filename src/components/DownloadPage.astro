@@ -194,17 +194,20 @@ if (!pagePrefix) {
             </div>
     </article>
 
-    {/* إعلان AdSense بعد منطقة التحميل */}
+    {/* إعلان Adsterra Native بعد منطقة التحميل مباشرة لزيادة الأرباح */}
     {enableAds && (
         <div class="ad-slot ad-slot-top">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-2779375554237684"
-                data-ad-slot="auto"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+            <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
             <script is:inline>
-                (adsbygoogle = window.adsbygoogle || []).push({});
+                (function() {
+                    if (document.getElementById('container-2d1b844eacef7f58a020be44e8239ff9')) {
+                        var s = document.createElement('script');
+                        s.async = true;
+                        s.setAttribute('data-cfasync', 'false');
+                        s.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+                        document.body.appendChild(s);
+                    }
+                })();
             </script>
         </div>
     )}
@@ -252,20 +255,7 @@ if (!pagePrefix) {
         )
     }
 
-    {/* إعلان AdSense بين المحتوى و FAQ */}
-    {enableAds && (
-        <div class="ad-slot ad-slot-mid">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-2779375554237684"
-                data-ad-slot="auto"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script is:inline>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    )}
+
 
     {faqItems.length > 0 && (
         <section class="container" style="margin-top: 20px;">
@@ -289,23 +279,7 @@ if (!pagePrefix) {
 
     <FAQ t={t} items={faqItems} />
 
-    {/* إعلان Adsterra Native بعد FAQ */}
-    {enableAds && (
-        <div class="ad-slot ad-slot-bottom">
-            <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
-            <script is:inline>
-                (function() {
-                    if (document.getElementById('container-2d1b844eacef7f58a020be44e8239ff9')) {
-                        var s = document.createElement('script');
-                        s.async = true;
-                        s.setAttribute('data-cfasync', 'false');
-                        s.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
-                        document.body.appendChild(s);
-                    }
-                })();
-            </script>
-        </div>
-    )}
+
 </Layout>
 
 <style>
