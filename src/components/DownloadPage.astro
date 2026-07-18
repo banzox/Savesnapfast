@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Downloader from "./Downloader.jsx";
 import FAQ from "./FAQ.astro";
 import { getTranslations, useTranslations } from "../utils/i18n";
+import { ADS_CONFIG } from "../config";
 
 interface Props {
     lang: string;
@@ -12,7 +13,8 @@ interface Props {
     noindex?: boolean;
 }
 
-const { lang, pagePrefix, mode, noindex = false } = Astro.props;
+const { lang, pagePrefix, mode, showAd = false, noindex = false } = Astro.props;
+const enableAds = showAd && ADS_CONFIG.enableAdsterra;
 const t = useTranslations(lang);
 const translations = getTranslations(lang);
 
@@ -190,7 +192,22 @@ if (!pagePrefix) {
                         : t("downloader.placeholder")}
                 />
             </div>
-        </article>
+    </article>
+
+    {/* إعلان AdSense بعد منطقة التحميل */}
+    {enableAds && (
+        <div class="ad-slot ad-slot-top">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-2779375554237684"
+                data-ad-slot="auto"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script is:inline>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    )}
     </div>
 
     <section class="container features-grid" aria-label={t("features.title") || "Features"}>
@@ -235,6 +252,21 @@ if (!pagePrefix) {
         )
     }
 
+    {/* إعلان AdSense بين المحتوى و FAQ */}
+    {enableAds && (
+        <div class="ad-slot ad-slot-mid">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-2779375554237684"
+                data-ad-slot="auto"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script is:inline>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    )}
+
     {faqItems.length > 0 && (
         <section class="container" style="margin-top: 20px;">
             <div class="toc-container">
@@ -256,6 +288,24 @@ if (!pagePrefix) {
     )}
 
     <FAQ t={t} items={faqItems} />
+
+    {/* إعلان Adsterra Native بعد FAQ */}
+    {enableAds && (
+        <div class="ad-slot ad-slot-bottom">
+            <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
+            <script is:inline>
+                (function() {
+                    if (document.getElementById('container-2d1b844eacef7f58a020be44e8239ff9')) {
+                        var s = document.createElement('script');
+                        s.async = true;
+                        s.setAttribute('data-cfasync', 'false');
+                        s.src = 'https://pl28502654.effectivegatecpm.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js';
+                        document.body.appendChild(s);
+                    }
+                })();
+            </script>
+        </div>
+    )}
 </Layout>
 
 <style>
@@ -393,5 +443,41 @@ if (!pagePrefix) {
         padding: 40px;
         background: var(--card-bg); /* Use global card var if available */
         border-radius: 20px;
+    }
+
+    /* Ad Slots - Seamless integration */
+    .ad-slot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 25px auto;
+        padding: 0 15px;
+        min-height: 100px;
+        overflow: hidden;
+    }
+
+    .ad-slot-top {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .ad-slot-mid {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .ad-slot-bottom {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        min-height: 250px;
+    }
+
+    @media (max-width: 768px) {
+        .ad-slot {
+            padding: 0 10px;
+            margin: 15px auto;
+        }
     }
 </style>
