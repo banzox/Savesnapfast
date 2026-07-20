@@ -13,6 +13,12 @@ import { languages } from "../i18n/ui";
 
 const SITE_ORIGIN = "https://savetik-fast.xyz";
 
+interface Props {
+    noindex?: boolean;
+}
+
+const { noindex = false } = Astro.props;
+
 // --- 1. Extract the base slug (path without language prefix) ---
 // Strips trailing slash for clean comparison (trailingSlash: 'never')
 const rawPath = Astro.url.pathname.replace(/\.html$/, "");
@@ -37,7 +43,7 @@ const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
 // --- 3. Build hreflang entries for ALL languages (NO trailing slashes) ---
 const currentLang = isLangPrefix ? firstPart : "en";
 const isBlogPost = baseSlug && baseSlug.startsWith("blog/") && baseSlug !== "blog";
-const skipHreflang = false;
+const skipHreflang = noindex || isDevicePage;
 const hreflangs = skipHreflang ? [] : Object.keys(languages).map((langCode) => {
     // For blog posts, other languages should point to /[lang]/blog,
     // but the current language must point to the exact canonical URL (baseSlug)

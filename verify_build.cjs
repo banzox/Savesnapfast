@@ -70,6 +70,34 @@ if (fs.existsSync(sitemap0)) {
   }
   console.log('Total sitemap URLs:', urls.length);
 
+  // Verify device-specific pages and translated legal pages are excluded
+  const devPages = ['ios', 'android', 'mac', 'pc'];
+  const legPages = ['about', 'privacy', 'terms', 'contact', 'dmca', 'disclaimer'];
+  
+  let sitemapViolations = 0;
+  urls.forEach(urlStr => {
+    const pathname = urlStr.replace('https://savetik-fast.xyz', '');
+    const segments = pathname.split('/').filter(Boolean);
+    
+    // Check for device pages (e.g. /ios or /ar/ios)
+    if (segments.length > 0 && devPages.includes(segments[segments.length - 1])) {
+      console.log(`  [ERROR] Device page in sitemap: ${urlStr}`);
+      sitemapViolations++;
+    }
+    
+    // Check for translated legal pages (e.g. /ar/privacy)
+    if (segments.length === 2 && locales.includes(segments[0]) && legPages.includes(segments[1])) {
+      console.log(`  [ERROR] Translated legal page in sitemap: ${urlStr}`);
+      sitemapViolations++;
+    }
+  });
+
+  if (sitemapViolations === 0) {
+    console.log('  OK: All device pages and translated legal pages are excluded from sitemap.');
+  } else {
+    process.exitCode = 1;
+  }
+
   // Dynamic checks for thin-content blog listing pages (less than 2 posts)
   const blogDir = './src/content/blog';
   const postCounts = {};
@@ -182,6 +210,51 @@ if (fs.existsSync(robotsPath)) {
   }
 } else {
   console.log('  [ERROR] robots.txt not found in build output');
+  process.exitCode = 1;
+}
+
+// Verification of noindex and no hreflang on device and translated legal pages
+console.log('\nNoindex and hreflang check on excluded pages:');
+const devPages = ['ios', 'android', 'mac', 'pc'];
+const legPages = ['about', 'privacy', 'terms', 'contact', 'dmca', 'disclaimer'];
+let exclusionViolations = 0;
+
+// Test paths: a few sample device pages and translated legal pages
+const pathsToTest = [
+  'ios.html',
+  'ar/ios.html',
+  'es/android.html',
+  'ar/privacy.html',
+  'de/terms.html',
+  'fr/about.html'
+];
+
+pathsToTest.forEach(relPath => {
+  const filePath = distDir + '/' + relPath;
+  if (fs.existsSync(filePath)) {
+    const html = fs.readFileSync(filePath, 'utf8');
+    
+    // Verify noindex is present
+    const hasNoIndex = html.includes('name="robots" content="noindex, follow"') || html.includes('name="googlebot" content="noindex, follow"');
+    if (!hasNoIndex) {
+      console.log(`  [ERROR] Page ${relPath} is missing noindex meta tag`);
+      exclusionViolations++;
+    }
+    
+    // Verify hreflang is NOT present (no alternate hreflang link tags)
+    const hasHreflang = html.includes('hreflang=');
+    if (hasHreflang) {
+      console.log(`  [ERROR] Page ${relPath} contains hreflang tags`);
+      exclusionViolations++;
+    }
+  } else {
+    console.log(`  [WARN] Test page not found: ${relPath}`);
+  }
+});
+
+if (exclusionViolations === 0) {
+  console.log('  OK: Verified noindex and hreflang suppression on sample excluded pages.');
+} else {
   process.exitCode = 1;
 }
 

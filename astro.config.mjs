@@ -49,6 +49,14 @@ export default defineConfig({
             const pathSegments = pathStr.split('/').filter(Boolean);
             const lastSegment = pathSegments[pathSegments.length - 1];
 
+            // Exclude device-specific pages (e.g. /ios, /ar/ios)
+            const devicePages = ['ios', 'android', 'mac', 'pc'];
+            if (pathSegments.length > 0 && devicePages.includes(lastSegment)) return false;
+
+            // Exclude translated legal pages (e.g. /ar/privacy, but keep /privacy)
+            const legalPages = ['about', 'privacy', 'terms', 'contact', 'dmca', 'disclaimer'];
+            if (pathSegments.length === 2 && locales.includes(pathSegments[0]) && legalPages.includes(pathSegments[1])) return false;
+
             // Exclude thin-content blog listing pages (fewer than 2 posts)
             let isBlogList = false;
             let blogListLang = 'en';
