@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: transparent; overflow: hidden; display: flex; justify-content: center; align-items: center; min-height: 250px; }
+        #container-300x250 { width: 300px; height: 250px; max-width: 100%; text-align: center; }
+    </style>
+</head>
+<body>
+    <script async="async" data-cfasync="false" src="https://ferocitycandour.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"></script>
+    <div id="container-300x250"></div>
+
+    <script>
+        // Notify parent of actual height after ad loads
+        function notifyHeight() {
+            const h = document.body.scrollHeight || 250;
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({ type: 'resize-ad', height: h }, '*');
+            }
+        }
+        window.addEventListener('load', function() {
+            setTimeout(notifyHeight, 800);
+            setTimeout(notifyHeight, 1500);
+            setTimeout(notifyHeight, 3000);
+        });
+        // MutationObserver to detect when ad content renders
+        const observer = new MutationObserver(function() {
+            setTimeout(notifyHeight, 300);
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+    </script>
+</body>
+</html>

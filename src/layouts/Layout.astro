@@ -18,7 +18,8 @@ interface Props {
 
 const { title, description, lang = "en", keywords, noindex = false } = Astro.props;
 const currentPageURL = new URL(Astro.url.pathname.replace(/\.html$/, ""), "https://savetik-fast.xyz").href;
-const robotsContent = noindex 
+const is404 = noindex || Astro.url.pathname.includes("404");
+const robotsContent = is404 
     ? "noindex, follow" 
     : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 ---
@@ -190,14 +191,14 @@ const robotsContent = noindex
             />
         </noscript>
 
-        <SEOConfig noindex={noindex} />
+        <SEOConfig noindex={is404} />
 
-        <Schema lang={lang} noindex={noindex} />
+        <Schema lang={lang} noindex={is404} />
         <SEOHead lang={lang} />
 
         <meta name="robots" content={robotsContent} />
-        <meta name="googlebot" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />
-        <meta name="bingbot" content={noindex ? "noindex, follow" : "index, follow"} />
+        <meta name="googlebot" content={is404 ? "noindex, follow" : "index, follow, max-image-preview:large"} />
+        <meta name="bingbot" content={is404 ? "noindex, follow" : "index, follow"} />
         <meta name="author" content="SaveTikFast" />
         <meta name="publisher" content="SaveTikFast" />
         <meta name="rating" content="general" />

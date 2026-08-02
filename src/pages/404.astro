@@ -6,4 +6,4 @@ import { getLangFromUrl } from "../utils/i18n";
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<NotFound lang={lang} />
+<NotFound lang={lang} noindex={true} />

@@ -8,6 +8,24 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /admin
 
+# Block device pages
+Disallow: /ios
+Disallow: /android
+Disallow: /mac
+Disallow: /pc
+Disallow: /*/ios
+Disallow: /*/android
+Disallow: /*/mac
+Disallow: /*/pc
+
+# Block translated legal pages
+Disallow: /*/about
+Disallow: /*/privacy
+Disallow: /*/terms
+Disallow: /*/contact
+Disallow: /*/dmca
+Disallow: /*/disclaimer
+
 # Block duplicate parameters to prevent crawl budget waste on duplicate URLs
 Disallow: /*?*
 

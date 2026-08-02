@@ -37,13 +37,22 @@ const devicePages = ["ios", "android", "mac", "pc"];
 const lastSegment = pathParts[pathParts.length - 1];
 const isDevicePage = devicePages.includes(lastSegment);
 
+// --- Legal page detection (translated legal pages point canonical to English) ---
+const legalPages = ["about", "privacy", "terms", "contact", "dmca", "disclaimer"];
+const isLegalPage = legalPages.includes(baseSlug);
+const isTranslatedLegalPage = isLegalPage && isLangPrefix;
+
 // --- 2. Build canonical URL ---
-const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
+const canonicalPath = isTranslatedLegalPage
+    ? `/${baseSlug}`
+    : pathname;
+const canonicalURL = new URL(canonicalPath, SITE_ORIGIN).href;
 
 // --- 3. Build hreflang entries for ALL languages (NO trailing slashes) ---
 const currentLang = isLangPrefix ? firstPart : "en";
 const isBlogPost = baseSlug && baseSlug.startsWith("blog/") && baseSlug !== "blog";
-const skipHreflang = noindex || isDevicePage;
+const is404Page = pathname.includes("404") || baseSlug === "404";
+const skipHreflang = noindex || isDevicePage || is404Page || isTranslatedLegalPage;
 const hreflangs = skipHreflang ? [] : Object.keys(languages).map((langCode) => {
     // For blog posts, other languages should point to /[lang]/blog,
     // but the current language must point to the exact canonical URL (baseSlug)

@@ -6,9 +6,10 @@ import { ui, defaultLang } from "../i18n/ui";
 
 interface Props {
     lang?: string;
+    noindex?: boolean;
 }
 
-const { lang = defaultLang } = Astro.props;
+const { lang = defaultLang, noindex = true } = Astro.props;
 const t = useTranslations(lang);
 const translations = getTranslations(lang);
 const defaultTranslations = ui[defaultLang];
@@ -23,6 +24,7 @@ const downloaderMessages = {
     title={`${t("404.title")} - SaveTikFast`}
     lang={lang}
     description={t("404.title")}
+    noindex={noindex}
 >
     <article class="hero-section">
         <h1 style="font-size: 5rem; color: var(--secondary);">404</h1>

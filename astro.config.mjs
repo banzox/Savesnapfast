@@ -7,6 +7,10 @@ import path from 'path';
 
 const locales = ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'it', 'tr', 'ru', 'vi', 'th', 'ja', 'ko', 'pl', 'nl', 'ro', 'ms', 'fil', 'uk', 'cs', 'sv', 'hu', 'el', 'da', 'fi', 'no', 'bg', 'zh', 'hi'];
 
+// Priority locales for sitemap (focus crawl budget on high-traffic languages)
+// Other locales remain accessible but won't be submitted via sitemap
+const sitemapPriorityLocales = ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'tr', 'vi', 'hi'];
+
 // Dynamically compute the number of blog posts per language at build time
 const blogDir = './src/content/blog';
 const postCounts = {};
@@ -57,6 +61,12 @@ export default defineConfig({
             const legalPages = ['about', 'privacy', 'terms', 'contact', 'dmca', 'disclaimer'];
             if (pathSegments.length === 2 && locales.includes(pathSegments[0]) && legalPages.includes(pathSegments[1])) return false;
 
+            // Exclude non-priority locale pages from sitemap to focus crawl budget
+            // These pages remain accessible but won't be submitted to Google
+            if (pathSegments.length >= 1 && locales.includes(pathSegments[0]) && !sitemapPriorityLocales.includes(pathSegments[0])) {
+                return false;
+            }
+
             // Exclude thin-content blog listing pages (fewer than 2 posts)
             let isBlogList = false;
             let blogListLang = 'en';
@@ -102,7 +112,9 @@ export default defineConfig({
                 item.changefreq = 'weekly';
             }
             
-            item.lastmod = new Date().toISOString();
+            // Don't set lastmod to current build time (misleading to Google)
+            // Google ignores lastmod when all pages have the same timestamp
+            // Let Google determine freshness from crawl data instead
             return item;
         }
     })],

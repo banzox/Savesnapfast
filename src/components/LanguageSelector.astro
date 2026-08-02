@@ -19,6 +19,14 @@ function getPathForLanguage(targetLang: string) {
         currentPath = currentPath.slice(0, -1);
     }
 
+    const is404 = currentPath === "/404" || currentPath.endsWith("/404");
+    if (is404) {
+        if (targetLang === defaultLang) {
+            return "/404" + search;
+        }
+        return `/${targetLang}${search}`;
+    }
+
     const isMp3 = currentPath.includes("/mp3");
     const isStory = currentPath.includes("/story");
     const isSlideshow = currentPath.includes("/slideshow");

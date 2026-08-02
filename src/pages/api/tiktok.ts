@@ -22,16 +22,38 @@ function jsonResponse(data: any, status = 200, headers = {}) {
     });
 }
 
-// الدالة الرئيسية للمسار تعتمد فقط على RapidAPI
+async function fetchTikWMFallback(videoUrl: string) {
+    try {
+        const tmRes = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(videoUrl)}`, {
+            headers: {
+                "Accept": "application/json",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+        });
+        if (!tmRes.ok) return null;
+        const tmJson = await tmRes.json();
+        if (tmJson.code === 0 && tmJson.data) {
+            const d = tmJson.data;
+            const images = Array.isArray(d.images) ? d.images : [];
+            return {
+                title: d.title || d.desc || "TikTok Video",
+                author: d.author?.unique_id || d.author?.nickname || "User",
+                cover: d.cover || d.origin_cover || "",
+                video: d.play || d.wmplay || d.hdplay || "",
+                music: typeof d.music === 'string' ? d.music : (d.music?.play_url || d.music_info?.play || ""),
+                images: images,
+                type: images.length > 0 ? "image" : "video"
+            };
+        }
+    } catch (e) {
+        // Fallback error ignored
+    }
+    return null;
+}
+
 export const POST: APIRoute = async ({ request }) => {
     if (request.method === "OPTIONS") {
         return new Response(null, { headers: CORS_HEADERS });
-    }
-
-    // التحقق من وجود المفتاح في Environment Variables
-    const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
-    if (!RAPIDAPI_KEY) {
-        return jsonResponse({ error: "Service temporarily unavailable" }, 503);
     }
 
     try {
@@ -62,37 +84,64 @@ export const POST: APIRoute = async ({ request }) => {
             }
         }
 
-        // استخدام RapidAPI
-        const res = await fetch(`https://tiktok-data-srapper.p.rapidapi.com/api/v1/tiktok/video?url=${encodeURIComponent(videoUrl)}`, {
-            method: "GET",
-            headers: {
-                "x-rapidapi-key": RAPIDAPI_KEY,
-                "x-rapidapi-host": "tiktok-data-srapper.p.rapidapi.com",
-                "Content-Type": "application/json"
+        const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
+        let finalData: any = null;
+
+        // Try RapidAPI if key is available
+        if (RAPIDAPI_KEY) {
+            try {
+                const res = await fetch(`https://tiktok-data-srapper.p.rapidapi.com/api/v1/tiktok/video?url=${encodeURIComponent(videoUrl)}`, {
+                    method: "GET",
+                    headers: {
+                        "x-rapidapi-key": RAPIDAPI_KEY,
+                        "x-rapidapi-host": "tiktok-data-srapper.p.rapidapi.com",
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                if (res.ok) {
+                    const rapidMetadata = await res.json();
+                    if (rapidMetadata && (rapidMetadata.author_name || rapidMetadata.title)) {
+                        finalData = {
+                            provider: "rapidapi",
+                            title: rapidMetadata.title || "TikTok Video",
+                            author: rapidMetadata.author_name || "User",
+                            cover: rapidMetadata.thumbnail_url || "",
+                            video: rapidMetadata.video_url || rapidMetadata.play || "", 
+                            music: rapidMetadata.music_url || rapidMetadata.music || "",
+                            images: rapidMetadata.images || [],
+                            type: (rapidMetadata.images && rapidMetadata.images.length > 0) ? "image" : "video"
+                        };
+                    }
+                }
+            } catch (err) {
+                console.warn("RapidAPI request failed, falling back to TikWM", err);
             }
-        });
-
-        if (!res.ok) {
-            throw new Error(`RapidAPI Error: ${res.status}`);
         }
 
-        const rapidMetadata = await res.json();
-
-        if (!rapidMetadata || !rapidMetadata.author_name) {
-            throw new Error(rapidMetadata?.message || "RapidAPI returned empty data for this link");
+        // Fallback to TikWM if video or music is empty or RapidAPI failed/missing
+        if (!finalData || !finalData.video || !finalData.music) {
+            const tikwmData = await fetchTikWMFallback(videoUrl);
+            if (tikwmData) {
+                if (finalData) {
+                    // Enrich existing RapidAPI metadata with playable video/music streams from TikWM
+                    finalData.provider = "rapidapi+tikwm";
+                    if (!finalData.video) finalData.video = tikwmData.video;
+                    if (!finalData.music) finalData.music = tikwmData.music;
+                    if (!finalData.images || finalData.images.length === 0) finalData.images = tikwmData.images;
+                    if (!finalData.cover) finalData.cover = tikwmData.cover;
+                } else {
+                    finalData = {
+                        provider: "tikwm",
+                        ...tikwmData
+                    };
+                }
+            }
         }
 
-        // تحويل البيانات لشكل يقرأه موقعك
-        const finalData = {
-            provider: "rapidapi",
-            title: rapidMetadata.title || "TikTok Video",
-            author: rapidMetadata.author_name || "User",
-            cover: rapidMetadata.thumbnail_url || "",
-            video: "", 
-            music: "",
-            images: [],
-            type: "video"
-        };
+        if (!finalData) {
+            return jsonResponse({ error: "Unable to extract video data from TikTok" }, 502);
+        }
 
         const finalResponse = jsonResponse(finalData, 200, {
             "Cache-Control": "public, s-maxage=14400, max-age=3600" // Cache for 4 hours on Edge

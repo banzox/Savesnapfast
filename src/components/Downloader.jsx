@@ -32,8 +32,15 @@ export default function Downloader(props) {
 
     // --- دالة تنظيف وتسمية الملفات ---
     const sanitizeName = (name) => {
-        if (!name) return 'User';
-        return name.replace(/[^\w\s-]/gi, '').replace(/\s+/g, '_').substring(0, 20);
+        if (!name) return 'TikTok_User';
+        const cleaned = String(name)
+            .replace(/[^\p{L}\p{N}\s_-]/gu, '')
+            .replace(/\s+/g, '_')
+            .substring(0, 30);
+        if (!cleaned || /^[_-\s]+$/.test(cleaned)) {
+            return 'TikTok_User';
+        }
+        return cleaned;
     };
 
     const generateProName = (author, type, id) => {
@@ -178,22 +185,33 @@ export default function Downloader(props) {
         try {
             const { default: JSZip } = await loadJSZip();
             const zip = new JSZip();
-            const author = sanitizeName(result.author || 'User');
+            const author = sanitizeName(result.author || 'TikTok_User');
             const folder = zip.folder(`TikTok_Slideshow_${author}`);
 
-            // Fetch all images
+            let fetchedCount = 0;
+            // Fetch all images via proxy to avoid CORS blocking and empty ZIPs
             const imagePromises = result.images.map(async (imgUrl, index) => {
                 try {
-                    const response = await fetch(imgUrl);
-                    const blob = await response.blob();
                     const fileName = `slide_${index + 1}.jpg`;
-                    folder.file(fileName, blob);
+                    const proxyUrl = `/api/download?url=${encodeURIComponent(imgUrl)}&filename=${encodeURIComponent(fileName)}`;
+                    const response = await fetch(proxyUrl);
+                    if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+                    const blob = await response.blob();
+                    if (blob && blob.size > 0) {
+                        folder.file(fileName, blob);
+                        fetchedCount++;
+                    }
                 } catch (e) {
                     // Silent fail for individual images
                 }
             });
 
             await Promise.all(imagePromises);
+
+            if (fetchedCount === 0) {
+                setError(t('error_slideshow_fetch_failed', "Failed to retrieve slideshow images"));
+                return;
+            }
 
             const content = await zip.generateAsync({ type: "blob" });
             saveAs(content, `TikTok_Slideshow_${author}.zip`);

@@ -4,7 +4,9 @@ import type { APIRoute } from 'astro';
 const ALLOWED_DOMAINS = [
     'tiktokcdn.com', 'tiktokcdn-us.com', 'tiktok.com',
     'akamaized.net', 'snssdk.com', 'muscdn.com',
-    'byteoversea.com', 'ibytedtos.com', 'ttwstatic.com', 'pstatp.com'
+    'byteoversea.com', 'ibytedtos.com', 'ttwstatic.com', 'pstatp.com',
+    'tikwm.com', 'tiklydown.eu.org', 'tiklydown.com', 'ssstik.io',
+    'lovetik.com', 'apizell.web.id', 'wolfy.love', 'clxxped.lol', 'meowing.de'
 ];
 
 const isAllowedUrl = (url: string): boolean => {

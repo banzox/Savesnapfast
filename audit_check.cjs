@@ -103,12 +103,32 @@ const hasAdmin = robots.includes('Disallow: /admin');
 console.log('Has sitemap:', hasSitemap);
 console.log('Has disallow /api/:', hasApi);
 console.log('Has disallow /admin:', hasAdmin);
-if (!hasSitemap || !hasApi || !hasAdmin) {
+
+const requiredRobotsDisallows = [
+  '/api/',
+  '/admin',
+  '/ios', '/android', '/mac', '/pc',
+  '/*/ios', '/*/android', '/*/mac', '/*/pc',
+  '/*/about', '/*/privacy', '/*/terms', '/*/contact', '/*/dmca', '/*/disclaimer'
+];
+
+let missingDisallowRules = [];
+requiredRobotsDisallows.forEach(rule => {
+  if (!robots.includes(`Disallow: ${rule}`)) {
+    missingDisallowRules.push(rule);
+  }
+});
+
+if (!hasSitemap || missingDisallowRules.length > 0) {
   if (!hasSitemap) console.log('[ERROR] robots.txt is missing Sitemap reference');
-  if (!hasApi) console.log('[ERROR] robots.txt is missing Disallow: /api/');
-  if (!hasAdmin) console.log('[ERROR] robots.txt is missing Disallow: /admin');
+  missingDisallowRules.forEach(rule => {
+    console.log(`[ERROR] robots.txt is missing Disallow: ${rule}`);
+  });
   process.exitCode = 1;
+} else {
+  console.log('Has all required device and translated legal page Disallow rules: YES');
 }
+
 // Check sitemap URL matches actual sitemap
 const sitemapUrl = (robots.match(/Sitemap: (.+)/) || [])[1];
 console.log('Sitemap URL in robots.txt:', sitemapUrl);
@@ -157,6 +177,43 @@ console.log('Organization schema:', hasOrg);
 // Check if breadcrumb item URLs have trailing slashes (conflict!)
 if (schema.includes('currentPath + "/"') || schema.includes('currentPath}/')) {
   console.log('[WARNING] Breadcrumb schema items use trailing slashes -> mismatch with trailingSlash:never');
+}
+
+// ===== 12. TRANSLATED LEGAL PAGE CANONICAL CHECKS =====
+console.log('\n--- 12. TRANSLATED LEGAL PAGE CANONICAL CHECKS ---');
+const hasLegalCanonicalLogic = seoConfig.includes('isTranslatedLegalPage') && seoConfig.includes('legalPages');
+if (!hasLegalCanonicalLogic) {
+  console.log('[ERROR] SEOConfig.astro is missing translated legal page canonical calculation!');
+  process.exitCode = 1;
+} else {
+  console.log('SEOConfig.astro contains translated legal page canonical calculation: YES');
+}
+
+if (fs.existsSync('dist')) {
+  const sampleLegalPages = [
+    { path: 'dist/ar/about.html', expected: 'https://savetik-fast.xyz/about' },
+    { path: 'dist/fr/privacy.html', expected: 'https://savetik-fast.xyz/privacy' },
+    { path: 'dist/es/terms.html', expected: 'https://savetik-fast.xyz/terms' },
+    { path: 'dist/de/contact.html', expected: 'https://savetik-fast.xyz/contact' },
+    { path: 'dist/it/dmca.html', expected: 'https://savetik-fast.xyz/dmca' },
+    { path: 'dist/tr/disclaimer.html', expected: 'https://savetik-fast.xyz/disclaimer' }
+  ];
+  let canonicalErrors = 0;
+  sampleLegalPages.forEach(({ path: file, expected }) => {
+    if (fs.existsSync(file)) {
+      const html = fs.readFileSync(file, 'utf8');
+      const match = html.match(/rel="canonical" href="([^"]+)"/);
+      if (!match || match[1] !== expected) {
+        console.log(`[ERROR] Canonical mismatch in ${file}: found "${match ? match[1] : 'NONE'}", expected "${expected}"`);
+        canonicalErrors++;
+      }
+    }
+  });
+  if (canonicalErrors > 0) {
+    process.exitCode = 1;
+  } else {
+    console.log('Dist build translated legal page canonical URLs verified: OK');
+  }
 }
 
 console.log('\n=== AUDIT COMPLETE ===');
