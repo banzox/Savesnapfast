@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /_astro/
 
 # Block API endpoints
 Disallow: /api/
@@ -8,7 +9,7 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /admin
 
-# Block device pages
+# Block device routes
 Disallow: /ios
 Disallow: /android
 Disallow: /mac
@@ -18,16 +19,16 @@ Disallow: /*/android
 Disallow: /*/mac
 Disallow: /*/pc
 
-# Block translated legal pages
-Disallow: /*/about
-Disallow: /*/privacy
-Disallow: /*/terms
-Disallow: /*/contact
-Disallow: /*/dmca
-Disallow: /*/disclaimer
+# Translated legal pages are allowed (they have correct canonical tags pointing to English versions)
+# Blocking them while hreflang references them causes indexing conflicts in Google Search Console
 
-# Block duplicate parameters to prevent crawl budget waste on duplicate URLs
-Disallow: /*?*
+# Block tracking/marketing query parameters to save crawl budget
+Disallow: /*?utm_
+Disallow: /*?ref=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
 
 # Sitemaps
 Sitemap: https://savetik-fast.xyz/sitemap-index.xml
+
+

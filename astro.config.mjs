@@ -7,9 +7,8 @@ import path from 'path';
 
 const locales = ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'it', 'tr', 'ru', 'vi', 'th', 'ja', 'ko', 'pl', 'nl', 'ro', 'ms', 'fil', 'uk', 'cs', 'sv', 'hu', 'el', 'da', 'fi', 'no', 'bg', 'zh', 'hi'];
 
-// Priority locales for sitemap (focus crawl budget on high-traffic languages)
-// Other locales remain accessible but won't be submitted via sitemap
-const sitemapPriorityLocales = ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'tr', 'vi', 'hi'];
+
+
 
 // Dynamically compute the number of blog posts per language at build time
 const blogDir = './src/content/blog';
@@ -40,8 +39,6 @@ export default defineConfig({
     build: {
         format: 'file'
     },
-    output: 'server',
-    adapter: cloudflare(),
     integrations: [react(), sitemap({
         filter: (page) => {
             const url = new URL(page);
@@ -57,15 +54,9 @@ export default defineConfig({
             const devicePages = ['ios', 'android', 'mac', 'pc'];
             if (pathSegments.length > 0 && devicePages.includes(lastSegment)) return false;
 
-            // Exclude translated legal pages (e.g. /ar/privacy, but keep /privacy)
-            const legalPages = ['about', 'privacy', 'terms', 'contact', 'dmca', 'disclaimer'];
-            if (pathSegments.length === 2 && locales.includes(pathSegments[0]) && legalPages.includes(pathSegments[1])) return false;
+            // Translated legal pages are now allowed (they have canonical pointing to English)
+            // This avoids hreflang vs sitemap conflicts that block indexing
 
-            // Exclude non-priority locale pages from sitemap to focus crawl budget
-            // These pages remain accessible but won't be submitted to Google
-            if (pathSegments.length >= 1 && locales.includes(pathSegments[0]) && !sitemapPriorityLocales.includes(pathSegments[0])) {
-                return false;
-            }
 
             // Exclude thin-content blog listing pages (fewer than 2 posts)
             let isBlogList = false;
