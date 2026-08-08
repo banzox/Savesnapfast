@@ -6,7 +6,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "doctor": "node tools/site-doctor.cjs --verbose",
+    "doctor:fix": "node tools/site-doctor.cjs --fix --verbose",
+    "doctor:report": "node tools/site-doctor.cjs --report"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

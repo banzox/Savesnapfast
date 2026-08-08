@@ -5,8 +5,9 @@ const ALLOWED_DOMAINS = [
     'tiktokcdn.com', 'tiktokcdn-us.com', 'tiktok.com',
     'akamaized.net', 'snssdk.com', 'muscdn.com',
     'byteoversea.com', 'ibytedtos.com', 'ttwstatic.com', 'pstatp.com',
-    'tikwm.com', 'tiklydown.eu.org', 'tiklydown.com', 'ssstik.io',
-    'lovetik.com', 'apizell.web.id', 'wolfy.love', 'clxxped.lol', 'meowing.de'
+    'tikwm.com', 'tiklydown.eu.org', 'tiklydown.com', 'ssstik.io', 'ssstik.cx', 'v1.ssstik.cx',
+    'lovetik.com', 'apizell.web.id', 'wolfy.love', 'clxxped.lol', 'meowing.de',
+    'cobalt.tools', 'tikmate.app', 'dlp.tikmate.app', 'savetik.app'
 ];
 
 const isAllowedUrl = (url: string): boolean => {
@@ -17,6 +18,22 @@ const isAllowedUrl = (url: string): boolean => {
         return false;
     }
 };
+
+const CORS_HEADERS = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type'
+};
+
+function jsonError(message: string, status: number) {
+    return new Response(JSON.stringify({ error: message }), {
+        status,
+        headers: {
+            'Content-Type': 'application/json',
+            ...CORS_HEADERS
+        }
+    });
+}
 
 const USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -32,17 +49,25 @@ const USER_AGENTS = [
     'Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'
 ];
 
+export const OPTIONS: APIRoute = async () => {
+    return new Response(null, { headers: CORS_HEADERS });
+};
+
 export const GET: APIRoute = async ({ request }) => {
+    if (request.method === 'OPTIONS') {
+        return new Response(null, { headers: CORS_HEADERS });
+    }
+
     const url = new URL(request.url);
     const fileUrl = url.searchParams.get('url');
     const fileName = url.searchParams.get('filename') || 'download.mp4';
 
     if (!fileUrl) {
-        return new Response('Missing URL parameter', { status: 400 });
+        return jsonError('Missing URL parameter', 400);
     }
 
     if (!isAllowedUrl(fileUrl)) {
-        return new Response('Forbidden: URL not from an allowed domain', { status: 403 });
+        return jsonError('Forbidden: URL not from an allowed domain', 403);
     }
 
     try {
@@ -56,10 +81,23 @@ export const GET: APIRoute = async ({ request }) => {
         });
 
         if (!response.ok) {
-            return new Response(`Failed to fetch source file: ${response.status}`, { status: 502 });
+            return jsonError(`Failed to fetch source file: ${response.status}`, 502);
         }
 
         const newHeaders = new Headers(response.headers);
+
+        // Strip unsafe upstream headers that cause edge worker stream truncation or connection reset errors
+        const unsafeHeaders = [
+            'content-length',
+            'transfer-encoding',
+            'connection',
+            'content-encoding',
+            'content-security-policy',
+            'set-cookie',
+            'x-frame-options',
+            'server'
+        ];
+        unsafeHeaders.forEach(header => newHeaders.delete(header));
 
         // Safety: UTF-8 encoded filename for Content-Disposition
         const encodedFileName = encodeURIComponent(fileName).replace(/['()]/g, escape).replace(/\*/g, '%2A');
@@ -70,7 +108,9 @@ export const GET: APIRoute = async ({ request }) => {
         newHeaders.set('Pragma', 'no-cache');
         newHeaders.set('Expires', '0');
 
-        newHeaders.delete('content-encoding');
+        // CORS headers
+        newHeaders.set('Access-Control-Allow-Origin', '*');
+        newHeaders.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
 
         return new Response(response.body, {
             status: 200,
@@ -78,6 +118,7 @@ export const GET: APIRoute = async ({ request }) => {
         });
 
     } catch (error) {
-        return new Response('Internal Server Error', { status: 500 });
+        return jsonError('Internal Server Error', 500);
     }
 };
+

@@ -5,7 +5,7 @@ import Schema from "../components/Schema.astro";
 import Footer from "../components/Footer.astro";
 import SEOHead from "../components/SEOHead.astro";
 import SEOConfig from "../components/SEOConfig.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import { ADS_CONFIG } from "../config";
 
 interface Props {
@@ -55,10 +55,14 @@ const robotsContent = is404
                     window.addEventListener(event, loadAds, { once: true, passive: true });
                 });
 
-                // Fallback: load ads after 6 seconds in case of no interaction
-                window.addEventListener('load', () => {
-                    setTimeout(loadAds, 6000);
-                });
+                // Fast Fallback: load ads 1.5s after DOM is ready if user hasn't interacted yet
+                if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                    setTimeout(loadAds, 1500);
+                } else {
+                    document.addEventListener('DOMContentLoaded', () => {
+                        setTimeout(loadAds, 1500);
+                    });
+                }
             })();
         </script>
 
@@ -132,7 +136,7 @@ const robotsContent = is404
         <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
-        <ViewTransitions />
+        <ClientRouter />
 
         <!-- Preconnect hints for critical resources only -->
         <link

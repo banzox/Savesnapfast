@@ -257,6 +257,19 @@ if (!pagePrefix) {
 
 
 
+    {/* Ad Slot Mid - before FAQ */}
+    {enableAds && (
+        <div class="ad-slot ad-slot-mid">
+            <iframe
+                src="/ad-native.html"
+                style="width:100%;max-width:800px;height:250px;border:none;overflow:hidden;"
+                scrolling="no"
+                loading="lazy"
+                title="Advertisement"
+            ></iframe>
+        </div>
+    )}
+
     {faqItems.length > 0 && (
         <section class="container" style="margin-top: 20px;">
             <div class="toc-container">
@@ -279,6 +292,18 @@ if (!pagePrefix) {
 
     <FAQ t={t} items={faqItems} />
 
+    {/* Ad Slot Bottom - after FAQ */}
+    {enableAds && (
+        <div class="ad-slot ad-slot-bottom">
+            <iframe
+                src="/ad-300x250.html"
+                style="width:100%;max-width:330px;height:270px;border:none;overflow:hidden;"
+                scrolling="no"
+                loading="lazy"
+                title="Advertisement"
+            ></iframe>
+        </div>
+    )}
 
 </Layout>
 

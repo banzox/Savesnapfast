@@ -51,7 +51,11 @@ async function fetchTikWMFallback(videoUrl: string) {
     return null;
 }
 
-export const POST: APIRoute = async ({ request }) => {
+export const OPTIONS: APIRoute = async () => {
+    return new Response(null, { headers: CORS_HEADERS });
+};
+
+export const POST: APIRoute = async ({ request, locals }: any) => {
     if (request.method === "OPTIONS") {
         return new Response(null, { headers: CORS_HEADERS });
     }
@@ -60,7 +64,7 @@ export const POST: APIRoute = async ({ request }) => {
         const body = await request.json();
         let videoUrl = body.url;
 
-        if (!videoUrl || !videoUrl.includes("tiktok.com")) {
+        if (!videoUrl || typeof videoUrl !== "string" || !videoUrl.includes("tiktok.com")) {
             return jsonResponse({ error: "Invalid TikTok URL" }, 400);
         }
 
@@ -75,16 +79,22 @@ export const POST: APIRoute = async ({ request }) => {
         const cacheRequest = new Request(cacheKeyUrl.toString(), { method: "GET" });
 
         if (edgeCache) {
-            const cachedResponse = await edgeCache.match(cacheRequest);
-            if (cachedResponse) {
-                // Add a header to prove it came from Edge Cache
-                const cachedResObj = new Response(cachedResponse.body, cachedResponse);
-                cachedResObj.headers.set("X-Cache", "HIT-EDGE");
-                return cachedResObj;
+            try {
+                const cachedResponse = await edgeCache.match(cacheRequest);
+                if (cachedResponse) {
+                    // Add a header to prove it came from Edge Cache
+                    const cachedResObj = new Response(cachedResponse.body, cachedResponse);
+                    cachedResObj.headers.set("X-Cache", "HIT-EDGE");
+                    return cachedResObj;
+                }
+            } catch (e) {
+                console.warn("Edge cache match failed:", e);
             }
         }
 
-        const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
+        // Environment Variable Resolution for Cloudflare Workers / Astro
+        const cfEnv = (locals as any)?.runtime?.env;
+        const RAPIDAPI_KEY = cfEnv?.RAPIDAPI_KEY || (typeof import.meta !== 'undefined' && (import.meta as any).env?.RAPIDAPI_KEY) || (typeof process !== 'undefined' ? process?.env?.RAPIDAPI_KEY : undefined);
         let finalData: any = null;
 
         // Try RapidAPI if key is available
@@ -147,19 +157,28 @@ export const POST: APIRoute = async ({ request }) => {
             "Cache-Control": "public, s-maxage=14400, max-age=3600" // Cache for 4 hours on Edge
         });
 
-        // Save to Edge Cache
+        // Save to Edge Cache safely (non-blocking / error-safe)
         if (edgeCache) {
-            await edgeCache.put(cacheRequest, finalResponse.clone());
+            try {
+                const cachePromise = edgeCache.put(cacheRequest, finalResponse.clone());
+                if ((locals as any)?.runtime?.waitUntil) {
+                    (locals as any).runtime.waitUntil(cachePromise);
+                } else if (cachePromise && typeof cachePromise.catch === 'function') {
+                    cachePromise.catch((err: any) => console.warn("Edge cache put error:", err));
+                }
+            } catch (e) {
+                console.warn("Edge cache put failed:", e);
+            }
         }
 
         return finalResponse;
 
     } catch (error: any) {
-        return jsonResponse({ error: "Server Error", details: [error.message] }, 500);
+        return jsonResponse({ error: "Server Error", details: [error?.message || "Unknown error"] }, 500);
     }
 };
 
-export const GET: APIRoute = async ({ request, locals }) => {
+export const GET: APIRoute = async ({ request, locals }: any) => {
     const url = new URL(request.url);
     const videoUrl = url.searchParams.get("url");
 
@@ -173,3 +192,4 @@ export const GET: APIRoute = async ({ request, locals }) => {
 
     return POST({ request: fakeRequest, locals } as any);
 };
+

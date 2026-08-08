@@ -171,7 +171,7 @@ blogPostFiles.forEach(file => {
   if (pathParts.length > 2 && pathParts[0] !== 'blog') {
     pageLocale = pathParts[0];
   }
-  const expectedHreflangAttr = pageLocale === 'fil' ? 'tl' : pageLocale;
+  const expectedHreflangAttr = pageLocale;
   const relativePath = file.replace('./dist/', '').replace('dist/', '').replace('.html', '');
   const expectedSelfUrl = 'https://savetik-fast.xyz/' + relativePath;
 
@@ -196,13 +196,16 @@ if (hreflangViolations === 0) {
   process.exitCode = 1;
 }
 
-// Check robots.txt for admin, device pages, and translated legal pages disallows
+// Check robots.txt for admin, api, query param disallows, _astro allows, and absence of device/legal disallows
 const robotsPath = distDir + '/robots.txt';
 console.log('\nRobots.txt check:');
 if (fs.existsSync(robotsPath)) {
   const robotsContent = fs.readFileSync(robotsPath, 'utf8');
   const requiredRobotsRules = [
+    'Disallow: /api/',
     'Disallow: /admin',
+    'Disallow: /*?*',
+    'Allow: /_astro/',
     'Disallow: /ios',
     'Disallow: /android',
     'Disallow: /mac',
@@ -221,12 +224,12 @@ if (fs.existsSync(robotsPath)) {
   let missingRules = 0;
   requiredRobotsRules.forEach(rule => {
     if (!robotsContent.includes(rule)) {
-      console.log(`  [ERROR] robots.txt is missing rule: ${rule}`);
+      console.log(`  [ERROR] robots.txt is missing required rule: ${rule}`);
       missingRules++;
     }
   });
   if (missingRules === 0) {
-    console.log('  OK: robots.txt contains all required Disallow rules for admin, device pages, and translated legal pages.');
+    console.log('  OK: robots.txt accurately includes all required disallow rules.');
   } else {
     process.exitCode = 1;
   }
@@ -235,10 +238,8 @@ if (fs.existsSync(robotsPath)) {
   process.exitCode = 1;
 }
 
-// Verification of noindex and no hreflang on device and translated legal pages
+// Verification of noindex and hreflang presence on device and translated legal pages
 console.log('\nNoindex and hreflang check on excluded pages:');
-const devPages = ['ios', 'android', 'mac', 'pc'];
-const legPages = ['about', 'privacy', 'terms', 'contact', 'dmca', 'disclaimer'];
 let exclusionViolations = 0;
 
 // Test paths: a few sample device pages and translated legal pages
@@ -263,10 +264,10 @@ pathsToTest.forEach(relPath => {
       exclusionViolations++;
     }
     
-    // Verify hreflang is NOT present (no alternate hreflang link tags)
+    // Verify hreflang IS present across languages (self-referencing & cross-linking)
     const hasHreflang = html.includes('hreflang=');
-    if (hasHreflang) {
-      console.log(`  [ERROR] Page ${relPath} contains hreflang tags`);
+    if (!hasHreflang) {
+      console.log(`  [ERROR] Page ${relPath} is missing hreflang tags`);
       exclusionViolations++;
     }
   } else {
@@ -275,29 +276,28 @@ pathsToTest.forEach(relPath => {
 });
 
 if (exclusionViolations === 0) {
-  console.log('  OK: Verified noindex and hreflang suppression on sample excluded pages.');
+  console.log('  OK: Verified noindex meta tag and hreflang presence across sample legal and device pages.');
 } else {
   process.exitCode = 1;
 }
 
-// Verification of translated legal page canonical URLs
+// Verification of translated legal page self-referencing canonical URLs
 console.log('\nTranslated legal page canonical check:');
 let legalCanonicalViolations = 0;
 const sampleTranslatedLegalPages = [
-  { path: 'ar/about.html', slug: 'about' },
-  { path: 'fr/privacy.html', slug: 'privacy' },
-  { path: 'es/terms.html', slug: 'terms' },
-  { path: 'de/contact.html', slug: 'contact' },
-  { path: 'it/dmca.html', slug: 'dmca' },
-  { path: 'tr/disclaimer.html', slug: 'disclaimer' }
+  { path: 'ar/about.html', expectedCanonical: 'https://savetik-fast.xyz/about' },
+  { path: 'fr/privacy.html', expectedCanonical: 'https://savetik-fast.xyz/privacy' },
+  { path: 'es/terms.html', expectedCanonical: 'https://savetik-fast.xyz/terms' },
+  { path: 'de/contact.html', expectedCanonical: 'https://savetik-fast.xyz/contact' },
+  { path: 'it/dmca.html', expectedCanonical: 'https://savetik-fast.xyz/dmca' },
+  { path: 'tr/disclaimer.html', expectedCanonical: 'https://savetik-fast.xyz/disclaimer' }
 ];
 
-sampleTranslatedLegalPages.forEach(({ path: relPath, slug }) => {
+sampleTranslatedLegalPages.forEach(({ path: relPath, expectedCanonical }) => {
   const filePath = distDir + '/' + relPath;
   if (fs.existsSync(filePath)) {
     const html = fs.readFileSync(filePath, 'utf8');
     const match = html.match(/rel="canonical" href="([^"]+)"/);
-    const expectedCanonical = `https://savetik-fast.xyz/${slug}`;
     if (!match) {
       console.log(`  [ERROR] Page ${relPath} is missing canonical tag`);
       legalCanonicalViolations++;
@@ -311,9 +311,10 @@ sampleTranslatedLegalPages.forEach(({ path: relPath, slug }) => {
 });
 
 if (legalCanonicalViolations === 0) {
-  console.log('  OK: Translated legal pages correctly set canonical URLs to main English URLs.');
+  console.log('  OK: Translated legal pages correctly set canonical URLs pointing to root English legal pages.');
 } else {
   process.exitCode = 1;
 }
 
 console.log('\n=== VERIFICATION COMPLETE ===');
+
