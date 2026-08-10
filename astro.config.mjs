@@ -44,37 +44,27 @@ export default defineConfig({
             const url = new URL(page);
             const pathStr = url.pathname;
 
-            // Exclude /en/ prefixed paths (they redirect to root, causing GSC "redirect" errors)
+            // Exclude /en/ prefixed paths (they redirect 301 to root, causing GSC redirect errors)
             if (pathStr.startsWith('/en/') || pathStr === '/en') return false;
 
             const pathSegments = pathStr.split('/').filter(Boolean);
             const lastSegment = pathSegments[pathSegments.length - 1];
-
-            // Exclude device-specific pages (e.g. /ios, /ar/ios)
             const devicePages = ['ios', 'android', 'mac', 'pc'];
-            if (pathSegments.length > 0 && devicePages.includes(lastSegment)) return false;
+            const legalPages = ['about', 'contact', 'privacy', 'terms', 'dmca', 'disclaimer'];
 
-            // Translated legal pages are now allowed (they have canonical pointing to English)
-            // This avoids hreflang vs sitemap conflicts that block indexing
+            // Device landing pages repeat the main downloader and are deliberately noindex.
+            if (devicePages.includes(lastSegment)) return false;
 
-
-            // Exclude thin-content blog listing pages (fewer than 2 posts)
-            let isBlogList = false;
-            let blogListLang = 'en';
-
-            if (pathSegments.length === 1 && pathSegments[0] === 'blog') {
-                isBlogList = true;
-                blogListLang = 'en';
-            } else if (pathSegments.length === 2 && locales.includes(pathSegments[0]) && pathSegments[1] === 'blog') {
-                isBlogList = true;
-                blogListLang = pathSegments[0];
+            // Keep one authoritative version of legal content. Localized legal pages
+            // remain available to users but add little unique search value.
+            if (pathSegments.length === 2 && locales.includes(pathSegments[0]) && legalPages.includes(lastSegment)) {
+                return false;
             }
 
-            if (isBlogList) {
-                const count = postCounts[blogListLang] || 0;
-                if (count < 2) {
-                    return false;
-                }
+            // Do not advertise thin localized blog indexes before they have content.
+            if (lastSegment === 'blog') {
+                const blogListLang = pathSegments.length === 2 ? pathSegments[0] : 'en';
+                if ((postCounts[blogListLang] || 0) < 2) return false;
             }
 
             return true;

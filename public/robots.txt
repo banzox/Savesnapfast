@@ -2,33 +2,18 @@ User-agent: *
 Allow: /
 Allow: /_astro/
 
-# Block API endpoints
+# These endpoints are not content pages and should not consume crawl budget.
 Disallow: /api/
-
-# Block Keystatic admin control panels
 Disallow: /admin/
 Disallow: /admin
 
-# Block device routes
-Disallow: /ios
-Disallow: /android
-Disallow: /mac
-Disallow: /pc
-Disallow: /*/ios
-Disallow: /*/android
-Disallow: /*/mac
-Disallow: /*/pc
+# Device landing pages stay crawlable so Google can receive their noindex tag;
+# they are excluded from the sitemap and internal discovery instead.
 
-# Translated legal pages are allowed (they have correct canonical tags pointing to English versions)
-# Blocking them while hreflang references them causes indexing conflicts in Google Search Console
-
-# Block tracking/marketing query parameters to save crawl budget
+# Avoid crawling tracking variants of otherwise canonical URLs.
 Disallow: /*?utm_
 Disallow: /*?ref=
 Disallow: /*?fbclid=
 Disallow: /*?gclid=
 
-# Sitemaps
 Sitemap: https://savetik-fast.xyz/sitemap-index.xml
-
-
