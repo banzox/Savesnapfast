@@ -32,6 +32,14 @@ const robotsContent = is404
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- AdSense account connection: this does not create an ad placement. -->
+        <script
+            async
+            is:inline
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2779375554237684"
+            crossorigin="anonymous"
+        ></script>
+
         {ADS_CONFIG.enableAdsterra && (
         <script is:inline>
             (function() {
