@@ -7,10 +7,6 @@ const { saveAs } = fileSaver;
 const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
-const SMART_LINK = ADS_CONFIG.enableAdsterra ? "https://ferocitycandour.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308" : null;
-const COUNTDOWN_DURATION = ADS_CONFIG.enableAdsterra ? 4 : 0; // Skip countdown completely if ads are disabled
-
-
 export default function Downloader(props) {
     const { messages = {}, mode = 'video' } = props;
 
@@ -89,12 +85,10 @@ export default function Downloader(props) {
         setDownloadComplete(true); // Show Thank You toast
     };
 
-    // Public: opens Smartlink immediately (user gesture) then shows countdown interstitial
+    // Start a requested file download immediately, with no ad interstitial.
     const initiateDownload = (fileUrl, fileName) => {
         if (!fileUrl) return;
-        if (SMART_LINK) window.open(SMART_LINK, '_blank');
-        setDownloadPending({ fileUrl, fileName });
-        setCountdown(COUNTDOWN_DURATION);
+        executeDownload(fileUrl, fileName);
     };
 
     // Native Ad logic is now handled in an iframe directly in the render to prevent async document.write loading issues
@@ -177,9 +171,6 @@ export default function Downloader(props) {
 
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
-
-        // Open Smartlink immediately on user gesture (before any async operations)
-        if (SMART_LINK) window.open(SMART_LINK, '_blank');
 
         setZipping(true);
         try {
@@ -703,7 +694,7 @@ export default function Downloader(props) {
                                         cx="45" cy="45" r="36" fill="none"
                                         stroke="url(#cdGrad)" strokeWidth="6" strokeLinecap="round"
                                         strokeDasharray="226.2"
-                                        strokeDashoffset={226.2 * (1 - countdown / COUNTDOWN_DURATION)}
+                                        strokeDashoffset="226.2"
                                         style={{ transition: 'stroke-dashoffset 0.9s linear' }}
                                     />
                                 </svg>

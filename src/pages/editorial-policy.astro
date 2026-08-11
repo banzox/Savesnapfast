@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+export const prerender = true;
+---
+
+<Layout
+    title="Editorial Policy | SaveTikFast"
+    description="How SaveTikFast plans, publishes, reviews, and corrects its educational articles."
+>
+    <main class="policy">
+        <article>
+            <p class="eyebrow">SaveTikFast standards</p>
+            <h1>Editorial Policy</h1>
+            <p class="updated">Last updated: August 11, 2026</p>
+
+            <h2>Purpose</h2>
+            <p>Our articles help readers make informed decisions about creator workflows, public-link organisation, digital rights, and privacy. They are separate from the tool itself and are written to be useful even when a reader does not use our service.</p>
+
+            <h2>How we select topics</h2>
+            <p>We publish when we can answer a real practical question with a clear explanation. We prioritise topics where context matters: getting permission, crediting a creator, maintaining a content library, and protecting personal information. We do not publish pages solely to target search phrases.</p>
+
+            <h2>Accuracy and updates</h2>
+            <p>Platform features, legal requirements, and creator tools can change. We label general guidance as general guidance, avoid guarantees, and update or remove an article when it becomes inaccurate. Readers can report an error at <a href="mailto:support@savetik-fast.xyz">support@savetik-fast.xyz</a>.</p>
+
+            <h2>Originality</h2>
+            <p>We create articles for this site and do not copy third-party guides. When a topic requires a source, permission, or local legal advice, we say so rather than presenting a shortcut as universal advice.</p>
+
+            <h2>Commercial independence</h2>
+            <p>Editorial pages are not written to encourage clicks on advertisements. Advertising, if introduced in the future, will be visually distinct from editorial content and will not change an article’s conclusion.</p>
+
+            <h2>Responsible use</h2>
+            <p>We support lawful personal use and respect for creators. Our content does not encourage copyright infringement, unauthorised redistribution, or attempts to access private material.</p>
+        </article>
+    </main>
+</Layout>
+
+<style>
+    .policy { max-width: 800px; margin: 0 auto; padding: 4rem 20px; }
+    article { background: var(--glass); border: 1px solid var(--border); border-radius: 20px; padding: clamp(1.5rem, 4vw, 3rem); line-height: 1.8; }
+    .eyebrow { color: var(--secondary); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); margin: .4rem 0; }
+    .updated { color: var(--text-dim); margin-bottom: 2rem; }
+    h2 { color: var(--secondary); margin: 2rem 0 .7rem; font-size: 1.45rem; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--secondary); }
+</style>
