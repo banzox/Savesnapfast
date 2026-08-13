@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
+import { sitemapResponse } from '../utils/sitemap';
 
-export const GET: APIRoute = async ({ redirect }) => {
-    return redirect('/sitemap-index.xml', 301);
-}
+export const prerender = true;
+
+export const GET: APIRoute = async () => sitemapResponse();
