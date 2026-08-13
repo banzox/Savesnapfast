@@ -5,5 +5,5 @@
 # to avoid double-redirect chains
 # =====================================================
 
-# --- Sitemap ---
-/sitemap.xml                    /sitemap-index.xml              301
+# Legacy sitemap child. Both XML endpoints now return the complete canonical
+# URL set directly, so crawlers never depend on a redirect chain.

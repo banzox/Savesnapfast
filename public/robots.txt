@@ -7,13 +7,7 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /admin
 
-# Device landing pages stay crawlable so Google can receive their noindex tag;
-# they are excluded from the sitemap and internal discovery instead.
+# Query-string variants stay crawlable so Google can see the page's canonical
+# URL and consolidate them instead of reporting them as blocked URLs.
 
-# Avoid crawling tracking variants of otherwise canonical URLs.
-Disallow: /*?utm_
-Disallow: /*?ref=
-Disallow: /*?fbclid=
-Disallow: /*?gclid=
-
-Sitemap: https://savetik-fast.xyz/sitemap-index.xml
+Sitemap: https://savetik-fast.xyz/sitemap.xml
