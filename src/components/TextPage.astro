@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { useTranslations } from "../utils/i18n";
-import { defaultLang } from "../i18n/ui";
 
 interface Props {
     titleKey: string;
@@ -11,7 +10,6 @@ interface Props {
 }
 
 const { titleKey, contentKey, lang, noindex = false } = Astro.props;
-const isLocalizedLegalPage = lang !== defaultLang;
 const t = useTranslations(lang);
 
 // Auto-generate meta description from page content
@@ -24,7 +22,7 @@ const autoDescription = plainText.length > 160
 const metaDescription = autoDescription || t(titleKey);
 ---
 
-<Layout title={t(titleKey)} description={metaDescription} lang={lang} noindex={noindex || isLocalizedLegalPage}>
+<Layout title={t(titleKey)} description={metaDescription} lang={lang} noindex={noindex}>
     <section class="page-header">
         <div class="container">
             <h1>{t(titleKey)}</h1>

@@ -32,8 +32,6 @@ const baseSlug = isLangPrefix
     ? pathParts.slice(1).join("/")
     : pathParts.join("/");
 
-const isDevicePage = ["ios", "android", "mac", "pc"].includes(baseSlug);
-
 // --- 2. Build canonical URL ---
 // Every indexable page gets a self-referencing canonical URL
 const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
@@ -43,7 +41,10 @@ const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
 const currentLang = isLangPrefix ? firstPart : "en";
 const isBlogPost = baseSlug && baseSlug.startsWith("blog/") && baseSlug !== "blog";
 const is404Page = pathname.includes("404") || baseSlug === "404";
-const skipHreflang = noindex || is404Page || isDevicePage;
+const hasLocalizedVersions = baseSlug !== "editorial-policy";
+// Blog articles are not automatically equivalent just because they share a
+// language section. Avoid pointing article hreflang entries at blog indexes.
+const skipHreflang = noindex || is404Page || isBlogPost || !hasLocalizedVersions;
 const hreflangs = skipHreflang ? [] : Object.keys(languages).map((langCode) => {
     // For blog posts, other languages should point to /[lang]/blog,
     // but the current language must point to the exact canonical URL (baseSlug)
@@ -96,4 +97,3 @@ const xDefaultHref = new URL(
         }
     </>
 )}
-

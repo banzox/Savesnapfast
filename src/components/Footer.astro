@@ -4,6 +4,7 @@ import LanguageSelector from "./LanguageSelector.astro";
 
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
+const localizedHref = (slug: string) => lang === "en" ? `/${slug}` : `/${lang}/${slug}`;
 ---
 
 <footer id="main-footer" class="footer-glass">
@@ -14,17 +15,16 @@ const t = useTranslations(lang);
         </div>
 
         <div class="footer-links">
-            {/* Legal pages always link to English canonical version to prevent crawl budget waste */}
-            <a href="/about">{t("nav.about")}</a>
+            <a href={localizedHref("about")}>{t("nav.about")}</a>
             <a href={`/${lang === "en" ? "blog" : lang + "/blog"}`}
                 >{t("nav.blog")}</a
             >
-            <a href="/privacy">{t("nav.privacy")}</a>
-            <a href="/terms">{t("nav.terms")}</a>
-            <a href="/contact">{t("nav.contact")}</a>
+            <a href={localizedHref("privacy")}>{t("nav.privacy")}</a>
+            <a href={localizedHref("terms")}>{t("nav.terms")}</a>
+            <a href={localizedHref("contact")}>{t("nav.contact")}</a>
             <a href="/editorial-policy">Editorial Policy</a>
-            <a href="/dmca">{t("nav.dmca")}</a>
-            <a href="/disclaimer">{t("nav.disclaimer")}</a>
+            <a href={localizedHref("dmca")}>{t("nav.dmca")}</a>
+            <a href={localizedHref("disclaimer")}>{t("nav.disclaimer")}</a>
         </div>
 
         <!-- Tools Link (Separate Row) -->
@@ -34,12 +34,12 @@ const t = useTranslations(lang);
             >
         </div>
 
-        <!-- Devices Links (Separate Row) - nofollow because these are noindex pages -->
+        <!-- Device guides are full, indexable pages with platform-specific instructions. -->
         <div class="footer-links" style="margin-top: -15px; font-size: 0.85rem; opacity: 0.8;">
-            <a href={`/${lang === "en" ? "ios" : lang + "/ios"}`} rel="nofollow">iOS</a>
-            <a href={`/${lang === "en" ? "android" : lang + "/android"}`} rel="nofollow">Android</a>
-            <a href={`/${lang === "en" ? "mac" : lang + "/mac"}`} rel="nofollow">Mac</a>
-            <a href={`/${lang === "en" ? "pc" : lang + "/pc"}`} rel="nofollow">PC</a>
+            <a href={localizedHref("ios")}>iOS</a>
+            <a href={localizedHref("android")}>Android</a>
+            <a href={localizedHref("mac")}>Mac</a>
+            <a href={localizedHref("pc")}>PC</a>
         </div>
 
         <p class="copyright">{t("footer.rights")}</p>

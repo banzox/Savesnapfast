@@ -1,7 +1,46 @@
 {
 	"name": "savesnapfast",
-	"pages_build_output_dir": "./dist",
-	"compatibility_date": "2026-01-31",
+	"main": "./worker/index.ts",
+	"routes": [
+		{
+			"pattern": "savetik-fast.xyz",
+			"custom_domain": true
+		}
+	],
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS",
+		"html_handling": "drop-trailing-slash",
+		"not_found_handling": "404-page",
+		"run_worker_first": [
+			"/",
+			"/api/*",
+			"/en",
+			"/en/*",
+			"/tl",
+			"/tl/*",
+			"/*.html",
+			"/*/*.html",
+			"/*/en",
+			"/about-us",
+			"/*/about-us",
+			"/who-are-we",
+			"/*/who-are-we",
+			"/contact-us",
+			"/*/contact-us",
+			"/privacy-policy",
+			"/*/privacy-policy",
+			"/terms-of-service",
+			"/*/terms-of-service",
+			"/terms-and-conditions",
+			"/*/terms-and-conditions",
+			"/disclaimer-policy",
+			"/*/disclaimer-policy",
+			"/dmca-policy",
+			"/*/dmca-policy"
+		]
+	},
+	"compatibility_date": "2026-08-14",
 	"compatibility_flags": [
 		"nodejs_compat"
 	],

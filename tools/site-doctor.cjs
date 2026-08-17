@@ -159,14 +159,7 @@ function checkSEOCanonical() {
 
     // Check canonical URL construction
     if (seoConfig.includes('SITE_ORIGIN') && seoConfig.includes('canonicalURL')) {
-      addResult('canonical', 'PASS', 'SEOConfig builds absolute canonical URLs ✓');
-    }
-
-    // Check for translated legal page canonical logic
-    if (seoConfig.includes('isTranslatedLegalPage') && seoConfig.includes('legalPages')) {
-      addResult('canonical', 'PASS', 'Translated legal pages point canonical to English version ✓');
-    } else {
-      addResult('canonical', 'ERROR', 'Missing translated legal page canonical logic in SEOConfig.astro');
+      addResult('canonical', 'PASS', 'SEOConfig builds absolute self-referencing canonical URLs ✓');
     }
   }
 
@@ -265,23 +258,25 @@ function checkHreflang() {
 }
 
 // ═════════════════════════════════════════════════════════════════════════════
-//  CHECK 3: Noindex Meta Tags
+// ═════════════════════════════════════════════════════════════════════════════
+//  CHECK 3: Indexation & Meta Tags
 // ═════════════════════════════════════════════════════════════════════════════
 function checkNoindex() {
-  sectionHeader('3. Noindex Meta Tags');
+  sectionHeader('3. Indexation & Meta Tags');
 
   if (!fs.existsSync(DIST_DIR)) {
-    addResult('noindex', 'WARN', 'Dist directory not found - skipping noindex checks');
+    addResult('noindex', 'WARN', 'Dist directory not found - skipping indexation checks');
     return;
   }
 
-  // Device pages should have noindex
-  const devicePagesToCheck = [
+  // All content pages should be indexable (no noindex tag)
+  const pagesToCheck = [
+    'index.html', 'mp3.html', 'about.html', 'privacy.html',
     'ios.html', 'android.html', 'mac.html', 'pc.html',
-    'ar/ios.html', 'es/android.html', 'fr/mac.html'
+    'ar/ios.html', 'es/android.html', 'ar/about.html', 'fr/privacy.html'
   ];
 
-  devicePagesToCheck.forEach(file => {
+  pagesToCheck.forEach(file => {
     const filePath = path.join(DIST_DIR, file);
     const html = readFileIfExists(filePath);
     if (!html) {
@@ -289,54 +284,28 @@ function checkNoindex() {
       return;
     }
 
-    const hasNoindex = html.includes('content="noindex, follow"') || html.includes('content="noindex,follow"');
+    const hasNoindex = html.includes('content="noindex, follow"') || html.includes('content="noindex"');
     if (hasNoindex) {
-      addResult('noindex', 'PASS', `${file}: Has noindex ✓`);
+      addResult('noindex', 'ERROR', `${file}: Unexpectedly contains noindex meta tag`);
     } else {
-      addResult('noindex', 'ERROR', `${file}: Missing noindex meta tag (device page)`);
+      addResult('noindex', 'PASS', `${file}: Indexable (no noindex tag) ✓`);
+    }
+
+    const hasIndex = html.includes('index, follow');
+    if (hasIndex) {
+      addResult('noindex', 'PASS', `${file}: Contains index, follow directive ✓`);
+    } else {
+      addResult('noindex', 'ERROR', `${file}: Missing index, follow directive`);
     }
   });
 
-  // Translated legal pages should have noindex
-  const legalPagesToCheck = ['ar/about.html', 'fr/privacy.html', 'de/terms.html', 'es/contact.html', 'it/dmca.html', 'tr/disclaimer.html'];
-
-  legalPagesToCheck.forEach(file => {
-    const filePath = path.join(DIST_DIR, file);
-    const html = readFileIfExists(filePath);
-    if (!html) {
-      if (FLAG_VERBOSE) addResult('noindex', 'WARN', `${file}: Not found in dist`);
-      return;
-    }
-
-    const hasNoindex = html.includes('content="noindex, follow"') || html.includes('content="noindex,follow"');
-    if (hasNoindex) {
-      addResult('noindex', 'PASS', `${file}: Has noindex ✓`);
-    } else {
-      addResult('noindex', 'ERROR', `${file}: Missing noindex (translated legal page)`);
-    }
-  });
-
-  // Root English legal pages should NOT have noindex
-  LEGAL_PAGES.forEach(page => {
-    const filePath = path.join(DIST_DIR, `${page}.html`);
-    const html = readFileIfExists(filePath);
-    if (!html) return;
-
-    const hasNoindex = html.includes('content="noindex, follow"');
-    if (!hasNoindex) {
-      addResult('noindex', 'PASS', `${page}.html: Correctly indexable ✓`);
-    } else {
-      addResult('noindex', 'ERROR', `${page}.html: Root English legal page has noindex - should be indexable!`);
-    }
-  });
-
-  // Check Layout.astro noindex implementation
+  // Check Layout.astro indexation implementation
   const layout = readFileIfExists('src/layouts/Layout.astro');
   if (layout) {
-    if (layout.includes('noindex') && layout.includes('robots') && layout.includes('is404')) {
-      addResult('noindex', 'PASS', 'Layout.astro: Noindex logic is implemented ✓');
+    if (layout.includes('robotsContent') && layout.includes('is404')) {
+      addResult('noindex', 'PASS', 'Layout.astro: Indexing logic correctly configured ✓');
     } else {
-      addResult('noindex', 'ERROR', 'Layout.astro: Missing noindex implementation');
+      addResult('noindex', 'ERROR', 'Layout.astro: Missing indexing configuration');
     }
   }
 }
@@ -356,23 +325,10 @@ function checkRobotsTxt() {
 
   // Required rules
   const requiredRules = [
-    { rule: 'Disallow: /api/', desc: 'Block API endpoints' },
-    { rule: 'Disallow: /admin', desc: 'Block admin panel' },
-    { rule: 'Disallow: /*?*', desc: 'Block query parameters' },
-    { rule: 'Allow: /_astro/', desc: 'Allow Astro assets' },
-    { rule: `Sitemap: ${SITE_ORIGIN}/sitemap-index.xml`, desc: 'Sitemap reference' },
+    { rule: 'User-agent: *', desc: 'All user agents' },
+    { rule: 'Allow: /', desc: 'Allow all paths' },
+    { rule: `Sitemap: ${SITE_ORIGIN}/sitemap.xml`, desc: 'Direct sitemap reference' },
   ];
-
-  // Device page rules
-  DEVICE_PAGES.forEach(device => {
-    requiredRules.push({ rule: `Disallow: /${device}`, desc: `Block /${device}` });
-    requiredRules.push({ rule: `Disallow: /*/${device}`, desc: `Block /*/${device}` });
-  });
-
-  // Translated legal page rules
-  LEGAL_PAGES.forEach(page => {
-    requiredRules.push({ rule: `Disallow: /*/${page}`, desc: `Block translated /${page}` });
-  });
 
   requiredRules.forEach(({ rule, desc }) => {
     if (robots.includes(rule)) {
@@ -422,34 +378,6 @@ function checkSitemap() {
     addResult('sitemap', 'PASS', 'No trailing slash URLs in sitemap ✓');
   }
 
-  // Check for device pages in sitemap (should be excluded)
-  let deviceViolations = 0;
-  urls.forEach(url => {
-    const pathname = url.replace(SITE_ORIGIN, '');
-    const segments = pathname.split('/').filter(Boolean);
-    if (segments.length > 0 && DEVICE_PAGES.includes(segments[segments.length - 1])) {
-      addResult('sitemap', 'ERROR', `Device page in sitemap: ${url}`);
-      deviceViolations++;
-    }
-  });
-  if (deviceViolations === 0) {
-    addResult('sitemap', 'PASS', 'No device pages in sitemap ✓');
-  }
-
-  // Check for translated legal pages (should be excluded)
-  let legalViolations = 0;
-  urls.forEach(url => {
-    const pathname = url.replace(SITE_ORIGIN, '');
-    const segments = pathname.split('/').filter(Boolean);
-    if (segments.length === 2 && LOCALES.includes(segments[0]) && LEGAL_PAGES.includes(segments[1])) {
-      addResult('sitemap', 'ERROR', `Translated legal page in sitemap: ${url}`);
-      legalViolations++;
-    }
-  });
-  if (legalViolations === 0) {
-    addResult('sitemap', 'PASS', 'No translated legal pages in sitemap ✓');
-  }
-
   // Check for /en/ prefixed pages (should redirect, not be in sitemap)
   const enPrefixed = urls.filter(u => {
     const p = u.replace(SITE_ORIGIN, '');
@@ -466,30 +394,39 @@ function checkSitemap() {
 //  CHECK 6: Redirect Logic
 // ═════════════════════════════════════════════════════════════════════════════
 function checkRedirects() {
-  sectionHeader('6. Redirect Logic (Middleware)');
+  sectionHeader('6. Redirect Logic (Middleware + Cloudflare Worker)');
 
   const middleware = readFileIfExists('src/middleware.ts');
+  const redirectRules = readFileIfExists('src/utils/redirects.ts');
+  const worker = readFileIfExists('worker/index.ts');
+  const wrangler = readFileIfExists('wrangler.jsonc');
   if (!middleware) {
     addResult('redirects', 'ERROR', 'middleware.ts not found');
     return;
   }
+  if (!redirectRules || !worker || !wrangler) {
+    addResult('redirects', 'ERROR', 'Shared redirect rules or Cloudflare Worker configuration missing');
+    return;
+  }
+
+  const redirectSource = `${middleware}\n${redirectRules}\n${worker}\n${wrangler}`;
 
   // Check tl → fil redirect
-  if ((middleware.includes('"tl"') || middleware.includes("'tl'")) && (middleware.includes('"fil"') || middleware.includes("'fil'"))) {
+  if ((redirectRules.includes('"tl"') || redirectRules.includes("'tl'")) && (redirectRules.includes('"fil"') || redirectRules.includes("'fil'"))) {
     addResult('redirects', 'PASS', 'tl → fil redirect exists ✓');
   } else {
     addResult('redirects', 'ERROR', 'Missing tl → fil redirect in middleware');
   }
 
   // Check /en → / redirect
-  if ((middleware.includes('"en"') || middleware.includes("'en'")) && middleware.includes('parts.shift')) {
+  if ((redirectRules.includes('"en"') || redirectRules.includes("'en'")) && redirectRules.includes('parts.shift')) {
     addResult('redirects', 'PASS', '/en → / redirect exists ✓');
   } else {
     addResult('redirects', 'ERROR', 'Missing /en → / redirect in middleware');
   }
 
   // Check trailing slash removal
-  if (middleware.includes('endsWith("/")') || middleware.includes("endsWith('/')")) {
+  if (redirectRules.includes('endsWith("/")') || redirectRules.includes("endsWith('/')") || wrangler.includes('"drop-trailing-slash"')) {
     addResult('redirects', 'PASS', 'Trailing slash removal exists ✓');
   } else {
     addResult('redirects', 'ERROR', 'Missing trailing slash removal in middleware');
@@ -499,7 +436,7 @@ function checkRedirects() {
   const expectedSlugs = Object.keys(LEGACY_SLUGS);
   let missingSlugs = [];
   expectedSlugs.forEach(slug => {
-    if (!middleware.includes(`"${slug}"`) && !middleware.includes(`'${slug}'`)) {
+    if (!redirectRules.includes(`"${slug}"`) && !redirectRules.includes(`'${slug}'`)) {
       missingSlugs.push(slug);
     }
   });
@@ -510,18 +447,22 @@ function checkRedirects() {
   }
 
   // Check redirect uses 301
-  if (middleware.includes('301')) {
+  if (middleware.includes('301') && worker.includes('301')) {
     addResult('redirects', 'PASS', 'Redirects use 301 (permanent) ✓');
   } else {
     addResult('redirects', 'WARN', 'Redirects may not use 301 status code');
   }
 
-  // Check Cloudflare _redirects file
-  const redirectsFile = readFileIfExists('public/_redirects');
-  if (redirectsFile) {
-    if (redirectsFile.includes('/sitemap.xml') && redirectsFile.includes('/sitemap-index.xml')) {
-      addResult('redirects', 'PASS', '_redirects: sitemap.xml → sitemap-index.xml ✓');
-    }
+  if (redirectSource.includes('searchParams.has("lang")') && wrangler.includes('"run_worker_first"')) {
+    addResult('redirects', 'PASS', 'Legacy ?lang= URLs are normalized at the edge ✓');
+  } else {
+    addResult('redirects', 'ERROR', 'Legacy ?lang= URL normalization is missing');
+  }
+
+  if (middleware.includes('context.isPrerendered')) {
+    addResult('redirects', 'PASS', 'Prerendered HTML is protected from build-time redirects ✓');
+  } else {
+    addResult('redirects', 'ERROR', 'Middleware may replace prerendered pages with redirects');
   }
 }
 
@@ -682,27 +623,18 @@ function checkInternalLinks() {
   // Check Footer links
   const footer = readFileIfExists('src/components/Footer.astro');
   if (footer) {
-    // Legal links should point to root English versions
-    let footerIssues = 0;
-    LEGAL_PAGES.forEach(page => {
-      if (footer.includes(`href="/${page}"`)) {
-        // Good: links directly to English version
-      } else {
-        footerIssues++;
-      }
-    });
-
-    if (footerIssues === 0) {
-      addResult('links', 'PASS', 'Footer legal links point to English root pages ✓');
+    // Indexable localized legal pages must receive normal internal links.
+    if (footer.includes('localizedHref') && LEGAL_PAGES.every(page => footer.includes(`localizedHref("${page}")`))) {
+      addResult('links', 'PASS', 'Footer legal links follow the active language ✓');
     } else {
-      addResult('links', 'WARN', `Footer: ${footerIssues} legal links may not point to English root`);
+      addResult('links', 'WARN', 'Footer localized legal links are incomplete');
     }
 
-    // Device links with nofollow
+    // Device guides are indexable and should not be marked nofollow.
     if (footer.includes('rel="nofollow"')) {
-      addResult('links', 'PASS', 'Footer device links have rel="nofollow" ✓');
+      addResult('links', 'WARN', 'Footer indexable links still contain rel="nofollow"');
     } else {
-      addResult('links', 'WARN', 'Footer device links missing rel="nofollow"');
+      addResult('links', 'PASS', 'Footer indexable links are crawlable ✓');
     }
   }
 
@@ -957,7 +889,7 @@ function checkPageParity() {
 
   // Root pages should have lang equivalents
   rootPages.forEach(page => {
-    if (page === 'index') return; // index handled by [lang]/index.astro
+    if (page === 'index' || page === 'editorial-policy') return; // English-only page; no hreflang variants
     if (langPages.includes(page) || page === '[device]') {
       addResult('parity', 'PASS', `/${page}: Has [lang] equivalent ✓`);
     } else {
@@ -986,12 +918,12 @@ function checkTranslatedLegalCanonicals() {
   }
 
   const tests = [
-    { path: 'ar/about.html', expected: `${SITE_ORIGIN}/about` },
-    { path: 'fr/privacy.html', expected: `${SITE_ORIGIN}/privacy` },
-    { path: 'es/terms.html', expected: `${SITE_ORIGIN}/terms` },
-    { path: 'de/contact.html', expected: `${SITE_ORIGIN}/contact` },
-    { path: 'it/dmca.html', expected: `${SITE_ORIGIN}/dmca` },
-    { path: 'tr/disclaimer.html', expected: `${SITE_ORIGIN}/disclaimer` },
+    { path: 'ar/about.html', expected: `${SITE_ORIGIN}/ar/about` },
+    { path: 'fr/privacy.html', expected: `${SITE_ORIGIN}/fr/privacy` },
+    { path: 'es/terms.html', expected: `${SITE_ORIGIN}/es/terms` },
+    { path: 'de/contact.html', expected: `${SITE_ORIGIN}/de/contact` },
+    { path: 'it/dmca.html', expected: `${SITE_ORIGIN}/it/dmca` },
+    { path: 'tr/disclaimer.html', expected: `${SITE_ORIGIN}/tr/disclaimer` },
   ];
 
   tests.forEach(({ path: relPath, expected }) => {
