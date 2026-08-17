@@ -80,32 +80,104 @@ function getRapidApiKey(runtimeValue: unknown): string | undefined {
 }
 
 async function fetchTikWMFallback(videoUrl: string): Promise<DownloadMetadata | null> {
+    // Tier 1: TikWM POST (Most reliable across edge networks)
+    try {
+        const body = new URLSearchParams({
+            url: videoUrl,
+            count: "12",
+            cursor: "0",
+            web: "1",
+            hd: "1",
+        });
+        const tmRes = await fetch("https://tikwm.com/api/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+                "Accept": "application/json",
+            },
+            body: body.toString(),
+        });
+        if (tmRes.ok) {
+            const tmJson = await tmRes.json() as { code?: number; data?: any };
+            if (tmJson.code === 0 && tmJson.data) {
+                const d = tmJson.data;
+                const images = Array.isArray(d.images) ? d.images : [];
+                return {
+                    provider: "tikwm",
+                    title: d.title || d.desc || "TikTok Video",
+                    author: d.author?.unique_id || d.author?.nickname || "User",
+                    cover: d.cover || d.origin_cover || "",
+                    video: d.play || d.wmplay || d.hdplay || "",
+                    music: typeof d.music === "string" ? d.music : (d.music?.play_url || d.music_info?.play || ""),
+                    images,
+                    type: images.length > 0 ? "image" : "video",
+                };
+            }
+        }
+    } catch (e) {
+        console.warn(JSON.stringify({ event: "tikwm_post_failed", error: String(e) }));
+    }
+
+    // Tier 2: TikWM GET fallback
     try {
         const tmRes = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(videoUrl)}`, {
             headers: {
                 "Accept": "application/json",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             },
         });
-        if (!tmRes.ok) return null;
-        const tmJson = await tmRes.json() as { code?: number; data?: any };
-        if (tmJson.code === 0 && tmJson.data) {
-            const d = tmJson.data;
-            const images = Array.isArray(d.images) ? d.images : [];
-            return {
-                provider: "tikwm",
-                title: d.title || d.desc || "TikTok Video",
-                author: d.author?.unique_id || d.author?.nickname || "User",
-                cover: d.cover || d.origin_cover || "",
-                video: d.play || d.wmplay || d.hdplay || "",
-                music: typeof d.music === "string" ? d.music : (d.music?.play_url || d.music_info?.play || ""),
-                images,
-                type: images.length > 0 ? "image" : "video",
-            };
+        if (tmRes.ok) {
+            const tmJson = await tmRes.json() as { code?: number; data?: any };
+            if (tmJson.code === 0 && tmJson.data) {
+                const d = tmJson.data;
+                const images = Array.isArray(d.images) ? d.images : [];
+                return {
+                    provider: "tikwm_get",
+                    title: d.title || d.desc || "TikTok Video",
+                    author: d.author?.unique_id || d.author?.nickname || "User",
+                    cover: d.cover || d.origin_cover || "",
+                    video: d.play || d.wmplay || d.hdplay || "",
+                    music: typeof d.music === "string" ? d.music : (d.music?.play_url || d.music_info?.play || ""),
+                    images,
+                    type: images.length > 0 ? "image" : "video",
+                };
+            }
         }
     } catch (e) {
-        console.warn(JSON.stringify({ event: "tikwm_fallback_failed", error: String(e) }));
+        console.warn(JSON.stringify({ event: "tikwm_get_failed", error: String(e) }));
     }
+
+    // Tier 3: TikMate API fallback
+    try {
+        const tmBody = new URLSearchParams({ url: videoUrl });
+        const tmRes = await fetch("https://api.tikmate.app/api/lookup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            },
+            body: tmBody.toString(),
+        });
+        if (tmRes.ok) {
+            const tmJson = await tmRes.json() as { success?: boolean; token?: string; id?: string; author_name?: string; author_id?: string; cover_url?: string };
+            if (tmJson.success && tmJson.token) {
+                return {
+                    provider: "tikmate",
+                    title: tmJson.author_name || "TikTok Video",
+                    author: tmJson.author_id || tmJson.author_name || "User",
+                    cover: tmJson.cover_url || "",
+                    video: `https://tikmate.app/download/${tmJson.token}/${tmJson.id}.mp4`,
+                    music: "",
+                    images: [],
+                    type: "video",
+                };
+            }
+        }
+    } catch (e) {
+        console.warn(JSON.stringify({ event: "tikmate_failed", error: String(e) }));
+    }
+
     return null;
 }
 
