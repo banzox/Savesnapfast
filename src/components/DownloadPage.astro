@@ -316,38 +316,33 @@ if (!pagePrefix) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0.25rem 0.5rem 0; /* Reduced padding further */
+        padding: 1.5rem 1rem 0.5rem;
     }
 
     .hero-title {
-        font-size: 1rem; /* Smaller mobile title */
-        font-weight: bold;
-        margin-bottom: 0.15rem;
-    }
-
-    @media (min-width: 768px) {
-        .hero-title {
-            font-size: 1.25rem; /* Smaller desktop title */
-        }
+        font-size: clamp(1.2rem, 2.8vw, 1.85rem);
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+        letter-spacing: -0.5px;
     }
 
     .hero-desc {
-        font-size: 0.75rem; /* Smaller mobile description */
-        margin-bottom: 0.35rem;
-        max-width: 32rem;
+        font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+        margin-bottom: 1.25rem;
+        max-width: 38rem;
         margin-left: auto;
         margin-right: auto;
-        opacity: 0.85;
-    }
-
-    @media (min-width: 768px) {
-        .hero-desc {
-            font-size: 0.95rem;
-        }
+        color: var(--text-dim);
+        line-height: 1.5;
     }
 
     .accent-text {
         color: var(--secondary);
+    }
+
+    [data-theme='light'] .accent-text {
+        color: var(--primary);
     }
 
     .downloader-wrapper {
@@ -366,55 +361,58 @@ if (!pagePrefix) {
     }
 
     .step {
-        background: rgba(255, 255, 255, 0.03); /* Card bg */
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 25px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 28px 24px;
         position: relative;
         overflow: hidden;
-        transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
+        transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
     }
 
     :global([data-theme="light"]) .step {
         background: #ffffff;
         border-color: rgba(0, 0, 0, 0.08);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Softer, broader shadow */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     }
 
     .step:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        border-color: rgba(0, 242, 234, 0.3); /* Hover color */
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+        border-color: var(--secondary);
+    }
+
+    :global([data-theme="light"]) .step:hover {
+        border-color: var(--primary);
+        box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
     }
 
     .step-num {
-        font-size: 3rem;
-        font-weight: 800;
-        color: rgba(255, 255, 255, 0.05); /* Architectural styling */
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.04);
         position: absolute;
         top: 10px;
-        right: 20px;
+        right: 18px;
         line-height: 1;
         pointer-events: none;
     }
 
     :global([data-theme="light"]) .step-num {
-        color: rgba(0, 0, 0, 0.03);
+        color: rgba(0, 0, 0, 0.04);
     }
 
     .step h3 {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         font-weight: 700;
         color: var(--text-main);
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         position: relative;
         z-index: 1;
     }
 
     .step p {
-        font-size: 0.95rem;
+        font-size: 0.92rem;
         line-height: 1.6;
         color: var(--text-dim);
         position: relative;
@@ -423,25 +421,24 @@ if (!pagePrefix) {
 
     .section-title {
         text-align: center;
-        margin-bottom: 40px;
-        font-size: 2rem;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
         font-weight: 800;
-        background: linear-gradient(to right, #fff, #bbb);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    :global([data-theme="light"]) .section-title {
-        background: linear-gradient(to right, #333, #666);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--text-main);
+        letter-spacing: -0.5px;
     }
 
     .about-section {
         margin-top: 3rem;
-        padding: 40px;
-        background: var(--card-bg); /* Use global card var if available */
+        padding: 35px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
         border-radius: 20px;
+    }
+
+    :global([data-theme="light"]) .about-section {
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.06);
     }
 
     /* Ad Slots - Seamless integration */

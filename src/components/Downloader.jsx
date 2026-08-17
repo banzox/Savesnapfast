@@ -471,15 +471,33 @@ export default function Downloader(props) {
 
                 {result && (
                     <div className="result-card">
+                        <div className="result-header">
+                            {result.cover && (!images || images.length === 0) && (
+                                <div className="result-preview-thumb">
+                                    <img
+                                        src={result.cover}
+                                        alt={result.title || "TikTok preview"}
+                                        loading="lazy"
+                                        width="100"
+                                        height="130"
+                                    />
+                                    <div className="preview-badge">
+                                        <i className="fas fa-play"></i>
+                                    </div>
+                                </div>
+                            )}
+                            <div className="result-header-details">
+                                <p className="result-author">
+                                    <i className="fas fa-user-circle"></i> @{sanitizeName(result.author || 'User')}
+                                    <span className="verified-badge"><i className="fas fa-check"></i></span>
+                                </p>
+                                <p className="result-desc">
+                                    {result.title ? (result.title.length > 80 ? result.title.substring(0, 80) + '...' : result.title) : ''}
+                                </p>
+                            </div>
+                        </div>
 
                         <div id="result-info-box" className="result-info" style={{ width: '100%' }}>
-                            <p className="result-author">
-                                <i className="fas fa-user-circle"></i> @{sanitizeName(result.author || 'User')}
-                            </p>
-                            <p className="result-desc">
-                                {result.title ? (result.title.length > 60 ? result.title.substring(0, 60) + '...' : result.title) : ''}
-                            </p>
-
                             <div ref={resultRef} id="result-buttons" className="result-buttons">
                                 {(!mode || mode === 'video') && videoUrl && !images && (
                                     <>
@@ -491,6 +509,12 @@ export default function Downloader(props) {
                                             <i className="fas fa-crown"></i>
                                             {t('download_hd', "Download HD 1080p")}
                                         </button>
+                                        {musicUrl && (
+                                            <button className="btn-download btn-audio" onClick={() => initiateDownload(musicUrl, generateProName(result.author, 'mp3'))}>
+                                                <i className="fas fa-music"></i>
+                                                {t('download_audio', "Download MP3 Audio")}
+                                            </button>
+                                        )}
                                     </>
                                 )}
 
@@ -543,22 +567,14 @@ export default function Downloader(props) {
                                     setResult(null); setUrl(''); setError(null); setDownloadComplete(false); 
                                     window.scrollTo({ top: 0, behavior: 'smooth' });
                                 }}
-                                style={{
-                                    width: '100%', marginTop: '10px',
-                                    background: 'rgba(255,255,255,0.05)',
-                                    border: '1px solid rgba(255,255,255,0.1)',
-                                    borderRadius: '12px', padding: '10px 0',
-                                    color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem', fontWeight: 600,
-                                    cursor: 'pointer', display: 'flex', alignItems: 'center',
-                                    justifyContent: 'center', gap: '8px'
-                                }}
+                                className="btn-another"
                             >
                                 <i className="fas fa-redo"></i>
                                 {t('download_another', 'Download Another Video')}
                             </button>
 
                             {(mode === 'slideshow' || (mode === 'video' && images)) && images && (
-                                <div className="slideshow-container" style={{ marginTop: '0px' }}>
+                                <div className="slideshow-container" style={{ marginTop: '15px' }}>
                                     <div className="slideshow-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '10px' }}>
                                         {images.map((img, index) => (
                                             <div key={index} className="slide-item">
