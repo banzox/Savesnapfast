@@ -259,7 +259,6 @@ export default function Downloader(props) {
             let res = null;
             let rapidApiData = null;
 
-            // 1. طلب بيانات الاسم والصورة من RapidAPI عبر السيرفر الداخلي
             try {
                 const rapidRes = await fetch(WORKER_URL, {
                     method: 'POST',
@@ -274,7 +273,6 @@ export default function Downloader(props) {
                 console.warn("RapidAPI metadata failed", e);
             }
 
-            // 2. طلب روابط التحميل (الفيديو والصوت) مباشرة من جهاز المستخدم (تخطي حظر كلاودفلير)
             try {
                 const tmRes = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(url)}`, {
                     headers: { "Accept": "application/json" }
@@ -298,7 +296,6 @@ export default function Downloader(props) {
                 console.warn("TikWM video fetch failed", e);
             }
 
-            // 3. كود الطوارئ (لو فشل TikWM) يجرب Zell
             if (!res || !res.video) {
                 try {
                     const zellRes = await fetch(`https://apizell.web.id/download/tiktok?url=${encodeURIComponent(url)}`, {
@@ -324,7 +321,6 @@ export default function Downloader(props) {
                 }
             }
 
-            // 4. دمج بيانات RapidAPI (الاسم المؤكد) مع السيرفرات السابقة
             if (res) {
                 if (rapidApiData) {
                     res.author = rapidApiData.author || res.author;
@@ -415,7 +411,7 @@ export default function Downloader(props) {
                     <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '250px', borderRadius: '10px', marginTop: '10px', transition: 'height 0.3s ease' }}>
                         <iframe 
                             id="native-ad-iframe"
-                            src="/ad-native.html" 
+                            src="/ad-native"
                             width="100%" 
                             height="250" 
                             frameBorder="0" 
@@ -717,7 +713,7 @@ export default function Downloader(props) {
                         {ADS_CONFIG.enableAdsterra && (
                             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', padding: '10px 0', border: '1px solid rgba(255,255,255,0.05)' }}>
                                 <iframe 
-                                    src="/ad-300x250.html" 
+                                    src="/ad-300x250"
                                     width="300" height="250" 
                                     frameBorder="0" scrolling="no" 
                                     allowTransparency="true"

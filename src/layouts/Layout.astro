@@ -19,7 +19,7 @@ interface Props {
 const { title, description, lang = "en", keywords, noindex = false } = Astro.props;
 const currentPageURL = new URL(Astro.url.pathname.replace(/\.html$/, ""), "https://savetik-fast.xyz").href;
 const is404 = noindex || Astro.url.pathname.includes("404");
-const robotsContent = is404 
+const robotsContent = is404
     ? "noindex, follow" 
     : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 ---

@@ -3,43 +3,27 @@ import { defaultLang, languages } from "../i18n/ui";
 
 const SITE_ORIGIN = "https://savetik-fast.xyz";
 
+// Sitemap entries are a crawl-priority signal, not a complete catalogue of
+// every route we serve. Keep it focused on pages with independent search
+// intent. Support, legal, device and utility routes remain accessible and
+// indexable when appropriate, but are deliberately not submitted in every
+// language variant.
 const ROOT_PAGES = [
     "",
     "about",
     "blog",
-    "contact",
-    "disclaimer",
-    "dmca",
     "editorial-policy",
     "mp3",
-    "privacy",
     "slideshow",
     "story",
-    "terms",
-    "tools",
-    "ios",
-    "android",
-    "mac",
-    "pc",
 ];
 
 const LOCALIZED_PAGES = [
     "",
-    "about",
     "blog",
-    "contact",
-    "disclaimer",
-    "dmca",
     "mp3",
-    "privacy",
     "slideshow",
     "story",
-    "terms",
-    "tools",
-    "ios",
-    "android",
-    "mac",
-    "pc",
 ];
 
 const escapeXml = (value: string) => value

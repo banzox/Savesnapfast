@@ -7,6 +7,9 @@ const locales = ['en', 'ar', 'es', 'pt', 'id', 'fr', 'de', 'it', 'tr', 'ru', 'vi
 export default defineConfig({
     site: 'https://savetik-fast.xyz',
     trailingSlash: 'never',
+    adapter: cloudflare({
+        imageService: 'passthrough',
+    }),
     build: {
         format: 'file'
     },

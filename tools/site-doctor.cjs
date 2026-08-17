@@ -394,30 +394,39 @@ function checkSitemap() {
 //  CHECK 6: Redirect Logic
 // ═════════════════════════════════════════════════════════════════════════════
 function checkRedirects() {
-  sectionHeader('6. Redirect Logic (Middleware)');
+  sectionHeader('6. Redirect Logic (Middleware + Cloudflare Worker)');
 
   const middleware = readFileIfExists('src/middleware.ts');
+  const redirectRules = readFileIfExists('src/utils/redirects.ts');
+  const worker = readFileIfExists('worker/index.ts');
+  const wrangler = readFileIfExists('wrangler.jsonc');
   if (!middleware) {
     addResult('redirects', 'ERROR', 'middleware.ts not found');
     return;
   }
+  if (!redirectRules || !worker || !wrangler) {
+    addResult('redirects', 'ERROR', 'Shared redirect rules or Cloudflare Worker configuration missing');
+    return;
+  }
+
+  const redirectSource = `${middleware}\n${redirectRules}\n${worker}\n${wrangler}`;
 
   // Check tl → fil redirect
-  if ((middleware.includes('"tl"') || middleware.includes("'tl'")) && (middleware.includes('"fil"') || middleware.includes("'fil'"))) {
+  if ((redirectRules.includes('"tl"') || redirectRules.includes("'tl'")) && (redirectRules.includes('"fil"') || redirectRules.includes("'fil'"))) {
     addResult('redirects', 'PASS', 'tl → fil redirect exists ✓');
   } else {
     addResult('redirects', 'ERROR', 'Missing tl → fil redirect in middleware');
   }
 
   // Check /en → / redirect
-  if ((middleware.includes('"en"') || middleware.includes("'en'")) && middleware.includes('parts.shift')) {
+  if ((redirectRules.includes('"en"') || redirectRules.includes("'en'")) && redirectRules.includes('parts.shift')) {
     addResult('redirects', 'PASS', '/en → / redirect exists ✓');
   } else {
     addResult('redirects', 'ERROR', 'Missing /en → / redirect in middleware');
   }
 
   // Check trailing slash removal
-  if (middleware.includes('endsWith("/")') || middleware.includes("endsWith('/')")) {
+  if (redirectRules.includes('endsWith("/")') || redirectRules.includes("endsWith('/')") || wrangler.includes('"drop-trailing-slash"')) {
     addResult('redirects', 'PASS', 'Trailing slash removal exists ✓');
   } else {
     addResult('redirects', 'ERROR', 'Missing trailing slash removal in middleware');
@@ -427,7 +436,7 @@ function checkRedirects() {
   const expectedSlugs = Object.keys(LEGACY_SLUGS);
   let missingSlugs = [];
   expectedSlugs.forEach(slug => {
-    if (!middleware.includes(`"${slug}"`) && !middleware.includes(`'${slug}'`)) {
+    if (!redirectRules.includes(`"${slug}"`) && !redirectRules.includes(`'${slug}'`)) {
       missingSlugs.push(slug);
     }
   });
@@ -438,18 +447,22 @@ function checkRedirects() {
   }
 
   // Check redirect uses 301
-  if (middleware.includes('301')) {
+  if (middleware.includes('301') && worker.includes('301')) {
     addResult('redirects', 'PASS', 'Redirects use 301 (permanent) ✓');
   } else {
     addResult('redirects', 'WARN', 'Redirects may not use 301 status code');
   }
 
-  // Check Cloudflare _redirects file
-  const redirectsFile = readFileIfExists('public/_redirects');
-  if (redirectsFile) {
-    if (redirectsFile.includes('/sitemap.xml') && redirectsFile.includes('/sitemap-index.xml')) {
-      addResult('redirects', 'PASS', '_redirects: sitemap.xml → sitemap-index.xml ✓');
-    }
+  if (redirectSource.includes('searchParams.has("lang")') && wrangler.includes('"run_worker_first"')) {
+    addResult('redirects', 'PASS', 'Legacy ?lang= URLs are normalized at the edge ✓');
+  } else {
+    addResult('redirects', 'ERROR', 'Legacy ?lang= URL normalization is missing');
+  }
+
+  if (middleware.includes('context.isPrerendered')) {
+    addResult('redirects', 'PASS', 'Prerendered HTML is protected from build-time redirects ✓');
+  } else {
+    addResult('redirects', 'ERROR', 'Middleware may replace prerendered pages with redirects');
   }
 }
 
