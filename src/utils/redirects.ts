@@ -4,6 +4,12 @@ const SUPPORTED_LANGUAGES = new Set([
     "cs", "sv", "hu", "el", "da", "fi", "no", "bg", "zh", "hi",
 ]);
 
+const LEGACY_LANGUAGES: Record<string, string> = {
+    tl: "fil",
+};
+
+const ALL_LANGUAGES = new Set([...SUPPORTED_LANGUAGES, ...Object.keys(LEGACY_LANGUAGES)]);
+
 const LEGACY_SLUGS: Record<string, string> = {
     "about-us": "about",
     "who-are-we": "about",
@@ -29,6 +35,7 @@ const CONTENT_SLUGS = new Set([
  */
 export function getCanonicalRedirect(url: URL): string | null {
     const originalPath = url.pathname;
+    const originalSearch = url.search;
     const parts = originalPath.split("/").filter(Boolean);
     let changed = originalPath.length > 1 && originalPath.endsWith("/");
 
@@ -37,18 +44,18 @@ export function getCanonicalRedirect(url: URL): string | null {
         ? parts[lastIndex].slice(0, -5)
         : null;
     const isKnownHtmlPage = htmlSlug !== null && (
+        htmlSlug === "index" ||
         (parts.length === 1 && (
-            htmlSlug === "index" ||
-            SUPPORTED_LANGUAGES.has(htmlSlug) ||
+            ALL_LANGUAGES.has(htmlSlug) ||
             CONTENT_SLUGS.has(htmlSlug)
         )) ||
         (parts.length === 2 && (
-            (SUPPORTED_LANGUAGES.has(parts[0]) && (
-                SUPPORTED_LANGUAGES.has(htmlSlug) || CONTENT_SLUGS.has(htmlSlug)
+            (ALL_LANGUAGES.has(parts[0]) && (
+                ALL_LANGUAGES.has(htmlSlug) || CONTENT_SLUGS.has(htmlSlug)
             )) ||
             parts[0] === "blog"
         )) ||
-        (parts.length === 3 && SUPPORTED_LANGUAGES.has(parts[0]) && parts[1] === "blog")
+        (parts.length === 3 && ALL_LANGUAGES.has(parts[0]) && parts[1] === "blog")
     );
 
     if (htmlSlug !== null && isKnownHtmlPage) {
@@ -60,15 +67,15 @@ export function getCanonicalRedirect(url: URL): string | null {
     // content pages; send them directly to the target language homepage.
     if (
         parts.length === 2 &&
-        SUPPORTED_LANGUAGES.has(parts[0]) &&
-        SUPPORTED_LANGUAGES.has(parts[1])
+        ALL_LANGUAGES.has(parts[0]) &&
+        ALL_LANGUAGES.has(parts[1])
     ) {
         parts.splice(0, 2, parts[1]);
         changed = true;
     }
 
-    if (parts[0] === "tl") {
-        parts[0] = "fil";
+    if (parts[0] === "tl" || LEGACY_LANGUAGES[parts[0]]) {
+        parts[0] = LEGACY_LANGUAGES[parts[0]] || "fil";
         changed = true;
     } else if (parts[0] === "en") {
         parts.shift();
@@ -77,6 +84,9 @@ export function getCanonicalRedirect(url: URL): string | null {
 
     if (parts.length === 1 && parts[0] === "index") {
         parts.length = 0;
+        changed = true;
+    } else if (parts.length > 1 && parts[parts.length - 1] === "index") {
+        parts.pop();
         changed = true;
     }
 
@@ -107,5 +117,9 @@ export function getCanonicalRedirect(url: URL): string | null {
 
     const pathname = parts.length > 0 ? `/${parts.join("/")}` : "/";
     const search = url.searchParams.toString();
-    return search ? `${pathname}?${search}` : pathname;
+    const candidate = search ? `${pathname}?${search}` : pathname;
+    const originalFull = originalSearch ? `${originalPath}${originalSearch}` : originalPath;
+
+    if (candidate === originalFull) return null;
+    return candidate;
 }

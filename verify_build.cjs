@@ -43,18 +43,26 @@ const ogUrl = (mp3Html.match(/og:url" content="([^"]+)"/) || [])[1];
 console.log('  og:url:', ogUrl || 'NOT FOUND');
 
 // Sitemap verification
-const sitemapExists = fs.existsSync(distDir + '/sitemap-index.xml');
-console.log('\nSitemap generated:', sitemapExists ? 'YES' : 'NO');
-if (sitemapExists) {
-  const sitemap = fs.readFileSync(distDir + '/sitemap-index.xml', 'utf8');
+const sitemapCandidates = ['sitemap-index.xml', 'sitemap.xml', 'sitemap-0.xml'];
+const foundSitemaps = sitemapCandidates.filter(f => fs.existsSync(distDir + '/' + f));
+const sitemapExists = foundSitemaps.length > 0;
+console.log('\nSitemap generated:', sitemapExists ? `YES (${foundSitemaps.join(', ')})` : 'NO');
+if (!sitemapExists) {
+  process.exitCode = 1;
+} else {
+  const primarySitemap = distDir + '/' + foundSitemaps[0];
+  const sitemap = fs.readFileSync(primarySitemap, 'utf8');
   const sitemapUrl = (sitemap.match(/<loc>([^<]+)<\/loc>/) || [])[1];
   console.log('First sitemap URL:', sitemapUrl);
 }
 
-// Check sitemap-0.xml
-const sitemap0 = distDir + '/sitemap-0.xml';
-if (fs.existsSync(sitemap0)) {
-  const content = fs.readFileSync(sitemap0, 'utf8');
+// Check sitemap URLs in sitemap-0.xml or sitemap.xml
+const sitemapUrlFile = fs.existsSync(distDir + '/sitemap-0.xml')
+  ? distDir + '/sitemap-0.xml'
+  : (fs.existsSync(distDir + '/sitemap.xml') ? distDir + '/sitemap.xml' : null);
+
+if (sitemapUrlFile) {
+  const content = fs.readFileSync(sitemapUrlFile, 'utf8');
   const urls = [...content.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
   const withSlash = urls.filter(u => u !== 'https://savetik-fast.xyz/' && u.endsWith('/'));
   console.log('\nSitemap URLs with trailing slash:', withSlash.length > 0 ? withSlash.slice(0,3).join(', ') : 'NONE (GOOD)');
@@ -87,18 +95,24 @@ const robotsPath = distDir + '/robots.txt';
 console.log('\nRobots.txt check:');
 if (fs.existsSync(robotsPath)) {
   const robotsContent = fs.readFileSync(robotsPath, 'utf8');
-  const requiredRobotsRules = [
-    'User-agent: *',
-    'Allow: /',
-    'Sitemap: https://savetik-fast.xyz/sitemap-index.xml'
-  ];
+  const hasUserAgent = robotsContent.includes('User-agent: *');
+  const hasAllow = robotsContent.includes('Allow: /');
+  const hasSitemap = robotsContent.includes('Sitemap: https://savetik-fast.xyz/sitemap.xml') ||
+                     robotsContent.includes('Sitemap: https://savetik-fast.xyz/sitemap-index.xml') ||
+                     robotsContent.includes('Sitemap: https://savetik-fast.xyz/sitemap-0.xml');
   let missingRules = 0;
-  requiredRobotsRules.forEach(rule => {
-    if (!robotsContent.includes(rule)) {
-      console.log(`  [ERROR] robots.txt is missing required rule: ${rule}`);
-      missingRules++;
-    }
-  });
+  if (!hasUserAgent) {
+    console.log('  [ERROR] robots.txt is missing User-agent: *');
+    missingRules++;
+  }
+  if (!hasAllow) {
+    console.log('  [ERROR] robots.txt is missing Allow: /');
+    missingRules++;
+  }
+  if (!hasSitemap) {
+    console.log('  [ERROR] robots.txt is missing valid Sitemap directive');
+    missingRules++;
+  }
   if (missingRules === 0) {
     console.log('  OK: robots.txt accurately matches specification.');
   } else {

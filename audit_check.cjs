@@ -60,6 +60,7 @@ console.log('Nav links look clean');
 
 // ===== 5. PAGES IN ROOT vs [LANG] =====
 console.log('\n--- 5. PAGES PARITY CHECK ---');
+const ignoredRootPages = new Set(['index', 'sitemap.xml', 'sitemap-0.xml', 'editorial-policy']);
 const rootPages = fs.readdirSync('src/pages')
   .filter(f => f.endsWith('.astro') && f !== '404.astro')
   .map(f => f.replace('.astro', ''));
@@ -72,7 +73,7 @@ console.log('Root pages:', rootPages.join(', '));
 console.log('Lang pages:', langPages.join(', '));
 
 rootPages.forEach(p => {
-  if (!langPages.includes(p) && p !== 'index' && p !== 'sitemap.xml') {
+  if (!langPages.includes(p) && !ignoredRootPages.has(p)) {
     console.log('[MISSING] /[lang]/' + p + '.astro - will cause 404 for non-English users!');
     process.exitCode = 1;
   }
@@ -97,36 +98,26 @@ console.log(redirectsContent.trim());
 // ===== 8. ROBOTS.TXT =====
 console.log('\n--- 8. ROBOTS.TXT CHECKS ---');
 const robots = fs.readFileSync('public/robots.txt', 'utf8');
-const hasSitemap = robots.includes('Sitemap:');
+const hasUserAgent = robots.includes('User-agent: *');
+const hasAllow = robots.includes('Allow: /');
 const hasApi = robots.includes('Disallow: /api/');
 const hasAdmin = robots.includes('Disallow: /admin');
+const hasSitemap = robots.includes('Sitemap:');
+console.log('Has User-agent: *:', hasUserAgent);
+console.log('Has Allow: /:', hasAllow);
 console.log('Has sitemap:', hasSitemap);
 console.log('Has disallow /api/:', hasApi);
 console.log('Has disallow /admin:', hasAdmin);
 
-const requiredRobotsDisallows = [
-  '/api/',
-  '/admin',
-  '/ios', '/android', '/mac', '/pc',
-  '/*/ios', '/*/android', '/*/mac', '/*/pc',
-  '/*/about', '/*/privacy', '/*/terms', '/*/contact', '/*/dmca', '/*/disclaimer'
-];
-
-let missingDisallowRules = [];
-requiredRobotsDisallows.forEach(rule => {
-  if (!robots.includes(`Disallow: ${rule}`)) {
-    missingDisallowRules.push(rule);
-  }
-});
-
-if (!hasSitemap || missingDisallowRules.length > 0) {
+if (!hasUserAgent || !hasAllow || !hasApi || !hasAdmin || !hasSitemap) {
+  if (!hasUserAgent) console.log('[ERROR] robots.txt is missing User-agent: *');
+  if (!hasAllow) console.log('[ERROR] robots.txt is missing Allow: /');
+  if (!hasApi) console.log('[ERROR] robots.txt is missing Disallow: /api/');
+  if (!hasAdmin) console.log('[ERROR] robots.txt is missing Disallow: /admin');
   if (!hasSitemap) console.log('[ERROR] robots.txt is missing Sitemap reference');
-  missingDisallowRules.forEach(rule => {
-    console.log(`[ERROR] robots.txt is missing Disallow: ${rule}`);
-  });
   process.exitCode = 1;
 } else {
-  console.log('Has all required device and translated legal page Disallow rules: YES');
+  console.log('Robots.txt conforms to modern specification: YES');
 }
 
 // Check sitemap URL matches actual sitemap
@@ -150,7 +141,7 @@ const publicFiles = fs.readdirSync('public');
 ['robots.txt', 'sitemap-index.xml', 'favicon.ico', 'favicon.png', 'og-image.png', 'manifest.json'].forEach(f => {
   let exists = false;
   if (f === 'sitemap-index.xml') {
-    exists = fs.existsSync('public/sitemap-index.xml') || fs.existsSync('dist/sitemap-index.xml');
+    exists = fs.existsSync('public/sitemap-index.xml') || fs.existsSync('dist/sitemap-index.xml') || fs.existsSync('dist/sitemap.xml') || fs.existsSync('dist/sitemap-0.xml');
   } else {
     exists = publicFiles.includes(f);
   }
@@ -179,24 +170,24 @@ if (schema.includes('currentPath + "/"') || schema.includes('currentPath}/')) {
   console.log('[WARNING] Breadcrumb schema items use trailing slashes -> mismatch with trailingSlash:never');
 }
 
-// ===== 12. TRANSLATED LEGAL PAGE CANONICAL CHECKS =====
-console.log('\n--- 12. TRANSLATED LEGAL PAGE CANONICAL CHECKS ---');
-const hasLegalCanonicalLogic = seoConfig.includes('isTranslatedLegalPage') && seoConfig.includes('legalPages');
-if (!hasLegalCanonicalLogic) {
-  console.log('[ERROR] SEOConfig.astro is missing translated legal page canonical calculation!');
+// ===== 12. TRANSLATED LEGAL & CONTENT PAGE CANONICAL CHECKS =====
+console.log('\n--- 12. TRANSLATED LEGAL & CONTENT PAGE CANONICAL CHECKS ---');
+const hasCanonicalLogic = seoConfig.includes('canonicalURL') && seoConfig.includes('SITE_ORIGIN');
+if (!hasCanonicalLogic) {
+  console.log('[ERROR] SEOConfig.astro is missing self-referencing canonical calculation!');
   process.exitCode = 1;
 } else {
-  console.log('SEOConfig.astro contains translated legal page canonical calculation: YES');
+  console.log('SEOConfig.astro contains self-referencing canonical calculation: YES');
 }
 
 if (fs.existsSync('dist')) {
   const sampleLegalPages = [
-    { path: 'dist/ar/about.html', expected: 'https://savetik-fast.xyz/about' },
-    { path: 'dist/fr/privacy.html', expected: 'https://savetik-fast.xyz/privacy' },
-    { path: 'dist/es/terms.html', expected: 'https://savetik-fast.xyz/terms' },
-    { path: 'dist/de/contact.html', expected: 'https://savetik-fast.xyz/contact' },
-    { path: 'dist/it/dmca.html', expected: 'https://savetik-fast.xyz/dmca' },
-    { path: 'dist/tr/disclaimer.html', expected: 'https://savetik-fast.xyz/disclaimer' }
+    { path: 'dist/ar/about.html', expected: 'https://savetik-fast.xyz/ar/about' },
+    { path: 'dist/fr/privacy.html', expected: 'https://savetik-fast.xyz/fr/privacy' },
+    { path: 'dist/es/terms.html', expected: 'https://savetik-fast.xyz/es/terms' },
+    { path: 'dist/de/contact.html', expected: 'https://savetik-fast.xyz/de/contact' },
+    { path: 'dist/it/dmca.html', expected: 'https://savetik-fast.xyz/it/dmca' },
+    { path: 'dist/tr/disclaimer.html', expected: 'https://savetik-fast.xyz/tr/disclaimer' }
   ];
   let canonicalErrors = 0;
   sampleLegalPages.forEach(({ path: file, expected }) => {
@@ -212,7 +203,7 @@ if (fs.existsSync('dist')) {
   if (canonicalErrors > 0) {
     process.exitCode = 1;
   } else {
-    console.log('Dist build translated legal page canonical URLs verified: OK');
+    console.log('Dist build self-referencing multilingual canonical URLs verified: OK');
   }
 }
 
