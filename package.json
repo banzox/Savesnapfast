@@ -9,7 +9,9 @@
     "astro": "astro",
     "doctor": "node tools/site-doctor.cjs --verbose",
     "doctor:fix": "node tools/site-doctor.cjs --fix --verbose",
-    "doctor:report": "node tools/site-doctor.cjs --report"
+    "doctor:report": "node tools/site-doctor.cjs --report",
+    "live:check": "node tools/live-diagnostics.cjs",
+    "ping:search": "node tools/ping_search_engines.cjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
