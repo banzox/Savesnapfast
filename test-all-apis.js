@@ -1,5 +1,4 @@
-// Bypass TLS hostname mismatches safely for diagnostic test suites
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+// NOTE: Removed NODE_TLS_REJECT_UNAUTHORIZED='0' for security. If TLS errors occur, fix the root cause instead.
 
 async function fetchZell(url) {
     const res = await fetch(`https://apizell.web.id/download/tiktok?url=${encodeURIComponent(url)}`, {

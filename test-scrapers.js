@@ -1,5 +1,4 @@
-// Bypass TLS hostname mismatches safely for diagnostic test suites
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+// NOTE: Removed NODE_TLS_REJECT_UNAUTHORIZED='0' for security.
 
 async function testTikwm() {
     const url = "https://www.tiktok.com/@tiktok/video/7106594312292453675";

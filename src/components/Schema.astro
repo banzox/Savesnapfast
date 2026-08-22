@@ -9,17 +9,37 @@ interface Props {
 const { lang = "en", noindex = false } = Astro.props;
 const t = useTranslations(lang);
 
-// Dynamically generate FAQ Schema
+const pathname = Astro.url.pathname.replace(/\.html$/, "");
+const pathParts = pathname.split("/").filter(Boolean);
+const siteOrigin = "https://savetik-fast.xyz";
+
+// Identify language prefix
+const isLangPrefix = lang !== "en" && pathParts.length > 0 && pathParts[0] === lang;
+const breadcrumbParts = isLangPrefix ? pathParts.slice(1) : pathParts;
+const pageSlug = breadcrumbParts[breadcrumbParts.length - 1] || "";
+
+// Dynamically generate FAQ Schema matching specific page context
+let faqPrefix = "faq";
+if (pageSlug === "mp3") faqPrefix = "mp3_page.faq";
+else if (pageSlug === "story") faqPrefix = "story_page.faq";
+else if (pageSlug === "slideshow") faqPrefix = "slideshow_page.faq";
+else if (["ios", "android", "mac", "pc"].includes(pageSlug)) faqPrefix = `${pageSlug}_page.faq`;
+
 const faqSchemaItems = [];
 let i = 1;
 while (true) {
-    const qKey = `faq.q${i}`;
-    const aKey = `faq.a${i}`;
-    const q = t(qKey);
-    const a = t(aKey);
+    let q = t(`${faqPrefix}.q${i}`);
+    let a = t(`${faqPrefix}.a${i}`);
+
+    // If page-specific prefix failed on the first question, try fallback to generic faq
+    if ((!q || q === `${faqPrefix}.q${i}` || !a || a === `${faqPrefix}.a${i}`) && faqPrefix !== "faq" && i === 1) {
+        faqPrefix = "faq";
+        q = t(`faq.q${i}`);
+        a = t(`faq.a${i}`);
+    }
 
     // Stop if translation is missing (returns key) or empty
-    if (!q || q === qKey || !a || a === aKey) {
+    if (!q || q === `${faqPrefix}.q${i}` || !a || a === `${faqPrefix}.a${i}`) {
         break;
     }
 
@@ -98,16 +118,6 @@ const organizationSchema = {
     },
 };
 
-const pathname = Astro.url.pathname.replace(/\.html$/, "");
-const pathParts = pathname.split("/").filter(Boolean);
-const siteOrigin = "https://savetik-fast.xyz";
-
-// We need languages imported to verify if the first part is a lang code.
-// Instead of full import, we just use the lang prop which is passed to the component.
-// Wait, the lang prop tells us the current language!
-// If lang is not "en", then the first part is guaranteed to be the lang code.
-const isLangPrefix = lang !== "en" && pathParts.length > 0 && pathParts[0] === lang;
-
 const itemListElement = [
     {
         "@type": "ListItem",
@@ -118,8 +128,6 @@ const itemListElement = [
 ];
 
 let currentPath = isLangPrefix ? `/${lang}` : "";
-const breadcrumbParts = isLangPrefix ? pathParts.slice(1) : pathParts;
-
 breadcrumbParts.forEach((part, index) => {
     currentPath += `/${part}`;
     
@@ -148,7 +156,10 @@ const breadcrumbSchema = {
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+{!noindex && (
 <script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)} />
+)}
 
 {
     !noindex && ["ios", "android", "mac", "pc"].includes(breadcrumbParts[breadcrumbParts.length - 1] || "") && (
