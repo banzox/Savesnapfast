@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Downloader from "../../components/Downloader.jsx";
 import ToolsTabs from "../../components/tools/ToolsTabs.jsx";
 import { languages, defaultLang } from "../../i18n/ui";
 import { useTranslations, getTranslations } from "../../utils/i18n";
@@ -24,45 +23,124 @@ const currentLang = (isValidLang ? lang : "en") as keyof typeof languages;
 const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
 
-const tools = [
-    { icon: "fas fa-history", key: "story_downloader", href: "story" },
-    { icon: "fas fa-headphones", key: "mp3_downloader", href: "mp3" },
-    { icon: "fas fa-images", key: "slideshow_downloader", href: "slideshow" },
+const quickTools = [
+    { id: "compressor", icon: "fas fa-compress-arrows-alt", name: "Image Compressor", tag: "Lossless WebP/PNG", color: "#00f2ea" },
+    { id: "converter", icon: "fas fa-exchange-alt", name: "Image Converter", tag: "Multi-Format", color: "#3b82f6" },
+    { id: "qrcode", icon: "fas fa-qrcode", name: "QR Code Studio", tag: "1024px Ultra HD", color: "#8b5cf6" },
+    { id: "money", icon: "fas fa-coins", name: "CRP Earnings Calc", tag: "2026 RPM Model", color: "#10b981" },
+    { id: "engagement", icon: "fas fa-chart-line", name: "Viral Score Calc", tag: "Engagement Diagnostics", color: "#f59e0b" },
+    { id: "font", icon: "fas fa-font", name: "Aesthetic Fonts", tag: "22+ Unicode Styles", color: "#ec4899" },
+    { id: "hashtag", icon: "fas fa-hashtag", name: "Hashtag & Caption Gen", tag: "16 Niches + Custom", color: "#ff0050" },
+];
+
+const downloaders = [
+    { icon: "fas fa-video", title: "TikTok Video Downloader", desc: "Save full HD MP4 videos without watermark in original 1080p quality.", href: `/${lang}` },
+    { icon: "fas fa-headphones", title: "TikTok MP3 Audio", desc: "Extract crystal clear original soundtracks and trending sounds.", href: `/${lang}/mp3` },
+    { icon: "fas fa-history", title: "TikTok Stories Downloader", desc: "Download temporary 24h stories anonymously before they expire.", href: `/${lang}/story` },
+    { icon: "fas fa-layer-group", title: "TikTok Slideshow Downloader", desc: "Download all carousel photo slides individually or bundled in a ZIP.", href: `/${lang}/slideshow` },
 ];
 ---
 
 {
     isValidLang ? (
         <Layout
-            title={t("tools.meta.title")}
-            description={t("tools.meta.description")}
+            title={t("tools.meta.title") || "Free TikTok Tools Suite 2026 - SaveTikFast"}
+            description={t("tools.meta.description") || "Free browser-based tools for TikTok creators: Image compressor, format converter, money calculator, engagement rate, aesthetic fonts, and hashtag generator."}
             lang={currentLang}
         >
-            <article class="hero-section">
-                <h1>
-                    <i class="fas fa-tools accent-icon" />
-                    {t("tools.hero.title")}
-                </h1>
-                <p>{t("tools.hero.desc")}</p>
+            <!-- ─── Hero Header ─── -->
+            <section class="tools-hero">
+                <div class="tools-hero-inner">
+                    <div class="tools-status-badge">
+                        <span class="live-pulse"></span>
+                        <span>⚡ 2026 TikTok Creator Suite • 100% Free &amp; Private</span>
+                    </div>
 
-                <ToolsTabs client:load translations={translations} />
-            </article>
+                    <h1 class="tools-main-title">
+                        Next-Gen <span class="gradient-text">TikTok Creator</span> &amp; Media Tools
+                    </h1>
 
-            <div class="section-divider">
-                <h3>{t("blog.tools_heading") || "More Tools"}</h3>
-            </div>
+                    <p class="tools-subtitle">
+                        Supercharge your content workflow with lightning-fast browser-based tools. 
+                        Zero software downloads, zero server uploads, and 100% client-side privacy.
+                    </p>
 
-            <div class="container features-grid">
-                {tools.map((tool) => (
-                    <a href={`/${lang}/${tool.href}`} class="feature-card">
-                        <div class="icon-box">
-                            <i class={tool.icon} />
+                    <div class="tools-perks-row">
+                        <div class="perk-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Client-Side Privacy</span>
                         </div>
-                        <h3>{t(`tools.${tool.key}`) || tool.key}</h3>
-                        <p>{t(`tools.${tool.key}_desc`)}</p>
-                    </a>
-                ))}
-            </div>
+                        <div class="perk-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Zero Wait Times</span>
+                        </div>
+                        <div class="perk-item">
+                            <i class="fas fa-infinity"></i>
+                            <span>Unlimited Free Usage</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ─── Interactive Tools Workspace ─── -->
+            <section class="tools-workspace-section">
+                <div class="workspace-card">
+                    <ToolsTabs client:load translations={translations} />
+                </div>
+            </section>
+
+            <!-- ─── Quick Access Grid ─── -->
+            <section class="container quick-tools-section">
+                <div class="section-title-wrap">
+                    <span class="section-tag">All-In-One Toolkit</span>
+                    <h2>Explore Creator Utilities</h2>
+                    <p>Select any tool to instantly launch the calculator, generator, or media converter.</p>
+                </div>
+
+                <div class="quick-tools-grid">
+                    {quickTools.map((tool) => (
+                        <a href={`#${tool.id}`} class="quick-tool-card">
+                            <div class="tool-card-top">
+                                <div class="tool-icon-wrapper" style={`background: ${tool.color}18; color: ${tool.color}; border-color: ${tool.color}40;`}>
+                                    <i class={tool.icon}></i>
+                                </div>
+                                <span class="tool-tag">{tool.tag}</span>
+                            </div>
+                            <h3>{tool.name}</h3>
+                            <div class="tool-launch-link">
+                                <span>Launch Tool</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </section>
+
+            <!-- ─── Dedicated Downloader Shortcuts ─── -->
+            <section class="container downloaders-section">
+                <div class="section-title-wrap">
+                    <span class="section-tag">Media Download Suite</span>
+                    <h2>Looking for Video &amp; Audio Downloaders?</h2>
+                    <p>Save pristine high-speed TikTok media without watermark directly to your phone or PC.</p>
+                </div>
+
+                <div class="downloaders-grid">
+                    {downloaders.map((d) => (
+                        <a href={d.href} class="downloader-nav-card">
+                            <div class="d-icon-box">
+                                <i class={d.icon}></i>
+                            </div>
+                            <div class="d-text-content">
+                                <h3>{d.title}</h3>
+                                <p>{d.desc}</p>
+                            </div>
+                            <div class="d-arrow-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </section>
         </Layout>
     ) : (
         <NotFound />
@@ -70,7 +148,306 @@ const tools = [
 }
 
 <style>
-    .accent-icon {
-        color: var(--secondary);
+    /* ─── Hero Section ─── */
+    .tools-hero {
+        padding: 50px 20px 30px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .tools-hero-inner {
+        max-width: 860px;
+        margin: 0 auto;
+    }
+    .tools-status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(0, 242, 234, 0.1);
+        border: 1px solid rgba(0, 242, 234, 0.3);
+        color: #00f2ea;
+        padding: 6px 16px;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        box-shadow: 0 0 20px rgba(0, 242, 234, 0.15);
+    }
+    [data-theme='light'] .tools-status-badge {
+        background: rgba(37, 99, 235, 0.08);
+        border-color: rgba(37, 99, 235, 0.25);
+        color: #2563eb;
+        box-shadow: none;
+    }
+    .live-pulse {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #10b981;
+        box-shadow: 0 0 10px #10b981;
+        animation: pulseAnimation 2s infinite;
+    }
+    @keyframes pulseAnimation {
+        0% { transform: scale(0.95); opacity: 0.8; }
+        50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 16px #10b981; }
+        100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    .tools-main-title {
+        font-size: 2.7rem;
+        font-weight: 900;
+        line-height: 1.15;
+        color: var(--text-main, #ffffff);
+        margin: 0 0 16px;
+        letter-spacing: -0.5px;
+    }
+    [data-theme='light'] .tools-main-title {
+        color: #0f172a;
+    }
+    .gradient-text {
+        background: linear-gradient(135deg, #00f2ea 0%, #ff0050 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .tools-subtitle {
+        font-size: 1.1rem;
+        color: var(--text-dim);
+        line-height: 1.6;
+        max-width: 720px;
+        margin: 0 auto 28px;
+    }
+    .tools-perks-row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .perk-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--text-dim);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    [data-theme='light'] .perk-item {
+        background: #f1f5f9;
+        border-color: rgba(0, 0, 0, 0.08);
+        color: #475569;
+    }
+    .perk-item i {
+        color: #00f2ea;
+    }
+    [data-theme='light'] .perk-item i {
+        color: #2563eb;
+    }
+
+    /* ─── Workspace Card ─── */
+    .tools-workspace-section {
+        max-width: 1060px;
+        margin: 0 auto 60px;
+        padding: 0 20px;
+    }
+    .workspace-card {
+        background: rgba(18, 18, 38, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 28px;
+        padding: 25px 20px 35px;
+        backdrop-filter: blur(24px);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+    [data-theme='light'] .workspace-card {
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    }
+
+    /* ─── Quick Tools Grid ─── */
+    .section-title-wrap {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .section-tag {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ff0050;
+        margin-bottom: 8px;
+    }
+    .section-title-wrap h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--text-main, #fff);
+        margin: 0 0 10px;
+    }
+    [data-theme='light'] .section-title-wrap h2 {
+        color: #0f172a;
+    }
+    .section-title-wrap p {
+        color: var(--text-dim);
+        font-size: 0.98rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .quick-tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+    .quick-tool-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 22px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    [data-theme='light'] .quick-tool-card {
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    }
+    .quick-tool-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--border-bright, rgba(0, 242, 234, 0.5));
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    }
+    .tool-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    .tool-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+    .tool-tag {
+        font-size: 0.72rem;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text-dim);
+        padding: 4px 10px;
+        border-radius: 12px;
+    }
+    [data-theme='light'] .tool-tag {
+        background: #f1f5f9;
+        color: #64748b;
+    }
+    .quick-tool-card h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-main, #fff);
+        margin: 0 0 16px;
+    }
+    [data-theme='light'] .quick-tool-card h3 {
+        color: #0f172a;
+    }
+    .tool-launch-link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--secondary, #00f2ea);
+        transition: gap 0.2s;
+    }
+    [data-theme='light'] .tool-launch-link {
+        color: #2563eb;
+    }
+    .quick-tool-card:hover .tool-launch-link {
+        gap: 10px;
+    }
+
+    /* ─── Downloader Cards ─── */
+    .downloaders-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        margin-bottom: 70px;
+    }
+    .downloader-nav-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: all 0.25s ease;
+    }
+    [data-theme='light'] .downloader-nav-card {
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.08);
+    }
+    .downloader-nav-card:hover {
+        border-color: #ff0050;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 0, 80, 0.15);
+    }
+    .d-icon-box {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(255, 0, 80, 0.12);
+        color: #ff0050;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+    .d-text-content {
+        flex: 1;
+    }
+    .d-text-content h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text-main, #fff);
+        margin: 0 0 4px;
+    }
+    [data-theme='light'] .d-text-content h3 {
+        color: #0f172a;
+    }
+    .d-text-content p {
+        font-size: 0.82rem;
+        color: var(--text-dim);
+        margin: 0;
+        line-height: 1.4;
+    }
+    .d-arrow-btn {
+        color: var(--text-dim);
+        font-size: 0.9rem;
+        transition: transform 0.2s;
+    }
+    .downloader-nav-card:hover .d-arrow-btn {
+        transform: translateX(4px);
+        color: #ff0050;
+    }
+
+    @media (max-width: 768px) {
+        .tools-main-title {
+            font-size: 2.1rem;
+        }
+        .workspace-card {
+            padding: 16px 12px 25px;
+            border-radius: 20px;
+        }
     }
 </style>

@@ -7,10 +7,11 @@ const { saveAs } = fileSaver;
 const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
+
 export default function Downloader(props) {
     const { messages = {}, mode = 'video' } = props;
 
-    // دالة الترجمة
+    // دالة الترجمة مع دعم النصوص الافتراضية الذكية
     const t = (key, defaultText) => {
         const k = key.replace('downloader.', '');
         return messages[k] || defaultText;
@@ -18,13 +19,30 @@ export default function Downloader(props) {
 
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
+    const [loadStage, setLoadStage] = useState(1);
     const [zipping, setZipping] = useState(false);
+    const [zipProgress, setZipProgress] = useState(0);
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
     const resultRef = useRef(null);
     const [downloadPending, setDownloadPending] = useState(null);
     const [countdown, setCountdown] = useState(0);
     const [downloadComplete, setDownloadComplete] = useState(false);
+    const [copied, setCopied] = useState(false);
+
+    // التحقق من صحة رابط تيك توك
+    const isTikTokUrl = (str) => {
+        if (!str || typeof str !== 'string') return false;
+        const clean = str.trim().toLowerCase();
+        return (
+            clean.includes('tiktok.com') ||
+            clean.includes('douyin.com') ||
+            clean.includes('vt.tiktok.com') ||
+            clean.includes('vm.tiktok.com')
+        );
+    };
+
+    const isLinkValid = isTikTokUrl(url);
 
     // --- دالة تنظيف وتسمية الملفات ---
     const sanitizeName = (name) => {
@@ -47,7 +65,6 @@ export default function Downloader(props) {
 
     const handlePaste = async () => {
         try {
-            // Check for clipboard-read permission first
             if (navigator.permissions && navigator.permissions.query) {
                 const status = await navigator.permissions.query({ name: 'clipboard-read' });
                 if (status.state === 'denied') {
@@ -55,9 +72,11 @@ export default function Downloader(props) {
                 }
             }
             const text = await navigator.clipboard.readText();
-            if (text) setUrl(text);
+            if (text) {
+                setUrl(text.trim());
+                setError(null);
+            }
         } catch (err) {
-            // Fallback for browsers that block clipboard API or don't support it
             const input = document.getElementById('url-input');
             if (input) {
                 input.focus();
@@ -69,10 +88,17 @@ export default function Downloader(props) {
     const handleCopyInput = () => {
         if (!url) return;
         navigator.clipboard.writeText(url);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
+    const handleClear = () => {
+        setUrl('');
+        setError(null);
+        setCopied(false);
+    };
 
-    // Internal: executes the actual file download (called after countdown finishes or on skip)
+    // تنفيذ التنزيل الفعلي عبر البروكسي الداخلي
     const executeDownload = (fileUrl, fileName) => {
         if (!fileUrl) return;
         const downloadUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName)}`;
@@ -82,31 +108,25 @@ export default function Downloader(props) {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        setDownloadComplete(true); // Show Thank You toast
+        setDownloadComplete(true);
     };
 
-    // Start a requested file download immediately, with no ad interstitial.
     const initiateDownload = (fileUrl, fileName) => {
         if (!fileUrl) return;
         executeDownload(fileUrl, fileName);
     };
 
-    // Native Ad logic is now handled in an iframe directly in the render to prevent async document.write loading issues
-
-    // Reliable Custom Slow Scroll to Results (1.2s / 1200ms)
-    const customSlowScroll = (targetId, duration = 1200) => {
+    // التمرير السلس والذكي نحو النتائج
+    const customSlowScroll = (targetId, duration = 900) => {
         const target = document.getElementById(targetId);
         if (!target) return;
 
         const rect = target.getBoundingClientRect();
         let targetPosition;
         
-        // إذا كان حجم النتيجة أصغر من الشاشة، نجعل أسفل النتيجة متوازياً مع أسفل الشاشة
-        // هذا سيعطي مساحة علوية لإظهار الإعلان بشكل مثالي
         if (rect.height < window.innerHeight - 150) {
-            targetPosition = rect.bottom + window.scrollY - window.innerHeight + 40; // 40px margin at bottom
+            targetPosition = rect.bottom + window.scrollY - window.innerHeight + 40;
         } else {
-            // أما إذا كانت النتيجة طويلة جداً (مثل الصور المتعددة)، نبدأ من الأعلى
             targetPosition = rect.top + window.scrollY - 85;
         }
         
@@ -114,8 +134,7 @@ export default function Downloader(props) {
         const distance = targetPosition - startPosition;
         let startTime = null;
 
-        // Custom easing curve (easeOutQuint) - starts fast, slows down beautifully at the end
-        const easing = (t) => 1 - Math.pow(1 - t, 5);
+        const easing = (t) => 1 - Math.pow(1 - t, 4);
 
         const animation = (currentTime) => {
             if (startTime === null) startTime = currentTime;
@@ -137,42 +156,25 @@ export default function Downloader(props) {
     useEffect(() => {
         if (result && resultRef.current) {
             const timer = setTimeout(() => {
-                // Focus explicitly on the RESULT Info, but raised higher up to reveal the ad
-                customSlowScroll('result-info-box', 1200);
-            }, 600); // Wait 600ms for layout to settle before moving
+                customSlowScroll('result-info-box', 900);
+            }, 400);
             return () => clearTimeout(timer);
         }
     }, [result]);
 
-    // Countdown interstitial timer + body scroll lock
-    useEffect(() => {
-        if (!downloadPending) {
-            document.body.style.overflow = '';
-            return;
-        }
-        document.body.style.overflow = 'hidden';
-        if (countdown > 0) {
-            const timer = setTimeout(() => setCountdown(c => c - 1), 1000);
-            return () => clearTimeout(timer);
-        } else {
-            executeDownload(downloadPending.fileUrl, downloadPending.fileName);
-            setDownloadPending(null);
-        }
-        // Cleanup on unmount (e.g. SPA page navigation)
-        return () => { document.body.style.overflow = ''; };
-    }, [countdown, downloadPending]);
-
-    // Auto-dismiss Thank You toast after 8 seconds
+    // إخفاء إشعار اكتمال التنزيل تلقائياً بعد 5 ثوانٍ
     useEffect(() => {
         if (!downloadComplete) return;
-        const timer = setTimeout(() => setDownloadComplete(false), 8000);
+        const timer = setTimeout(() => setDownloadComplete(false), 5000);
         return () => clearTimeout(timer);
     }, [downloadComplete]);
 
+    // تنزيل جميع الصور كملف مضغوط ZIP مع شريط تقدم
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
 
         setZipping(true);
+        setZipProgress(10);
         try {
             const { default: JSZip } = await loadJSZip();
             const zip = new JSZip();
@@ -180,7 +182,8 @@ export default function Downloader(props) {
             const folder = zip.folder(`TikTok_Slideshow_${author}`);
 
             let fetchedCount = 0;
-            // Fetch all images via proxy to avoid CORS blocking and empty ZIPs
+            const total = result.images.length;
+
             const imagePromises = result.images.map(async (imgUrl, index) => {
                 try {
                     const fileName = `slide_${index + 1}.jpg`;
@@ -191,9 +194,10 @@ export default function Downloader(props) {
                     if (blob && blob.size > 0) {
                         folder.file(fileName, blob);
                         fetchedCount++;
+                        setZipProgress(Math.round(10 + (fetchedCount / total) * 70));
                     }
                 } catch (e) {
-                    // Silent fail for individual images
+                    // تجاهل الأخطاء الفردية
                 }
             });
 
@@ -204,120 +208,115 @@ export default function Downloader(props) {
                 return;
             }
 
+            setZipProgress(90);
             const content = await zip.generateAsync({ type: "blob" });
+            setZipProgress(100);
             saveAs(content, `TikTok_Slideshow_${author}.zip`);
+            setDownloadComplete(true);
 
         } catch (err) {
             setError(t('error_busy', "Failed to create ZIP file."));
         } finally {
             setZipping(false);
+            setZipProgress(0);
         }
     };
 
     const validateResultType = (res, currentMode) => {
         const hasImages = res.images && res.images.length > 0;
-        const hasVideo = !!(res.video || res.play || res.url || res.nowatermark);
-        // Basic Story detection: Check URL or if API flags it (API might not always flag, but presence of both video/image or specialized metadata helps)
-        // For now, we rely on output content.
-
         if (currentMode === 'slideshow') {
             if (!hasImages) return { valid: false, error: t('error_wrong_type_slideshow', "Link is not a slideshow! Use Video Downloader.") };
         }
-
-        // Strict Video Mode: If it's a slideshow (only images), warn user? 
-        // Or if user wants to download VIDEO, but link is SLIDESHOW, TikWM often returns images for slideshows.
-        // If we are in VIDEO mode, we generally accept everything BUT if it's purely images, maybe warn?
-        // User requested strict separation.
-        if (currentMode === 'video' || currentMode === 'mp3') {
-            // MP3 is loose, usually any link works for mp3.
-        }
-
-        if (currentMode === 'story') {
-            // Stories can be video or image. 
-            // Ideally check if URL contains /story/ or /video/.
-            if (!url.includes('/story/') && !url.includes('/video/')) {
-                // Weak check, but better than nothing.
-            }
-        }
-
         return { valid: true };
     };
 
     const handleDownload = async () => {
-        if (!url) return;
+        const cleanUrl = url.trim();
+        if (!cleanUrl) return;
 
-        if (!url.includes('tiktok.com')) {
-            setError(t('error_invalid_link', "Invalid Link. Please check and try again."));
+        if (!isTikTokUrl(cleanUrl)) {
+            setError(t('error_invalid_link', "Please enter a valid TikTok video, audio, or photo link."));
             return;
         }
 
         setLoading(true);
+        setLoadStage(1);
         setError(null);
         setResult(null);
+
+        const stageTimer1 = setTimeout(() => setLoadStage(2), 700);
+        const stageTimer2 = setTimeout(() => setLoadStage(3), 1400);
 
         try {
             let res = null;
             let rapidApiData = null;
 
+            // المستوى 1: طلب خادم الحافة (Edge Worker)
             try {
                 const rapidRes = await fetch(WORKER_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ url: url })
+                    body: JSON.stringify({ url: cleanUrl })
                 });
-                const rData = await rapidRes.json();
-                if (!rData.error && rData.author) {
-                    rapidApiData = rData;
+                if (rapidRes.ok) {
+                    const rData = await rapidRes.json();
+                    if (!rData.error && rData.author) {
+                        rapidApiData = rData;
+                    }
                 }
             } catch (e) {
-                console.warn("RapidAPI metadata failed", e);
+                console.warn("Worker fetch warning:", e);
             }
 
+            // المستوى 2: طلب TikWM المباشر
             try {
-                const tmRes = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(url)}`, {
+                const tmRes = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(cleanUrl)}`, {
                     headers: { "Accept": "application/json" }
                 });
-                const tmJson = await tmRes.json();
-                
-                if (tmJson.code === 0 && tmJson.data) {
-                    const v = tmJson.data;
-                    res = {
-                        provider: "tikwm_client",
-                        title: v.title || v.desc || "TikTok Video",
-                        author: v.author?.unique_id || v.author?.nickname || "User",
-                        cover: v.cover || v.origin_cover || "",
-                        video: v.play || v.wmplay || "", 
-                        music: typeof v.music === 'string' ? v.music : (v.music?.play_url || v.music_info?.play || ""),
-                        images: v.images || [],
-                        type: (v.images && v.images.length > 0) ? "image" : "video"
-                    };
-                }
-            } catch (e) {
-                console.warn("TikWM video fetch failed", e);
-            }
-
-            if (!res || !res.video) {
-                try {
-                    const zellRes = await fetch(`https://apizell.web.id/download/tiktok?url=${encodeURIComponent(url)}`, {
-                        headers: { "Accept": "application/json" }
-                    });
-                    const zJson = await zellRes.json();
-                    
-                    if (zJson.status && zJson.result) {
-                        const r = zJson.result;
+                if (tmRes.ok) {
+                    const tmJson = await tmRes.json();
+                    if (tmJson.code === 0 && tmJson.data) {
+                        const v = tmJson.data;
                         res = {
-                            provider: "zell_client",
-                            title: r.title || "TikTok Video",
-                            author: r.author?.nickname || r.author?.username || "User",
-                            cover: r.thumbnail || "",
-                            video: Array.isArray(r.video) ? r.video[0] : (r.video?.url || r.video),
-                            music: r.music?.url || r.music || "",
-                            images: r.images || [],
-                            type: (r.images && r.images.length > 0) ? "image" : "video"
+                            provider: "tikwm_client",
+                            title: v.title || v.desc || "TikTok Video",
+                            author: v.author?.unique_id || v.author?.nickname || "User",
+                            cover: v.cover || v.origin_cover || "",
+                            video: v.play || v.wmplay || v.hdplay || "", 
+                            music: typeof v.music === 'string' ? v.music : (v.music?.play_url || v.music_info?.play || ""),
+                            images: Array.isArray(v.images) ? v.images : [],
+                            type: (v.images && v.images.length > 0) ? "image" : "video"
                         };
                     }
+                }
+            } catch (e) {
+                console.warn("TikWM fetch warning:", e);
+            }
+
+            // المستوى 3: طلب Zell API الاحتياطي
+            if (!res || !res.video) {
+                try {
+                    const zellRes = await fetch(`https://apizell.web.id/download/tiktok?url=${encodeURIComponent(cleanUrl)}`, {
+                        headers: { "Accept": "application/json" }
+                    });
+                    if (zellRes.ok) {
+                        const zJson = await zellRes.json();
+                        if (zJson.status && zJson.result) {
+                            const r = zJson.result;
+                            res = {
+                                provider: "zell_client",
+                                title: r.title || "TikTok Video",
+                                author: r.author?.nickname || r.author?.username || "User",
+                                cover: r.thumbnail || "",
+                                video: Array.isArray(r.video) ? r.video[0] : (r.video?.url || r.video),
+                                music: r.music?.url || r.music || "",
+                                images: Array.isArray(r.images) ? r.images : [],
+                                type: (r.images && r.images.length > 0) ? "image" : "video"
+                            };
+                        }
+                    }
                 } catch (e) {
-                    console.warn("Zell video fetch failed", e);
+                    console.warn("Zell fetch warning:", e);
                 }
             }
 
@@ -328,11 +327,12 @@ export default function Downloader(props) {
                     if (!res.cover) res.cover = rapidApiData.cover;
                     res.provider = `RapidAPI + ${res.provider}`;
                 }
+            } else if (rapidApiData && (rapidApiData.video || (rapidApiData.images && rapidApiData.images.length > 0))) {
+                res = rapidApiData;
             } else {
-                throw new Error("Unable to fetch video links. Please try again.");
+                throw new Error(t('error_not_found', "Unable to fetch video links. Please ensure the video is public and try again."));
             }
 
-            // التحقق النهائي من نوع المحتوى
             const validation = validateResultType(res, mode);
             if (!validation.valid) {
                 throw new Error(validation.error);
@@ -340,22 +340,21 @@ export default function Downloader(props) {
 
             setResult(res);
 
-
         } catch (err) {
             let msg = err.message;
-            if (msg === 'Failed to fetch') msg = t('error_invalid_link', "Invalid Link or Network Error.");
+            if (msg === 'Failed to fetch') msg = t('error_invalid_link', "Network error or invalid link. Please try again.");
             setError(msg);
         } finally {
+            clearTimeout(stageTimer1);
+            clearTimeout(stageTimer2);
             setLoading(false);
         }
     };
 
-    // المتغيرات الآمنة
     const videoUrl = result?.video || result?.play || result?.url || result?.nowatermark;
     const musicUrl = result?.music || result?.audio;
     const images = result?.images && Array.isArray(result.images) && result.images.length > 0 ? result.images : null;
 
-    // Use passed placeholder or fallback
     const placeholderText = props.placeholder || t('placeholder', "Paste TikTok link here...");
 
     return (
@@ -367,7 +366,10 @@ export default function Downloader(props) {
                         type="url"
                         id="url-input"
                         value={url}
-                        onChange={(e) => setUrl(e.target.value)}
+                        onChange={(e) => {
+                            setUrl(e.target.value);
+                            if (error) setError(null);
+                        }}
                         placeholder={placeholderText}
                         aria-label={placeholderText}
                         onKeyDown={(e) => e.key === 'Enter' && handleDownload()}
@@ -379,12 +381,13 @@ export default function Downloader(props) {
                         {/* زر ذكي: لصق عند الفراغ، نسخ عند وجود نص */}
                         <button
                             type="button"
-                            className={`action-btn ${url ? 'copy-btn' : 'paste-btn'}`}
+                            className={`action-btn ${url ? (copied ? 'copied-btn' : 'copy-btn') : 'paste-btn'}`}
                             onClick={url ? handleCopyInput : handlePaste}
-                            data-tooltip={url ? t('btn_copy', "Copy") : t('btn_paste', "Paste")}
-                            aria-label={url ? t('btn_copy', "Copy") : t('btn_paste', "Paste")}
+                            data-tooltip={url ? (copied ? t('copied', "Copied!") : t('btn_copy', "Copy")) : t('btn_paste', "Paste")}
+                            aria-label={url ? (copied ? t('copied', "Copied!") : t('btn_copy', "Copy")) : t('btn_paste', "Paste")}
+                            title={url ? (copied ? t('copied', "Copied!") : t('btn_copy', "Copy")) : t('btn_paste', "Paste")}
                         >
-                            <i className={`fas ${url ? 'fa-copy' : 'fa-paste'}`}></i>
+                            <i className={`fas ${url ? (copied ? 'fa-check' : 'fa-copy') : 'fa-paste'}`}></i>
                         </button>
 
                         {/* زر المسح - يظهر فقط عند وجود نص */}
@@ -392,9 +395,10 @@ export default function Downloader(props) {
                             <button
                                 type="button"
                                 className="action-btn clear-btn"
-                                onClick={() => setUrl('')}
+                                onClick={handleClear}
                                 data-tooltip={t('btn_clear', "Clear")}
                                 aria-label={t('btn_clear', "Clear")}
+                                title={t('btn_clear', "Clear")}
                             >
                                 <i className="fas fa-times"></i>
                             </button>
@@ -402,13 +406,34 @@ export default function Downloader(props) {
                     </div>
                 </div>
 
-                <button id="download-btn" onClick={handleDownload} disabled={loading}>
-                    <i className="fas fa-download"></i> {t('btn_download', "Download Now")}
+                {/* شارة التحقق الفوري من الرابط */}
+                {isLinkValid && !loading && !result && (
+                    <div className="link-ready-badge">
+                        <span className="pulse-dot"></span>
+                        <span>{t('link_detected', "TikTok Link Detected — Ready to Download")}</span>
+                    </div>
+                )}
+
+                <button 
+                    id="download-btn" 
+                    onClick={handleDownload} 
+                    disabled={loading || !url.trim()}
+                    className={loading ? 'loading-btn' : ''}
+                >
+                    {loading ? (
+                        <>
+                            <i className="fas fa-circle-notch fa-spin"></i> {t('btn_loading', "Processing...")}
+                        </>
+                    ) : (
+                        <>
+                            <i className="fas fa-bolt"></i> {t('btn_download', "Download Now")}
+                        </>
+                    )}
                 </button>
 
-                {/* ─── Native Banner Promo (Visible immediately below URL box) ─── */}
+                {/* ─── Native Banner Promo (Visible below URL box) ─── */}
                 {ADS_CONFIG.enableAdsterra && (
-                    <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '250px', borderRadius: '10px', marginTop: '10px', transition: 'height 0.3s ease' }}>
+                    <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '250px', borderRadius: '14px', marginTop: '14px', transition: 'height 0.3s ease' }}>
                         <iframe 
                             id="native-ad-iframe"
                             src="/ad-native"
@@ -420,7 +445,6 @@ export default function Downloader(props) {
                             style={{ display: 'block', backgroundColor: 'transparent', maxWidth: '100%', transition: 'height 0.3s ease' }}
                             title="Advertisement"
                             onLoad={(e) => {
-                                // Listen for height updates from the iframe
                                 const handleMessage = (event) => {
                                     if (event.data && event.data.type === 'resize-ad') {
                                         const newHeight = event.data.height;
@@ -431,44 +455,78 @@ export default function Downloader(props) {
                                     }
                                 };
                                 window.addEventListener('message', handleMessage);
-                                // Cleanup is handled when window goes away or is handled loosely
                             }}
                         ></iframe>
                     </div>
                 )}
             </div>
 
-            <div id="scroll-target" style={{ width: '100%', marginTop: '20px' }}>
-
+            <div id="scroll-target" style={{ width: '100%', marginTop: '24px' }}>
                 <div id="result-area" role="region" aria-live="polite">
 
+                {/* ─── بطاقة التحميل المرحلية المتطورة ─── */}
                 {loading && (
                     <div className="skeleton-loading-card">
-                        <div className="skeleton-thumbnail"></div>
-                        <div className="skeleton-info">
-                            <div className="skeleton-line author"></div>
-                            <div className="skeleton-line title"></div>
-                            <div className="skeleton-buttons">
-                                <div className="skeleton-btn"></div>
-                                <div className="skeleton-btn"></div>
+                        <div className="multi-stage-progress">
+                            <div className="progress-bar-track">
+                                <div 
+                                    className="progress-bar-fill"
+                                    style={{ 
+                                        width: loadStage === 1 ? '30%' : loadStage === 2 ? '70%' : '95%' 
+                                    }}
+                                ></div>
+                            </div>
+                            <div className="stage-steps">
+                                <div className={`stage-step ${loadStage >= 1 ? 'active' : ''}`}>
+                                    <i className="fas fa-link"></i>
+                                    <span>{t('stage_1', "Analyzing Link")}</span>
+                                </div>
+                                <div className={`stage-step ${loadStage >= 2 ? 'active' : ''}`}>
+                                    <i className="fas fa-magic"></i>
+                                    <span>{t('stage_2', "Extracting Stream")}</span>
+                                </div>
+                                <div className={`stage-step ${loadStage >= 3 ? 'active' : ''}`}>
+                                    <i className="fas fa-check-circle"></i>
+                                    <span>{t('stage_3', "Ready")}</span>
+                                </div>
                             </div>
                         </div>
-                        <div className="lightning-loader-container">
-                            <div className="lightning-bolt-wrapper">
-                                <i className="fas fa-bolt lightning-icon"></i>
+
+                        <div className="skeleton-content-row">
+                            <div className="skeleton-thumbnail"></div>
+                            <div className="skeleton-info">
+                                <div className="skeleton-line author"></div>
+                                <div className="skeleton-line title"></div>
+                                <div className="skeleton-buttons">
+                                    <div className="skeleton-btn"></div>
+                                    <div className="skeleton-btn"></div>
+                                </div>
                             </div>
-                            <p className="processing-text">{t('processing', "Processing...")}</p>
                         </div>
                     </div>
                 )}
                 
+                {/* ─── رسالة الخطأ العصرية ─── */}
                 {error && (
                     <div className="error-banner">
-                        <i className="fas fa-exclamation-circle"></i>
-                        <span>{error}</span>
+                        <div className="error-icon-wrapper">
+                            <i className="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div className="error-text-wrapper">
+                            <p className="error-title">{t('error_title', "Download Failed")}</p>
+                            <span className="error-desc">{error}</span>
+                        </div>
+                        <button 
+                            className="error-dismiss-btn"
+                            onClick={() => setError(null)}
+                            aria-label="Dismiss error"
+                        >
+                            <i className="fas fa-times"></i>
+                        </button>
                     </div>
                 )}
 
+                {/* ─── بطاقة النتيجة الفائقة الجودة (Result Card) ─── */}
                 {result && (
                     <div className="result-card">
                         <div className="result-header">
@@ -478,8 +536,9 @@ export default function Downloader(props) {
                                         src={result.cover}
                                         alt={result.title || "TikTok preview"}
                                         loading="lazy"
-                                        width="100"
-                                        height="130"
+                                        decoding="async"
+                                        width="120"
+                                        height="160"
                                     />
                                     <div className="preview-badge">
                                         <i className="fas fa-play"></i>
@@ -487,12 +546,24 @@ export default function Downloader(props) {
                                 </div>
                             )}
                             <div className="result-header-details">
-                                <p className="result-author">
-                                    <i className="fas fa-user-circle"></i> @{sanitizeName(result.author || 'User')}
-                                    <span className="verified-badge"><i className="fas fa-check"></i></span>
-                                </p>
+                                <div className="result-author-row">
+                                    <div className="author-avatar-badge">
+                                        <i className="fas fa-user-check"></i>
+                                    </div>
+                                    <div>
+                                        <p className="result-author">
+                                            @{sanitizeName(result.author || 'TikTok_User')}
+                                            <span className="verified-badge" title="Verified Creator">
+                                                <i className="fas fa-check-circle"></i>
+                                            </span>
+                                        </p>
+                                        <span className="result-badge-quality">
+                                            <i className="fas fa-crown"></i> 1080p Full HD
+                                        </span>
+                                    </div>
+                                </div>
                                 <p className="result-desc">
-                                    {result.title ? (result.title.length > 80 ? result.title.substring(0, 80) + '...' : result.title) : ''}
+                                    {result.title ? (result.title.length > 100 ? result.title.substring(0, 100) + '...' : result.title) : ''}
                                 </p>
                             </div>
                         </div>
@@ -501,59 +572,81 @@ export default function Downloader(props) {
                             <div ref={resultRef} id="result-buttons" className="result-buttons">
                                 {(!mode || mode === 'video') && videoUrl && !images && (
                                     <>
-                                        <button className="btn-download btn-video" onClick={() => initiateDownload(videoUrl, generateProName(result.author, 'mp4'))}>
+                                        <button 
+                                            className="btn-download btn-video" 
+                                            onClick={() => initiateDownload(videoUrl, generateProName(result.author, 'mp4'))}
+                                        >
                                             <i className="fas fa-check-circle"></i>
-                                            {t('download_nwm', "Download No Watermark")}
+                                            <span>{t('download_nwm', "Download No Watermark (Fast Server)")}</span>
                                         </button>
-                                        <button className="btn-download btn-hd" onClick={() => initiateDownload(videoUrl, generateProName(result.author + '_HD', 'mp4'))}>
+                                        <button 
+                                            className="btn-download btn-hd" 
+                                            onClick={() => initiateDownload(videoUrl, generateProName(result.author + '_HD', 'mp4'))}
+                                        >
                                             <i className="fas fa-crown"></i>
-                                            {t('download_hd', "Download HD 1080p")}
+                                            <span>{t('download_hd', "Download HD 1080p Ultra")}</span>
                                         </button>
                                         {musicUrl && (
-                                            <button className="btn-download btn-audio" onClick={() => initiateDownload(musicUrl, generateProName(result.author, 'mp3'))}>
+                                            <button 
+                                                className="btn-download btn-audio" 
+                                                onClick={() => initiateDownload(musicUrl, generateProName(result.author, 'mp3'))}
+                                            >
                                                 <i className="fas fa-music"></i>
-                                                {t('download_audio', "Download MP3 Audio")}
+                                                <span>{t('download_audio', "Download MP3 Audio")}</span>
                                             </button>
                                         )}
                                     </>
                                 )}
 
                                 {mode === 'mp3' && musicUrl && (
-                                    <button className="btn-download btn-audio" onClick={() => initiateDownload(musicUrl, generateProName(result.author, 'mp3'))}>
+                                    <button 
+                                        className="btn-download btn-audio" 
+                                        onClick={() => initiateDownload(musicUrl, generateProName(result.author, 'mp3'))}
+                                    >
                                         <i className="fas fa-music"></i>
-                                        {t('download_audio', "Download MP3 Audio")}
+                                        <span>{t('download_audio', "Download MP3 Audio (Original Sound)")}</span>
                                     </button>
                                 )}
 
                                 {mode === 'story' && (
                                     <>
                                         {videoUrl ? (
-                                            <button className="btn-download btn-video" onClick={() => initiateDownload(videoUrl, generateProName(result.author, 'mp4', 'story'))}>
-                                                <i className="fas fa-history"></i> {t('download_story_vid', "Download Story (Video)")}
+                                            <button 
+                                                className="btn-download btn-video" 
+                                                onClick={() => initiateDownload(videoUrl, generateProName(result.author, 'mp4', 'story'))}
+                                            >
+                                                <i className="fas fa-history"></i>
+                                                <span>{t('download_story_vid', "Download Story (Video)")}</span>
                                             </button>
                                         ) : (images && images.length > 0) ? (
-                                            <button className="btn-download btn-sm" style={{ width: '100%' }} onClick={() => initiateDownload(images[0], generateProName(result.author, 'jpg', 'story'))}>
-                                                <i className="fas fa-image"></i> {t('download_story_img', "Download Story (Image)")}
+                                            <button 
+                                                className="btn-download btn-sm" 
+                                                style={{ width: '100%' }} 
+                                                onClick={() => initiateDownload(images[0], generateProName(result.author, 'jpg', 'story'))}
+                                            >
+                                                <i className="fas fa-image"></i>
+                                                <span>{t('download_story_img', "Download Story (Image)")}</span>
                                             </button>
                                         ) : null}
                                     </>
                                 )}
 
                                 {(mode === 'slideshow' || (mode === 'video' && images)) && images && (
-                                    <div className="slideshow-actions" style={{ width: '100%', marginBottom: '15px' }}>
+                                    <div className="slideshow-actions" style={{ width: '100%', marginBottom: '16px' }}>
                                         <button
-                                            className="btn-download btn-video"
+                                            className="btn-download btn-zip"
                                             onClick={downloadAllImages}
                                             disabled={zipping}
-                                            style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: 'linear-gradient(45deg, #FF0050, #00F2EA)' }}
                                         >
                                             {zipping ? (
                                                 <>
-                                                    <i className="fas fa-spinner fa-spin"></i> {t('creating_zip', "Creating ZIP...")}
+                                                    <i className="fas fa-spinner fa-spin"></i> 
+                                                    <span>{t('creating_zip', "Creating ZIP...")} ({zipProgress}%)</span>
                                                 </>
                                             ) : (
                                                 <>
-                                                    <i className="fas fa-file-archive"></i> {t('download_zip', "Download All Images (ZIP)")}
+                                                    <i className="fas fa-file-archive"></i> 
+                                                    <span>{t('download_zip', "Download All Images in ZIP (One Click)")}</span>
                                                 </>
                                             )}
                                         </button>
@@ -561,35 +654,49 @@ export default function Downloader(props) {
                                 )}
                             </div>
 
-                            {/* ── Download Another Button ── */}
+                            {/* زر تنزيل فيديو آخر */}
                             <button
                                 onClick={() => { 
-                                    setResult(null); setUrl(''); setError(null); setDownloadComplete(false); 
+                                    setResult(null); 
+                                    setUrl(''); 
+                                    setError(null); 
+                                    setDownloadComplete(false); 
                                     window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    const input = document.getElementById('url-input');
+                                    if (input) input.focus();
                                 }}
                                 className="btn-another"
                             >
-                                <i className="fas fa-redo"></i>
-                                {t('download_another', 'Download Another Video')}
+                                <i className="fas fa-redo-alt"></i>
+                                <span>{t('download_another', 'Download Another Video')}</span>
                             </button>
 
+                            {/* شبكة معرض الصور للسلايد شو */}
                             {(mode === 'slideshow' || (mode === 'video' && images)) && images && (
-                                <div className="slideshow-container" style={{ marginTop: '15px' }}>
-                                    <div className="slideshow-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '10px' }}>
+                                <div className="slideshow-container">
+                                    <div className="slideshow-header-info">
+                                        <i className="fas fa-images"></i>
+                                        <span>{images.length} {t('photos_count', "Photos Found in Album")}</span>
+                                    </div>
+                                    <div className="slideshow-grid">
                                         {images.map((img, index) => (
                                             <div key={index} className="slide-item">
-                                                <img
-                                                    src={img}
-                                                    alt={`${t('slide_desc', 'TikTok Slideshow Image')} ${index + 1}`}
-                                                    style={{ width: '100%', borderRadius: '8px', aspectRatio: '9/16', objectFit: 'cover' }}
-                                                    loading="lazy"
-                                                    width="150"
-                                                    height="266"
-                                                />
-                                                <button className="btn-download btn-sm"
-                                                    style={{ fontSize: '0.85rem', width: '100%', marginTop: '5px' }}
-                                                    onClick={() => initiateDownload(img, generateProName(result.author, 'jpg', `slide_${index + 1}`))}>
-                                                    <i className="fas fa-download"></i> {t('save_image', "Save Image")}
+                                                <div className="slide-image-wrapper">
+                                                    <img
+                                                        src={img}
+                                                        alt={`${t('slide_desc', 'TikTok Photo')} ${index + 1}`}
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="180"
+                                                        height="320"
+                                                    />
+                                                    <span className="slide-counter">#{index + 1}</span>
+                                                </div>
+                                                <button 
+                                                    className="btn-download-slide"
+                                                    onClick={() => initiateDownload(img, generateProName(result.author, 'jpg', `slide_${index + 1}`))}
+                                                >
+                                                    <i className="fas fa-arrow-down"></i> {t('save_image', "Save Photo")}
                                                 </button>
                                             </div>
                                         ))}
@@ -603,155 +710,29 @@ export default function Downloader(props) {
                 </div>
             </div>
 
-            {/* ── Thank You Toast ── */}
+            {/* ── Toast الإشعار عند بدء التحميل ── */}
             {downloadComplete && (
-                <div style={{
-                    position: 'fixed', bottom: '24px', left: '50%', transform: 'translateX(-50%)',
-                    background: 'linear-gradient(135deg, #0d1b2a, #1a2f45)',
-                    border: '1px solid rgba(0,242,234,0.35)',
-                    borderRadius: '18px', padding: '14px 18px',
-                    zIndex: 8888, display: 'flex', alignItems: 'center', gap: '14px',
-                    maxWidth: '440px', width: '92%',
-                    boxShadow: '0 20px 60px rgba(0,0,0,0.55)',
-                    animation: 'toastSlideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards'
-                }}>
-                    <style>{`
-                        @keyframes toastSlideUp {
-                            from { transform: translate(-50%, 100px); opacity: 0; }
-                            to { transform: translate(-50%, 0); opacity: 1; }
-                        }
-                    `}</style>
-                    <span style={{ fontSize: '1.8rem', flexShrink: 0 }}>🎉</span>
-                    <div style={{ flex: 1 }}>
-                        <p style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 700, margin: '0 0 2px' }}>
-                            {t('thank_you_title', 'Download Started!')}
-                        </p>
-                        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.78rem', margin: 0 }}>
-                            {t('thank_you_msg', 'Check your downloads folder')}
-                        </p>
+                <div className="thank-you-toast">
+                    <div className="toast-icon-badge">
+                        <i className="fas fa-sparkles"></i>
+                    </div>
+                    <div className="toast-text-box">
+                        <p className="toast-title">{t('thank_you_title', 'Download Started!')}</p>
+                        <p className="toast-msg">{t('thank_you_msg', 'Your file has been saved to your downloads folder.')}</p>
                     </div>
                     <button
+                        className="toast-action-btn"
                         onClick={() => { 
-                            setResult(null); setUrl(''); setError(null); setDownloadComplete(false); 
+                            setResult(null); 
+                            setUrl(''); 
+                            setError(null); 
+                            setDownloadComplete(false); 
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
-                        style={{
-                            background: 'linear-gradient(45deg, #FF0050, #00F2EA)',
-                            border: 'none', borderRadius: '10px', padding: '8px 12px',
-                            color: '#fff', fontSize: '0.78rem', fontWeight: 700,
-                            cursor: 'pointer', flexShrink: 0, whiteSpace: 'nowrap'
-                        }}
                     >
-                        <i className="fas fa-redo" style={{ marginRight: '5px' }}></i>
-                        {t('download_another', 'Try Another')}
+                        <i className="fas fa-plus"></i>
+                        <span>{t('try_another', 'Next Video')}</span>
                     </button>
-                </div>
-            )}
-
-            {/* ── Countdown Interstitial Modal ── */}
-            {downloadPending && (
-                <div style={{
-                    position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-                    background: 'rgba(0,0,0,0.92)', backdropFilter: 'blur(12px)',
-                    zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    padding: '16px'
-                }}>
-                    <div style={{
-                        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)',
-                        borderRadius: '24px', padding: '28px 24px', textAlign: 'center',
-                        border: '1px solid rgba(255,255,255,0.12)', maxWidth: '500px', width: '100%',
-                        boxShadow: '0 30px 80px rgba(0,0,0,0.7)', position: 'relative'
-                    }}>
-
-                        {/* ─ X Close Button (starts download + closes modal) ─ */}
-                        <button
-                            onClick={() => { executeDownload(downloadPending.fileUrl, downloadPending.fileName); setDownloadPending(null); }}
-                            style={{
-                                position: 'absolute', top: '14px', insetInlineEnd: '16px',
-                                background: 'rgba(255,255,255,0.08)', border: 'none',
-                                borderRadius: '50%', width: '32px', height: '32px',
-                                color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem',
-                                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center'
-                            }}
-                            title={t('skip_download', 'Download Now')}
-                        >
-                            <i className="fas fa-times"></i>
-                        </button>
-
-                        {/* ─ Alert: Check the new tab ─ */}
-                        <div style={{
-                            background: 'linear-gradient(90deg, rgba(255,0,80,0.15), rgba(0,242,234,0.15))',
-                            border: '1px solid rgba(0,242,234,0.3)',
-                            borderRadius: '12px', padding: '10px 16px',
-                            marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px'
-                        }}>
-                            <i className="fas fa-external-link-alt" style={{ color: '#00F2EA', fontSize: '1rem', flexShrink: 0 }}></i>
-                            <p style={{ color: '#fff', fontSize: '0.85rem', fontWeight: 600, margin: 0, textAlign: 'left' }}>
-                                {t('check_new_tab', 'A new tab just opened — check it out while you wait!')}
-                            </p>
-                        </div>
-
-                        {/* ─ Countdown row ─ */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px' }}>
-                            <div style={{ position: 'relative', width: '90px', height: '90px', flexShrink: 0 }}>
-                                <svg width="90" height="90" style={{ transform: 'rotate(-90deg)' }}>
-                                    <defs>
-                                        <linearGradient id="cdGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="0%" stopColor="#FF0050" />
-                                            <stop offset="100%" stopColor="#00F2EA" />
-                                        </linearGradient>
-                                    </defs>
-                                    <circle cx="45" cy="45" r="36" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="6" />
-                                    <circle
-                                        cx="45" cy="45" r="36" fill="none"
-                                        stroke="url(#cdGrad)" strokeWidth="6" strokeLinecap="round"
-                                        strokeDasharray="226.2"
-                                        strokeDashoffset="226.2"
-                                        style={{ transition: 'stroke-dashoffset 0.9s linear' }}
-                                    />
-                                </svg>
-                                <div style={{
-                                    position: 'absolute', top: '50%', left: '50%',
-                                    transform: 'translate(-50%, -50%)',
-                                    fontSize: '2rem', fontWeight: 800, color: '#fff', lineHeight: 1
-                                }}>{countdown}</div>
-                            </div>
-                            <div style={{ textAlign: 'left', flex: 1 }}>
-                                <p style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, marginBottom: '4px' }}>
-                                    {t('preparing_download', 'Preparing your download...')}
-                                </p>
-                                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', margin: 0 }}>
-                                    {t('countdown_msg', 'File will download automatically')}
-                                </p>
-                            </div>
-                        </div>
-
-                        {ADS_CONFIG.enableAdsterra && (
-                            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', padding: '10px 0', border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <iframe 
-                                    src="/ad-300x250"
-                                    width="300" height="250" 
-                                    frameBorder="0" scrolling="no" 
-                                    allowTransparency="true"
-                                    style={{ display: 'block', backgroundColor: 'transparent' }}
-                                    title="Advertisement"
-                                ></iframe>
-                            </div>
-                        )}
-
-                        <button
-                            onClick={() => { executeDownload(downloadPending.fileUrl, downloadPending.fileName); setDownloadPending(null); }}
-                            style={{
-                                background: 'linear-gradient(45deg, #FF0050, #00F2EA)',
-                                border: 'none', borderRadius: '14px', padding: '13px 0',
-                                color: '#fff', fontSize: '1rem', fontWeight: 700,
-                                cursor: 'pointer', width: '100%', letterSpacing: '0.3px'
-                            }}
-                        >
-                            <i className="fas fa-download" style={{ marginRight: '8px' }}></i>
-                            {t('skip_download', 'Skip & Download Now')}
-                        </button>
-                    </div>
                 </div>
             )}
         </div>

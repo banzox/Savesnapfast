@@ -35,6 +35,20 @@ const navItems = [
         href: lang === "en" ? "/slideshow" : `/${lang}/slideshow`,
         activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/slideshow"),
     },
+    {
+        id: "tools",
+        icon: "fas fa-toolbox",
+        label: t("nav.tools") || t("nav_menu.tools") || "Tools",
+        href: lang === "en" ? "/tools" : `/${lang}/tools`,
+        activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/tools"),
+    },
+    {
+        id: "blog",
+        icon: "fas fa-newspaper",
+        label: t("nav.blog") || t("nav_menu.blog") || "Blog",
+        href: lang === "en" ? "/blog" : `/${lang}/blog`,
+        activeCheck: (path: string) => path.replace(/\/$/, "").includes("/blog"),
+    },
 ];
 
 const currentPath = Astro.url.pathname.replace(/\.html$/, "");

@@ -1,100 +1,335 @@
 import React, { useState } from 'react';
 
-const FontGenerator = ({ t }) => {
-    const [text, setText] = useState('');
+const fontsList = [
+    { name: "Bold Serif", category: "Bold", map: "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳" },
+    { name: "Bold Sans", category: "Bold", map: "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇" },
+    { name: "Italic Serif", category: "Italic", map: "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧" },
+    { name: "Italic Sans", category: "Italic", map: "𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻" },
+    { name: "Bold Italic Sans", category: "Bold", map: "𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯" },
+    { name: "Script / Cursive", category: "Aesthetic", map: "𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃" },
+    { name: "Handwriting", category: "Aesthetic", map: "𝒜𝐵𝒞𝒟𝐸𝐹𝒢𝐻𝐼𝒥𝒦𝐿𝑀𝒩𝒪𝒫𝒬𝑅𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹𝑒𝒻𝑔𝒽𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏" },
+    { name: "Gothic / Fraktur", category: "Gothic", map: "𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷" },
+    { name: "Bold Gothic", category: "Gothic", map: "𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟" },
+    { name: "Double Struck (Outline)", category: "Aesthetic", map: "𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫" },
+    { name: "Typewriter / Monospace", category: "Aesthetic", map: "𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣" },
+    { name: "Bubble Circles Ⓣ", category: "Decor", map: "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ" },
+    { name: "Inverted Bubble 🅣", category: "Decor", map: "🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠𝅂🅢🅣🅤🅥🅦🅧🅨🅩🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩" },
+    { name: "Square Letters [T]", category: "Decor", map: "🅃🄸🄺🅃🄾🄺🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉" },
+    { name: "Vaporwave / Wide Ｗｉｄｅ", category: "Aesthetic", map: "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ" },
+    { name: "Small Caps ᴛɪᴋᴛᴏᴋ", category: "Aesthetic", map: "ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ" }
+];
 
-    const fonts = [
-        { name: "Bold", map: "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳" },
-        { name: "Italic", map: "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧" },
-        { name: "Script", map: "𝓐𝓑𝓒𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃" },
-        { name: "Double Struck", map: "𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫" },
-        { name: "Monospace", map: "𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣" },
-        { name: "Bubble", map: "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ" }
-    ];
+const FontGenerator = ({ t = {} }) => {
+    const [text, setText] = useState('TikTok Viral Creator ✨');
+    const [filter, setFilter] = useState('All');
+    const [copiedIndex, setCopiedIndex] = useState(null);
+
+    const normalChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
     const convertText = (input, fontMap) => {
-        const normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        if (!input) return "";
         return input.split('').map(char => {
-            const index = normal.indexOf(char);
-            return index !== -1 ? fontMap[index] : char;
+            const index = normalChars.indexOf(char);
+            return index !== -1 && fontMap ? fontMap.slice(index * 2, index * 2 + 2).trim() || fontMap[index] : char;
         }).join('');
     };
 
-    const copyToClipboard = (text) => {
-        navigator.clipboard.writeText(text);
-        // Could add a toast notification here
+    const convertWithDecor = (input, type) => {
+        if (!input) return "";
+        if (type === 'underline') {
+            return input.split('').map(c => c + '\u0332').join('');
+        }
+        if (type === 'strikethrough') {
+            return input.split('').map(c => c + '\u0336').join('');
+        }
+        if (type === 'slash') {
+            return input.split('').map(c => c + '\u0338').join('');
+        }
+        return input;
     };
+
+    const copyToClipboard = (textToCopy, index) => {
+        navigator.clipboard.writeText(textToCopy);
+        setCopiedIndex(index);
+        setTimeout(() => setCopiedIndex(null), 2000);
+    };
+
+    const filteredFonts = filter === 'All'
+        ? fontsList
+        : fontsList.filter(f => f.category === filter);
 
     return (
         <div className="tool-card">
-            <h3>TikTok Font Generator</h3>
-            <textarea
-                placeholder="Type your text here..."
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-            />
+            <div className="calc-header">
+                <div className="badge-pill">
+                    <i className="fas fa-font"></i> Bio &amp; Caption Stylizer
+                </div>
+                <h3>TikTok Font Generator &amp; Aesthetic Text</h3>
+                <p className="tool-desc">
+                    Instantly convert your text into 20+ aesthetic Unicode fonts for your TikTok bio, captions, usernames, and comments with 1-click copy.
+                </p>
+            </div>
 
-            <div className="fonts-list">
-                {fonts.map((font, idx) => (
-                    <div key={idx} className="font-item">
-                        <div className="font-preview">
-                            {text ? convertText(text, font.map) : font.name}
-                        </div>
-                        <button
-                            className="btn-copy"
-                            onClick={() => copyToClipboard(text ? convertText(text, font.map) : font.name)}
-                        >
-                            Copy
-                        </button>
-                    </div>
+            <div className="input-box-wrapper">
+                <label>Type or paste your text below:</label>
+                <textarea
+                    placeholder="Type your bio, username, or video caption here..."
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                />
+            </div>
+
+            <div className="filter-chips">
+                {['All', 'Aesthetic', 'Bold', 'Italic', 'Gothic', 'Decor'].map((cat) => (
+                    <button
+                        key={cat}
+                        className={`chip-btn ${filter === cat ? 'active' : ''}`}
+                        onClick={() => setFilter(cat)}
+                    >
+                        {cat}
+                    </button>
                 ))}
+            </div>
+
+            <div className="fonts-list-grid">
+                {/* Special Modifiers */}
+                {filter === 'All' || filter === 'Decor' ? (
+                    <>
+                        <div className="font-card-item">
+                            <div className="font-meta">
+                                <span className="font-name">Underlined Text</span>
+                                <div className="font-preview-text">
+                                    {convertWithDecor(text || "Underlined Style", 'underline')}
+                                </div>
+                            </div>
+                            <button
+                                className={`btn-copy-font ${copiedIndex === 'underline' ? 'copied' : ''}`}
+                                onClick={() => copyToClipboard(convertWithDecor(text || "Underlined Style", 'underline'), 'underline')}
+                            >
+                                {copiedIndex === 'underline' ? <><i className="fas fa-check"></i> Copied!</> : <><i className="fas fa-copy"></i> Copy</>}
+                            </button>
+                        </div>
+
+                        <div className="font-card-item">
+                            <div className="font-meta">
+                                <span className="font-name">Strikethrough Text</span>
+                                <div className="font-preview-text">
+                                    {convertWithDecor(text || "Strikethrough Style", 'strikethrough')}
+                                </div>
+                            </div>
+                            <button
+                                className={`btn-copy-font ${copiedIndex === 'strike' ? 'copied' : ''}`}
+                                onClick={() => copyToClipboard(convertWithDecor(text || "Strikethrough Style", 'strikethrough'), 'strike')}
+                            >
+                                {copiedIndex === 'strike' ? <><i className="fas fa-check"></i> Copied!</> : <><i className="fas fa-copy"></i> Copy</>}
+                            </button>
+                        </div>
+                    </>
+                ) : null}
+
+                {filteredFonts.map((font, idx) => {
+                    const transformed = convertText(text || font.name, font.map);
+                    const isCopied = copiedIndex === idx;
+
+                    return (
+                        <div key={idx} className="font-card-item">
+                            <div className="font-meta">
+                                <span className="font-name">{font.name}</span>
+                                <div className="font-preview-text">
+                                    {transformed}
+                                </div>
+                            </div>
+                            <button
+                                className={`btn-copy-font ${isCopied ? 'copied' : ''}`}
+                                onClick={() => copyToClipboard(transformed, idx)}
+                            >
+                                {isCopied ? (
+                                    <>
+                                        <i className="fas fa-check"></i> Copied!
+                                    </>
+                                ) : (
+                                    <>
+                                        <i className="fas fa-copy"></i> Copy
+                                    </>
+                                )}
+                            </button>
+                        </div>
+                    );
+                })}
             </div>
 
             <style>{`
                 .tool-card {
-                    background: rgba(255, 255, 255, 0.05);
-                    padding: 25px;
-                    border-radius: 16px;
-                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 20px;
+                    padding: 30px 24px;
+                    max-width: 850px;
+                    margin: 0 auto;
+                    backdrop-filter: blur(16px);
+                }
+                .calc-header {
+                    text-align: center;
+                    margin-bottom: 22px;
+                }
+                .badge-pill {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                    background: rgba(255, 0, 80, 0.15);
+                    border: 1px solid rgba(255, 0, 80, 0.35);
+                    color: #ff0050;
+                    padding: 5px 14px;
+                    border-radius: 20px;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    margin-bottom: 12px;
+                }
+                .calc-header h3 {
+                    font-size: 1.45rem;
+                    font-weight: 800;
+                    color: var(--text-main, #fff);
+                    margin: 0 0 8px;
+                }
+                [data-theme='light'] .calc-header h3 {
+                    color: #0f172a;
+                }
+                .tool-desc {
+                    color: var(--text-dim);
+                    font-size: 0.9rem;
+                    max-width: 650px;
+                    margin: 0 auto;
+                    line-height: 1.5;
+                }
+                .input-box-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    margin-bottom: 20px;
+                }
+                .input-box-wrapper label {
+                    font-size: 0.86rem;
+                    font-weight: 600;
+                    color: var(--text-dim);
                 }
                 textarea {
                     width: 100%;
-                    height: 80px;
-                    background: rgba(0, 0, 0, 0.2);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    padding: 15px;
-                    border-radius: 8px;
-                    color: white;
-                    margin-bottom: 20px;
-                    resize: none;
-                    font-size: 1.1rem;
+                    height: 85px;
+                    background: rgba(255, 255, 255, 0.06);
+                    border: 1px solid rgba(255, 255, 255, 0.12);
+                    padding: 14px 16px;
+                    border-radius: 12px;
+                    color: var(--text-main, #fff);
+                    resize: vertical;
+                    font-size: 1.05rem;
+                    outline: none;
+                    transition: border-color 0.2s;
                 }
-                .font-item {
+                [data-theme='light'] textarea {
+                    background: #ffffff;
+                    border-color: rgba(0, 0, 0, 0.12);
+                    color: #0f172a;
+                }
+                textarea:focus {
+                    border-color: var(--secondary);
+                }
+                .filter-chips {
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                    margin-bottom: 22px;
+                }
+                .chip-btn {
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    color: var(--text-dim);
+                    padding: 6px 14px;
+                    border-radius: 20px;
+                    font-size: 0.82rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                }
+                [data-theme='light'] .chip-btn {
+                    background: #f8fafc;
+                    border-color: rgba(0, 0, 0, 0.08);
+                    color: #475569;
+                }
+                .chip-btn.active {
+                    background: linear-gradient(135deg, var(--primary), var(--secondary));
+                    color: #fff;
+                    border-color: transparent;
+                }
+                .fonts-list-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+                .font-card-item {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    background: rgba(255,255,255,0.03);
-                    padding: 15px;
-                    margin-bottom: 10px;
-                    border-radius: 8px;
+                    background: rgba(255, 255, 255, 0.04);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    padding: 14px 18px;
+                    border-radius: 14px;
+                    gap: 16px;
+                    transition: all 0.2s ease;
                 }
-                .font-preview {
-                    font-size: 1.2rem;
+                [data-theme='light'] .font-card-item {
+                    background: #ffffff;
+                    border-color: rgba(0, 0, 0, 0.08);
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+                }
+                .font-card-item:hover {
+                    border-color: var(--border-bright);
+                    transform: translateX(4px);
+                }
+                .font-meta {
+                    flex: 1;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                }
+                .font-name {
+                    font-size: 0.76rem;
+                    font-weight: 700;
+                    color: var(--text-dim);
+                    text-transform: uppercase;
+                    letter-spacing: 0.4px;
+                }
+                .font-preview-text {
+                    font-size: 1.18rem;
+                    color: var(--text-main, #fff);
                     overflow-x: auto;
                     white-space: nowrap;
-                    margin-right: 15px;
+                    padding-bottom: 2px;
                 }
-                .btn-copy {
-                    background: var(--primary);
+                [data-theme='light'] .font-preview-text {
+                    color: #0f172a;
+                }
+                .btn-copy-font {
+                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
                     border: none;
-                    padding: 8px 16px;
-                    border-radius: 6px;
-                    color: white;
+                    padding: 9px 18px;
+                    border-radius: 10px;
+                    color: #fff;
+                    font-size: 0.85rem;
+                    font-weight: 700;
                     cursor: pointer;
-                    min-width: 70px;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    flex-shrink: 0;
+                    transition: transform 0.2s, background 0.2s;
                 }
-                .btn-copy:active {
-                    background: var(--secondary);
+                .btn-copy-font:hover {
+                    transform: scale(1.04);
+                }
+                .btn-copy-font.copied {
+                    background: #10b981 !important;
+                    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
                 }
             `}</style>
         </div>
