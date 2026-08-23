@@ -1,6 +1,5 @@
 ---
 import { useTranslations } from "../utils/i18n";
-import LanguageSelector from "./LanguageSelector.astro";
 
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
@@ -65,7 +64,7 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
 
 <header id="main-header">
     <div class="header-container">
-        {/* Top Row: Logo & Top Actions (Language + Theme) */}
+        {/* Top Row: Logo & Theme Toggle */}
         <div class="top-bar">
             <a
                 href={lang === "en" ? "/" : `/${lang}`}
@@ -80,23 +79,19 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
                 >
             </a>
 
-            <div class="top-actions">
-                <LanguageSelector lang={lang} />
-
-                <button
-                    class="theme-toggle"
-                    id="theme-btn"
-                    role="switch"
-                    aria-checked="false"
-                    aria-label={t("common.toggle_theme")}
-                    title={t("common.toggle_theme")}
-                >
-                    <div class="theme-icon-container">
-                        <i class="fas fa-moon moon-icon"></i>
-                        <i class="fas fa-sun sun-icon"></i>
-                    </div>
-                </button>
-            </div>
+            <button
+                class="theme-toggle"
+                id="theme-btn"
+                role="switch"
+                aria-checked="false"
+                aria-label={t("common.toggle_theme")}
+                title={t("common.toggle_theme")}
+            >
+                <div class="theme-icon-container">
+                    <i class="fas fa-moon moon-icon"></i>
+                    <i class="fas fa-sun sun-icon"></i>
+                </div>
+            </button>
         </div>
 
         {/* Bottom Row: Navigation */}
@@ -195,12 +190,6 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
         gap: 16px;
     }
 
-    .top-actions {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
     /* Logo Styling */
     .logo {
         display: flex;
@@ -263,6 +252,7 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
     .theme-toggle {
         width: 48px;
         height: 48px;
+        flex-shrink: 0;
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -400,8 +390,28 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
     */
     @media (max-width: 600px) {
         .header-container {
-            gap: 20px;
-            padding: 0 15px;
+            gap: 16px;
+            padding: 0 12px;
+        }
+
+        .top-bar {
+            gap: 8px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            gap: 8px;
+        }
+
+        .logo-icon-wrapper {
+            width: 36px;
+            height: 36px;
+            font-size: 1.15rem;
+        }
+
+        .theme-toggle {
+            width: 42px;
+            height: 42px;
         }
 
         .nav-bar {
