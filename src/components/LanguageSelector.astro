@@ -77,8 +77,8 @@ function getPathForLanguage(targetLang: string) {
 <!-- Trigger Button -->
 <div class="lang-trigger-wrapper">
     <button
-        id="lang-toggle-btn"
-        class="lang-btn"
+        type="button"
+        class="lang-btn lang-open-trigger"
         aria-label={t("common.select_language")}
         aria-expanded="false"
     >
@@ -95,10 +95,12 @@ function getPathForLanguage(targetLang: string) {
     <div class="lang-modal-backdrop" id="lang-backdrop"></div>
     <div class="lang-modal-dialog">
         <div class="lang-modal-header">
-            <span class="lang-modal-title">
-                <i class="fas fa-language"></i>
-                {t("common.select_language")}
-            </span>
+            <div class="lang-title-badge">
+                <i class="fas fa-globe-americas"></i>
+                <span class="lang-modal-title">
+                    {t("common.select_language") || "Select Language"}
+                </span>
+            </div>
             <button
                 id="lang-close-btn"
                 class="lang-close-btn"
@@ -107,18 +109,30 @@ function getPathForLanguage(targetLang: string) {
                 <i class="fas fa-times"></i>
             </button>
         </div>
+
+        <div class="lang-search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input
+                type="text"
+                id="lang-search-input"
+                placeholder="Search language / ابحث عن لغة..."
+                autocomplete="off"
+            />
+        </div>
+
         <div class="lang-modal-body">
-            <div class="lang-grid">
+            <div class="lang-grid" id="lang-grid-container">
                 {
                     Object.entries(languages).map(([code, name]) => (
                         <a
                             href={getPathForLanguage(code)}
                             class={`lang-option ${code === lang ? "active" : ""}`}
                             data-lang-code={code}
+                            data-lang-name={name.toLowerCase()}
                         >
                             <span class="lang-name">{name}</span>
                             {code === lang && (
-                                <i class="fas fa-check check-icon" />
+                                <i class="fas fa-check-circle check-icon" />
                             )}
                         </a>
                     ))
@@ -130,62 +144,84 @@ function getPathForLanguage(targetLang: string) {
 
 <script>
     function initLangModal() {
-        const btn = document.getElementById("lang-toggle-btn");
+        const triggers = document.querySelectorAll(".lang-open-trigger");
         const modal = document.getElementById("lang-modal");
         const backdrop = document.getElementById("lang-backdrop");
         const closeBtn = document.getElementById("lang-close-btn");
+        const searchInput = document.getElementById("lang-search-input") as HTMLInputElement | null;
+        const langOptions = document.querySelectorAll(".lang-option") as NodeListOf<HTMLElement>;
 
-        if (!btn || !modal || !backdrop || !closeBtn) return;
+        if (!modal || !backdrop || !closeBtn) return;
 
-        // Move modal to body to avoid stacking context issues with footer backdrop-filter
         if (modal.parentElement !== document.body) {
             document.body.appendChild(modal);
         }
 
-        if (btn.dataset.langInit) return;
-
         const openModal = () => {
             modal.classList.add("show");
-            // Force redraw/recalc
-            void modal.offsetWidth;
             modal.setAttribute("aria-hidden", "false");
-            btn.setAttribute("aria-expanded", "true");
+            triggers.forEach(t => t.setAttribute("aria-expanded", "true"));
             document.body.style.overflow = "hidden";
+            if (searchInput) {
+                searchInput.value = "";
+                langOptions.forEach(opt => opt.style.display = "flex");
+                setTimeout(() => searchInput.focus(), 150);
+            }
         };
 
         const closeModal = () => {
             modal.classList.remove("show");
-
-            // Wait for transition to finish before hiding (optional improvement, keeping simple for now)
             setTimeout(() => {
                 if (!modal.classList.contains("show")) {
                     modal.setAttribute("aria-hidden", "true");
                 }
-            }, 300);
-
-            btn.setAttribute("aria-expanded", "false");
+            }, 250);
+            triggers.forEach(t => t.setAttribute("aria-expanded", "false"));
             document.body.style.overflow = "";
         };
 
-        btn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            if (modal.classList.contains("show")) {
-                closeModal();
-            } else {
-                openModal();
-            }
+        triggers.forEach(btn => {
+            if ((btn as HTMLElement).dataset.langBound) return;
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (modal.classList.contains("show")) {
+                    closeModal();
+                } else {
+                    openModal();
+                }
+            });
+            (btn as HTMLElement).dataset.langBound = "true";
         });
 
-        closeBtn.addEventListener("click", closeModal);
-        backdrop.addEventListener("click", closeModal);
+        if (!closeBtn.dataset.bound) {
+            closeBtn.addEventListener("click", closeModal);
+            closeBtn.dataset.bound = "true";
+        }
+        if (!backdrop.dataset.bound) {
+            backdrop.addEventListener("click", closeModal);
+            backdrop.dataset.bound = "true";
+        }
+
+        if (searchInput && !searchInput.dataset.bound) {
+            searchInput.addEventListener("input", (e) => {
+                const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
+                langOptions.forEach((opt) => {
+                    const name = (opt.getAttribute("data-lang-name") || "") + " " + (opt.getAttribute("data-lang-code") || "");
+                    if (name.includes(query)) {
+                        opt.style.display = "flex";
+                    } else {
+                        opt.style.display = "none";
+                    }
+                });
+            });
+            searchInput.dataset.bound = "true";
+        }
 
         document.addEventListener("keydown", (e) => {
             if (e.key === "Escape" && modal.classList.contains("show")) {
                 closeModal();
             }
         });
-
-        btn.dataset.langInit = "true";
     }
 
     initLangModal();
@@ -195,58 +231,78 @@ function getPathForLanguage(targetLang: string) {
 
 <style>
     /* ==========================================
-       LANGUAGE TRIGGER BUTTON
+       LUXURY LANGUAGE TRIGGER BUTTON
        ========================================== */
     .lang-trigger-wrapper {
         position: relative;
-        z-index: 100;
+        display: inline-flex;
+        align-items: center;
     }
 
     .lang-btn {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: 8px;
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 8px 16px;
-        border-radius: 8px;
+        border: 1px solid rgba(0, 242, 234, 0.25);
+        padding: 7px 14px;
+        border-radius: 24px;
         color: var(--text-main, #fff);
         cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: "Inter", sans-serif;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        font-family: 'Inter', 'Tajawal', sans-serif;
         font-weight: 600;
-        font-size: 0.9rem;
-        backdrop-filter: blur(10px);
+        font-size: 0.85rem;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     :global([data-theme="light"]) .lang-btn {
-        background: rgba(0, 0, 0, 0.05);
-        border-color: rgba(0, 0, 0, 0.1);
-        color: #333;
+        background: #ffffff;
+        border-color: rgba(37, 99, 235, 0.2);
+        color: #0f172a;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     .lang-btn:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(0, 242, 234, 0.12);
+        border-color: #00f2ea;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 16px rgba(0, 242, 234, 0.2);
     }
 
     :global([data-theme="light"]) .lang-btn:hover {
-        background: rgba(0, 0, 0, 0.08);
+        background: rgba(37, 99, 235, 0.08);
+        border-color: #2563eb;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
     }
 
     .lang-icon {
         color: #00f2ea;
-        font-size: 1rem;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
     }
 
     :global([data-theme="light"]) .lang-icon {
-        color: var(--primary);
+        color: #2563eb;
+    }
+
+    .lang-text {
+        white-space: nowrap;
+        max-width: 110px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .arrow-icon {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
         opacity: 0.7;
-        transition: transform 0.3s ease;
+        transition: transform 0.25s ease;
+    }
+
+    .lang-btn[aria-expanded="true"] .arrow-icon {
+        transform: rotate(180deg);
     }
 
     .lang-btn[aria-expanded="true"] .arrow-icon {
@@ -324,30 +380,86 @@ function getPathForLanguage(targetLang: string) {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 18px 22px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     :global([data-theme="light"]) .lang-modal-header {
         border-bottom-color: rgba(0, 0, 0, 0.08);
     }
 
-    .lang-modal-title {
-        font-weight: 700;
-        font-size: 1.1rem;
+    .lang-title-badge {
         display: flex;
         align-items: center;
         gap: 10px;
         color: var(--text-main, #fff);
     }
 
-    .lang-modal-title i {
-        color: var(--primary, #ff0050);
+    .lang-title-badge i {
+        color: #00f2ea;
+        font-size: 1.2rem;
+    }
+
+    :global([data-theme="light"]) .lang-title-badge i {
+        color: #2563eb;
+    }
+
+    .lang-modal-title {
+        font-weight: 700;
+        font-size: 1.05rem;
+    }
+
+    /* Search Box */
+    .lang-search-wrapper {
+        position: relative;
+        padding: 12px 20px 6px;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-icon {
+        position: absolute;
+        inset-inline-start: 34px;
+        color: var(--text-dim);
+        font-size: 0.9rem;
+        pointer-events: none;
+    }
+
+    .lang-search-wrapper input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 10px 14px 10px 38px;
+        border-radius: 12px;
+        color: var(--text-main, #fff);
+        font-size: 0.92rem;
+        outline: none;
+        transition: all 0.2s ease;
+    }
+
+    [dir='rtl'] .lang-search-wrapper input {
+        padding: 10px 38px 10px 14px;
+    }
+
+    :global([data-theme="light"]) .lang-search-wrapper input {
+        background: #f1f5f9;
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #0f172a;
+    }
+
+    .lang-search-wrapper input:focus {
+        border-color: #00f2ea;
+        box-shadow: 0 0 15px rgba(0, 242, 234, 0.2);
+    }
+
+    :global([data-theme="light"]) .lang-search-wrapper input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 15px rgba(37, 99, 235, 0.15);
     }
 
     .lang-close-btn {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.08);
         border: none;
@@ -362,17 +474,18 @@ function getPathForLanguage(targetLang: string) {
 
     :global([data-theme="light"]) .lang-close-btn {
         background: rgba(0, 0, 0, 0.05);
+        color: #0f172a;
     }
 
     .lang-close-btn:hover {
-        background: rgba(255, 0, 80, 0.2);
-        color: #ff0050;
+        background: rgba(225, 29, 72, 0.2);
+        color: #e11d48;
         transform: rotate(90deg);
     }
 
     /* Body */
     .lang-modal-body {
-        padding: 20px;
+        padding: 14px 20px 20px;
         overflow-y: auto;
         flex: 1;
     }

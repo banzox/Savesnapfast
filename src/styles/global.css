@@ -2,16 +2,18 @@
    1. CORE VARIABLES & THEME SYSTEM
    ========================================= */
 :root {
-    /* --- Brand Colors (Vibrant & Neon) --- */
-    --primary: #ff0050;
-    --primary-glow: rgba(255, 0, 80, 0.45);
+    /* --- Brand Colors (Luxury Dark Crimson Red & Celestial Cyan) --- */
+    --primary: #e11d48;
+    --primary-dark: #be123c;
+    --primary-deep: #9f1239;
+    --primary-glow: rgba(225, 29, 72, 0.45);
     --secondary: #00f2ea;
     --secondary-glow: rgba(0, 242, 234, 0.45);
-    --accent: #7c3aed;
+    --accent: #f43f5e;
 
-    /* --- Dark Mode (Premium Deep Space) --- */
-    --bg-main: #06060f;
-    --bg-gradient: radial-gradient(ellipse at 20% 0%, #1a0b2e 0%, #0a0a1a 40%, #06060f 70%, #000000 100%);
+    /* --- Dark Mode (Cosmic Celestial Deep Space: Black-Cyan with Stars) --- */
+    --bg-main: #030712;
+    --bg-gradient: radial-gradient(ellipse 100% 80% at 50% -15%, #082949 0%, #031629 35%, #030814 75%, #010307 100%);
     
     --text-main: #f0f0f5;
     --text-dim: rgba(255, 255, 255, 0.65);
@@ -24,17 +26,17 @@
     --border: rgba(255, 255, 255, 0.08);
     --border-bright: rgba(255, 255, 255, 0.16);
 
-    --bg-dropdown: #12121f;
+    --bg-dropdown: #081424;
 
-    --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.7);
-    --shadow-glow: 0 0 40px rgba(255, 0, 80, 0.15);
+    --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.75);
+    --shadow-glow: 0 0 40px rgba(225, 29, 72, 0.2);
 
     --radius-main: 12px;
     --radius-inner: 10px;
     --transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 
     /* --- Header Background (Glassmorphism) --- */
-    --bg-header: rgba(10, 10, 26, 0.75);
+    --bg-header: rgba(4, 12, 26, 0.78);
     --header-blur: 20px;
     --header-border: rgba(255, 255, 255, 0.06);
 }
@@ -82,7 +84,6 @@
 body {
     background: var(--bg-gradient);
     background-color: var(--bg-main);
-    /* Fallback */
     color: var(--text-main);
     font-family: 'Inter', 'Tajawal', sans-serif;
     line-height: 1.6;
@@ -92,6 +93,92 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
     margin: 0;
     padding: 0;
+}
+
+/* =========================================
+   CELESTIAL STARRY SKY BACKGROUND (STARS)
+   ========================================= */
+.stars-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.stars-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+}
+
+/* Layer 1: Tiny crisp white stars */
+.stars-1 {
+    background-image: 
+        radial-gradient(1px 1px at 25px 35px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 85px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 170px 80px, #00f2ea, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 240px 210px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 310px 140px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 390px 40px, #00f2ea, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 460px 190px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 530px 90px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 620px 280px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 710px 160px, #00f2ea, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 800px 60px, #ffffff, rgba(0,0,0,0));
+    background-size: 650px 650px;
+    animation: starsTwinkleSlow 7s ease-in-out infinite alternate;
+}
+
+/* Layer 2: Medium glowing cyan/white stars */
+.stars-2 {
+    background-image: 
+        radial-gradient(1.5px 1.5px at 50px 180px, #00f2ea, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 140px 320px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 280px 95px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 420px 250px, #00f2ea, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 580px 110px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 720px 340px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 860px 210px, #00f2ea, rgba(0,0,0,0));
+    background-size: 850px 850px;
+    animation: starsTwinkleMid 5s ease-in-out infinite alternate 1.5s;
+}
+
+/* Layer 3: Occasional shimmering bright stars with subtle celestial glow */
+.stars-3 {
+    background-image: 
+        radial-gradient(2px 2px at 110px 70px, #00f2ea, rgba(0,242,234,0.3) 50%, rgba(0,0,0,0)),
+        radial-gradient(2.5px 2.5px at 360px 190px, #ffffff, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 640px 130px, #00f2ea, rgba(0,242,234,0.3) 50%, rgba(0,0,0,0)),
+        radial-gradient(2.5px 2.5px at 910px 280px, #ffffff, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0));
+    background-size: 1000px 1000px;
+    animation: starsTwinkleFast 3.5s ease-in-out infinite alternate 0.8s;
+}
+
+[data-theme='light'] .stars-bg-container {
+    opacity: 0.12;
+}
+
+@keyframes starsTwinkleSlow {
+    0% { opacity: 0.4; transform: translateY(0); }
+    50% { opacity: 0.9; }
+    100% { opacity: 0.45; transform: translateY(-6px); }
+}
+@keyframes starsTwinkleMid {
+    0% { opacity: 0.35; transform: translateY(0); }
+    50% { opacity: 0.95; }
+    100% { opacity: 0.4; transform: translateY(-10px); }
+}
+@keyframes starsTwinkleFast {
+    0% { opacity: 0.3; transform: scale(0.98); }
+    50% { opacity: 1; transform: scale(1.02); }
+    100% { opacity: 0.3; transform: scale(0.98); }
 }
 
 /* --- Premium Logo Styling (Gradient Text) --- */
@@ -1950,11 +2037,19 @@ body, .downloader-box, .nav-container, .feature-card, .faq-item, footer {
     letter-spacing: 0.2px;
 }
 .btn-video {
-    background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
-    box-shadow: 0 6px 20px rgba(255, 0, 80, 0.3);
+    background: linear-gradient(135deg, #e11d48 0%, #be123c 60%, #00f2ea 100%);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
 }
 .btn-video:hover {
-    box-shadow: 0 10px 30px rgba(255, 0, 80, 0.45);
+    box-shadow: 0 10px 30px rgba(225, 29, 72, 0.5);
+}
+.btn-zip {
+    background: linear-gradient(135deg, #e11d48 0%, #9f1239 50%, #00f2ea 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+    color: #fff !important;
+    border: none;
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
 }
 .btn-hd {
     background: rgba(255,255,255,0.06);
@@ -2476,14 +2571,6 @@ body, .downloader-box, .nav-container, .feature-card, .faq-item, footer {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
     border-color: transparent;
-}
-.btn-zip {
-    background: linear-gradient(135deg, #ff0050 0%, #7c3aed 50%, #00f2ea 100%);
-    background-size: 200% 200%;
-    animation: gradientShift 4s ease infinite;
-    color: #fff !important;
-    border: none;
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
 }
 
 /* Toast Notification */

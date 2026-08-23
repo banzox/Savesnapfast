@@ -1,14 +1,23 @@
 ---
 import { useTranslations } from "../utils/i18n";
+import LanguageSelector from "./LanguageSelector.astro";
 
 const { lang = "en" } = Astro.props;
 const t = useTranslations(lang);
+
+function getNavLabel(key: string, fallback: string) {
+    const val = t(key);
+    if (!val || val === key || val.startsWith("nav_menu.") || val.startsWith("nav.")) {
+        return fallback;
+    }
+    return val;
+}
 
 const navItems = [
     {
         id: "video",
         icon: "fas fa-video",
-        label: t("nav_menu.video"),
+        label: getNavLabel("nav_menu.video", "Video"),
         href: lang === "en" ? "/" : `/${lang}`,
         activeCheck: (path: string) =>
             path === "/" || path === `/${lang}` || path === `/${lang}/` ||
@@ -17,35 +26,35 @@ const navItems = [
     {
         id: "mp3",
         icon: "fas fa-music",
-        label: t("nav_menu.mp3"),
+        label: getNavLabel("nav_menu.mp3", "MP3 Audio"),
         href: lang === "en" ? "/mp3" : `/${lang}/mp3`,
         activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/mp3"),
     },
     {
         id: "story",
         icon: "fas fa-images",
-        label: t("nav_menu.stories"),
+        label: getNavLabel("nav_menu.stories", "Stories"),
         href: lang === "en" ? "/story" : `/${lang}/story`,
         activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/story"),
     },
     {
         id: "slideshow",
         icon: "fas fa-layer-group",
-        label: t("nav_menu.slideshow"),
+        label: getNavLabel("nav_menu.slideshow", "Slideshow"),
         href: lang === "en" ? "/slideshow" : `/${lang}/slideshow`,
         activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/slideshow"),
     },
     {
         id: "tools",
         icon: "fas fa-toolbox",
-        label: t("nav.tools") || t("nav_menu.tools") || "Tools",
+        label: getNavLabel("nav.tools", "Tools"),
         href: lang === "en" ? "/tools" : `/${lang}/tools`,
         activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/tools"),
     },
     {
         id: "blog",
         icon: "fas fa-newspaper",
-        label: t("nav.blog") || t("nav_menu.blog") || "Blog",
+        label: getNavLabel("nav.blog", "Blog"),
         href: lang === "en" ? "/blog" : `/${lang}/blog`,
         activeCheck: (path: string) => path.replace(/\/$/, "").includes("/blog"),
     },
@@ -56,7 +65,7 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
 
 <header id="main-header">
     <div class="header-container">
-        {/* Top Row: Logo & Theme Toggle */}
+        {/* Top Row: Logo & Top Actions (Language + Theme) */}
         <div class="top-bar">
             <a
                 href={lang === "en" ? "/" : `/${lang}`}
@@ -71,19 +80,23 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
                 >
             </a>
 
-            <button
-                class="theme-toggle"
-                id="theme-btn"
-                role="switch"
-                aria-checked="false"
-                aria-label={t("common.toggle_theme")}
-                title={t("common.toggle_theme")}
-            >
-                <div class="theme-icon-container">
-                    <i class="fas fa-moon moon-icon"></i>
-                    <i class="fas fa-sun sun-icon"></i>
-                </div>
-            </button>
+            <div class="top-actions">
+                <LanguageSelector lang={lang} />
+
+                <button
+                    class="theme-toggle"
+                    id="theme-btn"
+                    role="switch"
+                    aria-checked="false"
+                    aria-label={t("common.toggle_theme")}
+                    title={t("common.toggle_theme")}
+                >
+                    <div class="theme-icon-container">
+                        <i class="fas fa-moon moon-icon"></i>
+                        <i class="fas fa-sun sun-icon"></i>
+                    </div>
+                </button>
+            </div>
         </div>
 
         {/* Bottom Row: Navigation */}
@@ -179,6 +192,13 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        gap: 16px;
+    }
+
+    .top-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
     }
 
     /* Logo Styling */
