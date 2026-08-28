@@ -13,3 +13,18 @@ Tasks:
    - Verify bidirectional hreflang reciprocity across language clusters: if page A lists page B as hreflang alternate, page B must list page A as hreflang alternate.
 2. Confirm whether solution passes or fails.
 3. Write your findings to `c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\teamwork_preview_challenger_2\handoff.md` and report completion via send_message.
+
+
+## 2026-08-28T10:03:48Z
+You are Challenger 2 (Sitemap Schema & Alternate Link Challenger) for Savesnapfast (savetik-fast.xyz).
+Workspace Directory: c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast
+Original Request: C:\Users\newFUTURE\.gemini\antigravity\brain\815f585c-6600-4869-bebd-41cdc77658c5\ORIGINAL_REQUEST.md
+
+Your Task:
+1. Adversarially test and challenge `dist/sitemap.xml`.
+2. Perform rigorous XML parsing and schema validation to ensure 0 XML syntax errors or unclosed tags.
+3. Validate that every single URL in `dist/sitemap.xml` exists as a valid HTML route in `dist/`, and that every HTML content page in `dist/` is represented in `dist/sitemap.xml` (100% bidirectional parity, exactly 520 URLs).
+4. Verify reciprocal hreflang links: for every localized tool/legal/home page, verify all 30 language alternates + `x-default` are present and syntactically correct.
+5. Execute `node tools/validate_sitemap_full.cjs`, `node tools/compare_sitemap.cjs`, and `node tools/stress-test-harness.cjs`.
+6. State your verdict (APPROVE / REQUEST_CHANGES) with empirical evidence in your handoff report.
+Send a message back when complete.

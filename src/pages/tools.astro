@@ -11,13 +11,13 @@ const t = useTranslations(currentLang);
 const translations = getTranslations(currentLang);
 
 const quickTools = [
-    { id: "compressor", icon: "fas fa-compress-arrows-alt", name: "Image Compressor", tag: "Lossless WebP/PNG", color: "#00f2ea" },
-    { id: "converter", icon: "fas fa-exchange-alt", name: "Image Converter", tag: "Multi-Format", color: "#3b82f6" },
-    { id: "qrcode", icon: "fas fa-qrcode", name: "QR Code Studio", tag: "1024px Ultra HD", color: "#8b5cf6" },
-    { id: "money", icon: "fas fa-coins", name: "CRP Earnings Calc", tag: "2026 RPM Model", color: "#10b981" },
-    { id: "engagement", icon: "fas fa-chart-line", name: "Viral Score Calc", tag: "Engagement Diagnostics", color: "#f59e0b" },
-    { id: "font", icon: "fas fa-font", name: "Aesthetic Fonts", tag: "22+ Unicode Styles", color: "#ec4899" },
-    { id: "hashtag", icon: "fas fa-hashtag", name: "Hashtag & Caption Gen", tag: "16 Niches + Custom", color: "#ff0050" },
+    { id: "compressor", icon: "fas fa-compress-arrows-alt", name: t("tools.tabs.compressor") || "Image Compressor", tag: "Lossless WebP/PNG", color: "#00f2ea" },
+    { id: "converter", icon: "fas fa-exchange-alt", name: t("tools.tabs.converter") || "Image Converter", tag: "Multi-Format", color: "#3b82f6" },
+    { id: "qrcode", icon: "fas fa-qrcode", name: t("tools.tabs.qrcode") || "QR Code Studio", tag: "1024px Ultra HD", color: "#8b5cf6" },
+    { id: "money", icon: "fas fa-coins", name: t("tools.tabs.money") || "CRP Earnings Calc", tag: "2026 RPM Model", color: "#10b981" },
+    { id: "engagement", icon: "fas fa-chart-line", name: t("tools.tabs.engagement") || "Viral Score Calc", tag: "Engagement Diagnostics", color: "#f59e0b" },
+    { id: "font", icon: "fas fa-font", name: t("tools.tabs.font") || "Aesthetic Fonts", tag: "22+ Unicode Styles", color: "#ec4899" },
+    { id: "hashtag", icon: "fas fa-hashtag", name: t("tools.tabs.hashtag") || "Hashtag & Caption Gen", tag: "16 Niches + Custom", color: "#ff0050" },
 ];
 
 const downloaders = [
@@ -84,7 +84,7 @@ const downloaders = [
 
         <div class="quick-tools-grid">
             {quickTools.map((tool) => (
-                <a href={`#${tool.id}`} class="quick-tool-card">
+                <a href={`#${tool.id}`} class="quick-tool-card" data-tool={tool.id}>
                     <div class="tool-card-top">
                         <div class="tool-icon-wrapper" style={`background: ${tool.color}18; color: ${tool.color}; border-color: ${tool.color}40;`}>
                             <i class={tool.icon}></i>
@@ -100,6 +100,27 @@ const downloaders = [
             ))}
         </div>
     </section>
+
+    <script is:inline>
+        (function() {
+            function bindQuickTools() {
+                const cards = document.querySelectorAll('.quick-tool-card');
+                cards.forEach(card => {
+                    if (card.dataset.bound) return;
+                    card.dataset.bound = 'true';
+                    card.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const toolId = card.getAttribute('data-tool');
+                        if (toolId) {
+                            window.dispatchEvent(new CustomEvent('switch-tool', { detail: { toolId } }));
+                        }
+                    });
+                });
+            }
+            bindQuickTools();
+            document.addEventListener('astro:page-load', bindQuickTools);
+        })();
+    </script>
 
     <!-- ─── Dedicated Downloader Shortcuts ─── -->
     <section class="container downloaders-section">

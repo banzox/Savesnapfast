@@ -1,14 +1,12 @@
-## 2026-08-19T16:05:28Z
-Mission: R3 GitHub Codebase, Astro Build & Verification System Deep Investigation.
-Authoritative Request: c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\ORIGINAL_REQUEST.md
+## 2026-08-28T09:51:10Z
+Mission: Survey Explorer 3 (Build, Test & E2E Auditor) for Savesnapfast (savetik-fast.xyz).
+Authoritative Request: C:\Users\newFUTURE\.gemini\antigravity\brain\815f585c-6600-4869-bebd-41cdc77658c5\ORIGINAL_REQUEST.md
 Working directory for your metadata: c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\teamwork_preview_explorer_survey_3
 
 Tasks:
-1. Read c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\ORIGINAL_REQUEST.md.
-2. Deeply inspect the codebase structure, build setup, and testing infrastructure:
-   - Check Astro configuration (astro.config.mjs / ts, astro SSR / static prerender settings).
-   - Check package.json scripts (npm run build, npm run doctor, verify_build.cjs, test scripts).
-   - Check route tree and static generation across all 30 languages (/, /{lang}, /mp3, /{lang}/mp3, /story, /{lang}/story, /slideshow, /{lang}/slideshow, /blog/*).
-   - Check sitemap generation logic, verify if all 191 URLs are cleanly generated and valid.
-   - Check npm run doctor implementation and identify what checks it performs and if any are failing or need enhancement.
-3. Write your comprehensive findings and recommendations to c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\teamwork_preview_explorer_survey_3\handoff.md and report completion via send_message.
+1. Read ORIGINAL_REQUEST.md.
+2. Inspect package.json, astro.config.mjs / astro.config.ts, tsconfig, dependencies, and build commands (npm run build, etc.).
+3. Check rendering mode (static SSG vs SSR/hybrid output).
+4. Inspect existing test harnesses or scripts. Determine what is needed to implement an automated crawler emulation test suite that crawls and validates all 500+ routes (checking 200 HTTP status, <meta name="robots" content="index, follow..." />, self-referencing canonicals, hreflang alternates, sitemap XML schema validity, Content-Type headers).
+5. Document build requirements, test architecture recommendations, and potential build or test hurdles in your handoff report.
+

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const MoneyCalculator = ({ t = {} }) => {
     const [views, setViews] = useState('100000');
@@ -7,7 +7,7 @@ const MoneyCalculator = ({ t = {} }) => {
     const [monthlyVideos, setMonthlyVideos] = useState(15);
     const [results, setResults] = useState(null);
 
-    const calculateEarnings = () => {
+    const calculateEarnings = useCallback(() => {
         const viewCount = Math.max(0, Number(views) || 0);
         if (viewCount <= 0) return;
 
@@ -50,7 +50,12 @@ const MoneyCalculator = ({ t = {} }) => {
             yearly: { min: yearlyMin.toFixed(0), max: yearlyMax.toFixed(0) },
             rpmRange: `$${rpmMin.toFixed(2)} - $${rpmMax.toFixed(2)}`
         });
-    };
+    }, [views, programType, region, monthlyVideos]);
+
+    // Initial calculation on mount
+    useEffect(() => {
+        calculateEarnings();
+    }, [calculateEarnings]);
 
     return (
         <div className="tool-card">
@@ -80,7 +85,7 @@ const MoneyCalculator = ({ t = {} }) => {
                             <button
                                 key={v}
                                 type="button"
-                                className="btn-quick-val"
+                                className={`btn-quick-val ${Number(views) === v ? 'active' : ''}`}
                                 onClick={() => setViews(String(v))}
                             >
                                 {v >= 1000000 ? `${v / 1000000}M` : `${v / 1000}K`}
@@ -122,10 +127,15 @@ const MoneyCalculator = ({ t = {} }) => {
                         value={monthlyVideos}
                         onChange={(e) => setMonthlyVideos(Number(e.target.value))}
                     />
+                    <div className="range-hints">
+                        <span>1 video/mo</span>
+                        <span>Daily (30)</span>
+                        <span>60/mo</span>
+                    </div>
                 </div>
             </div>
 
-            <button className="btn-calculate" onClick={calculateEarnings}>
+            <button type="button" className="btn-calculate" onClick={calculateEarnings}>
                 <i className="fas fa-calculator"></i> Calculate Potential Revenue
             </button>
 
@@ -169,7 +179,7 @@ const MoneyCalculator = ({ t = {} }) => {
                     background: rgba(255, 255, 255, 0.03);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                     border-radius: 20px;
-                    padding: 30px 24px;
+                    padding: 26px 20px;
                     max-width: 850px;
                     margin: 0 auto;
                     backdrop-filter: blur(16px);
@@ -201,7 +211,7 @@ const MoneyCalculator = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .tool-desc {
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     font-size: 0.92rem;
                     max-width: 650px;
                     margin: 0 auto;
@@ -209,8 +219,8 @@ const MoneyCalculator = ({ t = {} }) => {
                 }
                 .calc-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                    gap: 18px;
+                    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                    gap: 16px;
                     margin-bottom: 25px;
                 }
                 .calc-input-box {
@@ -229,7 +239,7 @@ const MoneyCalculator = ({ t = {} }) => {
                 .calc-input-box label {
                     font-size: 0.86rem;
                     font-weight: 600;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     display: flex;
                     align-items: center;
                     gap: 6px;
@@ -261,7 +271,7 @@ const MoneyCalculator = ({ t = {} }) => {
                 .btn-quick-val {
                     background: rgba(255, 255, 255, 0.08);
                     border: 1px solid rgba(255, 255, 255, 0.12);
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     padding: 4px 10px;
                     border-radius: 6px;
                     font-size: 0.75rem;
@@ -269,10 +279,16 @@ const MoneyCalculator = ({ t = {} }) => {
                     cursor: pointer;
                     transition: all 0.2s;
                 }
-                .btn-quick-val:hover {
+                .btn-quick-val:hover, .btn-quick-val.active {
                     background: #10b981;
                     color: #fff;
                     border-color: transparent;
+                }
+                .range-hints {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.75rem;
+                    color: var(--text-dim, #94a3b8);
                 }
                 .btn-calculate {
                     width: 100%;
@@ -302,7 +318,7 @@ const MoneyCalculator = ({ t = {} }) => {
                 .results-headline {
                     text-align: center;
                     margin-bottom: 16px;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     font-size: 0.9rem;
                 }
                 .results-headline strong {
@@ -310,7 +326,7 @@ const MoneyCalculator = ({ t = {} }) => {
                 }
                 .earnings-cards-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                     gap: 16px;
                     margin-bottom: 20px;
                 }
@@ -332,12 +348,12 @@ const MoneyCalculator = ({ t = {} }) => {
                 .earnings-card.highlight {
                     background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.08) 100%);
                     border-color: rgba(16, 185, 129, 0.35);
-                    transform: scale(1.03);
+                    transform: scale(1.02);
                 }
                 .card-period {
                     font-size: 0.8rem;
                     font-weight: 700;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     text-transform: uppercase;
                     letter-spacing: 0.5px;
                 }
@@ -348,7 +364,7 @@ const MoneyCalculator = ({ t = {} }) => {
                 }
                 .card-sub {
                     font-size: 0.76rem;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                 }
                 .tips-box {
                     display: flex;

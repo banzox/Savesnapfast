@@ -18,3 +18,15 @@ Tasks:
    - Security issues / DMCA takedowns / Brand confusion with TikTok trademarks.
 4. Formulate an actionable GSC diagnostic checklist and step-by-step remediation guide.
 5. Write your comprehensive findings and recommendations to c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\teamwork_preview_explorer_survey_1\handoff.md and report completion via send_message.
+
+## 2026-08-28T09:51:10Z
+Survey Explorer 1 (Routing & Meta Robots Auditor) for Savesnapfast (savetik-fast.xyz).
+Tasks:
+1. Read ORIGINAL_REQUEST.md.
+2. Investigate src/pages/, layouts (src/layouts/), components (src/components/), i18n configurations (src/i18n/ or similar), and all localized routes (e.g. [lang], root routes, device guides ios/android/mac/pc, tool variations mp3/slideshow/story/etc.).
+3. Identify exactly where and why <meta name="robots" content="noindex..." /> or restrictive meta tags are emitted.
+4. Analyze how canonical tags are generated and whether self-referencing canonicals are properly set for every language and route.
+5. Analyze hreflang alternate link tags across all 30 languages.
+6. Enumerate the complete inventory of all route types, language codes (all 30), tool variants, device guides, and exact URL patterns.
+7. Provide a detailed analysis and concrete remediation strategy in your handoff report.
+

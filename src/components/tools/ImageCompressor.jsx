@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 const ImageCompressor = ({ t = {} }) => {
     const [image, setImage] = useState(null);
@@ -8,12 +8,22 @@ const ImageCompressor = ({ t = {} }) => {
     const [maxWidth, setMaxWidth] = useState(1920);
     const [targetFormat, setTargetFormat] = useState('image/webp');
     const [isProcessing, setIsProcessing] = useState(false);
+    const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef(null);
+
+    const processFile = (file) => {
+        if (!file || !file.type.match(/image\//)) return;
+        setImage(file);
+        const url = URL.createObjectURL(file);
+        setPreview(url);
+        setCompressed(null);
+    };
 
     const handleDrop = (e) => {
         e.preventDefault();
+        setIsDragging(false);
         const file = e.dataTransfer.files[0];
-        if (file && file.type.match(/image\/(png|jpeg|webp|jpg)/)) {
+        if (file) {
             processFile(file);
         }
     };
@@ -25,55 +35,71 @@ const ImageCompressor = ({ t = {} }) => {
         }
     };
 
-    const processFile = (file) => {
-        setImage(file);
-        setPreview(URL.createObjectURL(file));
-        setCompressed(null);
-    };
-
-    const compressImage = async () => {
+    const compressImage = useCallback(async () => {
         if (!image || !preview) return;
         setIsProcessing(true);
 
-        const img = new Image();
-        img.src = preview;
+        try {
+            const img = new Image();
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                let width = img.width;
+                let height = img.height;
 
-        img.onload = () => {
-            const canvas = document.createElement('canvas');
-            let width = img.width;
-            let height = img.height;
+                const maxDimension = parseInt(maxWidth, 10) || 1920;
+                if (width > maxDimension) {
+                    height = Math.round((height * maxDimension) / width);
+                    width = maxDimension;
+                }
 
-            const maxDimension = parseInt(maxWidth, 10) || 1920;
-            if (width > maxDimension) {
-                height = Math.round((height * maxDimension) / width);
-                width = maxDimension;
-            }
+                canvas.width = width;
+                canvas.height = height;
 
-            canvas.width = width;
-            canvas.height = height;
+                const ctx = canvas.getContext('2d');
+                if (targetFormat === 'image/jpeg') {
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fillRect(0, 0, width, height);
+                }
+                ctx.drawImage(img, 0, 0, width, height);
 
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(img, 0, 0, width, height);
+                canvas.toBlob(
+                    (blob) => {
+                        if (blob) {
+                            const compressedUrl = URL.createObjectURL(blob);
+                            const ext = targetFormat.split('/')[1] === 'jpeg' ? 'jpg' : targetFormat.split('/')[1];
+                            setCompressed({
+                                url: compressedUrl,
+                                size: blob.size,
+                                width,
+                                height,
+                                extension: ext
+                            });
+                        }
+                        setIsProcessing(false);
+                    },
+                    targetFormat,
+                    quality / 100
+                );
+            };
 
-            canvas.toBlob(
-                (blob) => {
-                    if (blob) {
-                        const compressedUrl = URL.createObjectURL(blob);
-                        setCompressed({
-                            url: compressedUrl,
-                            size: blob.size,
-                            width,
-                            height,
-                            extension: targetFormat.split('/')[1] === 'jpeg' ? 'jpg' : targetFormat.split('/')[1]
-                        });
-                    }
-                    setIsProcessing(false);
-                },
-                targetFormat,
-                quality / 100
-            );
-        };
-    };
+            img.onerror = () => {
+                console.error("Failed to load image for compression");
+                setIsProcessing(false);
+            };
+
+            img.src = preview;
+        } catch (err) {
+            console.error("Compression error:", err);
+            setIsProcessing(false);
+        }
+    }, [image, preview, quality, maxWidth, targetFormat]);
+
+    // Auto-compress when image is loaded or settings changed
+    useEffect(() => {
+        if (preview && image) {
+            compressImage();
+        }
+    }, [preview, quality, maxWidth, targetFormat]);
 
     const formatSize = (bytes) => {
         if (!bytes || bytes === 0) return '0 KB';
@@ -91,24 +117,32 @@ const ImageCompressor = ({ t = {} }) => {
         <div className="tool-card">
             {!preview ? (
                 <div
-                    className="dropzone"
+                    className={`dropzone ${isDragging ? 'dragging' : ''}`}
                     onDrop={handleDrop}
-                    onDragOver={(e) => e.preventDefault()}
-                    onClick={() => fileInputRef.current.click()}
+                    onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+                    onDragLeave={() => setIsDragging(false)}
+                    onClick={() => fileInputRef.current?.click()}
                 >
                     <input
                         type="file"
                         ref={fileInputRef}
                         onChange={handleFileChange}
-                        accept="image/png, image/jpeg, image/webp"
+                        accept="image/*"
                         hidden
                     />
                     <div className="icon">
                         <i className="fas fa-cloud-upload-alt"></i>
                     </div>
                     <h3>{t.dropzone?.text || "Drag & drop your image here"}</h3>
-                    <p>{t.dropzone?.hint || "Supports JPG, PNG, WebP up to 50MB (100% Client-Side)"}</p>
-                    <button type="button" className="btn-browse">
+                    <p>{t.dropzone?.hint || "Supports JPG, PNG, WebP up to 50MB (100% Client-Side Privacy)"}</p>
+                    <button
+                        type="button"
+                        className="btn-browse"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            fileInputRef.current?.click();
+                        }}
+                    >
                         <i className="fas fa-folder-open"></i> Browse Image
                     </button>
                 </div>
@@ -160,6 +194,7 @@ const ImageCompressor = ({ t = {} }) => {
 
                         <div className="actions-row">
                             <button
+                                type="button"
                                 className="btn-compress-action"
                                 onClick={compressImage}
                                 disabled={isProcessing}
@@ -170,12 +205,13 @@ const ImageCompressor = ({ t = {} }) => {
                                     </>
                                 ) : (
                                     <>
-                                        <i className="fas fa-compress-arrows-alt"></i> Compress Now
+                                        <i className="fas fa-compress-arrows-alt"></i> Re-Compress Image
                                     </>
                                 )}
                             </button>
 
                             <button
+                                type="button"
                                 className="btn-reset"
                                 onClick={() => {
                                     setImage(null);
@@ -195,7 +231,7 @@ const ImageCompressor = ({ t = {} }) => {
                                 <img src={preview} alt="Original" />
                             </div>
                             <div className="preview-stats">
-                                <span>{image?.name}</span>
+                                <span className="file-name">{image?.name}</span>
                                 <strong>{formatSize(image?.size)}</strong>
                             </div>
                         </div>
@@ -230,7 +266,7 @@ const ImageCompressor = ({ t = {} }) => {
                     background: rgba(255, 255, 255, 0.03);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                     border-radius: 20px;
-                    padding: 28px;
+                    padding: 26px 20px;
                     width: 100%;
                     max-width: 850px;
                     margin: 0 auto;
@@ -245,9 +281,9 @@ const ImageCompressor = ({ t = {} }) => {
                     transition: all 0.3s ease;
                     background: rgba(255, 255, 255, 0.02);
                 }
-                .dropzone:hover {
-                    border-color: var(--secondary);
-                    background: rgba(0, 242, 234, 0.04);
+                .dropzone:hover, .dropzone.dragging {
+                    border-color: var(--secondary, #00f2ea);
+                    background: rgba(0, 242, 234, 0.05);
                     transform: translateY(-2px);
                 }
                 [data-theme='light'] .dropzone {
@@ -255,16 +291,16 @@ const ImageCompressor = ({ t = {} }) => {
                     background: #f8fafc;
                 }
                 [data-theme='light'] .dropzone:hover {
-                    border-color: var(--primary);
+                    border-color: var(--primary, #2563eb);
                     background: #eff6ff;
                 }
                 .dropzone .icon {
                     font-size: 3rem;
-                    color: var(--secondary);
+                    color: var(--secondary, #00f2ea);
                     margin-bottom: 12px;
                 }
                 [data-theme='light'] .dropzone .icon {
-                    color: var(--primary);
+                    color: var(--primary, #2563eb);
                 }
                 .dropzone h3 {
                     font-size: 1.25rem;
@@ -276,12 +312,12 @@ const ImageCompressor = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .dropzone p {
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     font-size: 0.88rem;
                     margin: 0 0 16px;
                 }
                 .btn-browse {
-                    background: linear-gradient(135deg, var(--primary), var(--secondary));
+                    background: linear-gradient(135deg, var(--primary, #ff0050), var(--secondary, #00f2ea));
                     border: none;
                     color: #fff;
                     padding: 10px 22px;
@@ -322,7 +358,7 @@ const ImageCompressor = ({ t = {} }) => {
                 .control-group label {
                     font-size: 0.85rem;
                     font-weight: 600;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     display: flex;
                     align-items: center;
                     gap: 6px;
@@ -345,7 +381,7 @@ const ImageCompressor = ({ t = {} }) => {
                     display: flex;
                     justify-content: space-between;
                     font-size: 0.72rem;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                 }
                 .actions-row {
                     display: flex;
@@ -355,13 +391,13 @@ const ImageCompressor = ({ t = {} }) => {
                 .btn-compress-action {
                     flex: 2;
                     min-width: 180px;
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                    background: linear-gradient(135deg, var(--primary, #ff0050) 0%, var(--secondary, #00f2ea) 100%);
                     border: none;
                     padding: 13px;
                     border-radius: 12px;
                     color: #fff;
                     font-weight: 700;
-                    font-size: 1rem;
+                    font-size: 0.98rem;
                     cursor: pointer;
                     display: flex;
                     align-items: center;
@@ -376,6 +412,116 @@ const ImageCompressor = ({ t = {} }) => {
                 .btn-compress-action:disabled {
                     opacity: 0.6;
                     cursor: not-allowed;
+                }
+                .btn-reset {
+                    flex: 1;
+                    min-width: 130px;
+                    background: rgba(255, 255, 255, 0.06);
+                    border: 1px solid rgba(255, 255, 255, 0.12);
+                    padding: 13px;
+                    border-radius: 12px;
+                    color: var(--text-dim, #94a3b8);
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    transition: all 0.2s;
+                }
+                .btn-reset:hover {
+                    color: var(--text-main, #fff);
+                    background: rgba(255, 255, 255, 0.1);
+                }
+                .preview-compare-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                    gap: 20px;
+                }
+                .preview-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 16px;
+                    padding: 16px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+                [data-theme='light'] .preview-card {
+                    background: #ffffff;
+                    border-color: rgba(0, 0, 0, 0.08);
+                    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+                }
+                .preview-badge {
+                    position: absolute;
+                    top: 12px;
+                    inset-inline-start: 12px;
+                    padding: 4px 10px;
+                    border-radius: 6px;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    z-index: 2;
+                }
+                .preview-badge.original {
+                    background: rgba(0, 0, 0, 0.6);
+                    color: #fff;
+                }
+                .preview-badge.compressed {
+                    background: #10b981;
+                    color: #fff;
+                    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+                }
+                .img-wrapper {
+                    width: 100%;
+                    height: 200px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    background: rgba(0, 0, 0, 0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .img-wrapper img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+                .preview-stats {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 0.85rem;
+                }
+                .file-name {
+                    max-width: 160px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: var(--text-dim, #94a3b8);
+                }
+                .success-size {
+                    color: #10b981;
+                    font-weight: 700;
+                }
+                .btn-download-compressed {
+                    background: linear-gradient(135deg, #10b981, #059669);
+                    color: #fff;
+                    padding: 11px;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    transition: transform 0.2s, box-shadow 0.2s;
+                }
+                .btn-download-compressed:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
                 }
             `}</style>
         </div>

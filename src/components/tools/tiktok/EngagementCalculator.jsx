@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const EngagementCalculator = ({ t = {} }) => {
     const [calcMode, setCalcMode] = useState('views'); // 'views' or 'followers'
@@ -9,7 +9,7 @@ const EngagementCalculator = ({ t = {} }) => {
     const [saves, setSaves] = useState('850');
     const [results, setResults] = useState(null);
 
-    const calculate = () => {
+    const calculate = useCallback(() => {
         const base = Math.max(1, Number(baseNumber) || 0);
         const l = Math.max(0, Number(likes) || 0);
         const c = Math.max(0, Number(comments) || 0);
@@ -63,7 +63,12 @@ const EngagementCalculator = ({ t = {} }) => {
             badge,
             advice
         });
-    };
+    }, [baseNumber, likes, comments, shares, saves]);
+
+    // Initial calculation on mount
+    useEffect(() => {
+        calculate();
+    }, [calculate]);
 
     return (
         <div className="tool-card">
@@ -79,12 +84,14 @@ const EngagementCalculator = ({ t = {} }) => {
 
             <div className="mode-toggle">
                 <button
+                    type="button"
                     className={`btn-mode ${calcMode === 'views' ? 'active' : ''}`}
                     onClick={() => setCalcMode('views')}
                 >
                     <i className="fas fa-eye"></i> Views-Based (Recommended)
                 </button>
                 <button
+                    type="button"
                     className={`btn-mode ${calcMode === 'followers' ? 'active' : ''}`}
                     onClick={() => setCalcMode('followers')}
                 >
@@ -147,8 +154,8 @@ const EngagementCalculator = ({ t = {} }) => {
                 </div>
             </div>
 
-            <button className="btn-primary full-width" onClick={calculate}>
-                <i className="fas fa-fire"></i> Analyze Engagement Rate
+            <button type="button" className="btn-primary full-width" onClick={calculate}>
+                <i className="fas fa-fire"></i> Recalculate Engagement Rate
             </button>
 
             {results && (
@@ -194,7 +201,7 @@ const EngagementCalculator = ({ t = {} }) => {
                     background: rgba(255, 255, 255, 0.03);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                     border-radius: 20px;
-                    padding: 30px 24px;
+                    padding: 26px 20px;
                     max-width: 850px;
                     margin: 0 auto;
                     backdrop-filter: blur(16px);
@@ -231,7 +238,7 @@ const EngagementCalculator = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .tool-desc {
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     font-size: 0.9rem;
                     max-width: 650px;
                     margin: 0 auto;
@@ -246,7 +253,7 @@ const EngagementCalculator = ({ t = {} }) => {
                 .btn-mode {
                     background: rgba(255, 255, 255, 0.05);
                     border: 1px solid rgba(255, 255, 255, 0.1);
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     padding: 10px 18px;
                     border-radius: 12px;
                     font-size: 0.88rem;
@@ -263,7 +270,7 @@ const EngagementCalculator = ({ t = {} }) => {
                     color: #475569;
                 }
                 .btn-mode.active {
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                    background: linear-gradient(135deg, var(--primary, #ff0050) 0%, var(--secondary, #00f2ea) 100%);
                     color: #fff;
                     border-color: transparent;
                     box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
@@ -273,7 +280,7 @@ const EngagementCalculator = ({ t = {} }) => {
                 }
                 .input-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                     gap: 16px;
                     margin-bottom: 22px;
                 }
@@ -288,7 +295,7 @@ const EngagementCalculator = ({ t = {} }) => {
                 .input-field label {
                     font-size: 0.86rem;
                     font-weight: 600;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     display: flex;
                     align-items: center;
                     gap: 6px;
@@ -309,11 +316,11 @@ const EngagementCalculator = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .input-field input:focus {
-                    border-color: var(--secondary);
+                    border-color: var(--secondary, #00f2ea);
                 }
                 .btn-primary {
                     width: 100%;
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                    background: linear-gradient(135deg, var(--primary, #ff0050) 0%, var(--secondary, #00f2ea) 100%);
                     border: none;
                     padding: 14px;
                     border-radius: 12px;
@@ -349,7 +356,7 @@ const EngagementCalculator = ({ t = {} }) => {
                 .score-label {
                     font-size: 0.85rem;
                     font-weight: 700;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     text-transform: uppercase;
                     letter-spacing: 0.5px;
                 }
@@ -369,7 +376,7 @@ const EngagementCalculator = ({ t = {} }) => {
                 }
                 .metrics-pills-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                     gap: 12px;
                     margin-bottom: 18px;
                 }
@@ -389,7 +396,7 @@ const EngagementCalculator = ({ t = {} }) => {
                 }
                 .metric-pill span {
                     font-size: 0.78rem;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                 }
                 .metric-pill strong {
                     font-size: 1.15rem;

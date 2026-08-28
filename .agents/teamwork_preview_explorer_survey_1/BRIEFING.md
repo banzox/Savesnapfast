@@ -1,14 +1,14 @@
-# BRIEFING — 2026-08-19T16:12:30Z
+# BRIEFING — 2026-08-28T09:51:10Z
 
 ## Mission
-R1 Technical SEO & Google Search Console Deep Root-Cause Investigation for Savesnapfast (`savetik-fast.xyz`).
+Survey Explorer 1 (Routing & Meta Robots Auditor) — Complete forensic audit of routing templates, Astro layouts, localized pages across all 30 languages, meta robots tags (identifying where and why noindex is emitted), canonical tag self-referencing consistency, hreflang alternate links, and complete inventory of all route types and URL patterns.
 
 ## 🔒 My Identity
 - Archetype: explorer
 - Roles: [investigator, analyst, synthesist]
 - Working directory: c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\teamwork_preview_explorer_survey_1
-- Original parent: a86d71c4-2324-43c3-8937-5f20c928403c
-- Milestone: R1 Technical SEO & GSC Investigation
+- Original parent: 815f585c-6600-4869-bebd-41cdc77658c5
+- Milestone: Routing & Meta Robots Audit
 
 ## 🔒 Key Constraints
 - Read-only investigation — do NOT implement code modifications in source code
@@ -16,32 +16,36 @@ R1 Technical SEO & Google Search Console Deep Root-Cause Investigation for Saves
 - Thoroughly analyze canonicals, hreflang, sitemaps, robots.txt, thin content, soft 404s, and indexation failure causes
 
 ## Current Parent
-- Conversation ID: a86d71c4-2324-43c3-8937-5f20c928403c
-- Updated: 2026-08-19T16:12:30Z
+- Conversation ID: 815f585c-6600-4869-bebd-41cdc77658c5
+- Updated: 2026-08-28T09:51:10Z
+
 
 ## Investigation State
 - **Explored paths**:
-  - `astro.config.mjs`, `wrangler.jsonc`, `package.json`, `PROJECT.md`
-  - `src/components/SEOConfig.astro`, `src/components/SEOHead.astro`, `src/layouts/Layout.astro`
-  - `src/utils/sitemap.ts`, `src/pages/sitemap.xml.ts`, `src/pages/sitemap-0.xml.ts`, `public/sitemap-index.xml`
-  - `public/robots.txt`, `public/_redirects`, `src/middleware.ts`, `src/utils/redirects.ts`
-  - `src/pages/404.astro`, `src/components/NotFound.astro`, `src/components/DownloadPage.astro`, `src/components/TextPage.astro`
-  - `src/content/blog/`, `src/content/config.ts`, `src/layouts/BlogPost.astro`
-  - `src/locales/locales/*.json`, `src/i18n/ui.ts`
-  - `tools/site-doctor.cjs`, `verify_build.cjs`
+  - `src/pages/` (all 38 route templates: index, mp3, slideshow, story, [device], tools, blog, legal pages, [lang]/*)
+  - `src/layouts/` (`Layout.astro`, `BlogPost.astro`)
+  - `src/components/` (`SEOConfig.astro`, `Schema.astro`, `DownloadPage.astro`, `TextPage.astro`, `BlogPage.astro`, `NotFound.astro`)
+  - `src/i18n/` (`ui.ts`, `extracted_content.json`) and `src/locales/` (30 JSON locale files)
+  - `src/utils/` (`sitemap.ts`, `redirects.ts`, `i18n.js`)
+  - `worker/` (`worker/index.ts`)
+  - `astro.config.mjs`, `wrangler.jsonc`, `public/robots.txt`, `public/_headers`, `public/_redirects`
+  - Automated test harnesses (`tools/test_crawler_emulation.cjs`, `tools/audit_html_dist.cjs`, `tools/site-doctor.cjs`)
 - **Key findings**:
-  - Canonical and Hreflang logic in `SEOConfig.astro` is properly configured across 30 languages with self-referencing canonicals and no trailing slashes.
-  - Sitemap exports 191 canonical URLs (7 root + 145 localized + 39 blog posts) with `<lastmod>`.
-  - Discrepancy between `verify_build.cjs` (checks `sitemap-index.xml`) and `robots.txt` (`sitemap.xml`).
-  - Prerendering build failure identified in Astro static build with Cloudflare adapter and `build.format: 'file'` colliding on `blog.astro` and `blog/[slug].astro`.
-  - 0-indexed URLs on `site:savetik-fast.xyz` root causes classified into 4 core risk vectors: (1) Cloudflare WAF / Bot Fight Mode challenge blocking Googlebot, (2) Scaled Content Abuse algorithmic filter on 150+ programmatic tool variants on new `.xyz` domain, (3) Third-party ad network script safety flags (Adsterra / Safe Browsing), (4) TikTok trademark / DMCA sensitivity.
-- **Unexplored areas**: None for R1 survey scope.
+  - Exact emission points of `noindex`: Only on `/404` (`src/pages/404.astro`), invalid language fallback (`NotFound.astro`), Keystatic CMS (`admin/`), and `X-Robots-Tag: noindex, nofollow` on `/api/*` routes (`worker/index.ts`). All 520 content pages emit `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`.
+  - Canonical URL logic: Generated in `SEOConfig.astro` using `Astro.url.pathname` (stripping `.html` and trailing slashes). Confirmed 100% self-referencing across all 30 languages with 0 mismatches.
+  - Hreflang architecture: Emits 30 bidirectional `<link rel="alternate" hreflang="..." />` tags plus `x-default` (pointing to English root URL). Safely skipped on noindex/404, single-language editorial policy, and standalone blog articles.
+  - Complete URL Inventory: 520 total content URLs mapped across 10 distinct route categories (Home, MP3, Slideshow, Story, Devices iOS/Android/Mac/PC, Tools, Legal, Editorial Policy, Blog Index, Blog Articles) covering all 30 languages.
+  - XML Sitemap Expansion: Identified that `src/utils/sitemap.ts` previously curated 191 priority URLs, and needs expansion to encompass the full inventory of 520+ URLs for exhaustive sitemap coverage as requested.
+- **Unexplored areas**: None. Complete forensic survey accomplished.
 
 ## Key Decisions Made
-- Fully categorized and differentiated all potential GSC indexing blockers.
-- Built step-by-step GSC Diagnostic Checklist and Actionable Remediation Playbook.
+- Audited all routing templates, layout configs, and meta robots emissions across all 30 languages.
+- Verified 0 noindex leaks on user-facing content.
+- Verified 100% self-referencing canonical correctness across all 520 pages.
+- Formulated concrete sitemap expansion and indexing remediation blueprint in `handoff.md`.
 
 ## Artifact Index
-- `handoff.md` — Complete 5-component forensic report and remediation blueprint
+- `handoff.md` — Authoritative 5-component routing & meta robots audit report
 - `progress.md` — Completed task progress log
 - `DISPATCH.md` — Incoming dispatch archive
+

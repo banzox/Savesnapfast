@@ -409,8 +409,8 @@ const sitemapXmlContent = fs.readFileSync(sitemapXmlPath, 'utf8');
 const sitemap0Urls = [...sitemap0Content.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
 const sitemapXmlUrls = [...sitemapXmlContent.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
 
-assert(sitemap0Urls.length === 191, 'sitemap-0.xml contains exactly 191 URLs', `Found: ${sitemap0Urls.length}`);
-assert(sitemapXmlUrls.length === 191, 'sitemap.xml contains exactly 191 URLs', `Found: ${sitemapXmlUrls.length}`);
+assert(sitemap0Urls.length === 520, 'sitemap-0.xml contains exactly 520 URLs', `Found: ${sitemap0Urls.length}`);
+assert(sitemapXmlUrls.length === 520, 'sitemap.xml contains exactly 520 URLs', `Found: ${sitemapXmlUrls.length}`);
 
 // Compare sitemap.xml and sitemap-0.xml for 100% parity
 const sitemap0Set = new Set(sitemap0Urls);
@@ -428,8 +428,8 @@ assert(
   'sitemap-index.xml references https://savetik-fast.xyz/sitemap-0.xml'
 );
 
-// Stress test each of the 191 URLs
-console.log(`Validating all 191 sitemap URLs against disk artifacts and canonical tags...`);
+// Stress test each of the 520 URLs
+console.log(`Validating all 520 sitemap URLs against disk artifacts and canonical tags...`);
 
 sitemap0Urls.forEach((locUrl, index) => {
   const parsed = new URL(locUrl);

@@ -1,14 +1,14 @@
-# BRIEFING — 2026-08-19T16:28:30Z
+# BRIEFING — 2026-08-28T10:21:00Z
 
 ## Mission
-Independent Edge Worker, Cloudflare Delivery, Redirect Engine, and Build Verification Review for Savesnapfast.
+Review and audit Meta Robots, Routing Architecture, Canonicalization, Indexing Scoping, and Cloudflare Sitemaps for Savesnapfast.
 
 ## 🔒 My Identity
 - Archetype: reviewer_critic
 - Roles: reviewer, critic
 - Working directory: c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\teamwork_preview_reviewer_2
-- Original parent: a86d71c4-2324-43c3-8937-5f20c928403c
-- Milestone: M4 Review
+- Original parent: 815f585c-6600-4869-bebd-41cdc77658c5
+- Milestone: M1 Review (Meta Robots & Routing Architecture Reviewer)
 - Instance: 2 of 2
 
 ## 🔒 Key Constraints
@@ -17,18 +17,20 @@ Independent Edge Worker, Cloudflare Delivery, Redirect Engine, and Build Verific
 - Strict evidence-based verdicts
 
 ## Current Parent
-- Conversation ID: a86d71c4-2324-43c3-8937-5f20c928403c
-- Updated: 2026-08-19T16:28:30Z
+- Conversation ID: 815f585c-6600-4869-bebd-41cdc77658c5
+- Updated: 2026-08-28T10:21:00Z
 
 ## Review Scope
-- **Files to review**: `worker/index.ts`, `src/utils/redirects.ts`, `public/_headers`, `wrangler.jsonc`, `tools/test_redirects.js`, `audit_check.cjs`, `verify_build.cjs`, `docs/GSC_RECOVERY_GUIDE.md`
+- **Files to review**: `src/components/SEOConfig.astro`, `src/layouts/Layout.astro`, `src/layouts/BlogPost.astro`, `src/components/DownloadPage.astro`, `src/components/NotFound.astro`, `src/components/TextPage.astro`, `public/robots.txt`, `public/_headers`, `src/utils/sitemap.ts`, `src/pages/sitemap.xml.ts`, `src/pages/sitemap-0.xml.ts`, `src/utils/redirects.ts`, `worker/index.ts`, `wrangler.jsonc`
 - **Interface contracts**: `PROJECT.md`, `.agents/ORIGINAL_REQUEST.md`
-- **Review criteria**: correctness, integrity, single-hop canonicalization, security headers, edge caching, build & verification pass
+- **Review criteria**: 100% indexability on 520 content routes, meta robots correctness, self-referencing canonicals, elimination of accidental noindex, public robots.txt validity, sitemap static delivery integrity, build verification
 
 ## Key Decisions Made
-- Confirmed full compliance with edge canonicalization, single-hop redirect logic, headers, and zero-compromise static asset build.
-- Verified test suite: `npm run doctor` (117/117 passed), `node verify_build.cjs` (0 errors), `node audit_check.cjs` (0 errors), `node tools/test_redirects.js` (32/32 passed), `npx astro build` (exit 0, 685 assets), `npx wrangler deploy --dry-run` (exit 0).
-- Verdict: APPROVE.
+- Confirmed that 100% of user-facing content routes across all 30 languages (520 pages) have `<meta name="robots" content="index, follow..." />`, self-referencing canonicals, and complete hreflang alternates.
+- Confirmed that `public/robots.txt` points cleanly to `https://savetik-fast.xyz/sitemap.xml` and contains no disallows on public content routes.
+- Confirmed that `noindex` directives are strictly restricted to 404 pages and admin routes.
+- Identified Critical Defect in sitemap asset delivery: `npm run build` does not emit static `dist/sitemap.xml` and `dist/sitemap-0.xml` because `@astrojs/cloudflare` handles `.ts` endpoints as SSR Lambdas in `_worker.js`, while `wrangler.jsonc` delegates asset delivery to `env.ASSETS.fetch(request)` against `dist/`.
+- Verdict: REQUEST_CHANGES (due to missing static sitemap build artifacts causing sitemap validator and crawler emulation suites to fail on clean build).
 
 ## Artifact Index
 - `c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\teamwork_preview_reviewer_2\handoff.md` — Final review and challenge report
@@ -36,21 +38,24 @@ Independent Edge Worker, Cloudflare Delivery, Redirect Engine, and Build Verific
 
 ## Review Checklist
 - **Items reviewed**:
-  - `worker/index.ts` (apex canonicalization + X-Robots-Tag on /api/*)
-  - `src/utils/redirects.ts` (single-hop compound redirects, legacy languages, query normalization)
-  - `public/_headers` (HSTS preload + s-maxage=86400 on HTML)
-  - `wrangler.jsonc` (custom domain route, asset bindings, html_handling drop-trailing-slash, run_worker_first)
-  - Build pipeline (`npx astro build`, `dist` 685 prerendered pages/assets)
-  - Test suites (`tools/test_redirects.js`, `verify_build.cjs`, `audit_check.cjs`, `site-doctor.cjs`)
-- **Verdict**: APPROVE
-- **Unverified claims**: None (all claims verified by independent execution and code inspection)
+  - `src/components/SEOConfig.astro` (canonicals, hreflangs, x-default) -> PASS
+  - `src/layouts/Layout.astro` (robotsContent index, follow, googlebot, bingbot) -> PASS
+  - `src/components/DownloadPage.astro` (isDevicePage fix, indexation) -> PASS
+  - `src/components/NotFound.astro` (noindex isolation) -> PASS
+  - `public/robots.txt` (allow all public content, sitemap reference) -> PASS
+  - `public/_headers` (MIME types, caching headers, HSTS) -> PASS
+  - `src/utils/sitemap.ts` (520 URL dataset, XML structure, lastmod, hreflang) -> PASS (code logic)
+  - Build output & Static Asset Emission (`dist/sitemap.xml`, `dist/sitemap-0.xml`) -> FAIL (missing in dist after astro build)
+- **Verdict**: REQUEST_CHANGES
+- **Unverified claims**: Worker claim that tests pass after `npm run build` (invalidated due to missing static sitemaps in dist).
 
 ## Attack Surface
 - **Hypotheses tested**:
-  1. Multi-hop redirect leakage on compound legacy paths (`/tl/about-us.html`) -> Resolved in 1 hop (`/fil/about`).
-  2. API indexing vulnerability -> Verified `X-Robots-Tag: noindex, nofollow` on all `/api/*` routes.
-  3. `www.` subdomain canonical split -> Verified 301 apex redirect in `worker/index.ts:29-32`.
-  4. Cache poisoning / crawler stale response -> Verified `public/_headers` `s-maxage=86400` with `max-age=0, must-revalidate`.
-  5. Facade / dummy test assertions -> Code inspection verified real runtime evaluations with zero hardcoded cheat values.
-- **Vulnerabilities found**: None
-- **Untested angles**: Live Cloudflare edge DNS deployment (covered by `wrangler deploy --dry-run` verification)
+  1. Accidental `noindex` on device / translated pages -> Checked all 520 HTML templates; confirmed `index, follow`.
+  2. Trailing slash canonical conflicts -> Verified all canonical URLs follow `trailingSlash: 'never'` without trailing slashes.
+  3. Static asset availability for Cloudflare Pages -> Found that `dist/sitemap.xml` and `dist/sitemap-0.xml` are not emitted as static files during `astro build`.
+  4. 404 page status and meta robots -> Verified 404 pages emit `noindex, follow` and omit hreflang alternates.
+  5. Facade / dummy test assertions -> Checked test files; assertions are genuine, but expose the missing sitemap files.
+- **Vulnerabilities found**:
+  - Missing static sitemap build artifacts in `dist/` upon executing `npm run build`.
+- **Untested angles**: Live DNS propagation on custom domain.

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 const ImageConverter = ({ t = {} }) => {
     const [image, setImage] = useState(null);
@@ -7,12 +7,22 @@ const ImageConverter = ({ t = {} }) => {
     const [quality, setQuality] = useState(0.92);
     const [converted, setConverted] = useState(null);
     const [isProcessing, setIsProcessing] = useState(false);
+    const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef(null);
+
+    const processFile = (file) => {
+        if (!file || !file.type.match(/image\//)) return;
+        setImage(file);
+        const url = URL.createObjectURL(file);
+        setPreview(url);
+        setConverted(null);
+    };
 
     const handleDrop = (e) => {
         e.preventDefault();
+        setIsDragging(false);
         const file = e.dataTransfer.files[0];
-        if (file && file.type.match(/image\//)) {
+        if (file) {
             processFile(file);
         }
     };
@@ -24,55 +34,66 @@ const ImageConverter = ({ t = {} }) => {
         }
     };
 
-    const processFile = (file) => {
-        setImage(file);
-        setPreview(URL.createObjectURL(file));
-        setConverted(null);
-    };
-
-    const convertImage = async () => {
+    const convertImage = useCallback(async () => {
         if (!image || !preview) return;
         setIsProcessing(true);
 
-        const img = new Image();
-        img.src = preview;
+        try {
+            const img = new Image();
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width;
+                canvas.height = img.height;
 
-        img.onload = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = img.width;
-            canvas.height = img.height;
+                const ctx = canvas.getContext('2d');
+                
+                // Fill white background for JPEG if original had transparency
+                if (format === 'image/jpeg') {
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fillRect(0, 0, img.width, img.height);
+                }
 
-            const ctx = canvas.getContext('2d');
-            
-            // Fill white background for JPEG/BMP/ICO if original had transparency
-            if (format === 'image/jpeg' || format === 'image/bmp') {
-                ctx.fillStyle = '#FFFFFF';
-                ctx.fillRect(0, 0, img.width, img.height);
-            }
+                ctx.drawImage(img, 0, 0);
 
-            ctx.drawImage(img, 0, 0);
+                canvas.toBlob(
+                    (blob) => {
+                        if (blob) {
+                            const convertedUrl = URL.createObjectURL(blob);
+                            const ext = format === 'image/jpeg' ? 'jpg' : format.split('/')[1];
+                            setConverted({
+                                url: convertedUrl,
+                                size: blob.size,
+                                formatName: ext.toUpperCase(),
+                                extension: ext,
+                                width: img.width,
+                                height: img.height
+                            });
+                        }
+                        setIsProcessing(false);
+                    },
+                    format,
+                    quality
+                );
+            };
 
-            canvas.toBlob(
-                (blob) => {
-                    if (blob) {
-                        const convertedUrl = URL.createObjectURL(blob);
-                        const ext = format === 'image/jpeg' ? 'jpg' : format.split('/')[1];
-                        setConverted({
-                            url: convertedUrl,
-                            size: blob.size,
-                            formatName: ext.toUpperCase(),
-                            extension: ext,
-                            width: img.width,
-                            height: img.height
-                        });
-                    }
-                    setIsProcessing(false);
-                },
-                format,
-                quality
-            );
-        };
-    };
+            img.onerror = () => {
+                console.error("Failed to load image for conversion");
+                setIsProcessing(false);
+            };
+
+            img.src = preview;
+        } catch (err) {
+            console.error("Conversion error:", err);
+            setIsProcessing(false);
+        }
+    }, [image, preview, format, quality]);
+
+    // Auto-convert on select or format change
+    useEffect(() => {
+        if (preview && image) {
+            convertImage();
+        }
+    }, [preview, format, quality]);
 
     const formatSize = (bytes) => {
         if (!bytes || bytes === 0) return '0 KB';
@@ -86,10 +107,11 @@ const ImageConverter = ({ t = {} }) => {
         <div className="tool-card">
             {!preview ? (
                 <div
-                    className="dropzone"
+                    className={`dropzone ${isDragging ? 'dragging' : ''}`}
                     onDrop={handleDrop}
-                    onDragOver={(e) => e.preventDefault()}
-                    onClick={() => fileInputRef.current.click()}
+                    onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+                    onDragLeave={() => setIsDragging(false)}
+                    onClick={() => fileInputRef.current?.click()}
                 >
                     <input
                         type="file"
@@ -102,8 +124,15 @@ const ImageConverter = ({ t = {} }) => {
                         <i className="fas fa-exchange-alt"></i>
                     </div>
                     <h3>{t.dropzone?.text || "Drag & drop your image to convert"}</h3>
-                    <p>{t.dropzone?.hint_convert || "Convert seamlessly between WebP, PNG, JPG, BMP, and ICO (100% Free & Private)"}</p>
-                    <button type="button" className="btn-browse">
+                    <p>{t.dropzone?.hint_convert || "Convert seamlessly between WebP, PNG, and JPG (100% Free & Private)"}</p>
+                    <button
+                        type="button"
+                        className="btn-browse"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            fileInputRef.current?.click();
+                        }}
+                    >
                         <i className="fas fa-folder-open"></i> Browse Image
                     </button>
                 </div>
@@ -117,9 +146,8 @@ const ImageConverter = ({ t = {} }) => {
                                 </label>
                                 <select value={format} onChange={(e) => setFormat(e.target.value)}>
                                     <option value="image/webp">WebP (Next-Gen Web Standard)</option>
-                                    <option value="image/png">PNG (Lossless & Transparent)</option>
+                                    <option value="image/png">PNG (Lossless &amp; Transparent)</option>
                                     <option value="image/jpeg">JPEG / JPG (Universal)</option>
-                                    <option value="image/bmp">BMP (Windows Bitmap)</option>
                                 </select>
                             </div>
 
@@ -141,6 +169,7 @@ const ImageConverter = ({ t = {} }) => {
 
                         <div className="actions-row">
                             <button
+                                type="button"
                                 className="btn-convert-action"
                                 onClick={convertImage}
                                 disabled={isProcessing}
@@ -151,12 +180,13 @@ const ImageConverter = ({ t = {} }) => {
                                     </>
                                 ) : (
                                     <>
-                                        <i className="fas fa-sync-alt"></i> Convert Now
+                                        <i className="fas fa-sync-alt"></i> Convert Image
                                     </>
                                 )}
                             </button>
 
                             <button
+                                type="button"
                                 className="btn-reset"
                                 onClick={() => {
                                     setImage(null);
@@ -178,7 +208,7 @@ const ImageConverter = ({ t = {} }) => {
                                 <img src={preview} alt="Original" />
                             </div>
                             <div className="preview-stats">
-                                <span>{image?.name}</span>
+                                <span className="file-name">{image?.name}</span>
                                 <strong>{formatSize(image?.size)}</strong>
                             </div>
                         </div>
@@ -213,7 +243,7 @@ const ImageConverter = ({ t = {} }) => {
                     background: rgba(255, 255, 255, 0.03);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                     border-radius: 20px;
-                    padding: 28px;
+                    padding: 26px 20px;
                     width: 100%;
                     max-width: 850px;
                     margin: 0 auto;
@@ -228,9 +258,9 @@ const ImageConverter = ({ t = {} }) => {
                     transition: all 0.3s ease;
                     background: rgba(255, 255, 255, 0.02);
                 }
-                .dropzone:hover {
-                    border-color: var(--secondary);
-                    background: rgba(0, 242, 234, 0.04);
+                .dropzone:hover, .dropzone.dragging {
+                    border-color: var(--secondary, #00f2ea);
+                    background: rgba(0, 242, 234, 0.05);
                     transform: translateY(-2px);
                 }
                 [data-theme='light'] .dropzone {
@@ -238,16 +268,16 @@ const ImageConverter = ({ t = {} }) => {
                     background: #f8fafc;
                 }
                 [data-theme='light'] .dropzone:hover {
-                    border-color: var(--primary);
+                    border-color: var(--primary, #2563eb);
                     background: #eff6ff;
                 }
                 .dropzone .icon {
                     font-size: 3rem;
-                    color: var(--secondary);
+                    color: var(--secondary, #00f2ea);
                     margin-bottom: 12px;
                 }
                 [data-theme='light'] .dropzone .icon {
-                    color: var(--primary);
+                    color: var(--primary, #2563eb);
                 }
                 .dropzone h3 {
                     font-size: 1.25rem;
@@ -259,12 +289,12 @@ const ImageConverter = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .dropzone p {
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     font-size: 0.88rem;
                     margin: 0 0 16px;
                 }
                 .btn-browse {
-                    background: linear-gradient(135deg, var(--primary), var(--secondary));
+                    background: linear-gradient(135deg, var(--primary, #ff0050), var(--secondary, #00f2ea));
                     border: none;
                     color: #fff;
                     padding: 10px 22px;
@@ -305,7 +335,7 @@ const ImageConverter = ({ t = {} }) => {
                 .control-group label {
                     font-size: 0.85rem;
                     font-weight: 600;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     display: flex;
                     align-items: center;
                     gap: 6px;
@@ -332,13 +362,13 @@ const ImageConverter = ({ t = {} }) => {
                 .btn-convert-action {
                     flex: 2;
                     min-width: 180px;
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                    background: linear-gradient(135deg, var(--primary, #ff0050) 0%, var(--secondary, #00f2ea) 100%);
                     border: none;
                     padding: 13px;
                     border-radius: 12px;
                     color: #fff;
                     font-weight: 700;
-                    font-size: 1rem;
+                    font-size: 0.98rem;
                     cursor: pointer;
                     display: flex;
                     align-items: center;
@@ -361,7 +391,7 @@ const ImageConverter = ({ t = {} }) => {
                     border: 1px solid rgba(255, 255, 255, 0.12);
                     padding: 13px;
                     border-radius: 12px;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     font-weight: 600;
                     font-size: 0.9rem;
                     cursor: pointer;
@@ -428,6 +458,41 @@ const ImageConverter = ({ t = {} }) => {
                     max-width: 100%;
                     max-height: 100%;
                     object-fit: contain;
+                }
+                .preview-stats {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 0.85rem;
+                }
+                .file-name {
+                    max-width: 160px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: var(--text-dim, #94a3b8);
+                }
+                .success-size {
+                    color: #3b82f6;
+                    font-weight: 700;
+                }
+                .btn-download-converted {
+                    background: linear-gradient(135deg, #3b82f6, #0891b2);
+                    color: #fff;
+                    padding: 11px;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    transition: transform 0.2s, box-shadow 0.2s;
+                }
+                .btn-download-converted:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
                 }
             `}</style>
         </div>

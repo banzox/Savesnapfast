@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
+const normalChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
 const fontsList = [
     { name: "Bold Serif", category: "Bold", map: "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳" },
     { name: "Bold Sans", category: "Bold", map: "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇" },
     { name: "Italic Serif", category: "Italic", map: "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧" },
-    { name: "Italic Sans", category: "Italic", map: "𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻" },
+    { name: "Italic Sans", category: "Italic", map: "𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝲡𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻" },
     { name: "Bold Italic Sans", category: "Bold", map: "𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯" },
     { name: "Script / Cursive", category: "Aesthetic", map: "𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃" },
     { name: "Handwriting", category: "Aesthetic", map: "𝒜𝐵𝒞𝒟𝐸𝐹𝒢𝐻𝐼𝒥𝒦𝐿𝑀𝒩𝒪𝒫𝒬𝑅𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹𝑒𝒻𝑔𝒽𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏" },
@@ -13,8 +15,8 @@ const fontsList = [
     { name: "Double Struck (Outline)", category: "Aesthetic", map: "𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫" },
     { name: "Typewriter / Monospace", category: "Aesthetic", map: "𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣" },
     { name: "Bubble Circles Ⓣ", category: "Decor", map: "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ" },
-    { name: "Inverted Bubble 🅣", category: "Decor", map: "🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠𝅂🅢🅣🅤🅥🅦🅧🅨🅩🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩" },
-    { name: "Square Letters [T]", category: "Decor", map: "🅃🄸🄺🅃🄾🄺🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉" },
+    { name: "Inverted Bubble 🅣", category: "Decor", map: "🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩" },
+    { name: "Square Letters [T]", category: "Decor", map: "🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉" },
     { name: "Vaporwave / Wide Ｗｉｄｅ", category: "Aesthetic", map: "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ" },
     { name: "Small Caps ᴛɪᴋᴛᴏᴋ", category: "Aesthetic", map: "ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ" }
 ];
@@ -24,26 +26,34 @@ const FontGenerator = ({ t = {} }) => {
     const [filter, setFilter] = useState('All');
     const [copiedIndex, setCopiedIndex] = useState(null);
 
-    const normalChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
     const convertText = (input, fontMap) => {
         if (!input) return "";
-        return input.split('').map(char => {
+        const mapArr = Array.from(fontMap);
+        return Array.from(input).map(char => {
             const index = normalChars.indexOf(char);
-            return index !== -1 && fontMap ? fontMap.slice(index * 2, index * 2 + 2).trim() || fontMap[index] : char;
+            return (index !== -1 && mapArr[index]) ? mapArr[index] : char;
         }).join('');
     };
 
     const convertWithDecor = (input, type) => {
         if (!input) return "";
         if (type === 'underline') {
-            return input.split('').map(c => c + '\u0332').join('');
+            return Array.from(input).map(c => c + '\u0332').join('');
         }
         if (type === 'strikethrough') {
-            return input.split('').map(c => c + '\u0336').join('');
+            return Array.from(input).map(c => c + '\u0336').join('');
         }
         if (type === 'slash') {
-            return input.split('').map(c => c + '\u0338').join('');
+            return Array.from(input).map(c => c + '\u0338').join('');
+        }
+        if (type === 'sparkles') {
+            return `✨ ${input} ✨`;
+        }
+        if (type === 'brackets') {
+            return `【 ${input} 】`;
+        }
+        if (type === 'arrows') {
+            return `»»—— ${input} ——««`;
         }
         return input;
     };
@@ -62,27 +72,42 @@ const FontGenerator = ({ t = {} }) => {
         <div className="tool-card">
             <div className="calc-header">
                 <div className="badge-pill">
-                    <i className="fas fa-font"></i> Bio &amp; Caption Stylizer
+                    <i className="fas fa-font"></i> {t.font?.badge || "Bio & Caption Stylizer"}
                 </div>
-                <h3>TikTok Font Generator &amp; Aesthetic Text</h3>
+                <h3>{t.font?.heading || "TikTok Font Generator & Aesthetic Text"}</h3>
                 <p className="tool-desc">
-                    Instantly convert your text into 20+ aesthetic Unicode fonts for your TikTok bio, captions, usernames, and comments with 1-click copy.
+                    {t.font?.subheading || "Instantly convert your text into 20+ aesthetic Unicode fonts for your TikTok bio, captions, usernames, and comments with 1-click copy."}
                 </p>
             </div>
 
             <div className="input-box-wrapper">
-                <label>Type or paste your text below:</label>
-                <textarea
-                    placeholder="Type your bio, username, or video caption here..."
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
-                />
+                <label>
+                    <i className="fas fa-edit"></i> Type or paste your text below:
+                </label>
+                <div className="textarea-container">
+                    <textarea
+                        placeholder="Type your bio, username, or video caption here..."
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                    />
+                    {text && (
+                        <button
+                            type="button"
+                            className="btn-clear-text"
+                            onClick={() => setText('')}
+                            title="Clear text"
+                        >
+                            <i className="fas fa-times"></i>
+                        </button>
+                    )}
+                </div>
             </div>
 
             <div className="filter-chips">
                 {['All', 'Aesthetic', 'Bold', 'Italic', 'Gothic', 'Decor'].map((cat) => (
                     <button
                         key={cat}
+                        type="button"
                         className={`chip-btn ${filter === cat ? 'active' : ''}`}
                         onClick={() => setFilter(cat)}
                     >
@@ -93,8 +118,40 @@ const FontGenerator = ({ t = {} }) => {
 
             <div className="fonts-list-grid">
                 {/* Special Modifiers */}
-                {filter === 'All' || filter === 'Decor' ? (
+                {(filter === 'All' || filter === 'Decor') && (
                     <>
+                        <div className="font-card-item">
+                            <div className="font-meta">
+                                <span className="font-name">Sparkles Aesthetic ✨</span>
+                                <div className="font-preview-text">
+                                    {convertWithDecor(text || "TikTok Viral Creator", 'sparkles')}
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                className={`btn-copy-font ${copiedIndex === 'sparkles' ? 'copied' : ''}`}
+                                onClick={() => copyToClipboard(convertWithDecor(text || "TikTok Viral Creator", 'sparkles'), 'sparkles')}
+                            >
+                                {copiedIndex === 'sparkles' ? <><i className="fas fa-check"></i> Copied!</> : <><i className="fas fa-copy"></i> Copy</>}
+                            </button>
+                        </div>
+
+                        <div className="font-card-item">
+                            <div className="font-meta">
+                                <span className="font-name">Japanese Brackets 【 】</span>
+                                <div className="font-preview-text">
+                                    {convertWithDecor(text || "TikTok Viral Creator", 'brackets')}
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                className={`btn-copy-font ${copiedIndex === 'brackets' ? 'copied' : ''}`}
+                                onClick={() => copyToClipboard(convertWithDecor(text || "TikTok Viral Creator", 'brackets'), 'brackets')}
+                            >
+                                {copiedIndex === 'brackets' ? <><i className="fas fa-check"></i> Copied!</> : <><i className="fas fa-copy"></i> Copy</>}
+                            </button>
+                        </div>
+
                         <div className="font-card-item">
                             <div className="font-meta">
                                 <span className="font-name">Underlined Text</span>
@@ -103,6 +160,7 @@ const FontGenerator = ({ t = {} }) => {
                                 </div>
                             </div>
                             <button
+                                type="button"
                                 className={`btn-copy-font ${copiedIndex === 'underline' ? 'copied' : ''}`}
                                 onClick={() => copyToClipboard(convertWithDecor(text || "Underlined Style", 'underline'), 'underline')}
                             >
@@ -118,6 +176,7 @@ const FontGenerator = ({ t = {} }) => {
                                 </div>
                             </div>
                             <button
+                                type="button"
                                 className={`btn-copy-font ${copiedIndex === 'strike' ? 'copied' : ''}`}
                                 onClick={() => copyToClipboard(convertWithDecor(text || "Strikethrough Style", 'strikethrough'), 'strike')}
                             >
@@ -125,7 +184,7 @@ const FontGenerator = ({ t = {} }) => {
                             </button>
                         </div>
                     </>
-                ) : null}
+                )}
 
                 {filteredFonts.map((font, idx) => {
                     const transformed = convertText(text || font.name, font.map);
@@ -140,6 +199,7 @@ const FontGenerator = ({ t = {} }) => {
                                 </div>
                             </div>
                             <button
+                                type="button"
                                 className={`btn-copy-font ${isCopied ? 'copied' : ''}`}
                                 onClick={() => copyToClipboard(transformed, idx)}
                             >
@@ -163,7 +223,7 @@ const FontGenerator = ({ t = {} }) => {
                     background: rgba(255, 255, 255, 0.03);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                     border-radius: 20px;
-                    padding: 30px 24px;
+                    padding: 26px 20px;
                     max-width: 850px;
                     margin: 0 auto;
                     backdrop-filter: blur(16px);
@@ -195,7 +255,7 @@ const FontGenerator = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .tool-desc {
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     font-size: 0.9rem;
                     max-width: 650px;
                     margin: 0 auto;
@@ -210,14 +270,20 @@ const FontGenerator = ({ t = {} }) => {
                 .input-box-wrapper label {
                     font-size: 0.86rem;
                     font-weight: 600;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+                .textarea-container {
+                    position: relative;
                 }
                 textarea {
                     width: 100%;
                     height: 85px;
                     background: rgba(255, 255, 255, 0.06);
                     border: 1px solid rgba(255, 255, 255, 0.12);
-                    padding: 14px 16px;
+                    padding: 12px 40px 12px 14px;
                     border-radius: 12px;
                     color: var(--text-main, #fff);
                     resize: vertical;
@@ -231,7 +297,26 @@ const FontGenerator = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 textarea:focus {
-                    border-color: var(--secondary);
+                    border-color: var(--secondary, #00f2ea);
+                }
+                .btn-clear-text {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border: none;
+                    color: var(--text-dim, #94a3b8);
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .btn-clear-text:hover {
+                    color: #ff0050;
+                    background: rgba(255, 0, 80, 0.15);
                 }
                 .filter-chips {
                     display: flex;
@@ -242,7 +327,7 @@ const FontGenerator = ({ t = {} }) => {
                 .chip-btn {
                     background: rgba(255, 255, 255, 0.05);
                     border: 1px solid rgba(255, 255, 255, 0.1);
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     padding: 6px 14px;
                     border-radius: 20px;
                     font-size: 0.82rem;
@@ -256,7 +341,7 @@ const FontGenerator = ({ t = {} }) => {
                     color: #475569;
                 }
                 .chip-btn.active {
-                    background: linear-gradient(135deg, var(--primary), var(--secondary));
+                    background: linear-gradient(135deg, var(--primary, #ff0050), var(--secondary, #00f2ea));
                     color: #fff;
                     border-color: transparent;
                 }
@@ -282,7 +367,7 @@ const FontGenerator = ({ t = {} }) => {
                     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
                 }
                 .font-card-item:hover {
-                    border-color: var(--border-bright);
+                    border-color: var(--border-bright, rgba(0, 242, 234, 0.4));
                     transform: translateX(4px);
                 }
                 .font-meta {
@@ -295,7 +380,7 @@ const FontGenerator = ({ t = {} }) => {
                 .font-name {
                     font-size: 0.76rem;
                     font-weight: 700;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     text-transform: uppercase;
                     letter-spacing: 0.4px;
                 }
@@ -310,7 +395,7 @@ const FontGenerator = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .btn-copy-font {
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                    background: linear-gradient(135deg, var(--primary, #ff0050) 0%, var(--secondary, #00f2ea) 100%);
                     border: none;
                     padding: 9px 18px;
                     border-radius: 10px;

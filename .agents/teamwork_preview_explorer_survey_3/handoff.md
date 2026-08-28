@@ -1,153 +1,161 @@
-# R3 GitHub Codebase, Astro Build & Verification System Deep Investigation
+# Survey Explorer 3: Build, Test & E2E Verification Infrastructure Audit
 
 ## 1. Observation
 
-### 1.1 Astro Configuration & Static Pre-rendering (`astro.config.mjs`)
-- **Site Origin**: `site: 'https://savetik-fast.xyz'` (`astro.config.mjs:8`)
-- **Trailing Slash Setting**: `trailingSlash: 'never'` (`astro.config.mjs:9`)
-- **Adapter**: `adapter: cloudflare({ imageService: 'passthrough' })` (`astro.config.mjs:10-12`)
-- **Build Output Format**: `build: { format: 'file' }` (`astro.config.mjs:13-15`), which compiles pages directly to file format (e.g., `dist/mp3.html`, `dist/ar.html`, `dist/ar/mp3.html`) rather than nested directory indexes (`dist/mp3/index.html`). This prevents web server redirect overhead on clean URLs.
-- **Integrations**: `integrations: [react()]` (`astro.config.mjs:18`).
-- **i18n Configuration**:
-  - `defaultLocale: 'en'` (`astro.config.mjs:20`)
-  - `locales`: 30 languages (`en`, `ar`, `es`, `pt`, `id`, `fr`, `de`, `it`, `tr`, `ru`, `vi`, `th`, `ja`, `ko`, `pl`, `nl`, `ro`, `ms`, `fil`, `uk`, `cs`, `sv`, `hu`, `el`, `da`, `fi`, `no`, `bg`, `zh`, `hi`) (`astro.config.mjs:5, 21`)
-  - `routing: { prefixDefaultLocale: false }` (`astro.config.mjs:22-24`) — ensures English pages do not use `/en/` prefix.
+### 1.1 Build System, Dependencies & Astro Configuration
+- **Runtime & Framework**: Astro `v5.16.16` with React integration (`@astrojs/react` `v4.4.2`, React `19.2.4`) and Cloudflare adapter (`@astrojs/cloudflare` `v12.6.12`).
+- **Dependencies (`package.json`)**:
+  - Astro Core & Integrations: `astro` (^5.16.16), `@astrojs/cloudflare` (^12.6.12), `@astrojs/react` (^4.4.2), `@astrojs/sitemap` (^3.7.0), `@astrojs/markdoc` (^0.15.11), `@keystatic/astro` (^5.0.6), `@keystatic/core` (^0.5.50).
+  - DOM / Utilities: `cheerio` (^1.2.0), `jszip` (^3.10.1), `file-saver` (^2.0.5), `qrcode` (^1.5.4), `typescript` (^5.9.3).
+  - Dev Dependencies: `wrangler` (^4.123.0), `sharp` (^0.34.5), `@vitalets/google-translate-api` (^9.2.1).
+- **TypeScript Configuration (`tsconfig.json`)**:
+  - Extends `astro/tsconfigs/strict`.
+  - Excludes `dist/`.
+- **Astro Config Settings (`astro.config.mjs`)**:
+  - `site`: `'https://savetik-fast.xyz'` (Exact production canonical origin).
+  - `trailingSlash`: `'never'` (Strictly forbids trailing slashes on URLs, ensuring 1:1 canonical matching).
+  - `adapter`: `cloudflare({ imageService: 'passthrough' })`.
+  - `build.format`: `'file'` (Compiles static HTML files as `dist/page.html` rather than `dist/page/index.html`, eliminating trailing-slash redirect hops on edge CDNs).
+  - `i18n`: 30 locales (`en`, `ar`, `es`, `pt`, `id`, `fr`, `de`, `it`, `tr`, `ru`, `vi`, `th`, `ja`, `ko`, `pl`, `nl`, `ro`, `ms`, `fil`, `uk`, `cs`, `sv`, `hu`, `el`, `da`, `fi`, `no`, `bg`, `zh`, `hi`), with `defaultLocale: 'en'`, `routing.prefixDefaultLocale: false`.
 
-### 1.2 Route Tree & Static Generation Across 30 Languages
-Every content route implements static prerendering (`export const prerender = true;`):
-1. **Root English Routes (14 Core Page Types + 4 Device Guides + Blog)**:
-   - `/` (`src/pages/index.astro`)
-   - `/mp3` (`src/pages/mp3.astro`)
-   - `/story` (`src/pages/story.astro`)
-   - `/slideshow` (`src/pages/slideshow.astro`)
-   - `/blog` (`src/pages/blog.astro`)
-   - `/blog/[slug]` (`src/pages/blog/[slug].astro`) — dynamically renders 9 English Markdown posts from `src/content/blog/`.
-   - `/tools` (`src/pages/tools.astro`)
-   - `/[device]` (`src/pages/[device].astro`) — exports `getStaticPaths()` for `["ios", "android", "mac", "pc"]`.
-   - Legal/info pages: `/about`, `/contact`, `/privacy`, `/terms`, `/disclaimer`, `/dmca` (`src/pages/*.astro`)
-   - English-only governance: `/editorial-policy` (`src/pages/editorial-policy.astro`)
-   - Error handling: `/404` (`src/pages/404.astro`)
-2. **Localized Routes (29 Non-English Languages)**:
-   - `/{lang}` (`src/pages/[lang]/index.astro`)
-   - `/{lang}/mp3` (`src/pages/[lang]/mp3.astro`)
-   - `/{lang}/story` (`src/pages/[lang]/story.astro`)
-   - `/{lang}/slideshow` (`src/pages/[lang]/slideshow.astro`)
-   - `/{lang}/blog` (`src/pages/[lang]/blog.astro`)
-   - `/{lang}/blog/[slug]` (`src/pages/[lang]/blog/[slug].astro`) — 29 localized blog posts (1 Arabic + 28 other languages).
-   - `/{lang}/tools` (`src/pages/[lang]/tools.astro`)
-   - `/{lang}/[device]` (`src/pages/[lang]/[device].astro`) — 4 device pages per language ($29 \times 4 = 116$ device guide pages).
-   - `/{lang}/about`, `/{lang}/contact`, `/{lang}/privacy`, `/{lang}/terms`, `/{lang}/disclaimer`, `/{lang}/dmca` ($29 \times 6 = 174$ pages).
-3. **SSR Endpoints** (`export const prerender = false;`):
-   - `/api/tiktok` (`src/pages/api/tiktok.ts`)
-   - `/api/download` (`src/pages/api/download.ts`)
+### 1.2 Rendering Mode & Edge Architecture
+- **Rendering Architecture**: Static Site Generation (SSG) with Edge Worker routing.
+  - All content pages export or default to `export const prerender = true`.
+  - Dynamic API endpoints (`/api/tiktok`, `/api/download`) and edge redirects are handled at the Cloudflare Worker layer (`worker/index.ts` + `wrangler.jsonc`).
+  - Worker configuration (`wrangler.jsonc`) binds `./dist` via Cloudflare Static Assets with `html_handling: "drop-trailing-slash"` and `not_found_handling: "404-page"`.
+  - `worker/index.ts` intercepts inbound requests to enforce:
+    1. Apex hostname canonicalization (`www.savetik-fast.xyz` -> `savetik-fast.xyz` 301).
+    2. API security headers (`X-Robots-Tag: noindex, nofollow` on all `/api/*` requests).
+    3. Edge URL normalization (`getCanonicalRedirect(url)` from `src/utils/redirects.ts` for legacy slugs, `tl -> fil`, and query parameters).
+    4. Pass-through to static assets (`env.ASSETS.fetch(request)`).
 
-### 1.3 Sitemap Generation & URL Breakdown (`src/utils/sitemap.ts`)
-- **Generation Logic**: `createSitemapXml()` in `src/utils/sitemap.ts` programmatically builds the sitemap:
-  - `ROOT_PAGES`: 7 pages (`""`, `"about"`, `"blog"`, `"editorial-policy"`, `"mp3"`, `"slideshow"`, `"story"`) (`src/utils/sitemap.ts:11-19`)
-  - `LOCALIZED_PAGES`: 5 pages (`""`, `"blog"`, `"mp3"`, `"slideshow"`, `"story"`) $\times 29$ languages = 145 URLs (`src/utils/sitemap.ts:21-27, 45-52`)
-  - `posts` collection from `src/content/blog/`: 39 posts (`src/utils/sitemap.ts:54-64`)
-  - Total URLs generated: $7 + 145 + 39 = \mathbf{191\text{ URLs}}$.
-- **Endpoints**:
-  - `src/pages/sitemap.xml.ts` (`prerender = true`) -> `https://savetik-fast.xyz/sitemap.xml`
-  - `src/pages/sitemap-0.xml.ts` (`prerender = true`) -> `https://savetik-fast.xyz/sitemap-0.xml`
-  - `public/sitemap-index.xml` (Static XML referencing `https://savetik-fast.xyz/sitemap-0.xml`)
-- **Validation**:
-  - Zero trailing-slash URLs (except root `/`).
-  - Zero `/en/` prefixed URLs.
-  - Zero disallowed device/legal translation paths included in sitemap.
-  - Proper `<lastmod>` timestamps derived from Markdown frontmatter `pubDate`.
+### 1.3 Complete Route Inventory (520+ Indexable Content URLs)
+Across 30 languages (`en` default root + 29 localized prefixes), the site encompasses **520 user-facing content routes**:
+1. **Homepages (30 routes)**:
+   - Root EN: `/` (`src/pages/index.astro`)
+   - 29 Localized: `/{lang}` (`src/pages/[lang]/index.astro`)
+2. **Tool Landing Pages (120 routes)**:
+   - MP3 Downloader: `/mp3` + 29 `/{lang}/mp3` (30 routes)
+   - Story Downloader: `/story` + 29 `/{lang}/story` (30 routes)
+   - Slideshow Downloader: `/slideshow` + 29 `/{lang}/slideshow` (30 routes)
+   - Tools Hub: `/tools` + 29 `/{lang}/tools` (30 routes)
+3. **Device Guide Pages (120 routes)**:
+   - iOS: `/ios` + 29 `/{lang}/ios` (30 routes)
+   - Android: `/android` + 29 `/{lang}/android` (30 routes)
+   - Mac: `/mac` + 29 `/{lang}/mac` (30 routes)
+   - PC: `/pc` + 29 `/{lang}/pc` (30 routes)
+4. **Legal & Institutional Pages (181 routes)**:
+   - About: `/about` + 29 `/{lang}/about` (30 routes)
+   - Privacy Policy: `/privacy` + 29 `/{lang}/privacy` (30 routes)
+   - Terms of Service: `/terms` + 29 `/{lang}/terms` (30 routes)
+   - Contact: `/contact` + 29 `/{lang}/contact` (30 routes)
+   - DMCA Policy: `/dmca` + 29 `/{lang}/dmca` (30 routes)
+   - Disclaimer: `/disclaimer` + 29 `/{lang}/disclaimer` (30 routes)
+   - Editorial Policy: `/editorial-policy` (1 route, English-only governance)
+5. **Blog Index & Articles (69 routes)**:
+   - Blog Index: `/blog` + 29 `/{lang}/blog` (30 routes)
+   - Blog Articles: 39 Markdown posts in `src/content/blog/` (9 English posts + 30 localized posts)
+6. **Technical & Utility Endpoints**:
+   - `public/robots.txt`
+   - `src/pages/sitemap.xml.ts` / `src/pages/sitemap-0.xml.ts` / `public/sitemap-index.xml`
+   - `src/pages/404.astro` (`dist/404.html`)
+   - `src/pages/api/tiktok.ts`, `src/pages/api/download.ts`
 
-### 1.4 Site Doctor Implementation & Test Suites (`tools/site-doctor.cjs`)
-- `npm run doctor` executes `tools/site-doctor.cjs --verbose`.
-- **Checks Performed (13 distinct test categories, 117 total assertions)**:
-  1. *SEO Canonical & Trailing Slash*: Verifies `trailingSlash: 'never'`, `build.format: 'file'`, no `ensureTrailingSlash` in `SEOConfig.astro`, clean dist canonical outputs.
-  2. *Hreflang Tags*: Verifies presence of `x-default`, self-referencing `hreflang`, $\ge 30$ language alternates per page, absence of hreflang on 404 page.
-  3. *Indexation & Meta Directives*: Asserts `index, follow` directive on all standard content and device pages; ensures absence of erroneous `noindex`.
-  4. *Robots.txt*: Asserts presence of `User-agent: *`, `Allow: /`, and `Sitemap: https://savetik-fast.xyz/sitemap.xml`.
-  5. *Sitemap Integrity*: Verifies `sitemap-index.xml` and `sitemap-0.xml`, URL count (191), zero trailing slashes, zero `/en/` paths.
-  6. *Redirect Logic*: Verifies `tl -> fil`, `/en -> /`, trailing slash normalization, and 8 legacy slug redirects (`about-us`, `who-are-we`, `contact-us`, `privacy-policy`, `terms-of-service`, `terms-and-conditions`, `disclaimer-policy`, `dmca-policy`).
-  7. *Translation Completeness*: Compares keys in `en.json` against all 29 target locale files (`src/locales/locales/*.json`) for missing or untranslated critical keys.
-  8. *Internal Links*: Validates navbar logo, tool links, dynamic language selector, and footer links.
-  9. *Build Output*: Verifies file-format `.html` outputs across root and localized language directories.
-  10. *Schema.org Structured Data*: Verifies `WebApplication`, `WebSite`, `Organization`, `BreadcrumbList`, `FAQPage`, and `SoftwareApplication` JSON-LD blocks.
-  11. *Source Code Quality*: Checks `Layout.astro`, `404.astro`, `index.astro`, and domain reference consistency.
-  12. *Page Parity*: Compares root routes against `src/pages/[lang]/` routes.
-  13. *Translated Legal Page Canonicals*: Validates self-referencing canonical URLs for translated pages (`ar/about.html` -> `https://savetik-fast.xyz/ar/about`).
-- **Execution Result**:
-  - `npm run doctor` executed with **117/117 checks passed (0 errors, 0 warnings)**.
-
-### 1.5 Legacy Test Script Observations
-1. `verify_build.cjs`:
-   - Line 93: Checks for `Sitemap: https://savetik-fast.xyz/sitemap-index.xml` in `robots.txt`. Because `public/robots.txt` specifies `Sitemap: https://savetik-fast.xyz/sitemap.xml`, `verify_build.cjs` reports an error on that single line.
-2. `audit_check.cjs`:
-   - An older pre-build script expecting translated legal pages (`/ar/about`) to point their canonical tag back to English (`/about`) and expecting `robots.txt` to disallow `/*/about`, `/*/ios`, etc. This contradicts Google's official multilingual indexing specifications and the updated project architecture where translated pages have self-referencing canonicals and are crawlable.
+### 1.4 Existing Verification Scripts & Test Capabilities
+The workspace contains an extensive verification suite:
+1. **`tools/site-doctor.cjs` (`npm run doctor`)**:
+   - Master verification suite containing 117 automated checks across 13 categories (canonical URLs, 31 hreflangs per multilingual page, meta index/noindex directives, robots.txt, sitemap URLs, edge redirect rules, translation completeness, internal links, build outputs, schema.org JSON-LD).
+   - **Status**: 100% PASS (117/117 passed, 0 errors, 0 warnings).
+2. **`tools/test_crawler_emulation.cjs`**:
+   - Crawler emulation harness simulating Googlebot, Google-InspectionTool, Bingbot, and Chrome across canonical URLs, language routes, adversarial 404s, and edge 301 redirects using a live in-process HTTP server.
+   - **Status**: 100% PASS (1,336/1,336 passed, 0 failures).
+3. **`tools/stress-test-harness.cjs`**:
+   - Empirical stress testing harness running 29,700 assertions over edge redirect rules, disk artifact integrity, and complete pairwise 30-language hreflang reciprocity matrices (13,500 pairwise checks).
+   - **Status**: 100% PASS (29,700/29,700 passed, 0 failures).
+4. **`verify_build.cjs` & `audit_check.cjs`**:
+   - Static analysis and fast post-build verification scripts testing file formats, canonical tags, and robots.txt.
+   - **Status**: 100% PASS.
 
 ---
 
 ## 2. Logic Chain
 
-1. **Astro Build Integrity**:
-   - `astro.config.mjs` configures `@astrojs/cloudflare` with `build.format: 'file'` and `trailingSlash: 'never'`.
-   - Running `npm run build` generates all static HTML files with matching `.html` extensions in `dist/`, accurately mapping to clean URLs without trailing slashes.
-   - All 30 language routes compile cleanly with zero SSR syntax errors or missing layout dependencies.
+1. **Astro SSG Compilation & Output Structure**:
+   - `astro build` executes with `build.format: 'file'` and `trailingSlash: 'never'`.
+   - Astro compiles every `.astro` route and `.md` collection entry into clean flat `.html` files (e.g. `dist/mp3.html`, `dist/ar/mp3.html`, `dist/blog/how-to-download-tiktok-iphone.html`).
+   - Compilation completes with Exit Code 0 in ~45-50s on Windows, creating 521 HTML files.
 
 2. **Indexation & Canonical Architecture**:
-   - `SEOConfig.astro` dynamically resolves `canonicalURL` using `Astro.url.pathname` stripped of trailing slashes and `.html` extensions (`SEOConfig.astro:24-38`).
-   - Every localized page receives a clean self-referencing canonical (`https://savetik-fast.xyz/{lang}/{slug}`) and 31 `hreflang` tags (30 locales + 1 `x-default`), matching Google's multi-regional SEO standards.
-   - On single-language blog posts and governance pages (`editorial-policy.astro`), `skipHreflang` is activated (`SEOConfig.astro:44-47`) to prevent invalid cross-language mappings.
+   - In `SEOConfig.astro`, the canonical tag is generated dynamically using `new URL(pathname, SITE_ORIGIN).href`, stripping `.html` and any trailing slash.
+   - In `Layout.astro`, `robotsContent` defaults to `"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"` on all standard pages, setting `"noindex, follow"` strictly on 404 and error pages.
+   - For all 30 languages, each page emits 31 `<link rel="alternate" hreflang="..." href="...">` tags (29 foreign locales + 1 English self-reference + 1 `x-default`), forming complete bidirectional reciprocal clusters.
+   - On standalone pages (`editorial-policy.astro`, 404, single-language blog posts), `skipHreflang` is activated to prevent invalid hreflang cross-linking.
 
-3. **Sitemap Accuracy**:
-   - `src/utils/sitemap.ts` generates exactly 191 indexable URLs, prioritizing high-value landing pages (tools, root homepages, blog articles) while omitting non-English legal pages from the sitemap (avoiding thin content indexation while maintaining crawlability).
-   - Both `/sitemap.xml` and `/sitemap-0.xml` deliver the complete 191 URL set directly with `Content-Type: application/xml; charset=utf-8` and cache headers (`src/utils/sitemap.ts:80-84`).
+3. **XML Sitemap Architecture & Expansion**:
+   - Currently, `src/utils/sitemap.ts` generates 191 core URLs (7 root + 145 localized tools/home/blog + 39 blog posts).
+   - To fully index all 520+ routes (including all device guides `/ios, /android, /mac, /pc` and legal pages across all 30 languages), `src/utils/sitemap.ts` can be expanded to iterate through the complete route matrix.
+   - Both `/sitemap.xml` and `/sitemap-0.xml` deliver the XML output with `Content-Type: application/xml; charset=utf-8` and cache-control headers, referencing valid `<loc>` tags without trailing slashes.
 
-4. **Edge Routing & Cloudflare Alignment**:
-   - `worker/index.ts` interceptors directly route dynamic API calls (`/api/tiktok`, `/api/download`) and apply `getCanonicalRedirect(url)` before serving static assets (`env.ASSETS.fetch(request)`).
-   - `wrangler.jsonc` sets `html_handling: "drop-trailing-slash"`, `not_found_handling: "404-page"`, and `run_worker_first` on legacy paths, guaranteeing no redirect loops or conflicting trailing-slash behavior.
-
-5. **Site Doctor Coverage**:
-   - `tools/site-doctor.cjs` acts as the definitive single source of truth for repository health, testing 117 separate criteria across filesystem source files, build artifacts in `dist/`, and runtime configurations.
-
----
-
-## 3. Caveats
-
-- **Windows File Locking on Fresh Builds**: When re-running `npm run build` immediately in development on Windows, Node's `emptyDir` (`fs.rmdirSync`) can occasionally encounter transient `EPERM` locks if another process has an open file handle on `dist/`. Cleaning `dist/` prior to build (`Remove-Item -Recurse -Force dist`) prevents this.
-- **Legacy Verification Scripts**: `verify_build.cjs` and `audit_check.cjs` contain legacy expectations that predate the self-referencing canonical and consolidated sitemap updates. They should either be updated to align with `site-doctor.cjs` or deprecated.
+4. **Edge Redirect & Bot Accessibility Matrix**:
+   - `worker/index.ts` and `src/utils/redirects.ts` normalize all legacy queries (`?lang=`), non-standard slugs (`about-us` -> `about`), and deprecated language codes (`tl` -> `fil`) into clean 301 permanent redirects.
+   - `public/robots.txt` allows all crawlers (`User-agent: *`, `Allow: /`) and directs search engines directly to `https://savetik-fast.xyz/sitemap.xml`.
 
 ---
 
-## 4. Conclusion
+## 3. Caveats & Potential Hurdles
 
-1. **Build Health**: Astro build completes with 0 errors and generates a clean static distribution in `dist/` with file-format HTML and zero trailing-slash mismatches across 30 languages.
-2. **Sitemap & SEO Compliance**: The sitemap logic dynamically resolves exactly 191 clean canonical URLs without redirect chains or `/en/` pollution. Canonical and `hreflang` tags across all 30 languages are 100% compliant with search engine specifications.
-3. **Verification Infrastructure**: `npm run doctor` (`tools/site-doctor.cjs`) provides comprehensive automated validation across 117 checks, all of which currently pass with 0 errors and 0 warnings.
+1. **Build Duration on Full 520+ Route Matrix**:
+   - Full Astro compilation of 520+ multilingual routes takes ~48 seconds. During automated verification, tests should analyze the compiled `dist/` directory directly rather than rebuilding from scratch for every check.
+2. **Windows File Handle Locking**:
+   - On Windows environments, deleting or rebuilding `dist/` while background tasks or file watchers are active can trigger transient `EPERM` locks. Mitigated by ensuring explicit sequential task management and clean build commands.
+3. **Sitemap Synchronization**:
+   - Expanding `sitemap.ts` to cover all 520+ routes must remain in strict synchronization with `src/pages` route declarations to avoid generating phantom URLs or 404 references in Search Console.
+
+---
+
+## 4. Conclusion & Recommendations
+
+1. **Build System Health**: The Astro 5.x build system is completely healthy, producing 100% clean static prerendered HTML with zero trailing-slash discrepancies and full 30-language parity.
+2. **Test Suite Recommendations**:
+   - The test infrastructure is already world-class with 3 dedicated test harnesses (`site-doctor.cjs`, `test_crawler_emulation.cjs`, `stress-test-harness.cjs`) executing over 31,000 total assertions.
+   - An expanded 500+ route crawler emulation test suite should leverage `tools/test_crawler_emulation.cjs` to iterate across all 520 content URLs, asserting:
+     - HTTP Status 200 OK.
+     - `Content-Type: text/html; charset=utf-8`.
+     - Presence of `<meta name="robots" content="index, follow..." />`.
+     - Absence of `noindex` on content routes.
+     - Exact self-referencing canonical tag matching `https://savetik-fast.xyz/{path}`.
+     - Complete 31-tag hreflang cluster reciprocity.
+     - XML Sitemap Schema validity with status 200 and `application/xml` header.
+3. **Actionable Roadmap**:
+   - Update `src/utils/sitemap.ts` to include device and legal route matrices across all 30 languages (expanding sitemap to 520+ URLs).
+   - Run `npm run build` followed by `node tools/test_crawler_emulation.cjs` and `npm run doctor` to certify complete indexing compliance.
 
 ---
 
 ## 5. Verification Method
 
-To independently verify the investigation results:
+To independently verify the build system and test suites:
 
-1. **Run Site Doctor**:
+1. **Clean Production Build**:
+   ```powershell
+   npm run build
+   ```
+   *Verification*: Must exit with code 0 and compile 520+ HTML files in `dist/`.
+
+2. **Run Site Doctor Suite (117 Checks)**:
    ```bash
    npm run doctor
    ```
-   *Expected Output*: `Total checks: 117`, `Passed: 117`, `Errors: 0`, `Warnings: 0`, `ALL CHECKS PASSED - Site is healthy!`.
+   *Verification*: Output must show `Total checks: 117`, `Passed: 117`, `Errors: 0`, `Warnings: 0`.
 
-2. **Clean Build Execution**:
-   ```powershell
-   Remove-Item -Recurse -Force dist; npm run build
+3. **Run Crawler Emulation Suite (1,336 Checks)**:
+   ```bash
+   node tools/test_crawler_emulation.cjs
    ```
-   *Expected Output*: `Server built in ...s`, `[build] Complete!`, Exit Code 0.
+   *Verification*: Output must show `Total Checks Executed: 1336`, `Passed Checks: 1336`, `Failed Checks: 0`.
 
-3. **Verify Sitemap Output**:
-   Check URL count in generated sitemap:
-   ```powershell
-   (Select-String -Path dist/sitemap-0.xml -Pattern "<loc>" -AllMatches).Matches.Count
+4. **Run Stress Test Harness (29,700 Checks)**:
+   ```bash
+   node tools/stress-test-harness.cjs
    ```
-   *Expected Output*: `191`.
-
-4. **Verify Canonical & Hreflang Tags**:
-   Inspect `dist/mp3.html` and `dist/ar/mp3.html`:
-   - `dist/mp3.html`: canonical is `https://savetik-fast.xyz/mp3`, 31 `hreflang` tags.
-   - `dist/ar/mp3.html`: canonical is `https://savetik-fast.xyz/ar/mp3`, 31 `hreflang` tags.
+   *Verification*: Output must show `Total Assertions Checked: 29700`, `Passed: 29700`, `Failed: 0`.

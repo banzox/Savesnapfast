@@ -1,118 +1,161 @@
-# Handoff Report — Reviewer 2: Independent Edge Worker, Cloudflare Delivery, Redirect Engine, and Build Verification Review
+# Handoff Report — Reviewer 2: Meta Robots & Routing Architecture Review
 
 ## Review Summary
 
-**Verdict**: **APPROVE**  
-**Overall Risk Assessment**: **LOW**  
-**Integrity Assessment**: **100% COMPLIANT — ZERO INTEGRITY VIOLATIONS** (No hardcoded facades, dummy scripts, or bypassing mechanisms detected).
+**Verdict**: **REQUEST_CHANGES**  
+**Overall Risk Assessment**: **HIGH (due to missing static sitemap build artifacts for Cloudflare ASSETS delivery)**  
+**Integrity Assessment**: **NO CHEATING DETECTED** (The 520 content routes, meta robots tags, self-referencing canonicals, and robots.txt rules are genuinely implemented; however, a critical build output integration defect prevents sitemap endpoints from being served statically by Cloudflare Assets).
+
+---
+
+## Findings
+
+### [Critical] Finding 1: Static Sitemap Build Artifact Emission Gap (`dist/sitemap.xml` & `dist/sitemap-0.xml`)
+
+- **What**: Executing `npm run build` (`npx astro build`) compiles 520 static HTML pages but fails to emit `dist/sitemap.xml` and `dist/sitemap-0.xml` into the `dist/` output directory.
+- **Where**: `astro.config.mjs:10-12`, `src/pages/sitemap.xml.ts`, `src/pages/sitemap-0.xml.ts`, `wrangler.jsonc:10-14`, and `worker/index.ts:68`.
+- **Why**:
+  1. In `astro.config.mjs`, `adapter: cloudflare({ imageService: 'passthrough' })` configures Astro in SSR/hybrid mode. Under this adapter, `.ts` API route endpoints (`src/pages/sitemap.xml.ts` and `src/pages/sitemap-0.xml.ts`) are compiled as server Lambdas (`λ`) inside `dist/_worker.js` rather than being emitted as static XML files into `dist/`.
+  2. However, the Cloudflare deployment architecture in `wrangler.jsonc` specifies `"main": "./worker/index.ts"` and `"directory": "./dist"`. In `worker/index.ts`, requests for public routes (including `/sitemap.xml` and `/sitemap-0.xml`) are delegated directly to `env.ASSETS.fetch(request)`.
+  3. Because `env.ASSETS` only serves static files physically present in `./dist/`, requests to `https://savetik-fast.xyz/sitemap.xml` and `https://savetik-fast.xyz/sitemap-0.xml` return **HTTP 404 Not Found** in production.
+  4. Consequently, `node tools/validate_sitemap_full.cjs` fails with `[ERROR] File not found: dist/sitemap.xml` and `node tools/test_crawler_emulation.cjs` fails with `AssertionError: sitemap-0.xml must exist in dist`.
+- **Suggestion**:
+  - Implement a static generation mechanism to guarantee `dist/sitemap.xml` and `dist/sitemap-0.xml` (or `public/sitemap.xml` and `public/sitemap-0.xml`) are written during every build.
+  - Recommended options:
+    - **Option A**: Write static `public/sitemap.xml` and `public/sitemap-0.xml` via a prebuild/postbuild generator script in `package.json` (`"build": "astro build && node tools/generate_sitemaps.cjs"`).
+    - **Option B**: Add an Astro integration hook (`astro:build:done`) in `astro.config.mjs` that invokes `createSitemapXml()` from `src/utils/sitemap.ts` and writes `dist/sitemap.xml` and `dist/sitemap-0.xml`.
 
 ---
 
 ## 1. Observation
 
-1. **Edge Worker Architecture (`worker/index.ts`)**:
-   - **Hostname Canonicalization** (Lines 28–32):
-     ```typescript
-     if (url.hostname === "www.savetik-fast.xyz" || url.hostname.startsWith("www.")) {
-         url.hostname = url.hostname.replace(/^www\./, "");
-         return Response.redirect(url.toString(), 301);
-     }
+1. **Meta Robots Directives & Layout Configuration (`src/layouts/Layout.astro`)**:
+   - Lines 21–24:
+     ```astro
+     const is404 = noindex || Astro.url.pathname.includes("404");
+     const robotsContent = is404
+         ? "noindex, follow" 
+         : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
      ```
-     Apex canonicalization cleanly 301-redirects any `www.` subdomains to the canonical apex hostname `savetik-fast.xyz` while preserving full pathnames and query strings.
-   - **API Crawler Protection** (Lines 14–22, 44, 52, 56–60):
-     `withRobotsHeader` dynamically injects `X-Robots-Tag: noindex, nofollow` on all responses served under `/api/tiktok`, `/api/download`, and all unhandled `/api/*` 404 responses.
-   - **Static Asset Fallback & Canonical Redirects** (Lines 62–68):
-     Invokes `getCanonicalRedirect(url)` before delegating to `env.ASSETS.fetch(request)`.
+   - Lines 220–222:
+     ```astro
+     <meta name="robots" content={robotsContent} />
+     <meta name="googlebot" content={is404 ? "noindex, follow" : "index, follow, max-image-preview:large"} />
+     <meta name="bingbot" content={is404 ? "noindex, follow" : "index, follow"} />
+     ```
+   - In `src/components/DownloadPage.astro` (Line 119):
+     `const isDevicePage = false;`
+     This eliminates the previous accidental `noindex` bug that blocked device routes.
+   - In `src/components/NotFound.astro` (Lines 12, 27):
+     `noindex = true` is explicitly scoped only to 404 pages.
+   - Verification across all 520 content pages in `dist/`: 100% of user-facing content routes render `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`.
 
-2. **Redirect Engine & Legacy Slug Normalization (`src/utils/redirects.ts`)**:
-   - `LEGACY_LANGUAGES` explicitly maps `tl` to `fil`.
-   - `ALL_LANGUAGES` incorporates both active 30 locales and legacy prefixes.
-   - `isKnownHtmlPage` strips `.html` on single-segment, multi-segment, and blog routes across both current and legacy language codes.
-   - `LEGACY_SLUGS` cleanly translates `about-us`, `who-are-we`, `contact-us`, `privacy-policy`, `terms-of-service`, `terms-and-conditions`, `disclaimer-policy`, and `dmca-policy` into target slugs in a single transformation pass.
-   - `index` paths in single and multi-segment positions (`/index.html`, `/tl/index.html`, `/ar/index.html`) are stripped in 1 single hop (`/`, `/fil`, `/ar`).
-   - Query string language parameters (e.g. `/?lang=tl`, `/?lang=es`) are normalized into clean URL path segments while preserving any additional query parameters.
+2. **Canonical URLs & Hreflang Tags (`src/components/SEOConfig.astro`)**:
+   - Lines 36–37:
+     ```astro
+     const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
+     ```
+   - Every route generates a clean, self-referencing absolute canonical URL adhering strictly to `trailingSlash: 'never'` (e.g. `https://savetik-fast.xyz/ar/about`).
+   - Lines 48–69:
+     Generates all 30 language alternate hreflang tags plus `hreflang="x-default"` pointing to the English base slug.
+   - 404 pages correctly skip hreflang tags (`skipHreflang = noindex || is404Page...`).
 
-3. **Cloudflare Security & Cache Headers (`public/_headers` & `dist/_headers`)**:
-   - Enforces modern HSTS preload under `/*` (Line 4):
-     `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
-   - Enforces Cloudflare edge caching for prerendered HTML under `/*.html` (Line 39):
-     `Cache-Control: public, max-age=0, s-maxage=86400, must-revalidate`
+3. **Robots.txt (`public/robots.txt`)**:
+   - File content:
+     ```text
+     User-agent: *
+     Allow: /
+     Allow: /_astro/
 
-4. **Wrangler Configuration (`wrangler.jsonc`)**:
-   - Declares custom domain route `pattern: "savetik-fast.xyz"`, `custom_domain: true`.
-   - Binds assets directory `./dist` with `html_handling: "drop-trailing-slash"` and `not_found_handling: "404-page"`.
-   - Declares `run_worker_first` for `/`, `/api/*`, `/en/*`, `/tl/*`, `/*.html`, `/*/*.html`, `/*/en`, and legacy slug patterns to guarantee edge worker execution before static fallback.
+     Disallow: /api/
+     Disallow: /admin/
+     Disallow: /admin
 
-5. **Build and Verification Test Execution**:
-   - `node tools/test_redirects.js`: **All 32 redirect test cases passed successfully** (Exit code 0).
-   - `npx astro build`: **Completed cleanly in 53s**, prerendering 685 static files into `dist/` (Exit code 0).
-   - `npm run doctor`: **117 checks executed — 117 Passed, 0 Errors, 0 Warnings** (Exit code 0).
-   - `node verify_build.cjs`: **All checks passed** — clean file format pages, 191 sitemap URLs with 0 trailing slashes and 0 `/en/` leaks, verified `index, follow` and self-referencing canonicals across all 30 locales (Exit code 0).
-   - `node audit_check.cjs`: **Full site audit completed with 0 errors** (Exit code 0).
-   - `npx wrangler deploy --dry-run`: **Read 685 files from `dist`**, valid worker and asset bindings (Exit code 0).
+     Sitemap: https://savetik-fast.xyz/sitemap.xml
+     ```
+   - Accurately references `https://savetik-fast.xyz/sitemap.xml` with zero disallow rules on public localized or device routes.
+
+4. **Edge Routing & API Security (`worker/index.ts` & `src/utils/redirects.ts`)**:
+   - `worker/index.ts:14-22`: Injects `X-Robots-Tag: noindex, nofollow` on all `/api/*` endpoints.
+   - `worker/index.ts:28-32`: 301-redirects `www.` subdomains to apex `savetik-fast.xyz`.
+   - `src/utils/redirects.ts`: Performs single-hop canonicalization for legacy language `tl` -> `fil`, strips `.html`, and cleans legacy URL slugs.
+
+5. **Test & Build Verification Results**:
+   - `node verify_build.cjs`: **PASS** (Canonical, hreflang, robots.txt, and content page indexing checks pass).
+   - `node tools/site-doctor.cjs`: **PASS (117/117 checks passed)**.
+   - `node tools/validate_sitemap_full.cjs`: **FAIL (Missing `dist/sitemap.xml` and `dist/sitemap-0.xml` after `astro build`)**.
+   - `node tools/test_crawler_emulation.cjs`: **FAIL (`AssertionError: sitemap-0.xml must exist in dist`)**.
 
 ---
 
 ## 2. Logic Chain
 
-1. **Zero Split Indexing**:
-   - In `worker/index.ts`, intercepting `www.` requests and issuing an immediate HTTP 301 to the apex hostname prevents search engines from indexing duplicate content under two separate hostnames.
-2. **Crawl Budget and API Protection**:
-   - Ensuring `X-Robots-Tag: noindex, nofollow` on `/api/*` prevents Googlebot and other web crawlers from consuming crawl budget or indexing programmatic JSON responses and binary download endpoints.
-3. **Single-Hop Canonicalization**:
-   - Handling legacy language remapping (`tl` -> `fil`), `.html` stripping, and slug rewriting (`about-us` -> `about`) within a single unified algorithm in `src/utils/redirects.ts` eliminates redirect chains (e.g. `/tl/about-us.html` directly returns `/fil/about`), preventing PageRank dissipation and crawler drop-off.
-4. **Edge Performance & Freshness**:
-   - `public/_headers` setting `s-maxage=86400` enables Cloudflare's global edge network to cache HTML documents for 24 hours to serve search crawlers with sub-10ms TTFB, while `max-age=0, must-revalidate` forces client browsers to always receive updated assets.
-5. **Astro 5 SSG & Cloudflare Assets Compatibility**:
-   - The combination of `build.format: 'file'`, `trailingSlash: 'never'`, and `wrangler.jsonc` `html_handling: "drop-trailing-slash"` ensures full harmony between Astro's static output (`dist/ar/about.html`) and Cloudflare Workers' clean URL routing (`/ar/about`).
+1. **Indexability & Scoping Integrity**:
+   - `Layout.astro` computes `robotsContent` based on `is404`. Since `noindex` defaults to `false` for `DownloadPage.astro`, `TextPage.astro`, `BlogPost.astro`, and `tools.astro`, all 520 content pages receive `<meta name="robots" content="index, follow..." />`.
+   - `NotFound.astro` passes `noindex={true}`, isolating `noindex` exclusively to 404 responses.
+   - `worker/index.ts` enforces `X-Robots-Tag: noindex, nofollow` on all `/api/*` routes.
+   - Thus, indexability scoping is 100% correct across all public content and private API routes.
+
+2. **Canonical & Alternate URL Consistency**:
+   - `SEOConfig.astro` uses `Astro.url.pathname.replace(/\.html$/, "")` and strips trailing slashes to compute `canonicalURL`.
+   - All 520 HTML documents in `dist/` contain matching self-referencing canonical URLs and complete 30-locale bidirectional hreflang tags + `x-default`.
+
+3. **Cloudflare Assets Delivery Failure**:
+   - The worker runtime `worker/index.ts` uses `env.ASSETS.fetch(request)` to deliver all static files from `dist/`.
+   - Because `astro build` does not emit static `sitemap.xml` and `sitemap-0.xml` files into `dist/`, requests to `https://savetik-fast.xyz/sitemap.xml` fail with 404 at the edge.
+   - Googlebot and Bingbot fetching `sitemap.xml` (as advertised in `robots.txt`) will receive 404, defeating the purpose of the expanded 520-URL sitemap.
 
 ---
 
 ## 3. Caveats
 
-- **No caveats.** All edge configurations, routing logic, headers, and build scripts are fully synchronized, syntactically and logically sound, and 100% verified across all test runners.
+1. **Local Test Environment Concurrency**:
+   - On Windows environments, Astro 5 parallel SSG writes occasionally encounter libuv file lock race conditions during `astro build`. Running `npx astro build --force` clears content cache and succeeds cleanly.
+2. **Edge DNS Propagation**:
+   - Local tests verify routing and header logic via worker emulation. Live domain routing depends on Cloudflare Pages/Worker deployment.
 
 ---
 
-## 4. Adversarial Review & Stress-Test Results
+## 4. Adversarial Stress-Test Results
 
 | Adversarial Attack / Stress Scenario | Expected Behavior | Actual Behavior | Result |
 |---|---|---|---|
-| Compound legacy URL with query params (`https://savetik-fast.xyz/tl/about-us.html?source=share&ref=xyz`) | Single-hop redirect to `/fil/about?source=share&ref=xyz` | `getCanonicalRedirect` produces `/fil/about?source=share&ref=xyz` in 1 hop | **PASS** |
-| Subdomain request with deep path (`https://www.savetik-fast.xyz/ar/mp3?q=song`) | 301 redirect to `https://savetik-fast.xyz/ar/mp3?q=song` | Preserves exact path and search query while stripping `www.` | **PASS** |
-| Root index request with legacy query (`https://savetik-fast.xyz/?lang=tl&utm=promo`) | Rewrites to `/fil?utm=promo` (deletes lang param, keeps utm) | Strips `lang`, preserves `utm=promo`, produces `/fil?utm=promo` | **PASS** |
-| Unsupported language query (`https://savetik-fast.xyz/?lang=invalid_lang`) | Collapses to default English home (`/`) | Strips invalid `lang` and redirects to `/` | **PASS** |
-| Direct crawler hitting `/api/tiktok` or `/api/download` | Responses contain `X-Robots-Tag: noindex, nofollow` | Headers injected via `withRobotsHeader` across all HTTP verbs | **PASS** |
-| Static production build prerender verification | All 30 locales produce discrete `.html` files without trailing slashes | Verified: 685 static files generated in `dist` | **PASS** |
+| Crawler requests `GET /ios` vs `/ar/ios` vs `/es/android` | HTTP 200 with `index, follow` and self-referencing canonical | `index, follow` present; `isDevicePage` is `false`; canonical URL matches | **PASS** |
+| Crawler requests `/404` or non-existent route | HTTP 404 with `<meta name="robots" content="noindex, follow" />` and no hreflangs | Correctly outputs `noindex, follow` and suppresses hreflangs | **PASS** |
+| Crawler requests `/api/tiktok` or `/api/download` | `X-Robots-Tag: noindex, nofollow` present in HTTP response headers | `withRobotsHeader` attaches header to all responses | **PASS** |
+| Crawler requests legacy URL `/tl/about-us.html` | 301 single-hop redirect to canonical `/fil/about` | Single hop resolved without intermediate redirects | **PASS** |
+| Crawler requests `GET /robots.txt` | HTTP 200, points to `https://savetik-fast.xyz/sitemap.xml`, disallows only `/api/` and `/admin` | Clean `robots.txt` served with correct rules | **PASS** |
+| Search engine crawler fetches `GET /sitemap.xml` directly from `dist/` | Static XML file exists in `dist/` with 520 URLs | `dist/sitemap.xml` missing after `astro build` due to Cloudflare adapter SSR bundling | **FAIL** |
 
 ---
 
-## 5. Conclusion
+## 5. Conclusion & Actionable Verdict
 
-The edge worker, Cloudflare delivery configuration, redirect normalization engine, and build pipeline are completely verified, robust against edge cases, and strictly compliant with project requirements. No defects, regressions, or integrity violations exist. **Verdict: APPROVE.**
+**Verdict**: **REQUEST_CHANGES**
+
+**Required Remediation Steps**:
+1. Update the build process to guarantee that `dist/sitemap.xml` and `dist/sitemap-0.xml` (and `public/sitemap.xml` / `public/sitemap-0.xml`) are physically generated and placed in `dist/` on every build.
+2. Ensure that running `npm run build` followed immediately by `node tools/validate_sitemap_full.cjs` and `node tools/test_crawler_emulation.cjs` passes 100% with zero missing file errors.
 
 ---
 
 ## 6. Verification Method
 
-To independently reproduce and verify this review, execute the following commands in the workspace root:
+To independently verify this evaluation:
 
 ```bash
-# 1. Run unit test suite for single-hop redirect normalization (32 cases)
-node tools/test_redirects.js
+# 1. Clean and build the Astro project
+npm run build
 
-# 2. Run Astro static build (prerenders all 685 pages/assets)
-npx astro build
+# 2. Run Site Doctor audit (passes 117/117 checks)
+node tools/site-doctor.cjs
 
-# 3. Run the comprehensive site doctor audit (117 checks)
-npm run doctor
+# 3. Validate static sitemap presence in dist (currently fails due to missing files)
+node tools/validate_sitemap_full.cjs
 
-# 4. Run build artifact verification check
+# 4. Run crawler emulation test suite (currently fails on sitemap-0.xml assertion)
+node tools/test_crawler_emulation.cjs
+
+# 5. Verify build output integrity
 node verify_build.cjs
-
-# 5. Run full site SEO and header audit
-node audit_check.cjs
-
-# 6. Run Cloudflare Wrangler Worker dry-run verification
-npx wrangler deploy --dry-run
 ```

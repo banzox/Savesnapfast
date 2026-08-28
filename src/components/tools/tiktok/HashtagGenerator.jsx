@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const hashtagsData = {
     "Viral & FYP Boost": ["#fyp", "#foryou", "#foryoupage", "#viral", "#trending", "#tiktokviral", "#xyzbca", "#explore", "#viralvideo", "#fypage", "#blowthisup", "#goviral"],
@@ -25,10 +25,21 @@ const HashtagGenerator = ({ t = {} }) => {
     const [selectedTags, setSelectedTags] = useState([]);
     const [copiedMode, setCopiedMode] = useState(null);
 
-    const generateCategoryTags = () => {
-        const allTags = hashtagsData[category] || hashtagsData["Viral & FYP Boost"];
+    const generateCategoryTags = useCallback((cat = category) => {
+        const allTags = hashtagsData[cat] || hashtagsData["Viral & FYP Boost"];
         const shuffled = [...allTags].sort(() => 0.5 - Math.random());
         setSelectedTags(shuffled.slice(0, 10));
+    }, [category]);
+
+    // Initial load generation
+    useEffect(() => {
+        generateCategoryTags('Viral & FYP Boost');
+    }, [generateCategoryTags]);
+
+    const handleCategoryChange = (e) => {
+        const newCat = e.target.value;
+        setCategory(newCat);
+        generateCategoryTags(newCat);
     };
 
     const generateCustomTags = () => {
@@ -84,13 +95,13 @@ const HashtagGenerator = ({ t = {} }) => {
                 <div className="gen-box">
                     <label><i className="fas fa-layer-group"></i> Browse Trending Niches:</label>
                     <div className="select-row">
-                        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                        <select value={category} onChange={handleCategoryChange}>
                             {Object.keys(hashtagsData).map(cat => (
                                 <option key={cat} value={cat}>{cat}</option>
                             ))}
                         </select>
-                        <button className="btn-gen-cat" onClick={generateCategoryTags}>
-                            <i className="fas fa-magic"></i> Generate
+                        <button type="button" className="btn-gen-cat" onClick={() => generateCategoryTags(category)}>
+                            <i className="fas fa-dice"></i> Shuffle
                         </button>
                     </div>
                 </div>
@@ -100,12 +111,12 @@ const HashtagGenerator = ({ t = {} }) => {
                     <div className="select-row">
                         <input
                             type="text"
-                            placeholder="e.g. anime, fitness, sneakers, travel"
+                            placeholder="e.g. anime, fitness, travel..."
                             value={customKeyword}
                             onChange={(e) => setCustomKeyword(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && generateCustomTags()}
                         />
-                        <button className="btn-gen-custom" onClick={generateCustomTags}>
+                        <button type="button" className="btn-gen-custom" onClick={generateCustomTags}>
                             <i className="fas fa-bolt"></i> Generate
                         </button>
                     </div>
@@ -133,6 +144,7 @@ const HashtagGenerator = ({ t = {} }) => {
 
                     <div className="action-buttons-group">
                         <button
+                            type="button"
                             className={`btn-copy-action ${copiedMode === 'tags' ? 'copied' : ''}`}
                             onClick={() => copyTags(false)}
                         >
@@ -144,6 +156,7 @@ const HashtagGenerator = ({ t = {} }) => {
                         </button>
 
                         <button
+                            type="button"
                             className={`btn-copy-caption ${copiedMode === 'caption' ? 'copied' : ''}`}
                             onClick={() => copyTags(true)}
                         >
@@ -162,7 +175,7 @@ const HashtagGenerator = ({ t = {} }) => {
                     background: rgba(255, 255, 255, 0.03);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                     border-radius: 20px;
-                    padding: 30px 24px;
+                    padding: 26px 20px;
                     max-width: 850px;
                     margin: 0 auto;
                     backdrop-filter: blur(16px);
@@ -194,7 +207,7 @@ const HashtagGenerator = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .tool-desc {
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     font-size: 0.9rem;
                     max-width: 650px;
                     margin: 0 auto;
@@ -202,14 +215,14 @@ const HashtagGenerator = ({ t = {} }) => {
                 }
                 .generator-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                    gap: 18px;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 16px;
                     margin-bottom: 24px;
                 }
                 .gen-box {
                     background: rgba(255, 255, 255, 0.04);
                     border: 1px solid rgba(255, 255, 255, 0.08);
-                    padding: 18px;
+                    padding: 16px;
                     border-radius: 14px;
                     display: flex;
                     flex-direction: column;
@@ -222,14 +235,14 @@ const HashtagGenerator = ({ t = {} }) => {
                 .gen-box label {
                     font-size: 0.86rem;
                     font-weight: 600;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     display: flex;
                     align-items: center;
                     gap: 6px;
                 }
                 .select-row {
                     display: flex;
-                    gap: 10px;
+                    gap: 8px;
                 }
                 .select-row select, .select-row input {
                     flex: 1;
@@ -247,10 +260,10 @@ const HashtagGenerator = ({ t = {} }) => {
                     color: #0f172a;
                 }
                 .btn-gen-cat {
-                    background: linear-gradient(135deg, var(--primary), var(--secondary));
+                    background: linear-gradient(135deg, var(--primary, #ff0050), var(--secondary, #00f2ea));
                     border: none;
                     color: #fff;
-                    padding: 10px 18px;
+                    padding: 10px 16px;
                     border-radius: 10px;
                     font-weight: 700;
                     cursor: pointer;
@@ -264,7 +277,7 @@ const HashtagGenerator = ({ t = {} }) => {
                     background: linear-gradient(135deg, #3b82f6, #0891b2);
                     border: none;
                     color: #fff;
-                    padding: 10px 18px;
+                    padding: 10px 16px;
                     border-radius: 10px;
                     font-weight: 700;
                     cursor: pointer;
@@ -290,7 +303,7 @@ const HashtagGenerator = ({ t = {} }) => {
                 }
                 .tags-header {
                     font-size: 0.84rem;
-                    color: var(--text-dim);
+                    color: var(--text-dim, #94a3b8);
                     margin-bottom: 14px;
                 }
                 .tags-cloud {
@@ -336,7 +349,7 @@ const HashtagGenerator = ({ t = {} }) => {
                 .btn-copy-action {
                     flex: 1;
                     min-width: 180px;
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                    background: linear-gradient(135deg, var(--primary, #ff0050) 0%, var(--secondary, #00f2ea) 100%);
                     border: none;
                     padding: 13px 20px;
                     border-radius: 12px;

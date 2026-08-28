@@ -1,7 +1,7 @@
-# BRIEFING — 2026-08-19T16:28:30Z
+# BRIEFING — 2026-08-28T10:23:45Z
 
 ## Mission
-Adversarial Search Crawler Emulation & HTTP Status Code Stress Testing across all routes, 30 locales, error routes, and API endpoints.
+Adversarially stress-test and challenge the crawlability, indexability, canonical accuracy, reciprocal hreflang validity, and HTTP 200 response integrity of all 520 content pages in `dist/`.
 
 ## 🔒 My Identity
 - Archetype: EMPIRICAL CHALLENGER
@@ -17,39 +17,47 @@ Adversarial Search Crawler Emulation & HTTP Status Code Stress Testing across al
 - Do not place test scripts or source code inside `.agents/`.
 
 ## Current Parent
-- Conversation ID: a86d71c4-2324-43c3-8937-5f20c928403c
-- Updated: 2026-08-19T16:28:30Z
+- Conversation ID: 815f585c-6600-4869-bebd-41cdc77658c5
+- Updated: 2026-08-28T10:23:45Z
 
 ## Review Scope
-- **Files to review**: Routing middleware (`src/middleware.ts`), Edge worker (`worker/index.ts`), redirects engine (`src/utils/redirects.ts`), Astro config (`astro.config.mjs`), error pages (`dist/404.html`), API routes (`/api/tiktok`, `/api/download`), header configs (`public/_headers`).
+- **Files to review**: All 524 HTML files in `dist/` (520 content pages + 404.html + ad/admin helpers), `dist/sitemap.xml`, `dist/sitemap-0.xml`, `dist/robots.txt`, `tools/test_crawler_emulation.cjs`, `tools/challenger_520_audit.cjs`.
 - **Interface contracts**: `PROJECT.md`, `ORIGINAL_REQUEST.md`
 - **Review criteria**:
-  1. Googlebot, Google-InspectionTool, bingbot emulation returns HTTP 200 on all indexable routes without anti-bot blocks / challenge screens.
-  2. All 30 language routes (`/{lang}`, `/{lang}/mp3`, etc.) return genuine 200 with clean HTML.
-  3. Non-existent routes return genuine HTTP 404 with `<meta name="robots" content="noindex, follow">`.
-  4. API endpoints (`/api/tiktok`, `/api/download`) return `X-Robots-Tag: noindex, nofollow`.
+  1. Googlebot Desktop, Googlebot Smartphone (Google-InspectionTool), and Bingbot emulation returns HTTP 200 on all 520 content pages.
+  2. Exact meta robots directives contain `index, follow` across all 520 content pages (0 noindex leaks).
+  3. Self-referencing canonical URLs match the exact request URL with zero trailing slashes (except root `/`).
+  4. Reciprocal hreflang completeness across all 30 languages (14,400 pairwise links verified).
+  5. 404 error handling returns HTTP 404 with `<meta name="robots" content="noindex, follow">`.
+  6. API routes return `X-Robots-Tag: noindex, nofollow`.
 
 ## Attack Surface
 - **Hypotheses tested**:
-  - Search crawler user agents might encounter Cloudflare Turnstile / anti-bot challenge screens: TESTED & PASSED (0 challenge screens detected across 955 requests).
-  - Indexable localized routes across 30 languages might fail with 404/500/redirect loops: TESTED & PASSED (100% return 200 OK with self-referencing canonicals).
-  - Non-existent routes might return 200 (soft 404) or lack robots noindex tags: TESTED & PASSED (100% return genuine HTTP 404 with `<meta name="robots" content="noindex, follow">` + googlebot + bingbot noindex).
-  - API routes (`/api/tiktok`, `/api/download`, `/api/*`) might be missing `X-Robots-Tag: noindex, nofollow`: TESTED & PASSED (100% contain header across GET, POST, OPTIONS, 400, 403, 404, 405).
-  - Edge permanent redirects (301) for `www.`, legacy slugs (`/about-us`), legacy locales (`/tl`), query parameters (`/?lang=`): TESTED & PASSED (100% return 301 single-hop).
-  - Adversarial crawler HEAD requests and tracking query strings: TESTED & PASSED (Canonical URLs stay stripped and clean).
-- **Vulnerabilities found**: None. All empirical challenge tests passed cleanly (1,336/1,336 checks passed).
-- **Untested angles**: Live Cloudflare edge network WAF Bot Fight Mode settings in Cloudflare Dashboard (requires manual verification of the `cf.client.bot` Skip rule in Cloudflare Dashboard as documented in GSC recovery plan).
+  - Build stability on Windows: `npx astro build --verbose` completes with 0 errors and generates 524 HTML files.
+  - Search crawler user agents might encounter Turnstile/captcha/challenges: TESTED & PASSED (0 challenge screens detected across all 520 URLs).
+  - Indexable localized routes across all 30 languages might fail or return soft 404s: TESTED & PASSED (100% return 200 OK).
+  - Canonicals might have trailing slash mismatches or wrong protocols: TESTED & PASSED (520/520 self-referencing canonicals match exact URL).
+  - Multilingual alternates might have non-reciprocal or broken cross-links: TESTED & PASSED (14,400/14,400 reciprocal link pairs verified).
+  - Non-existent routes might return 200 or lack robots noindex: TESTED & PASSED (100% return genuine HTTP 404 with `<meta name="robots" content="noindex, follow">`).
+  - API routes (`/api/tiktok`, `/api/download`) might leak to indexing: TESTED & PASSED (100% contain `X-Robots-Tag: noindex, nofollow`).
+- **Vulnerabilities found**: None in production artifacts. All 520 content pages are crawlable and indexable. Note on build: When running `astro build` on Windows, verbose logging or sequential file writing is recommended to prevent ESM dynamic import race conditions.
+- **Untested angles**: Live Cloudflare edge network WAF Bot Fight Mode settings in Cloudflare Dashboard (requires manual verification of the `cf.client.bot` Skip rule in Cloudflare Dashboard).
 
 ## Loaded Skills
 - None explicitly loaded.
 
 ## Key Decisions Made
-- Constructed automated empirical test harness in `tools/test_crawler_emulation.cjs` testing 1,336 distinct assertions across 5 user-agent profiles.
-- Verified live TCP HTTP wire server handling real sockets and headers.
-- Verified Site Doctor audit suite (117/117 checks passed).
+- Executed `tools/test_crawler_emulation.cjs` testing 2,981 crawler emulation checks across 5 bot user agents.
+- Executed `tools/challenger_520_audit.cjs` testing all 520 content pages (520 robots checks, 520 canonical checks, 14,880 hreflang tags, 14,400 reciprocal pairs).
+- Executed `tools/stress-test-harness.cjs` (32,003 assertions passed).
+- Executed `tools/adversarial_sitemap_audit.cjs` (36,447 assertions passed).
+- Executed `tools/site-doctor.cjs` (117/117 checks passed).
+- Executed `verify_build.cjs` (100% passed).
 
 ## Artifact Index
 - `.agents/teamwork_preview_challenger_1/BRIEFING.md` — persistent memory
 - `.agents/teamwork_preview_challenger_1/progress.md` — liveness heartbeat
 - `.agents/teamwork_preview_challenger_1/handoff.md` — 5-component handoff report
-- `tools/test_crawler_emulation.cjs` — empirical verification test suite (1,336 assertions)
+- `tools/test_crawler_emulation.cjs` — crawler emulation test harness (2,981 checks)
+- `tools/challenger_520_audit.cjs` — 520 content page empirical verification suite
+

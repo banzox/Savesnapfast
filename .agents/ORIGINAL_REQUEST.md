@@ -62,3 +62,36 @@ Verify that the Astro project build, prerendered static assets, `robots.txt`, `s
 - [ ] Verify Cloudflare Worker (`worker/index.ts`) edge routing and assets binding without redirect chains.
 - [ ] Local build and site doctor audit (`npm run doctor`) pass 100% of checks without errors or warnings.
 
+## Follow-up — 2026-08-28T09:49:50Z
+
+Perform an exhaustive, multi-dimensional technical audit of the Savesnapfast web platform (savetik-fast.xyz), implement complete code fixes across all layers (removing noindex blocks, establishing self-referencing canonicals across all 30 languages, expanding XML sitemaps to include all 500+ valid routes), and deliver a comprehensive diagnostic and verification report.
+
+Working directory: c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast
+Integrity mode: development
+
+## Requirements
+
+### R1. Full Indexing Architecture Remediation
+- Audit and adjust all routing templates, Astro layout configurations, and localized pages across all 30 languages.
+- Ensure all legitimate landing pages, tool variations (mp3, slideshow, story, device guides ios, android, mac, pc), and localized content are fully indexable with valid self-referencing canonical tags, clean metadata (index, follow), and accurate hreflang alternate links.
+- Eliminate all accidental or restrictive noindex directives on user-facing content routes.
+
+### R2. Complete XML Sitemap Expansion & Schema Validation
+- Generate an all-inclusive, valid XML sitemap (sitemap.xml) encompassing all 500+ valid site URLs with correct <loc>, <lastmod>, and <xhtml:link rel="alternate"> structures.
+- Ensure sitemap.xml conforms strictly to standard sitemap XML schema without redirect loops or MIME type mismatches.
+- Audit robots.txt and Cloudflare routing (wrangler.jsonc, _headers, _redirects, worker middleware) so that crawlers (Googlebot, Bingbot) have unrestricted access to all content and sitemap endpoints.
+
+### R3. Comprehensive Technical Diagnostic & Audit Report
+- Deliver a detailed technical report documenting:
+  - Exact breakdown of all URLs and their indexability status.
+  - Root-cause analysis of Google Search Console indexing drop and sitemap fetch behavior.
+  - Automated verification test results across all endpoints, status codes, and meta robots tags.
+
+## Acceptance Criteria
+
+### Indexing & SEO Integrity
+- [ ] 100% of user-facing localized and device routes across all 30 languages return HTTP 200 with <meta name="robots" content="index, follow..." /> and valid self-referencing canonicals.
+- [ ] sitemap.xml contains all valid URLs (500+ URLs), validates cleanly as XML, and returns Content-Type: application/xml with status 200.
+- [ ] public/robots.txt correctly points to https://savetik-fast.xyz/sitemap.xml and contains no disallows on public content routes.
+- [ ] Automated verification script passes 100% of crawler emulation tests with zero indexing conflicts.
+

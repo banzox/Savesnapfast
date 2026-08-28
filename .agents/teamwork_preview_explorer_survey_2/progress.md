@@ -1,14 +1,18 @@
-# Progress - Survey 2: R2 Cloudflare & Edge Delivery Deep Investigation
+# Progress Heartbeat
 
-Last visited: 2026-08-19T16:08:55Z
+- Agent: survey_explorer_2 (Sitemap & Cloudflare Auditor)
+- Last visited: 2026-08-28T09:57:30Z
+- Status: COMPLETED
+- Current Phase: Completed Audit & Handoff Report
 
-- [x] Initialized DISPATCH.md, BRIEFING.md, and progress.md
-- [x] Read ORIGINAL_REQUEST.md
-- [x] Inspect wrangler configuration and edge worker files
-- [x] Inspect header transformations, Cache-Control, security headers
-- [x] Inspect bot management, Googlebot / search crawler handling, WAF behavior
-- [x] Inspect status codes, redirect chains (canonicalization, non-www/www, trailing slash)
-- [x] Inspect scraper endpoints and fallback APIs
-- [x] Synthesize findings and write handoff.md
-- [x] Update BRIEFING.md and progress.md
-- [ ] Send completion message to parent
+## Progress Items
+- [x] Initialized BRIEFING and DISPATCH
+- [x] Inspected sitemap generation scripts & endpoints (`src/pages/sitemap.xml.ts`, `src/utils/sitemap.ts`)
+- [x] Determined URL counts across all 30 languages (191 in sitemap vs 520 valid routes in dist, 329 missing)
+- [x] Verified `<loc>`, `<lastmod>`, and `<xhtml:link>` hreflang requirements
+- [x] Inspected `public/robots.txt` and meta robots tags across 524 HTML files
+- [x] Inspected Cloudflare config (`wrangler.jsonc`, `public/_headers`, `public/_redirects`, `worker/index.ts`, `src/middleware.ts`)
+- [x] Tested 20 edge redirect permutations (0 loops, all 1-hop 301)
+- [x] Synthesized findings and generated handoff report with exact remediation code
+- [x] Updated BRIEFING.md and progress.md
+- [x] Send completion message to parent

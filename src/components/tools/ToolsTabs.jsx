@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ImageCompressor from './ImageCompressor';
 import ImageConverter from './ImageConverter';
 import QRCodeGenerator from './QRCodeGenerator';
@@ -9,6 +9,7 @@ import HashtagGenerator from './tiktok/HashtagGenerator';
 
 const ToolsTabs = ({ translations }) => {
     const [activeTab, setActiveTab] = useState('compressor');
+    const containerRef = useRef(null);
 
     // Default translations if missing
     const t = translations?.tools || {};
@@ -23,14 +24,58 @@ const ToolsTabs = ({ translations }) => {
         { id: 'hashtag', label: t.tabs?.hashtag || "Hashtag Gen", icon: "fas fa-hashtag" }
     ];
 
-    // Deep-linking hash support
-    useEffect(() => {
-        if (typeof window !== 'undefined' && window.location.hash) {
-            const hash = window.location.hash.replace('#', '');
-            if (tabs.some(x => x.id === hash)) {
-                setActiveTab(hash);
+    const scrollToWorkspace = () => {
+        if (typeof window !== 'undefined') {
+            const el = document.getElementById('tools-workspace') || containerRef.current;
+            if (el) {
+                const yOffset = -80;
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
             }
         }
+    };
+
+    // Deep-linking hash support and event listeners
+    useEffect(() => {
+        const syncTabFromHash = (shouldScroll = false) => {
+            if (typeof window !== 'undefined' && window.location.hash) {
+                const hash = window.location.hash.replace('#', '').trim().toLowerCase();
+                const matched = tabs.find(x => x.id.toLowerCase() === hash);
+                if (matched) {
+                    setActiveTab(matched.id);
+                    if (shouldScroll) {
+                        setTimeout(scrollToWorkspace, 50);
+                    }
+                }
+            }
+        };
+
+        // Check on initial load
+        syncTabFromHash(false);
+
+        // Listen to hashchange
+        const onHashChange = () => syncTabFromHash(true);
+        window.addEventListener('hashchange', onHashChange);
+        window.addEventListener('popstate', onHashChange);
+
+        // Custom event for direct triggering from quick cards
+        const onCustomSwitch = (e) => {
+            const toolId = e.detail?.toolId;
+            if (toolId && tabs.some(x => x.id === toolId)) {
+                setActiveTab(toolId);
+                if (typeof window !== 'undefined') {
+                    window.history.replaceState(null, '', `#${toolId}`);
+                }
+                setTimeout(scrollToWorkspace, 50);
+            }
+        };
+        window.addEventListener('switch-tool', onCustomSwitch);
+
+        return () => {
+            window.removeEventListener('hashchange', onHashChange);
+            window.removeEventListener('popstate', onHashChange);
+            window.removeEventListener('switch-tool', onCustomSwitch);
+        };
     }, []);
 
     const handleTabChange = (id) => {
@@ -40,14 +85,36 @@ const ToolsTabs = ({ translations }) => {
         }
     };
 
+    const getTabTitle = (id) => {
+        if (t[id]?.title) return t[id].title;
+        const tab = tabs.find(x => x.id === id);
+        return tab ? tab.label : "Tool";
+    };
+
+    const getTabDesc = (id) => {
+        if (t[id]?.desc) return t[id].desc;
+        const defaultDescs = {
+            compressor: "Compress JPG, PNG & WebP images up to 80% losslessly with zero quality loss directly in your browser.",
+            converter: "Convert images seamlessly between WebP, PNG, JPG, and other popular formats 100% privately.",
+            qrcode: "Create high-resolution, custom-colored QR codes for TikTok profiles, videos, links, or text.",
+            engagement: "Calculate accurate TikTok engagement rate, viral score, and algorithm distribution analytics.",
+            money: "Estimate projected creator revenue based on 2026 Creator Rewards Program (CRP) RPM rates.",
+            font: "Convert regular text into aesthetic Unicode fonts and symbols for TikTok bio, captions, and comments.",
+            hashtag: "Generate viral trending hashtags and ready-to-use captions across 16 specialized niches."
+        };
+        return defaultDescs[id] || "Free 100% browser-based tools for creators and web designers.";
+    };
+
     return (
-        <div className="tools-container">
+        <div id="tools-workspace" ref={containerRef} className="tools-container">
             <div className="tabs-header">
                 {tabs.map(tab => (
                     <button
                         key={tab.id}
+                        type="button"
                         className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
                         onClick={() => handleTabChange(tab.id)}
+                        aria-selected={activeTab === tab.id}
                     >
                         <i className={tab.icon}></i>
                         <span>{tab.label}</span>
@@ -57,45 +124,49 @@ const ToolsTabs = ({ translations }) => {
 
             <div className="tab-content">
                 <div className="tool-header">
-                    <h2>{t[activeTab]?.title || tabs.find(x => x.id === activeTab)?.label}</h2>
-                    <p>{t[activeTab]?.desc || "Free 100% browser-based tools for creators and web designers"}</p>
+                    <h2>{getTabTitle(activeTab)}</h2>
+                    <p>{getTabDesc(activeTab)}</p>
                 </div>
 
-                {activeTab === 'compressor' && <ImageCompressor t={t} />}
-                {activeTab === 'converter' && <ImageConverter t={t} />}
-                {activeTab === 'qrcode' && <QRCodeGenerator t={t} />}
-                {activeTab === 'engagement' && <EngagementCalculator t={t} />}
-                {activeTab === 'money' && <MoneyCalculator t={t} />}
-                {activeTab === 'font' && <FontGenerator t={t} />}
-                {activeTab === 'hashtag' && <HashtagGenerator t={t} />}
+                <div className="active-tool-view">
+                    {activeTab === 'compressor' && <ImageCompressor t={t} />}
+                    {activeTab === 'converter' && <ImageConverter t={t} />}
+                    {activeTab === 'qrcode' && <QRCodeGenerator t={t} />}
+                    {activeTab === 'engagement' && <EngagementCalculator t={t} />}
+                    {activeTab === 'money' && <MoneyCalculator t={t} />}
+                    {activeTab === 'font' && <FontGenerator t={t} />}
+                    {activeTab === 'hashtag' && <HashtagGenerator t={t} />}
+                </div>
             </div>
 
             <style>{`
                 .tools-container {
                     max-width: 900px;
                     margin: 0 auto;
-                    padding: 20px;
+                    padding: 10px;
+                    scroll-margin-top: 90px;
                 }
                 .tabs-header {
                     display: flex;
                     justify-content: center;
-                    gap: 12px;
-                    margin-bottom: 30px;
+                    gap: 10px;
+                    margin-bottom: 25px;
                     flex-wrap: wrap;
                 }
                 .tab-btn {
                     background: rgba(255, 255, 255, 0.05);
                     border: 1px solid rgba(255, 255, 255, 0.1);
-                    padding: 12px 20px;
+                    padding: 11px 18px;
                     border-radius: 50px;
                     color: var(--text-main, #fff);
                     cursor: pointer;
-                    display: flex;
+                    display: inline-flex;
                     align-items: center;
                     gap: 8px;
-                    font-size: 0.95rem;
+                    font-size: 0.92rem;
                     font-weight: 600;
-                    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+                    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+                    user-select: none;
                 }
                 [data-theme='light'] .tab-btn {
                     background: #ffffff;
@@ -106,16 +177,18 @@ const ToolsTabs = ({ translations }) => {
                 .tab-btn:hover {
                     background: rgba(255, 255, 255, 0.1);
                     transform: translateY(-2px);
+                    color: #00f2ea;
                 }
                 [data-theme='light'] .tab-btn:hover {
                     background: #f8fafc;
-                    color: #0f172a;
+                    color: #2563eb;
                 }
                 .tab-btn.active {
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                    background: linear-gradient(135deg, var(--primary, #ff0050) 0%, var(--secondary, #00f2ea) 100%);
                     border-color: transparent;
                     color: #ffffff !important;
-                    box-shadow: 0 4px 15px rgba(255, 0, 80, 0.35);
+                    box-shadow: 0 4px 18px rgba(255, 0, 80, 0.4);
+                    transform: translateY(-1px);
                 }
                 [data-theme='light'] .tab-btn.active {
                     background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
@@ -123,10 +196,10 @@ const ToolsTabs = ({ translations }) => {
                 }
                 .tool-header {
                     text-align: center;
-                    margin-bottom: 30px;
+                    margin-bottom: 25px;
                 }
                 .tool-header h2 {
-                    font-size: 2rem;
+                    font-size: 1.85rem;
                     margin-bottom: 8px;
                     font-weight: 800;
                     color: var(--text-main, #fff);
@@ -135,22 +208,31 @@ const ToolsTabs = ({ translations }) => {
                     color: #0f172a;
                 }
                 .tool-header p {
-                    color: var(--text-dim);
-                    max-width: 600px;
+                    color: var(--text-dim, #94a3b8);
+                    max-width: 650px;
                     margin: 0 auto;
-                    font-size: 1rem;
+                    font-size: 0.95rem;
+                    line-height: 1.5;
+                }
+                .active-tool-view {
+                    animation: fadeInScale 0.25s ease;
+                }
+                @keyframes fadeInScale {
+                    from { opacity: 0; transform: translateY(6px); }
+                    to { opacity: 1; transform: translateY(0); }
                 }
                 
                 @media (max-width: 600px) {
                     .tabs-header {
-                        gap: 8px;
+                        gap: 6px;
                     }
                     .tab-btn {
-                        padding: 10px 14px;
-                        font-size: 0.85rem;
+                        padding: 8px 12px;
+                        font-size: 0.82rem;
+                        gap: 6px;
                     }
                     .tool-header h2 {
-                        font-size: 1.6rem;
+                        font-size: 1.45rem;
                     }
                 }
             `}</style>

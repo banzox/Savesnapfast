@@ -1,14 +1,14 @@
-# BRIEFING — 2026-08-19T16:35:00Z
+# BRIEFING — 2026-08-28T10:17:00Z
 
 ## Mission
-Adversarial Redirect Engine, Canonical Reciprocity & Sitemap Stress Testing for Savesnapfast (`savetik-fast.xyz`).
+Adversarial Sitemap Schema, Bidirectional Route Parity (520 URLs), and Hreflang Reciprocity Challenge for Savesnapfast (`savetik-fast.xyz`).
 
 ## 🔒 My Identity
 - Archetype: EMPIRICAL CHALLENGER
 - Roles: critic, specialist
 - Working directory: c:\Users\newFUTURE\Desktop\xmax2\Savesnapfast\.agents\teamwork_preview_challenger_2
-- Original parent: a86d71c4-2324-43c3-8937-5f20c928403c
-- Milestone: M4 Verification & Stress Testing
+- Original parent: 815f585c-6600-4869-bebd-41cdc77658c5
+- Milestone: M4 Sitemap & Alternate Link Verification
 - Instance: 2 of 2
 
 ## 🔒 Key Constraints
@@ -19,33 +19,39 @@ Adversarial Redirect Engine, Canonical Reciprocity & Sitemap Stress Testing for 
 - Communicate via send_message to caller agent
 
 ## Current Parent
-- Conversation ID: a86d71c4-2324-43c3-8937-5f20c928403c
-- Updated: not yet
+- Conversation ID: 815f585c-6600-4869-bebd-41cdc77658c5
+- Updated: 2026-08-28T10:17:00Z
 
 ## Review Scope
-- **Files to review**: `worker/index.ts`, `src/utils/redirects.ts`, `src/utils/sitemap.ts`, `src/components/SEOConfig.astro`, `src/layouts/Layout.astro`, `dist/**`, `public/**`
-- **Interface contracts**: PROJECT.md (Edge Worker routing, SEO canonicals, sitemaps, hreflang reciprocity)
-- **Review criteria**: 100+ edge redirect combinations, 0 redirect chains/loops, 191 sitemap URLs validity, bidirectional hreflang reciprocity across all 30 languages.
+- **Files to review**: `dist/sitemap.xml`, `dist/sitemap-0.xml`, `dist/sitemap-index.xml`, `src/utils/sitemap.ts`, `src/utils/redirects.ts`, `src/components/SEOConfig.astro`, `src/pages/**`
+- **Interface contracts**: PROJECT.md (Sitemap schema 0.9 + xhtml, 520 URLs parity, reciprocal hreflang matrix across 30 languages, single-hop redirects)
+- **Review criteria**: 0 XML syntax errors, 100% bidirectional parity for 520 URLs, 100% pairwise reciprocal hreflang links, 0 redirect loops/chains.
 
 ## Key Decisions Made
-- Created master empirical test harness `tools/stress-test-harness.cjs` covering:
-  1. 234 edge redirect tests (compound paths, query params, case sensitivity, trailing slashes, www canonicalization, loop/chain detection)
-  2. 191 sitemap URL validations against `dist/` artifacts and canonical tags
-  3. 13,500 pairwise hreflang bidirectional reciprocity checks across 15 clusters for 30 languages
-- Verified 100% test pass rate across 29,700 assertions (0 errors, 0 warnings).
+- Executed `tools/validate_sitemap_full.cjs`, `tools/compare_sitemap.cjs`, `tools/stress-test-harness.cjs`, and comprehensive `tools/adversarial_sitemap_audit.cjs`.
+- Verified 100% test pass rate across 36,447 assertions:
+  1. Exactly 520 sitemap URLs matching 520 routes (100% bidirectional parity, 0 missing, 0 extra).
+  2. 0 XML syntax errors, valid XML 1.0 declaration, standard `urlset` and `xhtml` namespaces.
+  3. 14,400 core cluster pairwise hreflang checks (16 core pages * 30 * 30) + 900 blog cluster checks + bilateral/standalone clusters: 100% reciprocal symmetry and correct `x-default` targeting.
+  4. 234 edge redirect test cases: 0 redirect loops, 0 multi-hop chains.
 
 ## Artifact Index
-- `tools/stress-test-harness.cjs` — Empirical verification and stress testing suite
+- `tools/adversarial_sitemap_audit.cjs` — Comprehensive adversarial test harness (36,447 assertions)
+- `tools/validate_sitemap_full.cjs` — Schema and XML validation suite
+- `tools/compare_sitemap.cjs` — Route parity validator
+- `tools/stress-test-harness.cjs` — Legacy stress testing harness
 - `handoff.md` — 5-component handoff report
 - `progress.md` — Progress tracker and execution logs
 
 ## Attack Surface
 - **Hypotheses tested**:
-  - Legacy redirect engine handles all compound paths, query params, trailing slashes, www hostnames in 0/1 hops without loops: **CONFIRMED ROBUST** (234/234 passed).
-  - Sitemaps contain exactly valid, clean URLs matching dist/ HTML artifacts and canonical tags: **CONFIRMED 100% MATCH** (191/191 passed).
-  - Multilingual cluster pages have 100% reciprocal hreflang alternate links: **CONFIRMED 100% RECIPROCAL** (13,500/13,500 pairs passed).
-- **Vulnerabilities found**: None. System is resilient against all adversarial redirect combinations, loop vectors, and canonical mismatches.
+  - Sitemap XML conforms strictly to Sitemaps 0.9 & XHTML schema: **CONFIRMED 100% CONFORMANT** (0 errors).
+  - Every URL in sitemap is represented in dist/ and vice versa (520 URLs bidirectional parity): **CONFIRMED 100% PARITY** (0 missing, 0 extra).
+  - All 30 language alternates + `x-default` are present and symmetrically reciprocal: **CONFIRMED 100% RECIPROCAL** (15,300+ pairs checked).
+  - Edge redirects resolve cleanly in 0/1 hop without loops: **CONFIRMED ROBUST** (234/234 passed).
+- **Vulnerabilities found**: None in sitemap schema, parity, or hreflang links. Documented Windows Node 24 ESM prerender build caveat with `@astrojs/cloudflare` adapter.
 - **Untested angles**: None.
 
 ## Loaded Skills
 - None
+
