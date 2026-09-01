@@ -1,694 +1,711 @@
 {
-  "404": {
-    "title": "Halaman Tidak Ditemui",
-    "home_btn": "Pergi ke Laman Utama"
-  },
-  "meta": {
-    "title": "SaveTikFast 2026 – Pemuat Turun TikTok Terbaik Tanpa Tera Air (4K)",
-    "description": "Muat turun video TikTok tanpa tera air secara percuma dalam kualiti Ultra HD/4K. TikTok Saver terpantas 2026. Simpan sebagai MP4 dan MP3 pada iPhone, Android dan PC."
-  },
-  "common": {
-    "select_language": "Pilih bahasa",
-    "toggle_theme": "Tukar tema"
-  },
-  "nav": {
-    "home": "Laman Utama",
-    "about": "Tentang Kami",
-    "blog": "Blog",
-    "contact": "Hubungi",
-    "terms": "Terma",
-    "privacy": "Privasi",
-    "dmca": "DMCA",
-    "disclaimer": "Penafian",
-    "tools": "Alatan"
-  },
-  "hero": {
-    "title": "Pemuat Turun Video TikTok",
-    "desc": "Muat turun video TikTok tanpa tanda air. Pantas, Percuma dan Kualiti HD Tanpa Had."
-  },
-  "downloader": {
-    "placeholder": "Tampal pautan video di sini...",
-    "btn_download": "Muat turun sekarang",
-    "btn_paste": "Tampal",
-    "btn_copy": "Salin",
-    "btn_clear": "Padam",
-    "processing": "Sedang diproses...",
-    "download_video": "Muat Turun Video",
-    "download_audio": "Muat Turun MP3",
-    "hd_quality": "Tanpa tanda air",
-    "download_nwm": "Muat Turun Tanpa Tanda Air",
-    "download_hd": "Muat Turun HD",
-    "download_story_vid": "Muat Turun Story (Video)",
-    "download_story_img": "Muat Turun Story (Imej)",
-    "error_busy": "Perkhidmatan sibuk, sila cuba lagi kemudian.",
-    "download_zip": "Muat Turun Semua (ZIP)",
-    "creating_zip": "Mencipta ZIP...",
-    "save_image": "Simpan",
-    "error_wrong_type_video": "Pautan tidak sah! Sila gunakan pemuat turun video.",
-    "error_wrong_type_slideshow": "Pautan tidak sah! Sila gunakan pemuat turun slideshow.",
-    "error_wrong_type_story": "Pautan tidak sah! Sila gunakan pemuat turun story.",
-    "error_invalid_link": "Pautan tidak sah. Semak dan cuba lagi.",
-    "check_new_tab": "Tab baharu dibuka — semak semasa menunggu!",
-    "preparing_download": "Menyediakan fail anda...",
-    "countdown_msg": "Muat turun akan bermula secara automatik",
-    "modal_ad_text": "Tawaran istimewa untuk anda — ketik untuk tuntut!",
-    "skip_download": "Langkau & Muat Turun Sekarang",
-    "download_another": "Muat Turun Video Lain",
-    "thank_you_title": "Muat Turun Bermula!",
-    "thank_you_msg": "Semak folder muat turun anda"
-  },
-  "faq": {
-    "title": "Soalan Lazim (FAQ)",
-    "q1": "Bagaimana untuk memuat turun video TikTok tanpa tanda air?",
-    "a1": "Memuat turun video TikTok tanpa tanda air adalah mudah dengan SaveTikFast. Hanya salin pautan video TikTok dari aplikasi, tampal ke dalam kotak muat turun kami dan klik butang muat turun. Teknologi canggih kami mengalih keluar tanda air TikTok secara automatik, memberikan anda fail video yang bersih. Berfungsi pada semua peranti termasuk iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac dan Windows PC. Anda boleh menggunakan mana-mana pelayar seperti Chrome, Safari, Firefox atau Edge. Tidak seperti SSSTik atau SnapTik, SaveTikFast memberikan kualiti output tertinggi dengan pemprosesan segera.",
-    "q2": "Adakah SaveTikFast benar-benar percuma?",
-    "a2": "Ya, SaveTikFast 100% percuma dan akan sentiasa percuma. Tiada kos tersembunyi, tiada langganan premium atau had muat turun harian. Anda boleh memuat turun video TikTok tanpa had tanpa tanda air, menukar kepada MP3, menyimpan cerita dan memuat turun tayangan slaid - semuanya benar-benar percuma. Kami tidak memerlukan pendaftaran atau log masuk. Perkhidmatan kami disokong oleh iklan minimum, membolehkan kami menawarkan muat turun TikTok percuma kepada berjuta-juta pengguna di seluruh dunia pada mana-mana peranti.",
-    "q3": "Peranti dan pelayar apa yang disokong?",
-    "a3": "SaveTikFast berfungsi pada hampir setiap peranti dan pelayar. Peranti yang disokong termasuk iPhone (semua model termasuk iPhone 15, 14, 13), telefon Android (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), tablet (iPad, Samsung Tab) dan komputer (MacBook, iMac, Windows PC, Chromebook). Pelayar yang disokong termasuk Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet dan UC Browser. Tiada pemasangan aplikasi diperlukan - semuanya berfungsi terus dalam pelayar web anda.",
-    "q4": "Kualiti video apa yang boleh saya muat turun?",
-    "a4": "SaveTikFast memuat turun video TikTok dalam kualiti tertinggi yang ada. Ini termasuk resolusi 720p HD, 1080p Full HD, 2K dan juga 4K apabila video asal menyokongnya. Kami tidak pernah memampatkan atau mengurangkan kualiti video - anda mendapat kualiti yang sama seperti video TikTok asal yang dimuat naik. Ini menjadikan SaveTikFast lebih baik daripada pemuat turun lain seperti TikMate, SaveFrom atau MusicallyDown yang sering memampatkan video.",
-    "q5": "Adakah selamat menggunakan SaveTikFast?",
-    "a5": "Sudah tentu. SaveTikFast sepenuhnya selamat dan terjamin. Kami menggunakan penyulitan SSL untuk melindungi sambungan anda, tidak menyimpan sebarang data peribadi anda dan tidak memerlukan log masuk atau pendaftaran. Video yang anda muat turun diproses serta-merta dan tidak disimpan pada pelayan kami. Kami tidak memasang apa-apa pada peranti anda. SaveTikFast telah dipercayai oleh berjuta-juta pengguna sejak 2024 untuk muat turun video TikTok yang selamat.",
-    "q6": "Bagaimana SaveTikFast lebih baik daripada SSSTik atau SnapTik?",
-    "a6": "SaveTikFast menawarkan beberapa kelebihan berbanding SSSTik, SnapTik, TikMate dan pemuat turun TikTok lain. Perkhidmatan kami lebih pantas (muat turun selesai dalam 3 saat), memberikan output berkualiti lebih tinggi (sehingga 4K), mempunyai antara muka yang lebih bersih dengan iklan yang lebih sedikit, berfungsi lebih boleh dipercayai pada semua peranti dan menawarkan ciri tambahan seperti penukaran MP3, muat turun cerita dan pengekstrakan tayangan slaid. Ramai pengguna beralih ke SaveTikFast selepas mengalami masalah dengan pemuat turun lain.",
-    "q7": "Bolehkah saya memuat turun video TikTok di iPhone?",
-    "a7": "Ya, memuat turun video TikTok di iPhone mudah dengan SaveTikFast. Buka TikTok, salin pautan video, kemudian buka Safari atau Chrome dan lawati SaveTikFast. Tampal pautan dan ketik muat turun. Video akan disimpan terus ke aplikasi Foto atau Fail iPhone anda. Berfungsi pada semua model iPhone termasuk iPhone 15, 14, 13, 12 dan yang lebih lama. Tiada pemasangan aplikasi diperlukan - semuanya berfungsi dalam pelayar anda.",
-    "q8": "Bolehkah saya memuat turun video TikTok peribadi?",
-    "a8": "SaveTikFast hanya boleh memuat turun video TikTok awam. Video peribadi (hanya kelihatan kepada pencipta atau pengikut yang diluluskan) tidak boleh dimuat turun oleh mana-mana alat dalam talian kerana tetapan privasi TikTok. Jika anda mempunyai kebenaran pencipta, minta mereka untuk menjadikan video awam buat sementara waktu atau berkongsi terus dengan anda melalui ciri perkongsian terbina dalam TikTok.",
-    "q9": "Bagaimana untuk memuat turun TikTok di Samsung atau Android?",
-    "a9": "Memuat turun video TikTok di Samsung Galaxy atau mana-mana telefon Android adalah mudah. Buka aplikasi TikTok, ketik Kongsi pada video yang anda inginkan dan salin pautan. Kemudian buka pelayar Chrome, Firefox atau Samsung Internet dan lawati SaveTikFast. Tampal pautan ke dalam kotak muat turun dan ketik butang muat turun. Video akan disimpan ke folder Muat Turun atau Galeri anda. Berfungsi pada semua peranti Android termasuk Samsung, Huawei, Xiaomi, OPPO dan Google Pixel.",
-    "q10": "Mengapa memilih SaveTikFast berbanding pemuat turun TikTok lain?",
-    "a10": "SaveTikFast adalah pilihan terbaik untuk muat turun TikTok kerana kami menggabungkan kelajuan, kualiti dan kebolehpercayaan. Kami menawarkan kelajuan muat turun terpantas (3 saat), kualiti video tertinggi (sehingga 4K), penyingkiran tanda air, penukaran MP3, muat turun cerita dan pengekstrakan tayangan slaid - semuanya dalam satu alat percuma. Antara muka bersih kami berfungsi dengan sempurna pada semua peranti dan pelayar. Kami dipercayai oleh berjuta-juta pengguna sebagai alternatif terbaik kepada SSSTik, SnapTik, TikMate, SaveFrom dan MusicallyDown."
-  },
-  "pages": {
-    "about": {
-      "title": "Tentang Kami",
-      "content": "Selamat datang ke SaveTikFast, pemuat turun TikTok terkemuka untuk 2026.\n\nKami membina SaveTikFast dengan satu matlamat: untuk menyediakan cara terpantas, paling selamat dan paling boleh dipercayai untuk menyimpan video TikTok tanpa tanda air. Tidak seperti alat lain, kami mengutamakan pengalaman pengguna: tiada iklan yang menjengkelkan, tiada pendaftaran dan tiada pemasangan perisian.\n\nTeknologi kami menjamin bahawa anda mendapat kualiti asal video (sehingga 4K) sambil membuang logo yang bertindih."
+    "404": {
+        "title": "Halaman Tidak Ditemui",
+        "home_btn": "Pergi ke Laman Utama"
     },
-    "contact": {
-      "title": "Hubungi Kami",
-      "content": "Kami menghargai maklum balas anda dan sedia membantu.\n\nJika anda menghadapi masalah teknikal, mempunyai cadangan penambahbaikan atau pertanyaan perniagaan, sila hubungi pasukan sokongan kami:\n\n📧 E-mel: support@savetik-fast.xyz\n\nKami berusaha untuk membalas semua pertanyaan dalam masa 24 jam."
-    },
-    "terms": {
-      "title": "Terma Penggunaan",
-      "content": "Dengan menggunakan SaveTikFast, anda bersetuju dengan terma berikut:\n\n1. Penggunaan Peribadi:\nPerkhidmatan kami bertujuan untuk penggunaan peribadi dan bukan komersial. Anda boleh memuat turun video untuk tontonan luar talian.\n\n2. Harta Intelek:\nKami tidak memiliki kandungan yang dimuat turun. Semua hak milik pencipta asal di TikTok. Anda bersetuju untuk tidak menggunakan kandungan dengan cara yang melanggar hak cipta.\n\n3. Liabiliti:\nSaveTikFast tidak bertanggungjawab ke atas cara anda menggunakan bahan yang dimuat turun. Pengguna memikul tanggungjawab sepenuhnya atas sebarang pelanggaran hak cipta."
-    },
-    "privacy": {
-      "title": "Dasar Privasi",
-      "content": "Privasi anda adalah kritikal bagi kami.\n\nPengumpulan Data:\nKami tidak mengumpul maklumat peribadi seperti nama atau e-mel. Kami mungkin menggunakan analitik tanpa nama (seperti kuki) untuk meningkatkan prestasi laman web.\n\nTiada Penyimpanan Video:\nSaveTikFast tidak mengehos atau menyimpan sebarang video pada pelayannya. Semua pemprosesan fail dilakukan serta-merta."
-    },
-    "dmca": {
-      "title": "Dasar DMCA",
-      "content": "SaveTikFast menghormati hak harta intelek orang lain.\n\nKami beroperasi sebagai penyedia perkhidmatan teknikal dan tidak mengehoskan kandungan berhak cipta. Semua video disajikan terus dari pelayan pihak ketiga (TikTok).\n\nJika anda percaya bahawa karya berhak cipta anda telah dipaparkan pada perkhidmatan kami tanpa kebenaran, sila hantar notis DMCA rasmi ke: support@savetik-fast.xyz."
-    },
-    "disclaimer": {
-      "title": "Penafian",
-      "content": "1. Tiada Gabungan:\nSaveTikFast ialah alat utiliti bebas dan TIDAK bergabung, dikaitkan, diberi kuasa, disokong oleh, atau dalam apa jua cara disambungkan secara rasmi dengan TikTok Inc. atau ByteDance Ltd.\n\n2. Tanda Dagangan:\nNama 'TikTok' dan logonya adalah tanda dagangan berdaftar pemilik masing-masing.\n\n3. Kandungan:\nKami tidak mempunyai kawalan ke atas kandungan yang dihoskan pada pelayan TikTok."
-    }
-  },
-  "footer": {
-    "rights": "© 2026 SaveTikFast. Hak cipta terpelihara."
-  },
-  "features": {
-    "title": "Ciri-ciri Utama",
-    "no_watermark": {
-      "title": "Tanpa Tanda Air",
-      "desc": "Muat turun video TikTok tanpa tanda air dalam kualiti HD asal. SaveTikFast mengalih keluar logo TikTok secara automatik, memberikan anda video yang lebih bersih daripada SSSTik, SnapTik atau TikMate. Sempurna untuk posting semula di Instagram, YouTube Shorts atau simpan ke galeri anda."
-    },
-    "fast": {
-      "title": "Kelajuan Pantas",
-      "desc": "Pemuat turun video TikTok terpantas dalam talian. Simpan sebarang video TikTok dalam masa 3 saat sahaja di iPhone, Android, Samsung, Huawei, iPad, PC atau Mac. Pelayan kami dioptimumkan untuk kelajuan, menjadikan kami lebih pantas daripada SaveFrom dan MusicallyDown."
-    },
-    "quality": {
-      "title": "Kualiti HD &amp; 4K",
-      "desc": "Muat turun video TikTok dalam kualiti tertinggi yang ada - 720p, 1080p Full HD, 2K dan juga 4K apabila tersedia. Kami mengekalkan kualiti video asal tanpa mampatan, tidak seperti pemuat turun TikTok lain."
-    },
-    "device": {
-      "title": "Semua Peranti Disokong",
-      "desc": "Berfungsi dengan sempurna pada setiap peranti - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC dan Chromebook. Tiada pemasangan aplikasi diperlukan."
-    },
-    "free": {
-      "title": "100% Percuma Selamanya",
-      "desc": "Muat turun video TikTok tanpa had tanpa kos tersembunyi, tiada pendaftaran diperlukan dan tiada had harian. SaveTikFast sepenuhnya percuma dan akan sentiasa percuma untuk semua pengguna di seluruh dunia."
-    },
-    "secure": {
-      "title": "Peribadi &amp; Selamat",
-      "desc": "Privasi anda penting. Kami tidak menyimpan data anda, tidak memerlukan log masuk dan tidak menjejaki muat turun anda. Muat turun video TikTok yang selamat dan tanpa nama dengan penyulitan SSL."
-    },
-    "browser": {
-      "title": "Semua Pelayar",
-      "desc": "Berfungsi serta-merta di Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet dan UC Browser. Tiada sambungan atau plugin diperlukan - hanya tampal dan muat turun."
-    },
-    "batch": {
-      "title": "Muat Turun Berbilang",
-      "desc": "Simpan berbilang video TikTok dengan cepat. Muat turun keseluruhan koleksi pencipta kegemaran anda lebih pantas daripada mana-mana alat lain. Muat turun kelompok lebih baik daripada SSSTik atau SnapTik."
-    }
-  },
-  "how_to": {
-    "title": "Cara Memuat Turun Video TikTok Tanpa Tanda Air",
-    "step1": "Salin pautan video TikTok yang ingin anda simpan.",
-    "step2": "Tampal pautan ke dalam kotak muat turun di bahagian atas halaman ini.",
-    "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta.",
-    "step1_title": "Salin Pautan",
-    "step2_title": "Tampal URL",
-    "step3_title": "Muat Turun"
-  },
-  "tools": {
-    "backToDownloader": "Kembali ke Pemuat Turun TikTok",
     "meta": {
-      "title": "Alat Dalam Talian Percuma – Pemampat Imej, Penukar dan QR",
-      "description": "Alat berasaskan pelayar percuma: mampatkan imej, tukar format (WebP, JPG, PNG) dan jana kod QR serta-merta. Tiada muat naik fail atau pendaftaran diperlukan. 100% percuma."
+        "title": "SaveTikFast 2026 – Pemuat Turun TikTok Terbaik Tanpa Tera Air (4K)",
+        "description": "Muat turun video TikTok tanpa tera air secara percuma dalam kualiti Ultra HD/4K. TikTok Saver terpantas 2026. Simpan sebagai MP4 dan MP3 pada iPhone, Android dan PC."
+    },
+    "common": {
+        "select_language": "Pilih bahasa",
+        "toggle_theme": "Tukar tema"
+    },
+    "nav": {
+        "home": "Laman Utama",
+        "about": "Tentang Kami",
+        "blog": "Blog",
+        "contact": "Hubungi",
+        "terms": "Terma",
+        "privacy": "Privasi",
+        "dmca": "DMCA",
+        "disclaimer": "Penafian",
+        "tools": "Alatan"
     },
     "hero": {
-      "title": "Alat Imej & QR Percuma",
-      "desc": "Mampatkan imej, tukar format dan jana kod QR — semuanya diproses secara tempatan dalam pelayar anda. 100% peribadi."
+        "title": "Pemuat Turun Video TikTok",
+        "desc": "Muat turun video TikTok tanpa tanda air. Pantas, Percuma dan Kualiti HD Tanpa Had."
     },
-    "tabs": {
-      "compressor": "Pemampat Imej",
-      "converter": "Penukar Imej",
-      "qrcode": "Penjana QR",
-      "engagement": "Kalkulator Penglibatan",
-      "money": "Kalkulator Pendapatan",
-      "font": "Penjana Fon",
-      "hashtag": "Penjana Hashtag"
+    "downloader": {
+        "placeholder": "Tampal pautan video di sini...",
+        "btn_download": "Muat turun sekarang",
+        "btn_paste": "Tampal",
+        "btn_copy": "Salin",
+        "btn_clear": "Padam",
+        "processing": "Sedang diproses...",
+        "download_video": "Muat Turun Video",
+        "download_audio": "Muat Turun MP3",
+        "hd_quality": "Tanpa tanda air",
+        "download_nwm": "Muat Turun Tanpa Tanda Air",
+        "download_hd": "Muat Turun HD",
+        "download_story_vid": "Muat Turun Story (Video)",
+        "download_story_img": "Muat Turun Story (Imej)",
+        "error_busy": "Perkhidmatan sibuk, sila cuba lagi kemudian.",
+        "download_zip": "Muat Turun Semua (ZIP)",
+        "creating_zip": "Mencipta ZIP...",
+        "save_image": "Simpan",
+        "error_wrong_type_video": "Pautan tidak sah! Sila gunakan pemuat turun video.",
+        "error_wrong_type_slideshow": "Pautan tidak sah! Sila gunakan pemuat turun slideshow.",
+        "error_wrong_type_story": "Pautan tidak sah! Sila gunakan pemuat turun story.",
+        "error_invalid_link": "Pautan tidak sah. Semak dan cuba lagi.",
+        "check_new_tab": "Tab baharu dibuka — semak semasa menunggu!",
+        "preparing_download": "Menyediakan fail anda...",
+        "countdown_msg": "Muat turun akan bermula secara automatik",
+        "modal_ad_text": "Tawaran istimewa untuk anda — ketik untuk tuntut!",
+        "skip_download": "Langkau & Muat Turun Sekarang",
+        "download_another": "Muat Turun Video Lain",
+        "thank_you_title": "Muat Turun Bermula!",
+        "thank_you_msg": "Semak folder muat turun anda"
     },
-    "dropzone": {
-      "text": "Seret & lepas imej anda di sini",
-      "hint": "atau klik untuk memilih (JPG, PNG, WebP - Maks 15MB)",
-      "hint_convert": "atau klik untuk memilih (JPG, PNG, WebP, GIF, BMP)"
+    "faq": {
+        "title": "Soalan Lazim (FAQ)",
+        "q1": "Bagaimana untuk memuat turun video TikTok tanpa tanda air?",
+        "a1": "Memuat turun video TikTok tanpa tanda air adalah mudah dengan SaveTikFast. Hanya salin pautan video TikTok dari aplikasi, tampal ke dalam kotak muat turun kami dan klik butang muat turun. Teknologi canggih kami mengalih keluar tanda air TikTok secara automatik, memberikan anda fail video yang bersih. Berfungsi pada semua peranti termasuk iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac dan Windows PC. Anda boleh menggunakan mana-mana pelayar seperti Chrome, Safari, Firefox atau Edge. Tidak seperti SSSTik atau SnapTik, SaveTikFast memberikan kualiti output tertinggi dengan pemprosesan segera.",
+        "q2": "Adakah SaveTikFast benar-benar percuma?",
+        "a2": "Ya, SaveTikFast 100% percuma dan akan sentiasa percuma. Tiada kos tersembunyi, tiada langganan premium atau had muat turun harian. Anda boleh memuat turun video TikTok tanpa had tanpa tanda air, menukar kepada MP3, menyimpan cerita dan memuat turun tayangan slaid - semuanya benar-benar percuma. Kami tidak memerlukan pendaftaran atau log masuk. Perkhidmatan kami disokong oleh iklan minimum, membolehkan kami menawarkan muat turun TikTok percuma kepada berjuta-juta pengguna di seluruh dunia pada mana-mana peranti.",
+        "q3": "Peranti dan pelayar apa yang disokong?",
+        "a3": "SaveTikFast berfungsi pada hampir setiap peranti dan pelayar. Peranti yang disokong termasuk iPhone (semua model termasuk iPhone 15, 14, 13), telefon Android (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), tablet (iPad, Samsung Tab) dan komputer (MacBook, iMac, Windows PC, Chromebook). Pelayar yang disokong termasuk Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet dan UC Browser. Tiada pemasangan aplikasi diperlukan - semuanya berfungsi terus dalam pelayar web anda.",
+        "q4": "Kualiti video apa yang boleh saya muat turun?",
+        "a4": "SaveTikFast memuat turun video TikTok dalam kualiti tertinggi yang ada. Ini termasuk resolusi 720p HD, 1080p Full HD, 2K dan juga 4K apabila video asal menyokongnya. Kami tidak pernah memampatkan atau mengurangkan kualiti video - anda mendapat kualiti yang sama seperti video TikTok asal yang dimuat naik. Ini menjadikan SaveTikFast lebih baik daripada pemuat turun lain seperti TikMate, SaveFrom atau MusicallyDown yang sering memampatkan video.",
+        "q5": "Adakah selamat menggunakan SaveTikFast?",
+        "a5": "Sudah tentu. SaveTikFast sepenuhnya selamat dan terjamin. Kami menggunakan penyulitan SSL untuk melindungi sambungan anda, tidak menyimpan sebarang data peribadi anda dan tidak memerlukan log masuk atau pendaftaran. Video yang anda muat turun diproses serta-merta dan tidak disimpan pada pelayan kami. Kami tidak memasang apa-apa pada peranti anda. SaveTikFast telah dipercayai oleh berjuta-juta pengguna sejak 2024 untuk muat turun video TikTok yang selamat.",
+        "q6": "Bagaimana SaveTikFast lebih baik daripada SSSTik atau SnapTik?",
+        "a6": "SaveTikFast menawarkan beberapa kelebihan berbanding SSSTik, SnapTik, TikMate dan pemuat turun TikTok lain. Perkhidmatan kami lebih pantas (muat turun selesai dalam 3 saat), memberikan output berkualiti lebih tinggi (sehingga 4K), mempunyai antara muka yang lebih bersih dengan iklan yang lebih sedikit, berfungsi lebih boleh dipercayai pada semua peranti dan menawarkan ciri tambahan seperti penukaran MP3, muat turun cerita dan pengekstrakan tayangan slaid. Ramai pengguna beralih ke SaveTikFast selepas mengalami masalah dengan pemuat turun lain.",
+        "q7": "Bolehkah saya memuat turun video TikTok di iPhone?",
+        "a7": "Ya, memuat turun video TikTok di iPhone mudah dengan SaveTikFast. Buka TikTok, salin pautan video, kemudian buka Safari atau Chrome dan lawati SaveTikFast. Tampal pautan dan ketik muat turun. Video akan disimpan terus ke aplikasi Foto atau Fail iPhone anda. Berfungsi pada semua model iPhone termasuk iPhone 15, 14, 13, 12 dan yang lebih lama. Tiada pemasangan aplikasi diperlukan - semuanya berfungsi dalam pelayar anda.",
+        "q8": "Bolehkah saya memuat turun video TikTok peribadi?",
+        "a8": "SaveTikFast hanya boleh memuat turun video TikTok awam. Video peribadi (hanya kelihatan kepada pencipta atau pengikut yang diluluskan) tidak boleh dimuat turun oleh mana-mana alat dalam talian kerana tetapan privasi TikTok. Jika anda mempunyai kebenaran pencipta, minta mereka untuk menjadikan video awam buat sementara waktu atau berkongsi terus dengan anda melalui ciri perkongsian terbina dalam TikTok.",
+        "q9": "Bagaimana untuk memuat turun TikTok di Samsung atau Android?",
+        "a9": "Memuat turun video TikTok di Samsung Galaxy atau mana-mana telefon Android adalah mudah. Buka aplikasi TikTok, ketik Kongsi pada video yang anda inginkan dan salin pautan. Kemudian buka pelayar Chrome, Firefox atau Samsung Internet dan lawati SaveTikFast. Tampal pautan ke dalam kotak muat turun dan ketik butang muat turun. Video akan disimpan ke folder Muat Turun atau Galeri anda. Berfungsi pada semua peranti Android termasuk Samsung, Huawei, Xiaomi, OPPO dan Google Pixel.",
+        "q10": "Mengapa memilih SaveTikFast berbanding pemuat turun TikTok lain?",
+        "a10": "SaveTikFast adalah pilihan terbaik untuk muat turun TikTok kerana kami menggabungkan kelajuan, kualiti dan kebolehpercayaan. Kami menawarkan kelajuan muat turun terpantas (3 saat), kualiti video tertinggi (sehingga 4K), penyingkiran tanda air, penukaran MP3, muat turun cerita dan pengekstrakan tayangan slaid - semuanya dalam satu alat percuma. Antara muka bersih kami berfungsi dengan sempurna pada semua peranti dan pelayar. Kami dipercayai oleh berjuta-juta pengguna sebagai alternatif terbaik kepada SSSTik, SnapTik, TikMate, SaveFrom dan MusicallyDown."
     },
-    "btn": {
-      "download": "Muat Turun Sekarang",
-      "downloadPng": "Muat Turun PNG"
-    },
-    "compressor": {
-      "title": "Pemampat Imej Dalam Talian",
-      "desc": "Kurangkan saiz fail imej tanpa kehilangan kualiti. Menyokong format JPG, PNG dan WebP sehingga 15MB.",
-      "quality": "Kualiti Mampatan",
-      "maxWidth": "Lebar Maks (px)",
-      "btn": "Mampatkan Imej",
-      "howto": {
-        "title": "Cara Mampatkan Imej Dalam Talian",
-        "step1": {
-          "title": "Muat Naik Imej",
-          "desc": "Seret & lepas atau klik untuk memilih imej JPG, PNG atau WebP anda (sehingga 15MB)."
+    "pages": {
+        "about": {
+            "title": "Tentang Kami",
+            "content": "Selamat datang ke SaveTikFast, pemuat turun TikTok terkemuka untuk 2026.\n\nKami membina SaveTikFast dengan satu matlamat: untuk menyediakan cara terpantas, paling selamat dan paling boleh dipercayai untuk menyimpan video TikTok tanpa tanda air. Tidak seperti alat lain, kami mengutamakan pengalaman pengguna: tiada iklan yang menjengkelkan, tiada pendaftaran dan tiada pemasangan perisian.\n\nTeknologi kami menjamin bahawa anda mendapat kualiti asal video (sehingga 4K) sambil membuang logo yang bertindih."
         },
-        "step2": {
-          "title": "Laraskan Tetapan",
-          "desc": "Tetapkan tahap kualiti yang anda inginkan (10-100%) dan lebar maksimum."
+        "contact": {
+            "title": "Hubungi Kami",
+            "content": "Kami menghargai maklum balas anda dan sedia membantu.\n\nJika anda menghadapi masalah teknikal, mempunyai cadangan penambahbaikan atau pertanyaan perniagaan, sila hubungi pasukan sokongan kami:\n\n📧 E-mel: support@savetik-fast.xyz\n\nKami berusaha untuk membalas semua pertanyaan dalam masa 24 jam."
         },
-        "step3": {
-          "title": "Muat Turun",
-          "desc": "Klik mampat dan muat turun imej anda yang telah dioptimumkan serta-merta."
+        "terms": {
+            "title": "Terma Penggunaan",
+            "content": "Dengan menggunakan SaveTikFast, anda bersetuju dengan terma berikut:\n\n1. Penggunaan Peribadi:\nPerkhidmatan kami bertujuan untuk penggunaan peribadi dan bukan komersial. Anda boleh memuat turun video untuk tontonan luar talian.\n\n2. Harta Intelek:\nKami tidak memiliki kandungan yang dimuat turun. Semua hak milik pencipta asal di TikTok. Anda bersetuju untuk tidak menggunakan kandungan dengan cara yang melanggar hak cipta.\n\n3. Liabiliti:\nSaveTikFast tidak bertanggungjawab ke atas cara anda menggunakan bahan yang dimuat turun. Pengguna memikul tanggungjawab sepenuhnya atas sebarang pelanggaran hak cipta."
+        },
+        "privacy": {
+            "title": "Dasar Privasi",
+            "content": "Privasi anda adalah kritikal bagi kami.\n\nPengumpulan Data:\nKami tidak mengumpul maklumat peribadi seperti nama atau e-mel. Kami mungkin menggunakan analitik tanpa nama (seperti kuki) untuk meningkatkan prestasi laman web.\n\nTiada Penyimpanan Video:\nSaveTikFast tidak mengehos atau menyimpan sebarang video pada pelayannya. Semua pemprosesan fail dilakukan serta-merta."
+        },
+        "dmca": {
+            "title": "Dasar DMCA",
+            "content": "SaveTikFast menghormati hak harta intelek orang lain.\n\nKami beroperasi sebagai penyedia perkhidmatan teknikal dan tidak mengehoskan kandungan berhak cipta. Semua video disajikan terus dari pelayan pihak ketiga (TikTok).\n\nJika anda percaya bahawa karya berhak cipta anda telah dipaparkan pada perkhidmatan kami tanpa kebenaran, sila hantar notis DMCA rasmi ke: support@savetik-fast.xyz."
+        },
+        "disclaimer": {
+            "title": "Penafian",
+            "content": "1. Tiada Gabungan:\nSaveTikFast ialah alat utiliti bebas dan TIDAK bergabung, dikaitkan, diberi kuasa, disokong oleh, atau dalam apa jua cara disambungkan secara rasmi dengan TikTok Inc. atau ByteDance Ltd.\n\n2. Tanda Dagangan:\nNama 'TikTok' dan logonya adalah tanda dagangan berdaftar pemilik masing-masing.\n\n3. Kandungan:\nKami tidak mempunyai kawalan ke atas kandungan yang dihoskan pada pelayan TikTok."
         }
-      },
-      "seo": {
-        "title": "Mengapa Mampatkan Imej?",
-        "p1": "Pemampatan imej adalah penting untuk prestasi laman web, masa pemuatan yang lebih pantas dan pengurangan penggunaan lebar jalur. Pemampat imej dalam talian percuma kami menggunakan algoritma canggih untuk mengurangkan saiz fail sambil mengekalkan kualiti visual.",
-        "p2": "Faedah pemampatan imej termasuk:",
-        "benefit1": "Kelajuan pemuatan laman web yang lebih pantas (meningkatkan SEO)",
-        "benefit2": "Pengurangan kos penyimpanan dan lebar jalur",
-        "benefit3": "Pengalaman pengguna yang lebih baik pada peranti mudah alih",
-        "benefit4": "Imej yang dioptimumkan untuk perkongsian media sosial",
-        "p3": "Semua pemprosesan berlaku dalam pelayar anda menggunakan Web Workers - imej anda tidak pernah dimuat naik ke mana-mana pelayan, menjamin privasi dan keselamatan yang lengkap."
-      },
-      "faq": {
-        "title": "Soalan Lazim",
-        "q1": "Adakah imej saya dimuat naik ke pelayan?",
-        "a1": "Tidak! Semua pemampatan berlaku secara langsung dalam pelayar anda. Imej anda tidak pernah meninggalkan peranti anda, menjamin privasi sepenuhnya.",
-        "q2": "Apakah format fail yang disokong?",
-        "a2": "Kami menyokong format JPG/JPEG, PNG dan WebP sehingga saiz fail 15MB.",
-        "q3": "Berapakah saiz fail yang boleh saya kurangkan?",
-        "a3": "Biasanya pengurangan sebanyak 50-80% bergantung pada imej asal dan tetapan kualiti yang dipilih."
-      }
     },
-    "converter": {
-      "title": "Penukar Format Imej",
-      "desc": "Tukar imej antara format JPG, PNG dan WebP serta-merta dalam pelayar anda.",
-      "output": "Format Output",
-      "quality": "Kualiti Output",
-      "btn": "Tukar Imej",
-      "howto": {
-        "title": "Cara Menukar Format Imej",
-        "step1": {
-          "title": "Pilih Imej",
-          "desc": "Muat naik sebarang fail imej (menyokong JPG, PNG, WebP, GIF, BMP)."
-        },
-        "step2": {
-          "title": "Pilih Format",
-          "desc": "Pilih format output yang anda inginkan (WebP, JPG atau PNG)."
-        },
-        "step3": {
-          "title": "Tukar & Simpan",
-          "desc": "Klik tukar dan muat turun imej baharu anda serta-merta."
-        }
-      },
-      "seo": {
-        "title": "Memahami Format Imej",
-        "p1": "Memilih format imej yang betul adalah sangat penting untuk prestasi dan kualiti web. Berikut adalah perbandingannya:",
-        "webp": "Format moden oleh Google yang menawarkan saiz fail 25-35% lebih kecil daripada JPG/PNG dengan kualiti yang sama. Terbaik untuk kegunaan web.",
-        "jpg": "Sesuai untuk gambar dan imej kompleks dengan banyak warna. Menggunakan pemampatan lossy.",
-        "png": "Sesuai untuk imej yang memerlukan ketelusan atau tepi yang tajam (logo, grafik). Menggunakan pemampatan lossless.",
-        "p2": "Penukar kami menggunakan HTML5 Canvas API untuk penukaran pihak pelanggan secara segera. Imej anda tidak pernah meninggalkan peranti anda."
-      },
-      "faq": {
-        "title": "Soalan Lazim",
-        "q1": "Mengapa tukar kepada WebP?",
-        "a1": "WebP menawarkan saiz fail 25-35% lebih kecil daripada JPG/PNG dengan kualiti yang sama, menjadikan laman web anda dimuatkan lebih pantas.",
-        "q2": "Adakah saya akan kehilangan kualiti imej?",
-        "a2": "Anda mengawal kualiti melalui bar lungsur. Nilai yang lebih tinggi mengekalkan lebih banyak kualiti tetapi menghasilkan fail yang lebih besar.",
-        "q3": "Bolehkah saya menukar GIF animasi?",
-        "a3": "Pada masa ini, GIF animasi akan ditukarkan kepada imej statik (bingkai pertama)."
-      }
+    "footer": {
+        "rights": "© 2026 SaveTikFast. Hak cipta terpelihara."
     },
-    "qrcode": {
-      "title": "Penjana Kod QR Dalam Talian",
-      "desc": "Jana kod QR resolusi tinggi untuk URL, teks atau sebarang kandungan serta-merta.",
-      "input": "Teks atau URL",
-      "placeholder": "https://example.com atau sebarang teks",
-      "size": "Saiz Kod QR",
-      "color": "Warna QR",
-      "btn": "Jana Kod QR",
-      "howto": {
-        "title": "Cara Menjana Kod QR",
-        "step1": {
-          "title": "Masukkan Kandungan",
-          "desc": "Taip URL, teks, nombor telefon atau sebarang kandungan anda yang ingin anda kodkan."
-        },
-        "step2": {
-          "title": "Suaikan",
-          "desc": "Pilih saiz dan warna pilihan anda untuk kod QR."
-        },
-        "step3": {
-          "title": "Jana & Muat Turun",
-          "desc": "Klik jana dan muat turun kod QR resolusi tinggi anda sebagai PNG."
-        }
-      },
-      "seo": {
-        "title": "Kes Penggunaan Kod QR",
-        "p1": "Kod QR telah menjadi penting untuk perniagaan dan individu. Kes penggunaan biasa termasuk:",
-        "use1": "URL Laman Web - Arahkan pengguna ke laman web anda serta-merta",
-        "use2": "Kad perniagaan - Kongsi maklumat hubungan secara digital",
-        "use3": "Pembungkusan produk - Pautkan ke manual atau halaman sokongan",
-        "use4": "Bahan pemasaran - Kesan penglibatan kempen",
-        "use5": "Menu restoran - Akses menu tanpa sentuhan",
-        "use6": "Tiket acara - Pengesahan kemasukan pantas",
-        "p2": "Penjana QR kami mencipta kod resolusi tinggi yang boleh diimbas dengan dipercayai pada mana-mana peranti."
-      },
-      "faq": {
-        "title": "Soalan Lazim",
-        "q1": "Apakah yang boleh saya kodkan dalam kod QR?",
-        "a1": "URL, teks biasa, nombor telefon, alamat e-mel, kelayakan WiFi dan banyak lagi.",
-        "q2": "Apakah saiz yang patut saya pilih?",
-        "a2": "256px bagus untuk kegunaan digital. Pilih 512px atau 1024px untuk bahan cetakan.",
-        "q3": "Adakah kod QR akan tamat tempoh?",
-        "a3": "Tidak! Kod QR yang dijana di sini adalah statik dan tidak akan tamat tempoh. Ia mengandungi data secara langsung."
-      }
-    },
-    "engagement": {
-      "title": "Kalkulator Penglibatan TikTok",
-      "desc": "Kira kadar penglibatan anda berdasarkan suka, komen dan kongsi.",
-      "followers": "Pengikut",
-      "likes": "Suka",
-      "comments": "Komen",
-      "shares": "Kongsi",
-      "btn": "Kira Sekarang",
-      "result": "Kadar Penglibatan",
-      "excellent": "Cemerlang! 🚀",
-      "good": "Bagus 👍",
-      "poor": "Perlu Diperbaiki 📉"
-    },
-    "money": {
-      "title": "Kalkulator Pendapatan TikTok",
-      "desc": "Anggarkan potensi pendapatan anda berdasarkan tontonan video.",
-      "views": "Masukkan tontonan video",
-      "btn": "Kira Pendapatan",
-      "result": "Anggaran Pendapatan"
-    },
-    "font": {
-      "title": "Penjana Fon TikTok",
-      "desc": "Cipta gaya fon unik untuk profil dan huraian video anda.",
-      "placeholder": "Taip teks di sini...",
-      "copy": "Salin"
-    },
-    "hashtag": {
-      "title": "Penjana Hashtag TikTok",
-      "desc": "Cari dan jana hashtag trending untuk video anda.",
-      "btn": "Jana Sekarang",
-      "copy": "Salin Semua"
-    },
-    "progress": {
-      "compressing": "Memampatkan imej...",
-      "converting": "Menukar imej..."
-    },
-    "result": {
-      "success": "Mampatan Selesai!",
-      "converted": "Penukaran Selesai!",
-      "qrReady": "Kod QR Anda Sudah Sedia!"
-    },
-    "stats": {
-      "original": "Saiz Asal",
-      "compressed": "Saiz Mampat",
-      "saved": "Dijimatkan",
-      "originalFormat": "Format Asal",
-      "newFormat": "Format Baharu",
-      "newSize": "Saiz Baharu"
-    },
-    "preview": {
-      "before": "Sebelum",
-      "after": "Selepas",
-      "original": "Asal",
-      "converted": "Tukar"
-    }
-  },
-  "slideshow_page": {
-    "meta_title": "Pemuat Turun Slideshow TikTok – Simpan Foto HD Tanpa Tera Air",
-    "meta_desc": "Muat turun tayangan slaid foto dan galeri TikTok dalam kualiti HD tanpa tera air. Simpan semua imej dari mana-mana siaran TikTok serta-merta. Percuma, cepat, tiada pendaftaran.",
-    "title": "Pemuat Turun Slaid TikTok",
-    "desc": "Simpan karusel foto dalam kualiti tinggi.",
-    "placeholder": "Tampal pautan di sini...",
-    "btn_download": "Muat Turun Imej",
-    "about_title": "Pemuat Turun Foto TikTok",
-    "about_content": "Simpan tayangan slaid foto TikTok dalam kualiti HD asal tanpa tanda air.",
     "features": {
-      "all": {
-        "title": "Semua Foto Sekaligus",
-        "desc": "Muat turun semua imej tayangan slaid dengan satu klik. SaveTikFast mengekstrak setiap foto daripada karusel foto TikTok dan menyimpannya sebagai fail ZIP yang mudah. Lebih pantas daripada menyimpan setiap imej secara manual."
-      },
-      "quality": {
-        "title": "Resolusi Asal",
-        "desc": "Simpan foto tayangan slaid dalam resolusi asal penuh tanpa sebarang mampatan. Dapatkan imej kualiti tertinggi tepat seperti yang dimuat naik pencipta di TikTok."
-      },
-      "audio": {
-        "title": "Dengan Audio Latar",
-        "desc": "Muat turun tayangan slaid TikTok dengan muzik latar disertakan. Dapatkan kedua-dua imej dan trek audio bersama. Sempurna untuk mengekalkan pengalaman tayangan slaid lengkap."
-      },
-      "fast": {
-        "title": "Kelajuan Kilat",
-        "desc": "Ekstrak semua foto tayangan slaid dalam masa 3 saat sahaja. Pemuat turun tayangan slaid TikTok terpantas yang tersedia - lebih pantas daripada SSSTik, SnapTik atau mana-mana alat lain."
-      },
-      "device": {
-        "title": "Keserasian Universal",
-        "desc": "Berfungsi pada iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook. Muat turun tayangan slaid TikTok pada mana-mana peranti dengan Chrome, Safari, Firefox atau Edge."
-      },
-      "free": {
-        "title": "Sentiasa Percuma",
-        "desc": "Muat turun tayangan slaid tanpa had tanpa kos, tanpa pendaftaran dan tiada had harian. Pemuat turun tayangan slaid SaveTikFast sepenuhnya percuma selama-lamanya."
-      },
-      "nowatermark": {
-        "title": "Tanpa Tanda Air",
-        "desc": "Muat turun imej tayangan slaid tanpa tanda air TikTok. Foto bersih sedia untuk galeri anda, Instagram, Pinterest atau mana-mana platform lain."
-      },
-      "browser": {
-        "title": "Mana-Mana Pelayar",
-        "desc": "Tidak perlu aplikasi. Muat turun tayangan slaid TikTok terus dalam Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet. Berfungsi pada pelayar mudah alih dan desktop."
-      }
+        "title": "Ciri-ciri Utama",
+        "no_watermark": {
+            "title": "Tanpa Tanda Air",
+            "desc": "Muat turun video TikTok tanpa tanda air dalam kualiti HD asal. SaveTikFast mengalih keluar logo TikTok secara automatik, memberikan anda video yang lebih bersih daripada SSSTik, SnapTik atau TikMate. Sempurna untuk posting semula di Instagram, YouTube Shorts atau simpan ke galeri anda."
+        },
+        "fast": {
+            "title": "Kelajuan Pantas",
+            "desc": "Pemuat turun video TikTok terpantas dalam talian. Simpan sebarang video TikTok dalam masa 3 saat sahaja di iPhone, Android, Samsung, Huawei, iPad, PC atau Mac. Pelayan kami dioptimumkan untuk kelajuan, menjadikan kami lebih pantas daripada SaveFrom dan MusicallyDown."
+        },
+        "quality": {
+            "title": "Kualiti HD &amp; 4K",
+            "desc": "Muat turun video TikTok dalam kualiti tertinggi yang ada - 720p, 1080p Full HD, 2K dan juga 4K apabila tersedia. Kami mengekalkan kualiti video asal tanpa mampatan, tidak seperti pemuat turun TikTok lain."
+        },
+        "device": {
+            "title": "Semua Peranti Disokong",
+            "desc": "Berfungsi dengan sempurna pada setiap peranti - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC dan Chromebook. Tiada pemasangan aplikasi diperlukan."
+        },
+        "free": {
+            "title": "100% Percuma Selamanya",
+            "desc": "Muat turun video TikTok tanpa had tanpa kos tersembunyi, tiada pendaftaran diperlukan dan tiada had harian. SaveTikFast sepenuhnya percuma dan akan sentiasa percuma untuk semua pengguna di seluruh dunia."
+        },
+        "secure": {
+            "title": "Peribadi &amp; Selamat",
+            "desc": "Privasi anda penting. Kami tidak menyimpan data anda, tidak memerlukan log masuk dan tidak menjejaki muat turun anda. Muat turun video TikTok yang selamat dan tanpa nama dengan penyulitan SSL."
+        },
+        "browser": {
+            "title": "Semua Pelayar",
+            "desc": "Berfungsi serta-merta di Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet dan UC Browser. Tiada sambungan atau plugin diperlukan - hanya tampal dan muat turun."
+        },
+        "batch": {
+            "title": "Muat Turun Berbilang",
+            "desc": "Simpan berbilang video TikTok dengan cepat. Muat turun keseluruhan koleksi pencipta kegemaran anda lebih pantas daripada mana-mana alat lain. Muat turun kelompok lebih baik daripada SSSTik atau SnapTik."
+        }
     },
     "how_to": {
-      "title": "Cara Muat Turun",
-      "step1": "Salin pautan TikTok.",
-      "step2": "Tampal pautan di atas.",
-      "step3": "Klik Muat Turun."
+        "title": "Cara Memuat Turun Video TikTok Tanpa Tanda Air",
+        "step1": "Salin pautan video TikTok yang ingin anda simpan.",
+        "step2": "Tampal pautan ke dalam kotak muat turun di bahagian atas halaman ini.",
+        "step3": "Klik butang 'Muat Turun' dan video anda akan disimpan serta-merta.",
+        "step1_title": "Salin Pautan",
+        "step2_title": "Tampal URL",
+        "step3_title": "Muat Turun"
     },
-    "faq": {
-      "q1": "Bagaimana untuk memuat turun tayangan slaid TikTok?",
-      "a1": "Memuat turun tayangan slaid foto TikTok mudah dengan SaveTikFast. Salin pautan tayangan slaid dari TikTok, tampal dalam pemuat turun tayangan slaid kami dan klik muat turun. Semua imej akan diekstrak dan dimuat turun bersama - kedua-duanya sebagai foto individu dan fail ZIP yang mudah. Berfungsi pada iPhone, Android, Samsung, iPad, Mac, Windows menggunakan mana-mana pelayar.",
-      "q2": "Bolehkah saya memuat turun semua foto tayangan slaid sekaligus?",
-      "a2": "Ya! SaveTikFast memuat turun semua foto tayangan slaid TikTok dengan satu klik. Tidak perlu menyimpan setiap imej secara manual. Alat kami mengekstrak setiap foto daripada karusel dan membungkusnya bersama. Untuk tayangan slaid dengan banyak imej, kami menyediakan fail ZIP untuk muat turun mudah. Jauh lebih pantas daripada kaedah lain.",
-      "q3": "Adakah SaveTikFast memuat turun audio tayangan slaid juga?",
-      "a3": "Ya, SaveTikFast boleh memuat turun tayangan slaid TikTok dengan muzik latar disertakan. Anda mendapat kedua-dua imej dan trek audio yang dimainkan dengan tayangan slaid. Ini mengekalkan pengalaman tayangan slaid lengkap tepat seperti yang dimaksudkan pencipta.",
-      "q4": "Bagaimana kualiti imej tayangan slaid yang dimuat turun?",
-      "a4": "SaveTikFast mengekstrak foto tayangan slaid TikTok dalam resolusi asal penuh. Kami tidak memampatkan atau mengurangkan kualiti imej. Anda mendapat foto berkualiti tinggi yang sama tepat seperti yang dimuat naik pencipta - sempurna untuk menyimpan, berkongsi atau mencetak.",
-      "q5": "Bolehkah saya memuat turun tayangan slaid TikTok pada iPhone?",
-      "a5": "Ya, memuat turun tayangan slaid TikTok pada iPhone mudah. Salin pautan dari TikTok, buka Safari atau Chrome, lawati SaveTikFast, tampal pautan dan muat turun. Foto disimpan ke aplikasi Photos anda. Berfungsi pada semua model iPhone tanpa memasang sebarang aplikasi.",
-      "q6": "Adakah pemuat turun tayangan slaid percuma?",
-      "a6": "Ya, pemuat turun tayangan slaid SaveTikFast 100% percuma. Muat turun tayangan slaid TikTok tanpa had tanpa kos, langganan atau had harian. Perkhidmatan percuma kami berfungsi pada iPhone, Android, Samsung, PC, Mac dan semua peranti menggunakan Chrome, Safari, Firefox atau mana-mana pelayar.",
-      "q7": "Adakah imej tayangan slaid yang dimuat turun tanpa tanda air?",
-      "a7": "SaveTikFast memuat turun imej tayangan slaid TikTok tanpa tanda air bila boleh. Anda mendapat foto bersih tanpa logo TikTok, sedia untuk galeri anda, Instagram, Pinterest atau mana-mana platform. Sempurna untuk menyimpan kandungan estetik.",
-      "q8": "Mengapa pilih SaveTikFast untuk muat turun tayangan slaid?",
-      "a8": "SaveTikFast adalah pemuat turun tayangan slaid TikTok terbaik kerana kami mengekstrak semua foto serta-merta, mengekalkan kualiti asal, menyertakan audio dan menawarkan muat turun tanpa had sepenuhnya percuma. Alat kami berfungsi lebih pantas dan lebih boleh dipercayai daripada SSSTik, SnapTik atau pengekstrak tayangan slaid lain. Muat turun keseluruhan karusel foto dalam beberapa saat."
+    "tools": {
+        "backToDownloader": "Kembali ke Pemuat Turun TikTok",
+        "meta": {
+            "title": "Alat Dalam Talian Percuma – Pemampat Imej, Penukar dan QR",
+            "description": "Alat berasaskan pelayar percuma: mampatkan imej, tukar format (WebP, JPG, PNG) dan jana kod QR serta-merta. Tiada muat naik fail atau pendaftaran diperlukan. 100% percuma."
+        },
+        "hero": {
+            "title": "Alat Imej & QR Percuma",
+            "desc": "Mampatkan imej, tukar format dan jana kod QR — semuanya diproses secara tempatan dalam pelayar anda. 100% peribadi."
+        },
+        "tabs": {
+            "compressor": "Pemampat Imej",
+            "converter": "Penukar Imej",
+            "qrcode": "Penjana QR",
+            "engagement": "Kalkulator Penglibatan",
+            "money": "Kalkulator Pendapatan",
+            "font": "Penjana Fon",
+            "hashtag": "Penjana Hashtag"
+        },
+        "dropzone": {
+            "text": "Seret & lepas imej anda di sini",
+            "hint": "atau klik untuk memilih (JPG, PNG, WebP - Maks 15MB)",
+            "hint_convert": "atau klik untuk memilih (JPG, PNG, WebP, GIF, BMP)"
+        },
+        "btn": {
+            "download": "Muat Turun Sekarang",
+            "downloadPng": "Muat Turun PNG"
+        },
+        "compressor": {
+            "title": "Pemampat Imej Dalam Talian",
+            "desc": "Kurangkan saiz fail imej tanpa kehilangan kualiti. Menyokong format JPG, PNG dan WebP sehingga 15MB.",
+            "quality": "Kualiti Mampatan",
+            "maxWidth": "Lebar Maks (px)",
+            "btn": "Mampatkan Imej",
+            "howto": {
+                "title": "Cara Mampatkan Imej Dalam Talian",
+                "step1": {
+                    "title": "Muat Naik Imej",
+                    "desc": "Seret & lepas atau klik untuk memilih imej JPG, PNG atau WebP anda (sehingga 15MB)."
+                },
+                "step2": {
+                    "title": "Laraskan Tetapan",
+                    "desc": "Tetapkan tahap kualiti yang anda inginkan (10-100%) dan lebar maksimum."
+                },
+                "step3": {
+                    "title": "Muat Turun",
+                    "desc": "Klik mampat dan muat turun imej anda yang telah dioptimumkan serta-merta."
+                }
+            },
+            "seo": {
+                "title": "Mengapa Mampatkan Imej?",
+                "p1": "Pemampatan imej adalah penting untuk prestasi laman web, masa pemuatan yang lebih pantas dan pengurangan penggunaan lebar jalur. Pemampat imej dalam talian percuma kami menggunakan algoritma canggih untuk mengurangkan saiz fail sambil mengekalkan kualiti visual.",
+                "p2": "Faedah pemampatan imej termasuk:",
+                "benefit1": "Kelajuan pemuatan laman web yang lebih pantas (meningkatkan SEO)",
+                "benefit2": "Pengurangan kos penyimpanan dan lebar jalur",
+                "benefit3": "Pengalaman pengguna yang lebih baik pada peranti mudah alih",
+                "benefit4": "Imej yang dioptimumkan untuk perkongsian media sosial",
+                "p3": "Semua pemprosesan berlaku dalam pelayar anda menggunakan Web Workers - imej anda tidak pernah dimuat naik ke mana-mana pelayan, menjamin privasi dan keselamatan yang lengkap."
+            },
+            "faq": {
+                "title": "Soalan Lazim",
+                "q1": "Adakah imej saya dimuat naik ke pelayan?",
+                "a1": "Tidak! Semua pemampatan berlaku secara langsung dalam pelayar anda. Imej anda tidak pernah meninggalkan peranti anda, menjamin privasi sepenuhnya.",
+                "q2": "Apakah format fail yang disokong?",
+                "a2": "Kami menyokong format JPG/JPEG, PNG dan WebP sehingga saiz fail 15MB.",
+                "q3": "Berapakah saiz fail yang boleh saya kurangkan?",
+                "a3": "Biasanya pengurangan sebanyak 50-80% bergantung pada imej asal dan tetapan kualiti yang dipilih."
+            }
+        },
+        "converter": {
+            "title": "Penukar Format Imej",
+            "desc": "Tukar imej antara format JPG, PNG dan WebP serta-merta dalam pelayar anda.",
+            "output": "Format Output",
+            "quality": "Kualiti Output",
+            "btn": "Tukar Imej",
+            "howto": {
+                "title": "Cara Menukar Format Imej",
+                "step1": {
+                    "title": "Pilih Imej",
+                    "desc": "Muat naik sebarang fail imej (menyokong JPG, PNG, WebP, GIF, BMP)."
+                },
+                "step2": {
+                    "title": "Pilih Format",
+                    "desc": "Pilih format output yang anda inginkan (WebP, JPG atau PNG)."
+                },
+                "step3": {
+                    "title": "Tukar & Simpan",
+                    "desc": "Klik tukar dan muat turun imej baharu anda serta-merta."
+                }
+            },
+            "seo": {
+                "title": "Memahami Format Imej",
+                "p1": "Memilih format imej yang betul adalah sangat penting untuk prestasi dan kualiti web. Berikut adalah perbandingannya:",
+                "webp": "Format moden oleh Google yang menawarkan saiz fail 25-35% lebih kecil daripada JPG/PNG dengan kualiti yang sama. Terbaik untuk kegunaan web.",
+                "jpg": "Sesuai untuk gambar dan imej kompleks dengan banyak warna. Menggunakan pemampatan lossy.",
+                "png": "Sesuai untuk imej yang memerlukan ketelusan atau tepi yang tajam (logo, grafik). Menggunakan pemampatan lossless.",
+                "p2": "Penukar kami menggunakan HTML5 Canvas API untuk penukaran pihak pelanggan secara segera. Imej anda tidak pernah meninggalkan peranti anda."
+            },
+            "faq": {
+                "title": "Soalan Lazim",
+                "q1": "Mengapa tukar kepada WebP?",
+                "a1": "WebP menawarkan saiz fail 25-35% lebih kecil daripada JPG/PNG dengan kualiti yang sama, menjadikan laman web anda dimuatkan lebih pantas.",
+                "q2": "Adakah saya akan kehilangan kualiti imej?",
+                "a2": "Anda mengawal kualiti melalui bar lungsur. Nilai yang lebih tinggi mengekalkan lebih banyak kualiti tetapi menghasilkan fail yang lebih besar.",
+                "q3": "Bolehkah saya menukar GIF animasi?",
+                "a3": "Pada masa ini, GIF animasi akan ditukarkan kepada imej statik (bingkai pertama)."
+            }
+        },
+        "qrcode": {
+            "title": "Penjana Kod QR Dalam Talian",
+            "desc": "Jana kod QR resolusi tinggi untuk URL, teks atau sebarang kandungan serta-merta.",
+            "input": "Teks atau URL",
+            "placeholder": "https://example.com atau sebarang teks",
+            "size": "Saiz Kod QR",
+            "color": "Warna QR",
+            "btn": "Jana Kod QR",
+            "howto": {
+                "title": "Cara Menjana Kod QR",
+                "step1": {
+                    "title": "Masukkan Kandungan",
+                    "desc": "Taip URL, teks, nombor telefon atau sebarang kandungan anda yang ingin anda kodkan."
+                },
+                "step2": {
+                    "title": "Suaikan",
+                    "desc": "Pilih saiz dan warna pilihan anda untuk kod QR."
+                },
+                "step3": {
+                    "title": "Jana & Muat Turun",
+                    "desc": "Klik jana dan muat turun kod QR resolusi tinggi anda sebagai PNG."
+                }
+            },
+            "seo": {
+                "title": "Kes Penggunaan Kod QR",
+                "p1": "Kod QR telah menjadi penting untuk perniagaan dan individu. Kes penggunaan biasa termasuk:",
+                "use1": "URL Laman Web - Arahkan pengguna ke laman web anda serta-merta",
+                "use2": "Kad perniagaan - Kongsi maklumat hubungan secara digital",
+                "use3": "Pembungkusan produk - Pautkan ke manual atau halaman sokongan",
+                "use4": "Bahan pemasaran - Kesan penglibatan kempen",
+                "use5": "Menu restoran - Akses menu tanpa sentuhan",
+                "use6": "Tiket acara - Pengesahan kemasukan pantas",
+                "p2": "Penjana QR kami mencipta kod resolusi tinggi yang boleh diimbas dengan dipercayai pada mana-mana peranti."
+            },
+            "faq": {
+                "title": "Soalan Lazim",
+                "q1": "Apakah yang boleh saya kodkan dalam kod QR?",
+                "a1": "URL, teks biasa, nombor telefon, alamat e-mel, kelayakan WiFi dan banyak lagi.",
+                "q2": "Apakah saiz yang patut saya pilih?",
+                "a2": "256px bagus untuk kegunaan digital. Pilih 512px atau 1024px untuk bahan cetakan.",
+                "q3": "Adakah kod QR akan tamat tempoh?",
+                "a3": "Tidak! Kod QR yang dijana di sini adalah statik dan tidak akan tamat tempoh. Ia mengandungi data secara langsung."
+            }
+        },
+        "engagement": {
+            "title": "Kalkulator Penglibatan TikTok",
+            "desc": "Kira kadar penglibatan anda berdasarkan suka, komen dan kongsi.",
+            "followers": "Pengikut",
+            "likes": "Suka",
+            "comments": "Komen",
+            "shares": "Kongsi",
+            "btn": "Kira Sekarang",
+            "result": "Kadar Penglibatan",
+            "excellent": "Cemerlang! 🚀",
+            "good": "Bagus 👍",
+            "poor": "Perlu Diperbaiki 📉"
+        },
+        "money": {
+            "title": "Kalkulator Pendapatan TikTok",
+            "desc": "Anggarkan potensi pendapatan anda berdasarkan tontonan video.",
+            "views": "Masukkan tontonan video",
+            "btn": "Kira Pendapatan",
+            "result": "Anggaran Pendapatan"
+        },
+        "font": {
+            "title": "Penjana Fon TikTok",
+            "desc": "Cipta gaya fon unik untuk profil dan huraian video anda.",
+            "placeholder": "Taip teks di sini...",
+            "copy": "Salin"
+        },
+        "hashtag": {
+            "title": "Penjana Hashtag TikTok",
+            "desc": "Cari dan jana hashtag trending untuk video anda.",
+            "btn": "Jana Sekarang",
+            "copy": "Salin Semua"
+        },
+        "progress": {
+            "compressing": "Memampatkan imej...",
+            "converting": "Menukar imej..."
+        },
+        "result": {
+            "success": "Mampatan Selesai!",
+            "converted": "Penukaran Selesai!",
+            "qrReady": "Kod QR Anda Sudah Sedia!"
+        },
+        "stats": {
+            "original": "Saiz Asal",
+            "compressed": "Saiz Mampat",
+            "saved": "Dijimatkan",
+            "originalFormat": "Format Asal",
+            "newFormat": "Format Baharu",
+            "newSize": "Saiz Baharu"
+        },
+        "preview": {
+            "before": "Sebelum",
+            "after": "Selepas",
+            "original": "Asal",
+            "converted": "Tukar"
+        }
+    },
+    "slideshow_page": {
+        "meta_title": "Pemuat Turun Slideshow TikTok – Simpan Foto HD Tanpa Tera Air",
+        "meta_desc": "Muat turun tayangan slaid foto dan galeri TikTok dalam kualiti HD tanpa tera air. Simpan semua imej dari mana-mana siaran TikTok serta-merta. Percuma, cepat, tiada pendaftaran.",
+        "title": "Pemuat Turun Slaid TikTok",
+        "desc": "Simpan karusel foto dalam kualiti tinggi.",
+        "placeholder": "Tampal pautan di sini...",
+        "btn_download": "Muat Turun Imej",
+        "about_title": "Pemuat Turun Foto TikTok",
+        "about_content": "Simpan tayangan slaid foto TikTok dalam kualiti HD asal tanpa tanda air.",
+        "features": {
+            "all": {
+                "title": "Semua Foto Sekaligus",
+                "desc": "Muat turun semua imej tayangan slaid dengan satu klik. SaveTikFast mengekstrak setiap foto daripada karusel foto TikTok dan menyimpannya sebagai fail ZIP yang mudah. Lebih pantas daripada menyimpan setiap imej secara manual."
+            },
+            "quality": {
+                "title": "Resolusi Asal",
+                "desc": "Simpan foto tayangan slaid dalam resolusi asal penuh tanpa sebarang mampatan. Dapatkan imej kualiti tertinggi tepat seperti yang dimuat naik pencipta di TikTok."
+            },
+            "audio": {
+                "title": "Dengan Audio Latar",
+                "desc": "Muat turun tayangan slaid TikTok dengan muzik latar disertakan. Dapatkan kedua-dua imej dan trek audio bersama. Sempurna untuk mengekalkan pengalaman tayangan slaid lengkap."
+            },
+            "fast": {
+                "title": "Kelajuan Kilat",
+                "desc": "Ekstrak semua foto tayangan slaid dalam masa 3 saat sahaja. Pemuat turun tayangan slaid TikTok terpantas yang tersedia - lebih pantas daripada SSSTik, SnapTik atau mana-mana alat lain."
+            },
+            "device": {
+                "title": "Keserasian Universal",
+                "desc": "Berfungsi pada iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook. Muat turun tayangan slaid TikTok pada mana-mana peranti dengan Chrome, Safari, Firefox atau Edge."
+            },
+            "free": {
+                "title": "Sentiasa Percuma",
+                "desc": "Muat turun tayangan slaid tanpa had tanpa kos, tanpa pendaftaran dan tiada had harian. Pemuat turun tayangan slaid SaveTikFast sepenuhnya percuma selama-lamanya."
+            },
+            "nowatermark": {
+                "title": "Tanpa Tanda Air",
+                "desc": "Muat turun imej tayangan slaid tanpa tanda air TikTok. Foto bersih sedia untuk galeri anda, Instagram, Pinterest atau mana-mana platform lain."
+            },
+            "browser": {
+                "title": "Mana-Mana Pelayar",
+                "desc": "Tidak perlu aplikasi. Muat turun tayangan slaid TikTok terus dalam Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet. Berfungsi pada pelayar mudah alih dan desktop."
+            }
+        },
+        "how_to": {
+            "title": "Cara Muat Turun",
+            "step1": "Salin pautan TikTok.",
+            "step2": "Tampal pautan di atas.",
+            "step3": "Klik Muat Turun."
+        },
+        "faq": {
+            "q1": "Bagaimana untuk memuat turun tayangan slaid TikTok?",
+            "a1": "Memuat turun tayangan slaid foto TikTok mudah dengan SaveTikFast. Salin pautan tayangan slaid dari TikTok, tampal dalam pemuat turun tayangan slaid kami dan klik muat turun. Semua imej akan diekstrak dan dimuat turun bersama - kedua-duanya sebagai foto individu dan fail ZIP yang mudah. Berfungsi pada iPhone, Android, Samsung, iPad, Mac, Windows menggunakan mana-mana pelayar.",
+            "q2": "Bolehkah saya memuat turun semua foto tayangan slaid sekaligus?",
+            "a2": "Ya! SaveTikFast memuat turun semua foto tayangan slaid TikTok dengan satu klik. Tidak perlu menyimpan setiap imej secara manual. Alat kami mengekstrak setiap foto daripada karusel dan membungkusnya bersama. Untuk tayangan slaid dengan banyak imej, kami menyediakan fail ZIP untuk muat turun mudah. Jauh lebih pantas daripada kaedah lain.",
+            "q3": "Adakah SaveTikFast memuat turun audio tayangan slaid juga?",
+            "a3": "Ya, SaveTikFast boleh memuat turun tayangan slaid TikTok dengan muzik latar disertakan. Anda mendapat kedua-dua imej dan trek audio yang dimainkan dengan tayangan slaid. Ini mengekalkan pengalaman tayangan slaid lengkap tepat seperti yang dimaksudkan pencipta.",
+            "q4": "Bagaimana kualiti imej tayangan slaid yang dimuat turun?",
+            "a4": "SaveTikFast mengekstrak foto tayangan slaid TikTok dalam resolusi asal penuh. Kami tidak memampatkan atau mengurangkan kualiti imej. Anda mendapat foto berkualiti tinggi yang sama tepat seperti yang dimuat naik pencipta - sempurna untuk menyimpan, berkongsi atau mencetak.",
+            "q5": "Bolehkah saya memuat turun tayangan slaid TikTok pada iPhone?",
+            "a5": "Ya, memuat turun tayangan slaid TikTok pada iPhone mudah. Salin pautan dari TikTok, buka Safari atau Chrome, lawati SaveTikFast, tampal pautan dan muat turun. Foto disimpan ke aplikasi Photos anda. Berfungsi pada semua model iPhone tanpa memasang sebarang aplikasi.",
+            "q6": "Adakah pemuat turun tayangan slaid percuma?",
+            "a6": "Ya, pemuat turun tayangan slaid SaveTikFast 100% percuma. Muat turun tayangan slaid TikTok tanpa had tanpa kos, langganan atau had harian. Perkhidmatan percuma kami berfungsi pada iPhone, Android, Samsung, PC, Mac dan semua peranti menggunakan Chrome, Safari, Firefox atau mana-mana pelayar.",
+            "q7": "Adakah imej tayangan slaid yang dimuat turun tanpa tanda air?",
+            "a7": "SaveTikFast memuat turun imej tayangan slaid TikTok tanpa tanda air bila boleh. Anda mendapat foto bersih tanpa logo TikTok, sedia untuk galeri anda, Instagram, Pinterest atau mana-mana platform. Sempurna untuk menyimpan kandungan estetik.",
+            "q8": "Mengapa pilih SaveTikFast untuk muat turun tayangan slaid?",
+            "a8": "SaveTikFast adalah pemuat turun tayangan slaid TikTok terbaik kerana kami mengekstrak semua foto serta-merta, mengekalkan kualiti asal, menyertakan audio dan menawarkan muat turun tanpa had sepenuhnya percuma. Alat kami berfungsi lebih pantas dan lebih boleh dipercayai daripada SSSTik, SnapTik atau pengekstrak tayangan slaid lain. Muat turun keseluruhan karusel foto dalam beberapa saat."
+        }
+    },
+    "nav_menu": {
+        "slideshow": "Tayangan Slaid",
+        "video": "Video",
+        "mp3": "Audio MP3",
+        "stories": "Cerita"
+    },
+    "mp3_page": {
+        "meta_title": "TikTok ke MP3 Penukar – Muat Turun Audio Percuma 320kbps",
+        "title": "Muat Turun MP3 TikTok",
+        "subtitle": "(Audio Sahaja)",
+        "desc": "Tukar video TikTok kepada fail audio MP3.kstrak lagu dan muzik dalam kualiti tinggi 320kbps.",
+        "placeholder": "Tampal pautan video untuk ekstrak audio...",
+        "btn_download": "Ekstrak MP3",
+        "about_title": "Penukar MP3 TikTok Terbaik 2026",
+        "about_content": "SaveTikFast MP3 membolehkan anda mengekstrak audio daripada mana-mana video TikTok serta-merta. Muat turun lagu trending dan bunyi viral.",
+        "features": {
+            "quality": {
+                "title": "Audio HD 320kbps",
+                "desc": "Tukar video TikTok kepada MP3 dalam kualiti studio 320kbps yang jernih. Kadar bit audio tertinggi yang tersedia dalam talian, sempurna untuk peminat muzik yang mahukan bunyi terbaik pada iPhone, Android atau PC mereka."
+            },
+            "fast": {
+                "title": "Penukaran Segera",
+                "desc": "Penukaran TikTok ke MP3 dalam masa 2 saat sahaja. Pengekstrak audio TikTok terpantas dalam talian - lebih pantas daripada SSSTik MP3, SnapTik audio atau mana-mana penukar lain. Berfungsi serta-merta pada semua peranti."
+            },
+            "ringtone": {
+                "title": "Sedia Untuk Nada Dering",
+                "desc": "Panjang audio sempurna untuk nada dering iPhone dan bunyi pemberitahuan Android. Cipta nada dering tersuai daripada bunyi TikTok viral dan klip audio trending. Mudah ditetapkan pada mana-mana telefon pintar."
+            },
+            "device": {
+                "title": "Semua Peranti",
+                "desc": "Ekstrak audio TikTok pada iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC dan mana-mana peranti dengan pelayar. Tidak perlu muat turun aplikasi."
+            },
+            "original": {
+                "title": "Bunyi Asal",
+                "desc": "Kekalkan kualiti audio TikTok asal tanpa sebarang mampatan atau kehilangan kualiti. Dapatkan bunyi yang sama seperti video asal, termasuk lagu trending dan audio viral."
+            },
+            "unlimited": {
+                "title": "Percuma & Tanpa Had",
+                "desc": "Tiada had untuk penukaran TikTok ke MP3. Tukar sebanyak mana video TikTok ke audio yang anda mahu - sepenuhnya percuma, tanpa pendaftaran, tiada sekatan harian."
+            },
+            "secure": {
+                "title": "Selamat & Peribadi",
+                "desc": "Penukaran MP3 yang selamat tanpa pengumpulan data. Kami tidak menyimpan fail yang ditukar atau menjejaki aktiviti anda. Privasi anda dilindungi 100%."
+            },
+            "nobapp": {
+                "title": "Tidak Perlu Aplikasi",
+                "desc": "Berfungsi terus dalam pelayar anda - Chrome, Safari, Firefox, Edge, Opera. Tiada pemasangan aplikasi, tiada ruang penyimpanan diperlukan. Lebih baik daripada aplikasi pemuat turun TikTok MP3."
+            }
+        },
+        "how_to": {
+            "title": "Cara menukar TikTok kepada MP3",
+            "step1": "Cari video. Tekan Kongsi → Salin Pautan.",
+            "step2": "Tampal pautan di kotak di atas.",
+            "step3": "Klik 'Ekstrak MP3' untuk memuat turun."
+        },
+        "faq": {
+            "q1": "Bagaimana untuk menukar video TikTok kepada MP3?",
+            "a1": "Menukar TikTok kepada MP3 mudah dengan SaveTikFast. Salin pautan video TikTok, tampal dalam penukar MP3 kami dan klik tukar. Audio akan diekstrak dalam format MP3 berkualiti tinggi 320kbps serta-merta. Berfungsi pada iPhone, Android, Samsung, PC, Mac dan semua peranti menggunakan Chrome, Safari, Firefox atau mana-mana pelayar. Penukar TikTok ke MP3 kami lebih pantas dan berkualiti lebih tinggi berbanding pengekstrak audio SSSTik atau SnapTik.",
+            "q2": "Apakah kualiti audio yang disediakan oleh penukar MP3 SaveTikFast?",
+            "a2": "SaveTikFast mengekstrak audio TikTok dalam kualiti MP3 premium 320kbps - kadar bit tertinggi yang tersedia untuk fail MP3. Ini memberikan bunyi kualiti studio yang jernih sempurna untuk main balik muzik, nada dering atau projek audio. Kami mengekalkan audio TikTok asal tanpa mampatan atau kehilangan kualiti, tidak seperti penukar lain yang mengurangkan kadar bit untuk menjimatkan lebar jalur.",
+            "q3": "Bolehkah saya gunakan audio TikTok sebagai nada dering?",
+            "a3": "Ya! Audio TikTok yang dimuat turun dari SaveTikFast sempurna untuk nada dering. Format MP3 berfungsi dengan tetapan nada dering iPhone dan Android. Pada iPhone, gunakan GarageBand atau iTunes untuk menetapkan nada dering tersuai. Pada Android, cukup pergi ke Tetapan > Bunyi > Nada Dering dan pilih MP3 yang dimuat turun. Cipta nada dering unik daripada bunyi TikTok viral dan audio trending.",
+            "q4": "Adakah penukaran TikTok ke MP3 percuma?",
+            "a4": "Sepenuhnya percuma. Penukar MP3 SaveTikFast tiada bayaran, langganan atau had harian. Tukar video TikTok tanpa had kepada MP3 tanpa pendaftaran. Perkhidmatan percuma kami berfungsi pada semua peranti - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - menggunakan mana-mana pelayar termasuk Chrome, Safari dan Firefox.",
+            "q5": "Berapa lama masa penukaran MP3?",
+            "a5": "SaveTikFast menukar TikTok kepada MP3 dalam kira-kira 2-3 saat. Kami menggunakan pelayan berkuasa yang dioptimumkan untuk pengekstrakan audio pantas. Ini menjadikan kami penukar MP3 TikTok terpantas yang tersedia - jauh lebih pantas daripada SSSTik MP3, SnapTik audio, TikMate atau alat penukaran lain.",
+            "q6": "Bolehkah saya muat turun muzik TikTok pada iPhone?",
+            "a6": "Ya, anda boleh dengan mudah memuat turun muzik dan audio TikTok pada iPhone menggunakan SaveTikFast. Salin pautan TikTok, buka Safari atau Chrome, lawati penukar MP3 kami, tampal pautan dan ketik muat turun. Fail MP3 akan disimpan dalam aplikasi Files anda. Dari situ, tambah ke Apple Music, guna sebagai nada dering atau kongsi di mana-mana. Berfungsi pada semua model iPhone.",
+            "q7": "Adakah MP3 termasuk trek audio penuh?",
+            "a7": "Ya, SaveTikFast mengekstrak audio penuh daripada video TikTok - termasuk muzik latar, suara, kesan bunyi dan semua elemen audio. Audio sepanjang penuh dikekalkan tepat seperti yang kedengaran dalam video TikTok asal. Sempurna untuk menyimpan lagu trending, bunyi viral dan audio TikTok kegemaran anda.",
+            "q8": "Adakah penukar MP3 SaveTikFast selamat?",
+            "a8": "Sepenuhnya selamat. Penukar MP3 SaveTikFast menggunakan enkripsi SSL yang selamat, tidak menyimpan data atau fail yang ditukar anda, tidak memerlukan log masuk dan tidak memasang apa-apa pada peranti anda. Kami telah menukar berjuta-juta video TikTok kepada MP3 dengan selamat untuk pengguna di seluruh dunia. Privasi dan keselamatan anda adalah keutamaan kami.",
+            "q9": "Bolehkah saya menukar TikTok kepada MP3 pada Android?",
+            "a9": "Ya, penukaran TikTok ke MP3 berfungsi dengan sempurna pada semua peranti Android. Ini termasuk Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus dan semua telefon dan tablet Android yang lain. Cukup gunakan pelayar Chrome, Firefox atau Samsung Internet untuk mengakses SaveTikFast dan menukar mana-mana TikTok kepada MP3 serta-merta.",
+            "q10": "Mengapa SaveTikFast adalah penukar TikTok ke MP3 terbaik?",
+            "a10": "SaveTikFast menyediakan penukaran MP3 TikTok terbaik berkat kelajuan unggul kami (2 saat), kualiti audio maksimum (320kbps), sokongan peranti universal dan perkhidmatan sepenuhnya percuma. Tidak seperti SSSTik, SnapTik atau penukar lain, kami memberikan hasil berkualiti tinggi yang konsisten tanpa iklan mengganggu atau had muat turun. Berjuta-juta pengguna mempercayai SaveTikFast untuk keperluan audio TikTok mereka."
+        },
+        "meta_desc": "Tukar video TikTok kepada fail audio MP3 berkualiti tinggi 320kbps. Ekstrak lagu dan muzik secara percuma dalam talian. Tiada aplikasi atau pendaftaran diperlukan. Semua peranti."
+    },
+    "story_page": {
+        "meta_title": "Pemuat Turun Story TikTok – Simpan Foto Secara Tanpa Nama",
+        "title": "Muat Turun Story TikTok",
+        "desc": "Simpan Story dan Tayangan Slaid TikTok sebelum tamat tempoh.",
+        "placeholder": "Tampal pautan Story...",
+        "btn_download": "Simpan Story",
+        "about_title": "Pemuat Turun Story 2026",
+        "about_content": "SaveTikFast Story Downloader membolehkan anda menyimpan story dan karusel gambar sebelum hilang selepas 24 jam.",
+        "features": {
+            "expire": {
+                "title": "Simpan Sebelum Hilang",
+                "desc": "Muat turun cerita TikTok sebelum ia hilang selepas 24 jam. Jangan terlepas cerita pencipta kegemaran anda lagi. SaveTikFast membolehkan anda menyimpan kandungan yang akan tamat tempoh secara kekal ke peranti anda."
+            },
+            "quality": {
+                "title": "Kualiti Asal",
+                "desc": "Simpan cerita TikTok dalam kualiti Full HD - tepat seperti yang dimuat naik oleh pencipta. Tiada pengurangan kualiti, tiada mampatan. Dapatkan resolusi yang sama pada iPhone, Android atau PC."
+            },
+            "anonymous": {
+                "title": "Tontonan Tanpa Nama",
+                "desc": "Lihat dan muat turun cerita TikTok sepenuhnya tanpa nama. Pencipta tidak akan tahu anda menyimpan cerita mereka. Muat turun cerita 100% peribadi dan bijaksana."
+            },
+            "fast": {
+                "title": "Super Pantas",
+                "desc": "Muat turun mana-mana cerita TikTok dalam masa 2 saat sahaja. Penyimpanan cerita segera yang berfungsi lebih pantas daripada mana-mana pemuat turun cerita TikTok dalam talian yang lain."
+            },
+            "device": {
+                "title": "Berfungsi Di Mana-Mana",
+                "desc": "Simpan cerita TikTok pada iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows dan mana-mana peranti. Serasi dengan Chrome, Safari, Firefox dan semua pelayar."
+            },
+            "nowatermark": {
+                "title": "Tanpa Tanda Air",
+                "desc": "Muat turun cerita TikTok tanpa tanda air atau logo TikTok. Muat turun cerita bersih sedia untuk disimpan atau dikongsi di Instagram, Snapchat atau WhatsApp."
+            },
+            "free": {
+                "title": "Percuma Selama-lamanya",
+                "desc": "Muat turun cerita TikTok tanpa had tanpa kos. Tiada pendaftaran, tiada bayaran, tiada had harian. Pemuat turun cerita SaveTikFast 100% percuma."
+            },
+            "noapp": {
+                "title": "Hanya Pelayar",
+                "desc": "Tidak perlu pemasangan aplikasi. Muat turun cerita TikTok terus dari Chrome, Safari, Firefox, Edge pada telefon atau komputer anda. Lebih pantas dan lebih selamat daripada aplikasi."
+            }
+        },
+        "how_to": {
+            "title": "Cara memuat turun Story TikTok",
+            "step1": "Buka Story, Kongsi → Salin Pautan.",
+            "step2": "Tampal pautan di atas.",
+            "step3": "Klik 'Simpan Story'."
+        },
+        "faq": {
+            "q1": "Bagaimana untuk memuat turun cerita TikTok?",
+            "a1": "Untuk memuat turun cerita TikTok, pertama salin pautan cerita dari TikTok (ketik Kongsi pada cerita). Kemudian lawati SaveTikFast, tampal pautan dalam pemuat turun cerita kami dan klik muat turun. Cerita akan disimpan ke peranti anda dalam kualiti HD asal. Berfungsi pada iPhone, Android, Samsung, iPad, Mac, PC menggunakan Chrome, Safari, Firefox atau mana-mana pelayar. Simpan cerita sebelum hilang selepas 24 jam.",
+            "q2": "Bolehkah saya memuat turun cerita TikTok tanpa nama?",
+            "a2": "Ya, SaveTikFast membenarkan muat turun cerita TikTok sepenuhnya tanpa nama. Pencipta tidak akan menerima pemberitahuan atau tahu bahawa anda memuat turun cerita mereka. Identiti anda kekal peribadi. Ini sempurna untuk menyimpan kandungan secara bijaksana tanpa berinteraksi dengan akaun pencipta.",
+            "q3": "Adakah cerita TikTok tamat tempoh selepas dimuat turun?",
+            "a3": "Tidak, setelah anda memuat turun cerita TikTok dengan SaveTikFast, ia disimpan secara kekal pada peranti anda. Walaupun cerita TikTok hilang selepas 24 jam di platform, salinan yang dimuat turun kekal selama-lamanya. Simpan cerita penting sebelum tamat tempoh supaya anda tidak pernah kehilangan akses kepada kandungan.",
+            "q4": "Bagaimana kualiti cerita TikTok yang dimuat turun?",
+            "a4": "SaveTikFast memuat turun cerita TikTok dalam kualiti asal penuh - resolusi HD yang sama seperti yang dimuat naik pencipta. Kami tidak memampatkan atau mengurangkan kualiti. Cerita yang dimuat turun anda kelihatan tepat seperti yang muncul di TikTok, sempurna untuk menyimpan kenangan atau muat naik semula.",
+            "q5": "Bolehkah saya memuat turun cerita TikTok pada iPhone?",
+            "a5": "Ya, memuat turun cerita TikTok pada iPhone mudah. Salin pautan cerita dari TikTok, buka Safari atau Chrome, pergi ke SaveTikFast, tampal pautan dan ketik muat turun. Cerita disimpan terus ke aplikasi Photos atau Files anda. Berfungsi pada iPhone 15, 14, 13, 12 dan semua model tanpa memasang sebarang aplikasi.",
+            "q6": "Adakah pemuat turun cerita TikTok percuma?",
+            "a6": "Sepenuhnya percuma. Pemuat turun cerita SaveTikFast tiada kos, pelan premium atau had muat turun. Simpan cerita TikTok tanpa had tanpa kos pada mana-mana peranti - iPhone, Android, Samsung, PC, Mac. Tiada pendaftaran atau akaun diperlukan.",
+            "q7": "Bolehkah saya memuat turun cerita TikTok peribadi?",
+            "a7": "SaveTikFast hanya boleh memuat turun cerita TikTok awam. Cerita peribadi yang hanya dikongsi dengan pengikut tertentu tidak boleh diakses oleh alat muat turun luaran kerana perlindungan privasi TikTok. Untuk kandungan peribadi, anda memerlukan kebenaran terus daripada pencipta.",
+            "q8": "Mengapa gunakan SaveTikFast untuk cerita TikTok?",
+            "a8": "SaveTikFast adalah pemuat turun cerita TikTok terbaik kerana kami menawarkan muat turun segera, kualiti HD asal, penyimpanan tanpa nama dan akses percuma tanpa had. Alat kami berfungsi dengan boleh dipercayai pada semua peranti dan pelayar, menjadikannya lebih baik daripada pemuat turun cerita lain. Simpan cerita yang akan tamat tempoh sebelum hilang selama-lamanya."
+        },
+        "meta_desc": "Muat turun Stories dan Slideshow TikTok secara tanpa nama dan percuma. Simpan album foto dan video cerita sebelum tamat tempoh. Cepat, percuma, tiada log masuk diperlukan."
+    },
+    "blog": {
+        "meta_title": "Panduan Muat Turun TikTok 2026 – Video, MP3, Slideshow dan Cerita",
+        "meta_desc": "Panduan lengkap untuk memuat turun kandungan TikTok pada 2026. Simpan video tanpa tera air, tukar ke MP3, muat turun slideshow dan cerita pada iPhone, Android dan PC.",
+        "keywords": "cara memuat turun video TikTok tanpa tera air 2026, pemuat turun video TikTok iPhone iOS 18, simpan video TikTok Android 15, penukar TikTok ke MP3 dalam talian percuma, muat turun foto tayangan slaid TikTok, simpan cerita TikTok sebelum tamat tempoh, muat turun TikTok tiada tera air HD 4K, video TikTok simpan TikTok alternatif terbaik, TikTok simpan TikTok Chrome pada video alternatif macOS Sonoma, muat turun video TikTok Samsung Galaxy S25, muat turun MP3 TikTok 320kbps, muat turun tayangan slaid TikTok 2026, penjimat cerita TikTok tanpa nama, muat turun TikTok tanpa apl, penukar video TikTok MP4, simpan bunyi muzik audio TikTok, muat turun TikTok pemuat turun Firefox EdgeTok, muat turun video TikTok TikTok di Safari, muat turun semula video TikTok TikTok di Safari video duet, simpan video langsung TikTok 2026, berbilang video pemuat turun kelompok TikTok, muat turun kualiti TikTok HD 1080p, muat turun video TikTok Xiaomi OnePlus, simpan TikTok untuk tontonan luar talian, Chromebook pemuat turun TikTok, penjimat video TikTok iPad Pro, muat turun video sohor kini TikTok, pengekstrak foto tanpa zip TikTok dalam talian, pengekstrak bunyi tanpa zip TikTok penonton, muat turun TikTok Windows 10 PC, simpan TikTok tanpa pendaftaran log masuk, muat turun video TikTok percuma tanpa had, pembuat nada dering MP3 TikTok, tayangan slaid TikTok muat turun semua imej, muat turun cerita TikTok 24 jam, penjimat video TikTok 4K 2160p, alternatif terbaik kepada SnapTik SSSTikTok",
+        "title": "Panduan Muat Turun TikTok Terbaik 2026",
+        "subtitle": "Semua yang anda perlu tahu tentang memuat turun video TikTok, audio MP3, tayangan slaid dan cerita pada sebarang peranti. Dikemas kini untuk 2026 dengan kaedah dan petua terkini.",
+        "updated": "Kemas Kini Terakhir: Februari",
+        "back_home": "Kembali ke Pemuat turun",
+        "tools_heading": "Pilih Jenis Muat Turun Anda",
+        "try_now": "Cuba Sekarang",
+        "card_video_title": "Pemuat Turun Video",
+        "card_video_desc": "Muat turun video TikTok tanpa tera air dalam kualiti HD/4K. Berfungsi pada iPhone 16, Samsung Galaxy S25 dan semua peranti.",
+        "card_mp3_title": "Penukar MP3",
+        "card_mp3_desc": "Ekstrak audio daripada video TikTok dalam kualiti tinggi 320kbps. Sesuai untuk nada dering dan pencinta muzik.",
+        "card_slideshow_title": "Penjimat Tayangan Slaid",
+        "card_slideshow_desc": "Muat turun semua foto daripada tayangan slaid dan karusel TikTok sebagai fail ZIP. Simpan tempat pembuangan foto selama-lamanya.",
+        "card_story_title": "Pemuat Turun Cerita",
+        "card_story_desc": "Simpan cerita TikTok sebelum ia hilang dalam masa 24 jam. Muat turun tanpa nama tanpa pemberitahuan.",
+        "section1_title": "Cara Muat Turun Video TikTok pada 2026",
+        "section1_content": "<strong>Memuat turun video TikTok tanpa tera air</strong> tidak pernah semudah ini. Pada tahun 2026, SaveTikFast kekal sebagai penyelesaian terpantas dan paling dipercayai untuk menyimpan kandungan TikTok kegemaran anda. Sama ada anda menggunakan <strong>iPhone 16 dengan iOS 18</strong>, <strong>Samsung Galaxy S25 dengan Android 15</strong> atau PC yang menjalankan <strong>Windows 11</strong> atau <strong>macOS Sonoma</strong>, alat dalam talian kami berfungsi dengan lancar merentas semua platform.<br><br>Tidak seperti platform muat turun videoT atau penyemak imbas anda yang memerlukan pendaftaran apl lain secara langsung. Hanya salin pautan video TikTok, tampalkannya ke dalam pemuat turun kami, dan klik muat turun. Video anda akan disimpan dalam <strong>kualiti HD atau 4K</strong> tanpa tera air TikTok yang menjengkelkan.<br><br>Perkhidmatan kami menyokong semua penyemak imbas utama termasuk <strong>Google Chrome 130</strong>, <strong>Safari 18</strong>, <strong>Mozilla Firefox</strong>, <strong>Microsoft Edge</strong> dan juga penyemak imbas mudah alih</strong></strong> Peranti <strong>OnePlus</strong>, <strong>Oppo</strong> dan <strong>Huawei</strong>.",
+        "section2_title": "Panduan Penukaran TikTok ke MP3",
+        "section2_content": "Mahu <strong>menukar TikTok kepada MP3</strong>? Pengekstrak audio kami mengeluarkan bunyi daripada mana-mana video TikTok dalam <strong>kualiti tinggi sehingga 320kbps</strong>. Ini sesuai untuk:<br><br>• Mencipta nada dering tersuai daripada bunyi TikTok yang menjadi sohor kini<br>• Menyimpan lagu TikTok kegemaran anda untuk mendengar di luar talian<br>• Mengekstrak alih suara dan klip audio untuk kandungan anda sendiri<br>• Membina koleksi bunyi dan muzik viral<br><br>Penukar MP3 berfungsi pada semua peranti -</strong> daripada telefon pintar Android Pro Max 16 yang terkini. Tiada apl khas diperlukan, cuma tampal pautan dan muat turun fail audio anda serta-merta.",
+        "section3_title": "Memuat turun Tayangan Slaid & Cerita TikTok",
+        "section3_content": "<strong>Tayangan Slaid TikTok</strong> (juga dipanggil Karusel Foto) telah menjadi sangat popular pada tahun 2026. Pemuat turun tayangan slaid kami menyimpan <strong>setiap imej daripada karusel</strong> dalam kualiti asal, dibungkus sebagai fail ZIP yang mudah. Sesuai untuk menyimpan pembuangan foto estetik, tutorial dan meme.<br><br><strong>Cerita TikTok</strong> hilang selepas 24 jam, menjadikannya lebih sukar untuk disimpan. Pemuat turun cerita kami berfungsi <strong>100% tanpa nama</strong> - pencipta tidak akan tahu anda memuat turun cerita mereka. Ini berfungsi pada semua peranti termasuk <strong>iPad Pro</strong>, <strong>tablet Android</strong> dan <strong>Chromebook</strong>.<br><br>Sama ada anda mengarkibkan kandungan untuk inspirasi atau menyimpan kenangan, SaveTikFast menyediakan penyelesaian yang paling boleh dipercayai yang tersedia dalam talian.",
+        "section4_title": "Privasi & Keselamatan",
+        "section4_content": "Di SaveTikFast, kami mengambil <strong>privasi anda dengan serius</strong>. Tidak seperti sesetengah perkhidmatan muat turun yang memerlukan log masuk atau menjejaki aktiviti anda:<br><br>• <strong>Tiada pendaftaran diperlukan</strong> - mula muat turun serta-merta<br>• <strong>Tiada log masuk TikTok diperlukan</strong> - kami tidak pernah meminta bukti kelayakan anda<br>• <strong>Tiada video disimpan</strong> - semua pemprosesan berlaku dalam masa nyata<br>• <strong>Sambungan SSL<strong>tidak diperlukan untuk semua <strong>dienkripsi</strong> penjejakan</strong> - sejarah muat turun anda tidak pernah direkodkan<br><br>Perkhidmatan kami direka untuk menjadi pantas, percuma dan tanpa nama sepenuhnya. Kami percaya dalam menyediakan alat yang berharga tanpa menjejaskan privasi pengguna.",
+        "section5_title": "Mengapa Memilih SaveTikFast?",
+        "section5_content": "Dalam pasaran yang penuh dengan pemuat turun TikTok, SaveTikFast menonjol kerana beberapa sebab:<br><br>• <strong>Pemprosesan terpantas</strong> - muat turun bermula dalam beberapa saat, bukan minit<br>• <strong>Kualiti tertinggi</strong> - sehingga resolusi 4K apabila tersedia<br>• <strong>Tiada tera air</strong> - video bersih <strong><br>• jenis kandungan dan MP3 yang bersih sedia untuk dikongsi<br> cerita<br>• <strong>Keserasian sejagat</strong> - berfungsi pada setiap peranti dan penyemak imbas<br>• <strong>Sentiasa percuma</strong> - tiada pelan premium, tiada yuran tersembunyi<br>• <strong>Kemas kini biasa</strong> - dipertingkatkan secara berterusan untuk 2026 dan seterusnya<br><br>Sama ada anda seorang pencipta kandungan, seseorang yang sukakan penyelesaian media sosial, TikT, atau justTok. untuk memuat turun dan menyimpan kandungan TikTok.",
+        "cta_title": "Sedia untuk Muat Turun?",
+        "cta_desc": "Mula memuat turun video TikTok, audio MP3, tayangan slaid dan cerita sekarang. 100% percuma, tiada pendaftaran diperlukan.",
+        "cta_button": "Mula Memuat Turun",
+        "latest_posts": "Catatan Terkini",
+        "read_more": "Baca lebih lanjut",
+        "share": "Kongsi artikel ini:",
+        "related_posts_title": "Artikel Berkaitan",
+        "toc_title": "Isi Kandungan",
+        "copy_link": "Salin pautan",
+        "link_copied": "Disalin!"
+    },
+    "ios_page": {
+        "title": "TikTok Downloader untuk iOS",
+        "desc": "Muat turun video TikTok tanpa tera air terus ke iPhone atau iPad anda dalam kualiti HD. Cara terpantas untuk menyimpan video menggunakan Safari pada iOS.",
+        "placeholder": "Tampal pautan TikTok daripada iPhone anda...",
+        "meta_title": "TikTok Downloader untuk iPhone/iPad - SaveTikFast",
+        "meta_desc": "Alat percuma untuk menyimpan video TikTok tanpa tera air pada iOS (iPhone & iPad). Tiada pemasangan apl diperlukan. Muat turun dalam format MP4 atau MP3 serta-merta.",
+        "faq": {
+            "q1": "Bagaimanakah saya boleh memuat turun video TikTok pada iPhone dan iPad tanpa tera air?",
+            "a1": "Buka TikTok pada iPhone atau iPad anda, ketik Kongsi dan Salin Pautan. Buka penyemak imbas Safari atau Chrome, lawati SaveTikFast, tampal URL video TikTok dan ketik Muat turun. Video disimpan terus ke apl Foto anda dalam kualiti HD tanpa tera air. Berfungsi pada iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air dan semua peranti iOS yang menjalankan iOS 17 atau iOS 18.",
+            "q2": "Adakah SaveTikFast percuma untuk digunakan pada iPhone tanpa memasang sebarang aplikasi?",
+            "a2": "Ya, SaveTikFast adalah 100% percuma untuk pengguna iPhone dan iPad. Tiada pemasangan aplikasi dari App Store diperlukan. Pemuat turun video TikTok kami berfungsi secara langsung dalam penyemak imbas Safari, Chrome atau Firefox pada iOS. Muat turun video TikTok tanpa had tanpa tera air, tukar TikTok kepada MP3 dan simpan cerita TikTok - semuanya percuma sepenuhnya tanpa pendaftaran atau langganan diperlukan.",
+            "q3": "Bolehkah saya menyimpan video TikTok ke gulungan kamera iPhone saya dalam kualiti HD 4K?",
+            "a3": "betul-betul. SaveTikFast memuat turun video TikTok dalam kualiti tertinggi yang tersedia termasuk 720p HD, 1080p Full HD dan peleraian 4K terus ke apl Foto atau Fail iPhone anda. Kami tidak pernah memampatkan video. Kualiti yang lebih baik daripada SSSTik, SnapTik atau TikMate pada peranti iOS. Sesuai untuk menyimpan kandungan TikTok di luar talian pada iPhone untuk tontonan kemudian.",
+            "q4": "Mengapa SaveTikFast adalah pemuat turun TikTok terbaik untuk peranti iOS?",
+            "a4": "SaveTikFast ialah penjimat video TikTok terpantas untuk iPhone dan iPad dengan muat turun 3 saat, tiada isu penyingkiran tera air, sokongan HD dan 4K, pengekstrakan audio MP3, muat turun cerita dan penjimatan tayangan slaid. Tidak seperti pemuat turun iOS TikTok yang lain, kami tidak memerlukan pemasangan apl, tiada log masuk dan tiada Pintasan Apple. Berfungsi dengan sempurna pada penyemak imbas Safari merentas semua versi iOS.",
+            "q5": "Bagaimanakah cara menukar video TikTok kepada audio MP3 pada iPhone?",
+            "a5": "Salin pautan video TikTok pada iPhone anda, buka Safari atau Chrome, lawati halaman penukar SaveTikFast MP3, tampal URL dan ketik Ekstrak MP3. Fail audio dimuat turun dalam kualiti 320kbps ke apl Fail iPhone anda. Sesuai untuk mencipta nada dering iPhone daripada bunyi TikTok, menyimpan muzik TikTok yang sedang trend dan mengekstrak klip audio tular pada peranti iOS."
+        }
+    },
+    "android_page": {
+        "title": "TikTok Downloader untuk Android",
+        "desc": "Penjimat video TikTok Android terbaik! Muat turun mana-mana video TikTok tanpa tera air terus ke galeri mudah alih anda dalam format MP4.",
+        "placeholder": "Tampal pautan TikTok daripada telefon Android anda...",
+        "meta_title": "TikTok Downloader untuk Peranti Android - SaveTikFast",
+        "meta_desc": "Simpan mana-mana video TikTok tanpa logo ke galeri telefon Android anda. 100% percuma, tiada tera air, pantas dan selamat. Muat turun dalam kualiti HD.",
+        "faq": {
+            "q1": "Bagaimanakah saya boleh memuat turun video TikTok pada Android tanpa tera air?",
+            "a1": "Buka TikTok pada telefon Android anda, ketik Kongsi dan Salin Pautan. Buka penyemak imbas Chrome, Internet Samsung atau Firefox, lawati SaveTikFast, tampal URL video dan ketik Muat turun. Video TikTok disimpan ke folder Muat Turun atau Galeri anda dalam kualiti HD tanpa tera air. Berfungsi pada peranti Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus dan Huawei.",
+            "q2": "Adakah SaveTikFast serasi dengan semua telefon dan tablet Android?",
+            "a2": "Ya, SaveTikFast berfungsi pada setiap peranti Android termasuk Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia dan tablet Android. Serasi dengan Android 12, 13, 14 dan 15. Gunakan Chrome, Internet Samsung, Firefox atau mana-mana penyemak imbas mudah alih untuk memuat turun video TikTok tanpa tera air secara percuma. Tiada pemasangan APK diperlukan.",
+            "q3": "Bolehkah saya menyimpan video TikTok ke galeri Android saya dalam HD 4K?",
+            "a3": "betul-betul. SaveTikFast memuat turun video TikTok dalam HD asal, 1080p Full HD dan kualiti 4K terus ke Galeri telefon Android anda atau folder Muat Turun. Kami mengekalkan kualiti video asal tanpa pemampatan. Lebih baik daripada pemuat turun SSSTik, SnapTik atau TikMate. Sesuai untuk menyimpan kandungan TikTok di luar talian pada peranti Samsung Galaxy, Pixel atau Xiaomi.",
+            "q4": "Mengapa memilih SaveTikFast berbanding pemuat turun Android TikTok yang lain?",
+            "a4": "SaveTikFast ialah pemuat turun TikTok terpantas untuk Android dengan pemprosesan 3 saat, muat turun tanpa tera air, sokongan video HD dan 4K, penukar MP3 TikTok, penjimat cerita dan pemuat turun tayangan slaid. Tiada APK diperlukan, tiada apl Google Play diperlukan. Berfungsi dalam penyemak imbas Chrome pada Samsung Galaxy, Google Pixel, Xiaomi, OPPO dan semua telefon pintar Android tanpa pendaftaran.",
+            "q5": "Bagaimanakah cara saya mengekstrak audio MP3 daripada TikTok pada telefon Android saya?",
+            "a5": "Salin pautan video TikTok pada peranti Android anda, buka penyemak imbas Internet Chrome atau Samsung, lawati penukar MP3 SaveTikFast, tampal URL dan ketik Ekstrak MP3. Muat turun audio dalam format 320kbps berkualiti tinggi ke folder Muat Turun anda. Sesuai untuk menyimpan lagu TikTok yang sedang trend, mencipta nada dering Android dan mengekstrak bunyi viral pada telefon Samsung Galaxy dan Pixel."
+        }
+    },
+    "mac_page": {
+        "title": "Pemuat turun TikTok untuk Mac",
+        "desc": "Muat turun video TikTok berkualiti tinggi tanpa tera air pada MacBook atau iMac anda. Berfungsi dengan sempurna pada Safari dan Chrome.",
+        "placeholder": "Lepaskan pautan TikTok di sini untuk memuat turun pada Mac...",
+        "meta_title": "Pemuat Turun Video TikTok untuk Mac/MacBook (HD) - SaveTikFast",
+        "meta_desc": "Muat turun video TikTok dengan mudah tanpa tera air ke Mac anda. Penjimat dalam talian percuma yang menyokong macOS Safari, Chrome dan Firefox dalam kualiti 4K.",
+        "faq": {
+            "q1": "Bagaimanakah saya boleh memuat turun video TikTok pada Mac tanpa tera air?",
+            "a1": "Buka TikTok dalam Safari, Chrome atau Firefox pada MacBook atau iMac anda. Salin URL video TikTok dari bar alamat, lawati SaveTikFast, tampal pautan dan klik Muat turun. Video disimpan ke folder Muat Turun Mac anda dalam kualiti HD atau 4K tanpa tera air. Berfungsi pada macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac dan Mac Mini.",
+            "q2": "Adakah SaveTikFast berfungsi pada Safari dan Chrome untuk macOS?",
+            "a2": "Ya, SaveTikFast berfungsi dengan sempurna pada semua penyemak imbas Mac termasuk Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge dan Opera. Tiada sambungan pelayar atau pemasangan pemalam diperlukan. Pemuat turun video TikTok kami berjalan terus dalam penyemak imbas anda pada macOS Sonoma, Ventura dan Monterey. Muat turun video TikTok tanpa had tanpa tera air percuma sepenuhnya pada mana-mana Mac.",
+            "q3": "Bolehkah saya menyimpan video TikTok dalam kualiti 4K pada MacBook saya?",
+            "a3": "betul-betul. SaveTikFast memuat turun video TikTok dalam kualiti tertinggi yang tersedia termasuk resolusi 720p, 1080p HD Penuh, 2K dan 4K pada MacBook Pro, MacBook Air, iMac dan Mac Mini. Kami tidak pernah memampatkan atau mengurangkan kualiti video. Fail disimpan sebagai MP4 ke folder Muat Turun anda. Lebih baik daripada SSSTik atau SnapTik untuk pengguna Mac yang inginkan kualiti video premium.",
+            "q4": "Mengapa SaveTikFast adalah pemuat turun TikTok terbaik untuk komputer Mac?",
+            "a4": "SaveTikFast ialah pemuat turun video TikTok terpantas untuk Mac dengan pemprosesan segera 3 saat, penyingkiran tera air, sokongan kualiti 4K, pengekstrakan audio MP3, penjimatan cerita TikTok dan muat turun tayangan slaid. Tiada pemasangan perisian pada macOS diperlukan. Berfungsi dalam penyemak imbas Safari dan Chrome pada MacBook Pro, MacBook Air, iMac dan Mac Mini tanpa pendaftaran atau langganan.",
+            "q5": "Bagaimanakah cara saya menukar TikTok kepada MP3 pada Mac saya?",
+            "a5": "Salin URL video TikTok daripada Safari atau Chrome pada Mac anda, lawati SaveTikFast MP3 converter, tampal pautan dan klik Extract MP3. Fail audio dimuat turun dalam format 320kbps MP3 berkualiti studio ke folder Muat Turun Mac anda. Sesuai untuk menyimpan muzik TikTok yang sedang trend, mencipta senarai main dan mengekstrak bunyi pada MacBook Pro, MacBook Air dan iMac."
+        }
+    },
+    "pc_page": {
+        "title": "TikTok Downloader untuk PC",
+        "desc": "Simpan video TikTok terus ke PC atau Laptop Windows anda. Dapatkan video yang bersih dan bebas tera air dalam kelajuan yang sangat pantas.",
+        "placeholder": "Tampalkan pautan video TikTok daripada PC anda...",
+        "meta_title": "TikTok Downloader untuk Windows PC/Laptop - SaveTikFast",
+        "meta_desc": "Pemuat turun video TikTok terpantas untuk Windows PC. Simpan video TikTok tanpa had tanpa tera air ke komputer anda secara percuma.",
+        "faq": {
+            "q1": "Bagaimanakah saya boleh memuat turun video TikTok pada Windows PC tanpa tera air?",
+            "a1": "Buka TikTok dalam Chrome, Edge atau Firefox pada PC atau Laptop Windows anda. Salin URL video TikTok dari bar alamat penyemak imbas, lawati SaveTikFast, tampal pautan dan klik Muat turun. Video disimpan ke folder Muat Turun PC anda dalam kualiti HD atau 4K tanpa tera air. Berfungsi pada Windows 11, Windows 10, komputer meja dan komputer riba daripada Dell, HP, Lenovo, ASUS dan Acer.",
+            "q2": "Adakah SaveTikFast percuma untuk digunakan pada komputer Windows?",
+            "a2": "Ya, SaveTikFast adalah percuma sepenuhnya untuk pengguna PC Windows. Tiada pemasangan perisian atau muat turun aplikasi desktop diperlukan. Pemuat turun video TikTok kami berfungsi secara langsung dalam penyemak imbas Chrome, Microsoft Edge, Firefox dan Opera pada Windows 11 dan Windows 10. Muat turun video TikTok tanpa had tanpa tera air, tukar kepada MP3, simpan cerita dan muat turun tayangan slaid secara percuma.",
+            "q3": "Bolehkah saya menyimpan video TikTok dalam kualiti HD 4K pada PC Windows saya?",
+            "a3": "betul-betul. SaveTikFast memuat turun video TikTok dalam kualiti asal termasuk resolusi 720p HD, 1080p HD Penuh, 2K dan 4K terus ke folder Muat Turun PC Windows anda sebagai fail MP4. Kami tidak pernah memampatkan atau mengurangkan kualiti. Lebih unggul daripada SSSTik, SnapTik atau TikMate. Sesuai untuk menyimpan dan mengedit kandungan TikTok pada komputer meja yang menjalankan Windows 11 atau Windows 10.",
+            "q4": "Mengapa SaveTikFast adalah pemuat turun TikTok terbaik untuk PC?",
+            "a4": "SaveTikFast ialah pemuat turun video TikTok terpantas untuk Windows PC dengan pemprosesan 3 saat, tiada tera air, sokongan HD dan 4K, penukar MP3, pemuat turun cerita dan penjimat tayangan slaid. Tiada pemasangan perisian desktop diperlukan. Berfungsi dalam penyemak imbas Chrome dan Edge pada Windows 11, komputer riba dan desktop Windows 10 daripada HP, Dell, Lenovo, ASUS tanpa pendaftaran atau bayaran.",
+            "q5": "Bagaimanakah cara saya menukar TikTok kepada MP3 pada komputer Windows saya?",
+            "a5": "Salin URL video TikTok daripada Chrome atau Edge pada PC Windows anda, lawati halaman penukar MP3 SaveTikFast, tampal pautan dan klik Extract MP3. Muat turun audio dalam format MP3 320kbps berkualiti tinggi ke folder Muat Turun PC anda. Sesuai untuk menyimpan lagu TikTok, mencipta nada dering Windows, mengekstrak audio virus dan membina koleksi muzik pada komputer desktop anda."
+        }
+    },
+    "seo_rich_content": {
+        "intro_title": "Pemuat Turun Video TikTok Terbaik Tanpa Tera Air",
+        "intro_p1": "Apabila ia datang untuk menyimpan video TikTok dengan mudah dan tanpa tera air yang mengganggu, SaveTikFast muncul sebagai pilihan terbaik mutlak di pasaran. Kami telah membangunkan pemuat turun dalam talian yang berkuasa ini dengan pengalaman pengguna sebagai keutamaan kami. Menavigasi melalui laman web kami adalah sangat intuitif; anda hanya perlu menampal pautan video TikTok yang anda inginkan, dan pelayan lanjutan kami mengendalikan selebihnya pada kelajuan sepantas kilat. Keunikan SaveTikFast terletak pada seni binanya yang mantap, yang menjamin muat turun yang boleh dipercayai walaupun pada waktu lalu lintas puncak. Ia adalah utiliti yang sangat diperlukan untuk pempengaruh, pemasar dan pengguna harian yang ingin mengatur koleksi peribadi hit viral mereka. Oleh kerana ia adalah utiliti berasaskan web, ia menghapuskan risiko yang berkaitan dengan memuat turun aplikasi pihak ketiga, menawarkan persekitaran yang selamat dan peribadi untuk semua keperluan muat turun anda. Anda boleh mengakses SaveTikFast daripada sebarang peranti, sama ada anda menggunakan komputer meja di rumah atau telefon mudah alih semasa dalam perjalanan. Kami percaya bahawa mengakses media berkualiti tinggi haruslah mudah dan percuma. Dengan memilih SaveTikFast, anda memilih perkhidmatan premium tanpa sekatan yang secara konsisten menyampaikan video tanpa tera air yang sempurna terus ke galeri atau cakera keras anda.",
+        "intro_p2": "Di luar hanya muat turun video standard, SaveTikFast dilengkapi dengan suite komprehensif ciri yang direka untuk memenuhi semua keperluan penjimatan media TikTok anda. Salah satu fungsi kami yang paling popular ialah alat pengekstrakan MP3. Selalunya, video TikTok menampilkan lagu yang menarik, bunyi yang lucu atau ucapan motivasi yang anda ingin dengar di luar talian. Dengan platform kami, anda boleh menukar mana-mana video TikTok dengan lancar kepada fail audio MP3 berkualiti tinggi, sesuai untuk ditetapkan sebagai nada dering atau menambah senarai main muzik anda. Selain itu, kami menyokong penuh memuat turun tayangan slaid foto TikTok. Daripada mencuba tangkapan skrin setiap imej semasa ia berlalu, alat kami mengekstrak keseluruhan tayangan slaid dan menyimpan setiap gambar secara individu dalam resolusi asalnya yang tidak dimampatkan. Tetapi bukan itu sahaja; kami juga menawarkan keupayaan untuk memuat turun Cerita TikTok. Memandangkan Stories bersifat sementara dan hilang selepas 24 jam, pemuat turun kami membenarkan anda mengarkibkan detik-detik sekejap ini secara kekal. Setiap ciri tunggal pada SaveTikFast dioptimumkan untuk kelajuan dan kebolehpercayaan, memastikan sama ada anda memuat turun video HD 3 minit, runut MP3 yang jelas atau karusel foto yang menakjubkan, prosesnya adalah serta-merta dan tanpa kerumitan.",
+        "why_title": "Mengapa Memilih SaveTikFast?",
+        "why_p1": "Di SaveTikFast, kami memahami bahawa masa anda adalah berharga, itulah sebabnya kami mengutamakan kelajuan muat turun yang sangat pantas dan kebolehpercayaan yang kukuh. Sistem bahagian belakang yang teguh kami direka bentuk untuk mengendalikan jumlah permintaan serentak yang tinggi tanpa mengeluarkan peluh. Apabila anda menekan butang muat turun, pelayan kami segera memproses pautan TikTok, menanggalkan tera air dan menghantar fail kepada anda dalam sekelip mata. Anda tidak akan menemui pautan yang rosak, skrin pemuatan yang tidak berkesudahan atau tamat masa yang mengecewakan. Kami sentiasa memantau dan menaik taraf rangkaian kami untuk menyediakan pengalaman muat turun yang lancar dan tanpa gangguan yang anda boleh bergantung pada hari demi hari.",
+        "why_p2": "Apabila memuat turun kandungan, kejelasan visual adalah penting dan SaveTikFast menjamin kualiti unggul dengan setiap muat turun. Kami mengekalkan kadar bit dan peleraian video asal, memberikan anda fail MP4 yang rapi dan bebas tera air yang sesuai untuk ditonton pada skrin besar atau untuk penyuntingan video profesional. Selain kualiti premium, perkhidmatan kami menawarkan keserasian sejagat. Anda tidak perlu risau tentang sekatan peranti; SaveTikFast responsif sepenuhnya dan berfungsi dengan sempurna pada mana-mana alat dengan sambungan internet. Daripada iPhone dan peranti Android terkini kepada komputer desktop yang lebih lama, alat berasaskan web kami menyesuaikan diri dengan skrin dan penyemak imbas anda, menawarkan pengalaman pengguna yang konsisten dan lancar di mana-mana sahaja.",
+        "why_p3": "Privasi dan keselamatan anda adalah amat penting kepada kami di SaveTikFast. Kami beroperasi di bawah dasar larangan log yang ketat, bermakna kami tidak menjejak, menyimpan atau memantau video yang anda pilih untuk dimuat turun. Penggunaan anda kekal tanpa nama sepenuhnya. Selain itu, laman web kami diperkukuh dengan penyulitan SSL lanjutan untuk melindungi sambungan anda daripada sebarang ancaman yang berpotensi. Oleh kerana perkhidmatan kami adalah 100% berasaskan web, anda tidak akan diminta untuk memuat turun fail boleh laku yang mencurigakan atau memasang pelanjutan penyemak imbas invasif, menghapuskan sepenuhnya risiko perisian hasad atau virus. Anda boleh memuat turun TikToks kegemaran anda dengan ketenangan fikiran, kerana mengetahui data anda selamat.",
+        "guide_title": "Cara Muat Turun Video TikTok pada Mana-mana Peranti",
+        "guide_p1": "Menggunakan SaveTikFast untuk memuat turun video TikTok kegemaran anda ialah proses yang sangat mudah yang boleh dikuasai sesiapa sahaja dalam beberapa saat. Mula-mula, buka aplikasi TikTok pada telefon pintar anda atau lawati tapak web TikTok pada pelayar komputer anda. Tatal suapan anda sehingga anda menemui video, tayangan slaid atau Cerita yang ingin anda simpan. Seterusnya, ketik pada ikon 'Kongsi', yang biasanya diwakili oleh anak panah yang menunjuk ke kanan, terletak di sebelah kanan skrin. Daripada menu perkongsian yang muncul, pilih pilihan 'Salin Pautan'. Setelah pautan disalin ke papan keratan anda, buka penyemak imbas web pilihan anda—sama ada Chrome, Safari atau Firefox—dan navigasi ke tapak web SaveTikFast. Pada halaman utama kami, anda akan melihat medan input yang besar dengan jelas. Tampal pautan TikTok yang disalin terus ke dalam kotak teks ini. Selepas menampal pautan, klik pada butang 'Muat turun' betul-betul di sebelahnya. Sistem kami akan segera memproses pautan dan, dalam beberapa saat, memberikan anda beberapa pilihan muat turun. Anda boleh memilih untuk memuat turun video tanpa tera air, mengekstrak audio sebagai MP3 atau menyimpan imej daripada tayangan slaid. Klik pada format yang anda inginkan, dan fail akan mula memuat turun serta-merta ke storan setempat peranti anda, sedia untuk dilihat atau dikongsi di luar talian.",
+        "comparison_title": "SaveTikFast lwn Pemuat Turun Lain (SSSTik, SnapTik)",
+        "comparison_p1": "Apabila anda membandingkan SaveTikFast dengan alternatif popular lain seperti SnapTik, SSSTik atau TikMate, kelebihan platform kami menjadi jelas dengan serta-merta. SaveTikFast menyediakan pengalaman hebat dan ringan iklan yang tidak membebankan anda dengan pop timbul, tidak seperti kebanyakan pesaing. Dari segi prestasi, enjin penukaran lanjutan kami menyampaikan video tanpa tera air dengan ketara lebih pantas daripada SnapTik, terutamanya semasa waktu sibuk Internet. Walaupun SSSTik ialah alat yang berkebolehan, SaveTikFast menawarkan suite ciri yang lebih mantap, mengendalikan bukan sahaja video standard tetapi juga tayangan slaid berbilang imej yang kompleks dan Cerita fana dengan ketepatan mutlak. Selain itu, kualiti audio muat turun MP3 kami secara konsisten lebih tinggi daripada yang anda dapat daripada TikMate. Dengan memfokuskan pada kelajuan, kebolehpercayaan, pengalaman pengguna dan sokongan ciri yang komprehensif, SaveTikFast telah menetapkan dirinya sebagai pilihan utama untuk muat turun media TikTok.",
+        "tips_title": "Petua untuk Pengalaman Muat Turun Terbaik",
+        "tips_p1": "Untuk memanfaatkan sepenuhnya pengalaman SaveTikFast anda, terdapat beberapa petua praktikal yang boleh anda ikuti. Untuk pengguna mudah alih, kami amat mengesyorkan anda menanda halaman tapak web kami pada skrin utama telefon pintar anda atau penyemak imbas untuk akses segera apabila anda menemui video yang anda suka. Jika anda memuat turun kandungan untuk penyuntingan video atau penggunaan profesional, sentiasa pastikan anda memilih pilihan resolusi HD tertinggi yang tersedia untuk mengekalkan kesetiaan visual. Bagi pengguna di kawasan yang mempunyai sambungan internet yang lebih perlahan, memuat turun versi audio MP3 terlebih dahulu boleh menjadi cara terbaik untuk menjimatkan lebar jalur jika anda hanya memerlukan bunyi. Selain itu, jika muat turun tidak bermula serta-merta, hanya memuatkan semula halaman dan menampal pautan sekali lagi biasanya menyelesaikan sebarang gangguan rangkaian sementara. Sentiasa ingat bahawa walaupun memuat turun adalah percuma dan tidak terhad, anda harus menghormati hak harta intelek pencipta kandungan asal apabila berkongsi semula atau menggunakan semula video mereka.",
+        "conclusion_title": "Mula Muat Turun TikToks Kegemaran Anda Hari Ini",
+        "conclusion_p1": "Ringkasnya, jika anda mencari cara terbaik dan bebas kerumitan untuk menyimpan kandungan TikTok, SaveTikFast ialah jawapan muktamad anda. Kami menggabungkan kelajuan sepantas kilat, kualiti HD premium dan suite ciri yang komprehensif—daripada pengekstrakan MP3 hingga muat turun Cerita—ke dalam satu platform yang selamat dan percuma sepenuhnya. Alat kami berfungsi dengan sempurna merentas semua peranti, memastikan anda mempunyai akses kepada media kegemaran anda pada bila-bila masa anda mahukannya. Kawal kandungan digital anda hari ini. Lawati SaveTikFast, tampal pautan pertama anda, dan temui betapa mudahnya menyimpan video TikTok tanpa tera air terus ke peranti anda!"
     }
-  },
-  "nav_menu": {
-    "slideshow": "Tayangan Slaid",
-    "video": "Video",
-    "mp3": "Audio MP3",
-    "stories": "Cerita"
-  },
-  "mp3_page": {
-    "meta_title": "TikTok ke MP3 Penukar – Muat Turun Audio Percuma 320kbps",
-    "title": "Muat Turun MP3 TikTok",
-    "subtitle": "(Audio Sahaja)",
-    "desc": "Tukar video TikTok kepada fail audio MP3.kstrak lagu dan muzik dalam kualiti tinggi 320kbps.",
-    "placeholder": "Tampal pautan video untuk ekstrak audio...",
-    "btn_download": "Ekstrak MP3",
-    "about_title": "Penukar MP3 TikTok Terbaik 2026",
-    "about_content": "SaveTikFast MP3 membolehkan anda mengekstrak audio daripada mana-mana video TikTok serta-merta. Muat turun lagu trending dan bunyi viral.",
-    "features": {
-      "quality": {
-        "title": "Audio HD 320kbps",
-        "desc": "Tukar video TikTok kepada MP3 dalam kualiti studio 320kbps yang jernih. Kadar bit audio tertinggi yang tersedia dalam talian, sempurna untuk peminat muzik yang mahukan bunyi terbaik pada iPhone, Android atau PC mereka."
-      },
-      "fast": {
-        "title": "Penukaran Segera",
-        "desc": "Penukaran TikTok ke MP3 dalam masa 2 saat sahaja. Pengekstrak audio TikTok terpantas dalam talian - lebih pantas daripada SSSTik MP3, SnapTik audio atau mana-mana penukar lain. Berfungsi serta-merta pada semua peranti."
-      },
-      "ringtone": {
-        "title": "Sedia Untuk Nada Dering",
-        "desc": "Panjang audio sempurna untuk nada dering iPhone dan bunyi pemberitahuan Android. Cipta nada dering tersuai daripada bunyi TikTok viral dan klip audio trending. Mudah ditetapkan pada mana-mana telefon pintar."
-      },
-      "device": {
-        "title": "Semua Peranti",
-        "desc": "Ekstrak audio TikTok pada iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC dan mana-mana peranti dengan pelayar. Tidak perlu muat turun aplikasi."
-      },
-      "original": {
-        "title": "Bunyi Asal",
-        "desc": "Kekalkan kualiti audio TikTok asal tanpa sebarang mampatan atau kehilangan kualiti. Dapatkan bunyi yang sama seperti video asal, termasuk lagu trending dan audio viral."
-      },
-      "unlimited": {
-        "title": "Percuma & Tanpa Had",
-        "desc": "Tiada had untuk penukaran TikTok ke MP3. Tukar sebanyak mana video TikTok ke audio yang anda mahu - sepenuhnya percuma, tanpa pendaftaran, tiada sekatan harian."
-      },
-      "secure": {
-        "title": "Selamat & Peribadi",
-        "desc": "Penukaran MP3 yang selamat tanpa pengumpulan data. Kami tidak menyimpan fail yang ditukar atau menjejaki aktiviti anda. Privasi anda dilindungi 100%."
-      },
-      "nobapp": {
-        "title": "Tidak Perlu Aplikasi",
-        "desc": "Berfungsi terus dalam pelayar anda - Chrome, Safari, Firefox, Edge, Opera. Tiada pemasangan aplikasi, tiada ruang penyimpanan diperlukan. Lebih baik daripada aplikasi pemuat turun TikTok MP3."
-      }
-    },
-    "how_to": {
-      "title": "Cara menukar TikTok kepada MP3",
-      "step1": "Cari video. Tekan Kongsi → Salin Pautan.",
-      "step2": "Tampal pautan di kotak di atas.",
-      "step3": "Klik 'Ekstrak MP3' untuk memuat turun."
-    },
-    "faq": {
-      "q1": "Bagaimana untuk menukar video TikTok kepada MP3?",
-      "a1": "Menukar TikTok kepada MP3 mudah dengan SaveTikFast. Salin pautan video TikTok, tampal dalam penukar MP3 kami dan klik tukar. Audio akan diekstrak dalam format MP3 berkualiti tinggi 320kbps serta-merta. Berfungsi pada iPhone, Android, Samsung, PC, Mac dan semua peranti menggunakan Chrome, Safari, Firefox atau mana-mana pelayar. Penukar TikTok ke MP3 kami lebih pantas dan berkualiti lebih tinggi berbanding pengekstrak audio SSSTik atau SnapTik.",
-      "q2": "Apakah kualiti audio yang disediakan oleh penukar MP3 SaveTikFast?",
-      "a2": "SaveTikFast mengekstrak audio TikTok dalam kualiti MP3 premium 320kbps - kadar bit tertinggi yang tersedia untuk fail MP3. Ini memberikan bunyi kualiti studio yang jernih sempurna untuk main balik muzik, nada dering atau projek audio. Kami mengekalkan audio TikTok asal tanpa mampatan atau kehilangan kualiti, tidak seperti penukar lain yang mengurangkan kadar bit untuk menjimatkan lebar jalur.",
-      "q3": "Bolehkah saya gunakan audio TikTok sebagai nada dering?",
-      "a3": "Ya! Audio TikTok yang dimuat turun dari SaveTikFast sempurna untuk nada dering. Format MP3 berfungsi dengan tetapan nada dering iPhone dan Android. Pada iPhone, gunakan GarageBand atau iTunes untuk menetapkan nada dering tersuai. Pada Android, cukup pergi ke Tetapan > Bunyi > Nada Dering dan pilih MP3 yang dimuat turun. Cipta nada dering unik daripada bunyi TikTok viral dan audio trending.",
-      "q4": "Adakah penukaran TikTok ke MP3 percuma?",
-      "a4": "Sepenuhnya percuma. Penukar MP3 SaveTikFast tiada bayaran, langganan atau had harian. Tukar video TikTok tanpa had kepada MP3 tanpa pendaftaran. Perkhidmatan percuma kami berfungsi pada semua peranti - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - menggunakan mana-mana pelayar termasuk Chrome, Safari dan Firefox.",
-      "q5": "Berapa lama masa penukaran MP3?",
-      "a5": "SaveTikFast menukar TikTok kepada MP3 dalam kira-kira 2-3 saat. Kami menggunakan pelayan berkuasa yang dioptimumkan untuk pengekstrakan audio pantas. Ini menjadikan kami penukar MP3 TikTok terpantas yang tersedia - jauh lebih pantas daripada SSSTik MP3, SnapTik audio, TikMate atau alat penukaran lain.",
-      "q6": "Bolehkah saya muat turun muzik TikTok pada iPhone?",
-      "a6": "Ya, anda boleh dengan mudah memuat turun muzik dan audio TikTok pada iPhone menggunakan SaveTikFast. Salin pautan TikTok, buka Safari atau Chrome, lawati penukar MP3 kami, tampal pautan dan ketik muat turun. Fail MP3 akan disimpan dalam aplikasi Files anda. Dari situ, tambah ke Apple Music, guna sebagai nada dering atau kongsi di mana-mana. Berfungsi pada semua model iPhone.",
-      "q7": "Adakah MP3 termasuk trek audio penuh?",
-      "a7": "Ya, SaveTikFast mengekstrak audio penuh daripada video TikTok - termasuk muzik latar, suara, kesan bunyi dan semua elemen audio. Audio sepanjang penuh dikekalkan tepat seperti yang kedengaran dalam video TikTok asal. Sempurna untuk menyimpan lagu trending, bunyi viral dan audio TikTok kegemaran anda.",
-      "q8": "Adakah penukar MP3 SaveTikFast selamat?",
-      "a8": "Sepenuhnya selamat. Penukar MP3 SaveTikFast menggunakan enkripsi SSL yang selamat, tidak menyimpan data atau fail yang ditukar anda, tidak memerlukan log masuk dan tidak memasang apa-apa pada peranti anda. Kami telah menukar berjuta-juta video TikTok kepada MP3 dengan selamat untuk pengguna di seluruh dunia. Privasi dan keselamatan anda adalah keutamaan kami.",
-      "q9": "Bolehkah saya menukar TikTok kepada MP3 pada Android?",
-      "a9": "Ya, penukaran TikTok ke MP3 berfungsi dengan sempurna pada semua peranti Android. Ini termasuk Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus dan semua telefon dan tablet Android yang lain. Cukup gunakan pelayar Chrome, Firefox atau Samsung Internet untuk mengakses SaveTikFast dan menukar mana-mana TikTok kepada MP3 serta-merta.",
-      "q10": "Mengapa SaveTikFast adalah penukar TikTok ke MP3 terbaik?",
-      "a10": "SaveTikFast menyediakan penukaran MP3 TikTok terbaik berkat kelajuan unggul kami (2 saat), kualiti audio maksimum (320kbps), sokongan peranti universal dan perkhidmatan sepenuhnya percuma. Tidak seperti SSSTik, SnapTik atau penukar lain, kami memberikan hasil berkualiti tinggi yang konsisten tanpa iklan mengganggu atau had muat turun. Berjuta-juta pengguna mempercayai SaveTikFast untuk keperluan audio TikTok mereka."
-    },
-    "meta_desc": "Tukar video TikTok kepada fail audio MP3 berkualiti tinggi 320kbps. Ekstrak lagu dan muzik secara percuma dalam talian. Tiada aplikasi atau pendaftaran diperlukan. Semua peranti."
-  },
-  "story_page": {
-    "meta_title": "Pemuat Turun Story TikTok – Simpan Foto Secara Tanpa Nama",
-    "title": "Muat Turun Story TikTok",
-    "desc": "Simpan Story dan Tayangan Slaid TikTok sebelum tamat tempoh.",
-    "placeholder": "Tampal pautan Story...",
-    "btn_download": "Simpan Story",
-    "about_title": "Pemuat Turun Story 2026",
-    "about_content": "SaveTikFast Story Downloader membolehkan anda menyimpan story dan karusel gambar sebelum hilang selepas 24 jam.",
-    "features": {
-      "expire": {
-        "title": "Simpan Sebelum Hilang",
-        "desc": "Muat turun cerita TikTok sebelum ia hilang selepas 24 jam. Jangan terlepas cerita pencipta kegemaran anda lagi. SaveTikFast membolehkan anda menyimpan kandungan yang akan tamat tempoh secara kekal ke peranti anda."
-      },
-      "quality": {
-        "title": "Kualiti Asal",
-        "desc": "Simpan cerita TikTok dalam kualiti Full HD - tepat seperti yang dimuat naik oleh pencipta. Tiada pengurangan kualiti, tiada mampatan. Dapatkan resolusi yang sama pada iPhone, Android atau PC."
-      },
-      "anonymous": {
-        "title": "Tontonan Tanpa Nama",
-        "desc": "Lihat dan muat turun cerita TikTok sepenuhnya tanpa nama. Pencipta tidak akan tahu anda menyimpan cerita mereka. Muat turun cerita 100% peribadi dan bijaksana."
-      },
-      "fast": {
-        "title": "Super Pantas",
-        "desc": "Muat turun mana-mana cerita TikTok dalam masa 2 saat sahaja. Penyimpanan cerita segera yang berfungsi lebih pantas daripada mana-mana pemuat turun cerita TikTok dalam talian yang lain."
-      },
-      "device": {
-        "title": "Berfungsi Di Mana-Mana",
-        "desc": "Simpan cerita TikTok pada iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows dan mana-mana peranti. Serasi dengan Chrome, Safari, Firefox dan semua pelayar."
-      },
-      "nowatermark": {
-        "title": "Tanpa Tanda Air",
-        "desc": "Muat turun cerita TikTok tanpa tanda air atau logo TikTok. Muat turun cerita bersih sedia untuk disimpan atau dikongsi di Instagram, Snapchat atau WhatsApp."
-      },
-      "free": {
-        "title": "Percuma Selama-lamanya",
-        "desc": "Muat turun cerita TikTok tanpa had tanpa kos. Tiada pendaftaran, tiada bayaran, tiada had harian. Pemuat turun cerita SaveTikFast 100% percuma."
-      },
-      "noapp": {
-        "title": "Hanya Pelayar",
-        "desc": "Tidak perlu pemasangan aplikasi. Muat turun cerita TikTok terus dari Chrome, Safari, Firefox, Edge pada telefon atau komputer anda. Lebih pantas dan lebih selamat daripada aplikasi."
-      }
-    },
-    "how_to": {
-      "title": "Cara memuat turun Story TikTok",
-      "step1": "Buka Story, Kongsi → Salin Pautan.",
-      "step2": "Tampal pautan di atas.",
-      "step3": "Klik 'Simpan Story'."
-    },
-    "faq": {
-      "q1": "Bagaimana untuk memuat turun cerita TikTok?",
-      "a1": "Untuk memuat turun cerita TikTok, pertama salin pautan cerita dari TikTok (ketik Kongsi pada cerita). Kemudian lawati SaveTikFast, tampal pautan dalam pemuat turun cerita kami dan klik muat turun. Cerita akan disimpan ke peranti anda dalam kualiti HD asal. Berfungsi pada iPhone, Android, Samsung, iPad, Mac, PC menggunakan Chrome, Safari, Firefox atau mana-mana pelayar. Simpan cerita sebelum hilang selepas 24 jam.",
-      "q2": "Bolehkah saya memuat turun cerita TikTok tanpa nama?",
-      "a2": "Ya, SaveTikFast membenarkan muat turun cerita TikTok sepenuhnya tanpa nama. Pencipta tidak akan menerima pemberitahuan atau tahu bahawa anda memuat turun cerita mereka. Identiti anda kekal peribadi. Ini sempurna untuk menyimpan kandungan secara bijaksana tanpa berinteraksi dengan akaun pencipta.",
-      "q3": "Adakah cerita TikTok tamat tempoh selepas dimuat turun?",
-      "a3": "Tidak, setelah anda memuat turun cerita TikTok dengan SaveTikFast, ia disimpan secara kekal pada peranti anda. Walaupun cerita TikTok hilang selepas 24 jam di platform, salinan yang dimuat turun kekal selama-lamanya. Simpan cerita penting sebelum tamat tempoh supaya anda tidak pernah kehilangan akses kepada kandungan.",
-      "q4": "Bagaimana kualiti cerita TikTok yang dimuat turun?",
-      "a4": "SaveTikFast memuat turun cerita TikTok dalam kualiti asal penuh - resolusi HD yang sama seperti yang dimuat naik pencipta. Kami tidak memampatkan atau mengurangkan kualiti. Cerita yang dimuat turun anda kelihatan tepat seperti yang muncul di TikTok, sempurna untuk menyimpan kenangan atau muat naik semula.",
-      "q5": "Bolehkah saya memuat turun cerita TikTok pada iPhone?",
-      "a5": "Ya, memuat turun cerita TikTok pada iPhone mudah. Salin pautan cerita dari TikTok, buka Safari atau Chrome, pergi ke SaveTikFast, tampal pautan dan ketik muat turun. Cerita disimpan terus ke aplikasi Photos atau Files anda. Berfungsi pada iPhone 15, 14, 13, 12 dan semua model tanpa memasang sebarang aplikasi.",
-      "q6": "Adakah pemuat turun cerita TikTok percuma?",
-      "a6": "Sepenuhnya percuma. Pemuat turun cerita SaveTikFast tiada kos, pelan premium atau had muat turun. Simpan cerita TikTok tanpa had tanpa kos pada mana-mana peranti - iPhone, Android, Samsung, PC, Mac. Tiada pendaftaran atau akaun diperlukan.",
-      "q7": "Bolehkah saya memuat turun cerita TikTok peribadi?",
-      "a7": "SaveTikFast hanya boleh memuat turun cerita TikTok awam. Cerita peribadi yang hanya dikongsi dengan pengikut tertentu tidak boleh diakses oleh alat muat turun luaran kerana perlindungan privasi TikTok. Untuk kandungan peribadi, anda memerlukan kebenaran terus daripada pencipta.",
-      "q8": "Mengapa gunakan SaveTikFast untuk cerita TikTok?",
-      "a8": "SaveTikFast adalah pemuat turun cerita TikTok terbaik kerana kami menawarkan muat turun segera, kualiti HD asal, penyimpanan tanpa nama dan akses percuma tanpa had. Alat kami berfungsi dengan boleh dipercayai pada semua peranti dan pelayar, menjadikannya lebih baik daripada pemuat turun cerita lain. Simpan cerita yang akan tamat tempoh sebelum hilang selama-lamanya."
-    },
-    "meta_desc": "Muat turun Stories dan Slideshow TikTok secara tanpa nama dan percuma. Simpan album foto dan video cerita sebelum tamat tempoh. Cepat, percuma, tiada log masuk diperlukan."
-  },
-  "blog": {
-    "meta_title": "Panduan Muat Turun TikTok 2026 – Video, MP3, Slideshow dan Cerita",
-    "meta_desc": "Panduan lengkap untuk memuat turun kandungan TikTok pada 2026. Simpan video tanpa tera air, tukar ke MP3, muat turun slideshow dan cerita pada iPhone, Android dan PC.",
-    "keywords": "cara memuat turun video TikTok tanpa tera air 2026, pemuat turun video TikTok iPhone iOS 18, simpan video TikTok Android 15, penukar TikTok ke MP3 dalam talian percuma, muat turun foto tayangan slaid TikTok, simpan cerita TikTok sebelum tamat tempoh, muat turun TikTok tiada tera air HD 4K, video TikTok simpan TikTok alternatif terbaik, TikTok simpan TikTok Chrome pada video alternatif macOS Sonoma, muat turun video TikTok Samsung Galaxy S25, muat turun MP3 TikTok 320kbps, muat turun tayangan slaid TikTok 2026, penjimat cerita TikTok tanpa nama, muat turun TikTok tanpa apl, penukar video TikTok MP4, simpan bunyi muzik audio TikTok, muat turun TikTok pemuat turun Firefox EdgeTok, muat turun video TikTok TikTok di Safari, muat turun semula video TikTok TikTok di Safari video duet, simpan video langsung TikTok 2026, berbilang video pemuat turun kelompok TikTok, muat turun kualiti TikTok HD 1080p, muat turun video TikTok Xiaomi OnePlus, simpan TikTok untuk tontonan luar talian, Chromebook pemuat turun TikTok, penjimat video TikTok iPad Pro, muat turun video sohor kini TikTok, pengekstrak foto tanpa zip TikTok dalam talian, pengekstrak bunyi tanpa zip TikTok penonton, muat turun TikTok Windows 10 PC, simpan TikTok tanpa pendaftaran log masuk, muat turun video TikTok percuma tanpa had, pembuat nada dering MP3 TikTok, tayangan slaid TikTok muat turun semua imej, muat turun cerita TikTok 24 jam, penjimat video TikTok 4K 2160p, alternatif terbaik kepada SnapTik SSSTikTok",
-    "title": "Panduan Muat Turun TikTok Terbaik 2026",
-    "subtitle": "Semua yang anda perlu tahu tentang memuat turun video TikTok, audio MP3, tayangan slaid dan cerita pada sebarang peranti. Dikemas kini untuk 2026 dengan kaedah dan petua terkini.",
-    "updated": "Kemas Kini Terakhir: Februari",
-    "back_home": "Kembali ke Pemuat turun",
-    "tools_heading": "Pilih Jenis Muat Turun Anda",
-    "try_now": "Cuba Sekarang",
-    "card_video_title": "Pemuat Turun Video",
-    "card_video_desc": "Muat turun video TikTok tanpa tera air dalam kualiti HD/4K. Berfungsi pada iPhone 16, Samsung Galaxy S25 dan semua peranti.",
-    "card_mp3_title": "Penukar MP3",
-    "card_mp3_desc": "Ekstrak audio daripada video TikTok dalam kualiti tinggi 320kbps. Sesuai untuk nada dering dan pencinta muzik.",
-    "card_slideshow_title": "Penjimat Tayangan Slaid",
-    "card_slideshow_desc": "Muat turun semua foto daripada tayangan slaid dan karusel TikTok sebagai fail ZIP. Simpan tempat pembuangan foto selama-lamanya.",
-    "card_story_title": "Pemuat Turun Cerita",
-    "card_story_desc": "Simpan cerita TikTok sebelum ia hilang dalam masa 24 jam. Muat turun tanpa nama tanpa pemberitahuan.",
-    "section1_title": "Cara Muat Turun Video TikTok pada 2026",
-    "section1_content": "<strong>Memuat turun video TikTok tanpa tera air</strong> tidak pernah semudah ini. Pada tahun 2026, SaveTikFast kekal sebagai penyelesaian terpantas dan paling dipercayai untuk menyimpan kandungan TikTok kegemaran anda. Sama ada anda menggunakan <strong>iPhone 16 dengan iOS 18</strong>, <strong>Samsung Galaxy S25 dengan Android 15</strong> atau PC yang menjalankan <strong>Windows 11</strong> atau <strong>macOS Sonoma</strong>, alat dalam talian kami berfungsi dengan lancar merentas semua platform.<br><br>Tidak seperti platform muat turun videoT atau penyemak imbas anda yang memerlukan pendaftaran apl lain secara langsung. Hanya salin pautan video TikTok, tampalkannya ke dalam pemuat turun kami, dan klik muat turun. Video anda akan disimpan dalam <strong>kualiti HD atau 4K</strong> tanpa tera air TikTok yang menjengkelkan.<br><br>Perkhidmatan kami menyokong semua penyemak imbas utama termasuk <strong>Google Chrome 130</strong>, <strong>Safari 18</strong>, <strong>Mozilla Firefox</strong>, <strong>Microsoft Edge</strong> dan juga penyemak imbas mudah alih</strong></strong> Peranti <strong>OnePlus</strong>, <strong>Oppo</strong> dan <strong>Huawei</strong>.",
-    "section2_title": "Panduan Penukaran TikTok ke MP3",
-    "section2_content": "Mahu <strong>menukar TikTok kepada MP3</strong>? Pengekstrak audio kami mengeluarkan bunyi daripada mana-mana video TikTok dalam <strong>kualiti tinggi sehingga 320kbps</strong>. Ini sesuai untuk:<br><br>• Mencipta nada dering tersuai daripada bunyi TikTok yang menjadi sohor kini<br>• Menyimpan lagu TikTok kegemaran anda untuk mendengar di luar talian<br>• Mengekstrak alih suara dan klip audio untuk kandungan anda sendiri<br>• Membina koleksi bunyi dan muzik viral<br><br>Penukar MP3 berfungsi pada semua peranti -</strong> daripada telefon pintar Android Pro Max 16 yang terkini. Tiada apl khas diperlukan, cuma tampal pautan dan muat turun fail audio anda serta-merta.",
-    "section3_title": "Memuat turun Tayangan Slaid & Cerita TikTok",
-    "section3_content": "<strong>Tayangan Slaid TikTok</strong> (juga dipanggil Karusel Foto) telah menjadi sangat popular pada tahun 2026. Pemuat turun tayangan slaid kami menyimpan <strong>setiap imej daripada karusel</strong> dalam kualiti asal, dibungkus sebagai fail ZIP yang mudah. Sesuai untuk menyimpan pembuangan foto estetik, tutorial dan meme.<br><br><strong>Cerita TikTok</strong> hilang selepas 24 jam, menjadikannya lebih sukar untuk disimpan. Pemuat turun cerita kami berfungsi <strong>100% tanpa nama</strong> - pencipta tidak akan tahu anda memuat turun cerita mereka. Ini berfungsi pada semua peranti termasuk <strong>iPad Pro</strong>, <strong>tablet Android</strong> dan <strong>Chromebook</strong>.<br><br>Sama ada anda mengarkibkan kandungan untuk inspirasi atau menyimpan kenangan, SaveTikFast menyediakan penyelesaian yang paling boleh dipercayai yang tersedia dalam talian.",
-    "section4_title": "Privasi & Keselamatan",
-    "section4_content": "Di SaveTikFast, kami mengambil <strong>privasi anda dengan serius</strong>. Tidak seperti sesetengah perkhidmatan muat turun yang memerlukan log masuk atau menjejaki aktiviti anda:<br><br>• <strong>Tiada pendaftaran diperlukan</strong> - mula muat turun serta-merta<br>• <strong>Tiada log masuk TikTok diperlukan</strong> - kami tidak pernah meminta bukti kelayakan anda<br>• <strong>Tiada video disimpan</strong> - semua pemprosesan berlaku dalam masa nyata<br>• <strong>Sambungan SSL<strong>tidak diperlukan untuk semua <strong>dienkripsi</strong> penjejakan</strong> - sejarah muat turun anda tidak pernah direkodkan<br><br>Perkhidmatan kami direka untuk menjadi pantas, percuma dan tanpa nama sepenuhnya. Kami percaya dalam menyediakan alat yang berharga tanpa menjejaskan privasi pengguna.",
-    "section5_title": "Mengapa Memilih SaveTikFast?",
-    "section5_content": "Dalam pasaran yang penuh dengan pemuat turun TikTok, SaveTikFast menonjol kerana beberapa sebab:<br><br>• <strong>Pemprosesan terpantas</strong> - muat turun bermula dalam beberapa saat, bukan minit<br>• <strong>Kualiti tertinggi</strong> - sehingga resolusi 4K apabila tersedia<br>• <strong>Tiada tera air</strong> - video bersih <strong><br>• jenis kandungan dan MP3 yang bersih sedia untuk dikongsi<br> cerita<br>• <strong>Keserasian sejagat</strong> - berfungsi pada setiap peranti dan penyemak imbas<br>• <strong>Sentiasa percuma</strong> - tiada pelan premium, tiada yuran tersembunyi<br>• <strong>Kemas kini biasa</strong> - dipertingkatkan secara berterusan untuk 2026 dan seterusnya<br><br>Sama ada anda seorang pencipta kandungan, seseorang yang sukakan penyelesaian media sosial, TikT, atau justTok. untuk memuat turun dan menyimpan kandungan TikTok.",
-    "cta_title": "Sedia untuk Muat Turun?",
-    "cta_desc": "Mula memuat turun video TikTok, audio MP3, tayangan slaid dan cerita sekarang. 100% percuma, tiada pendaftaran diperlukan.",
-    "cta_button": "Mula Memuat Turun",
-    "latest_posts": "Catatan Terkini",
-    "read_more": "Baca lebih lanjut",
-    "share": "Kongsi artikel ini:",
-    "related_posts_title": "Artikel Berkaitan",
-    "toc_title": "Isi Kandungan",
-    "copy_link": "Salin pautan",
-    "link_copied": "Disalin!"
-  },
-  "ios_page": {
-    "title": "TikTok Downloader untuk iOS",
-    "desc": "Muat turun video TikTok tanpa tera air terus ke iPhone atau iPad anda dalam kualiti HD. Cara terpantas untuk menyimpan video menggunakan Safari pada iOS.",
-    "placeholder": "Tampal pautan TikTok daripada iPhone anda...",
-    "meta_title": "TikTok Downloader untuk iPhone/iPad - SaveTikFast",
-    "meta_desc": "Alat percuma untuk menyimpan video TikTok tanpa tera air pada iOS (iPhone & iPad). Tiada pemasangan apl diperlukan. Muat turun dalam format MP4 atau MP3 serta-merta.",
-    "faq": {
-      "q1": "Bagaimanakah saya boleh memuat turun video TikTok pada iPhone dan iPad tanpa tera air?",
-      "a1": "Buka TikTok pada iPhone atau iPad anda, ketik Kongsi dan Salin Pautan. Buka penyemak imbas Safari atau Chrome, lawati SaveTikFast, tampal URL video TikTok dan ketik Muat turun. Video disimpan terus ke apl Foto anda dalam kualiti HD tanpa tera air. Berfungsi pada iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air dan semua peranti iOS yang menjalankan iOS 17 atau iOS 18.",
-      "q2": "Adakah SaveTikFast percuma untuk digunakan pada iPhone tanpa memasang sebarang aplikasi?",
-      "a2": "Ya, SaveTikFast adalah 100% percuma untuk pengguna iPhone dan iPad. Tiada pemasangan aplikasi dari App Store diperlukan. Pemuat turun video TikTok kami berfungsi secara langsung dalam penyemak imbas Safari, Chrome atau Firefox pada iOS. Muat turun video TikTok tanpa had tanpa tera air, tukar TikTok kepada MP3 dan simpan cerita TikTok - semuanya percuma sepenuhnya tanpa pendaftaran atau langganan diperlukan.",
-      "q3": "Bolehkah saya menyimpan video TikTok ke gulungan kamera iPhone saya dalam kualiti HD 4K?",
-      "a3": "betul-betul. SaveTikFast memuat turun video TikTok dalam kualiti tertinggi yang tersedia termasuk 720p HD, 1080p Full HD dan peleraian 4K terus ke apl Foto atau Fail iPhone anda. Kami tidak pernah memampatkan video. Kualiti yang lebih baik daripada SSSTik, SnapTik atau TikMate pada peranti iOS. Sesuai untuk menyimpan kandungan TikTok di luar talian pada iPhone untuk tontonan kemudian.",
-      "q4": "Mengapa SaveTikFast adalah pemuat turun TikTok terbaik untuk peranti iOS?",
-      "a4": "SaveTikFast ialah penjimat video TikTok terpantas untuk iPhone dan iPad dengan muat turun 3 saat, tiada isu penyingkiran tera air, sokongan HD dan 4K, pengekstrakan audio MP3, muat turun cerita dan penjimatan tayangan slaid. Tidak seperti pemuat turun iOS TikTok yang lain, kami tidak memerlukan pemasangan apl, tiada log masuk dan tiada Pintasan Apple. Berfungsi dengan sempurna pada penyemak imbas Safari merentas semua versi iOS.",
-      "q5": "Bagaimanakah cara menukar video TikTok kepada audio MP3 pada iPhone?",
-      "a5": "Salin pautan video TikTok pada iPhone anda, buka Safari atau Chrome, lawati halaman penukar SaveTikFast MP3, tampal URL dan ketik Ekstrak MP3. Fail audio dimuat turun dalam kualiti 320kbps ke apl Fail iPhone anda. Sesuai untuk mencipta nada dering iPhone daripada bunyi TikTok, menyimpan muzik TikTok yang sedang trend dan mengekstrak klip audio tular pada peranti iOS."
-    }
-  },
-  "android_page": {
-    "title": "TikTok Downloader untuk Android",
-    "desc": "Penjimat video TikTok Android terbaik! Muat turun mana-mana video TikTok tanpa tera air terus ke galeri mudah alih anda dalam format MP4.",
-    "placeholder": "Tampal pautan TikTok daripada telefon Android anda...",
-    "meta_title": "TikTok Downloader untuk Peranti Android - SaveTikFast",
-    "meta_desc": "Simpan mana-mana video TikTok tanpa logo ke galeri telefon Android anda. 100% percuma, tiada tera air, pantas dan selamat. Muat turun dalam kualiti HD.",
-    "faq": {
-      "q1": "Bagaimanakah saya boleh memuat turun video TikTok pada Android tanpa tera air?",
-      "a1": "Buka TikTok pada telefon Android anda, ketik Kongsi dan Salin Pautan. Buka penyemak imbas Chrome, Internet Samsung atau Firefox, lawati SaveTikFast, tampal URL video dan ketik Muat turun. Video TikTok disimpan ke folder Muat Turun atau Galeri anda dalam kualiti HD tanpa tera air. Berfungsi pada peranti Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus dan Huawei.",
-      "q2": "Adakah SaveTikFast serasi dengan semua telefon dan tablet Android?",
-      "a2": "Ya, SaveTikFast berfungsi pada setiap peranti Android termasuk Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia dan tablet Android. Serasi dengan Android 12, 13, 14 dan 15. Gunakan Chrome, Internet Samsung, Firefox atau mana-mana penyemak imbas mudah alih untuk memuat turun video TikTok tanpa tera air secara percuma. Tiada pemasangan APK diperlukan.",
-      "q3": "Bolehkah saya menyimpan video TikTok ke galeri Android saya dalam HD 4K?",
-      "a3": "betul-betul. SaveTikFast memuat turun video TikTok dalam HD asal, 1080p Full HD dan kualiti 4K terus ke Galeri telefon Android anda atau folder Muat Turun. Kami mengekalkan kualiti video asal tanpa pemampatan. Lebih baik daripada pemuat turun SSSTik, SnapTik atau TikMate. Sesuai untuk menyimpan kandungan TikTok di luar talian pada peranti Samsung Galaxy, Pixel atau Xiaomi.",
-      "q4": "Mengapa memilih SaveTikFast berbanding pemuat turun Android TikTok yang lain?",
-      "a4": "SaveTikFast ialah pemuat turun TikTok terpantas untuk Android dengan pemprosesan 3 saat, muat turun tanpa tera air, sokongan video HD dan 4K, penukar MP3 TikTok, penjimat cerita dan pemuat turun tayangan slaid. Tiada APK diperlukan, tiada apl Google Play diperlukan. Berfungsi dalam penyemak imbas Chrome pada Samsung Galaxy, Google Pixel, Xiaomi, OPPO dan semua telefon pintar Android tanpa pendaftaran.",
-      "q5": "Bagaimanakah cara saya mengekstrak audio MP3 daripada TikTok pada telefon Android saya?",
-      "a5": "Salin pautan video TikTok pada peranti Android anda, buka penyemak imbas Internet Chrome atau Samsung, lawati penukar MP3 SaveTikFast, tampal URL dan ketik Ekstrak MP3. Muat turun audio dalam format 320kbps berkualiti tinggi ke folder Muat Turun anda. Sesuai untuk menyimpan lagu TikTok yang sedang trend, mencipta nada dering Android dan mengekstrak bunyi viral pada telefon Samsung Galaxy dan Pixel."
-    }
-  },
-  "mac_page": {
-    "title": "Pemuat turun TikTok untuk Mac",
-    "desc": "Muat turun video TikTok berkualiti tinggi tanpa tera air pada MacBook atau iMac anda. Berfungsi dengan sempurna pada Safari dan Chrome.",
-    "placeholder": "Lepaskan pautan TikTok di sini untuk memuat turun pada Mac...",
-    "meta_title": "Pemuat Turun Video TikTok untuk Mac/MacBook (HD) - SaveTikFast",
-    "meta_desc": "Muat turun video TikTok dengan mudah tanpa tera air ke Mac anda. Penjimat dalam talian percuma yang menyokong macOS Safari, Chrome dan Firefox dalam kualiti 4K.",
-    "faq": {
-      "q1": "Bagaimanakah saya boleh memuat turun video TikTok pada Mac tanpa tera air?",
-      "a1": "Buka TikTok dalam Safari, Chrome atau Firefox pada MacBook atau iMac anda. Salin URL video TikTok dari bar alamat, lawati SaveTikFast, tampal pautan dan klik Muat turun. Video disimpan ke folder Muat Turun Mac anda dalam kualiti HD atau 4K tanpa tera air. Berfungsi pada macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac dan Mac Mini.",
-      "q2": "Adakah SaveTikFast berfungsi pada Safari dan Chrome untuk macOS?",
-      "a2": "Ya, SaveTikFast berfungsi dengan sempurna pada semua penyemak imbas Mac termasuk Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge dan Opera. Tiada sambungan pelayar atau pemasangan pemalam diperlukan. Pemuat turun video TikTok kami berjalan terus dalam penyemak imbas anda pada macOS Sonoma, Ventura dan Monterey. Muat turun video TikTok tanpa had tanpa tera air percuma sepenuhnya pada mana-mana Mac.",
-      "q3": "Bolehkah saya menyimpan video TikTok dalam kualiti 4K pada MacBook saya?",
-      "a3": "betul-betul. SaveTikFast memuat turun video TikTok dalam kualiti tertinggi yang tersedia termasuk resolusi 720p, 1080p HD Penuh, 2K dan 4K pada MacBook Pro, MacBook Air, iMac dan Mac Mini. Kami tidak pernah memampatkan atau mengurangkan kualiti video. Fail disimpan sebagai MP4 ke folder Muat Turun anda. Lebih baik daripada SSSTik atau SnapTik untuk pengguna Mac yang inginkan kualiti video premium.",
-      "q4": "Mengapa SaveTikFast adalah pemuat turun TikTok terbaik untuk komputer Mac?",
-      "a4": "SaveTikFast ialah pemuat turun video TikTok terpantas untuk Mac dengan pemprosesan segera 3 saat, penyingkiran tera air, sokongan kualiti 4K, pengekstrakan audio MP3, penjimatan cerita TikTok dan muat turun tayangan slaid. Tiada pemasangan perisian pada macOS diperlukan. Berfungsi dalam penyemak imbas Safari dan Chrome pada MacBook Pro, MacBook Air, iMac dan Mac Mini tanpa pendaftaran atau langganan.",
-      "q5": "Bagaimanakah cara saya menukar TikTok kepada MP3 pada Mac saya?",
-      "a5": "Salin URL video TikTok daripada Safari atau Chrome pada Mac anda, lawati SaveTikFast MP3 converter, tampal pautan dan klik Extract MP3. Fail audio dimuat turun dalam format 320kbps MP3 berkualiti studio ke folder Muat Turun Mac anda. Sesuai untuk menyimpan muzik TikTok yang sedang trend, mencipta senarai main dan mengekstrak bunyi pada MacBook Pro, MacBook Air dan iMac."
-    }
-  },
-  "pc_page": {
-    "title": "TikTok Downloader untuk PC",
-    "desc": "Simpan video TikTok terus ke PC atau Laptop Windows anda. Dapatkan video yang bersih dan bebas tera air dalam kelajuan yang sangat pantas.",
-    "placeholder": "Tampalkan pautan video TikTok daripada PC anda...",
-    "meta_title": "TikTok Downloader untuk Windows PC/Laptop - SaveTikFast",
-    "meta_desc": "Pemuat turun video TikTok terpantas untuk Windows PC. Simpan video TikTok tanpa had tanpa tera air ke komputer anda secara percuma.",
-    "faq": {
-      "q1": "Bagaimanakah saya boleh memuat turun video TikTok pada Windows PC tanpa tera air?",
-      "a1": "Buka TikTok dalam Chrome, Edge atau Firefox pada PC atau Laptop Windows anda. Salin URL video TikTok dari bar alamat penyemak imbas, lawati SaveTikFast, tampal pautan dan klik Muat turun. Video disimpan ke folder Muat Turun PC anda dalam kualiti HD atau 4K tanpa tera air. Berfungsi pada Windows 11, Windows 10, komputer meja dan komputer riba daripada Dell, HP, Lenovo, ASUS dan Acer.",
-      "q2": "Adakah SaveTikFast percuma untuk digunakan pada komputer Windows?",
-      "a2": "Ya, SaveTikFast adalah percuma sepenuhnya untuk pengguna PC Windows. Tiada pemasangan perisian atau muat turun aplikasi desktop diperlukan. Pemuat turun video TikTok kami berfungsi secara langsung dalam penyemak imbas Chrome, Microsoft Edge, Firefox dan Opera pada Windows 11 dan Windows 10. Muat turun video TikTok tanpa had tanpa tera air, tukar kepada MP3, simpan cerita dan muat turun tayangan slaid secara percuma.",
-      "q3": "Bolehkah saya menyimpan video TikTok dalam kualiti HD 4K pada PC Windows saya?",
-      "a3": "betul-betul. SaveTikFast memuat turun video TikTok dalam kualiti asal termasuk resolusi 720p HD, 1080p HD Penuh, 2K dan 4K terus ke folder Muat Turun PC Windows anda sebagai fail MP4. Kami tidak pernah memampatkan atau mengurangkan kualiti. Lebih unggul daripada SSSTik, SnapTik atau TikMate. Sesuai untuk menyimpan dan mengedit kandungan TikTok pada komputer meja yang menjalankan Windows 11 atau Windows 10.",
-      "q4": "Mengapa SaveTikFast adalah pemuat turun TikTok terbaik untuk PC?",
-      "a4": "SaveTikFast ialah pemuat turun video TikTok terpantas untuk Windows PC dengan pemprosesan 3 saat, tiada tera air, sokongan HD dan 4K, penukar MP3, pemuat turun cerita dan penjimat tayangan slaid. Tiada pemasangan perisian desktop diperlukan. Berfungsi dalam penyemak imbas Chrome dan Edge pada Windows 11, komputer riba dan desktop Windows 10 daripada HP, Dell, Lenovo, ASUS tanpa pendaftaran atau bayaran.",
-      "q5": "Bagaimanakah cara saya menukar TikTok kepada MP3 pada komputer Windows saya?",
-      "a5": "Salin URL video TikTok daripada Chrome atau Edge pada PC Windows anda, lawati halaman penukar MP3 SaveTikFast, tampal pautan dan klik Extract MP3. Muat turun audio dalam format MP3 320kbps berkualiti tinggi ke folder Muat Turun PC anda. Sesuai untuk menyimpan lagu TikTok, mencipta nada dering Windows, mengekstrak audio virus dan membina koleksi muzik pada komputer desktop anda."
-    }
-  }
 }

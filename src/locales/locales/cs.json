@@ -1,694 +1,711 @@
 {
-  "404": {
-    "title": "Stránka nenalezena",
-    "home_btn": "Zpět na Domovskou Stránku"
-  },
-  "meta": {
-    "title": "SaveTikFast 2026 – Nejlepší TikTok Downloader bez vodoznaku (4K)",
-    "description": "Stahujte TikTok videa bez vodoznaku zdarma v Ultra HD/4K kvalitě. Nejrychlejší TikTok Saver 2026. Ukládejte jako MP4 a MP3 na iPhone, Android a PC."
-  },
-  "common": {
-    "select_language": "Vyberte jazyk",
-    "toggle_theme": "Přepnout téma"
-  },
-  "nav": {
-    "home": "Domů",
-    "about": "O nás",
-    "blog": "Blog",
-    "contact": "Kontakt",
-    "terms": "Podmínky",
-    "privacy": "Soukromí",
-    "dmca": "DMCA",
-    "disclaimer": "Zřeknutí se odpovědnosti",
-    "tools": "Nástroje"
-  },
-  "hero": {
-    "title": "Stahovač TikTok videí",
-    "desc": "Stahujte videa z TikToku bez vodoznaku. Rychle, zdarma a v neomezené HD kvalitě."
-  },
-  "downloader": {
-    "placeholder": "Vložte odkaz na video zde...",
-    "btn_download": "Stáhnout nyní",
-    "btn_paste": "Vložit",
-    "btn_copy": "Kopírovat",
-    "btn_clear": "Vymazat",
-    "processing": "Zpracovávání...",
-    "download_video": "Stáhnout video",
-    "download_audio": "Stáhnout MP3",
-    "hd_quality": "Bez vodoznaku",
-    "download_nwm": "Stáhněte si fotografii žádný vodoznak",
-    "download_hd": "Stáhnout HD",
-    "download_story_vid": "Stáhnout příběh (video)",
-    "download_story_img": "Stáhnout příběh (obrázek)",
-    "error_busy": "Služba je zaneprázdněna, zkuste to prosím později.",
-    "download_zip": "Stáhnout vše (ZIP)",
-    "creating_zip": "Vytvářím ZIP...",
-    "save_image": "Uložit",
-    "error_wrong_type_video": "Neplatný odkaz! Použijte prosím stahování videa.",
-    "error_wrong_type_slideshow": "Neplatný odkaz! Použijte prosím stahování prezentace.",
-    "error_wrong_type_story": "Neplatný odkaz! Použijte prosím stahování příběhu.",
-    "error_invalid_link": "Neplatný odkaz. Zkontrolujte a zkuste znovu.",
-    "check_new_tab": "Otevřela se nová karta — podívej se na ni, než čekáš!",
-    "preparing_download": "Připravujeme váš soubor...",
-    "countdown_msg": "Stahování začne automaticky",
-    "modal_ad_text": "Speciální nabídka jen pro vás — klikněte pro více!",
-    "skip_download": "Přeskočit a stáhnout nyní",
-    "download_another": "Stáhnout další video",
-    "thank_you_title": "Stahování začalo!",
-    "thank_you_msg": "Zkontrolujte složku se staženými soubory"
-  },
-  "faq": {
-    "title": "Často Kladené Otázky (FAQ)",
-    "q1": "Jak stáhnout videa z TikToku bez vodoznaku?",
-    "a1": "Stahování videí z TikToku bez vodoznaku je snadné se SaveTikFast. Jednoduše zkopírujte odkaz na video z TikToku z aplikace, vložte ho do našeho pole pro stahování a klikněte na tlačítko stáhnout. Naše pokročilá technologie automaticky odstraní vodoznak TikToku a poskytne vám čistý videosoubor. Funguje na všech zařízeních včetně iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac a Windows PC. Můžete použít jakýkoli prohlížeč jako Chrome, Safari, Firefox nebo Edge. Na rozdíl od SSSTik nebo SnapTik, SaveTikFast poskytuje nejvyšší kvalitu výstupu s okamžitým zpracováním.",
-    "q2": "Je SaveTikFast zcela zdarma?",
-    "a2": "Ano, SaveTikFast je 100% zdarma a vždy zůstane zdarma. Neexistují žádné skryté poplatky, prémiové předplatné nebo denní limity stahování. Můžete stahovat neomezené množství videí z TikToku bez vodoznaku, převádět na MP3, ukládat příběhy a stahovat prezentace - vše zcela zdarma. Nevyžadujeme registraci ani přihlášení. Naše služba je podporována minimální reklamou, což nám umožňuje nabízet bezplatné stahování z TikToku milionům uživatelů po celém světě na jakémkoli zařízení.",
-    "q3": "Jaká zařízení a prohlížeče jsou podporovány?",
-    "a3": "SaveTikFast funguje prakticky na jakémkoli zařízení a prohlížeči. Podporovaná zařízení zahrnují iPhone (všechny modely včetně iPhone 15, 14, 13), telefony Android (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), tablety (iPad, Samsung Tab) a počítače (MacBook, iMac, Windows PC, Chromebook). Podporované prohlížeče zahrnují Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet a UC Browser. Není nutná instalace aplikace - vše funguje přímo ve vašem webovém prohlížeči.",
-    "q4": "Jakou kvalitu videa mohu stáhnout?",
-    "a4": "SaveTikFast stahuje videa z TikToku v nejvyšší dostupné kvalitě. To zahrnuje rozlišení 720p HD, 1080p Full HD, 2K a dokonce 4K, když původní video toto podporuje. Nikdy nekomprimujeme ani nesnižujeme kvalitu videa - dostanete přesně stejnou kvalitu jako původní nahrávka na TikTok. To dělá SaveTikFast lepším než jiné stahovače jako TikMate, SaveFrom nebo MusicallyDown, které často videa komprimují.",
-    "q5": "Je bezpečné používat SaveTikFast?",
-    "a5": "Absolutně. SaveTikFast je zcela bezpečný a zabezpečený. Používáme šifrování SSL k ochraně vašeho připojení, neukládáme žádné vaše osobní údaje a nevyžadujeme přihlášení ani registraci. Vaše stažená videa jsou okamžitě zpracována a nejsou uložena na našich serverech. Na vaše zařízení nic neinstalujeme. SaveTikFast je důvěryhodný miliony uživatelů od roku 2024 pro bezpečné stahování videí z TikToku.",
-    "q6": "V čem je SaveTikFast lepší než SSSTik nebo SnapTik?",
-    "a6": "SaveTikFast nabízí několik výhod oproti SSSTik, SnapTik, TikMate a dalším stahovačům TikToku. Naše služba je rychlejší (stahování se dokončí za 3 sekundy), poskytuje vyšší kvalitu výstupu (až 4K), má čistší rozhraní s méně reklamami, funguje spolehlivěji na všech zařízeních a nabízí další funkce jako převod MP3, stahování příběhů a extrakce prezentací. Mnoho uživatelů přechází na SaveTikFast po problémech s jinými stahovači.",
-    "q7": "Mohu stahovat videa z TikToku na iPhone?",
-    "a7": "Ano, stahování videí z TikToku na iPhone je snadné se SaveTikFast. Otevřete TikTok, zkopírujte odkaz na video, poté otevřete Safari nebo Chrome a přejděte na SaveTikFast. Vložte odkaz a klepněte na stáhnout. Video bude uloženo přímo do aplikace Fotky nebo Soubory vašeho iPhone. Funguje na všech modelech iPhone včetně iPhone 15, 14, 13, 12 a starších. Není nutná instalace aplikace - vše funguje ve vašem prohlížeči.",
-    "q8": "Mohu stahovat soukromá videa z TikToku?",
-    "a8": "SaveTikFast může stahovat pouze veřejná videa z TikToku. Soukromá videa (viditelná pouze pro tvůrce nebo schválené sledující) nemohou být stažena žádným online nástrojem kvůli nastavení soukromí TikToku. Pokud máte povolení od tvůrce, požádejte ho, aby video dočasně zveřejnil nebo ho s vámi sdílel přímo prostřednictvím vestavěných funkcí sdílení TikToku.",
-    "q9": "Jak stáhnout TikTok na Samsung nebo Android?",
-    "a9": "Stahování videí z TikToku na Samsung Galaxy nebo jakýkoli telefon Android je jednoduché. Otevřete aplikaci TikTok, klepněte na Sdílet u videa, které chcete, a zkopírujte odkaz. Poté otevřete prohlížeč Chrome, Firefox nebo Samsung Internet a navštivte SaveTikFast. Vložte odkaz do pole pro stahování a klepněte na tlačítko stáhnout. Video bude uloženo do složky Stahování nebo Galerie. Funguje na všech zařízeních Android včetně Samsung, Huawei, Xiaomi, OPPO a Google Pixel.",
-    "q10": "Proč si vybrat SaveTikFast před jinými stahovači TikToku?",
-    "a10": "SaveTikFast je nejlepší volbou pro stahování z TikToku, protože kombinujeme rychlost, kvalitu a spolehlivost. Nabízíme nejrychlejší rychlosti stahování (3 sekundy), nejvyšší kvalitu videa (až 4K), odstranění vodoznaku, převod MP3, stahování příběhů a extrakci prezentací - vše v jednom bezplatném nástroji. Naše čisté rozhraní funguje perfektně na všech zařízeních a prohlížečích. Miliony uživatelů nám důvěřují jako nejlepší alternativě k SSSTik, SnapTik, TikMate, SaveFrom a MusicallyDown."
-  },
-  "pages": {
-    "about": {
-      "title": "O nás",
-      "content": "Vítejte na SaveTikFast, předním stahovači z TikToku pro rok 2026.\n\nSaveTikFast jsme vytvořili s jediným cílem: poskytnout nejrychlejší, nejbezpečnější a nejspolehlivější způsob, jak ukládat videa z TikToku bez vodoznaků. Na rozdíl od jiných nástrojů upřednostňujeme uživatelskou zkušenost: žádné otravné reklamy, žádná registrace a žádná instalace softwaru.\n\nNaše technologie zaručuje, že získáte originální kvalitu videa (až 4K) při odstranění překrývajících se log."
+    "404": {
+        "title": "Stránka nenalezena",
+        "home_btn": "Zpět na Domovskou Stránku"
     },
-    "contact": {
-      "title": "Kontaktujte nás",
-      "content": "Vážíme si vaší zpětné vazby a jsme tu, abychom vám pomohli.\n\nPokud narazíte na technické problémy, máte návrhy na zlepšení nebo obchodní dotazy, kontaktujte náš tým podpory:\n\n📧 E-mail: support@savetik-fast.xyz\n\nSnažíme se odpovědět na všechny dotazy do 24 hodin."
-    },
-    "terms": {
-      "title": "Podmínky použití",
-      "content": "Používáním SaveTikFast souhlasíte s následujícími podmínkami:\n\n1. Osobní použití:\nNaše služba je určena pro osobní a nekomerční použití. Videa si můžete stáhnout pro sledování offline.\n\n2. Duševní vlastnictví:\nNevlastníme stahovaný obsah. Všechna práva patří původním tvůrcům na TikToku. Souhlasíte s tím, že nebudete obsah používat způsobem, který porušuje autorská práva.\n\n3. Odpovědnost:\nSaveTikFast neodpovídá za to, jak používáte stažený materiál. Uživatel nese plnou odpovědnost za jakékoli porušení autorských práv."
-    },
-    "privacy": {
-      "title": "Zásady ochrany osobních údajů",
-      "content": "Vaše soukromí je pro nás klíčové.\n\nSběr dat:\nNeshromažďujeme osobní údaje, jako jsou jména nebo e-maily. Můžeme používat anonymní analytiku (jako soubory cookie) ke zlepšení výkonu webu.\n\nŽádné ukládání videa:\nSaveTikFast nehostuje ani neukládá žádná videa na svých serverech. Veškeré zpracování souborů probíhá okamžitě."
-    },
-    "dmca": {
-      "title": "Zásady DMCA",
-      "content": "SaveTikFast respektuje práva duševního vlastnictví ostatních.\n\nPusobíme jako poskytovatel technických služeb a nehostujeme obsah chráněný autorským právem. Všechna videa jsou poskytována přímo ze serverů třetích stran (TikTok).\n\nPokud se domníváte, že vaše dílo chráněné autorským právem bylo v naší službě zobrazeno bez povolení, zašlete prosím formální oznámení DMCA na adresu: support@savetik-fast.xyz."
-    },
-    "disclaimer": {
-      "title": "Zřeknutí se odpovědnosti",
-      "content": "1. Žádné přidružení:\nSaveTikFast je nezávislý nástroj a NENÍ přidružen, spojen, autorizován, schválen ani žádným způsobem oficiálně spojen s TikTok Inc. nebo ByteDance Ltd.\n\n2. Ochranné známky:\nNázvy 'TikTok' a jeho loga jsou registrované ochranné známky příslušných vlastníků.\n\n3. Obsah:\nNemáme žádnou kontrolu nad obsahem hostovaným na serverech TikTok."
-    }
-  },
-  "footer": {
-    "rights": "© 2026 SaveTikFast. Všechna práva vyhrazena."
-  },
-  "features": {
-    "title": "Klíčové funkce",
-    "no_watermark": {
-      "title": "Bez Vodoznaku",
-      "desc": "Stahujte videa z TikToku bez vodoznaku v původní HD kvalitě. SaveTikFast automaticky odstraní logo TikToku a poskytne vám čistší videa než SSSTik, SnapTik nebo TikMate. Perfektní pro opětovné zveřejnění na Instagram, YouTube Shorts nebo uložení do galerie."
-    },
-    "fast": {
-      "title": "Bleskově Rychlé",
-      "desc": "Nejrychlejší stahovač videí z TikToku online. Uložte jakékoli video z TikToku za pouhé 3 sekundy na iPhone, Android, Samsung, Huawei, iPad, PC nebo Mac. Naše servery jsou optimalizovány pro rychlost, díky čemuž jsme rychlejší než SaveFrom a MusicallyDown."
-    },
-    "quality": {
-      "title": "Kvalita HD &amp; 4K",
-      "desc": "Stahujte videa z TikToku v nejvyšší dostupné kvalitě - 720p, 1080p Full HD, 2K a dokonce 4K, když je k dispozici. Zachováváme původní kvalitu videa bez komprese, na rozdíl od jiných stahovačů TikToku."
-    },
-    "device": {
-      "title": "Všechna Zařízení Podporována",
-      "desc": "Funguje perfektně na každém zařízení - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC a Chromebook. Není nutná instalace aplikace."
-    },
-    "free": {
-      "title": "100% Zdarma Navždy",
-      "desc": "Neomezené stahování videí z TikToku bez skrytých poplatků, bez nutnosti registrace a bez denních limitů. SaveTikFast je zcela zdarma a zůstane zdarma pro všechny uživatele po celém světě."
-    },
-    "secure": {
-      "title": "Soukromé &amp; Bezpečné",
-      "desc": "Vaše soukromí je důležité. Neukládáme vaše data, nevyžadujeme přihlášení a nesledujeme vaše stahování. Bezpečné a anonymní stahování videí z TikToku se šifrováním SSL."
-    },
-    "browser": {
-      "title": "Všechny Prohlížeče",
-      "desc": "Funguje okamžitě v Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet a UC Browser. Není potřeba žádné rozšíření nebo plugin - stačí vložit a stáhnout."
-    },
-    "batch": {
-      "title": "Vícenásobné Stahování",
-      "desc": "Rychle ukládejte více videí z TikToku. Stáhněte celou kolekci svého oblíbeného tvůrce rychleji než jakýkoli jiný nástroj. Hromadné stahování lepší než SSSTik nebo SnapTik."
-    }
-  },
-  "how_to": {
-    "title": "Jak stahovat videa z TikToku bez vodoznaku",
-    "step1": "Zkopírujte odkaz na video TikTok, které chcete uložit.",
-    "step2": "Vložte odkaz do pole pro stahování v horní části této stránky.",
-    "step3": "Klikněte na tlačítko „Stáhnout“ a vaše video se okamžitě uloží.",
-    "step1_title": "Kopírovat odkaz",
-    "step2_title": "Vložit URL",
-    "step3_title": "Stáhnout"
-  },
-  "tools": {
-    "backToDownloader": "Zpět na stahovač",
     "meta": {
-      "title": "Bezplatné nástroje – Komprese obrázků, konverze a QR kódy",
-      "description": "Bezplatné nástroje v prohlížeči: komprimujte obrázky, převádějte formáty (WebP, JPG, PNG) a generujte QR kódy. Bez nahrávání souborů ani registrace."
+        "title": "SaveTikFast 2026 – Nejlepší TikTok Downloader bez vodoznaku (4K)",
+        "description": "Stahujte TikTok videa bez vodoznaku zdarma v Ultra HD/4K kvalitě. Nejrychlejší TikTok Saver 2026. Ukládejte jako MP4 a MP3 na iPhone, Android a PC."
+    },
+    "common": {
+        "select_language": "Vyberte jazyk",
+        "toggle_theme": "Přepnout téma"
+    },
+    "nav": {
+        "home": "Domů",
+        "about": "O nás",
+        "blog": "Blog",
+        "contact": "Kontakt",
+        "terms": "Podmínky",
+        "privacy": "Soukromí",
+        "dmca": "DMCA",
+        "disclaimer": "Zřeknutí se odpovědnosti",
+        "tools": "Nástroje"
     },
     "hero": {
-      "title": "Bezplatné online nástroje pro obrázky a QR",
-      "desc": "Komprimujte obrázky, převádějte formáty a generujte QR kódy — vše zpracováno lokálně ve vašem prohlížeči. 100% soukromí."
+        "title": "Stahovač TikTok videí",
+        "desc": "Stahujte videa z TikToku bez vodoznaku. Rychle, zdarma a v neomezené HD kvalitě."
     },
-    "tabs": {
-      "compressor": "Komprese",
-      "converter": "Konvertor",
-      "qrcode": "QR Generátor",
-      "engagement": "Zapojení",
-      "money": "Příjmy",
-      "font": "Písma",
-      "hashtag": "Hashtagy"
+    "downloader": {
+        "placeholder": "Vložte odkaz na video zde...",
+        "btn_download": "Stáhnout nyní",
+        "btn_paste": "Vložit",
+        "btn_copy": "Kopírovat",
+        "btn_clear": "Vymazat",
+        "processing": "Zpracovávání...",
+        "download_video": "Stáhnout video",
+        "download_audio": "Stáhnout MP3",
+        "hd_quality": "Bez vodoznaku",
+        "download_nwm": "Stáhněte si fotografii žádný vodoznak",
+        "download_hd": "Stáhnout HD",
+        "download_story_vid": "Stáhnout příběh (video)",
+        "download_story_img": "Stáhnout příběh (obrázek)",
+        "error_busy": "Služba je zaneprázdněna, zkuste to prosím později.",
+        "download_zip": "Stáhnout vše (ZIP)",
+        "creating_zip": "Vytvářím ZIP...",
+        "save_image": "Uložit",
+        "error_wrong_type_video": "Neplatný odkaz! Použijte prosím stahování videa.",
+        "error_wrong_type_slideshow": "Neplatný odkaz! Použijte prosím stahování prezentace.",
+        "error_wrong_type_story": "Neplatný odkaz! Použijte prosím stahování příběhu.",
+        "error_invalid_link": "Neplatný odkaz. Zkontrolujte a zkuste znovu.",
+        "check_new_tab": "Otevřela se nová karta — podívej se na ni, než čekáš!",
+        "preparing_download": "Připravujeme váš soubor...",
+        "countdown_msg": "Stahování začne automaticky",
+        "modal_ad_text": "Speciální nabídka jen pro vás — klikněte pro více!",
+        "skip_download": "Přeskočit a stáhnout nyní",
+        "download_another": "Stáhnout další video",
+        "thank_you_title": "Stahování začalo!",
+        "thank_you_msg": "Zkontrolujte složku se staženými soubory"
     },
-    "dropzone": {
-      "text": "Přetáhněte obrázek sem",
-      "hint": "nebo klikněte pro výběr (JPG, PNG, WebP - max. 15MB)",
-      "hint_convert": "nebo klikněte pro výběr (JPG, PNG, WebP, GIF, BMP)"
+    "faq": {
+        "title": "Často Kladené Otázky (FAQ)",
+        "q1": "Jak stáhnout videa z TikToku bez vodoznaku?",
+        "a1": "Stahování videí z TikToku bez vodoznaku je snadné se SaveTikFast. Jednoduše zkopírujte odkaz na video z TikToku z aplikace, vložte ho do našeho pole pro stahování a klikněte na tlačítko stáhnout. Naše pokročilá technologie automaticky odstraní vodoznak TikToku a poskytne vám čistý videosoubor. Funguje na všech zařízeních včetně iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac a Windows PC. Můžete použít jakýkoli prohlížeč jako Chrome, Safari, Firefox nebo Edge. Na rozdíl od SSSTik nebo SnapTik, SaveTikFast poskytuje nejvyšší kvalitu výstupu s okamžitým zpracováním.",
+        "q2": "Je SaveTikFast zcela zdarma?",
+        "a2": "Ano, SaveTikFast je 100% zdarma a vždy zůstane zdarma. Neexistují žádné skryté poplatky, prémiové předplatné nebo denní limity stahování. Můžete stahovat neomezené množství videí z TikToku bez vodoznaku, převádět na MP3, ukládat příběhy a stahovat prezentace - vše zcela zdarma. Nevyžadujeme registraci ani přihlášení. Naše služba je podporována minimální reklamou, což nám umožňuje nabízet bezplatné stahování z TikToku milionům uživatelů po celém světě na jakémkoli zařízení.",
+        "q3": "Jaká zařízení a prohlížeče jsou podporovány?",
+        "a3": "SaveTikFast funguje prakticky na jakémkoli zařízení a prohlížeči. Podporovaná zařízení zahrnují iPhone (všechny modely včetně iPhone 15, 14, 13), telefony Android (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), tablety (iPad, Samsung Tab) a počítače (MacBook, iMac, Windows PC, Chromebook). Podporované prohlížeče zahrnují Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet a UC Browser. Není nutná instalace aplikace - vše funguje přímo ve vašem webovém prohlížeči.",
+        "q4": "Jakou kvalitu videa mohu stáhnout?",
+        "a4": "SaveTikFast stahuje videa z TikToku v nejvyšší dostupné kvalitě. To zahrnuje rozlišení 720p HD, 1080p Full HD, 2K a dokonce 4K, když původní video toto podporuje. Nikdy nekomprimujeme ani nesnižujeme kvalitu videa - dostanete přesně stejnou kvalitu jako původní nahrávka na TikTok. To dělá SaveTikFast lepším než jiné stahovače jako TikMate, SaveFrom nebo MusicallyDown, které často videa komprimují.",
+        "q5": "Je bezpečné používat SaveTikFast?",
+        "a5": "Absolutně. SaveTikFast je zcela bezpečný a zabezpečený. Používáme šifrování SSL k ochraně vašeho připojení, neukládáme žádné vaše osobní údaje a nevyžadujeme přihlášení ani registraci. Vaše stažená videa jsou okamžitě zpracována a nejsou uložena na našich serverech. Na vaše zařízení nic neinstalujeme. SaveTikFast je důvěryhodný miliony uživatelů od roku 2024 pro bezpečné stahování videí z TikToku.",
+        "q6": "V čem je SaveTikFast lepší než SSSTik nebo SnapTik?",
+        "a6": "SaveTikFast nabízí několik výhod oproti SSSTik, SnapTik, TikMate a dalším stahovačům TikToku. Naše služba je rychlejší (stahování se dokončí za 3 sekundy), poskytuje vyšší kvalitu výstupu (až 4K), má čistší rozhraní s méně reklamami, funguje spolehlivěji na všech zařízeních a nabízí další funkce jako převod MP3, stahování příběhů a extrakce prezentací. Mnoho uživatelů přechází na SaveTikFast po problémech s jinými stahovači.",
+        "q7": "Mohu stahovat videa z TikToku na iPhone?",
+        "a7": "Ano, stahování videí z TikToku na iPhone je snadné se SaveTikFast. Otevřete TikTok, zkopírujte odkaz na video, poté otevřete Safari nebo Chrome a přejděte na SaveTikFast. Vložte odkaz a klepněte na stáhnout. Video bude uloženo přímo do aplikace Fotky nebo Soubory vašeho iPhone. Funguje na všech modelech iPhone včetně iPhone 15, 14, 13, 12 a starších. Není nutná instalace aplikace - vše funguje ve vašem prohlížeči.",
+        "q8": "Mohu stahovat soukromá videa z TikToku?",
+        "a8": "SaveTikFast může stahovat pouze veřejná videa z TikToku. Soukromá videa (viditelná pouze pro tvůrce nebo schválené sledující) nemohou být stažena žádným online nástrojem kvůli nastavení soukromí TikToku. Pokud máte povolení od tvůrce, požádejte ho, aby video dočasně zveřejnil nebo ho s vámi sdílel přímo prostřednictvím vestavěných funkcí sdílení TikToku.",
+        "q9": "Jak stáhnout TikTok na Samsung nebo Android?",
+        "a9": "Stahování videí z TikToku na Samsung Galaxy nebo jakýkoli telefon Android je jednoduché. Otevřete aplikaci TikTok, klepněte na Sdílet u videa, které chcete, a zkopírujte odkaz. Poté otevřete prohlížeč Chrome, Firefox nebo Samsung Internet a navštivte SaveTikFast. Vložte odkaz do pole pro stahování a klepněte na tlačítko stáhnout. Video bude uloženo do složky Stahování nebo Galerie. Funguje na všech zařízeních Android včetně Samsung, Huawei, Xiaomi, OPPO a Google Pixel.",
+        "q10": "Proč si vybrat SaveTikFast před jinými stahovači TikToku?",
+        "a10": "SaveTikFast je nejlepší volbou pro stahování z TikToku, protože kombinujeme rychlost, kvalitu a spolehlivost. Nabízíme nejrychlejší rychlosti stahování (3 sekundy), nejvyšší kvalitu videa (až 4K), odstranění vodoznaku, převod MP3, stahování příběhů a extrakci prezentací - vše v jednom bezplatném nástroji. Naše čisté rozhraní funguje perfektně na všech zařízeních a prohlížečích. Miliony uživatelů nám důvěřují jako nejlepší alternativě k SSSTik, SnapTik, TikMate, SaveFrom a MusicallyDown."
     },
-    "btn": {
-      "download": "Stáhnout nyní",
-      "downloadPng": "Stáhnout PNG"
-    },
-    "compressor": {
-      "title": "Komprese obrázků",
-      "desc": "Zmenšete velikost souboru obrázku bez ztráty kvality. Podporuje JPG, PNG a WebP do 15MB.",
-      "quality": "Kvalita komprese",
-      "maxWidth": "Maximální šířka (px)",
-      "btn": "Komprimovat",
-      "howto": {
-        "title": "Jak komprimovat obrázky online",
-        "step1": {
-          "title": "Nahrát obrázek",
-          "desc": "Přetáhněte nebo klikněte a vyberte obrázek JPG, PNG nebo WebP (až 15MB)."
+    "pages": {
+        "about": {
+            "title": "O nás",
+            "content": "Vítejte na SaveTikFast, předním stahovači z TikToku pro rok 2026.\n\nSaveTikFast jsme vytvořili s jediným cílem: poskytnout nejrychlejší, nejbezpečnější a nejspolehlivější způsob, jak ukládat videa z TikToku bez vodoznaků. Na rozdíl od jiných nástrojů upřednostňujeme uživatelskou zkušenost: žádné otravné reklamy, žádná registrace a žádná instalace softwaru.\n\nNaše technologie zaručuje, že získáte originální kvalitu videa (až 4K) při odstranění překrývajících se log."
         },
-        "step2": {
-          "title": "Upravit nastavení",
-          "desc": "Nastavte požadovanou úroveň kvality (10-100 %) a maximální šířku."
+        "contact": {
+            "title": "Kontaktujte nás",
+            "content": "Vážíme si vaší zpětné vazby a jsme tu, abychom vám pomohli.\n\nPokud narazíte na technické problémy, máte návrhy na zlepšení nebo obchodní dotazy, kontaktujte náš tým podpory:\n\n📧 E-mail: support@savetik-fast.xyz\n\nSnažíme se odpovědět na všechny dotazy do 24 hodin."
         },
-        "step3": {
-          "title": "Stáhnout",
-          "desc": "Klikněte na komprimovat a okamžitě stáhněte optimalizovaný obrázek."
+        "terms": {
+            "title": "Podmínky použití",
+            "content": "Používáním SaveTikFast souhlasíte s následujícími podmínkami:\n\n1. Osobní použití:\nNaše služba je určena pro osobní a nekomerční použití. Videa si můžete stáhnout pro sledování offline.\n\n2. Duševní vlastnictví:\nNevlastníme stahovaný obsah. Všechna práva patří původním tvůrcům na TikToku. Souhlasíte s tím, že nebudete obsah používat způsobem, který porušuje autorská práva.\n\n3. Odpovědnost:\nSaveTikFast neodpovídá za to, jak používáte stažený materiál. Uživatel nese plnou odpovědnost za jakékoli porušení autorských práv."
+        },
+        "privacy": {
+            "title": "Zásady ochrany osobních údajů",
+            "content": "Vaše soukromí je pro nás klíčové.\n\nSběr dat:\nNeshromažďujeme osobní údaje, jako jsou jména nebo e-maily. Můžeme používat anonymní analytiku (jako soubory cookie) ke zlepšení výkonu webu.\n\nŽádné ukládání videa:\nSaveTikFast nehostuje ani neukládá žádná videa na svých serverech. Veškeré zpracování souborů probíhá okamžitě."
+        },
+        "dmca": {
+            "title": "Zásady DMCA",
+            "content": "SaveTikFast respektuje práva duševního vlastnictví ostatních.\n\nPusobíme jako poskytovatel technických služeb a nehostujeme obsah chráněný autorským právem. Všechna videa jsou poskytována přímo ze serverů třetích stran (TikTok).\n\nPokud se domníváte, že vaše dílo chráněné autorským právem bylo v naší službě zobrazeno bez povolení, zašlete prosím formální oznámení DMCA na adresu: support@savetik-fast.xyz."
+        },
+        "disclaimer": {
+            "title": "Zřeknutí se odpovědnosti",
+            "content": "1. Žádné přidružení:\nSaveTikFast je nezávislý nástroj a NENÍ přidružen, spojen, autorizován, schválen ani žádným způsobem oficiálně spojen s TikTok Inc. nebo ByteDance Ltd.\n\n2. Ochranné známky:\nNázvy 'TikTok' a jeho loga jsou registrované ochranné známky příslušných vlastníků.\n\n3. Obsah:\nNemáme žádnou kontrolu nad obsahem hostovaným na serverech TikTok."
         }
-      },
-      "seo": {
-        "title": "Proč komprimovat obrázky?",
-        "p1": "Komprese obrázků je nezbytná pro výkon webu, rychlejší načítání a nižší využití šířky pásma. Náš bezplatný kompresor používá pokročilé algoritmy ke zmenšení velikosti souborů při zachování vizuální kvality.",
-        "p2": "Výhody komprese obrázků:",
-        "benefit1": "Rychlejší načítání webu (zlepšuje SEO)",
-        "benefit2": "Nižší náklady na úložiště a přenos dat",
-        "benefit3": "Lepší uživatelská zkušenost na mobilních zařízeních",
-        "benefit4": "Optimalizované obrázky pro sociální sítě",
-        "p3": "Veškeré zpracování probíhá ve vašem prohlížeči — vaše obrázky se nikdy nenahrávají na žádný server, což zajišťuje naprosté soukromí a bezpečnost."
-      },
-      "faq": {
-        "title": "Často kladené otázky",
-        "q1": "Nahrává se můj obrázek na server?",
-        "a1": "Ne! Veškerá komprese probíhá přímo ve vašem prohlížeči. Vaše obrázky nikdy neopustí vaše zařízení.",
-        "q2": "Které formáty jsou podporovány?",
-        "a2": "Podporujeme formáty JPG/JPEG, PNG a WebP do velikosti 15MB.",
-        "q3": "O kolik mohu zmenšit velikost souboru?",
-        "a3": "Obvykle o 50-80 % v závislosti na původním obrázku a zvoleném nastavení kvality."
-      }
     },
-    "converter": {
-      "title": "Konvertor formátů obrázků",
-      "desc": "Okamžitě převádějte obrázky mezi formáty JPG, PNG a WebP ve svém prohlížeči.",
-      "output": "Výstupní formát",
-      "quality": "Výstupní kvalita",
-      "btn": "Převést obrázek",
-      "howto": {
-        "title": "Jak převést formáty obrázků",
-        "step1": {
-          "title": "Vybrat obrázek",
-          "desc": "Nahrajte jakýkoli obrázek (podporovány jsou JPG, PNG, WebP, GIF, BMP)."
-        },
-        "step2": {
-          "title": "Zvolit formát",
-          "desc": "Vyberte požadovaný výstupní formát (WebP, JPG nebo PNG)."
-        },
-        "step3": {
-          "title": "Převést a uložit",
-          "desc": "Klikněte na převést a okamžitě stáhněte nový obrázek."
-        }
-      },
-      "seo": {
-        "title": "Porozumění formátům obrázků",
-        "p1": "Výběr správného formátu je klíčový pro výkon a kvalitu webu. Zde je srovnání:",
-        "webp": "Moderní formát od Googlu nabízející o 25-35 % menší velikost souboru než JPG/PNG při podobné kvalitě. Nejlepší pro web.",
-        "jpg": "Ideální pro fotografie a složité obrázky s mnoha barvami. Používá ztrátovou kompresi.",
-        "png": "Perfektní pro obrázky vyžadující průhlednost nebo ostré hrany (loga, grafika). Bezstrátová komprese.",
-        "p2": "Náš konvertor používá HTML5 Canvas API pro okamžitý převod na straně klienta. Vaše obrázky nikdy neopustí zařízení."
-      },
-      "faq": {
-        "title": "Často kladené otázky",
-        "q1": "Proč převádět na WebP?",
-        "a1": "WebP nabízí o 25-35 % menší velikost souboru než JPG/PNG při podobné kvalitě, což zrychluje váš web.",
-        "q2": "Ztratím kvalitu obrazu?",
-        "a2": "Kvalitu ovládáte posuvníkem. Vyšší hodnoty zachovají více detailů, ale soubor bude větší.",
-        "q3": "Mohu převádět animované GIFy?",
-        "a3": "V současnosti budou animované GIFy převedeny na statický obrázek (první snímek)."
-      }
-    },
-    "qrcode": {
-      "title": "Generátor QR kódů",
-      "desc": "Okamžitě generujte QR kódy ve vysokém rozlišení pro URL, text nebo jakýkoli obsah.",
-      "input": "Text nebo URL",
-      "placeholder": "https://example.com nebo jakýkoli text",
-      "size": "Velikost QR kódu",
-      "color": "Barva QR kódu",
-      "btn": "Generovat QR kód",
-      "howto": {
-        "title": "Jak generovat QR kódy",
-        "step1": {
-          "title": "Zadat obsah",
-          "desc": "Zadejte URL, text, telefonní číslo nebo jakýkoli obsah, který chcete zakódovat."
-        },
-        "step2": {
-          "title": "Přizpůsobit",
-          "desc": "Zvolte preferovanou velikost a barvu QR kódu."
-        },
-        "step3": {
-          "title": "Generovat a stáhnout",
-          "desc": "Klikněte na generovat a stáhněte si QR kód ve vysokém rozlišení jako PNG."
-        }
-      },
-      "seo": {
-        "title": "Využití QR kódů",
-        "p1": "QR kódy se staly nezbytnými pro firmy i jednotlivce. Mezi běžné případy patří:",
-        "use1": "URL webu - okamžité přesměrování uživatelů",
-        "use2": "Vizitky - digitální sdílení kontaktních údajů",
-        "use3": "Obaly produktů - odkazy na manuály nebo podporu",
-        "use4": "Marketingové materiály - sledování zapojení do kampaně",
-        "use5": "Menu v restauracích - bezkontaktní přístup k lístku",
-        "use6": "Vstupenky - rychlé ověření vstupu",
-        "p2": "Náš generátor vytváří kódy ve vysokém rozlišení, které spolehlivě naskenujete na jakémkoli zařízení."
-      },
-      "faq": {
-        "title": "Často kladené otázky",
-        "q1": "Co mohu zakódovat do QR kódu?",
-        "a1": "URL, prostý text, telefonní čísla, e-mailové adresy, přihlašovací údaje k WiFi a další.",
-        "q2": "Jakou velikost mám zvolit?",
-        "a2": "256px je dobré pro digitální použití. Pro tisk zvolte 512px nebo 1024px.",
-        "q3": "Mají QR kódy expiraci?",
-        "a3": "Ne! Zde generované QR kódy jsou statické a nikdy nevyprší. Obsahují data přímo v sobě."
-      }
-    },
-    "engagement": {
-      "title": "TikTok kalkulačka zapojení",
-      "desc": "Spočítejte si míru zapojení na základě lajků, komentářů a sdílení.",
-      "followers": "Sledující",
-      "likes": "Lajky",
-      "comments": "Komentáře",
-      "shares": "Sdílení",
-      "btn": "Spočítat nyní",
-      "result": "Míra zapojení",
-      "excellent": "Vynikající! 🚀",
-      "good": "Dobré 👍",
-      "poor": "Ke zlepšení 📉"
-    },
-    "money": {
-      "title": "TikTok kalkulačka příjmů",
-      "desc": "Odhadněte potenciální příjmy ze zhlédnutí vašich videí.",
-      "views": "Zadejte počet zhlédnutí",
-      "btn": "Spočítat příjmy",
-      "result": "Odhadované příjmy"
-    },
-    "font": {
-      "title": "TikTok generátor písem",
-      "desc": "Vytvořte jedinečné styly písem pro svůj profil a popisky videí.",
-      "placeholder": "Sem napište svůj text...",
-      "copy": "Kopírovat"
-    },
-    "hashtag": {
-      "title": "TikTok generátor hashtagů",
-      "desc": "Najděte a generujte trendy hashtagy pro svá videa.",
-      "btn": "Generovat hashtagy",
-      "copy": "Kopírovat vše"
-    },
-    "progress": {
-      "compressing": "Komprimuji obrázek...",
-      "converting": "Převádím obrázek..."
-    },
-    "result": {
-      "success": "Komprese dokončena!",
-      "converted": "Převod dokončen!",
-      "qrReady": "Váš QR kód je připraven!"
-    },
-    "stats": {
-      "original": "Původní velikost",
-      "compressed": "Konečná velikost",
-      "saved": "Ušetřeno",
-      "originalFormat": "Původní formát",
-      "newFormat": "Nový formát",
-      "newSize": "Nová velikost"
-    },
-    "preview": {
-      "before": "Před",
-      "after": "Po",
-      "original": "Originál",
-      "converted": "Převedeno"
-    }
-  },
-  "slideshow_page": {
-    "meta_title": "TikTok Slideshow Downloader – Fotky v HD bez vodoznaku zdarma",
-    "meta_desc": "Stahujte fotoprezentace a galerie z TikToku ve HD kvalitě bez vodoznaku. Uložte všechny obrázky z libovolného příspěvku okamžitě. Zdarma, rychle, bez registrace.",
-    "title": "Stahovač Prezentací TikTok",
-    "desc": "Uložte foto karusely ve vysoké kvalitě.",
-    "placeholder": "Vložte odkaz zde...",
-    "btn_download": "Stáhnout Obrázky",
-    "about_title": "Stahovač Fotek TikTok",
-    "about_content": "Ukládejte prezentace fotek z TikToku v originální HD kvalitě bez vodoznaků.",
-    "how_to": {
-      "title": "Jak stahovat",
-      "step1": "Zkopírujte odkaz TikTok.",
-      "step2": "Vložte odkaz výše.",
-      "step3": "Klikněte na Stáhnout."
+    "footer": {
+        "rights": "© 2026 SaveTikFast. Všechna práva vyhrazena."
     },
     "features": {
-      "all": {
-        "title": "Všechny Fotky Najednou",
-        "desc": "Stáhněte všechny obrázky prezentace jedním kliknutím. SaveTikFast extrahuje každou fotku z foto karuselů TikTok a uloží je jako pohodlný ZIP soubor. Rychlejší než ruční ukládání každého obrázku."
-      },
-      "quality": {
-        "title": "Původní Rozlišení",
-        "desc": "Ukládejte fotky prezentace v plném původním rozlišení bez komprese. Získejte obrázky nejvyšší kvality přesně tak, jak je tvůrce nahrál na TikTok."
-      },
-      "audio": {
-        "title": "S Audio Na Pozadí",
-        "desc": "Stahujte prezentace TikTok s hudbu na pozadí včetně. Získejte jak obrázky, tak audio stopu společně. Perfektní pro zachování kompletního zážitku z prezentace."
-      },
-      "fast": {
-        "title": "Bleskově Rychlé",
-        "desc": "Extrahujte všechny fotky prezentace za pouhé 3 sekundy. Nejrychlejší stahovač prezentací TikTok dostupný - rychlejší než SSSTik, SnapTik nebo jakýkoli jiný nástroj."
-      },
-      "device": {
-        "title": "Univerzální Kompatibilita",
-        "desc": "Funguje na iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook. Stahujte prezentace TikTok na jakémkoli zařízení s Chrome, Safari, Firefox nebo Edge."
-      },
-      "free": {
-        "title": "Vždy Zdarma",
-        "desc": "Neomezená stahování prezentací bez poplatků, bez registrace a bez denních limitů. Stahovač prezentací SaveTikFast je zcela zdarma navždy."
-      },
-      "nowatermark": {
-        "title": "Bez Vodoznaku",
-        "desc": "Stahujte obrázky prezentace bez vodoznaků TikTok. Čisté fotky připravené pro vaši galerii, Instagram, Pinterest nebo jakoukoli jinou platformu."
-      },
-      "browser": {
-        "title": "Jakýkoli Prohlížeč",
-        "desc": "Bez potřeby aplikace. Stahujte prezentace TikTok přímo v Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet. Funguje na mobilních i desktopových prohlížečích."
-      }
+        "title": "Klíčové funkce",
+        "no_watermark": {
+            "title": "Bez Vodoznaku",
+            "desc": "Stahujte videa z TikToku bez vodoznaku v původní HD kvalitě. SaveTikFast automaticky odstraní logo TikToku a poskytne vám čistší videa než SSSTik, SnapTik nebo TikMate. Perfektní pro opětovné zveřejnění na Instagram, YouTube Shorts nebo uložení do galerie."
+        },
+        "fast": {
+            "title": "Bleskově Rychlé",
+            "desc": "Nejrychlejší stahovač videí z TikToku online. Uložte jakékoli video z TikToku za pouhé 3 sekundy na iPhone, Android, Samsung, Huawei, iPad, PC nebo Mac. Naše servery jsou optimalizovány pro rychlost, díky čemuž jsme rychlejší než SaveFrom a MusicallyDown."
+        },
+        "quality": {
+            "title": "Kvalita HD &amp; 4K",
+            "desc": "Stahujte videa z TikToku v nejvyšší dostupné kvalitě - 720p, 1080p Full HD, 2K a dokonce 4K, když je k dispozici. Zachováváme původní kvalitu videa bez komprese, na rozdíl od jiných stahovačů TikToku."
+        },
+        "device": {
+            "title": "Všechna Zařízení Podporována",
+            "desc": "Funguje perfektně na každém zařízení - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC a Chromebook. Není nutná instalace aplikace."
+        },
+        "free": {
+            "title": "100% Zdarma Navždy",
+            "desc": "Neomezené stahování videí z TikToku bez skrytých poplatků, bez nutnosti registrace a bez denních limitů. SaveTikFast je zcela zdarma a zůstane zdarma pro všechny uživatele po celém světě."
+        },
+        "secure": {
+            "title": "Soukromé &amp; Bezpečné",
+            "desc": "Vaše soukromí je důležité. Neukládáme vaše data, nevyžadujeme přihlášení a nesledujeme vaše stahování. Bezpečné a anonymní stahování videí z TikToku se šifrováním SSL."
+        },
+        "browser": {
+            "title": "Všechny Prohlížeče",
+            "desc": "Funguje okamžitě v Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet a UC Browser. Není potřeba žádné rozšíření nebo plugin - stačí vložit a stáhnout."
+        },
+        "batch": {
+            "title": "Vícenásobné Stahování",
+            "desc": "Rychle ukládejte více videí z TikToku. Stáhněte celou kolekci svého oblíbeného tvůrce rychleji než jakýkoli jiný nástroj. Hromadné stahování lepší než SSSTik nebo SnapTik."
+        }
     },
-    "faq": {
-      "q1": "Jak stáhnout prezentace TikTok?",
-      "a1": "Stahování foto prezentací TikTok je snadné s SaveTikFast. Zkopírujte odkaz na prezentaci z TikTok, vložte ho do našeho stahovače prezentací a klikněte na stáhnout. Všechny obrázky budou extrahovány a staženy společně - buď jako jednotlivé fotky nebo pohodlný ZIP soubor. Funguje na iPhone, Android, Samsung, iPad, Mac, Windows pomocí jakéhokoli prohlížeče.",
-      "q2": "Mohu stáhnout všechny fotky prezentace najednou?",
-      "a2": "Ano! SaveTikFast stahuje všechny fotky prezentace TikTok jedním kliknutím. Není třeba ukládat každý obrázek ručně. Náš nástroj extrahuje každou fotku z karuselu a zabalí je dohromady. Pro prezentace s mnoha obrázky poskytujeme ZIP soubor pro snadné stahování. Mnohem rychlejší než jiné metody.",
-      "q3": "Stahuje SaveTikFast také audio prezentace?",
-      "a3": "Ano, SaveTikFast může stahovat prezentace TikTok s hudbu na pozadí včetně. Dostanete jak obrázky, tak audio stopu, která se přehrává s prezentací. To zachovává kompletní zážitek z prezentace přesně tak, jak tvůrce zamýšlel.",
-      "q4": "Jakou kvalitu mají stažené obrázky prezentace?",
-      "a4": "SaveTikFast extrahuje fotky prezentace TikTok v plném původním rozlišení. Nekomprimujeme ani nesnižujeme kvalitu obrázku. Získáte přesně stejné vysoce kvalitní fotky nahrané tvůrcem - perfektní pro ukládání, sdílení nebo tisk.",
-      "q5": "Mohu stahovat prezentace TikTok na iPhone?",
-      "a5": "Ano, stahování prezentací TikTok na iPhone je jednoduché. Zkopírujte odkaz z TikTok, otevřete Safari nebo Chrome, navštivte SaveTikFast, vložte odkaz a stáhněte. Fotky se ukládají do vaší aplikace Fotky. Funguje na všech modelech iPhone bez nutnosti instalace jakékoli aplikace.",
-      "q6": "Je stahovač prezentací zdarma?",
-      "a6": "Ano, stahovač prezentací SaveTikFast je 100% zdarma. Stahujte neomezené prezentace TikTok bez poplatků, předplatného nebo denních limitů. Naše bezplatná služba funguje na iPhone, Android, Samsung, PC, Mac a všech zařízeních pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče.",
-      "q7": "Jsou stažené obrázky prezentace bez vodoznaku?",
-      "a7": "SaveTikFast stahuje obrázky prezentace TikTok bez vodoznaků, když je to možné. Dostanete čisté fotky bez loga TikTok, připravené pro vaši galerii, Instagram, Pinterest nebo jakoukoli platformu. Perfektní pro ukládání estetického obsahu.",
-      "q8": "Proč zvolit SaveTikFast pro stahování prezentací?",
-      "a8": "SaveTikFast je nejlepší stahovač prezentací TikTok, protože extrahujeme všechny fotky okamžitě, udržujeme původní kvalitu, zahrnujeme audio a nabízíme zcela bezplatná neomezená stahování. Náš nástroj funguje rychleji a spolehlivěji než SSSTik, SnapTik nebo jiné extraktory prezentací. Stahujte celé foto karusely během sekund."
-    }
-  },
-  "nav_menu": {
-    "slideshow": "Prezentace",
-    "video": "Video",
-    "mp3": "MP3 zvuk",
-    "stories": "Příběhy"
-  },
-  "mp3_page": {
-    "meta_title": "TikTok do MP3 konvertor – Stahování audia 320kbps zdarma",
-    "title": "Stáhnout TikTok MP3",
-    "subtitle": "(Pouze Audio)",
-    "desc": "Převeďte videa z TikToku na MP3 audio soubory. Extrahujte písně a hudbu ve vysoké kvalitě 320kbps.",
-    "placeholder": "Vložte odkaz na video pro extrakci zvuku...",
-    "btn_download": "Extrahovat MP3",
-    "about_title": "Nejlepší TikTok MP3 Konvertor 2026",
-    "about_content": "SaveTikFast MP3 vám umožní okamžitě extrahovat zvuk z jakéhokoli videa TikTok. Stahujte trendy písně a virální zvuky.",
     "how_to": {
-      "title": "Jak převést TikTok na MP3",
-      "step1": "Najděte video. Klepněte na Sdílet → Kopírovat odkaz.",
-      "step2": "Vložte odkaz do pole výše.",
-      "step3": "Klikněte na 'Extrahovat MP3' pro stažení."
+        "title": "Jak stahovat videa z TikToku bez vodoznaku",
+        "step1": "Zkopírujte odkaz na video TikTok, které chcete uložit.",
+        "step2": "Vložte odkaz do pole pro stahování v horní části této stránky.",
+        "step3": "Klikněte na tlačítko „Stáhnout“ a vaše video se okamžitě uloží.",
+        "step1_title": "Kopírovat odkaz",
+        "step2_title": "Vložit URL",
+        "step3_title": "Stáhnout"
     },
-    "meta_desc": "Převádějte TikTok videa na MP3 audio soubory ve vysoké kvalitě 320kbps. Extrahujte písně a hudbu zdarma online. Žádná aplikace ani registrace není potřeba.",
-    "features": {
-      "quality": {
-        "title": "HD zvuk 320 kbps",
-        "desc": "Převeďte videa TikTok na MP3 v křišťálově čisté studiové kvalitě 320kbps. Nejvyšší audio bitrate dostupný online, perfektní pro milovníky hudby, kteří chtějí nejlepší zvuk na svém iPhone, Android nebo PC."
-      },
-      "fast": {
-        "title": "Okamžitá Konverze",
-        "desc": "Konverze TikTok na MP3 za pouhé 2 sekundy. Nejrychlejší extraktor audia TikTok online - rychlejší než SSSTik MP3, SnapTik audio nebo jakýkoli jiný převodník. Funguje okamžitě na všech zařízeních."
-      },
-      "ringtone": {
-        "title": "Připraveno Pro Vyzvánění",
-        "desc": "Perfektní délka audia pro vyzvánění iPhone a zvuky oznámení Android. Vytvářejte vlastní vyzvánění z virálních zvuků TikTok a trendových audio klipů. Snadné nastavení na jakémkoli smartphonu."
-      },
-      "device": {
-        "title": "Všechna Zařízení",
-        "desc": "Extrahujte audio TikTok na iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC a jakémkoli zařízení s prohlížečem. Nevyžaduje stahování aplikace."
-      },
-      "original": {
-        "title": "Originální Zvuk",
-        "desc": "Zachovejte původní kvalitu audia TikTok bez komprese nebo ztráty kvality. Získejte přesně stejný zvuk jako v původním videu, včetně trendových písní a virálního audia."
-      },
-      "unlimited": {
-        "title": "Zdarma &amp; Neomezené",
-        "desc": "Žádné limity na konverze TikTok na MP3. Převádějte tolik videí TikTok na audio, kolik chcete - zcela zdarma, bez registrace, bez denních omezení."
-      },
-      "secure": {
-        "title": "Bezpečné &amp; Soukromé",
-        "desc": "Bezpečná konverze MP3 bez shromažďování dat. Neukládáme vaše převedené soubory ani nesledujeme vaši aktivitu. Vaše soukromí je 100% chráněno."
-      },
-      "nobapp": {
-        "title": "Bez Aplikace",
-        "desc": "Funguje přímo ve vašem prohlížeči - Chrome, Safari, Firefox, Edge, Opera. Bez instalace aplikace, bez potřeby úložného prostoru. Lepší než aplikace pro stahování TikTok MP3."
-      }
+    "tools": {
+        "backToDownloader": "Zpět na stahovač",
+        "meta": {
+            "title": "Bezplatné nástroje – Komprese obrázků, konverze a QR kódy",
+            "description": "Bezplatné nástroje v prohlížeči: komprimujte obrázky, převádějte formáty (WebP, JPG, PNG) a generujte QR kódy. Bez nahrávání souborů ani registrace."
+        },
+        "hero": {
+            "title": "Bezplatné online nástroje pro obrázky a QR",
+            "desc": "Komprimujte obrázky, převádějte formáty a generujte QR kódy — vše zpracováno lokálně ve vašem prohlížeči. 100% soukromí."
+        },
+        "tabs": {
+            "compressor": "Komprese",
+            "converter": "Konvertor",
+            "qrcode": "QR Generátor",
+            "engagement": "Zapojení",
+            "money": "Příjmy",
+            "font": "Písma",
+            "hashtag": "Hashtagy"
+        },
+        "dropzone": {
+            "text": "Přetáhněte obrázek sem",
+            "hint": "nebo klikněte pro výběr (JPG, PNG, WebP - max. 15MB)",
+            "hint_convert": "nebo klikněte pro výběr (JPG, PNG, WebP, GIF, BMP)"
+        },
+        "btn": {
+            "download": "Stáhnout nyní",
+            "downloadPng": "Stáhnout PNG"
+        },
+        "compressor": {
+            "title": "Komprese obrázků",
+            "desc": "Zmenšete velikost souboru obrázku bez ztráty kvality. Podporuje JPG, PNG a WebP do 15MB.",
+            "quality": "Kvalita komprese",
+            "maxWidth": "Maximální šířka (px)",
+            "btn": "Komprimovat",
+            "howto": {
+                "title": "Jak komprimovat obrázky online",
+                "step1": {
+                    "title": "Nahrát obrázek",
+                    "desc": "Přetáhněte nebo klikněte a vyberte obrázek JPG, PNG nebo WebP (až 15MB)."
+                },
+                "step2": {
+                    "title": "Upravit nastavení",
+                    "desc": "Nastavte požadovanou úroveň kvality (10-100 %) a maximální šířku."
+                },
+                "step3": {
+                    "title": "Stáhnout",
+                    "desc": "Klikněte na komprimovat a okamžitě stáhněte optimalizovaný obrázek."
+                }
+            },
+            "seo": {
+                "title": "Proč komprimovat obrázky?",
+                "p1": "Komprese obrázků je nezbytná pro výkon webu, rychlejší načítání a nižší využití šířky pásma. Náš bezplatný kompresor používá pokročilé algoritmy ke zmenšení velikosti souborů při zachování vizuální kvality.",
+                "p2": "Výhody komprese obrázků:",
+                "benefit1": "Rychlejší načítání webu (zlepšuje SEO)",
+                "benefit2": "Nižší náklady na úložiště a přenos dat",
+                "benefit3": "Lepší uživatelská zkušenost na mobilních zařízeních",
+                "benefit4": "Optimalizované obrázky pro sociální sítě",
+                "p3": "Veškeré zpracování probíhá ve vašem prohlížeči — vaše obrázky se nikdy nenahrávají na žádný server, což zajišťuje naprosté soukromí a bezpečnost."
+            },
+            "faq": {
+                "title": "Často kladené otázky",
+                "q1": "Nahrává se můj obrázek na server?",
+                "a1": "Ne! Veškerá komprese probíhá přímo ve vašem prohlížeči. Vaše obrázky nikdy neopustí vaše zařízení.",
+                "q2": "Které formáty jsou podporovány?",
+                "a2": "Podporujeme formáty JPG/JPEG, PNG a WebP do velikosti 15MB.",
+                "q3": "O kolik mohu zmenšit velikost souboru?",
+                "a3": "Obvykle o 50-80 % v závislosti na původním obrázku a zvoleném nastavení kvality."
+            }
+        },
+        "converter": {
+            "title": "Konvertor formátů obrázků",
+            "desc": "Okamžitě převádějte obrázky mezi formáty JPG, PNG a WebP ve svém prohlížeči.",
+            "output": "Výstupní formát",
+            "quality": "Výstupní kvalita",
+            "btn": "Převést obrázek",
+            "howto": {
+                "title": "Jak převést formáty obrázků",
+                "step1": {
+                    "title": "Vybrat obrázek",
+                    "desc": "Nahrajte jakýkoli obrázek (podporovány jsou JPG, PNG, WebP, GIF, BMP)."
+                },
+                "step2": {
+                    "title": "Zvolit formát",
+                    "desc": "Vyberte požadovaný výstupní formát (WebP, JPG nebo PNG)."
+                },
+                "step3": {
+                    "title": "Převést a uložit",
+                    "desc": "Klikněte na převést a okamžitě stáhněte nový obrázek."
+                }
+            },
+            "seo": {
+                "title": "Porozumění formátům obrázků",
+                "p1": "Výběr správného formátu je klíčový pro výkon a kvalitu webu. Zde je srovnání:",
+                "webp": "Moderní formát od Googlu nabízející o 25-35 % menší velikost souboru než JPG/PNG při podobné kvalitě. Nejlepší pro web.",
+                "jpg": "Ideální pro fotografie a složité obrázky s mnoha barvami. Používá ztrátovou kompresi.",
+                "png": "Perfektní pro obrázky vyžadující průhlednost nebo ostré hrany (loga, grafika). Bezstrátová komprese.",
+                "p2": "Náš konvertor používá HTML5 Canvas API pro okamžitý převod na straně klienta. Vaše obrázky nikdy neopustí zařízení."
+            },
+            "faq": {
+                "title": "Často kladené otázky",
+                "q1": "Proč převádět na WebP?",
+                "a1": "WebP nabízí o 25-35 % menší velikost souboru než JPG/PNG při podobné kvalitě, což zrychluje váš web.",
+                "q2": "Ztratím kvalitu obrazu?",
+                "a2": "Kvalitu ovládáte posuvníkem. Vyšší hodnoty zachovají více detailů, ale soubor bude větší.",
+                "q3": "Mohu převádět animované GIFy?",
+                "a3": "V současnosti budou animované GIFy převedeny na statický obrázek (první snímek)."
+            }
+        },
+        "qrcode": {
+            "title": "Generátor QR kódů",
+            "desc": "Okamžitě generujte QR kódy ve vysokém rozlišení pro URL, text nebo jakýkoli obsah.",
+            "input": "Text nebo URL",
+            "placeholder": "https://example.com nebo jakýkoli text",
+            "size": "Velikost QR kódu",
+            "color": "Barva QR kódu",
+            "btn": "Generovat QR kód",
+            "howto": {
+                "title": "Jak generovat QR kódy",
+                "step1": {
+                    "title": "Zadat obsah",
+                    "desc": "Zadejte URL, text, telefonní číslo nebo jakýkoli obsah, který chcete zakódovat."
+                },
+                "step2": {
+                    "title": "Přizpůsobit",
+                    "desc": "Zvolte preferovanou velikost a barvu QR kódu."
+                },
+                "step3": {
+                    "title": "Generovat a stáhnout",
+                    "desc": "Klikněte na generovat a stáhněte si QR kód ve vysokém rozlišení jako PNG."
+                }
+            },
+            "seo": {
+                "title": "Využití QR kódů",
+                "p1": "QR kódy se staly nezbytnými pro firmy i jednotlivce. Mezi běžné případy patří:",
+                "use1": "URL webu - okamžité přesměrování uživatelů",
+                "use2": "Vizitky - digitální sdílení kontaktních údajů",
+                "use3": "Obaly produktů - odkazy na manuály nebo podporu",
+                "use4": "Marketingové materiály - sledování zapojení do kampaně",
+                "use5": "Menu v restauracích - bezkontaktní přístup k lístku",
+                "use6": "Vstupenky - rychlé ověření vstupu",
+                "p2": "Náš generátor vytváří kódy ve vysokém rozlišení, které spolehlivě naskenujete na jakémkoli zařízení."
+            },
+            "faq": {
+                "title": "Často kladené otázky",
+                "q1": "Co mohu zakódovat do QR kódu?",
+                "a1": "URL, prostý text, telefonní čísla, e-mailové adresy, přihlašovací údaje k WiFi a další.",
+                "q2": "Jakou velikost mám zvolit?",
+                "a2": "256px je dobré pro digitální použití. Pro tisk zvolte 512px nebo 1024px.",
+                "q3": "Mají QR kódy expiraci?",
+                "a3": "Ne! Zde generované QR kódy jsou statické a nikdy nevyprší. Obsahují data přímo v sobě."
+            }
+        },
+        "engagement": {
+            "title": "TikTok kalkulačka zapojení",
+            "desc": "Spočítejte si míru zapojení na základě lajků, komentářů a sdílení.",
+            "followers": "Sledující",
+            "likes": "Lajky",
+            "comments": "Komentáře",
+            "shares": "Sdílení",
+            "btn": "Spočítat nyní",
+            "result": "Míra zapojení",
+            "excellent": "Vynikající! 🚀",
+            "good": "Dobré 👍",
+            "poor": "Ke zlepšení 📉"
+        },
+        "money": {
+            "title": "TikTok kalkulačka příjmů",
+            "desc": "Odhadněte potenciální příjmy ze zhlédnutí vašich videí.",
+            "views": "Zadejte počet zhlédnutí",
+            "btn": "Spočítat příjmy",
+            "result": "Odhadované příjmy"
+        },
+        "font": {
+            "title": "TikTok generátor písem",
+            "desc": "Vytvořte jedinečné styly písem pro svůj profil a popisky videí.",
+            "placeholder": "Sem napište svůj text...",
+            "copy": "Kopírovat"
+        },
+        "hashtag": {
+            "title": "TikTok generátor hashtagů",
+            "desc": "Najděte a generujte trendy hashtagy pro svá videa.",
+            "btn": "Generovat hashtagy",
+            "copy": "Kopírovat vše"
+        },
+        "progress": {
+            "compressing": "Komprimuji obrázek...",
+            "converting": "Převádím obrázek..."
+        },
+        "result": {
+            "success": "Komprese dokončena!",
+            "converted": "Převod dokončen!",
+            "qrReady": "Váš QR kód je připraven!"
+        },
+        "stats": {
+            "original": "Původní velikost",
+            "compressed": "Konečná velikost",
+            "saved": "Ušetřeno",
+            "originalFormat": "Původní formát",
+            "newFormat": "Nový formát",
+            "newSize": "Nová velikost"
+        },
+        "preview": {
+            "before": "Před",
+            "after": "Po",
+            "original": "Originál",
+            "converted": "Převedeno"
+        }
     },
-    "faq": {
-      "q1": "Jak převést videa TikTok na MP3?",
-      "a1": "Převod TikTok na MP3 je jednoduchý s SaveTikFast. Zkopírujte odkaz na video TikTok, vložte ho do našeho převodníku MP3 a klikněte na převést. Audio bude okamžitě extrahováno ve vysoké kvalitě formátu MP3 320kbps. Funguje na iPhone, Android, Samsung, PC, Mac a všech zařízeních pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče. Náš převodník TikTok na MP3 je rychlejší a vyšší kvality než audio extraktory SSSTik nebo SnapTik.",
-      "q2": "Jakou kvalitu audia poskytuje převodník MP3 SaveTikFast?",
-      "a2": "SaveTikFast extrahuje audio TikTok v prémiové kvalitě MP3 320kbps - nejvyšším bitrate dostupném pro MP3 soubory. To poskytuje křišťálově čistý zvuk studiové kvality perfektní pro přehrávání hudby, vyzvánění nebo audio projekty. Zachováváme původní audio TikTok bez komprese nebo ztráty kvality, na rozdíl od jiných převodníků, které snižují bitrate pro úsporu šířky pásma.",
-      "q3": "Mohu použít audio TikTok jako vyzvánění?",
-      "a3": "Ano! Audio TikTok stažené ze SaveTikFast je perfektní pro vyzvánění. Formát MP3 funguje jak s nastavením vyzvánění iPhone, tak Android. Na iPhone použijte GarageBand nebo iTunes pro nastavení vlastních vyzvánění. Na Androidu jednoduše přejděte do Nastavení > Zvuk > Vyzvánění a vyberte stažený MP3. Vytvářejte jedinečná vyzvánění z virálních zvuků TikTok a trendového audia.",
-      "q4": "Je konverze TikTok na MP3 zdarma?",
-      "a4": "Absolutně zdarma. Převodník MP3 SaveTikFast nemá žádné poplatky, předplatné ani denní limity. Převádějte neomezená videa TikTok na MP3 bez registrace. Naše bezplatná služba funguje na všech zařízeních - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - pomocí jakéhokoli prohlížeče včetně Chrome, Safari a Firefox.",
-      "q5": "Jak dlouho trvá konverze MP3?",
-      "a5": "SaveTikFast převádí TikTok na MP3 přibližně za 2-3 sekundy. Používáme výkonné servery optimalizované pro rychlou extrakci audia. To z nás dělá nejrychlejší dostupný převodník TikTok MP3 - výrazně rychlejší než SSSTik MP3, SnapTik audio, TikMate nebo jiné nástroje pro konverzi.",
-      "q6": "Mohu stahovat hudbu TikTok na iPhone?",
-      "a6": "Ano, můžete snadno stahovat hudbu a audio TikTok na iPhone pomocí SaveTikFast. Zkopírujte odkaz TikTok, otevřete Safari nebo Chrome, navštivte náš převodník MP3, vložte odkaz a klepněte na stáhnout. MP3 soubor se uloží do vaší aplikace Soubory. Odtud ho přidejte do Apple Music, použijte jako vyzvánění nebo sdílejte kdekoli. Funguje na všech modelech iPhone.",
-      "q7": "Obsahuje MP3 kompletní audio stopu?",
-      "a7": "Ano, SaveTikFast extrahuje kompletní audio z videí TikTok - včetně hudby na pozadí, hlasu, zvukových efektů a všech audio prvků. Audio plné délky je zachováno přesně tak, jak zní v původním videu TikTok. Perfektní pro ukládání trendových písní, virálních zvuků a vašeho oblíbeného audia TikTok.",
-      "q8": "Je převodník MP3 SaveTikFast bezpečný?",
-      "a8": "Zcela bezpečný. Převodník MP3 SaveTikFast používá bezpečné SSL šifrování, neukládá vaše data nebo převedené soubory, nevyžaduje přihlášení a nic neinstaluje na vaše zařízení. Bezpečně jsme převedli miliony videí TikTok na MP3 pro uživatele po celém světě. Vaše soukromí a bezpečnost jsou naší prioritou.",
-      "q9": "Mohu převádět TikTok na MP3 na Androidu?",
-      "a9": "Ano, konverze TikTok na MP3 funguje perfektně na všech zařízeních Android. To zahrnuje Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus a všechny ostatní Android telefony a tablety. Jednoduše použijte prohlížeč Chrome, Firefox nebo Samsung Internet pro přístup k SaveTikFast a převádějte jakýkoli TikTok na MP3 okamžitě.",
-      "q10": "Proč je SaveTikFast nejlepší převodník TikTok na MP3?",
-      "a10": "SaveTikFast nabízí nejlepší konverzi TikTok MP3 díky naší vynikající rychlosti (2 sekundy), nejvyšší kvalitě audia (320kbps), univerzální podpoře zařízení a zcela bezplatné službě. Na rozdíl od SSSTik, SnapTik nebo jiných převodníků poskytujeme konzistentní vysoce kvalitní výsledky bez otravných reklam nebo limitů stahování. Miliony uživatelů důvěřují SaveTikFast pro jejich potřeby audio TikTok."
-    }
-  },
-  "story_page": {
-    "meta_title": "TikTok Story Downloader – Ukládejte fotky a příběhy anonymně",
-    "title": "Stáhnout TikTok Story",
-    "desc": "Ukládejte Stories a prezentace z TikToku, než zmizí.",
-    "placeholder": "Vložte odkaz na Story...",
-    "btn_download": "Uložit Story",
-    "about_title": "Stahovač Stories 2026",
-    "about_content": "SaveTikFast Story Downloader vám umožní uložit stories a karusely fotek, než zmizí po 24 hodinách.",
-    "how_to": {
-      "title": "Jak stáhnout Story z TikToku",
-      "step1": "Otevřete Story, Sdílet → Kopírovat odkaz.",
-      "step2": "Vložte odkaz výše.",
-      "step3": "Klikněte na 'Uložit Story'."
+    "slideshow_page": {
+        "meta_title": "TikTok Slideshow Downloader – Fotky v HD bez vodoznaku zdarma",
+        "meta_desc": "Stahujte fotoprezentace a galerie z TikToku ve HD kvalitě bez vodoznaku. Uložte všechny obrázky z libovolného příspěvku okamžitě. Zdarma, rychle, bez registrace.",
+        "title": "Stahovač Prezentací TikTok",
+        "desc": "Uložte foto karusely ve vysoké kvalitě.",
+        "placeholder": "Vložte odkaz zde...",
+        "btn_download": "Stáhnout Obrázky",
+        "about_title": "Stahovač Fotek TikTok",
+        "about_content": "Ukládejte prezentace fotek z TikToku v originální HD kvalitě bez vodoznaků.",
+        "how_to": {
+            "title": "Jak stahovat",
+            "step1": "Zkopírujte odkaz TikTok.",
+            "step2": "Vložte odkaz výše.",
+            "step3": "Klikněte na Stáhnout."
+        },
+        "features": {
+            "all": {
+                "title": "Všechny Fotky Najednou",
+                "desc": "Stáhněte všechny obrázky prezentace jedním kliknutím. SaveTikFast extrahuje každou fotku z foto karuselů TikTok a uloží je jako pohodlný ZIP soubor. Rychlejší než ruční ukládání každého obrázku."
+            },
+            "quality": {
+                "title": "Původní Rozlišení",
+                "desc": "Ukládejte fotky prezentace v plném původním rozlišení bez komprese. Získejte obrázky nejvyšší kvality přesně tak, jak je tvůrce nahrál na TikTok."
+            },
+            "audio": {
+                "title": "S Audio Na Pozadí",
+                "desc": "Stahujte prezentace TikTok s hudbu na pozadí včetně. Získejte jak obrázky, tak audio stopu společně. Perfektní pro zachování kompletního zážitku z prezentace."
+            },
+            "fast": {
+                "title": "Bleskově Rychlé",
+                "desc": "Extrahujte všechny fotky prezentace za pouhé 3 sekundy. Nejrychlejší stahovač prezentací TikTok dostupný - rychlejší než SSSTik, SnapTik nebo jakýkoli jiný nástroj."
+            },
+            "device": {
+                "title": "Univerzální Kompatibilita",
+                "desc": "Funguje na iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook. Stahujte prezentace TikTok na jakémkoli zařízení s Chrome, Safari, Firefox nebo Edge."
+            },
+            "free": {
+                "title": "Vždy Zdarma",
+                "desc": "Neomezená stahování prezentací bez poplatků, bez registrace a bez denních limitů. Stahovač prezentací SaveTikFast je zcela zdarma navždy."
+            },
+            "nowatermark": {
+                "title": "Bez Vodoznaku",
+                "desc": "Stahujte obrázky prezentace bez vodoznaků TikTok. Čisté fotky připravené pro vaši galerii, Instagram, Pinterest nebo jakoukoli jinou platformu."
+            },
+            "browser": {
+                "title": "Jakýkoli Prohlížeč",
+                "desc": "Bez potřeby aplikace. Stahujte prezentace TikTok přímo v Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet. Funguje na mobilních i desktopových prohlížečích."
+            }
+        },
+        "faq": {
+            "q1": "Jak stáhnout prezentace TikTok?",
+            "a1": "Stahování foto prezentací TikTok je snadné s SaveTikFast. Zkopírujte odkaz na prezentaci z TikTok, vložte ho do našeho stahovače prezentací a klikněte na stáhnout. Všechny obrázky budou extrahovány a staženy společně - buď jako jednotlivé fotky nebo pohodlný ZIP soubor. Funguje na iPhone, Android, Samsung, iPad, Mac, Windows pomocí jakéhokoli prohlížeče.",
+            "q2": "Mohu stáhnout všechny fotky prezentace najednou?",
+            "a2": "Ano! SaveTikFast stahuje všechny fotky prezentace TikTok jedním kliknutím. Není třeba ukládat každý obrázek ručně. Náš nástroj extrahuje každou fotku z karuselu a zabalí je dohromady. Pro prezentace s mnoha obrázky poskytujeme ZIP soubor pro snadné stahování. Mnohem rychlejší než jiné metody.",
+            "q3": "Stahuje SaveTikFast také audio prezentace?",
+            "a3": "Ano, SaveTikFast může stahovat prezentace TikTok s hudbu na pozadí včetně. Dostanete jak obrázky, tak audio stopu, která se přehrává s prezentací. To zachovává kompletní zážitek z prezentace přesně tak, jak tvůrce zamýšlel.",
+            "q4": "Jakou kvalitu mají stažené obrázky prezentace?",
+            "a4": "SaveTikFast extrahuje fotky prezentace TikTok v plném původním rozlišení. Nekomprimujeme ani nesnižujeme kvalitu obrázku. Získáte přesně stejné vysoce kvalitní fotky nahrané tvůrcem - perfektní pro ukládání, sdílení nebo tisk.",
+            "q5": "Mohu stahovat prezentace TikTok na iPhone?",
+            "a5": "Ano, stahování prezentací TikTok na iPhone je jednoduché. Zkopírujte odkaz z TikTok, otevřete Safari nebo Chrome, navštivte SaveTikFast, vložte odkaz a stáhněte. Fotky se ukládají do vaší aplikace Fotky. Funguje na všech modelech iPhone bez nutnosti instalace jakékoli aplikace.",
+            "q6": "Je stahovač prezentací zdarma?",
+            "a6": "Ano, stahovač prezentací SaveTikFast je 100% zdarma. Stahujte neomezené prezentace TikTok bez poplatků, předplatného nebo denních limitů. Naše bezplatná služba funguje na iPhone, Android, Samsung, PC, Mac a všech zařízeních pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče.",
+            "q7": "Jsou stažené obrázky prezentace bez vodoznaku?",
+            "a7": "SaveTikFast stahuje obrázky prezentace TikTok bez vodoznaků, když je to možné. Dostanete čisté fotky bez loga TikTok, připravené pro vaši galerii, Instagram, Pinterest nebo jakoukoli platformu. Perfektní pro ukládání estetického obsahu.",
+            "q8": "Proč zvolit SaveTikFast pro stahování prezentací?",
+            "a8": "SaveTikFast je nejlepší stahovač prezentací TikTok, protože extrahujeme všechny fotky okamžitě, udržujeme původní kvalitu, zahrnujeme audio a nabízíme zcela bezplatná neomezená stahování. Náš nástroj funguje rychleji a spolehlivěji než SSSTik, SnapTik nebo jiné extraktory prezentací. Stahujte celé foto karusely během sekund."
+        }
     },
-    "meta_desc": "Stahujte TikTok příběhy a prezentace anonymně a zdarma. Ukládejte alba fotek a video příběhy před vypršením. Rychle, bez přihlášení nebo instalace aplikace.",
-    "features": {
-      "expire": {
-        "title": "Uložit Před Zmizením",
-        "desc": "Stahujte příběhy TikTok předtím, než zmizí po 24 hodinách. Už nikdy nezmeškejte příběhy vašeho oblíbeného tvůrce. SaveTikFast vám umožní uložit obsah s vypršením platnosti trvale na vaše zařízení."
-      },
-      "quality": {
-        "title": "Originální Kvalita",
-        "desc": "Ukládejte příběhy TikTok v plné HD kvalitě - přesně tak, jak je nahrál tvůrce. Bez snížení kvality, bez komprese. Získejte stejné rozlišení na iPhone, Android nebo PC."
-      },
-      "anonymous": {
-        "title": "Anonymní Sledování",
-        "desc": "Prohlížejte a stahujte příběhy TikTok zcela anonymně. Tvůrce nebude vědět, že jste uložili jeho příběh. 100% soukromé a diskrétní stahování příběhů."
-      },
-      "fast": {
-        "title": "Super Rychlé",
-        "desc": "Stáhněte jakýkoli příběh TikTok za pouhé 2 sekundy. Okamžité ukládání příběhů, které funguje rychleji než jakýkoli jiný stahovač příběhů TikTok online."
-      },
-      "device": {
-        "title": "Funguje Všude",
-        "desc": "Ukládejte příběhy TikTok na iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows a jakémkoli zařízení. Kompatibilní s Chrome, Safari, Firefox a všemi prohlížeči."
-      },
-      "nowatermark": {
-        "title": "Bez Vodoznaku",
-        "desc": "Stahujte příběhy TikTok bez vodoznaku nebo loga TikTok. Čistá stahování příběhů připravená k uložení nebo sdílení na Instagram, Snapchat nebo WhatsApp."
-      },
-      "free": {
-        "title": "Navždy Zdarma",
-        "desc": "Neomezená stahování příběhů TikTok bez nákladů. Bez registrace, bez poplatků, bez denních limitů. Stahovač příběhů SaveTikFast je 100% zdarma."
-      },
-      "noapp": {
-        "title": "Pouze Prohlížeč",
-        "desc": "Bez potřeby instalace aplikace. Stahujte příběhy TikTok přímo z Chrome, Safari, Firefox, Edge na vašem telefonu nebo počítači. Rychlejší a bezpečnější než aplikace."
-      }
+    "nav_menu": {
+        "slideshow": "Prezentace",
+        "video": "Video",
+        "mp3": "MP3 zvuk",
+        "stories": "Příběhy"
     },
-    "faq": {
-      "q1": "Jak stáhnout příběhy TikTok?",
-      "a1": "Pro stažení příběhů TikTok nejprve zkopírujte odkaz na příběh z TikTok (klepněte na Sdílet u příběhu). Poté navštivte SaveTikFast, vložte odkaz do našeho stahovače příběhů a klikněte na stáhnout. Příběh se uloží na vaše zařízení v původní HD kvalitě. Funguje na iPhone, Android, Samsung, iPad, Mac, PC pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče. Ukládejte příběhy předtím, než zmizí po 24 hodinách.",
-      "q2": "Mohu stahovat příběhy TikTok anonymně?",
-      "a2": "Ano, SaveTikFast umožňuje zcela anonymní stahování příběhů TikTok. Tvůrce neobdrží žádné oznámení a nebude vědět, že jste stáhli jeho příběh. Vaše identita zůstane soukromá. To je perfektní pro diskrétní ukládání obsahu bez interakce s účtem tvůrce.",
-      "q3": "Vyprší platnost příběhů TikTok po stažení?",
-      "a3": "Ne, jakmile stáhnete příběh TikTok pomocí SaveTikFast, je trvale uložen na vašem zařízení. I když příběhy TikTok zmizí po 24 hodinách na platformě, vaše stažená kopie zůstane navždy. Ukládejte důležité příběhy předtím, než vyprší jejich platnost, abyste nikdy neztratili přístup k obsahu.",
-      "q4": "Jakou kvalitu mají stažené příběhy TikTok?",
-      "a4": "SaveTikFast stahuje příběhy TikTok v plné původní kvalitě - stejném HD rozlišení nahraném tvůrcem. Nekomprimujeme ani nesnižujeme kvalitu. Vaše stažené příběhy vypadají přesně tak, jak se objevují na TikTok, perfektní pro ukládání vzpomínek nebo opětovné zveřejnění.",
-      "q5": "Mohu stahovat příběhy TikTok na iPhone?",
-      "a5": "Ano, stahování příběhů TikTok na iPhone je snadné. Zkopírujte odkaz na příběh z TikTok, otevřete Safari nebo Chrome, přejděte na SaveTikFast, vložte odkaz a klepněte na stáhnout. Příběhy se ukládají přímo do vaší aplikace Fotky nebo Soubory. Funguje na iPhone 15, 14, 13, 12 a všech modelech bez instalace jakékoli aplikace.",
-      "q6": "Je stahovač příběhů TikTok zdarma?",
-      "a6": "Zcela zdarma. Stahovač příběhů SaveTikFast nemá žádné poplatky, prémiové plány nebo limity stahování. Ukládejte neomezené příběhy TikTok bez nákladů na jakémkoli zařízení - iPhone, Android, Samsung, PC, Mac. Bez požadované registrace nebo účtu.",
-      "q7": "Mohu stahovat soukromé příběhy TikTok?",
-      "a7": "SaveTikFast může stahovat pouze veřejné příběhy TikTok. Soukromé příběhy sdílené pouze s konkrétními sledujícími nejsou dostupné externím nástrojům pro stahování kvůli ochraně soukromí TikTok. Pro soukromý obsah budete potřebovat přímé povolení tvůrce.",
-      "q8": "Proč používat SaveTikFast pro příběhy TikTok?",
-      "a8": "SaveTikFast je nejlepší stahovač příběhů TikTok, protože nabízíme okamžitá stahování, původní HD kvalitu, anonymní ukládání a bezplatný neomezený přístup. Náš nástroj funguje spolehlivě na všech zařízeních a prohlížečích, což jej činí lepším než jiné stahovače příběhů. Ukládejte příběhy s vypršením platnosti předtím, než zmizí navždy."
+    "mp3_page": {
+        "meta_title": "TikTok do MP3 konvertor – Stahování audia 320kbps zdarma",
+        "title": "Stáhnout TikTok MP3",
+        "subtitle": "(Pouze Audio)",
+        "desc": "Převeďte videa z TikToku na MP3 audio soubory. Extrahujte písně a hudbu ve vysoké kvalitě 320kbps.",
+        "placeholder": "Vložte odkaz na video pro extrakci zvuku...",
+        "btn_download": "Extrahovat MP3",
+        "about_title": "Nejlepší TikTok MP3 Konvertor 2026",
+        "about_content": "SaveTikFast MP3 vám umožní okamžitě extrahovat zvuk z jakéhokoli videa TikTok. Stahujte trendy písně a virální zvuky.",
+        "how_to": {
+            "title": "Jak převést TikTok na MP3",
+            "step1": "Najděte video. Klepněte na Sdílet → Kopírovat odkaz.",
+            "step2": "Vložte odkaz do pole výše.",
+            "step3": "Klikněte na 'Extrahovat MP3' pro stažení."
+        },
+        "meta_desc": "Převádějte TikTok videa na MP3 audio soubory ve vysoké kvalitě 320kbps. Extrahujte písně a hudbu zdarma online. Žádná aplikace ani registrace není potřeba.",
+        "features": {
+            "quality": {
+                "title": "HD zvuk 320 kbps",
+                "desc": "Převeďte videa TikTok na MP3 v křišťálově čisté studiové kvalitě 320kbps. Nejvyšší audio bitrate dostupný online, perfektní pro milovníky hudby, kteří chtějí nejlepší zvuk na svém iPhone, Android nebo PC."
+            },
+            "fast": {
+                "title": "Okamžitá Konverze",
+                "desc": "Konverze TikTok na MP3 za pouhé 2 sekundy. Nejrychlejší extraktor audia TikTok online - rychlejší než SSSTik MP3, SnapTik audio nebo jakýkoli jiný převodník. Funguje okamžitě na všech zařízeních."
+            },
+            "ringtone": {
+                "title": "Připraveno Pro Vyzvánění",
+                "desc": "Perfektní délka audia pro vyzvánění iPhone a zvuky oznámení Android. Vytvářejte vlastní vyzvánění z virálních zvuků TikTok a trendových audio klipů. Snadné nastavení na jakémkoli smartphonu."
+            },
+            "device": {
+                "title": "Všechna Zařízení",
+                "desc": "Extrahujte audio TikTok na iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC a jakémkoli zařízení s prohlížečem. Nevyžaduje stahování aplikace."
+            },
+            "original": {
+                "title": "Originální Zvuk",
+                "desc": "Zachovejte původní kvalitu audia TikTok bez komprese nebo ztráty kvality. Získejte přesně stejný zvuk jako v původním videu, včetně trendových písní a virálního audia."
+            },
+            "unlimited": {
+                "title": "Zdarma &amp; Neomezené",
+                "desc": "Žádné limity na konverze TikTok na MP3. Převádějte tolik videí TikTok na audio, kolik chcete - zcela zdarma, bez registrace, bez denních omezení."
+            },
+            "secure": {
+                "title": "Bezpečné &amp; Soukromé",
+                "desc": "Bezpečná konverze MP3 bez shromažďování dat. Neukládáme vaše převedené soubory ani nesledujeme vaši aktivitu. Vaše soukromí je 100% chráněno."
+            },
+            "nobapp": {
+                "title": "Bez Aplikace",
+                "desc": "Funguje přímo ve vašem prohlížeči - Chrome, Safari, Firefox, Edge, Opera. Bez instalace aplikace, bez potřeby úložného prostoru. Lepší než aplikace pro stahování TikTok MP3."
+            }
+        },
+        "faq": {
+            "q1": "Jak převést videa TikTok na MP3?",
+            "a1": "Převod TikTok na MP3 je jednoduchý s SaveTikFast. Zkopírujte odkaz na video TikTok, vložte ho do našeho převodníku MP3 a klikněte na převést. Audio bude okamžitě extrahováno ve vysoké kvalitě formátu MP3 320kbps. Funguje na iPhone, Android, Samsung, PC, Mac a všech zařízeních pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče. Náš převodník TikTok na MP3 je rychlejší a vyšší kvality než audio extraktory SSSTik nebo SnapTik.",
+            "q2": "Jakou kvalitu audia poskytuje převodník MP3 SaveTikFast?",
+            "a2": "SaveTikFast extrahuje audio TikTok v prémiové kvalitě MP3 320kbps - nejvyšším bitrate dostupném pro MP3 soubory. To poskytuje křišťálově čistý zvuk studiové kvality perfektní pro přehrávání hudby, vyzvánění nebo audio projekty. Zachováváme původní audio TikTok bez komprese nebo ztráty kvality, na rozdíl od jiných převodníků, které snižují bitrate pro úsporu šířky pásma.",
+            "q3": "Mohu použít audio TikTok jako vyzvánění?",
+            "a3": "Ano! Audio TikTok stažené ze SaveTikFast je perfektní pro vyzvánění. Formát MP3 funguje jak s nastavením vyzvánění iPhone, tak Android. Na iPhone použijte GarageBand nebo iTunes pro nastavení vlastních vyzvánění. Na Androidu jednoduše přejděte do Nastavení > Zvuk > Vyzvánění a vyberte stažený MP3. Vytvářejte jedinečná vyzvánění z virálních zvuků TikTok a trendového audia.",
+            "q4": "Je konverze TikTok na MP3 zdarma?",
+            "a4": "Absolutně zdarma. Převodník MP3 SaveTikFast nemá žádné poplatky, předplatné ani denní limity. Převádějte neomezená videa TikTok na MP3 bez registrace. Naše bezplatná služba funguje na všech zařízeních - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - pomocí jakéhokoli prohlížeče včetně Chrome, Safari a Firefox.",
+            "q5": "Jak dlouho trvá konverze MP3?",
+            "a5": "SaveTikFast převádí TikTok na MP3 přibližně za 2-3 sekundy. Používáme výkonné servery optimalizované pro rychlou extrakci audia. To z nás dělá nejrychlejší dostupný převodník TikTok MP3 - výrazně rychlejší než SSSTik MP3, SnapTik audio, TikMate nebo jiné nástroje pro konverzi.",
+            "q6": "Mohu stahovat hudbu TikTok na iPhone?",
+            "a6": "Ano, můžete snadno stahovat hudbu a audio TikTok na iPhone pomocí SaveTikFast. Zkopírujte odkaz TikTok, otevřete Safari nebo Chrome, navštivte náš převodník MP3, vložte odkaz a klepněte na stáhnout. MP3 soubor se uloží do vaší aplikace Soubory. Odtud ho přidejte do Apple Music, použijte jako vyzvánění nebo sdílejte kdekoli. Funguje na všech modelech iPhone.",
+            "q7": "Obsahuje MP3 kompletní audio stopu?",
+            "a7": "Ano, SaveTikFast extrahuje kompletní audio z videí TikTok - včetně hudby na pozadí, hlasu, zvukových efektů a všech audio prvků. Audio plné délky je zachováno přesně tak, jak zní v původním videu TikTok. Perfektní pro ukládání trendových písní, virálních zvuků a vašeho oblíbeného audia TikTok.",
+            "q8": "Je převodník MP3 SaveTikFast bezpečný?",
+            "a8": "Zcela bezpečný. Převodník MP3 SaveTikFast používá bezpečné SSL šifrování, neukládá vaše data nebo převedené soubory, nevyžaduje přihlášení a nic neinstaluje na vaše zařízení. Bezpečně jsme převedli miliony videí TikTok na MP3 pro uživatele po celém světě. Vaše soukromí a bezpečnost jsou naší prioritou.",
+            "q9": "Mohu převádět TikTok na MP3 na Androidu?",
+            "a9": "Ano, konverze TikTok na MP3 funguje perfektně na všech zařízeních Android. To zahrnuje Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus a všechny ostatní Android telefony a tablety. Jednoduše použijte prohlížeč Chrome, Firefox nebo Samsung Internet pro přístup k SaveTikFast a převádějte jakýkoli TikTok na MP3 okamžitě.",
+            "q10": "Proč je SaveTikFast nejlepší převodník TikTok na MP3?",
+            "a10": "SaveTikFast nabízí nejlepší konverzi TikTok MP3 díky naší vynikající rychlosti (2 sekundy), nejvyšší kvalitě audia (320kbps), univerzální podpoře zařízení a zcela bezplatné službě. Na rozdíl od SSSTik, SnapTik nebo jiných převodníků poskytujeme konzistentní vysoce kvalitní výsledky bez otravných reklam nebo limitů stahování. Miliony uživatelů důvěřují SaveTikFast pro jejich potřeby audio TikTok."
+        }
+    },
+    "story_page": {
+        "meta_title": "TikTok Story Downloader – Ukládejte fotky a příběhy anonymně",
+        "title": "Stáhnout TikTok Story",
+        "desc": "Ukládejte Stories a prezentace z TikToku, než zmizí.",
+        "placeholder": "Vložte odkaz na Story...",
+        "btn_download": "Uložit Story",
+        "about_title": "Stahovač Stories 2026",
+        "about_content": "SaveTikFast Story Downloader vám umožní uložit stories a karusely fotek, než zmizí po 24 hodinách.",
+        "how_to": {
+            "title": "Jak stáhnout Story z TikToku",
+            "step1": "Otevřete Story, Sdílet → Kopírovat odkaz.",
+            "step2": "Vložte odkaz výše.",
+            "step3": "Klikněte na 'Uložit Story'."
+        },
+        "meta_desc": "Stahujte TikTok příběhy a prezentace anonymně a zdarma. Ukládejte alba fotek a video příběhy před vypršením. Rychle, bez přihlášení nebo instalace aplikace.",
+        "features": {
+            "expire": {
+                "title": "Uložit Před Zmizením",
+                "desc": "Stahujte příběhy TikTok předtím, než zmizí po 24 hodinách. Už nikdy nezmeškejte příběhy vašeho oblíbeného tvůrce. SaveTikFast vám umožní uložit obsah s vypršením platnosti trvale na vaše zařízení."
+            },
+            "quality": {
+                "title": "Originální Kvalita",
+                "desc": "Ukládejte příběhy TikTok v plné HD kvalitě - přesně tak, jak je nahrál tvůrce. Bez snížení kvality, bez komprese. Získejte stejné rozlišení na iPhone, Android nebo PC."
+            },
+            "anonymous": {
+                "title": "Anonymní Sledování",
+                "desc": "Prohlížejte a stahujte příběhy TikTok zcela anonymně. Tvůrce nebude vědět, že jste uložili jeho příběh. 100% soukromé a diskrétní stahování příběhů."
+            },
+            "fast": {
+                "title": "Super Rychlé",
+                "desc": "Stáhněte jakýkoli příběh TikTok za pouhé 2 sekundy. Okamžité ukládání příběhů, které funguje rychleji než jakýkoli jiný stahovač příběhů TikTok online."
+            },
+            "device": {
+                "title": "Funguje Všude",
+                "desc": "Ukládejte příběhy TikTok na iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows a jakémkoli zařízení. Kompatibilní s Chrome, Safari, Firefox a všemi prohlížeči."
+            },
+            "nowatermark": {
+                "title": "Bez Vodoznaku",
+                "desc": "Stahujte příběhy TikTok bez vodoznaku nebo loga TikTok. Čistá stahování příběhů připravená k uložení nebo sdílení na Instagram, Snapchat nebo WhatsApp."
+            },
+            "free": {
+                "title": "Navždy Zdarma",
+                "desc": "Neomezená stahování příběhů TikTok bez nákladů. Bez registrace, bez poplatků, bez denních limitů. Stahovač příběhů SaveTikFast je 100% zdarma."
+            },
+            "noapp": {
+                "title": "Pouze Prohlížeč",
+                "desc": "Bez potřeby instalace aplikace. Stahujte příběhy TikTok přímo z Chrome, Safari, Firefox, Edge na vašem telefonu nebo počítači. Rychlejší a bezpečnější než aplikace."
+            }
+        },
+        "faq": {
+            "q1": "Jak stáhnout příběhy TikTok?",
+            "a1": "Pro stažení příběhů TikTok nejprve zkopírujte odkaz na příběh z TikTok (klepněte na Sdílet u příběhu). Poté navštivte SaveTikFast, vložte odkaz do našeho stahovače příběhů a klikněte na stáhnout. Příběh se uloží na vaše zařízení v původní HD kvalitě. Funguje na iPhone, Android, Samsung, iPad, Mac, PC pomocí Chrome, Safari, Firefox nebo jakéhokoli prohlížeče. Ukládejte příběhy předtím, než zmizí po 24 hodinách.",
+            "q2": "Mohu stahovat příběhy TikTok anonymně?",
+            "a2": "Ano, SaveTikFast umožňuje zcela anonymní stahování příběhů TikTok. Tvůrce neobdrží žádné oznámení a nebude vědět, že jste stáhli jeho příběh. Vaše identita zůstane soukromá. To je perfektní pro diskrétní ukládání obsahu bez interakce s účtem tvůrce.",
+            "q3": "Vyprší platnost příběhů TikTok po stažení?",
+            "a3": "Ne, jakmile stáhnete příběh TikTok pomocí SaveTikFast, je trvale uložen na vašem zařízení. I když příběhy TikTok zmizí po 24 hodinách na platformě, vaše stažená kopie zůstane navždy. Ukládejte důležité příběhy předtím, než vyprší jejich platnost, abyste nikdy neztratili přístup k obsahu.",
+            "q4": "Jakou kvalitu mají stažené příběhy TikTok?",
+            "a4": "SaveTikFast stahuje příběhy TikTok v plné původní kvalitě - stejném HD rozlišení nahraném tvůrcem. Nekomprimujeme ani nesnižujeme kvalitu. Vaše stažené příběhy vypadají přesně tak, jak se objevují na TikTok, perfektní pro ukládání vzpomínek nebo opětovné zveřejnění.",
+            "q5": "Mohu stahovat příběhy TikTok na iPhone?",
+            "a5": "Ano, stahování příběhů TikTok na iPhone je snadné. Zkopírujte odkaz na příběh z TikTok, otevřete Safari nebo Chrome, přejděte na SaveTikFast, vložte odkaz a klepněte na stáhnout. Příběhy se ukládají přímo do vaší aplikace Fotky nebo Soubory. Funguje na iPhone 15, 14, 13, 12 a všech modelech bez instalace jakékoli aplikace.",
+            "q6": "Je stahovač příběhů TikTok zdarma?",
+            "a6": "Zcela zdarma. Stahovač příběhů SaveTikFast nemá žádné poplatky, prémiové plány nebo limity stahování. Ukládejte neomezené příběhy TikTok bez nákladů na jakémkoli zařízení - iPhone, Android, Samsung, PC, Mac. Bez požadované registrace nebo účtu.",
+            "q7": "Mohu stahovat soukromé příběhy TikTok?",
+            "a7": "SaveTikFast může stahovat pouze veřejné příběhy TikTok. Soukromé příběhy sdílené pouze s konkrétními sledujícími nejsou dostupné externím nástrojům pro stahování kvůli ochraně soukromí TikTok. Pro soukromý obsah budete potřebovat přímé povolení tvůrce.",
+            "q8": "Proč používat SaveTikFast pro příběhy TikTok?",
+            "a8": "SaveTikFast je nejlepší stahovač příběhů TikTok, protože nabízíme okamžitá stahování, původní HD kvalitu, anonymní ukládání a bezplatný neomezený přístup. Náš nástroj funguje spolehlivě na všech zařízeních a prohlížečích, což jej činí lepším než jiné stahovače příběhů. Ukládejte příběhy s vypršením platnosti předtím, než zmizí navždy."
+        }
+    },
+    "blog": {
+        "meta_title": "TikTok průvodce stahováním 2026 – Videa, MP3, slajdy a příběhy",
+        "meta_desc": "Kompletní průvodce stahováním obsahu TikTok v 2026. Ukládání videí bez vodoznaku, převod na MP3, stahování prezentací a příběhů na iPhone, Android a PC.",
+        "keywords": "jak stáhnout tiktok videa bez vodoznaku 2026, tiktok downloader iphone ios 18, uložit tiktok videa android 15, tiktok mp3 konvertor zdarma online",
+        "title": "Ultimátní průvodce stahováním z TikToku 2026",
+        "subtitle": "Vše, co potřebujete vědět o stahování videí, MP3, prezentací a příběhů z TikToku. Aktualizováno pro rok 2026.",
+        "updated": "Poslední aktualizace: Únor",
+        "back_home": "Zpět na stahování",
+        "tools_heading": "Vyberte typ stahování",
+        "try_now": "Vyzkoušet nyní",
+        "card_video_title": "Stahovač videí",
+        "card_video_desc": "Stahujte videa z TikToku bez vodoznaku v HD/4K kvalitě. Funguje na iPhone 16, Samsung Galaxy S25 a všech zařízeních.",
+        "card_mp3_title": "MP3 Konvertor",
+        "card_mp3_desc": "Extrahujte zvuk z TikTok videí ve vysoké kvalitě 320kbps. Ideální pro vyzvánění.",
+        "card_slideshow_title": "Ukládání prezentací",
+        "card_slideshow_desc": "Stáhněte si všechny fotky z TikTok prezentací a karuselů jako soubor ZIP.",
+        "card_story_title": "Stahovač příběhů",
+        "card_story_desc": "Uložte si TikTok příběhy dříve, než zmizí po 24 hodinách. Anonymní stahování.",
+        "section1_title": "Jak stahovat videa z TikToku v roce 2026",
+        "section1_content": "<strong>Stahování videí z TikToku bez vodoznaku</strong> nikdy nebylo jednodušší. V roce 2026 zůstává SaveTikFast nejrychlejším a nejspolehlivějším řešením.",
+        "section2_title": "Průvodce převodem TikToku na MP3",
+        "section2_content": "Chcete <strong>převést TikTok na MP3</strong>? Náš audio extraktor získá zvuk z jakéhokoli videa ve <strong>vysoké kvalitě až 320kbps</strong>.",
+        "section3_title": "Stahování prezentací a příběhů z TikToku",
+        "section3_content": "<strong>TikTok prezentace</strong> jsou v roce 2026 velmi populární. Náš stahovač ukládá <strong>každý obrázek z karuselu</strong> v původní kvalitě.",
+        "section4_title": "Soukromí a bezpečnost",
+        "section4_content": "V SaveTikFast bereme vaše <strong>soukromí vážně</strong>. Žádná registrace, žádné ukládání videí, zabezpečené SSL připojení.",
+        "section5_title": "Proč zvolit SaveTikFast?",
+        "section5_content": "SaveTikFast vyniká: nejrychlejší zpracování, nejvyšší kvalita až 4K, bez vodoznaku, všechny typy obsahu, kompatibilní se všemi zařízeními, vždy zdarma.",
+        "cta_title": "Připraveni ke stahování?",
+        "cta_desc": "Začněte stahovat TikTok videa, MP3, prezentace a příběhy hned teď. 100% zdarma, bez registrace.",
+        "cta_button": "Začít stahovat",
+        "latest_posts": "Nejnovější příspěvky",
+        "read_more": "Číst více",
+        "share": "Sdílet tento článek:",
+        "related_posts_title": "Související články",
+        "toc_title": "Obsah",
+        "copy_link": "Kopírovat odkaz",
+        "link_copied": "Zkopírováno!"
+    },
+    "ios_page": {
+        "title": "TikTok Downloader pro iOS",
+        "desc": "Stahujte videa TikTok bez vodoznaku přímo do svého iPhonu nebo iPadu v HD kvalitě. Nejrychlejší způsob ukládání videí pomocí Safari na iOS.",
+        "placeholder": "Vložte odkaz TikTok ze svého iPhone...",
+        "meta_title": "TikTok Downloader pro iPhone/iPad – SaveTikFast",
+        "meta_desc": "Bezplatný nástroj pro ukládání videí TikTok bez vodoznaku na iOS (iPhone a iPad). Není nutná žádná instalace aplikace. Stahujte okamžitě ve formátu MP4 nebo MP3.",
+        "faq": {
+            "q1": "Jak si stáhnu videa TikTok na iPhone a iPad bez vodoznaku?",
+            "a1": "Otevřete TikTok na svém iPhonu nebo iPadu, klepněte na Sdílet a Kopírovat odkaz. Otevřete prohlížeč Safari nebo Chrome, navštivte SaveTikFast, vložte URL videa TikTok a klepněte na Stáhnout. Video se uloží přímo do vaší aplikace Fotky v HD kvalitě bez vodoznaku. Funguje na iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air a všech zařízeních iOS se systémem iOS 17 nebo iOS 18.",
+            "q2": "Je SaveTikFast zdarma k použití na iPhone bez instalace jakékoli aplikace?",
+            "a2": "Ano, SaveTikFast je 100% zdarma pro uživatele iPhone a iPad. Není potřeba žádná instalace aplikace z App Store. Náš program pro stahování videa TikTok funguje přímo v prohlížeči Safari, Chrome nebo Firefox na iOS. Stahujte neomezené množství videí TikTok bez vodoznaku, převádějte TikTok na MP3 a ukládejte příběhy TikTok – vše zcela zdarma bez nutnosti registrace nebo předplatného.",
+            "q3": "Mohu ukládat videa TikTok do role fotoaparátu iPhone v kvalitě HD 4K?",
+            "a3": "Absolutně. SaveTikFast stahuje videa TikTok v nejvyšší dostupné kvalitě včetně 720p HD, 1080p Full HD a rozlišení 4K přímo do aplikace Fotky nebo Soubory pro iPhone. Videa nikdy nekomprimujeme. Lepší kvalita než SSSTik, SnapTik nebo TikMate na iOS zařízeních. Ideální pro ukládání obsahu TikTok offline na iPhone pro pozdější prohlížení.",
+            "q4": "Proč je SaveTikFast nejlepším stahovačem TikTok pro zařízení iOS?",
+            "a4": "SaveTikFast je nejrychlejší spořič videa TikTok pro iPhone a iPad s 3sekundovým stahováním, bez problémů s odstraněním vodoznaku, podporou HD a 4K, extrakcí zvuku MP3, stahováním příběhů a ukládáním prezentací. Na rozdíl od jiných stahovačů iOS TikTok nevyžadujeme žádnou instalaci aplikace, žádné přihlášení a žádné Apple Shortcuts. Funguje perfektně v prohlížeči Safari ve všech verzích iOS.",
+            "q5": "Jak převedu videa TikTok na zvuk MP3 na iPhone?",
+            "a5": "Zkopírujte odkaz na video TikTok na svůj iPhone, otevřete Safari nebo Chrome, navštivte stránku SaveTikFast MP3 converter, vložte URL a klepněte na Extrahovat MP3. Zvukový soubor se stáhne v kvalitě 320 kb/s do aplikace Soubory pro iPhone. Perfektní pro vytváření vyzváněcích tónů pro iPhone ze zvuků TikTok, ukládání populární hudby TikTok a extrahování virálních zvukových klipů na zařízeních iOS."
+        }
+    },
+    "android_page": {
+        "title": "TikTok Downloader pro Android",
+        "desc": "Nejlepší spořič videa Android TikTok! Stáhněte si jakékoli video TikTok bez vodoznaku přímo do své mobilní galerie ve formátu MP4.",
+        "placeholder": "Vložte odkaz TikTok z telefonu Android...",
+        "meta_title": "TikTok Downloader pro zařízení Android - SaveTikFast",
+        "meta_desc": "Uložte jakékoli video TikTok bez loga do galerie telefonu Android. 100% zdarma, bez vodoznaku, rychle a bezpečně. Stáhnout v HD kvalitě.",
+        "faq": {
+            "q1": "Jak si stáhnu videa TikTok na Android bez vodoznaku?",
+            "a1": "Otevřete TikTok na svém telefonu Android, klepněte na Sdílet a Kopírovat odkaz. Otevřete prohlížeč Chrome, Samsung Internet nebo Firefox, navštivte SaveTikFast, vložte URL videa a klepněte na Stáhnout. Video TikTok se uloží do složky Stažené soubory nebo Galerie v HD kvalitě bez vodoznaku. Funguje na zařízeních Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus a Huawei.",
+            "q2": "Je SaveTikFast kompatibilní se všemi telefony a tablety Android?",
+            "a2": "Ano, SaveTikFast funguje na každém zařízení Android včetně Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia a tabletů Android. Kompatibilní s Androidem 12, 13, 14 a 15. Ke stažení videí TikTok bez vodoznaku zdarma použijte Chrome, Samsung Internet, Firefox nebo jakýkoli mobilní prohlížeč. Není nutná žádná instalace APK.",
+            "q3": "Mohu uložit videa TikTok do své galerie Android v HD 4K?",
+            "a3": "Absolutně. SaveTikFast stahuje videa TikTok v originálním HD, 1080p Full HD a 4K kvalitě přímo do galerie vašeho telefonu Android nebo do složky Stahování. Zachováváme původní kvalitu videa bez komprese. Lepší než downloadery SSSTik, SnapTik nebo TikMate. Ideální pro ukládání obsahu TikTok offline na zařízeních Samsung Galaxy, Pixel nebo Xiaomi.",
+            "q4": "Proč zvolit SaveTikFast před jinými stahovači Android TikTok?",
+            "a4": "SaveTikFast je nejrychlejší stahovač TikTok pro Android s 3sekundovým zpracováním, stahováním bez vodoznaku, podporou HD a 4K videa, převodníkem TikTok MP3, spořičem příběhu a stahováním prezentací. Není potřeba žádný soubor APK, není potřeba žádná aplikace Google Play. Funguje v prohlížeči Chrome na Samsung Galaxy, Google Pixel, Xiaomi, OPPO a všech chytrých telefonech Android bez registrace.",
+            "q5": "Jak extrahuji zvuk MP3 z TikTok na mém telefonu Android?",
+            "a5": "Zkopírujte odkaz na video TikTok do svého zařízení Android, otevřete internetový prohlížeč Chrome nebo Samsung, navštivte SaveTikFast MP3 converter, vložte URL a klepněte na Extrahovat MP3. Stahování zvuku ve vysoce kvalitním formátu 320 kb/s do složky Stažené soubory. Ideální pro ukládání populárních skladeb TikTok, vytváření vyzváněcích tónů pro Android a extrahování virálních zvuků na telefonech Samsung Galaxy a Pixel."
+        }
+    },
+    "mac_page": {
+        "title": "TikTok Downloader pro Mac",
+        "desc": "Stáhněte si vysoce kvalitní videa TikTok bez vodoznaku na svůj MacBook nebo iMac. Funguje perfektně na Safari a Chrome.",
+        "placeholder": "Sem přetáhněte odkaz TikTok ke stažení na Mac...",
+        "meta_title": "TikTok Video Downloader pro Mac/MacBook (HD) – SaveTikFast",
+        "meta_desc": "Snadno stahujte videa TikTok bez vodoznaku do svého Macu. Bezplatný online spořič s podporou macOS Safari, Chrome a Firefox v kvalitě 4K.",
+        "faq": {
+            "q1": "Jak si stáhnu videa TikTok na Mac bez vodoznaku?",
+            "a1": "Otevřete TikTok v Safari, Chrome nebo Firefox na vašem MacBooku nebo iMacu. Zkopírujte URL videa TikTok z adresního řádku, navštivte SaveTikFast, vložte odkaz a klikněte na Stáhnout. Video se uloží do složky Mac Downloads v HD nebo 4K kvalitě bez vodoznaku. Funguje na macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac a Mac Mini.",
+            "q2": "Funguje SaveTikFast v Safari a Chrome pro macOS?",
+            "a2": "Ano, SaveTikFast funguje perfektně na všech prohlížečích Mac včetně Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge a Opera. Není třeba instalovat rozšíření prohlížeče ani plugin. Náš program pro stahování videa TikTok běží přímo ve vašem prohlížeči na macOS Sonoma, Ventura a Monterey. Stáhněte si neomezený počet videí TikTok bez vodoznaku zcela zdarma na jakýkoli počítač Mac.",
+            "q3": "Mohu na svůj MacBook ukládat videa TikTok v kvalitě 4K?",
+            "a3": "Absolutně. SaveTikFast stahuje videa TikTok v nejvyšší dostupné kvalitě včetně rozlišení 720p, 1080p Full HD, 2K a 4K na MacBook Pro, MacBook Air, iMac a Mac Mini. Nikdy nekomprimujeme ani nesnižujeme kvalitu videa. Soubory se ukládají jako MP4 do složky Stažené soubory. Lepší než SSSTik nebo SnapTik pro uživatele Mac, kteří chtějí prvotřídní kvalitu videa.",
+            "q4": "Proč je SaveTikFast nejlepším stahovačem TikTok pro počítače Mac?",
+            "a4": "SaveTikFast je nejrychlejší stahovač videa TikTok pro Mac s okamžitým 3sekundovým zpracováním, odstraněním vodoznaku, podporou kvality 4K, extrakcí zvuku MP3, ukládáním příběhu TikTok a stahováním prezentací. Není potřeba žádná instalace softwaru na macOS. Funguje v prohlížeči Safari a Chrome na MacBooku Pro, MacBooku Air, iMacu a Macu Mini bez registrace nebo předplatného.",
+            "q5": "Jak převedu TikTok na MP3 na svém Macu?",
+            "a5": "Zkopírujte URL videa TikTok ze Safari nebo Chrome na vašem Macu, navštivte SaveTikFast MP3 converter, vložte odkaz a klikněte na Extrahovat MP3. Zvukový soubor se stáhne ve studiové kvalitě 320 kbps MP3 formátu do vaší složky Mac Downloads. Ideální pro ukládání populární hudby TikTok, vytváření seznamů skladeb a extrahování zvuků na MacBooku Pro, MacBooku Air a iMacu."
+        }
+    },
+    "pc_page": {
+        "title": "TikTok Downloader pro PC",
+        "desc": "Ukládejte videa TikTok přímo do počítače nebo notebooku se systémem Windows. Získejte čistá videa bez vodoznaků ultra vysokou rychlostí.",
+        "placeholder": "Vložte odkaz na video TikTok ze svého PC...",
+        "meta_title": "TikTok Downloader pro Windows PC/Laptop - SaveTikFast",
+        "meta_desc": "Nejrychlejší stahovač videa TikTok pro Windows PC. Ukládejte si zdarma neomezený počet videí TikTok bez vodoznaku do počítače.",
+        "faq": {
+            "q1": "Jak si stáhnu videa TikTok na Windows PC bez vodoznaku?",
+            "a1": "Otevřete TikTok v prohlížeči Chrome, Edge nebo Firefox na počítači nebo notebooku se systémem Windows. Zkopírujte URL videa TikTok z adresního řádku prohlížeče, navštivte SaveTikFast, vložte odkaz a klikněte na Stáhnout. Video se uloží do složky Stažené soubory do počítače v kvalitě HD nebo 4K bez vodoznaku. Funguje na Windows 11, Windows 10, stolních počítačích a noteboocích od společností Dell, HP, Lenovo, ASUS a Acer.",
+            "q2": "Je SaveTikFast zdarma k použití na počítačích se systémem Windows?",
+            "a2": "Ano, SaveTikFast je pro uživatele Windows PC zcela zdarma. Není potřeba žádná instalace softwaru ani stahování desktopové aplikace. Náš program pro stahování videa TikTok funguje přímo v prohlížečích Chrome, Microsoft Edge, Firefox a Opera v systémech Windows 11 a Windows 10. Stahujte neomezené množství videí TikTok bez vodoznaku, převádějte je do MP3, ukládejte příběhy a stahujte prezentace zdarma.",
+            "q3": "Mohu uložit videa TikTok v HD 4K kvalitě na svém počítači se systémem Windows?",
+            "a3": "Absolutně. SaveTikFast stahuje videa TikTok v původní kvalitě včetně rozlišení 720p HD, 1080p Full HD, 2K a 4K přímo do vaší složky Windows PC Downloads jako soubory MP4. Nikdy nekomprimujeme ani nesnižujeme kvalitu. Lepší než SSSTik, SnapTik nebo TikMate. Ideální pro ukládání a úpravu obsahu TikTok na stolních počítačích se systémem Windows 11 nebo Windows 10.",
+            "q4": "Proč je SaveTikFast nejlepším stahovačem TikTok pro PC?",
+            "a4": "SaveTikFast je nejrychlejší stahovač videa TikTok pro Windows PC s 3sekundovým zpracováním, bez vodoznaku, podporou HD a 4K, převodníkem MP3, stahováním příběhů a spořičem prezentace. Není nutná žádná instalace softwaru na plochu. Funguje v prohlížeči Chrome a Edge na Windows 11, laptopech a stolních počítačích s Windows 10 od HP, Dell, Lenovo, ASUS bez registrace a poplatků.",
+            "q5": "Jak převedu TikTok na MP3 v počítači se systémem Windows?",
+            "a5": "Zkopírujte adresu URL videa TikTok z Chrome nebo Edge na vašem počítači se systémem Windows, navštivte stránku SaveTikFast MP3 converter, vložte odkaz a klikněte na Extrahovat MP3. Zvuk se stáhne ve vysoce kvalitním formátu 320 kb/s MP3 do složky Stažené soubory v počítači. Ideální pro ukládání skladeb TikTok, vytváření vyzváněcích tónů Windows, extrahování virového zvuku a vytváření hudebních sbírek na vašem stolním počítači."
+        }
+    },
+    "seo_rich_content": {
+        "intro_title": "Nejlepší TikTok Video Downloader bez vodoznaku",
+        "intro_p1": "SaveTikFast is widely recognized as one of the premier tools available online for downloading TikTok videos without any watermark. It has been meticulously designed to cater to users who demand high speed, impeccable quality, and ultimate convenience. Whether you are an avid content creator looking to back up your own videos, a social media manager gathering trending clips for analysis, or simply an enthusiast who loves saving funny and inspiring moments, SaveTikFast offers a seamless experience that stands out from the rest. The platform operates entirely through your web browser, meaning there is no need to install any cumbersome software or applications that might slow down your device. This universal accessibility ensures that you can use our service on a Windows PC, a Mac, an Android smartphone, or an iPhone with equal ease and efficiency. Furthermore, we pride ourselves on providing a completely free service that doesn't compromise on performance. You get unlimited downloads, ensuring that your favorite TikTok content is always just a click away, ready to be saved directly to your local storage in crisp, high-definition quality. Our tool is the ultimate solution for anyone wanting to keep their favorite TikToks forever.",
+        "intro_p2": "SaveTikFast is not just a simple video downloader; it is an all-in-one media extraction powerhouse tailored specifically for TikTok content. We understand that TikTok has evolved to include various formats, and our tool has adapted accordingly. If you come across a video with a viral audio track that you want to keep, our dedicated MP3 downloader allows you to rip the audio in crystal-clear quality, entirely separate from the video. This is incredibly useful for creators looking for sound effects or users wanting to enjoy their favorite TikTok tunes offline. Moreover, our platform provides full support for the increasingly popular TikTok photo slideshows. With just one click, you can download all the images from a slideshow in pristine HD quality, saving you the trouble of manual screen capturing. We also cater to the need of downloading TikTok Stories before they vanish. With our Story downloader, you can quickly save those temporary updates directly to your device. All these features are integrated into a single, user-friendly interface. Whether you need MP4 videos, MP3 audio, or JPG images, SaveTikFast delivers them all with unmatched speed, ensuring you never lose out on the content you love.",
+        "why_title": "Proč zvolit SaveTikFast?",
+        "why_p1": "V SaveTikFast chápeme, že váš čas je cenný, a proto upřednostňujeme bleskurychlou rychlost stahování a skálopevnou spolehlivost. Naše robustní backendové systémy jsou navrženy tak, aby zvládaly velké objemy souběžných požadavků, aniž by se musely zapotit. Když stisknete tlačítko stahování, naše servery okamžitě zpracují odkaz TikTok, odstraní vodoznak a doručí vám soubor během mrknutí oka. Nesetkáte se s nefunkčními odkazy, nekonečnými obrazovkami načítání nebo frustrujícími časovými limity. Důsledně monitorujeme a upgradujeme naši síť, abychom zajistili bezproblémové a nepřerušované stahování, na které se můžete den co den spolehnout.",
+        "why_p2": "Při stahování obsahu je důležitá vizuální čistota a SaveTikFast zaručuje vynikající kvalitu při každém stahování. Zachováváme datový tok a rozlišení původního videa a poskytujeme vám dokonalé soubory MP4 bez vodoznaků, které jsou ideální pro prohlížení na velkých obrazovkách nebo pro profesionální úpravy videa. Kromě prvotřídní kvality se naše služba může pochlubit univerzální kompatibilitou. O omezení zařízení se nemusíte starat; SaveTikFast je plně responzivní a funguje perfektně na jakémkoli gadgetu s připojením k internetu. Od nejnovějších iPhonů a zařízení se systémem Android až po starší stolní počítače, náš webový nástroj se přizpůsobí vaší obrazovce a prohlížeči a nabízí konzistentní a hladký uživatelský zážitek kdekoli.",
+        "why_p3": "SaveTikFast se zavazuje poskytovat bezpečné a soukromé prostředí pro všechny naše uživatele. K používání našich služeb nevyžadujeme, abyste si vytvořili účet, přihlásili se nebo poskytli jakékoli osobní údaje. To, co stahujete, je vaše věc a my to tak udržujeme tím, že neuchováváme žádné záznamy o vaší historii stahování. Kromě toho jsou naše stránky neustále kontrolovány z hlediska zranitelnosti a používají standardní protokoly HTTPS, aby byla zajištěna bezpečnost vašich dat. Tím, že se vyhneme nutnosti instalace aplikací, chráníme vaše zařízení před adwarem, spywarem a dalším škodlivým softwarem, který je často součástí programů ke stažení. Vaše digitální bezpečnost je zde zaručena.",
+        "guide_title": "Jak stahovat videa TikTok na libovolném zařízení",
+        "guide_p1": "Použití SaveTikFast ke stažení vašich oblíbených videí TikTok je neuvěřitelně přímočarý proces, který zvládne každý během několika sekund. Nejprve otevřete aplikaci TikTok na svém chytrém telefonu nebo navštivte webovou stránku TikTok v prohlížeči počítače. Procházejte kanál, dokud nenajdete video, prezentaci nebo příběh, který chcete uložit. Dále klepněte na ikonu 'Sdílet', která je obvykle představována šipkou směřující doprava, která se nachází na pravé straně obrazovky. V nabídce sdílení, která se zobrazí, vyberte možnost „Kopírovat odkaz“. Jakmile je odkaz zkopírován do vaší schránky, otevřete svůj preferovaný webový prohlížeč – ať už je to Chrome, Safari nebo Firefox – a přejděte na web SaveTikFast. Na naší domovské stránce viditelně uvidíte velké vstupní pole. Vložte zkopírovaný odkaz TikTok přímo do tohoto textového pole. Po vložení odkazu klikněte na tlačítko 'Stáhnout' hned vedle něj. Náš systém odkaz okamžitě zpracuje a během několika okamžiků vám nabídne několik možností stažení. Můžete si vybrat, zda chcete stáhnout video bez vodoznaku, extrahovat zvuk jako MP3 nebo uložit obrázky z prezentace. Klikněte na požadovaný formát a soubor se okamžitě začne stahovat do místního úložiště vašeho zařízení, připraven k prohlížení nebo sdílení offline.",
+        "comparison_title": "SaveTikFast vs ostatní downloadery (SSSTik, SnapTik)",
+        "comparison_p1": "Když porovnáte SaveTikFast s jinými oblíbenými alternativami, jako je SnapTik, SSSTik nebo TikMate, výhody naší platformy budou okamžitě jasné. SaveTikFast poskytuje vynikající zážitek z reklamy, který vás na rozdíl od mnoha konkurentů nezahltí vyskakovacími okny. Pokud jde o výkon, naše pokročilé převodní motory poskytují videa bez vodoznaků výrazně rychleji než SnapTik, zejména během špičkových hodin internetu. Zatímco SSSTik je schopný nástroj, SaveTikFast nabízí robustnější sadu funkcí, které s naprostou přesností zpracovávají nejen standardní videa, ale také komplexní víceobrázkové prezentace a pomíjivé příběhy. Navíc kvalita zvuku našich stahování MP3 je trvale vyšší než kvalita, kterou získáte z TikMate. Zaměřením na rychlost, spolehlivost, uživatelskou zkušenost a komplexní podporu funkcí se SaveTikFast etabloval jako nejlepší volba pro stahování médií TikTok.",
+        "tips_title": "Tipy pro nejlepší zážitek ze stahování",
+        "tips_p1": "Maximalizovat svou efektivitu pomocí SaveTikFast je snadné pomocí několika jednoduchých triků. Pokud často stahujete TikToks do svého počítače, zvažte ponechat vyhrazenou kartu prohlížeče otevřenou pro SaveTikFast, abyste mohli rychle přepínat tam a zpět při procházení aplikace. Při práci s prezentacemi fotografií vám vytvoření konkrétní složky v zařízení může pomoci efektivněji organizovat jednotlivě stažené obrázky. Pokud jste uživatelem systému iOS a máte potíže s hledáním stažených souborů, nezapomeňte v prohlížeči Safari zkontrolovat sekci „Stahování“ a poté soubor uložit přímo do složky Camera Roll. Pro ty, kteří chtějí vytvořit hudební knihovnu, je naše funkce MP3 perfektní; jen se ujistěte, že jste přejmenovali soubory ihned po stažení, aby byl váš seznam skladeb uspořádaný. Nakonec se vždy ujistěte, že je váš prohlížeč aktualizován na nejnovější verzi, aby byla zaručena maximální kompatibilita a nejrychlejší možná rychlost stahování.",
+        "conclusion_title": "Začněte stahovat své oblíbené TikToks ještě dnes",
+        "conclusion_p1": "Závěrem lze říci, že SaveTikFast je nepochybně nejúčinnějším, nejspolehlivějším a uživatelsky přívětivým nástrojem pro stahování videí, zvuku a prezentací TikTok bez vodoznaků. S naším závazkem k vysokorychlostnímu výkonu, nekompromisní kvalitě a přísnému soukromí uživatelů poskytujeme bezkonkurenční službu, která uspokojí všechny vaše potřeby při stahování. Nenechte své oblíbené momenty TikTok utéct nebo se ztratit ve feedu. Začněte používat SaveTikFast ještě dnes a vytvořte si svou osobní offline sbírku virálních hitů a trendových zvuků. Přidejte si naše stránky do záložek, vyzkoušejte své první bezplatné stažení a zažijte dokonalé řešení pro stahování TikTok sami!"
     }
-  },
-  "blog": {
-    "meta_title": "TikTok průvodce stahováním 2026 – Videa, MP3, slajdy a příběhy",
-    "meta_desc": "Kompletní průvodce stahováním obsahu TikTok v 2026. Ukládání videí bez vodoznaku, převod na MP3, stahování prezentací a příběhů na iPhone, Android a PC.",
-    "keywords": "jak stáhnout tiktok videa bez vodoznaku 2026, tiktok downloader iphone ios 18, uložit tiktok videa android 15, tiktok mp3 konvertor zdarma online",
-    "title": "Ultimátní průvodce stahováním z TikToku 2026",
-    "subtitle": "Vše, co potřebujete vědět o stahování videí, MP3, prezentací a příběhů z TikToku. Aktualizováno pro rok 2026.",
-    "updated": "Poslední aktualizace: Únor",
-    "back_home": "Zpět na stahování",
-    "tools_heading": "Vyberte typ stahování",
-    "try_now": "Vyzkoušet nyní",
-    "card_video_title": "Stahovač videí",
-    "card_video_desc": "Stahujte videa z TikToku bez vodoznaku v HD/4K kvalitě. Funguje na iPhone 16, Samsung Galaxy S25 a všech zařízeních.",
-    "card_mp3_title": "MP3 Konvertor",
-    "card_mp3_desc": "Extrahujte zvuk z TikTok videí ve vysoké kvalitě 320kbps. Ideální pro vyzvánění.",
-    "card_slideshow_title": "Ukládání prezentací",
-    "card_slideshow_desc": "Stáhněte si všechny fotky z TikTok prezentací a karuselů jako soubor ZIP.",
-    "card_story_title": "Stahovač příběhů",
-    "card_story_desc": "Uložte si TikTok příběhy dříve, než zmizí po 24 hodinách. Anonymní stahování.",
-    "section1_title": "Jak stahovat videa z TikToku v roce 2026",
-    "section1_content": "<strong>Stahování videí z TikToku bez vodoznaku</strong> nikdy nebylo jednodušší. V roce 2026 zůstává SaveTikFast nejrychlejším a nejspolehlivějším řešením.",
-    "section2_title": "Průvodce převodem TikToku na MP3",
-    "section2_content": "Chcete <strong>převést TikTok na MP3</strong>? Náš audio extraktor získá zvuk z jakéhokoli videa ve <strong>vysoké kvalitě až 320kbps</strong>.",
-    "section3_title": "Stahování prezentací a příběhů z TikToku",
-    "section3_content": "<strong>TikTok prezentace</strong> jsou v roce 2026 velmi populární. Náš stahovač ukládá <strong>každý obrázek z karuselu</strong> v původní kvalitě.",
-    "section4_title": "Soukromí a bezpečnost",
-    "section4_content": "V SaveTikFast bereme vaše <strong>soukromí vážně</strong>. Žádná registrace, žádné ukládání videí, zabezpečené SSL připojení.",
-    "section5_title": "Proč zvolit SaveTikFast?",
-    "section5_content": "SaveTikFast vyniká: nejrychlejší zpracování, nejvyšší kvalita až 4K, bez vodoznaku, všechny typy obsahu, kompatibilní se všemi zařízeními, vždy zdarma.",
-    "cta_title": "Připraveni ke stahování?",
-    "cta_desc": "Začněte stahovat TikTok videa, MP3, prezentace a příběhy hned teď. 100% zdarma, bez registrace.",
-    "cta_button": "Začít stahovat",
-    "latest_posts": "Nejnovější příspěvky",
-    "read_more": "Číst více",
-    "share": "Sdílet tento článek:",
-    "related_posts_title": "Související články",
-    "toc_title": "Obsah",
-    "copy_link": "Kopírovat odkaz",
-    "link_copied": "Zkopírováno!"
-  },
-  "ios_page": {
-    "title": "TikTok Downloader pro iOS",
-    "desc": "Stahujte videa TikTok bez vodoznaku přímo do svého iPhonu nebo iPadu v HD kvalitě. Nejrychlejší způsob ukládání videí pomocí Safari na iOS.",
-    "placeholder": "Vložte odkaz TikTok ze svého iPhone...",
-    "meta_title": "TikTok Downloader pro iPhone/iPad – SaveTikFast",
-    "meta_desc": "Bezplatný nástroj pro ukládání videí TikTok bez vodoznaku na iOS (iPhone a iPad). Není nutná žádná instalace aplikace. Stahujte okamžitě ve formátu MP4 nebo MP3.",
-    "faq": {
-      "q1": "Jak si stáhnu videa TikTok na iPhone a iPad bez vodoznaku?",
-      "a1": "Otevřete TikTok na svém iPhonu nebo iPadu, klepněte na Sdílet a Kopírovat odkaz. Otevřete prohlížeč Safari nebo Chrome, navštivte SaveTikFast, vložte URL videa TikTok a klepněte na Stáhnout. Video se uloží přímo do vaší aplikace Fotky v HD kvalitě bez vodoznaku. Funguje na iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air a všech zařízeních iOS se systémem iOS 17 nebo iOS 18.",
-      "q2": "Je SaveTikFast zdarma k použití na iPhone bez instalace jakékoli aplikace?",
-      "a2": "Ano, SaveTikFast je 100% zdarma pro uživatele iPhone a iPad. Není potřeba žádná instalace aplikace z App Store. Náš program pro stahování videa TikTok funguje přímo v prohlížeči Safari, Chrome nebo Firefox na iOS. Stahujte neomezené množství videí TikTok bez vodoznaku, převádějte TikTok na MP3 a ukládejte příběhy TikTok – vše zcela zdarma bez nutnosti registrace nebo předplatného.",
-      "q3": "Mohu ukládat videa TikTok do role fotoaparátu iPhone v kvalitě HD 4K?",
-      "a3": "Absolutně. SaveTikFast stahuje videa TikTok v nejvyšší dostupné kvalitě včetně 720p HD, 1080p Full HD a rozlišení 4K přímo do aplikace Fotky nebo Soubory pro iPhone. Videa nikdy nekomprimujeme. Lepší kvalita než SSSTik, SnapTik nebo TikMate na iOS zařízeních. Ideální pro ukládání obsahu TikTok offline na iPhone pro pozdější prohlížení.",
-      "q4": "Proč je SaveTikFast nejlepším stahovačem TikTok pro zařízení iOS?",
-      "a4": "SaveTikFast je nejrychlejší spořič videa TikTok pro iPhone a iPad s 3sekundovým stahováním, bez problémů s odstraněním vodoznaku, podporou HD a 4K, extrakcí zvuku MP3, stahováním příběhů a ukládáním prezentací. Na rozdíl od jiných stahovačů iOS TikTok nevyžadujeme žádnou instalaci aplikace, žádné přihlášení a žádné Apple Shortcuts. Funguje perfektně v prohlížeči Safari ve všech verzích iOS.",
-      "q5": "Jak převedu videa TikTok na zvuk MP3 na iPhone?",
-      "a5": "Zkopírujte odkaz na video TikTok na svůj iPhone, otevřete Safari nebo Chrome, navštivte stránku SaveTikFast MP3 converter, vložte URL a klepněte na Extrahovat MP3. Zvukový soubor se stáhne v kvalitě 320 kb/s do aplikace Soubory pro iPhone. Perfektní pro vytváření vyzváněcích tónů pro iPhone ze zvuků TikTok, ukládání populární hudby TikTok a extrahování virálních zvukových klipů na zařízeních iOS."
-    }
-  },
-  "android_page": {
-    "title": "TikTok Downloader pro Android",
-    "desc": "Nejlepší spořič videa Android TikTok! Stáhněte si jakékoli video TikTok bez vodoznaku přímo do své mobilní galerie ve formátu MP4.",
-    "placeholder": "Vložte odkaz TikTok z telefonu Android...",
-    "meta_title": "TikTok Downloader pro zařízení Android - SaveTikFast",
-    "meta_desc": "Uložte jakékoli video TikTok bez loga do galerie telefonu Android. 100% zdarma, bez vodoznaku, rychle a bezpečně. Stáhnout v HD kvalitě.",
-    "faq": {
-      "q1": "Jak si stáhnu videa TikTok na Android bez vodoznaku?",
-      "a1": "Otevřete TikTok na svém telefonu Android, klepněte na Sdílet a Kopírovat odkaz. Otevřete prohlížeč Chrome, Samsung Internet nebo Firefox, navštivte SaveTikFast, vložte URL videa a klepněte na Stáhnout. Video TikTok se uloží do složky Stažené soubory nebo Galerie v HD kvalitě bez vodoznaku. Funguje na zařízeních Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus a Huawei.",
-      "q2": "Je SaveTikFast kompatibilní se všemi telefony a tablety Android?",
-      "a2": "Ano, SaveTikFast funguje na každém zařízení Android včetně Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia a tabletů Android. Kompatibilní s Androidem 12, 13, 14 a 15. Ke stažení videí TikTok bez vodoznaku zdarma použijte Chrome, Samsung Internet, Firefox nebo jakýkoli mobilní prohlížeč. Není nutná žádná instalace APK.",
-      "q3": "Mohu uložit videa TikTok do své galerie Android v HD 4K?",
-      "a3": "Absolutně. SaveTikFast stahuje videa TikTok v originálním HD, 1080p Full HD a 4K kvalitě přímo do galerie vašeho telefonu Android nebo do složky Stahování. Zachováváme původní kvalitu videa bez komprese. Lepší než downloadery SSSTik, SnapTik nebo TikMate. Ideální pro ukládání obsahu TikTok offline na zařízeních Samsung Galaxy, Pixel nebo Xiaomi.",
-      "q4": "Proč zvolit SaveTikFast před jinými stahovači Android TikTok?",
-      "a4": "SaveTikFast je nejrychlejší stahovač TikTok pro Android s 3sekundovým zpracováním, stahováním bez vodoznaku, podporou HD a 4K videa, převodníkem TikTok MP3, spořičem příběhu a stahováním prezentací. Není potřeba žádný soubor APK, není potřeba žádná aplikace Google Play. Funguje v prohlížeči Chrome na Samsung Galaxy, Google Pixel, Xiaomi, OPPO a všech chytrých telefonech Android bez registrace.",
-      "q5": "Jak extrahuji zvuk MP3 z TikTok na mém telefonu Android?",
-      "a5": "Zkopírujte odkaz na video TikTok do svého zařízení Android, otevřete internetový prohlížeč Chrome nebo Samsung, navštivte SaveTikFast MP3 converter, vložte URL a klepněte na Extrahovat MP3. Stahování zvuku ve vysoce kvalitním formátu 320 kb/s do složky Stažené soubory. Ideální pro ukládání populárních skladeb TikTok, vytváření vyzváněcích tónů pro Android a extrahování virálních zvuků na telefonech Samsung Galaxy a Pixel."
-    }
-  },
-  "mac_page": {
-    "title": "TikTok Downloader pro Mac",
-    "desc": "Stáhněte si vysoce kvalitní videa TikTok bez vodoznaku na svůj MacBook nebo iMac. Funguje perfektně na Safari a Chrome.",
-    "placeholder": "Sem přetáhněte odkaz TikTok ke stažení na Mac...",
-    "meta_title": "TikTok Video Downloader pro Mac/MacBook (HD) – SaveTikFast",
-    "meta_desc": "Snadno stahujte videa TikTok bez vodoznaku do svého Macu. Bezplatný online spořič s podporou macOS Safari, Chrome a Firefox v kvalitě 4K.",
-    "faq": {
-      "q1": "Jak si stáhnu videa TikTok na Mac bez vodoznaku?",
-      "a1": "Otevřete TikTok v Safari, Chrome nebo Firefox na vašem MacBooku nebo iMacu. Zkopírujte URL videa TikTok z adresního řádku, navštivte SaveTikFast, vložte odkaz a klikněte na Stáhnout. Video se uloží do složky Mac Downloads v HD nebo 4K kvalitě bez vodoznaku. Funguje na macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac a Mac Mini.",
-      "q2": "Funguje SaveTikFast v Safari a Chrome pro macOS?",
-      "a2": "Ano, SaveTikFast funguje perfektně na všech prohlížečích Mac včetně Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge a Opera. Není třeba instalovat rozšíření prohlížeče ani plugin. Náš program pro stahování videa TikTok běží přímo ve vašem prohlížeči na macOS Sonoma, Ventura a Monterey. Stáhněte si neomezený počet videí TikTok bez vodoznaku zcela zdarma na jakýkoli počítač Mac.",
-      "q3": "Mohu na svůj MacBook ukládat videa TikTok v kvalitě 4K?",
-      "a3": "Absolutně. SaveTikFast stahuje videa TikTok v nejvyšší dostupné kvalitě včetně rozlišení 720p, 1080p Full HD, 2K a 4K na MacBook Pro, MacBook Air, iMac a Mac Mini. Nikdy nekomprimujeme ani nesnižujeme kvalitu videa. Soubory se ukládají jako MP4 do složky Stažené soubory. Lepší než SSSTik nebo SnapTik pro uživatele Mac, kteří chtějí prvotřídní kvalitu videa.",
-      "q4": "Proč je SaveTikFast nejlepším stahovačem TikTok pro počítače Mac?",
-      "a4": "SaveTikFast je nejrychlejší stahovač videa TikTok pro Mac s okamžitým 3sekundovým zpracováním, odstraněním vodoznaku, podporou kvality 4K, extrakcí zvuku MP3, ukládáním příběhu TikTok a stahováním prezentací. Není potřeba žádná instalace softwaru na macOS. Funguje v prohlížeči Safari a Chrome na MacBooku Pro, MacBooku Air, iMacu a Macu Mini bez registrace nebo předplatného.",
-      "q5": "Jak převedu TikTok na MP3 na svém Macu?",
-      "a5": "Zkopírujte URL videa TikTok ze Safari nebo Chrome na vašem Macu, navštivte SaveTikFast MP3 converter, vložte odkaz a klikněte na Extrahovat MP3. Zvukový soubor se stáhne ve studiové kvalitě 320 kbps MP3 formátu do vaší složky Mac Downloads. Ideální pro ukládání populární hudby TikTok, vytváření seznamů skladeb a extrahování zvuků na MacBooku Pro, MacBooku Air a iMacu."
-    }
-  },
-  "pc_page": {
-    "title": "TikTok Downloader pro PC",
-    "desc": "Ukládejte videa TikTok přímo do počítače nebo notebooku se systémem Windows. Získejte čistá videa bez vodoznaků ultra vysokou rychlostí.",
-    "placeholder": "Vložte odkaz na video TikTok ze svého PC...",
-    "meta_title": "TikTok Downloader pro Windows PC/Laptop - SaveTikFast",
-    "meta_desc": "Nejrychlejší stahovač videa TikTok pro Windows PC. Ukládejte si zdarma neomezený počet videí TikTok bez vodoznaku do počítače.",
-    "faq": {
-      "q1": "Jak si stáhnu videa TikTok na Windows PC bez vodoznaku?",
-      "a1": "Otevřete TikTok v prohlížeči Chrome, Edge nebo Firefox na počítači nebo notebooku se systémem Windows. Zkopírujte URL videa TikTok z adresního řádku prohlížeče, navštivte SaveTikFast, vložte odkaz a klikněte na Stáhnout. Video se uloží do složky Stažené soubory do počítače v kvalitě HD nebo 4K bez vodoznaku. Funguje na Windows 11, Windows 10, stolních počítačích a noteboocích od společností Dell, HP, Lenovo, ASUS a Acer.",
-      "q2": "Je SaveTikFast zdarma k použití na počítačích se systémem Windows?",
-      "a2": "Ano, SaveTikFast je pro uživatele Windows PC zcela zdarma. Není potřeba žádná instalace softwaru ani stahování desktopové aplikace. Náš program pro stahování videa TikTok funguje přímo v prohlížečích Chrome, Microsoft Edge, Firefox a Opera v systémech Windows 11 a Windows 10. Stahujte neomezené množství videí TikTok bez vodoznaku, převádějte je do MP3, ukládejte příběhy a stahujte prezentace zdarma.",
-      "q3": "Mohu uložit videa TikTok v HD 4K kvalitě na svém počítači se systémem Windows?",
-      "a3": "Absolutně. SaveTikFast stahuje videa TikTok v původní kvalitě včetně rozlišení 720p HD, 1080p Full HD, 2K a 4K přímo do vaší složky Windows PC Downloads jako soubory MP4. Nikdy nekomprimujeme ani nesnižujeme kvalitu. Lepší než SSSTik, SnapTik nebo TikMate. Ideální pro ukládání a úpravu obsahu TikTok na stolních počítačích se systémem Windows 11 nebo Windows 10.",
-      "q4": "Proč je SaveTikFast nejlepším stahovačem TikTok pro PC?",
-      "a4": "SaveTikFast je nejrychlejší stahovač videa TikTok pro Windows PC s 3sekundovým zpracováním, bez vodoznaku, podporou HD a 4K, převodníkem MP3, stahováním příběhů a spořičem prezentace. Není nutná žádná instalace softwaru na plochu. Funguje v prohlížeči Chrome a Edge na Windows 11, laptopech a stolních počítačích s Windows 10 od HP, Dell, Lenovo, ASUS bez registrace a poplatků.",
-      "q5": "Jak převedu TikTok na MP3 v počítači se systémem Windows?",
-      "a5": "Zkopírujte adresu URL videa TikTok z Chrome nebo Edge na vašem počítači se systémem Windows, navštivte stránku SaveTikFast MP3 converter, vložte odkaz a klikněte na Extrahovat MP3. Zvuk se stáhne ve vysoce kvalitním formátu 320 kb/s MP3 do složky Stažené soubory v počítači. Ideální pro ukládání skladeb TikTok, vytváření vyzváněcích tónů Windows, extrahování virového zvuku a vytváření hudebních sbírek na vašem stolním počítači."
-    }
-  }
 }

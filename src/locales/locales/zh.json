@@ -1,694 +1,711 @@
 {
-  "404": {
-    "title": "页面未找到",
-    "home_btn": "回到首页"
-  },
-  "meta": {
-    "title": "SaveTikFast 2026 - TikTok视频下载器 无水印 4K高清免费",
-    "description": "免费下载TikTok视频，无水印，超高清4K/HD画质。2026年最快的TikTok下载工具。支持MP4和MP3格式，兼容iPhone、Android和电脑。操作简单，即开即用。"
-  },
-  "common": {
-    "select_language": "选择语言",
-    "toggle_theme": "切换主题"
-  },
-  "nav": {
-    "home": "首頁",
-    "about": "關於我們",
-    "blog": "博客",
-    "contact": "聯絡我們",
-    "terms": "使用條款",
-    "privacy": "隱私權政策",
-    "dmca": "DMCA",
-    "disclaimer": "免責聲明",
-    "tools": "工具"
-  },
-  "hero": {
-    "title": "TikTok 影片下載器",
-    "desc": "下載無浮水印的 TikTok 影片。快速、免費且無限量 HD 畫質。"
-  },
-  "downloader": {
-    "placeholder": "在此处粘贴视频链接...",
-    "btn_download": "立即下载",
-    "btn_paste": "粘贴",
-    "btn_copy": "复制",
-    "btn_clear": "清除",
-    "processing": "正在处理...",
-    "download_video": "下载视频",
-    "download_audio": "下载 MP3",
-    "hd_quality": "无水印",
-    "download_nwm": "无水印下载",
-    "download_hd": "下载 HD",
-    "download_story_vid": "下载快拍 (视频)",
-    "download_story_img": "下载快拍 (图片)",
-    "error_busy": "服务繁忙，请稍后再试。",
-    "download_zip": "全部下载 (ZIP)",
-    "creating_zip": "生成 ZIP...",
-    "save_image": "保存",
-    "error_wrong_type_video": "链接无效！请使用视频下载器。",
-    "error_wrong_type_slideshow": "链接无效！请使用幻灯片下载器。",
-    "error_wrong_type_story": "链接无效！请使用故事下载器。",
-    "error_invalid_link": "链接无效。请检查并重试。",
-    "check_new_tab": "新标签页已打开 — 等待时去看看吧！",
-    "preparing_download": "正在准备您的文件...",
-    "countdown_msg": "下载将自动开始",
-    "modal_ad_text": "专属特别优惠 — 点击立即领取！",
-    "skip_download": "跳过并立即下载",
-    "download_another": "下载另一个视频",
-    "thank_you_title": "下载已开始！",
-    "thank_you_msg": "请检查您的下载文件夹"
-  },
-  "faq": {
-    "title": "常见问题 (FAQ)",
-    "q1": "如何下载无水印的TikTok视频?",
-    "a1": "使用SaveTikFast下载无水印的TikTok视频很容易。只需从应用程序复制TikTok视频链接,将其粘贴到我们的下载框中,然后点击下载按钮。我们的先进技术会自动删除TikTok水印,为您提供干净的视频文件。这适用于所有设备,包括iPhone、Android、Samsung Galaxy、Huawei、iPad、Mac和Windows PC。您可以使用任何浏览器,如Chrome、Safari、Firefox或Edge。与SSSTik或SnapTik不同,SaveTikFast提供即时处理的最高质量输出。",
-    "q2": "SaveTikFast完全免费吗?",
-    "a2": "是的,SaveTikFast 100%免费,并将永远保持免费。没有隐藏费用,没有高级订阅,没有每日下载限制。您可以无限制地下载无水印的TikTok视频、转换为MP3、保存故事和下载幻灯片 - 全部完全免费。我们不需要注册或登录。我们的服务由最少的广告支持,使我们能够在任何设备上为全球数百万用户提供免费的TikTok下载。",
-    "q3": "支持哪些设备和浏览器?",
-    "a3": "SaveTikFast几乎适用于每个设备和浏览器。支持的设备包括iPhone(包括iPhone 15、14、13的所有型号)、Android手机(Samsung Galaxy、Google Pixel、Huawei、Xiaomi、OPPO、OnePlus)、平板电脑(iPad、Samsung Tab)和计算机(MacBook、iMac、Windows PC、Chromebook)。支持的浏览器包括Google Chrome、Apple Safari、Mozilla Firefox、Microsoft Edge、Opera、Brave、Samsung Internet和UC浏览器。无需安装应用程序 - 一切都直接在您的网络浏览器中运行。",
-    "q4": "我可以下载什么视频质量?",
-    "a4": "SaveTikFast以最高可用质量下载TikTok视频。这包括720p高清、1080p全高清、2K,甚至当原始视频支持时的4K分辨率。我们从不压缩或降低视频质量 - 您获得与原始TikTok上传完全相同的质量。这使SaveTikFast优于经常压缩视频的TikMate、SaveFrom或MusicallyDown等其他下载器。",
-    "q5": "使用SaveTikFast安全吗?",
-    "a5": "绝对安全。SaveTikFast完全安全可靠。我们使用SSL加密来保护您的连接,我们不存储您的任何个人数据,也不需要登录或注册。您下载的视频会立即处理,不会存储在我们的服务器上。我们不会在您的设备上安装任何东西。自2024年以来,数百万用户信任SaveTikFast进行安全的TikTok视频下载。",
-    "q6": "SaveTikFast比SSSTik或SnapTik好在哪里?",
-    "a6": "与SSSTik、SnapTik、TikMate和其他TikTok下载器相比,SaveTikFast提供了几个优势。我们的服务更快(下载在3秒内完成),提供更高质量的输出(高达4K),拥有更清洁的界面和更少的广告,在所有设备上更可靠地工作,并提供MP3转换、故事下载和幻灯片提取等附加功能。许多用户在遇到其他下载器的问题后切换到SaveTikFast。",
-    "q7": "我可以在iPhone上下载TikTok视频吗?",
-    "a7": "是的,使用SaveTikFast在iPhone上下载TikTok视频很容易。打开TikTok,复制视频链接,然后打开Safari或Chrome并转到SaveTikFast。粘贴链接并点击下载。视频将直接保存到您的iPhone照片应用或文件中。这适用于所有iPhone型号,包括iPhone 15、14、13、12及更早版本。无需安装应用程序 - 一切都在您的浏览器中运行。",
-    "q8": "我可以下载私密的TikTok视频吗?",
-    "a8": "SaveTikFast只能下载公开的TikTok视频。由于TikTok的隐私设置,任何在线工具都无法下载私密视频(仅对创作者或批准的关注者可见)。如果您获得创作者的许可,请让他们暂时将视频公开或通过TikTok的内置分享功能直接与您分享。",
-    "q9": "如何在Samsung或Android上下载TikTok?",
-    "a9": "在Samsung Galaxy或任何Android手机上下载TikTok视频很简单。打开TikTok应用,在您想要的视频上点击分享,并复制链接。然后打开Chrome、Firefox或Samsung Internet浏览器并访问SaveTikFast。将链接粘贴到下载框中并点击下载按钮。视频将保存到您的下载文件夹或图库。适用于所有Android设备,包括Samsung、Huawei、Xiaomi、OPPO和Google Pixel。",
-    "q10": "为什么选择SaveTikFast而不是其他TikTok下载器?",
-    "a10": "SaveTikFast是TikTok下载的最佳选择,因为我们结合了速度、质量和可靠性。我们提供最快的下载速度(3秒)、最高的视频质量(高达4K)、水印删除、MP3转换、故事下载和幻灯片提取 - 全部在一个免费工具中。我们清晰的界面在所有设备和浏览器上完美运行。数百万用户信任我们作为SSSTik、SnapTik、TikMate、SaveFrom和MusicallyDown的最佳替代品。"
-  },
-  "pages": {
-    "about": {
-      "title": "關於我們",
-      "content": "歡迎來到 SaveTikFast，2026 年領先的 TikTok 下載器。\n\n我們建立 SaveTikFast 只有一個目標：提供最快、最安全且最可靠的方式來儲存無浮水印的 TikTok 影片。與其他工具不同，我們優先考慮使用者體驗：沒有煩人的廣告、無需註冊且無需安裝軟體。\n\n我們的技術保證您獲得影片的原始畫質（最高 4K），同時移除重疊的商標。"
+    "404": {
+        "title": "页面未找到",
+        "home_btn": "回到首页"
     },
-    "contact": {
-      "title": "聯絡我們",
-      "content": "我們重視您的回饋，並隨時為您提供協助。\n\n如果您遇到技術問題、有改進建議或商務諮詢，請聯絡我們的支援團隊：\n\n📧 電子郵件：support@savetik-fast.xyz\n\n我們致力於在 24 小時內回覆所有諮詢。"
-    },
-    "terms": {
-      "title": "使用條款",
-      "content": "使用 SaveTikFast 即表示您同意以下條款：\n\n1. 個人使用：\n我們的服務僅供個人和非商業用途。您可以下載影片以供離線觀看。\n\n2. 智慧財產權：\n我們不擁有下載的內容。所有權利屬於 TikTok 上的原始創作者。您同意不以侵犯版權的方式使用內容。\n\n3. 責任限制：\nSaveTikFast 不對您如何使用下載的素材負責。使用者對任何版權侵權行為承擔全部責任。"
-    },
-    "privacy": {
-      "title": "隱私權政策",
-      "content": "您的隱私對我們至關重要。\n\n資料收集：\n我們不收集姓名或電子郵件等個人資訊。我們可能會使用匿名分析（如 Cookie）來改善網站效能。\n\n不儲存影片：\nSaveTikFast 不會在其伺服器上託管或儲存任何影片。所有檔案處理都是即時進行的。"
-    },
-    "dmca": {
-      "title": "DMCA 政策",
-      "content": "SaveTikFast 尊重他人的智慧財產權。\n\n我們作為技術服務提供者運作，不託管受版權保護的內容。所有影片均直接由第三方伺服器 (TikTok) 提供。\n\n如果您認為您的受版權保護的作品未經授權顯示在我們的服務上，請發送正式的 DMCA 通知至：support@savetik-fast.xyz。"
-    },
-    "disclaimer": {
-      "title": "免責聲明",
-      "content": "1. 無關聯：\nSaveTikFast 是一個獨立的工具，與 TikTok Inc. 或 ByteDance Ltd. 沒有任何附屬、關聯、授權、認可或以任何方式正式連接的關係。\n\n2. 商標：\n名稱「TikTok」及其標誌是其各自所有者的註冊商標。\n\n3. 內容：\n我們無法控制託管在 TikTok 伺服器上的內容。"
-    }
-  },
-  "footer": {
-    "rights": "© 2026 SaveTikFast. 保留所有權利。"
-  },
-  "features": {
-    "title": "主要功能",
-    "no_watermark": {
-      "title": "无水印",
-      "desc": "以原始高清质量下载无水印TikTok视频。SaveTikFast自动删除TikTok标志,为您提供比SSSTik、SnapTik或TikMate更清晰的视频。非常适合在Instagram、YouTube Shorts上重新发布或保存到您的图库。"
-    },
-    "fast": {
-      "title": "闪电般快速",
-      "desc": "最快的在线TikTok视频下载器。在iPhone、Android、Samsung、Huawei、iPad、PC或Mac上仅需3秒即可保存任何TikTok视频。我们的服务器针对速度进行了优化,比SaveFrom和MusicallyDown更快。"
-    },
-    "quality": {
-      "title": "HD &amp; 4K 画质",
-      "desc": "以最高可用质量下载TikTok视频 - 720p、1080p全高清、2K,甚至可用时的4K。与其他TikTok下载器不同,我们在不压缩的情况下保留原始视频质量。"
-    },
-    "device": {
-      "title": "支持所有设备",
-      "desc": "在每个设备上完美运行 - iPhone 15、iPhone 14、Samsung Galaxy、Google Pixel、Huawei、Xiaomi、OPPO、iPad、MacBook、Windows PC和Chromebook。无需安装应用程序。"
-    },
-    "free": {
-      "title": "100%永久免费",
-      "desc": "无限制的TikTok视频下载,无隐藏费用,无需注册,无每日限制。SaveTikFast完全免费,并将永远对全球所有用户免费。"
-    },
-    "secure": {
-      "title": "私密 &amp; 安全",
-      "desc": "您的隐私很重要。我们不存储您的数据,不需要登录,也不跟踪您的下载。通过SSL加密安全匿名地下载TikTok视频。"
-    },
-    "browser": {
-      "title": "所有浏览器",
-      "desc": "即时在Chrome、Safari、Firefox、Microsoft Edge、Opera、Brave、Samsung Internet和UC浏览器上运行。无需扩展程序或插件 - 只需粘贴并下载。"
-    },
-    "batch": {
-      "title": "批量下载",
-      "desc": "快速保存多个TikTok视频。比任何其他工具更快地下载您最喜欢的创作者的整个收藏。比SSSTik或SnapTik更好的批量下载。"
-    }
-  },
-  "how_to": {
-    "title": "如何下载无水印的 TikTok 视频",
-    "step1": "复制您想要保存的 TikTok 视频链接。",
-    "step2": "将链接粘贴到页面顶部的下载框中。",
-    "step3": "点击“下载”按钮，您的视频将立即保存。",
-    "step1_title": "复制链接",
-    "step2_title": "粘贴网址",
-    "step3_title": "下载"
-  },
-  "tools": {
-    "backToDownloader": "返回下载器",
     "meta": {
-      "title": "免费在线工具 - 图片压缩、格式转换和二维码生成",
-      "description": "免费浏览器工具：压缩图片、转换格式（WebP、JPG、PNG）、即时生成二维码。无需上传文件或注册账号。100%免费，所有功能在浏览器本地完成。"
+        "title": "SaveTikFast 2026 - TikTok视频下载器 无水印 4K高清免费",
+        "description": "免费下载TikTok视频，无水印，超高清4K/HD画质。2026年最快的TikTok下载工具。支持MP4和MP3格式，兼容iPhone、Android和电脑。操作简单，即开即用。"
+    },
+    "common": {
+        "select_language": "选择语言",
+        "toggle_theme": "切换主题"
+    },
+    "nav": {
+        "home": "首頁",
+        "about": "關於我們",
+        "blog": "博客",
+        "contact": "聯絡我們",
+        "terms": "使用條款",
+        "privacy": "隱私權政策",
+        "dmca": "DMCA",
+        "disclaimer": "免責聲明",
+        "tools": "工具"
     },
     "hero": {
-      "title": "免费图片和 QR 工具",
-      "desc": "压缩图片、转换格式和生成二维码 — 所有处理都在您的浏览器中进行，100% 隐私安全。"
+        "title": "TikTok 影片下載器",
+        "desc": "下載無浮水印的 TikTok 影片。快速、免費且無限量 HD 畫質。"
     },
-    "tabs": {
-      "compressor": "图片压缩",
-      "converter": "格式转换",
-      "qrcode": "QR 生成器",
-      "engagement": "互动计算器",
-      "money": "收入计算器",
-      "font": "字体生成",
-      "hashtag": "标签生成"
+    "downloader": {
+        "placeholder": "在此处粘贴视频链接...",
+        "btn_download": "立即下载",
+        "btn_paste": "粘贴",
+        "btn_copy": "复制",
+        "btn_clear": "清除",
+        "processing": "正在处理...",
+        "download_video": "下载视频",
+        "download_audio": "下载 MP3",
+        "hd_quality": "无水印",
+        "download_nwm": "无水印下载",
+        "download_hd": "下载 HD",
+        "download_story_vid": "下载快拍 (视频)",
+        "download_story_img": "下载快拍 (图片)",
+        "error_busy": "服务繁忙，请稍后再试。",
+        "download_zip": "全部下载 (ZIP)",
+        "creating_zip": "生成 ZIP...",
+        "save_image": "保存",
+        "error_wrong_type_video": "链接无效！请使用视频下载器。",
+        "error_wrong_type_slideshow": "链接无效！请使用幻灯片下载器。",
+        "error_wrong_type_story": "链接无效！请使用故事下载器。",
+        "error_invalid_link": "链接无效。请检查并重试。",
+        "check_new_tab": "新标签页已打开 — 等待时去看看吧！",
+        "preparing_download": "正在准备您的文件...",
+        "countdown_msg": "下载将自动开始",
+        "modal_ad_text": "专属特别优惠 — 点击立即领取！",
+        "skip_download": "跳过并立即下载",
+        "download_another": "下载另一个视频",
+        "thank_you_title": "下载已开始！",
+        "thank_you_msg": "请检查您的下载文件夹"
     },
-    "dropzone": {
-      "text": "将图片拖到此处",
-      "hint": "或点击选择 (JPG, PNG, WebP — 最大 15MB)",
-      "hint_convert": "或点击浏览 (JPG, PNG, WebP, GIF, BMP)"
+    "faq": {
+        "title": "常见问题 (FAQ)",
+        "q1": "如何下载无水印的TikTok视频?",
+        "a1": "使用SaveTikFast下载无水印的TikTok视频很容易。只需从应用程序复制TikTok视频链接,将其粘贴到我们的下载框中,然后点击下载按钮。我们的先进技术会自动删除TikTok水印,为您提供干净的视频文件。这适用于所有设备,包括iPhone、Android、Samsung Galaxy、Huawei、iPad、Mac和Windows PC。您可以使用任何浏览器,如Chrome、Safari、Firefox或Edge。与SSSTik或SnapTik不同,SaveTikFast提供即时处理的最高质量输出。",
+        "q2": "SaveTikFast完全免费吗?",
+        "a2": "是的,SaveTikFast 100%免费,并将永远保持免费。没有隐藏费用,没有高级订阅,没有每日下载限制。您可以无限制地下载无水印的TikTok视频、转换为MP3、保存故事和下载幻灯片 - 全部完全免费。我们不需要注册或登录。我们的服务由最少的广告支持,使我们能够在任何设备上为全球数百万用户提供免费的TikTok下载。",
+        "q3": "支持哪些设备和浏览器?",
+        "a3": "SaveTikFast几乎适用于每个设备和浏览器。支持的设备包括iPhone(包括iPhone 15、14、13的所有型号)、Android手机(Samsung Galaxy、Google Pixel、Huawei、Xiaomi、OPPO、OnePlus)、平板电脑(iPad、Samsung Tab)和计算机(MacBook、iMac、Windows PC、Chromebook)。支持的浏览器包括Google Chrome、Apple Safari、Mozilla Firefox、Microsoft Edge、Opera、Brave、Samsung Internet和UC浏览器。无需安装应用程序 - 一切都直接在您的网络浏览器中运行。",
+        "q4": "我可以下载什么视频质量?",
+        "a4": "SaveTikFast以最高可用质量下载TikTok视频。这包括720p高清、1080p全高清、2K,甚至当原始视频支持时的4K分辨率。我们从不压缩或降低视频质量 - 您获得与原始TikTok上传完全相同的质量。这使SaveTikFast优于经常压缩视频的TikMate、SaveFrom或MusicallyDown等其他下载器。",
+        "q5": "使用SaveTikFast安全吗?",
+        "a5": "绝对安全。SaveTikFast完全安全可靠。我们使用SSL加密来保护您的连接,我们不存储您的任何个人数据,也不需要登录或注册。您下载的视频会立即处理,不会存储在我们的服务器上。我们不会在您的设备上安装任何东西。自2024年以来,数百万用户信任SaveTikFast进行安全的TikTok视频下载。",
+        "q6": "SaveTikFast比SSSTik或SnapTik好在哪里?",
+        "a6": "与SSSTik、SnapTik、TikMate和其他TikTok下载器相比,SaveTikFast提供了几个优势。我们的服务更快(下载在3秒内完成),提供更高质量的输出(高达4K),拥有更清洁的界面和更少的广告,在所有设备上更可靠地工作,并提供MP3转换、故事下载和幻灯片提取等附加功能。许多用户在遇到其他下载器的问题后切换到SaveTikFast。",
+        "q7": "我可以在iPhone上下载TikTok视频吗?",
+        "a7": "是的,使用SaveTikFast在iPhone上下载TikTok视频很容易。打开TikTok,复制视频链接,然后打开Safari或Chrome并转到SaveTikFast。粘贴链接并点击下载。视频将直接保存到您的iPhone照片应用或文件中。这适用于所有iPhone型号,包括iPhone 15、14、13、12及更早版本。无需安装应用程序 - 一切都在您的浏览器中运行。",
+        "q8": "我可以下载私密的TikTok视频吗?",
+        "a8": "SaveTikFast只能下载公开的TikTok视频。由于TikTok的隐私设置,任何在线工具都无法下载私密视频(仅对创作者或批准的关注者可见)。如果您获得创作者的许可,请让他们暂时将视频公开或通过TikTok的内置分享功能直接与您分享。",
+        "q9": "如何在Samsung或Android上下载TikTok?",
+        "a9": "在Samsung Galaxy或任何Android手机上下载TikTok视频很简单。打开TikTok应用,在您想要的视频上点击分享,并复制链接。然后打开Chrome、Firefox或Samsung Internet浏览器并访问SaveTikFast。将链接粘贴到下载框中并点击下载按钮。视频将保存到您的下载文件夹或图库。适用于所有Android设备,包括Samsung、Huawei、Xiaomi、OPPO和Google Pixel。",
+        "q10": "为什么选择SaveTikFast而不是其他TikTok下载器?",
+        "a10": "SaveTikFast是TikTok下载的最佳选择,因为我们结合了速度、质量和可靠性。我们提供最快的下载速度(3秒)、最高的视频质量(高达4K)、水印删除、MP3转换、故事下载和幻灯片提取 - 全部在一个免费工具中。我们清晰的界面在所有设备和浏览器上完美运行。数百万用户信任我们作为SSSTik、SnapTik、TikMate、SaveFrom和MusicallyDown的最佳替代品。"
     },
-    "btn": {
-      "download": "立即下载",
-      "downloadPng": "下载 PNG"
-    },
-    "compressor": {
-      "title": "图片在线压缩器",
-      "desc": "在不损失质量的情况下减小图片文件大小。支持高达 15MB 的 JPG、PNG 和 WebP 格式。",
-      "quality": "压缩质量",
-      "maxWidth": "最大宽度 (px)",
-      "btn": "立即压缩",
-      "howto": {
-        "title": "如何在线压缩图片",
-        "step1": {
-          "title": "上传图片",
-          "desc": "拖放或点击选择您的 JPG、PNG 或 WebP 图片（最大 15MB）。"
+    "pages": {
+        "about": {
+            "title": "關於我們",
+            "content": "歡迎來到 SaveTikFast，2026 年領先的 TikTok 下載器。\n\n我們建立 SaveTikFast 只有一個目標：提供最快、最安全且最可靠的方式來儲存無浮水印的 TikTok 影片。與其他工具不同，我們優先考慮使用者體驗：沒有煩人的廣告、無需註冊且無需安裝軟體。\n\n我們的技術保證您獲得影片的原始畫質（最高 4K），同時移除重疊的商標。"
         },
-        "step2": {
-          "title": "调整设置",
-          "desc": "设置您想要的质量等级（10-100%）和最大宽度。"
+        "contact": {
+            "title": "聯絡我們",
+            "content": "我們重視您的回饋，並隨時為您提供協助。\n\n如果您遇到技術問題、有改進建議或商務諮詢，請聯絡我們的支援團隊：\n\n📧 電子郵件：support@savetik-fast.xyz\n\n我們致力於在 24 小時內回覆所有諮詢。"
         },
-        "step3": {
-          "title": "点击下载",
-          "desc": "点击压缩按钮并立即下载优化后的图片。"
+        "terms": {
+            "title": "使用條款",
+            "content": "使用 SaveTikFast 即表示您同意以下條款：\n\n1. 個人使用：\n我們的服務僅供個人和非商業用途。您可以下載影片以供離線觀看。\n\n2. 智慧財產權：\n我們不擁有下載的內容。所有權利屬於 TikTok 上的原始創作者。您同意不以侵犯版權的方式使用內容。\n\n3. 責任限制：\nSaveTikFast 不對您如何使用下載的素材負責。使用者對任何版權侵權行為承擔全部責任。"
+        },
+        "privacy": {
+            "title": "隱私權政策",
+            "content": "您的隱私對我們至關重要。\n\n資料收集：\n我們不收集姓名或電子郵件等個人資訊。我們可能會使用匿名分析（如 Cookie）來改善網站效能。\n\n不儲存影片：\nSaveTikFast 不會在其伺服器上託管或儲存任何影片。所有檔案處理都是即時進行的。"
+        },
+        "dmca": {
+            "title": "DMCA 政策",
+            "content": "SaveTikFast 尊重他人的智慧財產權。\n\n我們作為技術服務提供者運作，不託管受版權保護的內容。所有影片均直接由第三方伺服器 (TikTok) 提供。\n\n如果您認為您的受版權保護的作品未經授權顯示在我們的服務上，請發送正式的 DMCA 通知至：support@savetik-fast.xyz。"
+        },
+        "disclaimer": {
+            "title": "免責聲明",
+            "content": "1. 無關聯：\nSaveTikFast 是一個獨立的工具，與 TikTok Inc. 或 ByteDance Ltd. 沒有任何附屬、關聯、授權、認可或以任何方式正式連接的關係。\n\n2. 商標：\n名稱「TikTok」及其標誌是其各自所有者的註冊商標。\n\n3. 內容：\n我們無法控制託管在 TikTok 伺服器上的內容。"
         }
-      },
-      "seo": {
-        "title": "为什么要压缩图片？",
-        "p1": "图片压缩对于网站性能、提高加载速度和减少带宽消耗至关重要。我们的免费在线图片压缩器使用先进算法，在保持视觉质量的同时减小文件大小。",
-        "p2": "图片压缩的优势包括：",
-        "benefit1": "更快的网站加载速度（有利于 SEO）",
-        "benefit2": "减少存储空间和带宽成本",
-        "benefit3": "提升移动设备上的用户体验",
-        "benefit4": "优化适合社交媒体分享的图片",
-        "p3": "所有处理都在您的浏览器中使用 Web Workers 进行 - 您的图片永远不会上传到任何服务器，确保完全的隐私和安全。"
-      },
-      "faq": {
-        "title": "常见问题",
-        "q1": "我的图片会上传到服务器吗？",
-        "a1": "不会！所有压缩过程都直接在您的浏览器中完成。您的图片永远不会离开您的设备，确保完全的隐私。",
-        "q2": "支持哪些文件格式？",
-        "a2": "我们支持最大 15MB 的 JPG/JPEG、PNG 和 WebP 格式。",
-        "q3": "文件大小可以减小多少？",
-        "a3": "通常可以减小 50-80%，具体取决于原始图片和所选的质量设置。"
-      }
     },
-    "converter": {
-      "title": "图片格式转换器",
-      "desc": "在您的浏览器中即时在 JPG、PNG 和 WebP 格式之间进行转换。",
-      "output": "输出格式",
-      "quality": "输出质量",
-      "btn": "立即转换",
-      "howto": {
-        "title": "如何转换图片格式",
-        "step1": {
-          "title": "选择图片",
-          "desc": "上传任何图片文件（支持 JPG, PNG, WebP, GIF, BMP）。"
-        },
-        "step2": {
-          "title": "选择格式",
-          "desc": "选择您想要的输出格式（WebP, JPG 或 PNG）。"
-        },
-        "step3": {
-          "title": "转换并保存",
-          "desc": "点击转换并立即下载您的新图片。"
-        }
-      },
-      "seo": {
-        "title": "了解图片格式",
-        "p1": "选择正确的图片格式对于网络性能和质量至关重要。以下是对比：",
-        "webp": "Google 推出的现代格式，在保持相近质量的情况下，文件大小比 JPG/PNG 小 25-35%。是网页使用的最佳选择。",
-        "jpg": "非常适合照片和颜色复杂的图片。使用有损压缩。",
-        "png": "非常适合需要透明度或清晰轮廓的图片（如 Logo、图形）。使用无损压缩。",
-        "p2": "我们的转换器使用 HTML5 Canvas API 进行即时客户端转换。您的图片永远不会离开您的设备。"
-      },
-      "faq": {
-        "title": "常见问题",
-        "q1": "为什么要转换为 WebP？",
-        "a1": "WebP 提供比 JPG/PNG 小 25-35% 的文件大小，且质量相近，从而使您的网站加载速度更快。",
-        "q2": "转换后会损失图片质量吗？",
-        "a2": "您可以控制质量滑块。较高的数值可以保留更多质量，但文件体积也会更大。",
-        "q3": "我可以转换动图 GIF 吗？",
-        "a3": "目前，动态 GIF 将被转换为静态图片（第一帧）。"
-      }
+    "footer": {
+        "rights": "© 2026 SaveTikFast. 保留所有權利。"
     },
-    "qrcode": {
-      "title": "在线二维码生成器",
-      "desc": "即时为 URL、文本或任何内容生成高分辨率二维码。",
-      "input": "文本或 URL",
-      "placeholder": "https://example.com 或任何文本",
-      "size": "二维码大小",
-      "color": "二维码颜色",
-      "btn": "生成二维码",
-      "howto": {
-        "title": "如何生成二维码",
-        "step1": {
-          "title": "输入内容",
-          "desc": "输入您想要编码的 URL、文本、电话号码或任何内容。"
-        },
-        "step2": {
-          "title": "自定义设置",
-          "desc": "选择您喜欢的二维码尺寸和颜色。"
-        },
-        "step3": {
-          "title": "生成并下载",
-          "desc": "点击生成并以 PNG 格式下载您的高清二维码。"
-        }
-      },
-      "seo": {
-        "title": "二维码使用场景",
-        "p1": "二维码已成为商业和个人生活的必需品。常见的使用场景包括：",
-        "use1": "网站链接 - 让用户立即访问您的网站",
-        "use2": "电子名片 - 数字化分享联系详情",
-        "use3": "产品包装 - 链接到说明书或支持页面",
-        "use4": "营销材料 - 追踪广告活动的互动情况",
-        "use5": "餐厅菜单 - 非接触式快速查看菜谱",
-        "use6": "电子门票 - 快速入场验证",
-        "p2": "我们的 QR 生成器可创建高分辨率代码，可在任何设备上可靠扫描。"
-      },
-      "faq": {
-        "title": "常见问题",
-        "q1": "二维码可以包含什么内容？",
-        "a1": "链接、纯文本、电话号码、电子邮件地址、WiFi 凭据等。",
-        "q2": "我应该选择什么尺寸？",
-        "a2": "数字用途建议 256px。印刷材料建议选择 512px 或 1024px。",
-        "q3": "二维码会过期吗？",
-        "a3": "不会！此处生成的二维码是静态的，永远不会过期。它们直接包含数据。"
-      }
-    },
-    "engagement": {
-      "title": "TikTok 互动率计算器",
-      "desc": "根据点赞、评论和分享计算您的互动率。",
-      "followers": "粉丝数",
-      "likes": "点赞数",
-      "comments": "评论数",
-      "shares": "分享数",
-      "btn": "立即计算",
-      "result": "互动率结果",
-      "excellent": "非常出色! 🚀",
-      "good": "表现良好 👍",
-      "poor": "需努力 📉"
-    },
-    "money": {
-      "title": "TikTok 收益估算器",
-      "desc": "根据视频播放量估算您的潜在收入。",
-      "views": "输入视频播放量",
-      "btn": "计算收益",
-      "result": "预计收入"
-    },
-    "font": {
-      "title": "TikTok 字体生成器",
-      "desc": "为您的个人资料和视频描述生成独特的字体样式。",
-      "placeholder": "在此输入文本...",
-      "copy": "复制"
-    },
-    "hashtag": {
-      "title": "TikTok 热门标签生成器",
-      "desc": "为您的视频寻找和生成趋势标签。",
-      "btn": "立即生成",
-      "copy": "全部复制"
-    },
-    "progress": {
-      "compressing": "正在压缩图片...",
-      "converting": "正在转换文件..."
-    },
-    "result": {
-      "success": "压缩已完成!",
-      "converted": "转换已完成!",
-      "qrReady": "您的二维码已就绪!"
-    },
-    "stats": {
-      "original": "原始大小",
-      "compressed": "压缩后大小",
-      "saved": "节省空间",
-      "originalFormat": "原始格式",
-      "newFormat": "新格式",
-      "newSize": "新大小"
-    },
-    "preview": {
-      "before": "压缩前",
-      "after": "压缩后",
-      "original": "原图",
-      "converted": "转换结果"
-    }
-  },
-  "slideshow_page": {
-    "meta_title": "TikTok相册下载器 - 高清无水印保存轮播图片 免费",
-    "meta_desc": "下载TikTok照片幻灯片和轮播相册，高清无水印。立即保存TikTok帖子中的所有图片。完全免费，速度快，无需注册。支持批量下载多张图片。",
-    "title": "TikTok 幻灯片下载器",
-    "desc": "Download TikTok photo carousels in high quality.",
-    "placeholder": "Paste link...",
-    "btn_download": "Download Images",
-    "about_title": "TikTok Photo Downloader",
-    "about_content": "Save TikTok photo slideshows in original HD quality without watermarks.",
     "features": {
-      "all": {
-        "title": "一次下载所有照片",
-        "desc": "一键下载所有幻灯片图像。SaveTikFast从TikTok照片轮播中提取每张照片,并将它们保存为方便的ZIP文件。比手动保存每个图像更快。"
-      },
-      "quality": {
-        "title": "原始分辨率",
-        "desc": "以完整的原始分辨率保存幻灯片照片,无需任何压缩。获得与创作者上传到TikTok的完全相同的最高质量图像。"
-      },
-      "audio": {
-        "title": "包含背景音频",
-        "desc": "下载包含背景音乐的TikTok幻灯片。同时获取图像和音频轨道。非常适合保留完整的幻灯片体验。"
-      },
-      "fast": {
-        "title": "闪电般的速度",
-        "desc": "仅需3秒即可提取所有幻灯片照片。可用的最快TikTok幻灯片下载器 - 比SSSTik、SnapTik或任何其他工具更快。"
-      },
-      "device": {
-        "title": "通用兼容性",
-        "desc": "适用于iPhone、Samsung、Huawei、Xiaomi、iPad、MacBook、Windows PC、Chromebook。使用Chrome、Safari、Firefox或Edge下载TikTok幻灯片。"
-      },
-      "free": {
-        "title": "永远免费",
-        "desc": "无限制的幻灯片下载,无费用、无需注册、无每日限制。SaveTikFast幻灯片下载器永久完全免费。"
-      },
-      "nowatermark": {
-        "title": "无水印",
-        "desc": "下载没有TikTok水印的幻灯片图像。干净的照片可用于您的图库、Instagram、Pinterest或任何其他平台。"
-      },
-      "browser": {
-        "title": "任何浏览器",
-        "desc": "无需应用程序。直接在Chrome、Safari、Firefox、Microsoft Edge、Opera、Samsung Internet中下载TikTok幻灯片。适用于移动和桌面浏览器。"
-      }
+        "title": "主要功能",
+        "no_watermark": {
+            "title": "无水印",
+            "desc": "以原始高清质量下载无水印TikTok视频。SaveTikFast自动删除TikTok标志,为您提供比SSSTik、SnapTik或TikMate更清晰的视频。非常适合在Instagram、YouTube Shorts上重新发布或保存到您的图库。"
+        },
+        "fast": {
+            "title": "闪电般快速",
+            "desc": "最快的在线TikTok视频下载器。在iPhone、Android、Samsung、Huawei、iPad、PC或Mac上仅需3秒即可保存任何TikTok视频。我们的服务器针对速度进行了优化,比SaveFrom和MusicallyDown更快。"
+        },
+        "quality": {
+            "title": "HD &amp; 4K 画质",
+            "desc": "以最高可用质量下载TikTok视频 - 720p、1080p全高清、2K,甚至可用时的4K。与其他TikTok下载器不同,我们在不压缩的情况下保留原始视频质量。"
+        },
+        "device": {
+            "title": "支持所有设备",
+            "desc": "在每个设备上完美运行 - iPhone 15、iPhone 14、Samsung Galaxy、Google Pixel、Huawei、Xiaomi、OPPO、iPad、MacBook、Windows PC和Chromebook。无需安装应用程序。"
+        },
+        "free": {
+            "title": "100%永久免费",
+            "desc": "无限制的TikTok视频下载,无隐藏费用,无需注册,无每日限制。SaveTikFast完全免费,并将永远对全球所有用户免费。"
+        },
+        "secure": {
+            "title": "私密 &amp; 安全",
+            "desc": "您的隐私很重要。我们不存储您的数据,不需要登录,也不跟踪您的下载。通过SSL加密安全匿名地下载TikTok视频。"
+        },
+        "browser": {
+            "title": "所有浏览器",
+            "desc": "即时在Chrome、Safari、Firefox、Microsoft Edge、Opera、Brave、Samsung Internet和UC浏览器上运行。无需扩展程序或插件 - 只需粘贴并下载。"
+        },
+        "batch": {
+            "title": "批量下载",
+            "desc": "快速保存多个TikTok视频。比任何其他工具更快地下载您最喜欢的创作者的整个收藏。比SSSTik或SnapTik更好的批量下载。"
+        }
     },
     "how_to": {
-      "title": "How to Download",
-      "step1": "Copy TikTok link.",
-      "step2": "Paste link above.",
-      "step3": "Click Download."
+        "title": "如何下载无水印的 TikTok 视频",
+        "step1": "复制您想要保存的 TikTok 视频链接。",
+        "step2": "将链接粘贴到页面顶部的下载框中。",
+        "step3": "点击“下载”按钮，您的视频将立即保存。",
+        "step1_title": "复制链接",
+        "step2_title": "粘贴网址",
+        "step3_title": "下载"
     },
-    "faq": {
-      "q1": "如何下载TikTok幻灯片?",
-      "a1": "使用SaveTikFast下载TikTok照片幻灯片很容易。从TikTok复制幻灯片链接,将其粘贴到我们的幻灯片下载器中,然后点击下载。所有图像将一起提取和下载 - 作为单独的照片或方便的ZIP文件。适用于使用任何浏览器的iPhone、Android、Samsung、iPad、Mac、Windows。",
-      "q2": "我可以一次下载所有幻灯片照片吗?",
-      "a2": "是的!SaveTikFast一键下载所有TikTok幻灯片照片。无需手动保存每个图像。我们的工具从轮播中提取每张照片并将它们打包在一起。对于有很多图像的幻灯片,我们提供ZIP文件以便于下载。比其他方法快得多。",
-      "q3": "SaveTikFast也会下载幻灯片音频吗?",
-      "a3": "是的,SaveTikFast可以下载包含背景音乐的TikTok幻灯片。您可以同时获得图像和与幻灯片一起播放的音频轨道。这保留了创作者意图的完整幻灯片体验。",
-      "q4": "下载的幻灯片图像质量如何?",
-      "a4": "SaveTikFast以完整的原始分辨率提取TikTok幻灯片照片。我们不压缩或降低图像质量。您获得与创作者上传的完全相同的高质量照片 - 非常适合保存、分享或打印。",
-      "q5": "我可以在iPhone上下载TikTok幻灯片吗?",
-      "a5": "是的,在iPhone上下载TikTok幻灯片很简单。从TikTok复制链接,打开Safari或Chrome,访问SaveTikFast,粘贴链接并下载。照片保存到您的照片应用。无需安装任何应用程序即可在所有iPhone型号上运行。",
-      "q6": "幻灯片下载器免费吗?",
-      "a6": "是的,SaveTikFast幻灯片下载器100%免费。下载无限的TikTok幻灯片,无费用、订阅或每日限制。我们的免费服务适用于使用Chrome、Safari、Firefox或任何浏览器的iPhone、Android、Samsung、PC、Mac和所有设备。",
-      "q7": "下载的幻灯片图像没有水印吗?",
-      "a7": "SaveTikFast在可能的情况下下载没有水印的TikTok幻灯片图像。您获得没有TikTok标志的干净照片,可用于您的图库、Instagram、Pinterest或任何平台。非常适合保存美学内容。",
-      "q8": "为什么选择SaveTikFast下载幻灯片?",
-      "a8": "SaveTikFast是最好的TikTok幻灯片下载器,因为我们即时提取所有照片、保持原始质量、包含音频,并提供完全免费的无限下载。我们的工具比SSSTik、SnapTik或其他幻灯片提取器更快、更可靠地工作。几秒钟内下载整个照片轮播。"
+    "tools": {
+        "backToDownloader": "返回下载器",
+        "meta": {
+            "title": "免费在线工具 - 图片压缩、格式转换和二维码生成",
+            "description": "免费浏览器工具：压缩图片、转换格式（WebP、JPG、PNG）、即时生成二维码。无需上传文件或注册账号。100%免费，所有功能在浏览器本地完成。"
+        },
+        "hero": {
+            "title": "免费图片和 QR 工具",
+            "desc": "压缩图片、转换格式和生成二维码 — 所有处理都在您的浏览器中进行，100% 隐私安全。"
+        },
+        "tabs": {
+            "compressor": "图片压缩",
+            "converter": "格式转换",
+            "qrcode": "QR 生成器",
+            "engagement": "互动计算器",
+            "money": "收入计算器",
+            "font": "字体生成",
+            "hashtag": "标签生成"
+        },
+        "dropzone": {
+            "text": "将图片拖到此处",
+            "hint": "或点击选择 (JPG, PNG, WebP — 最大 15MB)",
+            "hint_convert": "或点击浏览 (JPG, PNG, WebP, GIF, BMP)"
+        },
+        "btn": {
+            "download": "立即下载",
+            "downloadPng": "下载 PNG"
+        },
+        "compressor": {
+            "title": "图片在线压缩器",
+            "desc": "在不损失质量的情况下减小图片文件大小。支持高达 15MB 的 JPG、PNG 和 WebP 格式。",
+            "quality": "压缩质量",
+            "maxWidth": "最大宽度 (px)",
+            "btn": "立即压缩",
+            "howto": {
+                "title": "如何在线压缩图片",
+                "step1": {
+                    "title": "上传图片",
+                    "desc": "拖放或点击选择您的 JPG、PNG 或 WebP 图片（最大 15MB）。"
+                },
+                "step2": {
+                    "title": "调整设置",
+                    "desc": "设置您想要的质量等级（10-100%）和最大宽度。"
+                },
+                "step3": {
+                    "title": "点击下载",
+                    "desc": "点击压缩按钮并立即下载优化后的图片。"
+                }
+            },
+            "seo": {
+                "title": "为什么要压缩图片？",
+                "p1": "图片压缩对于网站性能、提高加载速度和减少带宽消耗至关重要。我们的免费在线图片压缩器使用先进算法，在保持视觉质量的同时减小文件大小。",
+                "p2": "图片压缩的优势包括：",
+                "benefit1": "更快的网站加载速度（有利于 SEO）",
+                "benefit2": "减少存储空间和带宽成本",
+                "benefit3": "提升移动设备上的用户体验",
+                "benefit4": "优化适合社交媒体分享的图片",
+                "p3": "所有处理都在您的浏览器中使用 Web Workers 进行 - 您的图片永远不会上传到任何服务器，确保完全的隐私和安全。"
+            },
+            "faq": {
+                "title": "常见问题",
+                "q1": "我的图片会上传到服务器吗？",
+                "a1": "不会！所有压缩过程都直接在您的浏览器中完成。您的图片永远不会离开您的设备，确保完全的隐私。",
+                "q2": "支持哪些文件格式？",
+                "a2": "我们支持最大 15MB 的 JPG/JPEG、PNG 和 WebP 格式。",
+                "q3": "文件大小可以减小多少？",
+                "a3": "通常可以减小 50-80%，具体取决于原始图片和所选的质量设置。"
+            }
+        },
+        "converter": {
+            "title": "图片格式转换器",
+            "desc": "在您的浏览器中即时在 JPG、PNG 和 WebP 格式之间进行转换。",
+            "output": "输出格式",
+            "quality": "输出质量",
+            "btn": "立即转换",
+            "howto": {
+                "title": "如何转换图片格式",
+                "step1": {
+                    "title": "选择图片",
+                    "desc": "上传任何图片文件（支持 JPG, PNG, WebP, GIF, BMP）。"
+                },
+                "step2": {
+                    "title": "选择格式",
+                    "desc": "选择您想要的输出格式（WebP, JPG 或 PNG）。"
+                },
+                "step3": {
+                    "title": "转换并保存",
+                    "desc": "点击转换并立即下载您的新图片。"
+                }
+            },
+            "seo": {
+                "title": "了解图片格式",
+                "p1": "选择正确的图片格式对于网络性能和质量至关重要。以下是对比：",
+                "webp": "Google 推出的现代格式，在保持相近质量的情况下，文件大小比 JPG/PNG 小 25-35%。是网页使用的最佳选择。",
+                "jpg": "非常适合照片和颜色复杂的图片。使用有损压缩。",
+                "png": "非常适合需要透明度或清晰轮廓的图片（如 Logo、图形）。使用无损压缩。",
+                "p2": "我们的转换器使用 HTML5 Canvas API 进行即时客户端转换。您的图片永远不会离开您的设备。"
+            },
+            "faq": {
+                "title": "常见问题",
+                "q1": "为什么要转换为 WebP？",
+                "a1": "WebP 提供比 JPG/PNG 小 25-35% 的文件大小，且质量相近，从而使您的网站加载速度更快。",
+                "q2": "转换后会损失图片质量吗？",
+                "a2": "您可以控制质量滑块。较高的数值可以保留更多质量，但文件体积也会更大。",
+                "q3": "我可以转换动图 GIF 吗？",
+                "a3": "目前，动态 GIF 将被转换为静态图片（第一帧）。"
+            }
+        },
+        "qrcode": {
+            "title": "在线二维码生成器",
+            "desc": "即时为 URL、文本或任何内容生成高分辨率二维码。",
+            "input": "文本或 URL",
+            "placeholder": "https://example.com 或任何文本",
+            "size": "二维码大小",
+            "color": "二维码颜色",
+            "btn": "生成二维码",
+            "howto": {
+                "title": "如何生成二维码",
+                "step1": {
+                    "title": "输入内容",
+                    "desc": "输入您想要编码的 URL、文本、电话号码或任何内容。"
+                },
+                "step2": {
+                    "title": "自定义设置",
+                    "desc": "选择您喜欢的二维码尺寸和颜色。"
+                },
+                "step3": {
+                    "title": "生成并下载",
+                    "desc": "点击生成并以 PNG 格式下载您的高清二维码。"
+                }
+            },
+            "seo": {
+                "title": "二维码使用场景",
+                "p1": "二维码已成为商业和个人生活的必需品。常见的使用场景包括：",
+                "use1": "网站链接 - 让用户立即访问您的网站",
+                "use2": "电子名片 - 数字化分享联系详情",
+                "use3": "产品包装 - 链接到说明书或支持页面",
+                "use4": "营销材料 - 追踪广告活动的互动情况",
+                "use5": "餐厅菜单 - 非接触式快速查看菜谱",
+                "use6": "电子门票 - 快速入场验证",
+                "p2": "我们的 QR 生成器可创建高分辨率代码，可在任何设备上可靠扫描。"
+            },
+            "faq": {
+                "title": "常见问题",
+                "q1": "二维码可以包含什么内容？",
+                "a1": "链接、纯文本、电话号码、电子邮件地址、WiFi 凭据等。",
+                "q2": "我应该选择什么尺寸？",
+                "a2": "数字用途建议 256px。印刷材料建议选择 512px 或 1024px。",
+                "q3": "二维码会过期吗？",
+                "a3": "不会！此处生成的二维码是静态的，永远不会过期。它们直接包含数据。"
+            }
+        },
+        "engagement": {
+            "title": "TikTok 互动率计算器",
+            "desc": "根据点赞、评论和分享计算您的互动率。",
+            "followers": "粉丝数",
+            "likes": "点赞数",
+            "comments": "评论数",
+            "shares": "分享数",
+            "btn": "立即计算",
+            "result": "互动率结果",
+            "excellent": "非常出色! 🚀",
+            "good": "表现良好 👍",
+            "poor": "需努力 📉"
+        },
+        "money": {
+            "title": "TikTok 收益估算器",
+            "desc": "根据视频播放量估算您的潜在收入。",
+            "views": "输入视频播放量",
+            "btn": "计算收益",
+            "result": "预计收入"
+        },
+        "font": {
+            "title": "TikTok 字体生成器",
+            "desc": "为您的个人资料和视频描述生成独特的字体样式。",
+            "placeholder": "在此输入文本...",
+            "copy": "复制"
+        },
+        "hashtag": {
+            "title": "TikTok 热门标签生成器",
+            "desc": "为您的视频寻找和生成趋势标签。",
+            "btn": "立即生成",
+            "copy": "全部复制"
+        },
+        "progress": {
+            "compressing": "正在压缩图片...",
+            "converting": "正在转换文件..."
+        },
+        "result": {
+            "success": "压缩已完成!",
+            "converted": "转换已完成!",
+            "qrReady": "您的二维码已就绪!"
+        },
+        "stats": {
+            "original": "原始大小",
+            "compressed": "压缩后大小",
+            "saved": "节省空间",
+            "originalFormat": "原始格式",
+            "newFormat": "新格式",
+            "newSize": "新大小"
+        },
+        "preview": {
+            "before": "压缩前",
+            "after": "压缩后",
+            "original": "原图",
+            "converted": "转换结果"
+        }
+    },
+    "slideshow_page": {
+        "meta_title": "TikTok相册下载器 - 高清无水印保存轮播图片 免费",
+        "meta_desc": "下载TikTok照片幻灯片和轮播相册，高清无水印。立即保存TikTok帖子中的所有图片。完全免费，速度快，无需注册。支持批量下载多张图片。",
+        "title": "TikTok 幻灯片下载器",
+        "desc": "Download TikTok photo carousels in high quality.",
+        "placeholder": "Paste link...",
+        "btn_download": "Download Images",
+        "about_title": "TikTok Photo Downloader",
+        "about_content": "Save TikTok photo slideshows in original HD quality without watermarks.",
+        "features": {
+            "all": {
+                "title": "一次下载所有照片",
+                "desc": "一键下载所有幻灯片图像。SaveTikFast从TikTok照片轮播中提取每张照片,并将它们保存为方便的ZIP文件。比手动保存每个图像更快。"
+            },
+            "quality": {
+                "title": "原始分辨率",
+                "desc": "以完整的原始分辨率保存幻灯片照片,无需任何压缩。获得与创作者上传到TikTok的完全相同的最高质量图像。"
+            },
+            "audio": {
+                "title": "包含背景音频",
+                "desc": "下载包含背景音乐的TikTok幻灯片。同时获取图像和音频轨道。非常适合保留完整的幻灯片体验。"
+            },
+            "fast": {
+                "title": "闪电般的速度",
+                "desc": "仅需3秒即可提取所有幻灯片照片。可用的最快TikTok幻灯片下载器 - 比SSSTik、SnapTik或任何其他工具更快。"
+            },
+            "device": {
+                "title": "通用兼容性",
+                "desc": "适用于iPhone、Samsung、Huawei、Xiaomi、iPad、MacBook、Windows PC、Chromebook。使用Chrome、Safari、Firefox或Edge下载TikTok幻灯片。"
+            },
+            "free": {
+                "title": "永远免费",
+                "desc": "无限制的幻灯片下载,无费用、无需注册、无每日限制。SaveTikFast幻灯片下载器永久完全免费。"
+            },
+            "nowatermark": {
+                "title": "无水印",
+                "desc": "下载没有TikTok水印的幻灯片图像。干净的照片可用于您的图库、Instagram、Pinterest或任何其他平台。"
+            },
+            "browser": {
+                "title": "任何浏览器",
+                "desc": "无需应用程序。直接在Chrome、Safari、Firefox、Microsoft Edge、Opera、Samsung Internet中下载TikTok幻灯片。适用于移动和桌面浏览器。"
+            }
+        },
+        "how_to": {
+            "title": "How to Download",
+            "step1": "Copy TikTok link.",
+            "step2": "Paste link above.",
+            "step3": "Click Download."
+        },
+        "faq": {
+            "q1": "如何下载TikTok幻灯片?",
+            "a1": "使用SaveTikFast下载TikTok照片幻灯片很容易。从TikTok复制幻灯片链接,将其粘贴到我们的幻灯片下载器中,然后点击下载。所有图像将一起提取和下载 - 作为单独的照片或方便的ZIP文件。适用于使用任何浏览器的iPhone、Android、Samsung、iPad、Mac、Windows。",
+            "q2": "我可以一次下载所有幻灯片照片吗?",
+            "a2": "是的!SaveTikFast一键下载所有TikTok幻灯片照片。无需手动保存每个图像。我们的工具从轮播中提取每张照片并将它们打包在一起。对于有很多图像的幻灯片,我们提供ZIP文件以便于下载。比其他方法快得多。",
+            "q3": "SaveTikFast也会下载幻灯片音频吗?",
+            "a3": "是的,SaveTikFast可以下载包含背景音乐的TikTok幻灯片。您可以同时获得图像和与幻灯片一起播放的音频轨道。这保留了创作者意图的完整幻灯片体验。",
+            "q4": "下载的幻灯片图像质量如何?",
+            "a4": "SaveTikFast以完整的原始分辨率提取TikTok幻灯片照片。我们不压缩或降低图像质量。您获得与创作者上传的完全相同的高质量照片 - 非常适合保存、分享或打印。",
+            "q5": "我可以在iPhone上下载TikTok幻灯片吗?",
+            "a5": "是的,在iPhone上下载TikTok幻灯片很简单。从TikTok复制链接,打开Safari或Chrome,访问SaveTikFast,粘贴链接并下载。照片保存到您的照片应用。无需安装任何应用程序即可在所有iPhone型号上运行。",
+            "q6": "幻灯片下载器免费吗?",
+            "a6": "是的,SaveTikFast幻灯片下载器100%免费。下载无限的TikTok幻灯片,无费用、订阅或每日限制。我们的免费服务适用于使用Chrome、Safari、Firefox或任何浏览器的iPhone、Android、Samsung、PC、Mac和所有设备。",
+            "q7": "下载的幻灯片图像没有水印吗?",
+            "a7": "SaveTikFast在可能的情况下下载没有水印的TikTok幻灯片图像。您获得没有TikTok标志的干净照片,可用于您的图库、Instagram、Pinterest或任何平台。非常适合保存美学内容。",
+            "q8": "为什么选择SaveTikFast下载幻灯片?",
+            "a8": "SaveTikFast是最好的TikTok幻灯片下载器,因为我们即时提取所有照片、保持原始质量、包含音频,并提供完全免费的无限下载。我们的工具比SSSTik、SnapTik或其他幻灯片提取器更快、更可靠地工作。几秒钟内下载整个照片轮播。"
+        }
+    },
+    "nav_menu": {
+        "slideshow": "幻灯片",
+        "video": "视频",
+        "mp3": "MP3 音频",
+        "stories": "故事"
+    },
+    "mp3_page": {
+        "meta_title": "TikTok转MP3 - 免费下载高质量音频 320kbps",
+        "title": "TikTok MP3 下载",
+        "subtitle": "(仅音频)",
+        "desc": "将 TikTok 视频转换为 MP3 音频文件。提取高品质 320kbps 的歌曲和音乐。",
+        "placeholder": "粘贴视频链接以提取音频...",
+        "btn_download": "提取 MP3",
+        "about_title": "最佳 TikTok MP3 转换器 2026",
+        "about_content": "SaveTikFast MP3 允许您即时从任何 TikTok 视频中提取音频。下载热门歌曲、病毒式声音和背景音乐。",
+        "features": {
+            "quality": {
+                "title": "HD 音频 320kbps",
+                "desc": "将TikTok视频转换为水晶般清晰的320kbps录音室品质MP3。在线可用的最高音频比特率,非常适合想要在iPhone、Android或PC上获得最佳音质的音乐爱好者。"
+            },
+            "fast": {
+                "title": "即时转换",
+                "desc": "仅需2秒即可将TikTok转换为MP3。最快的在线TikTok音频提取器 - 比SSSTik MP3、SnapTik音频或任何其他转换器更快。在所有设备上即时运行。"
+            },
+            "ringtone": {
+                "title": "铃声就绪",
+                "desc": "iPhone铃声和Android通知声音的完美音频长度。从病毒式TikTok声音和热门音频片段创建自定义铃声。在任何智能手机上轻松设置。"
+            },
+            "device": {
+                "title": "所有设备",
+                "desc": "在iPhone、Samsung Galaxy、Google Pixel、Huawei、iPad、MacBook、Windows PC和任何带有浏览器的设备上提取TikTok音频。无需下载应用程序。"
+            },
+            "original": {
+                "title": "原始声音",
+                "desc": "在不压缩或质量损失的情况下保留原始TikTok音频质量。获得与原始视频完全相同的声音,包括热门歌曲和病毒式音频。"
+            },
+            "unlimited": {
+                "title": "免费 &amp; 无限制",
+                "desc": "TikTok转MP3转换没有限制。转换任意数量的TikTok视频为音频 - 完全免费,无需注册,无每日限制。"
+            },
+            "secure": {
+                "title": "安全 &amp; 私密",
+                "desc": "无数据收集的安全MP3转换。我们不存储您转换的文件或跟踪您的活动。您的隐私受到100%保护。"
+            },
+            "nobapp": {
+                "title": "无需应用程序",
+                "desc": "直接在您的浏览器中运行 - Chrome、Safari、Firefox、Edge、Opera。无需安装应用程序,无需存储空间。比TikTok MP3下载器应用程序更好。"
+            }
+        },
+        "how_to": {
+            "title": "如何将 TikTok 转换为 MP3",
+            "step1": "找到视频。点击分享 → 复制链接。",
+            "step2": "将链接粘贴到上方的框中。",
+            "step3": "点击“提取 MP3”进行下载。"
+        },
+        "faq": {
+            "q1": "如何将TikTok视频转换为MP3?",
+            "a1": "使用SaveTikFast将TikTok转换为MP3很简单。复制TikTok视频链接,将其粘贴到我们的MP3转换器中,然后点击转换。音频将立即以高质量320kbps MP3格式提取。这适用于使用Chrome、Safari、Firefox或任何浏览器的iPhone、Android、Samsung、PC、Mac和所有设备。我们的TikTok转MP3转换器比SSSTik或SnapTik音频提取器更快、质量更高。",
+            "q2": "SaveTikFast MP3转换器提供什么音频质量?",
+            "a2": "SaveTikFast以高级320kbps MP3质量提取TikTok音频 - MP3文件可用的最高比特率。这提供了水晶般清晰的录音室品质声音,非常适合音乐播放、铃声或音频项目。与降低比特率以节省带宽的其他转换器不同,我们在不压缩或质量损失的情况下保留原始TikTok音频。",
+            "q3": "我可以将TikTok音频用作铃声吗?",
+            "a3": "是的!从SaveTikFast下载的TikTok音频非常适合作为铃声。MP3格式适用于iPhone和Android的铃声设置。在iPhone上,使用GarageBand或iTunes设置自定义铃声。在Android上,只需转到设置>声音>铃声并选择下载的MP3。从病毒式TikTok声音和热门音频创建独特的铃声。",
+            "q4": "TikTok转MP3转换免费吗?",
+            "a4": "完全免费。SaveTikFast MP3转换器没有费用、订阅或每日限制。无需注册即可转换无限的TikTok视频为MP3。我们的免费服务适用于使用包括Chrome、Safari和Firefox在内的任何浏览器的所有设备 - iPhone、Android、Samsung、Huawei、iPad、Mac、Windows PC。",
+            "q5": "MP3转换需要多长时间?",
+            "a5": "SaveTikFast大约需要2-3秒将TikTok转换为MP3。我们使用针对快速音频提取优化的强大服务器。这使我们成为可用的最快TikTok MP3转换器 - 比SSSTik MP3、SnapTik音频、TikMate或其他转换工具快得多。",
+            "q6": "我可以在iPhone上下载TikTok音乐吗?",
+            "a6": "是的,您可以使用SaveTikFast轻松在iPhone上下载TikTok音乐和音频。复制TikTok链接,打开Safari或Chrome,访问我们的MP3转换器,粘贴链接并点击下载。MP3文件将保存到您的文件应用。从那里,将其添加到Apple Music、用作铃声或在任何地方分享。适用于所有iPhone型号。",
+            "q7": "MP3是否包含完整的音频轨道?",
+            "a7": "是的,SaveTikFast从TikTok视频中提取完整的音频 - 包括背景音乐、语音、音效和所有音频元素。完整长度的音频完全按照原始TikTok视频中播放的方式保留。非常适合保存热门歌曲、病毒式声音和您最喜欢的TikTok音频。",
+            "q8": "SaveTikFast MP3转换器安全吗?",
+            "a8": "完全安全。SaveTikFast MP3转换器使用安全的SSL加密,不存储您的数据或转换的文件,不需要登录,也不会在您的设备上安装任何东西。我们已经为全球用户安全地将数百万个TikTok视频转换为MP3。您的隐私和安全是我们的首要任务。",
+            "q9": "我可以在Android上将TikTok转换为MP3吗?",
+            "a9": "是的,TikTok转MP3转换在所有Android设备上完美运行。这包括Samsung Galaxy、Google Pixel、Huawei、Xiaomi、OPPO、OnePlus和所有其他Android手机和平板电脑。只需使用Chrome、Firefox或Samsung Internet浏览器访问SaveTikFast并即时将任何TikTok转换为MP3。",
+            "q10": "为什么SaveTikFast是最好的TikTok转MP3转换器?",
+            "a10": "SaveTikFast提供最佳的TikTok MP3转换,因为我们具有卓越的速度(2秒)、最高的音频质量(320kbps)、通用设备支持和完全免费的服务。与SSSTik、SnapTik或其他转换器不同,我们提供一致的高质量结果,没有恼人的广告或下载限制。数百万用户信任SaveTikFast满足他们的TikTok音频需求。"
+        },
+        "meta_desc": "将TikTok视频转换为高质量320kbps MP3音频文件。在线免费提取歌曲和音乐。无需安装应用程序，无需注册账号。支持所有设备和浏览器。快速便捷。"
+    },
+    "story_page": {
+        "meta_title": "TikTok故事下载器 - 匿名保存照片和幻灯片 免费",
+        "title": "下载 TikTok 快拍",
+        "desc": "在 TikTok 快拍 (Story) 和幻灯片过期前保存它们。",
+        "placeholder": "粘贴快拍链接...",
+        "btn_download": "保存快拍",
+        "about_title": "快拍下载器 2026",
+        "about_content": "SaveTikFast 快拍下载器让您能在 24 小时后消失前保存快拍和照片轮播。",
+        "features": {
+            "expire": {
+                "title": "消失前保存",
+                "desc": "在24小时后消失之前下载TikTok故事。再也不会错过您最喜欢的创作者的故事。SaveTikFast让您永久保存过期的内容到您的设备。"
+            },
+            "quality": {
+                "title": "原始质量",
+                "desc": "以完整高清质量保存TikTok故事 - 与创作者上传的完全相同。没有质量降低,没有压缩。在iPhone、Android或PC上获得相同的分辨率。"
+            },
+            "anonymous": {
+                "title": "匿名查看",
+                "desc": "完全匿名地查看和下载TikTok故事。创作者不会知道您保存了他们的故事。100%私密和谨慎的故事下载。"
+            },
+            "fast": {
+                "title": "超级快速",
+                "desc": "仅需2秒即可下载任何TikTok故事。即时故事保存,比任何其他在线TikTok故事下载器更快。"
+            },
+            "device": {
+                "title": "随处运行",
+                "desc": "在iPhone 15、Samsung Galaxy、Google Pixel、Huawei、iPad、Mac、Windows和任何设备上保存TikTok故事。与Chrome、Safari、Firefox和所有浏览器兼容。"
+            },
+            "nowatermark": {
+                "title": "无水印",
+                "desc": "下载没有TikTok水印或标志的TikTok故事。干净的故事下载,可保存或在Instagram、Snapchat或WhatsApp上分享。"
+            },
+            "free": {
+                "title": "永久免费",
+                "desc": "无限制的TikTok故事下载,无需费用。无需注册,无费用,无每日限制。SaveTikFast故事下载器100%免费。"
+            },
+            "noapp": {
+                "title": "仅浏览器",
+                "desc": "无需安装应用程序。直接从手机或计算机上的Chrome、Safari、Firefox、Edge下载TikTok故事。比应用程序更快、更安全。"
+            }
+        },
+        "how_to": {
+            "title": "如何下载 TikTok 快拍",
+            "step1": "打开快拍，分享 → 复制链接。",
+            "step2": "将链接粘贴到上方。",
+            "step3": "点击“保存快拍”。"
+        },
+        "faq": {
+            "q1": "如何下载TikTok故事?",
+            "a1": "要下载TikTok故事,首先从TikTok复制故事链接(在故事上点击分享)。然后访问SaveTikFast,将链接粘贴到我们的故事下载器中,然后点击下载。故事将以原始高清质量保存到您的设备。适用于使用Chrome、Safari、Firefox或任何浏览器的iPhone、Android、Samsung、iPad、Mac、PC。在24小时后消失之前保存故事。",
+            "q2": "我可以匿名下载TikTok故事吗?",
+            "a2": "是的,SaveTikFast允许完全匿名的TikTok故事下载。创作者不会收到任何通知或知道您下载了他们的故事。您的身份保持私密。这非常适合在不与创作者的帐户互动的情况下谨慎地保存内容。",
+            "q3": "下载后TikTok故事会过期吗?",
+            "a3": "不会,一旦您使用SaveTikFast下载TikTok故事,它就会永久保存在您的设备上。即使TikTok故事在平台上24小时后消失,您下载的副本也会永远保留。在重要故事过期之前保存它们,这样您就不会失去对内容的访问。",
+            "q4": "下载的TikTok故事质量如何?",
+            "a4": "SaveTikFast以完整的原始质量下载TikTok故事 - 与创作者上传的相同高清分辨率。我们不压缩或降低质量。您下载的故事看起来与它们在TikTok上的外观完全相同,非常适合保存回忆或重新发布。",
+            "q5": "我可以在iPhone上下载TikTok故事吗?",
+            "a5": "是的,在iPhone上下载TikTok故事很容易。从TikTok复制故事链接,打开Safari或Chrome,转到SaveTikFast,粘贴链接并点击下载。故事直接保存到您的照片或文件应用。无需安装任何应用程序即可在iPhone 15、14、13、12和所有型号上运行。",
+            "q6": "TikTok故事下载器免费吗?",
+            "a6": "完全免费。SaveTikFast故事下载器没有费用、高级计划或下载限制。在任何设备上免费保存无限的TikTok故事 - iPhone、Android、Samsung、PC、Mac。无需注册或帐户。",
+            "q7": "我可以下载私密的TikTok故事吗?",
+            "a7": "SaveTikFast只能下载公开的TikTok故事。由于TikTok的隐私保护,外部下载工具无法访问仅与特定关注者共享的私密故事。对于私密内容,您需要创作者的直接许可。",
+            "q8": "为什么使用SaveTikFast下载TikTok故事?",
+            "a8": "SaveTikFast是最好的TikTok故事下载器,因为我们提供即时下载、原始高清质量、匿名保存和免费无限访问。我们的工具在所有设备和浏览器上可靠运行,使其优于其他故事下载器。在过期故事永久消失之前保存它们。"
+        },
+        "meta_desc": "匿名免费下载TikTok故事和幻灯片。在过期前保存相册和故事视频。快速、免费，无需登录或安装任何应用程序。一键保存所有TikTok故事内容。"
+    },
+    "blog": {
+        "meta_title": "TikTok下载完全指南2026 - 视频 MP3 幻灯片和故事",
+        "meta_desc": "2026年TikTok内容下载完整指南。学会无水印保存视频、转换MP3、在iPhone、Android和电脑上下载幻灯片和故事。简单易用，完全免费。",
+        "keywords": "如何下载无水印TikTok视频2026, TikTok下载器iPhone iOS 18, 保存TikTok视频Android 15, TikTok MP3转换器在线免费",
+        "title": "TikTok 下载终极指南 2026",
+        "subtitle": "关于下载TikTok视频、MP3、幻灯片和快拍的所有知识。2026年最新更新。",
+        "updated": "最后更新：二月",
+        "back_home": "返回下载器",
+        "tools_heading": "选择下载类型",
+        "try_now": "立即尝试",
+        "card_video_title": "视频下载器",
+        "card_video_desc": "以HD/4K质量下载无水印TikTok视频。支持iPhone 16、三星Galaxy S25及所有设备。",
+        "card_mp3_title": "MP3转换器",
+        "card_mp3_desc": "以高质量320kbps从TikTok视频中提取音频。非常适合制作铃声。",
+        "card_slideshow_title": "幻灯片保存器",
+        "card_slideshow_desc": "将TikTok幻灯片和轮播的所有照片下载为ZIP文件。",
+        "card_story_title": "快拍下载器",
+        "card_story_desc": "在TikTok快拍24小时后消失前保存。匿名下载。",
+        "section1_title": "如何在2026年下载TikTok视频",
+        "section1_content": "<strong>下载无水印TikTok视频</strong>从未如此简单。2026年，SaveTikFast仍然是最快、最可靠的解决方案。",
+        "section2_title": "TikTok转MP3转换指南",
+        "section2_content": "想要<strong>将TikTok转换为MP3</strong>？我们的音频提取器可以从任何视频中获取<strong>高达320kbps的高质量</strong>声音。",
+        "section3_title": "下载TikTok幻灯片和快拍",
+        "section3_content": "<strong>TikTok幻灯片</strong>在2026年非常流行。我们的下载器以原始质量保存<strong>轮播的每张图片</strong>。",
+        "section4_title": "隐私与安全",
+        "section4_content": "在SaveTikFast，我们<strong>认真对待您的隐私</strong>。无需注册，不存储视频，安全的SSL连接。",
+        "section5_title": "为什么选择SaveTikFast？",
+        "section5_content": "SaveTikFast的优势：最快处理速度，最高4K质量，无水印，所有内容类型，兼容所有设备，永久免费。",
+        "cta_title": "准备好下载了吗？",
+        "cta_desc": "立即开始下载TikTok视频、MP3、幻灯片和快拍。100%免费，无需注册。",
+        "cta_button": "开始下载",
+        "latest_posts": "最新文章",
+        "read_more": "阅读更多",
+        "share": "分享这篇文章：",
+        "related_posts_title": "相关文章",
+        "toc_title": "目录",
+        "copy_link": "复制链接",
+        "link_copied": "已复制！"
+    },
+    "ios_page": {
+        "title": "iOS 版 TikTok 下载器",
+        "desc": "将没有水印的 TikTok 视频以高清质量直接下载到您的 iPhone 或 iPad。在 iOS 上使用 Safari 保存视频的最快方法。",
+        "placeholder": "从您的 iPhone 粘贴 TikTok 链接...",
+        "meta_title": "iPhone/iPad 版 TikTok 下载器 - SaveTikFast",
+        "meta_desc": "在 iOS（iPhone 和 iPad）上保存没有水印的 TikTok 视频的免费工具。无需安装应用程序。立即下载 MP4 或 MP3 格式。",
+        "faq": {
+            "q1": "如何在 iPhone 和 iPad 上下载无水印的 TikTok 视频？",
+            "a1": "在 iPhone 或 iPad 上打开 TikTok，点击“共享并复制链接”。打开 Safari 或 Chrome 浏览器，访问 SaveTikFast，粘贴 TikTok 视频 URL，然后点击“下载”。视频以高清质量直接保存到您的照片应用程序，无水印。适用于 iPhone 16、iPhone 15、iPhone 14、iPad Pro、iPad Air 以及运行 iOS 17 或 iOS 18 的所有 iOS 设备。",
+            "q2": "SaveTikFast 可以在 iPhone 上免费使用，无需安装任何应用程序吗？",
+            "a2": "是的，SaveTikFast 对于 iPhone 和 iPad 用户是 100% 免费的。无需从 App Store 安装应用程序。我们的 TikTok 视频下载器可直接在 iOS 上的 Safari、Chrome 或 Firefox 浏览器中运行。下载无水印的无限 TikTok 视频、将 TikTok 转换为 MP3 并保存 TikTok 故事 - 全部完全免费，无需注册或订阅。",
+            "q3": "我可以将 TikTok 视频以高清 4K 质量保存到我的 iPhone 相机胶卷中吗？",
+            "a3": "绝对地。 SaveTikFast 可将最高质量的 TikTok 视频（包括 720p 高清、1080p 全高清和 4K 分辨率）直接下载到您的 iPhone 照片或文件应用程序中。我们从不压缩视频。质量比 iOS 设备上的 SSSTik、SnapTik 或 TikMate 更好。非常适合在 iPhone 上离线保存 TikTok 内容以供以后查看。",
+            "q4": "为什么 SaveTikFast 是 iOS 设备上最好的 TikTok 下载器？",
+            "a4": "SaveTikFast 是适用于 iPhone 和 iPad 的最快 TikTok 视频保存程序，下载仅需 3 秒，无水印删除问题，支持高清和 4K、MP3 音频提取、故事下载和幻灯片保存。与其他 iOS TikTok 下载器不同，我们不需要安装应用程序，不需要登录，也不需要 Apple 快捷方式。在所有 iOS 版本的 Safari 浏览器上完美运行。",
+            "q5": "如何在 iPhone 上将 TikTok 视频转换为 MP3 音频？",
+            "a5": "在 iPhone 上复制 TikTok 视频链接，打开 Safari 或 Chrome，访问 SaveTikFast MP3 转换器页面，粘贴 URL，然后点击提取 MP3。音频文件以 320kbps 的质量下载到您的 iPhone 文件应用程序。非常适合从 TikTok 声音创建 iPhone 铃声、保存流行的 TikTok 音乐以及在 iOS 设备上提取病毒式音频剪辑。"
+        }
+    },
+    "android_page": {
+        "title": "Android 版 TikTok 下载器",
+        "desc": "最好的 Android TikTok 视频保护程序！将任何没有水印的 TikTok 视频以 MP4 格式直接下载到您的移动图库。",
+        "placeholder": "从您的 Android 手机粘贴 TikTok 链接...",
+        "meta_title": "适用于 Android 设备的 TikTok 下载器 - SaveTikFast",
+        "meta_desc": "将任何没有徽标的 TikTok 视频保存到您的 Android 手机图库中。 100% 免费、无水印、快速、安全。以高清画质下载。",
+        "faq": {
+            "q1": "如何在 Android 上下载无水印的 TikTok 视频？",
+            "a1": "在 Android 手机上打开 TikTok，点击共享并复制链接。打开 Chrome、Samsung Internet 或 Firefox 浏览器，访问 SaveTikFast，粘贴视频 URL，然后点击“下载”。 TikTok 视频以高清质量保存到您的下载文件夹或图库，无水印。适用于三星 Galaxy S25、Google Pixel 9、小米、OPPO、OnePlus 和华为设备。",
+            "q2": "SaveTikFast 是否与所有 Android 手机和平板电脑兼容？",
+            "a2": "是的，SaveTikFast 适用于所有 Android 设备，包括三星 Galaxy、Google Pixel、小米红米、OPPO、OnePlus、华为、摩托罗拉、诺基亚和 Android 平板电脑。兼容 Android 12、13、14 和 15。使用 Chrome、Samsung Internet、Firefox 或任何移动浏览器免费下载无水印的 TikTok 视频。无需安装 APK。",
+            "q3": "我可以将 TikTok 视频以高清 4K 保存到我的 Android 图库中吗？",
+            "a3": "绝对地。 SaveTikFast 将原始高清、1080p 全高清和 4K 质量的 TikTok 视频直接下载到您的 Android 手机图库或下载文件夹中。我们保留原始视频质量而不进行压缩。比 SSSTik、SnapTik 或 TikMate 下载器更好。非常适合在 Samsung Galaxy、Pixel 或小米设备上离线保存 TikTok 内容。",
+            "q4": "为什么选择 SaveTikFast 而不是其他 Android TikTok 下载器？",
+            "a4": "SaveTikFast 是最快的 Android TikTok 下载器，处理时间为 3 秒，无水印下载，高清和 4K 视频支持，TikTok MP3 转换器，故事保护程序和幻灯片下载器。无需 APK，无需 Google Play 应用程序。适用于 Samsung Galaxy、Google Pixel、Xiaomi、OPPO 和所有 Android 智能手机上的 Chrome 浏览器，无需注册。",
+            "q5": "如何在 Android 手机上从 TikTok 中提取 MP3 音频？",
+            "a5": "在 Android 设备上复制 TikTok 视频链接，打开 Chrome 或三星互联网浏览器，访问 SaveTikFast MP3 转换器，粘贴 URL，然后点击提取 MP3。以高品质 320kbps 格式将音频下载到您的下载文件夹。非常适合在三星 Galaxy 和 Pixel 手机上保存热门 TikTok 歌曲、创建 Android 铃声以及提取病毒声音。"
+        }
+    },
+    "mac_page": {
+        "title": "Mac 版 TikTok 下载器",
+        "desc": "在 MacBook 或 iMac 上下载无水印的高质量 TikTok 视频。在 Safari 和 Chrome 上完美运行。",
+        "placeholder": "将 TikTok 链接放到此处即可在 Mac 上下载...",
+        "meta_title": "Mac/MacBook 版 TikTok 视频下载器（高清） - SaveTikFast",
+        "meta_desc": "轻松将没有水印的 TikTok 视频下载到您的 Mac。免费在线保护程序，支持 macOS Safari、Chrome 和 Firefox，4K 画质。",
+        "faq": {
+            "q1": "如何在 Mac 上下载无水印的 TikTok 视频？",
+            "a1": "在 MacBook 或 iMac 上的 Safari、Chrome 或 Firefox 中打开 TikTok。从地址栏复制 TikTok 视频 URL，访问 SaveTikFast，粘贴链接，然后单击“下载”。视频以高清或 4K 质量保存到您的 Mac 下载文件夹，无水印。适用于 macOS Sonoma、macOS Ventura、MacBook Pro、MacBook Air、iMac 和 Mac Mini。",
+            "q2": "SaveTikFast 是否适用于 macOS 的 Safari 和 Chrome？",
+            "a2": "是的，SaveTikFast 可在所有 Mac 浏览器上完美运行，包括 Apple Safari、Google Chrome、Mozilla Firefox、Microsoft Edge 和 Opera。无需安装浏览器扩展或插件。我们的 TikTok 视频下载器直接在 macOS Sonoma、Ventura 和 Monterey 上的浏览​​器中运行。在任何 Mac 上完全免费下载无水印的无限 TikTok 视频。",
+            "q3": "我可以在 MacBook 上保存 4K 质量的 TikTok 视频吗？",
+            "a3": "绝对地。 SaveTikFast 在 MacBook Pro、MacBook Air、iMac 和 Mac Mini 上以最高质量下载 TikTok 视频，包括 720p、1080p 全高清、2K 和 4K 分辨率。我们从不压缩或降低视频质量。文件以 MP4 格式保存到您的“下载”文件夹中。对于想要优质视频质量的 Mac 用户来说，比 SSSTik 或 SnapTik 更好。",
+            "q4": "为什么 SaveTikFast 是 Mac 电脑上最好的 TikTok 下载器？",
+            "a4": "SaveTikFast 是 Mac 上最快的 TikTok 视频下载器，具有即时 3 秒处理、水印去除、4K 质量支持、MP3 音频提取、TikTok 故事保存和幻灯片下载。无需在 macOS 上安装软件。适用于 MacBook Pro、MacBook Air、iMac 和 Mac Mini 上的 Safari 和 Chrome 浏览器，无需注册或订阅。",
+            "q5": "如何在 Mac 上将 TikTok 转换为 MP3？",
+            "a5": "从 Mac 上的 Safari 或 Chrome 复制 TikTok 视频 URL，访问 SaveTikFast MP3 转换器，粘贴链接，然后单击“提取 MP3”。音频文件将以录音室品质的 320kbps MP3 格式下载到您的 Mac 下载文件夹中。非常适合在 MacBook Pro、MacBook Air 和 iMac 上保存热门 TikTok 音乐、创建播放列表以及提取声音。"
+        }
+    },
+    "pc_page": {
+        "title": "PC 版 TikTok 下载器",
+        "desc": "将 TikTok 视频直接保存到您的 Windows PC 或笔记本电脑。以超快的速度获取干净、无水印的视频。",
+        "placeholder": "从您的 PC 粘贴 TikTok 视频链接...",
+        "meta_title": "适用于 Windows PC/笔记本电脑的 TikTok 下载器 - SaveTikFast",
+        "meta_desc": "Windows PC 上最快的 TikTok 视频下载器。免费将无限量无水印的 TikTok 视频保存到您的计算机上。",
+        "faq": {
+            "q1": "如何在 Windows PC 上下载无水印的 TikTok 视频？",
+            "a1": "在 Windows PC 或笔记本电脑上的 Chrome、Edge 或 Firefox 中打开 TikTok。从浏览器地址栏中复制 TikTok 视频 URL，访问 SaveTikFast，粘贴链接，然后单击“下载”。视频以高清或 4K 质量保存到您的 PC 下载文件夹，无水印。适用于 Dell、HP、Lenovo、ASUS 和 Acer 的 Windows 11、Windows 10、台式电脑和笔记本电脑。",
+            "q2": "SaveTikFast 可以在 Windows 计算机上免费使用吗？",
+            "a2": "是的，SaveTikFast 对 Windows PC 用户完全免费。无需安装软件或下载桌面应用程序。我们的 TikTok 视频下载器可直接在 Windows 11 和 Windows 10 上的 Chrome、Microsoft Edge、Firefox 和 Opera 浏览器中运行。免费下载无限量的无水印 TikTok 视频、转换为 MP3、保存故事以及下载幻灯片。",
+            "q3": "我可以在 Windows PC 上以高清 4K 质量保存 TikTok 视频吗？",
+            "a3": "绝对地。 SaveTikFast 以原始质量（包括 720p 高清、1080p 全高清、2K 和 4K 分辨率）将 TikTok 视频作为 MP4 文件直接下载到您的 Windows PC 下载文件夹中。我们从不压缩或降低质量。优于 SSSTik、SnapTik 或 TikMate。非常适合在运行 Windows 11 或 Windows 10 的台式电脑上保存和编辑 TikTok 内容。",
+            "q4": "为什么 SaveTikFast 是 PC 上最好的 TikTok 下载器？",
+            "a4": "SaveTikFast 是 Windows PC 上最快的 TikTok 视频下载器，处理时间为 3 秒，无水印，支持高清和 4K，提供 MP3 转换器、故事下载器和幻灯片保存程序。无需安装桌面软件。适用于 HP、Dell、Lenovo、ASUS 的 Windows 11、Windows 10 笔记本电脑和台式机上的 Chrome 和 Edge 浏览器，无需注册或付费。",
+            "q5": "如何在 Windows 计算机上将 TikTok 转换为 MP3？",
+            "a5": "从 Windows PC 上的 Chrome 或 Edge 复制 TikTok 视频 URL，访问 SaveTikFast MP3 转换器页面，粘贴链接，然后单击“提取 MP3”。音频以高品质 320kbps MP3 格式下载到您的 PC 下载文件夹。非常适合保存 TikTok 歌曲、创建 Windows 铃声、提取病毒式音频以及在台式计算机上构建音乐收藏。"
+        }
+    },
+    "seo_rich_content": {
+        "intro_title": "最佳无水印 TikTok 视频下载器",
+        "intro_p1": "当谈到轻松保存 TikTok 视频且没有侵入性水印时，SaveTikFast 绝对是市场上的最佳选择。我们开发了这款功能强大的在线下载器，将用户体验作为我们的首要任务。浏览我们的网站非常直观；您只需粘贴您想要的 TikTok 视频的链接，我们的先进服务器会以闪电般的速度处理其余的事情。 SaveTikFast 的独特之处在于其强大的架构，即使在流量高峰时段也能保证可靠的下载。对于有影响力的人、营销人员和希望策划个人病毒点击收藏的日常用户来说，它是不可或缺的实用程序。由于它是基于网络的实用程序，因此消除了与下载第三方应用程序相关的风险，为您的所有下载需求提供安全且私密的环境。您可以从任何设备访问 SaveTikFast，无论您是在家中使用台式电脑还是在旅途中使用手机。我们认为访问高质量媒体应该是简单且免费的。通过选择 SaveTikFast，您就选择了一项优质、无限制的服务，该服务始终将完美、无水印的视频直接直接发送到您的图库或硬盘。",
+        "intro_p2": "除了标准视频下载之外，SaveTikFast 还配备了一整套功能，旨在满足您所有的 TikTok 媒体保存需求。我们最受欢迎的功能之一是 MP3 提取工具。通常，TikTok 视频会包含一首朗朗上口的歌曲、一段搞笑的原声片段或一段您愿意离线收听的励志演讲。借助我们的平台，您可以将任何 TikTok 视频无缝转换为高品质 MP3 音频文件，非常适合设置为铃声或添加到您的音乐播放列表。此外，我们完全支持下载 TikTok 照片幻灯片。我们的工具不会尝试在每张图像通过时对其进行屏幕截图，而是提取整个幻灯片并以其原始的未压缩分辨率单独保存每张图片。但这还不是全部。我们还提供下载 TikTok Stories 的功能。由于故事转瞬即逝，24 小时后就会消失，因此我们的下载器可让您永久存档这些转瞬即逝的时刻。 SaveTikFast 上的每一项功能都针对速度和可靠性进行了优化，确保无论您是下载 3 分钟的高清视频、清晰的 MP3 曲目还是令人惊叹的照片轮播，该过程都是即时且轻松的。",
+        "why_title": "为什么选择 SaveTikFast？",
+        "why_p1": "在 SaveTikFast，我们知道您的时间很宝贵，这就是为什么我们优先考虑超快的下载速度和坚如磐石的可靠性。我们强大的后端系统经过精心设计，可以毫不费力地处理大量并发请求。当您点击下载按钮时，我们的服务器会立即处理 TikTok 链接，去除水印并在眨眼间将文件传送给您。您不会遇到损坏的链接、无休止的加载屏幕或令人沮丧的超时。我们持续监控和升级我们的网络，以提供您日复一日信赖的无缝、不间断的下载体验。",
+        "why_p2": "下载内容时，视觉清晰度至关重要，SaveTikFast 保证每次下载的卓越质量。我们保留原始视频的比特率和分辨率，为您提供完美、无水印的 MP4 文件，非常适合在大屏幕上观看或专业视频编辑。除了优质之外，我们的服务还具有普遍兼容性。您无需担心设备限制； SaveTikFast 具有完全响应能力，并且可以在任何具有互联网连接的小工具上完美运行。从最新的 iPhone 和 Android 设备到较旧的台式电脑，我们基于网络的工具可以适应您的屏幕和浏览器，在任何地方提供一致、流畅的用户体验。",
+        "why_p3": "您的隐私和安全对我们 SaveTikFast 至关重要。我们按照严格的无日志政策运营，这意味着我们不会跟踪、存储或监控您选择下载的视频。您的使用完全匿名。此外，我们的网站采用先进的 SSL 加密技术进行强化，以保护您的连接免受任何潜在威胁。由于我们的服务 100% 基于网络，因此您永远不会被要求下载可疑的可执行文件或安装侵入性浏览器扩展，从而完全消除了恶意软件或病毒的风险。您可以放心下载自己喜欢的 TikTok，因为您的数据是安全的。",
+        "guide_title": "如何在任何设备上下载 TikTok 视频",
+        "guide_p1": "使用 SaveTikFast 下载您最喜欢的 TikTok 视频是一个非常简单的过程，任何人都可以在几秒钟内掌握。首先，在智能手机上打开 TikTok 应用程序或在计算机浏览器上访问 TikTok 网站。滚动浏览源，直到找到您要保存的视频、幻灯片或故事。接下来，点击“共享”图标，该图标通常由指向右侧的箭头表示，位于屏幕右侧。从弹出的共享菜单中，选择“复制链接”选项。将链接复制到剪贴板后，打开您喜欢的网络浏览器（无论是 Chrome、Safari 还是 Firefox）并导航到 SaveTikFast 网站。在我们的主页上，您会明显地看到一个大的输入字段。将复制的 TikTok 链接直接粘贴到此文本框中。粘贴链接后，单击其旁边的“下载”按钮。我们的系统将立即处理该链接，并在几分钟内为您提供多个下载选项。您可以选择下载不带水印的视频、将音频提取为 MP3 或保存幻灯片中的图像。单击您所需的格式，文件将立即开始下载到您设备的本地存储，可供离线查看或共享。",
+        "comparison_title": "SaveTikFast vs Other Downloaders (SSSTik, SnapTik)",
+        "comparison_p1": "While there are several TikTok downloaders available such as SSSTik, SnapTik, and TikMate, SaveTikFast distinctly outshines the competition in numerous ways. First and foremost, our download speeds are noticeably faster, ensuring you spend less time waiting and more time enjoying your content. Unlike SSSTik, which can sometimes struggle with high-resolution slideshows, SaveTikFast processes all formats seamlessly and without error. Furthermore, our interface is much cleaner and more user-friendly than SnapTik, with fewer intrusive advertisements that disrupt the user experience. We also offer more comprehensive features, such as dedicated Story downloading and high-bitrate MP3 extraction, which are often limited or entirely absent on platforms like TikMate. SaveTikFast is continuously updated to remain fully compatible with TikTok's latest algorithm changes, guaranteeing reliable performance every single day.",
+        "tips_title": "Tips for the Best Downloading Experience",
+        "tips_p1": "为了充分利用您的 SaveTikFast 体验，您可以遵循一些实用技巧。对于移动用户，我们强烈建议您在智能手机的主屏幕或浏览器上为我们的网站添加书签，以便在找到喜欢的视频时立即访问。如果您下载内容用于视频编辑或专业用途，请始终确保选择可用的最高高清分辨率选项以保持视觉保真度。对于互联网连接较慢地区的用户来说，如果您只需要声音，首先下载 MP3 音频版本可能是节省带宽的好方法。此外，如果下载没有立即开始，只需刷新页面并再次粘贴链接通常可以解决任何临时的网络问题。永远记住，虽然下载是免费和无限制的，但在转发或重复使用原始内容创建者的视频时，您应该尊重其知识产权。",
+        "conclusion_title": "立即开始下载您最喜爱的 TikTok",
+        "conclusion_p1": "总而言之，SaveTikFast 无疑是最高效、可靠、用户友好的无水印 TikTok 视频、音频和幻灯片下载工具。凭借我们对高速性能、毫不妥协的质量和严格的用户隐私的承诺，我们提供无与伦比的服务，满足您的所有下载需求。不要让您最喜欢的 TikTok 时刻溜走或迷失在动态中。立即开始使用 SaveTikFast 构建您个人的病毒热门歌曲和流行声音的离线收藏。立即为我们的网站添加书签，尝试您的第一次免费下载，并亲自体验终极的 TikTok 下载解决方案！"
     }
-  },
-  "nav_menu": {
-    "slideshow": "幻灯片",
-    "video": "视频",
-    "mp3": "MP3 音频",
-    "stories": "故事"
-  },
-  "mp3_page": {
-    "meta_title": "TikTok转MP3 - 免费下载高质量音频 320kbps",
-    "title": "TikTok MP3 下载",
-    "subtitle": "(仅音频)",
-    "desc": "将 TikTok 视频转换为 MP3 音频文件。提取高品质 320kbps 的歌曲和音乐。",
-    "placeholder": "粘贴视频链接以提取音频...",
-    "btn_download": "提取 MP3",
-    "about_title": "最佳 TikTok MP3 转换器 2026",
-    "about_content": "SaveTikFast MP3 允许您即时从任何 TikTok 视频中提取音频。下载热门歌曲、病毒式声音和背景音乐。",
-    "features": {
-      "quality": {
-        "title": "HD 音频 320kbps",
-        "desc": "将TikTok视频转换为水晶般清晰的320kbps录音室品质MP3。在线可用的最高音频比特率,非常适合想要在iPhone、Android或PC上获得最佳音质的音乐爱好者。"
-      },
-      "fast": {
-        "title": "即时转换",
-        "desc": "仅需2秒即可将TikTok转换为MP3。最快的在线TikTok音频提取器 - 比SSSTik MP3、SnapTik音频或任何其他转换器更快。在所有设备上即时运行。"
-      },
-      "ringtone": {
-        "title": "铃声就绪",
-        "desc": "iPhone铃声和Android通知声音的完美音频长度。从病毒式TikTok声音和热门音频片段创建自定义铃声。在任何智能手机上轻松设置。"
-      },
-      "device": {
-        "title": "所有设备",
-        "desc": "在iPhone、Samsung Galaxy、Google Pixel、Huawei、iPad、MacBook、Windows PC和任何带有浏览器的设备上提取TikTok音频。无需下载应用程序。"
-      },
-      "original": {
-        "title": "原始声音",
-        "desc": "在不压缩或质量损失的情况下保留原始TikTok音频质量。获得与原始视频完全相同的声音,包括热门歌曲和病毒式音频。"
-      },
-      "unlimited": {
-        "title": "免费 &amp; 无限制",
-        "desc": "TikTok转MP3转换没有限制。转换任意数量的TikTok视频为音频 - 完全免费,无需注册,无每日限制。"
-      },
-      "secure": {
-        "title": "安全 &amp; 私密",
-        "desc": "无数据收集的安全MP3转换。我们不存储您转换的文件或跟踪您的活动。您的隐私受到100%保护。"
-      },
-      "nobapp": {
-        "title": "无需应用程序",
-        "desc": "直接在您的浏览器中运行 - Chrome、Safari、Firefox、Edge、Opera。无需安装应用程序,无需存储空间。比TikTok MP3下载器应用程序更好。"
-      }
-    },
-    "how_to": {
-      "title": "如何将 TikTok 转换为 MP3",
-      "step1": "找到视频。点击分享 → 复制链接。",
-      "step2": "将链接粘贴到上方的框中。",
-      "step3": "点击“提取 MP3”进行下载。"
-    },
-    "faq": {
-      "q1": "如何将TikTok视频转换为MP3?",
-      "a1": "使用SaveTikFast将TikTok转换为MP3很简单。复制TikTok视频链接,将其粘贴到我们的MP3转换器中,然后点击转换。音频将立即以高质量320kbps MP3格式提取。这适用于使用Chrome、Safari、Firefox或任何浏览器的iPhone、Android、Samsung、PC、Mac和所有设备。我们的TikTok转MP3转换器比SSSTik或SnapTik音频提取器更快、质量更高。",
-      "q2": "SaveTikFast MP3转换器提供什么音频质量?",
-      "a2": "SaveTikFast以高级320kbps MP3质量提取TikTok音频 - MP3文件可用的最高比特率。这提供了水晶般清晰的录音室品质声音,非常适合音乐播放、铃声或音频项目。与降低比特率以节省带宽的其他转换器不同,我们在不压缩或质量损失的情况下保留原始TikTok音频。",
-      "q3": "我可以将TikTok音频用作铃声吗?",
-      "a3": "是的!从SaveTikFast下载的TikTok音频非常适合作为铃声。MP3格式适用于iPhone和Android的铃声设置。在iPhone上,使用GarageBand或iTunes设置自定义铃声。在Android上,只需转到设置>声音>铃声并选择下载的MP3。从病毒式TikTok声音和热门音频创建独特的铃声。",
-      "q4": "TikTok转MP3转换免费吗?",
-      "a4": "完全免费。SaveTikFast MP3转换器没有费用、订阅或每日限制。无需注册即可转换无限的TikTok视频为MP3。我们的免费服务适用于使用包括Chrome、Safari和Firefox在内的任何浏览器的所有设备 - iPhone、Android、Samsung、Huawei、iPad、Mac、Windows PC。",
-      "q5": "MP3转换需要多长时间?",
-      "a5": "SaveTikFast大约需要2-3秒将TikTok转换为MP3。我们使用针对快速音频提取优化的强大服务器。这使我们成为可用的最快TikTok MP3转换器 - 比SSSTik MP3、SnapTik音频、TikMate或其他转换工具快得多。",
-      "q6": "我可以在iPhone上下载TikTok音乐吗?",
-      "a6": "是的,您可以使用SaveTikFast轻松在iPhone上下载TikTok音乐和音频。复制TikTok链接,打开Safari或Chrome,访问我们的MP3转换器,粘贴链接并点击下载。MP3文件将保存到您的文件应用。从那里,将其添加到Apple Music、用作铃声或在任何地方分享。适用于所有iPhone型号。",
-      "q7": "MP3是否包含完整的音频轨道?",
-      "a7": "是的,SaveTikFast从TikTok视频中提取完整的音频 - 包括背景音乐、语音、音效和所有音频元素。完整长度的音频完全按照原始TikTok视频中播放的方式保留。非常适合保存热门歌曲、病毒式声音和您最喜欢的TikTok音频。",
-      "q8": "SaveTikFast MP3转换器安全吗?",
-      "a8": "完全安全。SaveTikFast MP3转换器使用安全的SSL加密,不存储您的数据或转换的文件,不需要登录,也不会在您的设备上安装任何东西。我们已经为全球用户安全地将数百万个TikTok视频转换为MP3。您的隐私和安全是我们的首要任务。",
-      "q9": "我可以在Android上将TikTok转换为MP3吗?",
-      "a9": "是的,TikTok转MP3转换在所有Android设备上完美运行。这包括Samsung Galaxy、Google Pixel、Huawei、Xiaomi、OPPO、OnePlus和所有其他Android手机和平板电脑。只需使用Chrome、Firefox或Samsung Internet浏览器访问SaveTikFast并即时将任何TikTok转换为MP3。",
-      "q10": "为什么SaveTikFast是最好的TikTok转MP3转换器?",
-      "a10": "SaveTikFast提供最佳的TikTok MP3转换,因为我们具有卓越的速度(2秒)、最高的音频质量(320kbps)、通用设备支持和完全免费的服务。与SSSTik、SnapTik或其他转换器不同,我们提供一致的高质量结果,没有恼人的广告或下载限制。数百万用户信任SaveTikFast满足他们的TikTok音频需求。"
-    },
-    "meta_desc": "将TikTok视频转换为高质量320kbps MP3音频文件。在线免费提取歌曲和音乐。无需安装应用程序，无需注册账号。支持所有设备和浏览器。快速便捷。"
-  },
-  "story_page": {
-    "meta_title": "TikTok故事下载器 - 匿名保存照片和幻灯片 免费",
-    "title": "下载 TikTok 快拍",
-    "desc": "在 TikTok 快拍 (Story) 和幻灯片过期前保存它们。",
-    "placeholder": "粘贴快拍链接...",
-    "btn_download": "保存快拍",
-    "about_title": "快拍下载器 2026",
-    "about_content": "SaveTikFast 快拍下载器让您能在 24 小时后消失前保存快拍和照片轮播。",
-    "features": {
-      "expire": {
-        "title": "消失前保存",
-        "desc": "在24小时后消失之前下载TikTok故事。再也不会错过您最喜欢的创作者的故事。SaveTikFast让您永久保存过期的内容到您的设备。"
-      },
-      "quality": {
-        "title": "原始质量",
-        "desc": "以完整高清质量保存TikTok故事 - 与创作者上传的完全相同。没有质量降低,没有压缩。在iPhone、Android或PC上获得相同的分辨率。"
-      },
-      "anonymous": {
-        "title": "匿名查看",
-        "desc": "完全匿名地查看和下载TikTok故事。创作者不会知道您保存了他们的故事。100%私密和谨慎的故事下载。"
-      },
-      "fast": {
-        "title": "超级快速",
-        "desc": "仅需2秒即可下载任何TikTok故事。即时故事保存,比任何其他在线TikTok故事下载器更快。"
-      },
-      "device": {
-        "title": "随处运行",
-        "desc": "在iPhone 15、Samsung Galaxy、Google Pixel、Huawei、iPad、Mac、Windows和任何设备上保存TikTok故事。与Chrome、Safari、Firefox和所有浏览器兼容。"
-      },
-      "nowatermark": {
-        "title": "无水印",
-        "desc": "下载没有TikTok水印或标志的TikTok故事。干净的故事下载,可保存或在Instagram、Snapchat或WhatsApp上分享。"
-      },
-      "free": {
-        "title": "永久免费",
-        "desc": "无限制的TikTok故事下载,无需费用。无需注册,无费用,无每日限制。SaveTikFast故事下载器100%免费。"
-      },
-      "noapp": {
-        "title": "仅浏览器",
-        "desc": "无需安装应用程序。直接从手机或计算机上的Chrome、Safari、Firefox、Edge下载TikTok故事。比应用程序更快、更安全。"
-      }
-    },
-    "how_to": {
-      "title": "如何下载 TikTok 快拍",
-      "step1": "打开快拍，分享 → 复制链接。",
-      "step2": "将链接粘贴到上方。",
-      "step3": "点击“保存快拍”。"
-    },
-    "faq": {
-      "q1": "如何下载TikTok故事?",
-      "a1": "要下载TikTok故事,首先从TikTok复制故事链接(在故事上点击分享)。然后访问SaveTikFast,将链接粘贴到我们的故事下载器中,然后点击下载。故事将以原始高清质量保存到您的设备。适用于使用Chrome、Safari、Firefox或任何浏览器的iPhone、Android、Samsung、iPad、Mac、PC。在24小时后消失之前保存故事。",
-      "q2": "我可以匿名下载TikTok故事吗?",
-      "a2": "是的,SaveTikFast允许完全匿名的TikTok故事下载。创作者不会收到任何通知或知道您下载了他们的故事。您的身份保持私密。这非常适合在不与创作者的帐户互动的情况下谨慎地保存内容。",
-      "q3": "下载后TikTok故事会过期吗?",
-      "a3": "不会,一旦您使用SaveTikFast下载TikTok故事,它就会永久保存在您的设备上。即使TikTok故事在平台上24小时后消失,您下载的副本也会永远保留。在重要故事过期之前保存它们,这样您就不会失去对内容的访问。",
-      "q4": "下载的TikTok故事质量如何?",
-      "a4": "SaveTikFast以完整的原始质量下载TikTok故事 - 与创作者上传的相同高清分辨率。我们不压缩或降低质量。您下载的故事看起来与它们在TikTok上的外观完全相同,非常适合保存回忆或重新发布。",
-      "q5": "我可以在iPhone上下载TikTok故事吗?",
-      "a5": "是的,在iPhone上下载TikTok故事很容易。从TikTok复制故事链接,打开Safari或Chrome,转到SaveTikFast,粘贴链接并点击下载。故事直接保存到您的照片或文件应用。无需安装任何应用程序即可在iPhone 15、14、13、12和所有型号上运行。",
-      "q6": "TikTok故事下载器免费吗?",
-      "a6": "完全免费。SaveTikFast故事下载器没有费用、高级计划或下载限制。在任何设备上免费保存无限的TikTok故事 - iPhone、Android、Samsung、PC、Mac。无需注册或帐户。",
-      "q7": "我可以下载私密的TikTok故事吗?",
-      "a7": "SaveTikFast只能下载公开的TikTok故事。由于TikTok的隐私保护,外部下载工具无法访问仅与特定关注者共享的私密故事。对于私密内容,您需要创作者的直接许可。",
-      "q8": "为什么使用SaveTikFast下载TikTok故事?",
-      "a8": "SaveTikFast是最好的TikTok故事下载器,因为我们提供即时下载、原始高清质量、匿名保存和免费无限访问。我们的工具在所有设备和浏览器上可靠运行,使其优于其他故事下载器。在过期故事永久消失之前保存它们。"
-    },
-    "meta_desc": "匿名免费下载TikTok故事和幻灯片。在过期前保存相册和故事视频。快速、免费，无需登录或安装任何应用程序。一键保存所有TikTok故事内容。"
-  },
-  "blog": {
-    "meta_title": "TikTok下载完全指南2026 - 视频 MP3 幻灯片和故事",
-    "meta_desc": "2026年TikTok内容下载完整指南。学会无水印保存视频、转换MP3、在iPhone、Android和电脑上下载幻灯片和故事。简单易用，完全免费。",
-    "keywords": "如何下载无水印TikTok视频2026, TikTok下载器iPhone iOS 18, 保存TikTok视频Android 15, TikTok MP3转换器在线免费",
-    "title": "TikTok 下载终极指南 2026",
-    "subtitle": "关于下载TikTok视频、MP3、幻灯片和快拍的所有知识。2026年最新更新。",
-    "updated": "最后更新：二月",
-    "back_home": "返回下载器",
-    "tools_heading": "选择下载类型",
-    "try_now": "立即尝试",
-    "card_video_title": "视频下载器",
-    "card_video_desc": "以HD/4K质量下载无水印TikTok视频。支持iPhone 16、三星Galaxy S25及所有设备。",
-    "card_mp3_title": "MP3转换器",
-    "card_mp3_desc": "以高质量320kbps从TikTok视频中提取音频。非常适合制作铃声。",
-    "card_slideshow_title": "幻灯片保存器",
-    "card_slideshow_desc": "将TikTok幻灯片和轮播的所有照片下载为ZIP文件。",
-    "card_story_title": "快拍下载器",
-    "card_story_desc": "在TikTok快拍24小时后消失前保存。匿名下载。",
-    "section1_title": "如何在2026年下载TikTok视频",
-    "section1_content": "<strong>下载无水印TikTok视频</strong>从未如此简单。2026年，SaveTikFast仍然是最快、最可靠的解决方案。",
-    "section2_title": "TikTok转MP3转换指南",
-    "section2_content": "想要<strong>将TikTok转换为MP3</strong>？我们的音频提取器可以从任何视频中获取<strong>高达320kbps的高质量</strong>声音。",
-    "section3_title": "下载TikTok幻灯片和快拍",
-    "section3_content": "<strong>TikTok幻灯片</strong>在2026年非常流行。我们的下载器以原始质量保存<strong>轮播的每张图片</strong>。",
-    "section4_title": "隐私与安全",
-    "section4_content": "在SaveTikFast，我们<strong>认真对待您的隐私</strong>。无需注册，不存储视频，安全的SSL连接。",
-    "section5_title": "为什么选择SaveTikFast？",
-    "section5_content": "SaveTikFast的优势：最快处理速度，最高4K质量，无水印，所有内容类型，兼容所有设备，永久免费。",
-    "cta_title": "准备好下载了吗？",
-    "cta_desc": "立即开始下载TikTok视频、MP3、幻灯片和快拍。100%免费，无需注册。",
-    "cta_button": "开始下载",
-    "latest_posts": "最新文章",
-    "read_more": "阅读更多",
-    "share": "分享这篇文章：",
-    "related_posts_title": "相关文章",
-    "toc_title": "目录",
-    "copy_link": "复制链接",
-    "link_copied": "已复制！"
-  },
-  "ios_page": {
-    "title": "iOS 版 TikTok 下载器",
-    "desc": "将没有水印的 TikTok 视频以高清质量直接下载到您的 iPhone 或 iPad。在 iOS 上使用 Safari 保存视频的最快方法。",
-    "placeholder": "从您的 iPhone 粘贴 TikTok 链接...",
-    "meta_title": "iPhone/iPad 版 TikTok 下载器 - SaveTikFast",
-    "meta_desc": "在 iOS（iPhone 和 iPad）上保存没有水印的 TikTok 视频的免费工具。无需安装应用程序。立即下载 MP4 或 MP3 格式。",
-    "faq": {
-      "q1": "如何在 iPhone 和 iPad 上下载无水印的 TikTok 视频？",
-      "a1": "在 iPhone 或 iPad 上打开 TikTok，点击“共享并复制链接”。打开 Safari 或 Chrome 浏览器，访问 SaveTikFast，粘贴 TikTok 视频 URL，然后点击“下载”。视频以高清质量直接保存到您的照片应用程序，无水印。适用于 iPhone 16、iPhone 15、iPhone 14、iPad Pro、iPad Air 以及运行 iOS 17 或 iOS 18 的所有 iOS 设备。",
-      "q2": "SaveTikFast 可以在 iPhone 上免费使用，无需安装任何应用程序吗？",
-      "a2": "是的，SaveTikFast 对于 iPhone 和 iPad 用户是 100% 免费的。无需从 App Store 安装应用程序。我们的 TikTok 视频下载器可直接在 iOS 上的 Safari、Chrome 或 Firefox 浏览器中运行。下载无水印的无限 TikTok 视频、将 TikTok 转换为 MP3 并保存 TikTok 故事 - 全部完全免费，无需注册或订阅。",
-      "q3": "我可以将 TikTok 视频以高清 4K 质量保存到我的 iPhone 相机胶卷中吗？",
-      "a3": "绝对地。 SaveTikFast 可将最高质量的 TikTok 视频（包括 720p 高清、1080p 全高清和 4K 分辨率）直接下载到您的 iPhone 照片或文件应用程序中。我们从不压缩视频。质量比 iOS 设备上的 SSSTik、SnapTik 或 TikMate 更好。非常适合在 iPhone 上离线保存 TikTok 内容以供以后查看。",
-      "q4": "为什么 SaveTikFast 是 iOS 设备上最好的 TikTok 下载器？",
-      "a4": "SaveTikFast 是适用于 iPhone 和 iPad 的最快 TikTok 视频保存程序，下载仅需 3 秒，无水印删除问题，支持高清和 4K、MP3 音频提取、故事下载和幻灯片保存。与其他 iOS TikTok 下载器不同，我们不需要安装应用程序，不需要登录，也不需要 Apple 快捷方式。在所有 iOS 版本的 Safari 浏览器上完美运行。",
-      "q5": "如何在 iPhone 上将 TikTok 视频转换为 MP3 音频？",
-      "a5": "在 iPhone 上复制 TikTok 视频链接，打开 Safari 或 Chrome，访问 SaveTikFast MP3 转换器页面，粘贴 URL，然后点击提取 MP3。音频文件以 320kbps 的质量下载到您的 iPhone 文件应用程序。非常适合从 TikTok 声音创建 iPhone 铃声、保存流行的 TikTok 音乐以及在 iOS 设备上提取病毒式音频剪辑。"
-    }
-  },
-  "android_page": {
-    "title": "Android 版 TikTok 下载器",
-    "desc": "最好的 Android TikTok 视频保护程序！将任何没有水印的 TikTok 视频以 MP4 格式直接下载到您的移动图库。",
-    "placeholder": "从您的 Android 手机粘贴 TikTok 链接...",
-    "meta_title": "适用于 Android 设备的 TikTok 下载器 - SaveTikFast",
-    "meta_desc": "将任何没有徽标的 TikTok 视频保存到您的 Android 手机图库中。 100% 免费、无水印、快速、安全。以高清画质下载。",
-    "faq": {
-      "q1": "如何在 Android 上下载无水印的 TikTok 视频？",
-      "a1": "在 Android 手机上打开 TikTok，点击共享并复制链接。打开 Chrome、Samsung Internet 或 Firefox 浏览器，访问 SaveTikFast，粘贴视频 URL，然后点击“下载”。 TikTok 视频以高清质量保存到您的下载文件夹或图库，无水印。适用于三星 Galaxy S25、Google Pixel 9、小米、OPPO、OnePlus 和华为设备。",
-      "q2": "SaveTikFast 是否与所有 Android 手机和平板电脑兼容？",
-      "a2": "是的，SaveTikFast 适用于所有 Android 设备，包括三星 Galaxy、Google Pixel、小米红米、OPPO、OnePlus、华为、摩托罗拉、诺基亚和 Android 平板电脑。兼容 Android 12、13、14 和 15。使用 Chrome、Samsung Internet、Firefox 或任何移动浏览器免费下载无水印的 TikTok 视频。无需安装 APK。",
-      "q3": "我可以将 TikTok 视频以高清 4K 保存到我的 Android 图库中吗？",
-      "a3": "绝对地。 SaveTikFast 将原始高清、1080p 全高清和 4K 质量的 TikTok 视频直接下载到您的 Android 手机图库或下载文件夹中。我们保留原始视频质量而不进行压缩。比 SSSTik、SnapTik 或 TikMate 下载器更好。非常适合在 Samsung Galaxy、Pixel 或小米设备上离线保存 TikTok 内容。",
-      "q4": "为什么选择 SaveTikFast 而不是其他 Android TikTok 下载器？",
-      "a4": "SaveTikFast 是最快的 Android TikTok 下载器，处理时间为 3 秒，无水印下载，高清和 4K 视频支持，TikTok MP3 转换器，故事保护程序和幻灯片下载器。无需 APK，无需 Google Play 应用程序。适用于 Samsung Galaxy、Google Pixel、Xiaomi、OPPO 和所有 Android 智能手机上的 Chrome 浏览器，无需注册。",
-      "q5": "如何在 Android 手机上从 TikTok 中提取 MP3 音频？",
-      "a5": "在 Android 设备上复制 TikTok 视频链接，打开 Chrome 或三星互联网浏览器，访问 SaveTikFast MP3 转换器，粘贴 URL，然后点击提取 MP3。以高品质 320kbps 格式将音频下载到您的下载文件夹。非常适合在三星 Galaxy 和 Pixel 手机上保存热门 TikTok 歌曲、创建 Android 铃声以及提取病毒声音。"
-    }
-  },
-  "mac_page": {
-    "title": "Mac 版 TikTok 下载器",
-    "desc": "在 MacBook 或 iMac 上下载无水印的高质量 TikTok 视频。在 Safari 和 Chrome 上完美运行。",
-    "placeholder": "将 TikTok 链接放到此处即可在 Mac 上下载...",
-    "meta_title": "Mac/MacBook 版 TikTok 视频下载器（高清） - SaveTikFast",
-    "meta_desc": "轻松将没有水印的 TikTok 视频下载到您的 Mac。免费在线保护程序，支持 macOS Safari、Chrome 和 Firefox，4K 画质。",
-    "faq": {
-      "q1": "如何在 Mac 上下载无水印的 TikTok 视频？",
-      "a1": "在 MacBook 或 iMac 上的 Safari、Chrome 或 Firefox 中打开 TikTok。从地址栏复制 TikTok 视频 URL，访问 SaveTikFast，粘贴链接，然后单击“下载”。视频以高清或 4K 质量保存到您的 Mac 下载文件夹，无水印。适用于 macOS Sonoma、macOS Ventura、MacBook Pro、MacBook Air、iMac 和 Mac Mini。",
-      "q2": "SaveTikFast 是否适用于 macOS 的 Safari 和 Chrome？",
-      "a2": "是的，SaveTikFast 可在所有 Mac 浏览器上完美运行，包括 Apple Safari、Google Chrome、Mozilla Firefox、Microsoft Edge 和 Opera。无需安装浏览器扩展或插件。我们的 TikTok 视频下载器直接在 macOS Sonoma、Ventura 和 Monterey 上的浏览​​器中运行。在任何 Mac 上完全免费下载无水印的无限 TikTok 视频。",
-      "q3": "我可以在 MacBook 上保存 4K 质量的 TikTok 视频吗？",
-      "a3": "绝对地。 SaveTikFast 在 MacBook Pro、MacBook Air、iMac 和 Mac Mini 上以最高质量下载 TikTok 视频，包括 720p、1080p 全高清、2K 和 4K 分辨率。我们从不压缩或降低视频质量。文件以 MP4 格式保存到您的“下载”文件夹中。对于想要优质视频质量的 Mac 用户来说，比 SSSTik 或 SnapTik 更好。",
-      "q4": "为什么 SaveTikFast 是 Mac 电脑上最好的 TikTok 下载器？",
-      "a4": "SaveTikFast 是 Mac 上最快的 TikTok 视频下载器，具有即时 3 秒处理、水印去除、4K 质量支持、MP3 音频提取、TikTok 故事保存和幻灯片下载。无需在 macOS 上安装软件。适用于 MacBook Pro、MacBook Air、iMac 和 Mac Mini 上的 Safari 和 Chrome 浏览器，无需注册或订阅。",
-      "q5": "如何在 Mac 上将 TikTok 转换为 MP3？",
-      "a5": "从 Mac 上的 Safari 或 Chrome 复制 TikTok 视频 URL，访问 SaveTikFast MP3 转换器，粘贴链接，然后单击“提取 MP3”。音频文件将以录音室品质的 320kbps MP3 格式下载到您的 Mac 下载文件夹中。非常适合在 MacBook Pro、MacBook Air 和 iMac 上保存热门 TikTok 音乐、创建播放列表以及提取声音。"
-    }
-  },
-  "pc_page": {
-    "title": "PC 版 TikTok 下载器",
-    "desc": "将 TikTok 视频直接保存到您的 Windows PC 或笔记本电脑。以超快的速度获取干净、无水印的视频。",
-    "placeholder": "从您的 PC 粘贴 TikTok 视频链接...",
-    "meta_title": "适用于 Windows PC/笔记本电脑的 TikTok 下载器 - SaveTikFast",
-    "meta_desc": "Windows PC 上最快的 TikTok 视频下载器。免费将无限量无水印的 TikTok 视频保存到您的计算机上。",
-    "faq": {
-      "q1": "如何在 Windows PC 上下载无水印的 TikTok 视频？",
-      "a1": "在 Windows PC 或笔记本电脑上的 Chrome、Edge 或 Firefox 中打开 TikTok。从浏览器地址栏中复制 TikTok 视频 URL，访问 SaveTikFast，粘贴链接，然后单击“下载”。视频以高清或 4K 质量保存到您的 PC 下载文件夹，无水印。适用于 Dell、HP、Lenovo、ASUS 和 Acer 的 Windows 11、Windows 10、台式电脑和笔记本电脑。",
-      "q2": "SaveTikFast 可以在 Windows 计算机上免费使用吗？",
-      "a2": "是的，SaveTikFast 对 Windows PC 用户完全免费。无需安装软件或下载桌面应用程序。我们的 TikTok 视频下载器可直接在 Windows 11 和 Windows 10 上的 Chrome、Microsoft Edge、Firefox 和 Opera 浏览器中运行。免费下载无限量的无水印 TikTok 视频、转换为 MP3、保存故事以及下载幻灯片。",
-      "q3": "我可以在 Windows PC 上以高清 4K 质量保存 TikTok 视频吗？",
-      "a3": "绝对地。 SaveTikFast 以原始质量（包括 720p 高清、1080p 全高清、2K 和 4K 分辨率）将 TikTok 视频作为 MP4 文件直接下载到您的 Windows PC 下载文件夹中。我们从不压缩或降低质量。优于 SSSTik、SnapTik 或 TikMate。非常适合在运行 Windows 11 或 Windows 10 的台式电脑上保存和编辑 TikTok 内容。",
-      "q4": "为什么 SaveTikFast 是 PC 上最好的 TikTok 下载器？",
-      "a4": "SaveTikFast 是 Windows PC 上最快的 TikTok 视频下载器，处理时间为 3 秒，无水印，支持高清和 4K，提供 MP3 转换器、故事下载器和幻灯片保存程序。无需安装桌面软件。适用于 HP、Dell、Lenovo、ASUS 的 Windows 11、Windows 10 笔记本电脑和台式机上的 Chrome 和 Edge 浏览器，无需注册或付费。",
-      "q5": "如何在 Windows 计算机上将 TikTok 转换为 MP3？",
-      "a5": "从 Windows PC 上的 Chrome 或 Edge 复制 TikTok 视频 URL，访问 SaveTikFast MP3 转换器页面，粘贴链接，然后单击“提取 MP3”。音频以高品质 320kbps MP3 格式下载到您的 PC 下载文件夹。非常适合保存 TikTok 歌曲、创建 Windows 铃声、提取病毒式音频以及在台式计算机上构建音乐收藏。"
-    }
-  }
 }

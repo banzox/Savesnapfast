@@ -1,694 +1,711 @@
 {
-  "404": {
-    "title": "Siden ble ikke funnet",
-    "home_btn": "Gå til hjemmesiden"
-  },
-  "meta": {
-    "title": "SaveTikFast 2026 – Beste TikTok Nedlaster Uten Vannmerke (4K)",
-    "description": "Last ned TikTok-videoer uten vannmerke gratis i Ultra HD/4K. Raskeste TikTok Saver for 2026. Lagre som MP4 og MP3 på iPhone, Android og PC med én gang."
-  },
-  "common": {
-    "select_language": "Velg språk",
-    "toggle_theme": "Bytt tema"
-  },
-  "nav": {
-    "home": "Hjem",
-    "about": "Om oss",
-    "blog": "Blogg",
-    "contact": "Kontakt",
-    "terms": "Vilkår",
-    "privacy": "Personvern",
-    "dmca": "DMCA",
-    "disclaimer": "Ansvarsfraskrivelse",
-    "tools": "Verktøy"
-  },
-  "hero": {
-    "title": "TikTok Video Nedlaster",
-    "desc": "Last ned TikTok-videoer uten vannmerke. Raskt, gratis og ubegrenset HD-kvalitet."
-  },
-  "downloader": {
-    "placeholder": "Lim inn videolenke her...",
-    "btn_download": "Last ned nå",
-    "btn_paste": "Lim inn",
-    "btn_copy": "Kopier",
-    "btn_clear": "Slett",
-    "processing": "Behandler...",
-    "download_video": "Last ned video",
-    "download_audio": "Last ned MP3",
-    "hd_quality": "Uten vannmerke",
-    "download_nwm": "Last ned uten vannmerke",
-    "download_hd": "Last ned HD",
-    "download_story_vid": "Last ned Story (Video)",
-    "download_story_img": "Last ned Story (Bilde)",
-    "error_busy": "Tjenesten er opptatt, prøv igjen senere.",
-    "download_zip": "Last ned alle (ZIP)",
-    "creating_zip": "Lager ZIP...",
-    "save_image": "Lagre",
-    "error_wrong_type_video": "Ugyldig lenke! Bruk video-nedlasteren.",
-    "error_wrong_type_slideshow": "Ugyldig lenke! Bruk slideshow-nedlasteren.",
-    "error_wrong_type_story": "Ugyldig lenke! Bruk story-nedlasteren.",
-    "error_invalid_link": "Ugyldig lenke. Sjekk og prøv igjen.",
-    "check_new_tab": "En ny fane ble åpnet — sjekk den mens du venter!",
-    "preparing_download": "Forbereder filen din...",
-    "countdown_msg": "Nedlastingen starter automatisk",
-    "modal_ad_text": "Spesialtilbud bare for deg — trykk for å kreve det!",
-    "skip_download": "Hopp over og last ned nå",
-    "download_another": "Last ned en annen video",
-    "thank_you_title": "Nedlasting startet!",
-    "thank_you_msg": "Sjekk nedlastingsmappen din"
-  },
-  "faq": {
-    "title": "Ofte stilte spørsmål (FAQ)",
-    "q1": "Hvordan laster jeg ned TikTok-videoer uten vannmerke?",
-    "a1": "Å laste ned TikTok-videoer uten vannmerke er enkelt med SaveTikFast. Bare kopier TikTok-videolenken fra appen, lim den inn i nedlastingsboksen vår og klikk på nedlastingsknappen. Vår avanserte teknologi fjerner automatisk TikTok-vannmerket, og gir deg en ren videofil. Dette fungerer på alle enheter inkludert iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac og Windows PC. Du kan bruke hvilken som helst nettleser som Chrome, Safari, Firefox eller Edge. I motsetning til SSSTik eller SnapTik gir SaveTikFast høyeste kvalitet med umiddelbar prosessering.",
-    "q2": "Er SaveTikFast helt gratis å bruke?",
-    "a2": "Ja, SaveTikFast er 100% gratis og vil alltid forbli gratis. Det er ingen skjulte avgifter, ingen premiumabonnementer og ingen daglige nedlastingsgrenser. Du kan laste ned ubegrensede TikTok-videoer uten vannmerke, konvertere til MP3, lagre stories og laste ned lysbildefremvisninger - alt helt gratis. Vi krever ikke registrering eller innlogging. Tjenesten vår støttes av minimale annonser, noe som gjør det mulig for oss å tilby gratis TikTok-nedlastinger til millioner av brukere over hele verden på alle enheter.",
-    "q3": "Hvilke enheter og nettlesere støttes?",
-    "a3": "SaveTikFast fungerer på praktisk talt alle enheter og nettlesere. Støttede enheter inkluderer iPhone (alle modeller inkludert iPhone 15, 14, 13), Android-telefoner (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), nettbrett (iPad, Samsung Tab) og datamaskiner (MacBook, iMac, Windows PC, Chromebook). Støttede nettlesere inkluderer Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet og UC Browser. Ingen appinstallasjon nødvendig - alt fungerer direkte i nettleseren din.",
-    "q4": "Hvilken videokvalitet kan jeg laste ned?",
-    "a4": "SaveTikFast laster ned TikTok-videoer i høyeste tilgjengelige kvalitet. Dette inkluderer 720p HD, 1080p Full HD, 2K og til og med 4K-oppløsning når den originale videoen støtter det. Vi komprimerer eller reduserer aldri videokvaliteten - du får nøyaktig samme kvalitet som den originale TikTok-opplastingen. Dette gjør SaveTikFast overlegen i forhold til andre nedlastere som TikMate, SaveFrom eller MusicallyDown som ofte komprimerer videoer.",
-    "q5": "Er det trygt å bruke SaveTikFast?",
-    "a5": "Absolutt. SaveTikFast er helt trygt og sikkert. Vi bruker SSL-kryptering for å beskytte tilkoblingen din, vi lagrer ikke noen av dine personlige data, og vi krever ikke innlogging eller registrering. Nedlastede videoer behandles umiddelbart og lagres ikke på våre servere. Vi installerer ingenting på enheten din. SaveTikFast har vært klarert av millioner av brukere siden 2024 for sikker nedlasting av TikTok-videoer.",
-    "q6": "Hvordan er SaveTikFast bedre enn SSSTik eller SnapTik?",
-    "a6": "SaveTikFast tilbyr flere fordeler i forhold til SSSTik, SnapTik, TikMate og andre TikTok-nedlastere. Tjenesten vår er raskere (nedlastinger fullføres på 3 sekunder), gir høyere kvalitet (opptil 4K), har et renere grensesnitt med færre annonser, fungerer mer pålitelig på alle enheter, og tilbyr tilleggsfunksjoner som MP3-konvertering, story-nedlastinger og lysbildeutvinning. Mange brukere bytter til SaveTikFast etter å ha opplevd problemer med andre nedlastere.",
-    "q7": "Kan jeg laste ned TikTok-videoer på iPhone?",
-    "a7": "Ja, å laste ned TikTok-videoer på iPhone er enkelt med SaveTikFast. Åpne TikTok, kopier videolenken, åpne deretter Safari eller Chrome og gå til SaveTikFast. Lim inn lenken og trykk på nedlastingsknappen. Videoen vil lagres direkte til iPhone-ens Photos-app eller Filer. Dette fungerer på alle iPhone-modeller inkludert iPhone 15, 14, 13, 12 og eldre. Ingen appinstallasjon nødvendig - alt fungerer i nettleseren din.",
-    "q8": "Kan jeg laste ned private TikTok-videoer?",
-    "a8": "SaveTikFast kan bare laste ned offentlige TikTok-videoer. Private videoer (kun synlige for skaperen eller godkjente følgere) kan ikke lastes ned av noe nettbasert verktøy på grunn av TikToks personverninnstillinger. Hvis du har tillatelse fra skaperen, be dem om å gjøre videoen offentlig midlertidig eller dele den direkte med deg gjennom TikToks innebygde delingsfunksjoner.",
-    "q9": "Hvordan laster jeg ned TikTok på Samsung eller Android?",
-    "a9": "Å laste ned TikTok-videoer på Samsung Galaxy eller hvilken som helst Android-telefon er enkelt. Åpne TikTok-appen, trykk på Del på videoen du vil ha, og kopier lenken. Åpne deretter Chrome, Firefox eller Samsung Internet-nettleseren og besøk SaveTikFast. Lim inn lenken i nedlastingsboksen og trykk på nedlastingsknappen. Videoen vil lagres i Downloads-mappen eller Galleriet. Fungerer på alle Android-enheter inkludert Samsung, Huawei, Xiaomi, OPPO og Google Pixel.",
-    "q10": "Hvorfor velge SaveTikFast fremfor andre TikTok-nedlastere?",
-    "a10": "SaveTikFast er det beste valget for TikTok-nedlastinger fordi vi kombinerer hastighet, kvalitet og pålitelighet. Vi tilbyr de raskeste nedlastingshastighetene (3 sekunder), høyeste videokvalitet (opptil 4K), fjerning av vannmerke, MP3-konvertering, story-nedlastinger og lysbildeutvinning - alt i ett gratis verktøy. Vårt rene grensesnitt fungerer perfekt på alle enheter og nettlesere. Vi er klarert av millioner av brukere som det beste alternativet til SSSTik, SnapTik, TikMate, SaveFrom og MusicallyDown."
-  },
-  "pages": {
-    "about": {
-      "title": "Om oss",
-      "content": "Velkommen til SaveTikFast, den ledende TikTok-nedlasteren for 2026.\n\nVi bygget SaveTikFast med ett mål: å tilby den raskeste, sikreste og mest pålitelige måten å lagre TikTok-videoer uten vannmerker. I motsetning til andre verktøy prioriterer vi brukeropplevelsen: ingen irriterende annonser, ingen registrering og ingen programvareinstallasjon.\n\nVår teknologi garanterer at du får den originale kvaliteten på videoen (opptil 4K) mens forstyrrende logoer fjernes."
+    "404": {
+        "title": "Siden ble ikke funnet",
+        "home_btn": "Gå til hjemmesiden"
     },
-    "contact": {
-      "title": "Kontakt oss",
-      "content": "Vi setter pris på tilbakemeldingen din og er her for å hjelpe.\n\nHvis du opplever tekniske problemer, har forslag til forbedringer eller forretningsforespørsler, vennligst kontakt vårt supportteam:\n\n📧 E-post: support@savetik-fast.xyz\n\nVi streber etter å svare på alle henvendelser innen 24 timer."
-    },
-    "terms": {
-      "title": "Vilkår for bruk",
-      "content": "Ved å bruke SaveTikFast godtar du følgende vilkår:\n\n1. Personlig bruk:\nVår tjeneste er beregnet for personlig og ikke-kommersiell bruk. Du kan laste ned videoer for offline visning.\n\n2. Immaterielle rettigheter:\nVi eier ikke det nedlastede innholdet. Alle rettigheter tilhører de opprinnelige skaperne på TikTok. Du godtar å ikke bruke innholdet på en måte som krenker opphavsretten.\n\n3. Ansvar:\nSaveTikFast er ikke ansvarlig for hvordan du bruker det nedlastede materialet. Brukeren har det fulle ansvaret for eventuelle brudd på opphavsretten."
-    },
-    "privacy": {
-      "title": "Personvernerklæring",
-      "content": "Ditt personvern er avgjørende for oss.\n\nDatainnsamling:\nVi samler ikke inn personlig informasjon som navn eller e-post. Vi kan bruke anonyme analyser (som informasjonskapsler) for å forbedre nettstedets ytelse.\n\nIngen videolagring:\nSaveTikFast hoster eller lagrer ingen videoer på sine servere. All filbehandling skjer umiddelbart."
-    },
-    "dmca": {
-      "title": "DMCA-policy",
-      "content": "SaveTikFast respekterer andres immaterielle rettigheter.\n\nVi opererer som en teknisk tjenesteleverandør og hoster ikke opphavsrettsbeskyttet innhold. Alle videoer serveres direkte fra tredjepartsservere (TikTok).\n\nHvis du mener at ditt opphavsrettsbeskyttede verk har blitt vist på tjenesten vår uten tillatelse, vennligst send et formelt DMCA-varsel til: support@savetik-fast.xyz."
-    },
-    "disclaimer": {
-      "title": "Ansvarsfraskrivelse",
-      "content": "1. Ingen tilknytning:\nSaveTikFast er et uavhengig verktøy og er IKKE tilknyttet, assosiert, autorisert, godkjent av eller på noen måte offisielt knyttet til TikTok Inc. eller ByteDance Ltd.\n\n2. Varemerker:\nNavnene 'TikTok' og logoene er registrerte varemerker for sine respektive eiere.\n\n3. Innhold:\nVi har ingen kontroll over innholdet som hostes på TikTok-servere."
-    }
-  },
-  "footer": {
-    "rights": "© 2026 SaveTikFast. Alle rettigheter forbeholdt."
-  },
-  "features": {
-    "title": "Nøkkelfunksjoner",
-    "no_watermark": {
-      "title": "Uten vannmerke",
-      "desc": "Last ned TikTok-videoer uten vannmerke i original HD-kvalitet. SaveTikFast fjerner automatisk TikTok-logoen, og gir deg renere videoer enn SSSTik, SnapTik eller TikMate. Perfekt for å publisere på nytt på Instagram, YouTube Shorts eller lagre i galleriet ditt."
-    },
-    "fast": {
-      "title": "Lynrask hastighet",
-      "desc": "Den raskeste TikTok-videonedlasteren på nettet. Lagre hvilken som helst TikTok-video på bare 3 sekunder på iPhone, Android, Samsung, Huawei, iPad, PC eller Mac. Våre servere er optimalisert for hastighet, noe som gjør oss raskere enn SaveFrom og MusicallyDown."
-    },
-    "quality": {
-      "title": "HD &amp; 4K-kvalitet",
-      "desc": "Last ned TikTok-videoer i høyeste tilgjengelige kvalitet - 720p, 1080p Full HD, 2K og til og med 4K når tilgjengelig. Vi bevarer den originale videokvaliteten uten komprimering, i motsetning til andre TikTok-nedlastere."
-    },
-    "device": {
-      "title": "Alle enheter støttes",
-      "desc": "Fungerer perfekt på alle enheter - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC og Chromebook. Ingen appinstallasjon nødvendig."
-    },
-    "free": {
-      "title": "100% gratis for alltid",
-      "desc": "Ubegrensede TikTok-videonedlastinger uten skjulte kostnader, ingen registrering nødvendig og ingen daglige begrensninger. SaveTikFast er helt gratis og vil alltid forbli gratis for alle brukere over hele verden."
-    },
-    "secure": {
-      "title": "Privat &amp; sikker",
-      "desc": "Ditt personvern betyr noe. Vi lagrer ikke dataene dine, krever ikke innlogging og sporer ikke nedlastingene dine. Sikker og anonym nedlasting av TikTok-videoer med SSL-kryptering."
-    },
-    "browser": {
-      "title": "Alle nettlesere",
-      "desc": "Fungerer umiddelbart på Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet og UC Browser. Ingen utvidelser eller plugins nødvendig - bare lim inn og last ned."
-    },
-    "batch": {
-      "title": "Flernedlasting",
-      "desc": "Lagre flere TikTok-videoer raskt. Last ned hele samlingen til din favoritt-creator raskere enn noe annet verktøy. Bedre massednedlasting enn SSSTik eller SnapTik."
-    }
-  },
-  "how_to": {
-    "title": "Hvordan laste ned TikTok-videoer uten vannmerke",
-    "step1": "Kopier TikTok-videolenken du vil lagre.",
-    "step2": "Lim inn lenken i nedlastingsfeltet øverst på denne siden.",
-    "step3": "Klikk på 'Last ned'-knappen og videoen din blir lagret umiddelbart.",
-    "step1_title": "Kopier lenke",
-    "step2_title": "Lim inn URL",
-    "step3_title": "Last ned"
-  },
-  "tools": {
-    "backToDownloader": "Tilbake til nedlaster",
     "meta": {
-      "title": "Gratis Online Verktøy – Bildekomprimering, Konverter og QR-koder",
-      "description": "Gratis nettleserbaserte verktøy: komprimer bilder, konverter formater (WebP, JPG, PNG) og generer QR-koder umiddelbart. Ingen filopplasting eller registrering nødvendig."
+        "title": "SaveTikFast 2026 – Beste TikTok Nedlaster Uten Vannmerke (4K)",
+        "description": "Last ned TikTok-videoer uten vannmerke gratis i Ultra HD/4K. Raskeste TikTok Saver for 2026. Lagre som MP4 og MP3 på iPhone, Android og PC med én gang."
+    },
+    "common": {
+        "select_language": "Velg språk",
+        "toggle_theme": "Bytt tema"
+    },
+    "nav": {
+        "home": "Hjem",
+        "about": "Om oss",
+        "blog": "Blogg",
+        "contact": "Kontakt",
+        "terms": "Vilkår",
+        "privacy": "Personvern",
+        "dmca": "DMCA",
+        "disclaimer": "Ansvarsfraskrivelse",
+        "tools": "Verktøy"
     },
     "hero": {
-      "title": "Gratis Online Bilde- og QR-verktøy",
-      "desc": "Komprimer, konverter og lag QR-koder — alt behandles lokalt i nettleseren din. 100% privat."
+        "title": "TikTok Video Nedlaster",
+        "desc": "Last ned TikTok-videoer uten vannmerke. Raskt, gratis og ubegrenset HD-kvalitet."
     },
-    "tabs": {
-      "compressor": "Kompressor",
-      "converter": "Konverter",
-      "qrcode": "QR-generator",
-      "engagement": "Engasjement",
-      "money": "Inntekt",
-      "font": "Skrifttyper",
-      "hashtag": "Hashtagger"
+    "downloader": {
+        "placeholder": "Lim inn videolenke her...",
+        "btn_download": "Last ned nå",
+        "btn_paste": "Lim inn",
+        "btn_copy": "Kopier",
+        "btn_clear": "Slett",
+        "processing": "Behandler...",
+        "download_video": "Last ned video",
+        "download_audio": "Last ned MP3",
+        "hd_quality": "Uten vannmerke",
+        "download_nwm": "Last ned uten vannmerke",
+        "download_hd": "Last ned HD",
+        "download_story_vid": "Last ned Story (Video)",
+        "download_story_img": "Last ned Story (Bilde)",
+        "error_busy": "Tjenesten er opptatt, prøv igjen senere.",
+        "download_zip": "Last ned alle (ZIP)",
+        "creating_zip": "Lager ZIP...",
+        "save_image": "Lagre",
+        "error_wrong_type_video": "Ugyldig lenke! Bruk video-nedlasteren.",
+        "error_wrong_type_slideshow": "Ugyldig lenke! Bruk slideshow-nedlasteren.",
+        "error_wrong_type_story": "Ugyldig lenke! Bruk story-nedlasteren.",
+        "error_invalid_link": "Ugyldig lenke. Sjekk og prøv igjen.",
+        "check_new_tab": "En ny fane ble åpnet — sjekk den mens du venter!",
+        "preparing_download": "Forbereder filen din...",
+        "countdown_msg": "Nedlastingen starter automatisk",
+        "modal_ad_text": "Spesialtilbud bare for deg — trykk for å kreve det!",
+        "skip_download": "Hopp over og last ned nå",
+        "download_another": "Last ned en annen video",
+        "thank_you_title": "Nedlasting startet!",
+        "thank_you_msg": "Sjekk nedlastingsmappen din"
     },
-    "dropzone": {
-      "text": "Dra og slipp bildet ditt her",
-      "hint": "eller klikk for å bla gjennom (JPG, PNG, WebP - Maks 15MB)",
-      "hint_convert": "eller klikk for å bla gjennom (JPG, PNG, WebP, GIF, BMP)"
+    "faq": {
+        "title": "Ofte stilte spørsmål (FAQ)",
+        "q1": "Hvordan laster jeg ned TikTok-videoer uten vannmerke?",
+        "a1": "Å laste ned TikTok-videoer uten vannmerke er enkelt med SaveTikFast. Bare kopier TikTok-videolenken fra appen, lim den inn i nedlastingsboksen vår og klikk på nedlastingsknappen. Vår avanserte teknologi fjerner automatisk TikTok-vannmerket, og gir deg en ren videofil. Dette fungerer på alle enheter inkludert iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac og Windows PC. Du kan bruke hvilken som helst nettleser som Chrome, Safari, Firefox eller Edge. I motsetning til SSSTik eller SnapTik gir SaveTikFast høyeste kvalitet med umiddelbar prosessering.",
+        "q2": "Er SaveTikFast helt gratis å bruke?",
+        "a2": "Ja, SaveTikFast er 100% gratis og vil alltid forbli gratis. Det er ingen skjulte avgifter, ingen premiumabonnementer og ingen daglige nedlastingsgrenser. Du kan laste ned ubegrensede TikTok-videoer uten vannmerke, konvertere til MP3, lagre stories og laste ned lysbildefremvisninger - alt helt gratis. Vi krever ikke registrering eller innlogging. Tjenesten vår støttes av minimale annonser, noe som gjør det mulig for oss å tilby gratis TikTok-nedlastinger til millioner av brukere over hele verden på alle enheter.",
+        "q3": "Hvilke enheter og nettlesere støttes?",
+        "a3": "SaveTikFast fungerer på praktisk talt alle enheter og nettlesere. Støttede enheter inkluderer iPhone (alle modeller inkludert iPhone 15, 14, 13), Android-telefoner (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), nettbrett (iPad, Samsung Tab) og datamaskiner (MacBook, iMac, Windows PC, Chromebook). Støttede nettlesere inkluderer Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet og UC Browser. Ingen appinstallasjon nødvendig - alt fungerer direkte i nettleseren din.",
+        "q4": "Hvilken videokvalitet kan jeg laste ned?",
+        "a4": "SaveTikFast laster ned TikTok-videoer i høyeste tilgjengelige kvalitet. Dette inkluderer 720p HD, 1080p Full HD, 2K og til og med 4K-oppløsning når den originale videoen støtter det. Vi komprimerer eller reduserer aldri videokvaliteten - du får nøyaktig samme kvalitet som den originale TikTok-opplastingen. Dette gjør SaveTikFast overlegen i forhold til andre nedlastere som TikMate, SaveFrom eller MusicallyDown som ofte komprimerer videoer.",
+        "q5": "Er det trygt å bruke SaveTikFast?",
+        "a5": "Absolutt. SaveTikFast er helt trygt og sikkert. Vi bruker SSL-kryptering for å beskytte tilkoblingen din, vi lagrer ikke noen av dine personlige data, og vi krever ikke innlogging eller registrering. Nedlastede videoer behandles umiddelbart og lagres ikke på våre servere. Vi installerer ingenting på enheten din. SaveTikFast har vært klarert av millioner av brukere siden 2024 for sikker nedlasting av TikTok-videoer.",
+        "q6": "Hvordan er SaveTikFast bedre enn SSSTik eller SnapTik?",
+        "a6": "SaveTikFast tilbyr flere fordeler i forhold til SSSTik, SnapTik, TikMate og andre TikTok-nedlastere. Tjenesten vår er raskere (nedlastinger fullføres på 3 sekunder), gir høyere kvalitet (opptil 4K), har et renere grensesnitt med færre annonser, fungerer mer pålitelig på alle enheter, og tilbyr tilleggsfunksjoner som MP3-konvertering, story-nedlastinger og lysbildeutvinning. Mange brukere bytter til SaveTikFast etter å ha opplevd problemer med andre nedlastere.",
+        "q7": "Kan jeg laste ned TikTok-videoer på iPhone?",
+        "a7": "Ja, å laste ned TikTok-videoer på iPhone er enkelt med SaveTikFast. Åpne TikTok, kopier videolenken, åpne deretter Safari eller Chrome og gå til SaveTikFast. Lim inn lenken og trykk på nedlastingsknappen. Videoen vil lagres direkte til iPhone-ens Photos-app eller Filer. Dette fungerer på alle iPhone-modeller inkludert iPhone 15, 14, 13, 12 og eldre. Ingen appinstallasjon nødvendig - alt fungerer i nettleseren din.",
+        "q8": "Kan jeg laste ned private TikTok-videoer?",
+        "a8": "SaveTikFast kan bare laste ned offentlige TikTok-videoer. Private videoer (kun synlige for skaperen eller godkjente følgere) kan ikke lastes ned av noe nettbasert verktøy på grunn av TikToks personverninnstillinger. Hvis du har tillatelse fra skaperen, be dem om å gjøre videoen offentlig midlertidig eller dele den direkte med deg gjennom TikToks innebygde delingsfunksjoner.",
+        "q9": "Hvordan laster jeg ned TikTok på Samsung eller Android?",
+        "a9": "Å laste ned TikTok-videoer på Samsung Galaxy eller hvilken som helst Android-telefon er enkelt. Åpne TikTok-appen, trykk på Del på videoen du vil ha, og kopier lenken. Åpne deretter Chrome, Firefox eller Samsung Internet-nettleseren og besøk SaveTikFast. Lim inn lenken i nedlastingsboksen og trykk på nedlastingsknappen. Videoen vil lagres i Downloads-mappen eller Galleriet. Fungerer på alle Android-enheter inkludert Samsung, Huawei, Xiaomi, OPPO og Google Pixel.",
+        "q10": "Hvorfor velge SaveTikFast fremfor andre TikTok-nedlastere?",
+        "a10": "SaveTikFast er det beste valget for TikTok-nedlastinger fordi vi kombinerer hastighet, kvalitet og pålitelighet. Vi tilbyr de raskeste nedlastingshastighetene (3 sekunder), høyeste videokvalitet (opptil 4K), fjerning av vannmerke, MP3-konvertering, story-nedlastinger og lysbildeutvinning - alt i ett gratis verktøy. Vårt rene grensesnitt fungerer perfekt på alle enheter og nettlesere. Vi er klarert av millioner av brukere som det beste alternativet til SSSTik, SnapTik, TikMate, SaveFrom og MusicallyDown."
     },
-    "btn": {
-      "download": "Last ned nå",
-      "downloadPng": "Last ned PNG"
-    },
-    "compressor": {
-      "title": "Bildekompressor",
-      "desc": "Reduser bildefilstørrelsen uten å miste kvalitet. Støtter JPG, PNG og WebP opptil 15MB.",
-      "quality": "Kompresjonskvalitet",
-      "maxWidth": "Maks bredde (px)",
-      "btn": "Komprimer bilde",
-      "howto": {
-        "title": "Hvordan komprimere bilder online",
-        "step1": {
-          "title": "Last opp bilde",
-          "desc": "Dra og slipp eller klikk for å velge ditt JPG-, PNG- eller WebP-bilde (opptil 15MB)."
+    "pages": {
+        "about": {
+            "title": "Om oss",
+            "content": "Velkommen til SaveTikFast, den ledende TikTok-nedlasteren for 2026.\n\nVi bygget SaveTikFast med ett mål: å tilby den raskeste, sikreste og mest pålitelige måten å lagre TikTok-videoer uten vannmerker. I motsetning til andre verktøy prioriterer vi brukeropplevelsen: ingen irriterende annonser, ingen registrering og ingen programvareinstallasjon.\n\nVår teknologi garanterer at du får den originale kvaliteten på videoen (opptil 4K) mens forstyrrende logoer fjernes."
         },
-        "step2": {
-          "title": "Juster innstillinger",
-          "desc": "Velg ønsket kvalitetsnivå (10-100%) og maksimal bredde."
+        "contact": {
+            "title": "Kontakt oss",
+            "content": "Vi setter pris på tilbakemeldingen din og er her for å hjelpe.\n\nHvis du opplever tekniske problemer, har forslag til forbedringer eller forretningsforespørsler, vennligst kontakt vårt supportteam:\n\n📧 E-post: support@savetik-fast.xyz\n\nVi streber etter å svare på alle henvendelser innen 24 timer."
         },
-        "step3": {
-          "title": "Last ned",
-          "desc": "Klikk på komprimer og last ned ditt optimaliserte bilde umiddelbart."
+        "terms": {
+            "title": "Vilkår for bruk",
+            "content": "Ved å bruke SaveTikFast godtar du følgende vilkår:\n\n1. Personlig bruk:\nVår tjeneste er beregnet for personlig og ikke-kommersiell bruk. Du kan laste ned videoer for offline visning.\n\n2. Immaterielle rettigheter:\nVi eier ikke det nedlastede innholdet. Alle rettigheter tilhører de opprinnelige skaperne på TikTok. Du godtar å ikke bruke innholdet på en måte som krenker opphavsretten.\n\n3. Ansvar:\nSaveTikFast er ikke ansvarlig for hvordan du bruker det nedlastede materialet. Brukeren har det fulle ansvaret for eventuelle brudd på opphavsretten."
+        },
+        "privacy": {
+            "title": "Personvernerklæring",
+            "content": "Ditt personvern er avgjørende for oss.\n\nDatainnsamling:\nVi samler ikke inn personlig informasjon som navn eller e-post. Vi kan bruke anonyme analyser (som informasjonskapsler) for å forbedre nettstedets ytelse.\n\nIngen videolagring:\nSaveTikFast hoster eller lagrer ingen videoer på sine servere. All filbehandling skjer umiddelbart."
+        },
+        "dmca": {
+            "title": "DMCA-policy",
+            "content": "SaveTikFast respekterer andres immaterielle rettigheter.\n\nVi opererer som en teknisk tjenesteleverandør og hoster ikke opphavsrettsbeskyttet innhold. Alle videoer serveres direkte fra tredjepartsservere (TikTok).\n\nHvis du mener at ditt opphavsrettsbeskyttede verk har blitt vist på tjenesten vår uten tillatelse, vennligst send et formelt DMCA-varsel til: support@savetik-fast.xyz."
+        },
+        "disclaimer": {
+            "title": "Ansvarsfraskrivelse",
+            "content": "1. Ingen tilknytning:\nSaveTikFast er et uavhengig verktøy og er IKKE tilknyttet, assosiert, autorisert, godkjent av eller på noen måte offisielt knyttet til TikTok Inc. eller ByteDance Ltd.\n\n2. Varemerker:\nNavnene 'TikTok' og logoene er registrerte varemerker for sine respektive eiere.\n\n3. Innhold:\nVi har ingen kontroll over innholdet som hostes på TikTok-servere."
         }
-      },
-      "seo": {
-        "title": "Hvorfor komprimere bilder?",
-        "p1": "Bildekomprimering er avgjørende for nettstedets ytelse, raskere lastetider og redusert båndbreddebruk. Vår gratis online bildekompressor bruker avanserte algoritmer for å redusere filstørrelser samtidig som visuell kvalitet bevares.",
-        "p2": "Fordeler med bildekomprimering inkluderer:",
-        "benefit1": "Raskere lastetid for nettstedet (forbedrer SEO)",
-        "benefit2": "Reduserte lagrings- og båndbreddekostnader",
-        "benefit3": "Bedre brukeropplevelse på mobile enheter",
-        "benefit4": "Optimaliserte bilder for deling i sosiale medier",
-        "p3": "All behandling skjer i nettleseren din — bildene dine blir aldri lastet opp til noen server, noe som sikrer fullstendig personvern og sikkerhet."
-      },
-      "faq": {
-        "title": "Ofte stilte spørsmål",
-        "q1": "Blir bildet mitt lastet opp til en server?",
-        "a1": "Nei! All komprimering skjer direkte i nettleseren din. Bildene dine forlater aldri enheten din.",
-        "q2": "Hvilke filformater støttes?",
-        "a2": "Vi støtter JPG/JPEG, PNG og WebP-formater opptil 15MB filstørrelse.",
-        "q3": "Hvor mye kan jeg redusere filstørrelsen?",
-        "a3": "Vanligvis 50-80% reduksjon avhengig av det originale bildet og kvalitetsinnstillingene som er valgt."
-      }
     },
-    "converter": {
-      "title": "Bildeformat-konverter",
-      "desc": "Konverter bilder mellom JPG, PNG og WebP-formater umiddelbart i nettleseren din.",
-      "output": "Utdataformat",
-      "quality": "Utdatakvalitet",
-      "btn": "Konverter bilde",
-      "howto": {
-        "title": "Hvordan konvertere bildeformater",
-        "step1": {
-          "title": "Velg bilde",
-          "desc": "Last opp hvilken som helst bildefil (JPG, PNG, WebP, GIF, BMP støttes)."
-        },
-        "step2": {
-          "title": "Velg format",
-          "desc": "Velg ønsket utdataformat (WebP, JPG eller PNG)."
-        },
-        "step3": {
-          "title": "Konverter og lagre",
-          "desc": "Klikk på konverter og last ned ditt nye bilde umiddelbart."
-        }
-      },
-      "seo": {
-        "title": "Forståelse av bildeformater",
-        "p1": "Å velge riktig bildeformat er avgjørende for nettstedets ytelse og kvalitet. Her er en sammenligning:",
-        "webp": "Moderne format fra Google som tilbyr 25-35% mindre filstørrelser enn JPG/PNG med tilsvarende kvalitet. Best for nettbruk.",
-        "jpg": "Ideell for fotografier og komplekse bilder med mange farger. Bruker lossy komprimering.",
-        "png": "Perfekt for bilder som krever gjennomsiktighet eller skarpe kanter (logoer, grafikk). Bruker lossless komprimering.",
-        "p2": "Vår konverter bruker HTML5 Canvas API for umiddelbar, klientbasert konvertering. Bildene dine forlater aldri enheten din."
-      },
-      "faq": {
-        "title": "Ofte stilte spørsmål",
-        "q1": "Hvorfor konvertere til WebP?",
-        "a1": "WebP tilbyr 25-35% mindre filstørrelser enn JPG/PNG med tilsvarende kvalitet, noe som gjør at nettstedet ditt laster raskere.",
-        "q2": "Vil jeg miste bildekvalitet?",
-        "a2": "Du kontrollerer glidebryteren for kvalitet. Høyere verdier bevarer mer kvalitet, men resulterer i større filer.",
-        "q3": "Kan jeg konvertere animerte GIF-er?",
-        "a3": "For øyeblikket vil animerte GIF-er bli konvertert til et statisk bilde (første ramme)."
-      }
+    "footer": {
+        "rights": "© 2026 SaveTikFast. Alle rettigheter forbeholdt."
     },
-    "qrcode": {
-      "title": "QR-kodegenerator",
-      "desc": "Generer høyoppløselige QR-koder for URL-er, tekst eller hvilket som helst innhold umiddelbart.",
-      "input": "Tekst eller URL",
-      "placeholder": "https://example.com eller hvilken som helst tekst",
-      "size": "QR-kodestørrelse",
-      "color": "QR-farge",
-      "btn": "Generer QR-kode",
-      "howto": {
-        "title": "Hvordan generere QR-koder",
-        "step1": {
-          "title": "Skriv inn innhold",
-          "desc": "Skriv inn din URL, tekst, telefonnummer eller innholdet du vil kode."
-        },
-        "step2": {
-          "title": "Tilpass",
-          "desc": "Velg ønsket størrelse og farge for QR-koden."
-        },
-        "step3": {
-          "title": "Generer og last ned",
-          "desc": "Klikk på generer og last ned din høyoppløselige QR-kode som PNG."
-        }
-      },
-      "seo": {
-        "title": "Bruksområder for QR-koder",
-        "p1": "QR-koder har blitt essensielle for bedrifter og enkeltpersoner. Vanlige bruksområder inkluderer:",
-        "use1": "Nettsteds-URL-er - Led brukere til nettstedet ditt umiddelbart",
-        "use2": "Visittkort - Del kontaktinformasjon digitalt",
-        "use3": "Produktemballasje - Lenke til manualer eller støttesider",
-        "use4": "Markedsføringsmateriell - Spor kampanjeengasjement",
-        "use5": "Restaurantmenyer - Kontaktløs menytilgang",
-        "use6": "Arrangementsbilletter - Rask inngangsverifisering",
-        "p2": "Vår QR-generator lager høyoppløselige koder som skannes pålitelig på alle enheter."
-      },
-      "faq": {
-        "title": "Ofte stilte spørsmål",
-        "q1": "Hva kan jeg kode i en QR-kode?",
-        "a1": "URL-er, ren tekst, telefonnumre, e-postadresser, WiFi-påloggingsinformasjon og mer.",
-        "q2": "Hvilken størrelse bør jeg velge?",
-        "a2": "256px er bra for digital bruk. Velg 512px eller 1024px for utskriftsmateriell.",
-        "q3": "Utløper QR-koder?",
-        "a3": "Nei! QR-koder generert her er statiske og utløper aldri. De inneholder dataene direkte."
-      }
-    },
-    "engagement": {
-      "title": "TikTok Engasjementskalkulator",
-      "desc": "Beregn engasjementsraten din basert på likes, kommentarer og delinger.",
-      "followers": "Følgere",
-      "likes": "Liker",
-      "comments": "Kommentarer",
-      "shares": "Delinger",
-      "btn": "Beregn nå",
-      "result": "Engasjementsrate",
-      "excellent": "Utmerket! 🚀",
-      "good": "God 👍",
-      "poor": "Kan forbedres 📉"
-    },
-    "money": {
-      "title": "TikTok Inntjeningskalkulator",
-      "desc": "Estimer potensielle inntekter fra dine videovisninger.",
-      "views": "Antall visninger",
-      "btn": "Beregn inntekt",
-      "result": "Estimert inntekt"
-    },
-    "font": {
-      "title": "TikTok Skrifttype-generator",
-      "desc": "Lag unike skrifttypestiler for profilen din og videotekster.",
-      "placeholder": "Skriv inn tekst her...",
-      "copy": "Kopier"
-    },
-    "hashtag": {
-      "title": "TikTok Hashtag-generator",
-      "desc": "Finn og generer trendende hashtagger for videoene dine.",
-      "btn": "Generer hashtagger",
-      "copy": "Kopier alle"
-    },
-    "progress": {
-      "compressing": "Komprimerer bilde...",
-      "converting": "Konverterer bilde..."
-    },
-    "result": {
-      "success": "Komprimering fullført!",
-      "converted": "Konvertering fullført!",
-      "qrReady": "QR-koden din er klar!"
-    },
-    "stats": {
-      "original": "Original størrelse",
-      "compressed": "Komprimert størrelse",
-      "saved": "Spart",
-      "originalFormat": "Originalt format",
-      "newFormat": "Nytt format",
-      "newSize": "Ny størrelse"
-    },
-    "preview": {
-      "before": "Før",
-      "after": "Etter",
-      "original": "Opprinnelig",
-      "converted": "Konvertert"
-    }
-  },
-  "slideshow_page": {
-    "meta_title": "TikTok Slideshow Nedlaster – Lagre Bilder i HD Uten Vannmerke",
-    "meta_desc": "Last ned TikTok-bildeserier og fotogallerier i HD-kvalitet uten vannmerke. Lagre alle bilder fra TikTok-innlegg umiddelbart. Gratis, raskt, ingen registrering nødvendig.",
-    "title": "TikTok Slideshow Nedlaster",
-    "desc": "Lagre bildekaruseller i høy kvalitet.",
-    "placeholder": "Lim inn lenke her...",
-    "btn_download": "Last Ned Bilder",
-    "about_title": "TikTok Foto Nedlaster",
-    "about_content": "Lagre TikTok bildeserier i original HD-kvalitet uten vannmerker.",
     "features": {
-      "all": {
-        "title": "Alle Bilder På En Gang",
-        "desc": "Last ned alle slideshow-bilder med ett klikk. SaveTikFast trekker ut hvert bilde fra TikTok fotokaruseller og lagrer dem som en praktisk ZIP-fil. Raskere enn å lagre hvert bilde manuelt."
-      },
-      "quality": {
-        "title": "Original Oppløsning",
-        "desc": "Lagre slideshow-bilder i full original oppløsning uten komprimering. Få bilder av høyeste kvalitet nøyaktig som skaperen lastet dem opp til TikTok."
-      },
-      "audio": {
-        "title": "Med Bakgrunnsmusikk",
-        "desc": "Last ned TikTok slideshows med bakgrunnsmusikken inkludert. Få både bildene og lydsporet sammen. Perfekt for å bevare hele slideshow-opplevelsen."
-      },
-      "fast": {
-        "title": "Lynrask",
-        "desc": "Trekk ut alle slideshow-bilder på bare 3 sekunder. Den raskeste tilgjengelige TikTok slideshow nedlasteren - raskere enn SSSTik, SnapTik eller andre verktøy."
-      },
-      "device": {
-        "title": "Universell Kompatibilitet",
-        "desc": "Fungerer på iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook. Last ned TikTok slideshows på hvilken som helst enhet med Chrome, Safari, Firefox eller Edge."
-      },
-      "free": {
-        "title": "Alltid Gratis",
-        "desc": "Ubegrensede slideshow-nedlastinger uten kostnad, uten registrering og uten daglige grenser. SaveTikFast slideshow nedlaster er helt gratis for alltid."
-      },
-      "nowatermark": {
-        "title": "Uten Vannmerke",
-        "desc": "Last ned slideshow-bilder uten TikTok vannmerker. Rene bilder klare for galleriet ditt, Instagram, Pinterest eller andre plattformer."
-      },
-      "browser": {
-        "title": "Enhver Nettleser",
-        "desc": "Ingen app nødvendig. Last ned TikTok slideshows direkte i Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet. Fungerer i mobile og desktop nettlesere."
-      }
+        "title": "Nøkkelfunksjoner",
+        "no_watermark": {
+            "title": "Uten vannmerke",
+            "desc": "Last ned TikTok-videoer uten vannmerke i original HD-kvalitet. SaveTikFast fjerner automatisk TikTok-logoen, og gir deg renere videoer enn SSSTik, SnapTik eller TikMate. Perfekt for å publisere på nytt på Instagram, YouTube Shorts eller lagre i galleriet ditt."
+        },
+        "fast": {
+            "title": "Lynrask hastighet",
+            "desc": "Den raskeste TikTok-videonedlasteren på nettet. Lagre hvilken som helst TikTok-video på bare 3 sekunder på iPhone, Android, Samsung, Huawei, iPad, PC eller Mac. Våre servere er optimalisert for hastighet, noe som gjør oss raskere enn SaveFrom og MusicallyDown."
+        },
+        "quality": {
+            "title": "HD &amp; 4K-kvalitet",
+            "desc": "Last ned TikTok-videoer i høyeste tilgjengelige kvalitet - 720p, 1080p Full HD, 2K og til og med 4K når tilgjengelig. Vi bevarer den originale videokvaliteten uten komprimering, i motsetning til andre TikTok-nedlastere."
+        },
+        "device": {
+            "title": "Alle enheter støttes",
+            "desc": "Fungerer perfekt på alle enheter - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC og Chromebook. Ingen appinstallasjon nødvendig."
+        },
+        "free": {
+            "title": "100% gratis for alltid",
+            "desc": "Ubegrensede TikTok-videonedlastinger uten skjulte kostnader, ingen registrering nødvendig og ingen daglige begrensninger. SaveTikFast er helt gratis og vil alltid forbli gratis for alle brukere over hele verden."
+        },
+        "secure": {
+            "title": "Privat &amp; sikker",
+            "desc": "Ditt personvern betyr noe. Vi lagrer ikke dataene dine, krever ikke innlogging og sporer ikke nedlastingene dine. Sikker og anonym nedlasting av TikTok-videoer med SSL-kryptering."
+        },
+        "browser": {
+            "title": "Alle nettlesere",
+            "desc": "Fungerer umiddelbart på Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet og UC Browser. Ingen utvidelser eller plugins nødvendig - bare lim inn og last ned."
+        },
+        "batch": {
+            "title": "Flernedlasting",
+            "desc": "Lagre flere TikTok-videoer raskt. Last ned hele samlingen til din favoritt-creator raskere enn noe annet verktøy. Bedre massednedlasting enn SSSTik eller SnapTik."
+        }
     },
     "how_to": {
-      "title": "Hvordan laste ned",
-      "step1": "Kopier TikTok-lenken.",
-      "step2": "Lim inn lenken ovenfor.",
-      "step3": "Klikk på Last ned."
+        "title": "Hvordan laste ned TikTok-videoer uten vannmerke",
+        "step1": "Kopier TikTok-videolenken du vil lagre.",
+        "step2": "Lim inn lenken i nedlastingsfeltet øverst på denne siden.",
+        "step3": "Klikk på 'Last ned'-knappen og videoen din blir lagret umiddelbart.",
+        "step1_title": "Kopier lenke",
+        "step2_title": "Lim inn URL",
+        "step3_title": "Last ned"
     },
-    "faq": {
-      "q1": "Hvordan laste ned TikTok slideshows?",
-      "a1": "Å laste ned TikTok foto-slideshows er enkelt med SaveTikFast. Kopier slideshow-lenken fra TikTok, lim den inn i vår slideshow nedlaster og klikk på last ned. Alle bilder vil bli ekstrahert og lastet ned sammen - enten som individuelle bilder eller som en praktisk ZIP-fil. Fungerer på iPhone, Android, Samsung, iPad, Mac, Windows ved bruk av enhver nettleser.",
-      "q2": "Kan jeg laste ned alle slideshow-bilder på en gang?",
-      "a2": "Ja! SaveTikFast laster ned alle TikTok slideshow-bilder med ett klikk. Du trenger ikke lagre hvert bilde manuelt. Vårt verktøy trekker ut hvert bilde fra karusellen og pakker dem sammen. For slideshows med mange bilder gir vi en ZIP-fil for enkel nedlasting. Mye raskere enn andre metoder.",
-      "q3": "Laster SaveTikFast også ned slideshow-lyd?",
-      "a3": "Ja, SaveTikFast kan laste ned TikTok slideshows med bakgrunnsmusikken inkludert. Du får både bildene og lydsporet som spilles med slideshowet. Dette bevarer hele slideshow-opplevelsen nøyaktig slik skaperen tenkte.",
-      "q4": "Hvilken kvalitet har de nedlastede slideshow-bildene?",
-      "a4": "SaveTikFast trekker ut TikTok slideshow-bilder i full original oppløsning. Vi komprimerer ikke eller reduserer bildekvaliteten. Du får nøyaktig de samme høykvalitets bildene som skaperen lastet opp - perfekte for å lagre, dele eller skrive ut.",
-      "q5": "Kan jeg laste ned TikTok slideshows på iPhone?",
-      "a5": "Ja, å laste ned TikTok slideshows på iPhone er enkelt. Kopier lenken fra TikTok, åpne Safari eller Chrome, besøk SaveTikFast, lim inn lenken og last ned. Bildene lagres i Bilder-appen din. Fungerer på alle iPhone-modeller uten å måtte installere noen app.",
-      "q6": "Er slideshow nedlaster gratis?",
-      "a6": "Ja, SaveTikFast slideshow nedlaster er 100% gratis. Last ned ubegrensede TikTok slideshows uten kostnad, abonnementer eller daglige grenser. Vår gratis tjeneste fungerer på iPhone, Android, Samsung, PC, Mac og alle enheter ved bruk av Chrome, Safari, Firefox eller enhver nettleser.",
-      "q7": "Er de nedlastede slideshow-bildene uten vannmerke?",
-      "a7": "SaveTikFast laster ned TikTok slideshow-bilder uten vannmerker når mulig. Du får rene bilder uten TikTok-logo, klare for galleriet ditt, Instagram, Pinterest eller andre plattformer. Perfekt for å lagre estetisk innhold.",
-      "q8": "Hvorfor velge SaveTikFast for slideshow-nedlastinger?",
-      "a8": "SaveTikFast er den beste TikTok slideshow nedlasteren fordi vi trekker ut alle bilder øyeblikkelig, bevarer original kvalitet, inkluderer lyden og tilbyr ubegrensede nedlastinger helt gratis. Vårt verktøy fungerer raskere og mer pålitelig enn SSSTik, SnapTik eller andre slideshow-ekstraktorer. Last ned hele fotokaruseller på sekunder."
+    "tools": {
+        "backToDownloader": "Tilbake til nedlaster",
+        "meta": {
+            "title": "Gratis Online Verktøy – Bildekomprimering, Konverter og QR-koder",
+            "description": "Gratis nettleserbaserte verktøy: komprimer bilder, konverter formater (WebP, JPG, PNG) og generer QR-koder umiddelbart. Ingen filopplasting eller registrering nødvendig."
+        },
+        "hero": {
+            "title": "Gratis Online Bilde- og QR-verktøy",
+            "desc": "Komprimer, konverter og lag QR-koder — alt behandles lokalt i nettleseren din. 100% privat."
+        },
+        "tabs": {
+            "compressor": "Kompressor",
+            "converter": "Konverter",
+            "qrcode": "QR-generator",
+            "engagement": "Engasjement",
+            "money": "Inntekt",
+            "font": "Skrifttyper",
+            "hashtag": "Hashtagger"
+        },
+        "dropzone": {
+            "text": "Dra og slipp bildet ditt her",
+            "hint": "eller klikk for å bla gjennom (JPG, PNG, WebP - Maks 15MB)",
+            "hint_convert": "eller klikk for å bla gjennom (JPG, PNG, WebP, GIF, BMP)"
+        },
+        "btn": {
+            "download": "Last ned nå",
+            "downloadPng": "Last ned PNG"
+        },
+        "compressor": {
+            "title": "Bildekompressor",
+            "desc": "Reduser bildefilstørrelsen uten å miste kvalitet. Støtter JPG, PNG og WebP opptil 15MB.",
+            "quality": "Kompresjonskvalitet",
+            "maxWidth": "Maks bredde (px)",
+            "btn": "Komprimer bilde",
+            "howto": {
+                "title": "Hvordan komprimere bilder online",
+                "step1": {
+                    "title": "Last opp bilde",
+                    "desc": "Dra og slipp eller klikk for å velge ditt JPG-, PNG- eller WebP-bilde (opptil 15MB)."
+                },
+                "step2": {
+                    "title": "Juster innstillinger",
+                    "desc": "Velg ønsket kvalitetsnivå (10-100%) og maksimal bredde."
+                },
+                "step3": {
+                    "title": "Last ned",
+                    "desc": "Klikk på komprimer og last ned ditt optimaliserte bilde umiddelbart."
+                }
+            },
+            "seo": {
+                "title": "Hvorfor komprimere bilder?",
+                "p1": "Bildekomprimering er avgjørende for nettstedets ytelse, raskere lastetider og redusert båndbreddebruk. Vår gratis online bildekompressor bruker avanserte algoritmer for å redusere filstørrelser samtidig som visuell kvalitet bevares.",
+                "p2": "Fordeler med bildekomprimering inkluderer:",
+                "benefit1": "Raskere lastetid for nettstedet (forbedrer SEO)",
+                "benefit2": "Reduserte lagrings- og båndbreddekostnader",
+                "benefit3": "Bedre brukeropplevelse på mobile enheter",
+                "benefit4": "Optimaliserte bilder for deling i sosiale medier",
+                "p3": "All behandling skjer i nettleseren din — bildene dine blir aldri lastet opp til noen server, noe som sikrer fullstendig personvern og sikkerhet."
+            },
+            "faq": {
+                "title": "Ofte stilte spørsmål",
+                "q1": "Blir bildet mitt lastet opp til en server?",
+                "a1": "Nei! All komprimering skjer direkte i nettleseren din. Bildene dine forlater aldri enheten din.",
+                "q2": "Hvilke filformater støttes?",
+                "a2": "Vi støtter JPG/JPEG, PNG og WebP-formater opptil 15MB filstørrelse.",
+                "q3": "Hvor mye kan jeg redusere filstørrelsen?",
+                "a3": "Vanligvis 50-80% reduksjon avhengig av det originale bildet og kvalitetsinnstillingene som er valgt."
+            }
+        },
+        "converter": {
+            "title": "Bildeformat-konverter",
+            "desc": "Konverter bilder mellom JPG, PNG og WebP-formater umiddelbart i nettleseren din.",
+            "output": "Utdataformat",
+            "quality": "Utdatakvalitet",
+            "btn": "Konverter bilde",
+            "howto": {
+                "title": "Hvordan konvertere bildeformater",
+                "step1": {
+                    "title": "Velg bilde",
+                    "desc": "Last opp hvilken som helst bildefil (JPG, PNG, WebP, GIF, BMP støttes)."
+                },
+                "step2": {
+                    "title": "Velg format",
+                    "desc": "Velg ønsket utdataformat (WebP, JPG eller PNG)."
+                },
+                "step3": {
+                    "title": "Konverter og lagre",
+                    "desc": "Klikk på konverter og last ned ditt nye bilde umiddelbart."
+                }
+            },
+            "seo": {
+                "title": "Forståelse av bildeformater",
+                "p1": "Å velge riktig bildeformat er avgjørende for nettstedets ytelse og kvalitet. Her er en sammenligning:",
+                "webp": "Moderne format fra Google som tilbyr 25-35% mindre filstørrelser enn JPG/PNG med tilsvarende kvalitet. Best for nettbruk.",
+                "jpg": "Ideell for fotografier og komplekse bilder med mange farger. Bruker lossy komprimering.",
+                "png": "Perfekt for bilder som krever gjennomsiktighet eller skarpe kanter (logoer, grafikk). Bruker lossless komprimering.",
+                "p2": "Vår konverter bruker HTML5 Canvas API for umiddelbar, klientbasert konvertering. Bildene dine forlater aldri enheten din."
+            },
+            "faq": {
+                "title": "Ofte stilte spørsmål",
+                "q1": "Hvorfor konvertere til WebP?",
+                "a1": "WebP tilbyr 25-35% mindre filstørrelser enn JPG/PNG med tilsvarende kvalitet, noe som gjør at nettstedet ditt laster raskere.",
+                "q2": "Vil jeg miste bildekvalitet?",
+                "a2": "Du kontrollerer glidebryteren for kvalitet. Høyere verdier bevarer mer kvalitet, men resulterer i større filer.",
+                "q3": "Kan jeg konvertere animerte GIF-er?",
+                "a3": "For øyeblikket vil animerte GIF-er bli konvertert til et statisk bilde (første ramme)."
+            }
+        },
+        "qrcode": {
+            "title": "QR-kodegenerator",
+            "desc": "Generer høyoppløselige QR-koder for URL-er, tekst eller hvilket som helst innhold umiddelbart.",
+            "input": "Tekst eller URL",
+            "placeholder": "https://example.com eller hvilken som helst tekst",
+            "size": "QR-kodestørrelse",
+            "color": "QR-farge",
+            "btn": "Generer QR-kode",
+            "howto": {
+                "title": "Hvordan generere QR-koder",
+                "step1": {
+                    "title": "Skriv inn innhold",
+                    "desc": "Skriv inn din URL, tekst, telefonnummer eller innholdet du vil kode."
+                },
+                "step2": {
+                    "title": "Tilpass",
+                    "desc": "Velg ønsket størrelse og farge for QR-koden."
+                },
+                "step3": {
+                    "title": "Generer og last ned",
+                    "desc": "Klikk på generer og last ned din høyoppløselige QR-kode som PNG."
+                }
+            },
+            "seo": {
+                "title": "Bruksområder for QR-koder",
+                "p1": "QR-koder har blitt essensielle for bedrifter og enkeltpersoner. Vanlige bruksområder inkluderer:",
+                "use1": "Nettsteds-URL-er - Led brukere til nettstedet ditt umiddelbart",
+                "use2": "Visittkort - Del kontaktinformasjon digitalt",
+                "use3": "Produktemballasje - Lenke til manualer eller støttesider",
+                "use4": "Markedsføringsmateriell - Spor kampanjeengasjement",
+                "use5": "Restaurantmenyer - Kontaktløs menytilgang",
+                "use6": "Arrangementsbilletter - Rask inngangsverifisering",
+                "p2": "Vår QR-generator lager høyoppløselige koder som skannes pålitelig på alle enheter."
+            },
+            "faq": {
+                "title": "Ofte stilte spørsmål",
+                "q1": "Hva kan jeg kode i en QR-kode?",
+                "a1": "URL-er, ren tekst, telefonnumre, e-postadresser, WiFi-påloggingsinformasjon og mer.",
+                "q2": "Hvilken størrelse bør jeg velge?",
+                "a2": "256px er bra for digital bruk. Velg 512px eller 1024px for utskriftsmateriell.",
+                "q3": "Utløper QR-koder?",
+                "a3": "Nei! QR-koder generert her er statiske og utløper aldri. De inneholder dataene direkte."
+            }
+        },
+        "engagement": {
+            "title": "TikTok Engasjementskalkulator",
+            "desc": "Beregn engasjementsraten din basert på likes, kommentarer og delinger.",
+            "followers": "Følgere",
+            "likes": "Liker",
+            "comments": "Kommentarer",
+            "shares": "Delinger",
+            "btn": "Beregn nå",
+            "result": "Engasjementsrate",
+            "excellent": "Utmerket! 🚀",
+            "good": "God 👍",
+            "poor": "Kan forbedres 📉"
+        },
+        "money": {
+            "title": "TikTok Inntjeningskalkulator",
+            "desc": "Estimer potensielle inntekter fra dine videovisninger.",
+            "views": "Antall visninger",
+            "btn": "Beregn inntekt",
+            "result": "Estimert inntekt"
+        },
+        "font": {
+            "title": "TikTok Skrifttype-generator",
+            "desc": "Lag unike skrifttypestiler for profilen din og videotekster.",
+            "placeholder": "Skriv inn tekst her...",
+            "copy": "Kopier"
+        },
+        "hashtag": {
+            "title": "TikTok Hashtag-generator",
+            "desc": "Finn og generer trendende hashtagger for videoene dine.",
+            "btn": "Generer hashtagger",
+            "copy": "Kopier alle"
+        },
+        "progress": {
+            "compressing": "Komprimerer bilde...",
+            "converting": "Konverterer bilde..."
+        },
+        "result": {
+            "success": "Komprimering fullført!",
+            "converted": "Konvertering fullført!",
+            "qrReady": "QR-koden din er klar!"
+        },
+        "stats": {
+            "original": "Original størrelse",
+            "compressed": "Komprimert størrelse",
+            "saved": "Spart",
+            "originalFormat": "Originalt format",
+            "newFormat": "Nytt format",
+            "newSize": "Ny størrelse"
+        },
+        "preview": {
+            "before": "Før",
+            "after": "Etter",
+            "original": "Opprinnelig",
+            "converted": "Konvertert"
+        }
+    },
+    "slideshow_page": {
+        "meta_title": "TikTok Slideshow Nedlaster – Lagre Bilder i HD Uten Vannmerke",
+        "meta_desc": "Last ned TikTok-bildeserier og fotogallerier i HD-kvalitet uten vannmerke. Lagre alle bilder fra TikTok-innlegg umiddelbart. Gratis, raskt, ingen registrering nødvendig.",
+        "title": "TikTok Slideshow Nedlaster",
+        "desc": "Lagre bildekaruseller i høy kvalitet.",
+        "placeholder": "Lim inn lenke her...",
+        "btn_download": "Last Ned Bilder",
+        "about_title": "TikTok Foto Nedlaster",
+        "about_content": "Lagre TikTok bildeserier i original HD-kvalitet uten vannmerker.",
+        "features": {
+            "all": {
+                "title": "Alle Bilder På En Gang",
+                "desc": "Last ned alle slideshow-bilder med ett klikk. SaveTikFast trekker ut hvert bilde fra TikTok fotokaruseller og lagrer dem som en praktisk ZIP-fil. Raskere enn å lagre hvert bilde manuelt."
+            },
+            "quality": {
+                "title": "Original Oppløsning",
+                "desc": "Lagre slideshow-bilder i full original oppløsning uten komprimering. Få bilder av høyeste kvalitet nøyaktig som skaperen lastet dem opp til TikTok."
+            },
+            "audio": {
+                "title": "Med Bakgrunnsmusikk",
+                "desc": "Last ned TikTok slideshows med bakgrunnsmusikken inkludert. Få både bildene og lydsporet sammen. Perfekt for å bevare hele slideshow-opplevelsen."
+            },
+            "fast": {
+                "title": "Lynrask",
+                "desc": "Trekk ut alle slideshow-bilder på bare 3 sekunder. Den raskeste tilgjengelige TikTok slideshow nedlasteren - raskere enn SSSTik, SnapTik eller andre verktøy."
+            },
+            "device": {
+                "title": "Universell Kompatibilitet",
+                "desc": "Fungerer på iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook. Last ned TikTok slideshows på hvilken som helst enhet med Chrome, Safari, Firefox eller Edge."
+            },
+            "free": {
+                "title": "Alltid Gratis",
+                "desc": "Ubegrensede slideshow-nedlastinger uten kostnad, uten registrering og uten daglige grenser. SaveTikFast slideshow nedlaster er helt gratis for alltid."
+            },
+            "nowatermark": {
+                "title": "Uten Vannmerke",
+                "desc": "Last ned slideshow-bilder uten TikTok vannmerker. Rene bilder klare for galleriet ditt, Instagram, Pinterest eller andre plattformer."
+            },
+            "browser": {
+                "title": "Enhver Nettleser",
+                "desc": "Ingen app nødvendig. Last ned TikTok slideshows direkte i Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet. Fungerer i mobile og desktop nettlesere."
+            }
+        },
+        "how_to": {
+            "title": "Hvordan laste ned",
+            "step1": "Kopier TikTok-lenken.",
+            "step2": "Lim inn lenken ovenfor.",
+            "step3": "Klikk på Last ned."
+        },
+        "faq": {
+            "q1": "Hvordan laste ned TikTok slideshows?",
+            "a1": "Å laste ned TikTok foto-slideshows er enkelt med SaveTikFast. Kopier slideshow-lenken fra TikTok, lim den inn i vår slideshow nedlaster og klikk på last ned. Alle bilder vil bli ekstrahert og lastet ned sammen - enten som individuelle bilder eller som en praktisk ZIP-fil. Fungerer på iPhone, Android, Samsung, iPad, Mac, Windows ved bruk av enhver nettleser.",
+            "q2": "Kan jeg laste ned alle slideshow-bilder på en gang?",
+            "a2": "Ja! SaveTikFast laster ned alle TikTok slideshow-bilder med ett klikk. Du trenger ikke lagre hvert bilde manuelt. Vårt verktøy trekker ut hvert bilde fra karusellen og pakker dem sammen. For slideshows med mange bilder gir vi en ZIP-fil for enkel nedlasting. Mye raskere enn andre metoder.",
+            "q3": "Laster SaveTikFast også ned slideshow-lyd?",
+            "a3": "Ja, SaveTikFast kan laste ned TikTok slideshows med bakgrunnsmusikken inkludert. Du får både bildene og lydsporet som spilles med slideshowet. Dette bevarer hele slideshow-opplevelsen nøyaktig slik skaperen tenkte.",
+            "q4": "Hvilken kvalitet har de nedlastede slideshow-bildene?",
+            "a4": "SaveTikFast trekker ut TikTok slideshow-bilder i full original oppløsning. Vi komprimerer ikke eller reduserer bildekvaliteten. Du får nøyaktig de samme høykvalitets bildene som skaperen lastet opp - perfekte for å lagre, dele eller skrive ut.",
+            "q5": "Kan jeg laste ned TikTok slideshows på iPhone?",
+            "a5": "Ja, å laste ned TikTok slideshows på iPhone er enkelt. Kopier lenken fra TikTok, åpne Safari eller Chrome, besøk SaveTikFast, lim inn lenken og last ned. Bildene lagres i Bilder-appen din. Fungerer på alle iPhone-modeller uten å måtte installere noen app.",
+            "q6": "Er slideshow nedlaster gratis?",
+            "a6": "Ja, SaveTikFast slideshow nedlaster er 100% gratis. Last ned ubegrensede TikTok slideshows uten kostnad, abonnementer eller daglige grenser. Vår gratis tjeneste fungerer på iPhone, Android, Samsung, PC, Mac og alle enheter ved bruk av Chrome, Safari, Firefox eller enhver nettleser.",
+            "q7": "Er de nedlastede slideshow-bildene uten vannmerke?",
+            "a7": "SaveTikFast laster ned TikTok slideshow-bilder uten vannmerker når mulig. Du får rene bilder uten TikTok-logo, klare for galleriet ditt, Instagram, Pinterest eller andre plattformer. Perfekt for å lagre estetisk innhold.",
+            "q8": "Hvorfor velge SaveTikFast for slideshow-nedlastinger?",
+            "a8": "SaveTikFast er den beste TikTok slideshow nedlasteren fordi vi trekker ut alle bilder øyeblikkelig, bevarer original kvalitet, inkluderer lyden og tilbyr ubegrensede nedlastinger helt gratis. Vårt verktøy fungerer raskere og mer pålitelig enn SSSTik, SnapTik eller andre slideshow-ekstraktorer. Last ned hele fotokaruseller på sekunder."
+        }
+    },
+    "nav_menu": {
+        "slideshow": "Lysbildefremvisning",
+        "video": "Video",
+        "mp3": "MP3-lyd",
+        "stories": "Historier"
+    },
+    "mp3_page": {
+        "meta_title": "TikTok til MP3 Konverter – Gratis Lydnedlasting 320kbps",
+        "title": "Last Ned TikTok MP3",
+        "subtitle": "(Kun Lyd)",
+        "desc": "Konverter TikTok-videoer til MP3-lydfiler. Pakk ut sanger og musikk i høy kvalitet 320kbps.",
+        "placeholder": "Lim inn videolenke for å hente lyd...",
+        "btn_download": "Hent MP3",
+        "about_title": "Beste TikTok MP3 Konverter 2026",
+        "about_content": "SaveTikFast MP3 lar deg trekke ut lyd fra hvilken som helst TikTok-video umiddelbart. Last ned populære sanger og virale lyder.",
+        "features": {
+            "quality": {
+                "title": "HD Lyd 320kbps",
+                "desc": "Konverter TikTok-videoer til MP3 i krystallklar 320kbps studiokvalitet. Den høyeste tilgjengelige lydbitraten online, perfekt for musikkentusiaster som vil ha den beste lyden på iPhone, Android eller PC."
+            },
+            "fast": {
+                "title": "Øyeblikkelig Konvertering",
+                "desc": "TikTok til MP3 konvertering på bare 2 sekunder. Den raskeste online TikTok lydekstraktoren - raskere enn SSSTik MP3, SnapTik audio eller andre konvertere. Fungerer øyeblikkelig på alle enheter."
+            },
+            "ringtone": {
+                "title": "Ringetone Klar",
+                "desc": "Perfekt lydlengde for iPhone-ringetoner og Android-varselslyder. Lag tilpassede ringetoner fra virale TikTok-lyder og trendende lydklipp. Enkelt å sette opp på enhver smarttelefon."
+            },
+            "device": {
+                "title": "Alle Enheter",
+                "desc": "Trekk ut TikTok-lyd på iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC og enhver enhet med en nettleser. Ingen app-nedlasting nødvendig."
+            },
+            "original": {
+                "title": "Original Lyd",
+                "desc": "Bevarer original TikTok lydkvalitet uten komprimering eller kvalitetstap. Få nøyaktig samme lyd som den originale videoen, inkludert trendende sanger og viral lyd."
+            },
+            "unlimited": {
+                "title": "Gratis &amp; Ubegrenset",
+                "desc": "Ingen grense for TikTok til MP3 konverteringer. Konverter så mange TikTok-videoer til lyd som du vil - helt gratis, ingen registrering, ingen daglige begrensninger."
+            },
+            "secure": {
+                "title": "Sikker &amp; Privat",
+                "desc": "Sikker MP3-konvertering uten datainnsamling. Vi lagrer ikke dine konverterte filer eller sporer aktiviteten din. Ditt personvern er 100% beskyttet."
+            },
+            "nobapp": {
+                "title": "Ingen App Nødvendig",
+                "desc": "Fungerer direkte i nettleseren din - Chrome, Safari, Firefox, Edge, Opera. Ingen app-installasjon, ingen lagringsplass nødvendig. Bedre enn TikTok MP3 nedlastingsapper."
+            }
+        },
+        "how_to": {
+            "title": "Hvordan konvertere TikTok til MP3",
+            "step1": "Finn videoen. Trykk Del → Kopier lenke.",
+            "step2": "Lim inn lenken i boksen ovenfor.",
+            "step3": "Klikk 'Hent MP3' for å laste ned."
+        },
+        "faq": {
+            "q1": "Hvordan konvertere TikTok-video til MP3?",
+            "a1": "Å konvertere TikTok til MP3 er enkelt med SaveTikFast. Kopier TikTok-videolenken, lim den inn i MP3-konverteren vår og klikk på konverter. Lyden vil bli ekstrahert i utmerket 320kbps MP3-kvalitet øyeblikkelig. Fungerer på iPhone, Android, Samsung, PC, Mac og alle enheter ved bruk av Chrome, Safari, Firefox eller andre nettlesere. Vår TikTok til MP3 konverter er raskere og høyere kvalitet enn SSSTik eller SnapTik lydekstraktorer.",
+            "q2": "Hvilken lydkvalitet gir SaveTikFast MP3 konverter?",
+            "a2": "SaveTikFast trekker ut TikTok-lyd i premium 320kbps MP3-kvalitet - den høyeste tilgjengelige bitraten for MP3-filer. Dette gir krystallklar studiokvalitetslyd perfekt for musikkavspilling, ringetoner eller lydprosjekter. Vi bevarer original TikTok-lyd uten komprimering eller kvalitetstap, i motsetning til andre konvertere som reduserer bitrate for å spare båndbredde.",
+            "q3": "Kan jeg bruke TikTok-lyd som ringetone?",
+            "a3": "Ja! TikTok-lyd lastet ned fra SaveTikFast er perfekt for ringetoner. MP3-formatet fungerer med både iPhone og Android ringetone-innstillinger. På iPhone, bruk GarageBand eller iTunes til å sette tilpassede ringetoner. På Android, gå bare til Innstillinger > Lyd > Ringetone og velg den nedlastede MP3en. Lag unike ringetoner fra virale TikTok-lyder og trendende lyd.",
+            "q4": "Er TikTok til MP3 konvertering gratis?",
+            "a4": "Helt gratis. SaveTikFast MP3 konverter har ingen avgifter, abonnementer eller daglige grenser. Konverter ubegrensede TikTok-videoer til MP3 uten registrering. Vår gratis tjeneste fungerer på alle enheter - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - ved bruk av enhver nettleser inkludert Chrome, Safari og Firefox.",
+            "q5": "Hvor lang tid tar MP3-konvertering?",
+            "a5": "SaveTikFast konverterer TikTok til MP3 på omtrent 2-3 sekunder. Vi bruker kraftige servere optimalisert for rask lydekstraksjon. Dette gjør oss til den raskeste tilgjengelige TikTok MP3-konverteren - betydelig raskere enn SSSTik MP3, SnapTik audio, TikMate eller andre konverteringsverktøy.",
+            "q6": "Kan jeg laste ned TikTok-musikk på iPhone?",
+            "a6": "Ja, du kan enkelt laste ned TikTok-musikk og lyd på iPhone ved å bruke SaveTikFast. Kopier TikTok-lenken, åpne Safari eller Chrome, besøk MP3-konverteren vår, lim inn lenken og trykk på last ned. MP3-filen vil bli lagret i Filer-appen din. Derfra kan du legge den til i Apple Music, bruke den som ringetone eller dele den hvor som helst. Fungerer på alle iPhone-modeller.",
+            "q7": "Inkluderer MP3en hele lydsporet?",
+            "a7": "Ja, SaveTikFast trekker ut hele lyden fra TikTok-videoer - inkludert bakgrunnsmusikk, stemme, lydeffekter og alle lydelementer. Full lengde lyd er bevart nøyaktig som det høres ut i den originale TikTok-videoen. Perfekt for å lagre trendende sanger, virale lyder og din favoritt TikTok-lyd.",
+            "q8": "Er SaveTikFast MP3 konverter sikker?",
+            "a8": "Helt sikker. SaveTikFast MP3 konverter bruker sikker SSL-kryptering, lagrer ikke dataene dine eller konverterte filer, krever ingen pålogging og installerer ingenting på enheten din. Vi har trygt konvertert millioner av TikTok-videoer til MP3 for brukere verden over. Ditt personvern og sikkerhet er vår prioritet.",
+            "q9": "Kan jeg konvertere TikTok til MP3 på Android?",
+            "a9": "Ja, TikTok til MP3 konvertering fungerer perfekt på alle Android-enheter. Dette inkluderer Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus og alle andre Android-telefoner og nettbrett. Bare bruk Chrome, Firefox eller Samsung Internet nettleser for å få tilgang til SaveTikFast og konverter hvilken som helst TikTok til MP3 øyeblikkelig.",
+            "q10": "Hvorfor er SaveTikFast den beste TikTok til MP3 konverteren?",
+            "a10": "SaveTikFast tilbyr den beste TikTok MP3-konverteringen takket være vår overlegne hastighet (2 sekunder), maksimal lydkvalitet (320kbps), universell enhetsstøtte og helt gratis tjeneste. I motsetning til SSSTik, SnapTik eller andre konvertere leverer vi konsekvent høykvalitets resultater uten irriterende annonser eller nedlastingsgrenser. Millioner stoler på SaveTikFast for sine TikTok lydbehov."
+        },
+        "meta_desc": "Konverter TikTok-videoer til MP3-lydfiler i høy kvalitet 320kbps. Trekk ut sanger og musikk gratis online. Ingen app eller registrering nødvendig. Fungerer på alle enheter."
+    },
+    "story_page": {
+        "meta_title": "TikTok Story Nedlaster – Lagre Bilder og Historier Anonymt",
+        "title": "Last Ned TikTok Story",
+        "desc": "Lagre TikTok Stories og Lysbildefremvisninger før de utløper.",
+        "placeholder": "Lim inn Story-lenke...",
+        "btn_download": "Lagre Story",
+        "about_title": "Story Nedlaster 2026",
+        "about_content": "SaveTikFast Story Downloader lar deg lagre stories og bildekaruseller før de forsvinner etter 24 timer.",
+        "features": {
+            "expire": {
+                "title": "Lagre Før De Forsvinner",
+                "desc": "Last ned TikTok stories før de forsvinner etter 24 timer. Gå aldri glipp av favorittskaperens dine stories igjen. SaveTikFast lar deg lagre utløpende innhold permanent på enheten din."
+            },
+            "quality": {
+                "title": "Original Kvalitet",
+                "desc": "Lagre TikTok stories i full HD-kvalitet - nøyaktig slik skaper lastet dem opp. Ingen kvalitetsnedgang, ingen komprimering. Få samme oppløsning på iPhone, Android eller PC."
+            },
+            "anonymous": {
+                "title": "Anonym Visning",
+                "desc": "Se og last ned TikTok stories helt anonymt. Skaper vil ikke vite at du har lagret deres story. 100% privat og diskret story-nedlasting."
+            },
+            "fast": {
+                "title": "Superhurtig",
+                "desc": "Last ned hvilken som helst TikTok story på bare 2 sekunder. Øyeblikkelig story-lagring som fungerer raskere enn noen andre online TikTok story nedlaster."
+            },
+            "device": {
+                "title": "Fungerer Overalt",
+                "desc": "Lagre TikTok stories på iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows og hvilken som helst enhet. Kompatibel med Chrome, Safari, Firefox og alle nettlesere."
+            },
+            "nowatermark": {
+                "title": "Uten Vannmerke",
+                "desc": "Last ned TikTok stories uten vannmerke eller TikTok-logo. Rene story-nedlastinger klare til å lagre eller dele på Instagram, Snapchat eller WhatsApp."
+            },
+            "free": {
+                "title": "Gratis For Alltid",
+                "desc": "Ubegrensede TikTok story-nedlastinger uten kostnad. Ingen registrering, ingen avgift, ingen daglig grense. SaveTikFast story nedlaster er 100% gratis."
+            },
+            "noapp": {
+                "title": "Bare Nettleser",
+                "desc": "Ingen app-installasjon nødvendig. Last ned TikTok stories direkte fra Chrome, Safari, Firefox, Edge på telefonen eller datamaskinen din. Raskere og sikrere enn apper."
+            }
+        },
+        "how_to": {
+            "title": "Hvordan laste ned en TikTok Story",
+            "step1": "Åpne Story, Del → Kopier lenke.",
+            "step2": "Lim inn lenken ovenfor.",
+            "step3": "Klikk 'Lagre Story'."
+        },
+        "faq": {
+            "q1": "Hvordan laste ned TikTok stories?",
+            "a1": "For å laste ned TikTok stories, kopier først story-lenken fra TikTok (trykk Del på storyen). Besøk deretter SaveTikFast, lim inn lenken i vår story nedlaster og klikk på last ned. Storyen vil bli lagret på enheten din i original HD-kvalitet. Fungerer på iPhone, Android, Samsung, iPad, Mac, PC ved bruk av Chrome, Safari, Firefox eller enhver nettleser. Lagre stories før de forsvinner etter 24 timer.",
+            "q2": "Kan jeg laste ned TikTok stories anonymt?",
+            "a2": "Ja, SaveTikFast tillater helt anonyme TikTok story-nedlastinger. Skaperen vil ikke motta noen varsling eller vite at du har lastet ned deres story. Din identitet forblir privat. Dette er perfekt for diskret lagring av innhold uten å samhandle med skaperens konto.",
+            "q3": "Utløper TikTok stories etter nedlasting?",
+            "a3": "Nei, når du først har lastet ned en TikTok story med SaveTikFast, er den permanent lagret på enheten din. Selv om TikTok stories forsvinner etter 24 timer på plattformen, forblir din nedlastede kopi for alltid. Lagre viktige stories før de utløper, slik at du aldri mister tilgang til innholdet.",
+            "q4": "Hvilken kvalitet har de nedlastede TikTok stories?",
+            "a4": "SaveTikFast laster ned TikTok stories i full original kvalitet - samme HD-oppløsning som skaperen lastet opp. Vi komprimerer ikke eller reduserer kvaliteten. Dine nedlastede stories ser ut nøyaktig som på TikTok, perfekt for å lagre minner eller reposte.",
+            "q5": "Kan jeg laste ned TikTok stories på iPhone?",
+            "a5": "Ja, å laste ned TikTok stories på iPhone er enkelt. Kopier story-lenken fra TikTok, åpne Safari eller Chrome, gå til SaveTikFast, lim inn lenken og trykk på last ned. Stories lagres direkte i Bilder eller Filer-appen din. Fungerer på iPhone 15, 14, 13, 12 og alle modeller uten å installere noen app.",
+            "q6": "Er TikTok story nedlaster gratis?",
+            "a6": "Helt gratis. SaveTikFast story nedlaster har ingen kostnader, premium-planer eller nedlastingsgrenser. Lagre ubegrensede TikTok stories uten gebyr på hvilken som helst enhet - iPhone, Android, Samsung, PC, Mac. Ingen registrering eller konto nødvendig.",
+            "q7": "Kan jeg laste ned private TikTok stories?",
+            "a7": "SaveTikFast kan bare laste ned offentlige TikTok stories. Private stories delt bare med spesifikke følgere er ikke tilgjengelige fra eksterne nedlastingsverktøy på grunn av TikToks personvernbeskyttelse. For privat innhold trenger du direkte tillatelse fra skaperen.",
+            "q8": "Hvorfor bruke SaveTikFast for TikTok stories?",
+            "a8": "SaveTikFast er den beste TikTok story nedlasteren fordi vi tilbyr øyeblikkelige nedlastinger, original HD-kvalitet, anonym lagring og ubegrenset gratis tilgang. Vårt verktøy fungerer pålitelig på alle enheter og nettlesere, noe som gjør det bedre enn andre story nedlastere. Lagre utløpende stories før de forsvinner for alltid."
+        },
+        "meta_desc": "Last ned TikTok-historier og bildepresentasjoner anonymt og gratis. Lagre fotoalbum og videohistorier før de utløper. Raskt, gratis, ingen innlogging nødvendig."
+    },
+    "blog": {
+        "meta_title": "TikTok Nedlastingsguide 2026 – Videoer, MP3, Slideshows og Historier",
+        "meta_desc": "Komplett guide til nedlasting av TikTok-innhold i 2026. Lagre videoer uten vannmerke, konverter til MP3, last ned slideshows og historier på iPhone, Android og PC.",
+        "keywords": "hvordan laste ned TikTok-videoer uten vannmerke 2026, TikTok-videonedlaster iPhone iOS 18, lagre TikTok-videoer Android 15, TikTok til MP3-konvertering online gratis, last ned TikTok-lysbildefremvisningsbilder, lagre TikTok-historier før de utløper, TikTok-nedlaster uten vannmerke HD 4K, last ned TikTok-alternativer på TikTok 1, lagre TikTok-video TikTok på Mac macOS Sonoma, TikTok-videonedlasting Samsung Galaxy S25, TikTok MP3-nedlasting 320kbps, TikTok slideshow downloader 2026, TikTok story saver anonym, last ned TikTok uten app, TikTok videokonverter MP4, lagre TikTok-lydmusikklyder, TikTok-bil-fotonedlasting, TikTok-bilde Tik Safari repost videosparer, last ned TikTok-duettvideoer, lagre TikTok-livevideoer 2026, TikTok batchnedlaster flere videoer, TikTok HD-kvalitetsnedlasting 1080p, TikTok-videonedlasting Xiaomi OnePlus, lagre TikTok for offline visning, TikTok-nedlaster Chromebook, TikTok-trendvideosparer, TikTok-trendvideosparer, TikTok-videosparer online, TikTok fotolysbildeseriesparer zip, anonym TikTok-videovisning, TikTok-nedlaster Windows 10 PC, lagre TikTok uten påloggingsregistrering, TikTok-videonedlasting ubegrenset gratis, TikTok MP3-ringetonemaker, TikTok-lysbildefremvisning alle bilder nedlasting, TikTok-historienedlaster 24 timer, TikTok beste alternativ 24 timer til TikTok, TikTok SSSTikTok",
+        "title": "Ultimate TikTok nedlastingsguide 2026",
+        "subtitle": "Alt du trenger å vite om nedlasting av TikTok-videoer, MP3-lyd, lysbildeserier og historier på hvilken som helst enhet. Oppdatert for 2026 med de nyeste metodene og tipsene.",
+        "updated": "Sist oppdatert: februar",
+        "back_home": "Tilbake til Downloader",
+        "tools_heading": "Velg nedlastingstype",
+        "try_now": "Prøv nå",
+        "card_video_title": "Videonedlasting",
+        "card_video_desc": "Last ned TikTok-videoer uten vannmerke i HD/4K-kvalitet. Fungerer på iPhone 16, Samsung Galaxy S25 og alle enheter.",
+        "card_mp3_title": "MP3-konverter",
+        "card_mp3_desc": "Trekk ut lyd fra TikTok-videoer i høykvalitets 320 kbps. Perfekt for ringetoner og musikkelskere.",
+        "card_slideshow_title": "Slideshow Saver",
+        "card_slideshow_desc": "Last ned alle bilder fra TikTok-lysbildeserier og karuseller som en ZIP-fil. Behold bildedumper for alltid.",
+        "card_story_title": "Historienedlasting",
+        "card_story_desc": "Lagre TikTok-historier før de forsvinner om 24 timer. Last ned anonymt uten varsel.",
+        "section1_title": "Hvordan laste ned TikTok-videoer i 2026",
+        "section1_content": "<strong>Å laste ned TikTok-videoer uten vannmerke</strong> har aldri vært enklere. I 2026 er SaveTikFast fortsatt den raskeste og mest pålitelige løsningen for å lagre favorittinnholdet ditt på TikTok. Enten du bruker en <strong>iPhone 16 med iOS 18</strong>, <strong>Samsung Galaxy S25 med Android 15</strong>, eller en PC som kjører <strong>Windows 11</strong> eller <strong>macOS Sonoma</strong>, fungerer vårt nettbaserte verktøy sømløst på tvers av alle plattformer.<br><br>I motsetning til andre app-installasjonsplattformer eller plattformer for nedlasting av appen din, fungerer det direkte på plattformene dine. nettleser. Bare kopier TikTok-videokoblingen, lim den inn i nedlasteren vår og klikk på last ned. Videoen din vil bli lagret i <strong>HD- eller 4K-kvalitet</strong> uten det irriterende TikTok-vannmerket.<br><br>Tjenesten vår støtter alle større nettlesere, inkludert <strong>Google Chrome 130</strong>, <strong>Safari 18</strong>, <strong>Mozilla Firefox</strong>, <strong>Microsoft Edge</strong>, <strong>mobilnettleseren</strong>, og til og med <strong>mobilnettleseren</strong>, <strong>OnePlus</strong>-, <strong>Oppo</strong>- og <strong>Huawei</strong>-enheter.",
+        "section2_title": "TikTok til MP3-konverteringsveiledning",
+        "section2_content": "Vil du <strong>konvertere TikTok til MP3</strong>? Lydekstrakteren vår henter lyden fra enhver TikTok-video i <strong>høy kvalitet opptil 320 kbps</strong>. Dette er perfekt for:<br><br>• Lage egendefinerte ringetoner fra trendende TikTok-lyder<br>• Lagre favoritt-TikTok-sangene dine for lytting uten nett<br>• Trekke ut voiceovers og lydklipp for ditt eget innhold<br>• Bygge en samling av virale lyder og musikk<br><br>MP3-konverteren fungerer på alle enheter - fra den nyeste <strong>Pro-telefonen for Android Max></strong>. Ingen spesielle apper er nødvendig, bare lim inn lenken og last ned lydfilen din umiddelbart.",
+        "section3_title": "Laster ned TikTok-lysbildeserier og -historier",
+        "section3_content": "<strong>TikTok-lysbildefremvisninger</strong> (også kalt fotokaruseller) har blitt utrolig populære i 2026. Nedlastingsprogrammet for lysbildefremvisning lagrer <strong>hvert bilde fra karusellen</strong> i original kvalitet, pakket som en praktisk ZIP-fil. Perfekt for å lagre estetiske bildedumper, opplæringsprogrammer og memer.<br><br><strong>TikTok-historier</strong> forsvinner etter 24 timer, noe som gjør dem vanskeligere å lagre. Historienedlasteren vår fungerer <strong>100 % anonymt</strong> – skaperen vil aldri vite at du lastet ned historien deres. Dette fungerer på alle enheter, inkludert <strong>iPad Pro</strong>, <strong>Android-nettbrett</strong> og <strong>Chromebooks</strong>.<br><br>Enten du arkiverer innhold for inspirasjon eller lagrer minner, gir SaveTikFast den mest pålitelige løsningen som er tilgjengelig på nettet.",
+        "section4_title": "Personvern og sikkerhet",
+        "section4_content": "Hos SaveTikFast tar vi <strong>personvernet ditt på alvor</strong>. I motsetning til enkelte nedlastingstjenester som krever pålogging eller spor aktiviteten din:<br><br>• <strong>Ingen registrering kreves</strong> - start nedlastingen umiddelbart<br>• <strong>Ingen TikTok-pålogging nødvendig</strong> - vi ber aldri om legitimasjonen din<br>• <strong>Ingen videoer lagret</strong> - all behandling skjer i sanntid<br>• <strong>Sikker tilkobling for</strong>S nedlasting for <strong>Ingen sporing</strong> – nedlastingsloggen din blir aldri registrert<br><br>Tjenesten vår er utviklet for å være rask, gratis og helt anonym. Vi tror på å tilby verdifulle verktøy uten å kompromittere brukernes personvern.",
+        "section5_title": "Hvorfor velge SaveTikFast?",
+        "section5_content": "I et marked fullt av TikTok-nedlastere skiller SaveTikFast seg ut av flere grunner:<br><br>• <strong>Raskeste behandling</strong> - nedlastinger starter på sekunder, ikke minutter<br>• <strong>Høyeste kvalitet</strong> - opptil 4K-oppløsning når tilgjengelig<br>• <strong>Ingen vannmerke</strong> - - rene videoer som er klare for deling, <strong><br>• MP3, lysbildeserier og historier<br>• <strong>Universell kompatibilitet</strong> - fungerer på alle enheter og nettlesere<br>• <strong>Alltid gratis</strong> - ingen premium-abonnementer, ingen skjulte avgifter<br>• <strong>Vanlige oppdateringer</strong> - kontinuerlig forbedret for 2026 og utover<br><br>Enten du er en sosial media-administrator, en person som elsker innhold, T SaveTikFast er din go-to-løsning for nedlasting og lagring av TikTok-innhold.",
+        "cta_title": "Klar til å laste ned?",
+        "cta_desc": "Begynn å laste ned TikTok-videoer, MP3-lyd, lysbildefremvisninger og historier nå. 100 % gratis, ingen registrering nødvendig.",
+        "cta_button": "Start nedlastingen",
+        "latest_posts": "Siste innlegg",
+        "read_more": "Les mer",
+        "share": "Del denne artikkelen:",
+        "related_posts_title": "Relaterte artikler",
+        "toc_title": "Innholdsfortegnelse",
+        "copy_link": "Kopier lenke",
+        "link_copied": "Kopiert!"
+    },
+    "ios_page": {
+        "title": "TikTok Downloader for iOS",
+        "desc": "Last ned TikTok-videoer uten vannmerke direkte til din iPhone eller iPad i HD-kvalitet. Den raskeste måten å lagre videoer med Safari på iOS.",
+        "placeholder": "Lim inn TikTok-lenken fra din iPhone...",
+        "meta_title": "TikTok Downloader for iPhone/iPad - SaveTikFast",
+        "meta_desc": "Gratis verktøy for å lagre TikTok-videoer uten vannmerke på iOS (iPhone og iPad). Ingen appinstallasjon kreves. Last ned i MP4- eller MP3-format umiddelbart.",
+        "faq": {
+            "q1": "Hvordan laster jeg ned TikTok-videoer på iPhone og iPad uten vannmerke?",
+            "a1": "Åpne TikTok på iPhone eller iPad, trykk på Del og kopier lenke. Åpne Safari eller Chrome-nettleseren, besøk SaveTikFast, lim inn nettadressen til TikTok-videoen og trykk på Last ned. Videoen lagres direkte i Bilder-appen din i HD-kvalitet uten vannmerke. Fungerer på iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air og alle iOS-enheter som kjører iOS 17 eller iOS 18.",
+            "q2": "Er SaveTikFast gratis å bruke på iPhone uten å installere noen app?",
+            "a2": "Ja, SaveTikFast er 100 % gratis for iPhone- og iPad-brukere. Ingen appinstallasjon fra App Store nødvendig. Vår TikTok-videonedlaster fungerer direkte i nettleseren Safari, Chrome eller Firefox på iOS. Last ned ubegrensede TikTok-videoer uten vannmerke, konverter TikTok til MP3 og lagre TikTok-historier - alt helt gratis uten registrering eller abonnement.",
+            "q3": "Kan jeg lagre TikTok-videoer på iPhone-kamerarullen min i HD 4K-kvalitet?",
+            "a3": "Absolutt. SaveTikFast laster ned TikTok-videoer i høyeste kvalitet, inkludert 720p HD, 1080p Full HD og 4K-oppløsning direkte til iPhone Photos eller Files-appen. Vi komprimerer aldri videoer. Bedre kvalitet enn SSSTik, SnapTik eller TikMate på iOS-enheter. Perfekt for å lagre TikTok-innhold offline på iPhone for senere visning.",
+            "q4": "Hvorfor er SaveTikFast den beste TikTok-nedlasteren for iOS-enheter?",
+            "a4": "SaveTikFast er den raskeste TikTok-videospareren for iPhone og iPad med 3-sekunders nedlastinger, ingen problemer med fjerning av vannmerker, HD- og 4K-støtte, MP3-lydekstraksjon, historienedlastinger og lagring av lysbildeserier. I motsetning til andre iOS TikTok-nedlastere, krever vi ingen appinstallasjon, ingen pålogging og ingen Apple-snarveier. Fungerer perfekt på Safari-nettleseren på tvers av alle iOS-versjoner.",
+            "q5": "Hvordan konverterer jeg TikTok-videoer til MP3-lyd på iPhone?",
+            "a5": "Kopier TikTok-videokoblingen på iPhone, åpne Safari eller Chrome, besøk SaveTikFast MP3-konverteringssiden, lim inn URL-en og trykk på Pakk ut MP3. Lydfilen lastes ned i 320 kbps kvalitet til din iPhone Files-app. Perfekt for å lage iPhone-ringetoner fra TikTok-lyder, lagre trendende TikTok-musikk og trekke ut virale lydklipp på iOS-enheter."
+        }
+    },
+    "android_page": {
+        "title": "TikTok-nedlaster for Android",
+        "desc": "Den beste Android TikTok-videospareren! Last ned hvilken som helst TikTok-video uten vannmerke direkte til mobilgalleriet ditt i MP4-format.",
+        "placeholder": "Lim inn TikTok-lenken fra Android-telefonen din...",
+        "meta_title": "TikTok Downloader for Android-enheter - SaveTikFast",
+        "meta_desc": "Lagre hvilken som helst TikTok-video uten logo i Android-telefongalleriet ditt. 100 % gratis, uten vannmerke, raskt og sikkert. Last ned i HD-kvalitet.",
+        "faq": {
+            "q1": "Hvordan laster jeg ned TikTok-videoer på Android uten vannmerke?",
+            "a1": "Åpne TikTok på Android-telefonen din, trykk på Del og kopier lenke. Åpne nettleseren Chrome, Samsung Internet eller Firefox, besøk SaveTikFast, lim inn videoens URL og trykk på Last ned. TikTok-videoen lagres i Nedlastingsmappen eller Galleriet i HD-kvalitet uten vannmerke. Fungerer på Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus og Huawei-enheter.",
+            "q2": "Er SaveTikFast kompatibel med alle Android-telefoner og -nettbrett?",
+            "a2": "Ja, SaveTikFast fungerer på alle Android-enheter, inkludert Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia og Android-nettbrett. Kompatibel med Android 12, 13, 14 og 15. Bruk Chrome, Samsung Internett, Firefox eller hvilken som helst mobilnettleser for å laste ned TikTok-videoer uten vannmerke gratis. Ingen APK-installasjon kreves.",
+            "q3": "Kan jeg lagre TikTok-videoer i Android-galleriet mitt i HD 4K?",
+            "a3": "Absolutt. SaveTikFast laster ned TikTok-videoer i original HD, 1080p Full HD og 4K-kvalitet direkte til Android-telefongalleriet eller nedlastingsmappen. Vi bevarer den originale videokvaliteten uten komprimering. Bedre enn SSSTik-, SnapTik- eller TikMate-nedlastere. Perfekt for å lagre TikTok-innhold offline på Samsung Galaxy-, Pixel- eller Xiaomi-enheter.",
+            "q4": "Hvorfor velge SaveTikFast fremfor andre Android TikTok-nedlastere?",
+            "a4": "SaveTikFast er den raskeste TikTok-nedlasteren for Android med 3-sekunders behandling, vannmerkefrie nedlastinger, HD- og 4K-videostøtte, TikTok MP3-konvertering, historiesparer og nedlasting av lysbildefremvisning. Ingen APK nødvendig, ingen Google Play-app kreves. Fungerer i Chrome-nettleseren på Samsung Galaxy, Google Pixel, Xiaomi, OPPO og alle Android-smarttelefoner uten registrering.",
+            "q5": "Hvordan trekker jeg ut MP3-lyd fra TikTok på Android-telefonen min?",
+            "a5": "Kopier TikTok-videokoblingen på Android-enheten din, åpne Chrome eller Samsungs nettleser, besøk SaveTikFast MP3-konvertering, lim inn URL-en og trykk på Pakk ut MP3. Lydnedlastinger i høykvalitets 320 kbps-format til nedlastingsmappen. Perfekt for å lagre trendende TikTok-sanger, lage Android-ringetoner og trekke ut virale lyder på Samsung Galaxy- og Pixel-telefoner."
+        }
+    },
+    "mac_page": {
+        "title": "TikTok Downloader for Mac",
+        "desc": "Last ned høykvalitets TikTok-videoer uten vannmerke på din MacBook eller iMac. Fungerer perfekt på Safari og Chrome.",
+        "placeholder": "Slipp TikTok-lenken her for å laste ned på Mac...",
+        "meta_title": "TikTok Video Downloader for Mac/MacBook (HD) - SaveTikFast",
+        "meta_desc": "Last ned enkelt TikTok-videoer uten vannmerke til din Mac. Gratis nettsparing som støtter macOS Safari, Chrome og Firefox i 4K-kvalitet.",
+        "faq": {
+            "q1": "Hvordan laster jeg ned TikTok-videoer på Mac uten vannmerke?",
+            "a1": "Åpne TikTok i Safari, Chrome eller Firefox på MacBook eller iMac. Kopier TikTok-videoens URL fra adressefeltet, besøk SaveTikFast, lim inn koblingen og klikk på Last ned. Videoen lagres i Mac-nedlastingsmappen i HD- eller 4K-kvalitet uten vannmerke. Fungerer på macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac og Mac Mini.",
+            "q2": "Fungerer SaveTikFast på Safari og Chrome for macOS?",
+            "a2": "Ja, SaveTikFast fungerer perfekt på alle Mac-nettlesere, inkludert Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge og Opera. Ingen nettleserutvidelse eller plugin-installasjon kreves. Vår TikTok-videonedlaster kjører direkte i nettleseren din på macOS Sonoma, Ventura og Monterey. Last ned ubegrensede TikTok-videoer uten vannmerke helt gratis på hvilken som helst Mac.",
+            "q3": "Kan jeg lagre TikTok-videoer i 4K-kvalitet på min MacBook?",
+            "a3": "Absolutt. SaveTikFast laster ned TikTok-videoer i høyeste kvalitet, inkludert 720p, 1080p Full HD, 2K og 4K-oppløsning på MacBook Pro, MacBook Air, iMac og Mac Mini. Vi komprimerer eller reduserer aldri videokvaliteten. Filer lagres som MP4 i nedlastingsmappen. Bedre enn SSSTik eller SnapTik for Mac-brukere som ønsker premium videokvalitet.",
+            "q4": "Hvorfor er SaveTikFast den beste TikTok-nedlasteren for Mac-datamaskiner?",
+            "a4": "SaveTikFast er den raskeste TikTok-videonedlasteren for Mac med umiddelbar 3-sekunders behandling, fjerning av vannmerke, støtte for 4K-kvalitet, MP3-lydekstraksjon, TikTok-historielagring og nedlasting av lysbildeserier. Ingen programvareinstallasjon på macOS nødvendig. Fungerer i Safari og Chrome-nettleseren på MacBook Pro, MacBook Air, iMac og Mac Mini uten registrering eller abonnement.",
+            "q5": "Hvordan konverterer jeg TikTok til MP3 på min Mac?",
+            "a5": "Kopier TikTok-video-URLen fra Safari eller Chrome på Mac-en din, besøk SaveTikFast MP3-konvertering, lim inn koblingen og klikk Pakk ut MP3. Lydfilen lastes ned i studiokvalitet 320 kbps MP3-format til Mac-nedlastingsmappen. Perfekt for å lagre trendende TikTok-musikk, lage spillelister og trekke ut lyder på MacBook Pro, MacBook Air og iMac."
+        }
+    },
+    "pc_page": {
+        "title": "TikTok Downloader for PC",
+        "desc": "Lagre TikTok-videoer direkte på din Windows-PC eller bærbare datamaskin. Få rene, vannmerkefrie videoer i ultraraske hastigheter.",
+        "placeholder": "Lim inn TikTok-videokoblingen fra PC-en din...",
+        "meta_title": "TikTok Downloader for Windows PC/Bærbar PC - SaveTikFast",
+        "meta_desc": "Den raskeste TikTok-videonedlasteren for Windows-PC. Lagre ubegrensede TikTok-videoer uten vannmerke på datamaskinen din gratis.",
+        "faq": {
+            "q1": "Hvordan laster jeg ned TikTok-videoer på Windows-PC uten vannmerke?",
+            "a1": "Åpne TikTok i Chrome, Edge eller Firefox på din Windows-PC eller bærbare datamaskin. Kopier TikTok-video-URLen fra nettleserens adresselinje, besøk SaveTikFast, lim inn koblingen og klikk på Last ned. Videoen lagres til PC-nedlastingsmappen i HD- eller 4K-kvalitet uten vannmerke. Fungerer på Windows 11, Windows 10, stasjonære datamaskiner og bærbare datamaskiner fra Dell, HP, Lenovo, ASUS og Acer.",
+            "q2": "Er SaveTikFast gratis å bruke på Windows-datamaskiner?",
+            "a2": "Ja, SaveTikFast er helt gratis for Windows PC-brukere. Ingen programvareinstallasjon eller nedlasting av skrivebordsapplikasjoner er nødvendig. Vår TikTok-videonedlaster fungerer direkte i nettleserne Chrome, Microsoft Edge, Firefox og Opera på Windows 11 og Windows 10. Last ned ubegrensede TikTok-videoer uten vannmerke, konverter til MP3, lagre historier og last ned lysbildeserier gratis.",
+            "q3": "Kan jeg lagre TikTok-videoer i HD 4K-kvalitet på min Windows-PC?",
+            "a3": "Absolutt. SaveTikFast laster ned TikTok-videoer i original kvalitet inkludert 720p HD, 1080p Full HD, 2K og 4K-oppløsning direkte til Windows PC-nedlastingsmappen som MP4-filer. Vi komprimerer eller reduserer aldri kvaliteten. Overlegen til SSSTik, SnapTik eller TikMate. Perfekt for å lagre og redigere TikTok-innhold på stasjonære datamaskiner som kjører Windows 11 eller Windows 10.",
+            "q4": "Hvorfor er SaveTikFast den beste TikTok-nedlasteren for PC?",
+            "a4": "SaveTikFast er den raskeste TikTok-videonedlasteren for Windows-PC med 3-sekunders prosessering, uten vannmerke, HD- og 4K-støtte, MP3-konvertering, historienedlaster og lysbildeseriesparer. Ingen installasjon av skrivebordsprogramvare kreves. Fungerer i Chrome og Edge-nettleseren på Windows 11, Windows 10 bærbare og stasjonære datamaskiner fra HP, Dell, Lenovo, ASUS uten registrering eller avgifter.",
+            "q5": "Hvordan konverterer jeg TikTok til MP3 på min Windows-datamaskin?",
+            "a5": "Kopier TikTok-video-URLen fra Chrome eller Edge på din Windows-PC, besøk SaveTikFast MP3-konverteringssiden, lim inn koblingen og klikk Pakk ut MP3. Lyden lastes ned i høykvalitets 320 kbps MP3-format til PC-nedlastingsmappen. Perfekt for å lagre TikTok-sanger, lage Windows-ringetoner, trekke ut viral lyd og bygge musikksamlinger på din stasjonære datamaskin."
+        }
+    },
+    "seo_rich_content": {
+        "intro_title": "Beste TikTok-videonedlaster uten vannmerke",
+        "intro_p1": "SaveTikFast er anerkjent som et av de fremste verktøyene som er tilgjengelige online for nedlasting av TikTok-videoer uten vannmerke. Den er omhyggelig designet for å imøtekomme brukere som krever høy hastighet, upåklagelig kvalitet og ultimate bekvemmelighet. Enten du er en ivrig innholdsskaper som ønsker å sikkerhetskopiere dine egne videoer, en leder for sosiale medier som samler trendklipp for analyse, eller bare en entusiast som elsker å lagre morsomme og inspirerende øyeblikk, tilbyr SaveTikFast en sømløs opplevelse som skiller seg ut fra resten. Plattformen fungerer utelukkende gjennom nettleseren din, noe som betyr at det ikke er nødvendig å installere noen tungvint programvare eller applikasjoner som kan redusere hastigheten på enheten din. Denne universelle tilgjengeligheten sikrer at du kan bruke tjenesten vår på en Windows-PC, en Mac, en Android-smarttelefon eller en iPhone like enkelt og effektivt. Videre er vi stolte av å tilby en helt gratis tjeneste som ikke går på akkord med ytelsen. Du får ubegrensede nedlastinger, noe som sikrer at favoritt-TikTok-innholdet ditt alltid er bare et klikk unna, klar til å lagres direkte til din lokale lagring i skarp, høyoppløselig kvalitet. Verktøyet vårt er den ultimate løsningen for alle som ønsker å beholde sin favoritt TikToks for alltid.",
+        "intro_p2": "SaveTikFast er ikke bare en enkel videonedlaster; det er et alt-i-ett kraftsenter for medieutvinning skreddersydd spesielt for TikTok-innhold. Vi forstår at TikTok har utviklet seg til å inkludere ulike formater, og verktøyet vårt har tilpasset seg deretter. Hvis du kommer over en video med et viralt lydspor som du vil beholde, lar vår dedikerte MP3-nedlaster deg rippe lyden i krystallklar kvalitet, helt atskilt fra videoen. Dette er utrolig nyttig for skapere som leter etter lydeffekter eller brukere som ønsker å nyte sine favoritt TikTok-låter offline. Dessuten gir plattformen vår full støtte for de stadig mer populære TikTok-lysbildefremvisningene. Med bare ett klikk kan du laste ned alle bildene fra en lysbildefremvisning i perfekt HD-kvalitet, noe som sparer deg for bryet med manuell skjermfangst. Vi imøtekommer også behovet for å laste ned TikTok-historier før de forsvinner. Med Story-nedlasteren vår kan du raskt lagre disse midlertidige oppdateringene direkte på enheten din. Alle disse funksjonene er integrert i ett enkelt, brukervennlig grensesnitt. Enten du trenger MP4-videoer, MP3-lyd eller JPG-bilder, leverer SaveTikFast dem alle med uovertruffen hastighet, og sikrer at du aldri går glipp av innholdet du elsker.",
+        "why_title": "Hvorfor velge SaveTikFast?",
+        "why_p1": "Hastighet og pålitelighet er hjørnesteinene i SaveTikFast-opplevelsen. Vi har investert tungt i toppmoderne serverinfrastruktur for å sikre at nedlastingene dine behandles på få sekunder, uavhengig av din geografiske plassering. I motsetning til andre tjenester som får deg til å vente i køer eller lide under langsomme overføringshastigheter, henter og konverterer våre optimaliserte algoritmer TikTok-medier nesten umiddelbart. Dette betyr at du kan laste ned dusinvis av videoer rygg-til-rygg uten å oppleve etterslep eller nedetid. Plattformen vår har en imponerende oppetidsrekord, som sikrer at når du trenger å lagre en video, er SaveTikFast klar og venter på å levere uovertruffen ytelse.",
+        "why_p2": "Når du laster ned innhold, er visuell klarhet avgjørende, og SaveTikFast garanterer overlegen kvalitet ved hver nedlasting. Vi bevarer den originale videoens bithastighet og oppløsning, og gir deg plettfrie, vannmerkefrie MP4-filer som er perfekte for visning på store skjermer eller for profesjonell videoredigering. I tillegg til førsteklasses kvalitet, har tjenesten vår universell kompatibilitet. Du trenger ikke å bekymre deg for enhetsbegrensninger; SaveTikFast er fullstendig responsiv og fungerer perfekt på alle gadgeter med internettforbindelse. Fra de nyeste iPhones og Android-enheter til eldre stasjonære datamaskiner, vårt nettbaserte verktøy tilpasser seg skjermen og nettleseren din, og tilbyr en konsistent og jevn brukeropplevelse overalt.",
+        "why_p3": "Ditt personvern og sikkerhet er av største betydning for oss på SaveTikFast. Vi opererer under en streng policy uten logger, noe som betyr at vi ikke sporer, lagrer eller overvåker videoene du velger å laste ned. Bruken din forblir helt anonym. I tillegg er nettstedet vårt forsterket med avansert SSL-kryptering for å beskytte forbindelsen din mot potensielle trusler. Fordi tjenesten vår er 100 % nettbasert, blir du aldri bedt om å laste ned mistenkelige kjørbare filer eller installere invasive nettleserutvidelser, noe som helt eliminerer risikoen for skadelig programvare eller virus. Du kan laste ned favoritt-TikToks med total trygghet, vel vitende om at dataene dine er sikre.",
+        "guide_title": "How to Download TikTok Videos on Any Device",
+        "guide_p1": "Å bruke SaveTikFast for å laste ned favoritt-TikTok-videoene dine er en utrolig enkel prosess som alle kan mestre på sekunder. Først åpner du TikTok-applikasjonen på smarttelefonen din eller besøker TikTok-nettstedet i nettleseren din. Rull gjennom feeden din til du finner videoen, lysbildefremvisningen eller historien du ønsker å lagre. Deretter trykker du på 'Del'-ikonet, som vanligvis representeres av en pil som peker til høyre, plassert på høyre side av skjermen. Velg alternativet \"Kopier lenke\" fra delingsmenyen som dukker opp. Når koblingen er kopiert til utklippstavlen, åpner du den foretrukne nettleseren – enten det er Chrome, Safari eller Firefox – og navigerer til SaveTikFast-nettstedet. På hjemmesiden vår vil du fremtredende se et stort inndatafelt. Lim inn den kopierte TikTok-lenken direkte i denne tekstboksen. Etter å ha limt inn lenken, klikk på \"Last ned\"-knappen rett ved siden av den. Systemet vårt vil umiddelbart behandle koblingen og, i løpet av noen få øyeblikk, gi deg flere nedlastingsalternativer. Du kan velge å laste ned videoen uten vannmerke, trekke ut lyden som MP3 eller lagre bilder fra en lysbildefremvisning. Klikk på ønsket format, og filen vil umiddelbart begynne å lastes ned til enhetens lokale lagring, klar til å vises eller deles offline.",
+        "comparison_title": "SaveTikFast vs Other Downloaders (SSSTik, SnapTik)",
+        "comparison_p1": "When you compare SaveTikFast to other popular alternatives like SnapTik, SSSTik, or TikMate, the advantages of our platform become immediately clear. SaveTikFast provides a superior, ad-light experience that doesn't overwhelm you with pop-ups, unlike many competitors. In terms of performance, our advanced conversion engines deliver watermark-free videos significantly faster than SnapTik, especially during peak internet hours. While SSSTik is a capable tool, SaveTikFast offers a more robust suite of features, handling not just standard videos but also complex multi-image slideshows and ephemeral Stories with absolute precision. Moreover, the audio quality of our MP3 downloads is consistently higher than what you get from TikMate. By focusing on speed, reliability, user experience, and comprehensive feature support, SaveTikFast has established itself as the premier choice for TikTok media downloading.",
+        "tips_title": "Tips for den beste nedlastingsopplevelsen",
+        "tips_p1": "Å maksimere effektiviteten med SaveTikFast er enkelt med noen få enkle triks. Hvis du ofte laster ned TikToks på datamaskinen din, bør du vurdere å holde en dedikert nettleserfane åpen for SaveTikFast slik at du raskt kan bytte frem og tilbake mens du surfer i appen. Når du arbeider med lysbildefremvisninger, kan opprette en bestemt mappe på enheten din på forhånd hjelpe deg med å organisere de individuelt nedlastede bildene mer effektivt. Hvis du er en iOS-bruker og har problemer med å finne nedlastingene dine, husk å sjekke \"Nedlastinger\"-delen i Safari-nettleseren og lagre filen direkte i kamerarullen. For de som ønsker å bygge et musikkbibliotek, er vår MP3-funksjon perfekt; Bare sørg for å gi nytt navn til filene umiddelbart etter nedlasting for å holde spillelisten din organisert. Til slutt, sørg alltid for at nettleseren din er oppdatert til den nyeste versjonen for å garantere maksimal kompatibilitet og raskest mulig nedlastingshastighet.",
+        "conclusion_title": "Begynn å laste ned dine favoritt TikToks i dag",
+        "conclusion_p1": "Avslutningsvis er SaveTikFast utvilsomt det mest effektive, pålitelige og brukervennlige verktøyet for å laste ned TikTok-videoer, lyd og lysbildefremvisninger uten vannmerker. Med vår forpliktelse til høyhastighetsytelse, kompromissløs kvalitet og strengt brukervern, tilbyr vi en enestående tjeneste som dekker alle dine nedlastingsbehov. Ikke la favoritt-TikTok-øyeblikkene gli unna eller gå seg vill i feeden. Begynn å bruke SaveTikFast i dag for å bygge din personlige offline samling av virale hits og trendlyder. Bokmerk siden vår nå, prøv din første gratis nedlasting, og opplev den ultimate TikTok-nedlastingsløsningen selv!"
     }
-  },
-  "nav_menu": {
-    "slideshow": "Lysbildefremvisning",
-    "video": "Video",
-    "mp3": "MP3-lyd",
-    "stories": "Historier"
-  },
-  "mp3_page": {
-    "meta_title": "TikTok til MP3 Konverter – Gratis Lydnedlasting 320kbps",
-    "title": "Last Ned TikTok MP3",
-    "subtitle": "(Kun Lyd)",
-    "desc": "Konverter TikTok-videoer til MP3-lydfiler. Pakk ut sanger og musikk i høy kvalitet 320kbps.",
-    "placeholder": "Lim inn videolenke for å hente lyd...",
-    "btn_download": "Hent MP3",
-    "about_title": "Beste TikTok MP3 Konverter 2026",
-    "about_content": "SaveTikFast MP3 lar deg trekke ut lyd fra hvilken som helst TikTok-video umiddelbart. Last ned populære sanger og virale lyder.",
-    "features": {
-      "quality": {
-        "title": "HD Lyd 320kbps",
-        "desc": "Konverter TikTok-videoer til MP3 i krystallklar 320kbps studiokvalitet. Den høyeste tilgjengelige lydbitraten online, perfekt for musikkentusiaster som vil ha den beste lyden på iPhone, Android eller PC."
-      },
-      "fast": {
-        "title": "Øyeblikkelig Konvertering",
-        "desc": "TikTok til MP3 konvertering på bare 2 sekunder. Den raskeste online TikTok lydekstraktoren - raskere enn SSSTik MP3, SnapTik audio eller andre konvertere. Fungerer øyeblikkelig på alle enheter."
-      },
-      "ringtone": {
-        "title": "Ringetone Klar",
-        "desc": "Perfekt lydlengde for iPhone-ringetoner og Android-varselslyder. Lag tilpassede ringetoner fra virale TikTok-lyder og trendende lydklipp. Enkelt å sette opp på enhver smarttelefon."
-      },
-      "device": {
-        "title": "Alle Enheter",
-        "desc": "Trekk ut TikTok-lyd på iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC og enhver enhet med en nettleser. Ingen app-nedlasting nødvendig."
-      },
-      "original": {
-        "title": "Original Lyd",
-        "desc": "Bevarer original TikTok lydkvalitet uten komprimering eller kvalitetstap. Få nøyaktig samme lyd som den originale videoen, inkludert trendende sanger og viral lyd."
-      },
-      "unlimited": {
-        "title": "Gratis &amp; Ubegrenset",
-        "desc": "Ingen grense for TikTok til MP3 konverteringer. Konverter så mange TikTok-videoer til lyd som du vil - helt gratis, ingen registrering, ingen daglige begrensninger."
-      },
-      "secure": {
-        "title": "Sikker &amp; Privat",
-        "desc": "Sikker MP3-konvertering uten datainnsamling. Vi lagrer ikke dine konverterte filer eller sporer aktiviteten din. Ditt personvern er 100% beskyttet."
-      },
-      "nobapp": {
-        "title": "Ingen App Nødvendig",
-        "desc": "Fungerer direkte i nettleseren din - Chrome, Safari, Firefox, Edge, Opera. Ingen app-installasjon, ingen lagringsplass nødvendig. Bedre enn TikTok MP3 nedlastingsapper."
-      }
-    },
-    "how_to": {
-      "title": "Hvordan konvertere TikTok til MP3",
-      "step1": "Finn videoen. Trykk Del → Kopier lenke.",
-      "step2": "Lim inn lenken i boksen ovenfor.",
-      "step3": "Klikk 'Hent MP3' for å laste ned."
-    },
-    "faq": {
-      "q1": "Hvordan konvertere TikTok-video til MP3?",
-      "a1": "Å konvertere TikTok til MP3 er enkelt med SaveTikFast. Kopier TikTok-videolenken, lim den inn i MP3-konverteren vår og klikk på konverter. Lyden vil bli ekstrahert i utmerket 320kbps MP3-kvalitet øyeblikkelig. Fungerer på iPhone, Android, Samsung, PC, Mac og alle enheter ved bruk av Chrome, Safari, Firefox eller andre nettlesere. Vår TikTok til MP3 konverter er raskere og høyere kvalitet enn SSSTik eller SnapTik lydekstraktorer.",
-      "q2": "Hvilken lydkvalitet gir SaveTikFast MP3 konverter?",
-      "a2": "SaveTikFast trekker ut TikTok-lyd i premium 320kbps MP3-kvalitet - den høyeste tilgjengelige bitraten for MP3-filer. Dette gir krystallklar studiokvalitetslyd perfekt for musikkavspilling, ringetoner eller lydprosjekter. Vi bevarer original TikTok-lyd uten komprimering eller kvalitetstap, i motsetning til andre konvertere som reduserer bitrate for å spare båndbredde.",
-      "q3": "Kan jeg bruke TikTok-lyd som ringetone?",
-      "a3": "Ja! TikTok-lyd lastet ned fra SaveTikFast er perfekt for ringetoner. MP3-formatet fungerer med både iPhone og Android ringetone-innstillinger. På iPhone, bruk GarageBand eller iTunes til å sette tilpassede ringetoner. På Android, gå bare til Innstillinger > Lyd > Ringetone og velg den nedlastede MP3en. Lag unike ringetoner fra virale TikTok-lyder og trendende lyd.",
-      "q4": "Er TikTok til MP3 konvertering gratis?",
-      "a4": "Helt gratis. SaveTikFast MP3 konverter har ingen avgifter, abonnementer eller daglige grenser. Konverter ubegrensede TikTok-videoer til MP3 uten registrering. Vår gratis tjeneste fungerer på alle enheter - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - ved bruk av enhver nettleser inkludert Chrome, Safari og Firefox.",
-      "q5": "Hvor lang tid tar MP3-konvertering?",
-      "a5": "SaveTikFast konverterer TikTok til MP3 på omtrent 2-3 sekunder. Vi bruker kraftige servere optimalisert for rask lydekstraksjon. Dette gjør oss til den raskeste tilgjengelige TikTok MP3-konverteren - betydelig raskere enn SSSTik MP3, SnapTik audio, TikMate eller andre konverteringsverktøy.",
-      "q6": "Kan jeg laste ned TikTok-musikk på iPhone?",
-      "a6": "Ja, du kan enkelt laste ned TikTok-musikk og lyd på iPhone ved å bruke SaveTikFast. Kopier TikTok-lenken, åpne Safari eller Chrome, besøk MP3-konverteren vår, lim inn lenken og trykk på last ned. MP3-filen vil bli lagret i Filer-appen din. Derfra kan du legge den til i Apple Music, bruke den som ringetone eller dele den hvor som helst. Fungerer på alle iPhone-modeller.",
-      "q7": "Inkluderer MP3en hele lydsporet?",
-      "a7": "Ja, SaveTikFast trekker ut hele lyden fra TikTok-videoer - inkludert bakgrunnsmusikk, stemme, lydeffekter og alle lydelementer. Full lengde lyd er bevart nøyaktig som det høres ut i den originale TikTok-videoen. Perfekt for å lagre trendende sanger, virale lyder og din favoritt TikTok-lyd.",
-      "q8": "Er SaveTikFast MP3 konverter sikker?",
-      "a8": "Helt sikker. SaveTikFast MP3 konverter bruker sikker SSL-kryptering, lagrer ikke dataene dine eller konverterte filer, krever ingen pålogging og installerer ingenting på enheten din. Vi har trygt konvertert millioner av TikTok-videoer til MP3 for brukere verden over. Ditt personvern og sikkerhet er vår prioritet.",
-      "q9": "Kan jeg konvertere TikTok til MP3 på Android?",
-      "a9": "Ja, TikTok til MP3 konvertering fungerer perfekt på alle Android-enheter. Dette inkluderer Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus og alle andre Android-telefoner og nettbrett. Bare bruk Chrome, Firefox eller Samsung Internet nettleser for å få tilgang til SaveTikFast og konverter hvilken som helst TikTok til MP3 øyeblikkelig.",
-      "q10": "Hvorfor er SaveTikFast den beste TikTok til MP3 konverteren?",
-      "a10": "SaveTikFast tilbyr den beste TikTok MP3-konverteringen takket være vår overlegne hastighet (2 sekunder), maksimal lydkvalitet (320kbps), universell enhetsstøtte og helt gratis tjeneste. I motsetning til SSSTik, SnapTik eller andre konvertere leverer vi konsekvent høykvalitets resultater uten irriterende annonser eller nedlastingsgrenser. Millioner stoler på SaveTikFast for sine TikTok lydbehov."
-    },
-    "meta_desc": "Konverter TikTok-videoer til MP3-lydfiler i høy kvalitet 320kbps. Trekk ut sanger og musikk gratis online. Ingen app eller registrering nødvendig. Fungerer på alle enheter."
-  },
-  "story_page": {
-    "meta_title": "TikTok Story Nedlaster – Lagre Bilder og Historier Anonymt",
-    "title": "Last Ned TikTok Story",
-    "desc": "Lagre TikTok Stories og Lysbildefremvisninger før de utløper.",
-    "placeholder": "Lim inn Story-lenke...",
-    "btn_download": "Lagre Story",
-    "about_title": "Story Nedlaster 2026",
-    "about_content": "SaveTikFast Story Downloader lar deg lagre stories og bildekaruseller før de forsvinner etter 24 timer.",
-    "features": {
-      "expire": {
-        "title": "Lagre Før De Forsvinner",
-        "desc": "Last ned TikTok stories før de forsvinner etter 24 timer. Gå aldri glipp av favorittskaperens dine stories igjen. SaveTikFast lar deg lagre utløpende innhold permanent på enheten din."
-      },
-      "quality": {
-        "title": "Original Kvalitet",
-        "desc": "Lagre TikTok stories i full HD-kvalitet - nøyaktig slik skaper lastet dem opp. Ingen kvalitetsnedgang, ingen komprimering. Få samme oppløsning på iPhone, Android eller PC."
-      },
-      "anonymous": {
-        "title": "Anonym Visning",
-        "desc": "Se og last ned TikTok stories helt anonymt. Skaper vil ikke vite at du har lagret deres story. 100% privat og diskret story-nedlasting."
-      },
-      "fast": {
-        "title": "Superhurtig",
-        "desc": "Last ned hvilken som helst TikTok story på bare 2 sekunder. Øyeblikkelig story-lagring som fungerer raskere enn noen andre online TikTok story nedlaster."
-      },
-      "device": {
-        "title": "Fungerer Overalt",
-        "desc": "Lagre TikTok stories på iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows og hvilken som helst enhet. Kompatibel med Chrome, Safari, Firefox og alle nettlesere."
-      },
-      "nowatermark": {
-        "title": "Uten Vannmerke",
-        "desc": "Last ned TikTok stories uten vannmerke eller TikTok-logo. Rene story-nedlastinger klare til å lagre eller dele på Instagram, Snapchat eller WhatsApp."
-      },
-      "free": {
-        "title": "Gratis For Alltid",
-        "desc": "Ubegrensede TikTok story-nedlastinger uten kostnad. Ingen registrering, ingen avgift, ingen daglig grense. SaveTikFast story nedlaster er 100% gratis."
-      },
-      "noapp": {
-        "title": "Bare Nettleser",
-        "desc": "Ingen app-installasjon nødvendig. Last ned TikTok stories direkte fra Chrome, Safari, Firefox, Edge på telefonen eller datamaskinen din. Raskere og sikrere enn apper."
-      }
-    },
-    "how_to": {
-      "title": "Hvordan laste ned en TikTok Story",
-      "step1": "Åpne Story, Del → Kopier lenke.",
-      "step2": "Lim inn lenken ovenfor.",
-      "step3": "Klikk 'Lagre Story'."
-    },
-    "faq": {
-      "q1": "Hvordan laste ned TikTok stories?",
-      "a1": "For å laste ned TikTok stories, kopier først story-lenken fra TikTok (trykk Del på storyen). Besøk deretter SaveTikFast, lim inn lenken i vår story nedlaster og klikk på last ned. Storyen vil bli lagret på enheten din i original HD-kvalitet. Fungerer på iPhone, Android, Samsung, iPad, Mac, PC ved bruk av Chrome, Safari, Firefox eller enhver nettleser. Lagre stories før de forsvinner etter 24 timer.",
-      "q2": "Kan jeg laste ned TikTok stories anonymt?",
-      "a2": "Ja, SaveTikFast tillater helt anonyme TikTok story-nedlastinger. Skaperen vil ikke motta noen varsling eller vite at du har lastet ned deres story. Din identitet forblir privat. Dette er perfekt for diskret lagring av innhold uten å samhandle med skaperens konto.",
-      "q3": "Utløper TikTok stories etter nedlasting?",
-      "a3": "Nei, når du først har lastet ned en TikTok story med SaveTikFast, er den permanent lagret på enheten din. Selv om TikTok stories forsvinner etter 24 timer på plattformen, forblir din nedlastede kopi for alltid. Lagre viktige stories før de utløper, slik at du aldri mister tilgang til innholdet.",
-      "q4": "Hvilken kvalitet har de nedlastede TikTok stories?",
-      "a4": "SaveTikFast laster ned TikTok stories i full original kvalitet - samme HD-oppløsning som skaperen lastet opp. Vi komprimerer ikke eller reduserer kvaliteten. Dine nedlastede stories ser ut nøyaktig som på TikTok, perfekt for å lagre minner eller reposte.",
-      "q5": "Kan jeg laste ned TikTok stories på iPhone?",
-      "a5": "Ja, å laste ned TikTok stories på iPhone er enkelt. Kopier story-lenken fra TikTok, åpne Safari eller Chrome, gå til SaveTikFast, lim inn lenken og trykk på last ned. Stories lagres direkte i Bilder eller Filer-appen din. Fungerer på iPhone 15, 14, 13, 12 og alle modeller uten å installere noen app.",
-      "q6": "Er TikTok story nedlaster gratis?",
-      "a6": "Helt gratis. SaveTikFast story nedlaster har ingen kostnader, premium-planer eller nedlastingsgrenser. Lagre ubegrensede TikTok stories uten gebyr på hvilken som helst enhet - iPhone, Android, Samsung, PC, Mac. Ingen registrering eller konto nødvendig.",
-      "q7": "Kan jeg laste ned private TikTok stories?",
-      "a7": "SaveTikFast kan bare laste ned offentlige TikTok stories. Private stories delt bare med spesifikke følgere er ikke tilgjengelige fra eksterne nedlastingsverktøy på grunn av TikToks personvernbeskyttelse. For privat innhold trenger du direkte tillatelse fra skaperen.",
-      "q8": "Hvorfor bruke SaveTikFast for TikTok stories?",
-      "a8": "SaveTikFast er den beste TikTok story nedlasteren fordi vi tilbyr øyeblikkelige nedlastinger, original HD-kvalitet, anonym lagring og ubegrenset gratis tilgang. Vårt verktøy fungerer pålitelig på alle enheter og nettlesere, noe som gjør det bedre enn andre story nedlastere. Lagre utløpende stories før de forsvinner for alltid."
-    },
-    "meta_desc": "Last ned TikTok-historier og bildepresentasjoner anonymt og gratis. Lagre fotoalbum og videohistorier før de utløper. Raskt, gratis, ingen innlogging nødvendig."
-  },
-  "blog": {
-    "meta_title": "TikTok Nedlastingsguide 2026 – Videoer, MP3, Slideshows og Historier",
-    "meta_desc": "Komplett guide til nedlasting av TikTok-innhold i 2026. Lagre videoer uten vannmerke, konverter til MP3, last ned slideshows og historier på iPhone, Android og PC.",
-    "keywords": "hvordan laste ned TikTok-videoer uten vannmerke 2026, TikTok-videonedlaster iPhone iOS 18, lagre TikTok-videoer Android 15, TikTok til MP3-konvertering online gratis, last ned TikTok-lysbildefremvisningsbilder, lagre TikTok-historier før de utløper, TikTok-nedlaster uten vannmerke HD 4K, last ned TikTok-alternativer på TikTok 1, lagre TikTok-video TikTok på Mac macOS Sonoma, TikTok-videonedlasting Samsung Galaxy S25, TikTok MP3-nedlasting 320kbps, TikTok slideshow downloader 2026, TikTok story saver anonym, last ned TikTok uten app, TikTok videokonverter MP4, lagre TikTok-lydmusikklyder, TikTok-bil-fotonedlasting, TikTok-bilde Tik Safari repost videosparer, last ned TikTok-duettvideoer, lagre TikTok-livevideoer 2026, TikTok batchnedlaster flere videoer, TikTok HD-kvalitetsnedlasting 1080p, TikTok-videonedlasting Xiaomi OnePlus, lagre TikTok for offline visning, TikTok-nedlaster Chromebook, TikTok-trendvideosparer, TikTok-trendvideosparer, TikTok-videosparer online, TikTok fotolysbildeseriesparer zip, anonym TikTok-videovisning, TikTok-nedlaster Windows 10 PC, lagre TikTok uten påloggingsregistrering, TikTok-videonedlasting ubegrenset gratis, TikTok MP3-ringetonemaker, TikTok-lysbildefremvisning alle bilder nedlasting, TikTok-historienedlaster 24 timer, TikTok beste alternativ 24 timer til TikTok, TikTok SSSTikTok",
-    "title": "Ultimate TikTok nedlastingsguide 2026",
-    "subtitle": "Alt du trenger å vite om nedlasting av TikTok-videoer, MP3-lyd, lysbildeserier og historier på hvilken som helst enhet. Oppdatert for 2026 med de nyeste metodene og tipsene.",
-    "updated": "Sist oppdatert: februar",
-    "back_home": "Tilbake til Downloader",
-    "tools_heading": "Velg nedlastingstype",
-    "try_now": "Prøv nå",
-    "card_video_title": "Videonedlasting",
-    "card_video_desc": "Last ned TikTok-videoer uten vannmerke i HD/4K-kvalitet. Fungerer på iPhone 16, Samsung Galaxy S25 og alle enheter.",
-    "card_mp3_title": "MP3-konverter",
-    "card_mp3_desc": "Trekk ut lyd fra TikTok-videoer i høykvalitets 320 kbps. Perfekt for ringetoner og musikkelskere.",
-    "card_slideshow_title": "Slideshow Saver",
-    "card_slideshow_desc": "Last ned alle bilder fra TikTok-lysbildeserier og karuseller som en ZIP-fil. Behold bildedumper for alltid.",
-    "card_story_title": "Historienedlasting",
-    "card_story_desc": "Lagre TikTok-historier før de forsvinner om 24 timer. Last ned anonymt uten varsel.",
-    "section1_title": "Hvordan laste ned TikTok-videoer i 2026",
-    "section1_content": "<strong>Å laste ned TikTok-videoer uten vannmerke</strong> har aldri vært enklere. I 2026 er SaveTikFast fortsatt den raskeste og mest pålitelige løsningen for å lagre favorittinnholdet ditt på TikTok. Enten du bruker en <strong>iPhone 16 med iOS 18</strong>, <strong>Samsung Galaxy S25 med Android 15</strong>, eller en PC som kjører <strong>Windows 11</strong> eller <strong>macOS Sonoma</strong>, fungerer vårt nettbaserte verktøy sømløst på tvers av alle plattformer.<br><br>I motsetning til andre app-installasjonsplattformer eller plattformer for nedlasting av appen din, fungerer det direkte på plattformene dine. nettleser. Bare kopier TikTok-videokoblingen, lim den inn i nedlasteren vår og klikk på last ned. Videoen din vil bli lagret i <strong>HD- eller 4K-kvalitet</strong> uten det irriterende TikTok-vannmerket.<br><br>Tjenesten vår støtter alle større nettlesere, inkludert <strong>Google Chrome 130</strong>, <strong>Safari 18</strong>, <strong>Mozilla Firefox</strong>, <strong>Microsoft Edge</strong>, <strong>mobilnettleseren</strong>, og til og med <strong>mobilnettleseren</strong>, <strong>OnePlus</strong>-, <strong>Oppo</strong>- og <strong>Huawei</strong>-enheter.",
-    "section2_title": "TikTok til MP3-konverteringsveiledning",
-    "section2_content": "Vil du <strong>konvertere TikTok til MP3</strong>? Lydekstrakteren vår henter lyden fra enhver TikTok-video i <strong>høy kvalitet opptil 320 kbps</strong>. Dette er perfekt for:<br><br>• Lage egendefinerte ringetoner fra trendende TikTok-lyder<br>• Lagre favoritt-TikTok-sangene dine for lytting uten nett<br>• Trekke ut voiceovers og lydklipp for ditt eget innhold<br>• Bygge en samling av virale lyder og musikk<br><br>MP3-konverteren fungerer på alle enheter - fra den nyeste <strong>Pro-telefonen for Android Max></strong>. Ingen spesielle apper er nødvendig, bare lim inn lenken og last ned lydfilen din umiddelbart.",
-    "section3_title": "Laster ned TikTok-lysbildeserier og -historier",
-    "section3_content": "<strong>TikTok-lysbildefremvisninger</strong> (også kalt fotokaruseller) har blitt utrolig populære i 2026. Nedlastingsprogrammet for lysbildefremvisning lagrer <strong>hvert bilde fra karusellen</strong> i original kvalitet, pakket som en praktisk ZIP-fil. Perfekt for å lagre estetiske bildedumper, opplæringsprogrammer og memer.<br><br><strong>TikTok-historier</strong> forsvinner etter 24 timer, noe som gjør dem vanskeligere å lagre. Historienedlasteren vår fungerer <strong>100 % anonymt</strong> – skaperen vil aldri vite at du lastet ned historien deres. Dette fungerer på alle enheter, inkludert <strong>iPad Pro</strong>, <strong>Android-nettbrett</strong> og <strong>Chromebooks</strong>.<br><br>Enten du arkiverer innhold for inspirasjon eller lagrer minner, gir SaveTikFast den mest pålitelige løsningen som er tilgjengelig på nettet.",
-    "section4_title": "Personvern og sikkerhet",
-    "section4_content": "Hos SaveTikFast tar vi <strong>personvernet ditt på alvor</strong>. I motsetning til enkelte nedlastingstjenester som krever pålogging eller spor aktiviteten din:<br><br>• <strong>Ingen registrering kreves</strong> - start nedlastingen umiddelbart<br>• <strong>Ingen TikTok-pålogging nødvendig</strong> - vi ber aldri om legitimasjonen din<br>• <strong>Ingen videoer lagret</strong> - all behandling skjer i sanntid<br>• <strong>Sikker tilkobling for</strong>S nedlasting for <strong>Ingen sporing</strong> – nedlastingsloggen din blir aldri registrert<br><br>Tjenesten vår er utviklet for å være rask, gratis og helt anonym. Vi tror på å tilby verdifulle verktøy uten å kompromittere brukernes personvern.",
-    "section5_title": "Hvorfor velge SaveTikFast?",
-    "section5_content": "I et marked fullt av TikTok-nedlastere skiller SaveTikFast seg ut av flere grunner:<br><br>• <strong>Raskeste behandling</strong> - nedlastinger starter på sekunder, ikke minutter<br>• <strong>Høyeste kvalitet</strong> - opptil 4K-oppløsning når tilgjengelig<br>• <strong>Ingen vannmerke</strong> - - rene videoer som er klare for deling, <strong><br>• MP3, lysbildeserier og historier<br>• <strong>Universell kompatibilitet</strong> - fungerer på alle enheter og nettlesere<br>• <strong>Alltid gratis</strong> - ingen premium-abonnementer, ingen skjulte avgifter<br>• <strong>Vanlige oppdateringer</strong> - kontinuerlig forbedret for 2026 og utover<br><br>Enten du er en sosial media-administrator, en person som elsker innhold, T SaveTikFast er din go-to-løsning for nedlasting og lagring av TikTok-innhold.",
-    "cta_title": "Klar til å laste ned?",
-    "cta_desc": "Begynn å laste ned TikTok-videoer, MP3-lyd, lysbildefremvisninger og historier nå. 100 % gratis, ingen registrering nødvendig.",
-    "cta_button": "Start nedlastingen",
-    "latest_posts": "Siste innlegg",
-    "read_more": "Les mer",
-    "share": "Del denne artikkelen:",
-    "related_posts_title": "Relaterte artikler",
-    "toc_title": "Innholdsfortegnelse",
-    "copy_link": "Kopier lenke",
-    "link_copied": "Kopiert!"
-  },
-  "ios_page": {
-    "title": "TikTok Downloader for iOS",
-    "desc": "Last ned TikTok-videoer uten vannmerke direkte til din iPhone eller iPad i HD-kvalitet. Den raskeste måten å lagre videoer med Safari på iOS.",
-    "placeholder": "Lim inn TikTok-lenken fra din iPhone...",
-    "meta_title": "TikTok Downloader for iPhone/iPad - SaveTikFast",
-    "meta_desc": "Gratis verktøy for å lagre TikTok-videoer uten vannmerke på iOS (iPhone og iPad). Ingen appinstallasjon kreves. Last ned i MP4- eller MP3-format umiddelbart.",
-    "faq": {
-      "q1": "Hvordan laster jeg ned TikTok-videoer på iPhone og iPad uten vannmerke?",
-      "a1": "Åpne TikTok på iPhone eller iPad, trykk på Del og kopier lenke. Åpne Safari eller Chrome-nettleseren, besøk SaveTikFast, lim inn nettadressen til TikTok-videoen og trykk på Last ned. Videoen lagres direkte i Bilder-appen din i HD-kvalitet uten vannmerke. Fungerer på iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air og alle iOS-enheter som kjører iOS 17 eller iOS 18.",
-      "q2": "Er SaveTikFast gratis å bruke på iPhone uten å installere noen app?",
-      "a2": "Ja, SaveTikFast er 100 % gratis for iPhone- og iPad-brukere. Ingen appinstallasjon fra App Store nødvendig. Vår TikTok-videonedlaster fungerer direkte i nettleseren Safari, Chrome eller Firefox på iOS. Last ned ubegrensede TikTok-videoer uten vannmerke, konverter TikTok til MP3 og lagre TikTok-historier - alt helt gratis uten registrering eller abonnement.",
-      "q3": "Kan jeg lagre TikTok-videoer på iPhone-kamerarullen min i HD 4K-kvalitet?",
-      "a3": "Absolutt. SaveTikFast laster ned TikTok-videoer i høyeste kvalitet, inkludert 720p HD, 1080p Full HD og 4K-oppløsning direkte til iPhone Photos eller Files-appen. Vi komprimerer aldri videoer. Bedre kvalitet enn SSSTik, SnapTik eller TikMate på iOS-enheter. Perfekt for å lagre TikTok-innhold offline på iPhone for senere visning.",
-      "q4": "Hvorfor er SaveTikFast den beste TikTok-nedlasteren for iOS-enheter?",
-      "a4": "SaveTikFast er den raskeste TikTok-videospareren for iPhone og iPad med 3-sekunders nedlastinger, ingen problemer med fjerning av vannmerker, HD- og 4K-støtte, MP3-lydekstraksjon, historienedlastinger og lagring av lysbildeserier. I motsetning til andre iOS TikTok-nedlastere, krever vi ingen appinstallasjon, ingen pålogging og ingen Apple-snarveier. Fungerer perfekt på Safari-nettleseren på tvers av alle iOS-versjoner.",
-      "q5": "Hvordan konverterer jeg TikTok-videoer til MP3-lyd på iPhone?",
-      "a5": "Kopier TikTok-videokoblingen på iPhone, åpne Safari eller Chrome, besøk SaveTikFast MP3-konverteringssiden, lim inn URL-en og trykk på Pakk ut MP3. Lydfilen lastes ned i 320 kbps kvalitet til din iPhone Files-app. Perfekt for å lage iPhone-ringetoner fra TikTok-lyder, lagre trendende TikTok-musikk og trekke ut virale lydklipp på iOS-enheter."
-    }
-  },
-  "android_page": {
-    "title": "TikTok-nedlaster for Android",
-    "desc": "Den beste Android TikTok-videospareren! Last ned hvilken som helst TikTok-video uten vannmerke direkte til mobilgalleriet ditt i MP4-format.",
-    "placeholder": "Lim inn TikTok-lenken fra Android-telefonen din...",
-    "meta_title": "TikTok Downloader for Android-enheter - SaveTikFast",
-    "meta_desc": "Lagre hvilken som helst TikTok-video uten logo i Android-telefongalleriet ditt. 100 % gratis, uten vannmerke, raskt og sikkert. Last ned i HD-kvalitet.",
-    "faq": {
-      "q1": "Hvordan laster jeg ned TikTok-videoer på Android uten vannmerke?",
-      "a1": "Åpne TikTok på Android-telefonen din, trykk på Del og kopier lenke. Åpne nettleseren Chrome, Samsung Internet eller Firefox, besøk SaveTikFast, lim inn videoens URL og trykk på Last ned. TikTok-videoen lagres i Nedlastingsmappen eller Galleriet i HD-kvalitet uten vannmerke. Fungerer på Samsung Galaxy S25, Google Pixel 9, Xiaomi, OPPO, OnePlus og Huawei-enheter.",
-      "q2": "Er SaveTikFast kompatibel med alle Android-telefoner og -nettbrett?",
-      "a2": "Ja, SaveTikFast fungerer på alle Android-enheter, inkludert Samsung Galaxy, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia og Android-nettbrett. Kompatibel med Android 12, 13, 14 og 15. Bruk Chrome, Samsung Internett, Firefox eller hvilken som helst mobilnettleser for å laste ned TikTok-videoer uten vannmerke gratis. Ingen APK-installasjon kreves.",
-      "q3": "Kan jeg lagre TikTok-videoer i Android-galleriet mitt i HD 4K?",
-      "a3": "Absolutt. SaveTikFast laster ned TikTok-videoer i original HD, 1080p Full HD og 4K-kvalitet direkte til Android-telefongalleriet eller nedlastingsmappen. Vi bevarer den originale videokvaliteten uten komprimering. Bedre enn SSSTik-, SnapTik- eller TikMate-nedlastere. Perfekt for å lagre TikTok-innhold offline på Samsung Galaxy-, Pixel- eller Xiaomi-enheter.",
-      "q4": "Hvorfor velge SaveTikFast fremfor andre Android TikTok-nedlastere?",
-      "a4": "SaveTikFast er den raskeste TikTok-nedlasteren for Android med 3-sekunders behandling, vannmerkefrie nedlastinger, HD- og 4K-videostøtte, TikTok MP3-konvertering, historiesparer og nedlasting av lysbildefremvisning. Ingen APK nødvendig, ingen Google Play-app kreves. Fungerer i Chrome-nettleseren på Samsung Galaxy, Google Pixel, Xiaomi, OPPO og alle Android-smarttelefoner uten registrering.",
-      "q5": "Hvordan trekker jeg ut MP3-lyd fra TikTok på Android-telefonen min?",
-      "a5": "Kopier TikTok-videokoblingen på Android-enheten din, åpne Chrome eller Samsungs nettleser, besøk SaveTikFast MP3-konvertering, lim inn URL-en og trykk på Pakk ut MP3. Lydnedlastinger i høykvalitets 320 kbps-format til nedlastingsmappen. Perfekt for å lagre trendende TikTok-sanger, lage Android-ringetoner og trekke ut virale lyder på Samsung Galaxy- og Pixel-telefoner."
-    }
-  },
-  "mac_page": {
-    "title": "TikTok Downloader for Mac",
-    "desc": "Last ned høykvalitets TikTok-videoer uten vannmerke på din MacBook eller iMac. Fungerer perfekt på Safari og Chrome.",
-    "placeholder": "Slipp TikTok-lenken her for å laste ned på Mac...",
-    "meta_title": "TikTok Video Downloader for Mac/MacBook (HD) - SaveTikFast",
-    "meta_desc": "Last ned enkelt TikTok-videoer uten vannmerke til din Mac. Gratis nettsparing som støtter macOS Safari, Chrome og Firefox i 4K-kvalitet.",
-    "faq": {
-      "q1": "Hvordan laster jeg ned TikTok-videoer på Mac uten vannmerke?",
-      "a1": "Åpne TikTok i Safari, Chrome eller Firefox på MacBook eller iMac. Kopier TikTok-videoens URL fra adressefeltet, besøk SaveTikFast, lim inn koblingen og klikk på Last ned. Videoen lagres i Mac-nedlastingsmappen i HD- eller 4K-kvalitet uten vannmerke. Fungerer på macOS Sonoma, macOS Ventura, MacBook Pro, MacBook Air, iMac og Mac Mini.",
-      "q2": "Fungerer SaveTikFast på Safari og Chrome for macOS?",
-      "a2": "Ja, SaveTikFast fungerer perfekt på alle Mac-nettlesere, inkludert Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge og Opera. Ingen nettleserutvidelse eller plugin-installasjon kreves. Vår TikTok-videonedlaster kjører direkte i nettleseren din på macOS Sonoma, Ventura og Monterey. Last ned ubegrensede TikTok-videoer uten vannmerke helt gratis på hvilken som helst Mac.",
-      "q3": "Kan jeg lagre TikTok-videoer i 4K-kvalitet på min MacBook?",
-      "a3": "Absolutt. SaveTikFast laster ned TikTok-videoer i høyeste kvalitet, inkludert 720p, 1080p Full HD, 2K og 4K-oppløsning på MacBook Pro, MacBook Air, iMac og Mac Mini. Vi komprimerer eller reduserer aldri videokvaliteten. Filer lagres som MP4 i nedlastingsmappen. Bedre enn SSSTik eller SnapTik for Mac-brukere som ønsker premium videokvalitet.",
-      "q4": "Hvorfor er SaveTikFast den beste TikTok-nedlasteren for Mac-datamaskiner?",
-      "a4": "SaveTikFast er den raskeste TikTok-videonedlasteren for Mac med umiddelbar 3-sekunders behandling, fjerning av vannmerke, støtte for 4K-kvalitet, MP3-lydekstraksjon, TikTok-historielagring og nedlasting av lysbildeserier. Ingen programvareinstallasjon på macOS nødvendig. Fungerer i Safari og Chrome-nettleseren på MacBook Pro, MacBook Air, iMac og Mac Mini uten registrering eller abonnement.",
-      "q5": "Hvordan konverterer jeg TikTok til MP3 på min Mac?",
-      "a5": "Kopier TikTok-video-URLen fra Safari eller Chrome på Mac-en din, besøk SaveTikFast MP3-konvertering, lim inn koblingen og klikk Pakk ut MP3. Lydfilen lastes ned i studiokvalitet 320 kbps MP3-format til Mac-nedlastingsmappen. Perfekt for å lagre trendende TikTok-musikk, lage spillelister og trekke ut lyder på MacBook Pro, MacBook Air og iMac."
-    }
-  },
-  "pc_page": {
-    "title": "TikTok Downloader for PC",
-    "desc": "Lagre TikTok-videoer direkte på din Windows-PC eller bærbare datamaskin. Få rene, vannmerkefrie videoer i ultraraske hastigheter.",
-    "placeholder": "Lim inn TikTok-videokoblingen fra PC-en din...",
-    "meta_title": "TikTok Downloader for Windows PC/Bærbar PC - SaveTikFast",
-    "meta_desc": "Den raskeste TikTok-videonedlasteren for Windows-PC. Lagre ubegrensede TikTok-videoer uten vannmerke på datamaskinen din gratis.",
-    "faq": {
-      "q1": "Hvordan laster jeg ned TikTok-videoer på Windows-PC uten vannmerke?",
-      "a1": "Åpne TikTok i Chrome, Edge eller Firefox på din Windows-PC eller bærbare datamaskin. Kopier TikTok-video-URLen fra nettleserens adresselinje, besøk SaveTikFast, lim inn koblingen og klikk på Last ned. Videoen lagres til PC-nedlastingsmappen i HD- eller 4K-kvalitet uten vannmerke. Fungerer på Windows 11, Windows 10, stasjonære datamaskiner og bærbare datamaskiner fra Dell, HP, Lenovo, ASUS og Acer.",
-      "q2": "Er SaveTikFast gratis å bruke på Windows-datamaskiner?",
-      "a2": "Ja, SaveTikFast er helt gratis for Windows PC-brukere. Ingen programvareinstallasjon eller nedlasting av skrivebordsapplikasjoner er nødvendig. Vår TikTok-videonedlaster fungerer direkte i nettleserne Chrome, Microsoft Edge, Firefox og Opera på Windows 11 og Windows 10. Last ned ubegrensede TikTok-videoer uten vannmerke, konverter til MP3, lagre historier og last ned lysbildeserier gratis.",
-      "q3": "Kan jeg lagre TikTok-videoer i HD 4K-kvalitet på min Windows-PC?",
-      "a3": "Absolutt. SaveTikFast laster ned TikTok-videoer i original kvalitet inkludert 720p HD, 1080p Full HD, 2K og 4K-oppløsning direkte til Windows PC-nedlastingsmappen som MP4-filer. Vi komprimerer eller reduserer aldri kvaliteten. Overlegen til SSSTik, SnapTik eller TikMate. Perfekt for å lagre og redigere TikTok-innhold på stasjonære datamaskiner som kjører Windows 11 eller Windows 10.",
-      "q4": "Hvorfor er SaveTikFast den beste TikTok-nedlasteren for PC?",
-      "a4": "SaveTikFast er den raskeste TikTok-videonedlasteren for Windows-PC med 3-sekunders prosessering, uten vannmerke, HD- og 4K-støtte, MP3-konvertering, historienedlaster og lysbildeseriesparer. Ingen installasjon av skrivebordsprogramvare kreves. Fungerer i Chrome og Edge-nettleseren på Windows 11, Windows 10 bærbare og stasjonære datamaskiner fra HP, Dell, Lenovo, ASUS uten registrering eller avgifter.",
-      "q5": "Hvordan konverterer jeg TikTok til MP3 på min Windows-datamaskin?",
-      "a5": "Kopier TikTok-video-URLen fra Chrome eller Edge på din Windows-PC, besøk SaveTikFast MP3-konverteringssiden, lim inn koblingen og klikk Pakk ut MP3. Lyden lastes ned i høykvalitets 320 kbps MP3-format til PC-nedlastingsmappen. Perfekt for å lagre TikTok-sanger, lage Windows-ringetoner, trekke ut viral lyd og bygge musikksamlinger på din stasjonære datamaskin."
-    }
-  }
 }

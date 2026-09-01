@@ -1,694 +1,711 @@
 {
-  "404": {
-    "title": "पृष्ठ नहीं मिला",
-    "home_btn": "होमपेज पर जाएं"
-  },
-  "meta": {
-    "title": "SaveTikFast 2026 – सबसे अच्छा TikTok डाउनलोडर बिना वॉटरमार्क (4K)",
-    "description": "TikTok वीडियो मुफ्त में बिना वॉटरमार्क के Ultra HD/4K में डाउनलोड करें। 2026 का सबसे तेज़ TikTok Saver। iPhone, Android और PC पर MP4 और MP3 में सेव करें।"
-  },
-  "common": {
-    "select_language": "भाषा चुनें",
-    "toggle_theme": "थीम बदलें"
-  },
-  "nav": {
-    "home": "घर",
-    "about": "Hmare Bare Mein",
-    "blog": "ब्लॉग",
-    "contact": "Sampark Karein",
-    "terms": "Upyog Ki Shartein",
-    "privacy": "Gopniyata Niti",
-    "dmca": "डीएमसीए",
-    "disclaimer": "Asvikaran",
-    "tools": "औजार"
-  },
-  "hero": {
-    "title": "टिकटॉक वीडियो डाउनलोडर",
-    "desc": "TikTok video bina watermark ke download karein. Tez, Muft aur Unlimited HD Quality."
-  },
-  "downloader": {
-    "placeholder": "वीडियो लिंक यहाँ पेस्ट करें...",
-    "btn_download": "अभी डाउनलोड करें",
-    "btn_paste": "पेस्ट करें",
-    "btn_copy": "कॉपी करें",
-    "btn_clear": "साफ़ करें",
-    "processing": "प्रसंस्करण हो रहा है...",
-    "download_video": "वीडियो डाउनलोड करें",
-    "download_audio": "MP3 डाउनलोड करें",
-    "hd_quality": "बिना वॉटरमार्क के",
-    "download_nwm": "बिना वॉटरमार्क डाउनलोड",
-    "download_hd": "HD डाउनलोड",
-    "download_story_vid": "स्टोरी डाउनलोड (वीडियो)",
-    "download_story_img": "स्टोरी डाउनलोड (इमेज)",
-    "error_busy": "सेवा व्यस्त है, कृपया बाद में पुनः प्रयास करें।",
-    "download_zip": "सभी डाउनलोड (ZIP)",
-    "creating_zip": "ZIP बना रहा है...",
-    "save_image": "सेव करें",
-    "error_wrong_type_video": "अमान्य लिंक! कृपया वीडियो डाउनलोडर का उपयोग करें।",
-    "error_wrong_type_slideshow": "अमान्य लिंक! कृपया स्लाइडशो डाउनलोडर का उपयोग करें।",
-    "error_wrong_type_story": "अमान्य लिंक! कृपया स्टोरी डाउनलोडर का उपयोग करें।",
-    "error_invalid_link": "अमान्य लिंक। जाँचें और पुनः प्रयास करें।",
-    "check_new_tab": "एक नया टैब खुला — प्रतीक्षा करते समय इसे देखें!",
-    "preparing_download": "आपकी फ़ाइल तैयार की जा रही है...",
-    "countdown_msg": "डाउनलोड अपने आप शुरू होगा",
-    "modal_ad_text": "आपके लिए खास ऑफर — क्लेम करने के लिए टैप करें!",
-    "skip_download": "छोड़ें और अभी डाउनलोड करें",
-    "download_another": "एक और वीडियो डाउनलोड करें",
-    "thank_you_title": "डाउनलोड शुरू हो गया!",
-    "thank_you_msg": "अपना डाउनलोड फ़ोल्डर जांचें"
-  },
-  "faq": {
-    "title": "अक्सर पूछे जाने वाले प्रश्न (FAQ)",
-    "q1": "बिना वॉटरमार्क के TikTok वीडियो कैसे डाउनलोड करें?",
-    "a1": "SaveTikFast के साथ बिना वॉटरमार्क के TikTok वीडियो डाउनलोड करना आसान है। बस ऐप से TikTok वीडियो लिंक कॉपी करें, इसे हमारे डाउनलोड बॉक्स में पेस्ट करें, और डाउनलोड बटन पर क्लिक करें। हमारी उन्नत तकनीक स्वचालित रूप से TikTok वॉटरमार्क हटा देती है, जो आपको एक साफ वीडियो फ़ाइल देती है। यह iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac, और Windows PC सहित सभी डिवाइस पर काम करता है। आप Chrome, Safari, Firefox, या Edge जैसे किसी भी ब्राउज़र का उपयोग कर सकते हैं। SSSTik या SnapTik के विपरीत, SaveTikFast तत्काल प्रोसेसिंग के साथ उच्चतम गुणवत्ता आउटपुट प्रदान करता है।",
-    "q2": "क्या SaveTikFast का उपयोग पूरी तरह से मुफ़्त है?",
-    "a2": "हां, SaveTikFast 100% मुफ़्त है और हमेशा मुफ़्त रहेगा। कोई छिपी हुई फीस नहीं, कोई प्रीमियम सब्सक्रिप्शन नहीं, और कोई दैनिक डाउनलोड सीमा नहीं। आप असीमित TikTok वीडियो बिना वॉटरमार्क, MP3 में कन्वर्ट, स्टोरीज सेव, और स्लाइडशो डाउनलोड कर सकते हैं - सब कुछ पूरी तरह से मुफ़्त। हमें पंजीकरण या लॉगिन की आवश्यकता नहीं है। हमारी सेवा न्यूनतम विज्ञापनों द्वारा समर्थित है, जो हमें किसी भी डिवाइस पर दुनिया भर के लाखों उपयोगकर्ताओं को मुफ़्त TikTok डाउनलोड प्रदान करने की अनुमति देती है।",
-    "q3": "कौन से डिवाइस और ब्राउज़र समर्थित हैं?",
-    "a3": "SaveTikFast वस्तुतः हर डिवाइस और ब्राउज़र पर काम करता है। समर्थित डिवाइस में iPhone (iPhone 15, 14, 13 सहित सभी मॉडल), Android फोन (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), टैबलेट (iPad, Samsung Tab), और कंप्यूटर (MacBook, iMac, Windows PC, Chromebook) शामिल हैं। समर्थित ब्राउज़र में Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, और UC Browser शामिल हैं। किसी ऐप इंस्टॉलेशन की आवश्यकता नहीं - सब कुछ सीधे आपके वेब ब्राउज़र में काम करता है।",
-    "q4": "मैं किस वीडियो गुणवत्ता में डाउनलोड कर सकता हूं?",
-    "a4": "SaveTikFast उपलब्ध उच्चतम गुणवत्ता में TikTok वीडियो डाउनलोड करता है। इसमें 720p HD, 1080p Full HD, 2K, और यहां तक कि 4K रिज़ॉल्यूशन शामिल है जब मूल वीडियो इसका समर्थन करता है। हम कभी भी वीडियो गुणवत्ता को संपीड़ित या कम नहीं करते - आपको मूल TikTok अपलोड के समान ही गुणवत्ता मिलती है। यह SaveTikFast को TikMate, SaveFrom, या MusicallyDown जैसे अन्य डाउनलोडर्स से बेहतर बनाता है जो अक्सर वीडियो को संपीड़ित करते हैं।",
-    "q5": "क्या SaveTikFast का उपयोग सुरक्षित है?",
-    "a5": "बिल्कुल। SaveTikFast पूरी तरह से सुरक्षित और संरक्षित है। हम आपके कनेक्शन को सुरक्षित रखने के लिए SSL एन्क्रिप्शन का उपयोग करते हैं, आपके किसी भी व्यक्तिगत डेटा को संग्रहीत नहीं करते, और लॉगिन या पंजीकरण की आवश्यकता नहीं होती। आपके डाउनलोड किए गए वीडियो तुरंत प्रोसेस हो जाते हैं और हमारे सर्वर पर संग्रहीत नहीं होते। हम आपके डिवाइस पर कुछ भी इंस्टॉल नहीं करते। SaveTikFast पर 2024 से सुरक्षित TikTok वीडियो डाउनलोड के लिए लाखों उपयोगकर्ताओं का भरोसा है।",
-    "q6": "SaveTikFast SSSTik या SnapTik से कैसे बेहतर है?",
-    "a6": "SaveTikFast SSSTik, SnapTik, TikMate और अन्य TikTok डाउनलोडर्स पर कई लाभ प्रदान करता है। हमारी सेवा तेज़ है (डाउनलोड 3 सेकंड में पूर्ण होते हैं), बेहतर गुणवत्ता आउटपुट प्रदान करती है (4K तक), कम विज्ञापनों के साथ साफ इंटरफ़ेस है, सभी डिवाइस पर अधिक विश्वसनीय रूप से काम करती है, और MP3 रूपांतरण, स्टोरी डाउनलोड और स्लाइडशो निष्कर्षण जैसी अतिरिक्त सुविधाएं प्रदान करती है। कई उपयोगकर्ता अन्य डाउनलोडर्स के साथ समस्याओं का सामना करने के बाद SaveTikFast पर स्विच करते हैं।",
-    "q7": "क्या मैं iPhone पर TikTok वीडियो डाउनलोड कर सकता हूं?",
-    "a7": "हां, SaveTikFast के साथ iPhone पर TikTok वीडियो डाउनलोड करना आसान है। TikTok खोलें, वीडियो लिंक कॉपी करें, फिर Safari या Chrome खोलें और SaveTikFast पर जाएं। लिंक पेस्ट करें और डाउनलोड टैप करें। वीडियो सीधे आपके iPhone के Photos या Files ऐप में सहेजा जाएगा। यह iPhone 15, 14, 13, 12 और पुराने सहित सभी iPhone मॉडल पर काम करता है। कोई ऐप इंस्टॉलेशन की आवश्यकता नहीं - सब कुछ आपके ब्राउज़र में काम करता है।",
-    "q8": "क्या मैं निजी TikTok वीडियो डाउनलोड कर सकता हूं?",
-    "a8": "SaveTikFast केवल सार्वजनिक TikTok वीडियो डाउनलोड कर सकता है। निजी वीडियो (केवल क्रिएटर या अनुमोदित फ़ॉलोअर्स को दिखाई देने वाले) TikTok की गोपनीयता सेटिंग्स के कारण किसी भी ऑनलाइन टूल द्वारा डाउनलोड नहीं किए जा सकते। यदि आपके पास क्रिएटर की अनुमति है, तो उन्हें वीडियो को अस्थायी रूप से सार्वजनिक करने या TikTok की अंतर्निहित शेयरिंग सुविधाओं के माध्यम से सीधे आपके साथ साझा करने के लिए कहें।",
-    "q9": "Samsung या Android पर TikTok कैसे डाउनलोड करें?",
-    "a9": "Samsung Galaxy या किसी भी Android फोन पर TikTok वीडियो डाउनलोड करना सरल है। TikTok ऐप खोलें, जिस वीडियो को आप चाहते हैं उस पर शेयर टैप करें और लिंक कॉपी करें। फिर Chrome, Firefox या Samsung Internet ब्राउज़र खोलें और SaveTikFast पर जाएं। डाउनलोड बॉक्स में लिंक पेस्ट करें और डाउनलोड बटन टैप करें। वीडियो आपके Download या Gallery फ़ोल्डर में सहेजा जाएगा। यह Samsung, Huawei, Xiaomi, OPPO और Google Pixel सहित सभी Android डिवाइस पर काम करता है।",
-    "q10": "अन्य TikTok डाउनलोडर्स की तुलना में SaveTikFast क्यों चुनें?",
-    "a10": "SaveTikFast TikTok डाउनलोड के लिए सर्वोत्तम विकल्प है क्योंकि हम गति, गुणवत्ता और विश्वसनीयता को जोड़ते हैं। हम सबसे तेज़ डाउनलोड गति (3 सेकंड), उच्चतम वीडियो गुणवत्ता (4K तक), वॉटरमार्क हटाना, MP3 रूपांतरण, स्टोरी डाउनलोड और स्लाइडशो निष्कर्षण प्रदान करते हैं - सब एक मुफ़्त टूल में। हमारा साफ इंटरफ़ेस सभी डिवाइस और ब्राउज़र पर पूरी तरह से काम करता है। SSSTik, SnapTik, TikMate, SaveFrom और MusicallyDown के सर्वोत्तम विकल्प के रूप में लाखों उपयोगकर्ताओं का हम पर भरोसा है।"
-  },
-  "pages": {
-    "about": {
-      "title": "Hmare Bare Mein",
-      "content": "SaveTikFast mein aapka swagat hai, 2026 ka leading TikTok Downloader.\n\nHumne SaveTikFast ko ek lakshya ke saath banaya hai: TikTok videos ko bina watermark ke save karne ka sabse tez, surakshit aur bharosemand tarika pradan karna. Dusre tools ke vipreet, hum user experience ko prathmikta dete hain: koi pareshan karne wale ads nahi, koi registration nahi aur koi software installation nahi.\n\nHumari technology ye sunishchit karti hai ki aapko video ki original quality (4K tak) mile, wo bhi bina kisi logo ke."
+    "404": {
+        "title": "पृष्ठ नहीं मिला",
+        "home_btn": "होमपेज पर जाएं"
     },
-    "contact": {
-      "title": "Sampark Karein",
-      "content": "Hum aapke feedback ki qadar karte hain aur madad ke liye yahan hain.\n\nAgar aapko koi technical dikkat aati hai, sudhaar ke liye sujhav hain, ya business queries hain, toh kripya hamari support team se sampark karein:\n\n📧 Email: support@savetik-fast.xyz\n\nHum 24 ghante ke bhitar sabhi sawalon ka jawab dene ki koshish karte hain."
-    },
-    "terms": {
-      "title": "Upyog Ki Shartein",
-      "content": "SaveTikFast ka upyog karke, aap nimnlikhit sharton se sehmat hote hain:\n\n1. Niji Upyog:\nHamari seva niji aur gair-vyavsayik upyog ke liye hai. Aap offline dekhne ke liye video download kar sakte hain.\n\n2. Bauddhik Sampada (Intellectual Property):\nHum download kiye gaye content ke malik nahi hain. Sabhi adhikar TikTok par original creators ke hain. Aap sehmat hain ki content ka upyog copyright ka ullanghan karne ke liye nahi karenge.\n\n3. Zimmedari:\nSaveTikFast iske liye zimmedar nahi hai ki aap download kiye gaye material ka upyog kaise karte hain. User copyright ullanghan ke liye puri tarah zimmedar hai."
-    },
-    "privacy": {
-      "title": "Gopniyata Niti",
-      "content": "Aapki privacy hamare liye mahatvapurn hai.\n\nData Sangrah:\nHum naam ya email jaisi niji jankari ikatha nahi karte. Hum site ki performance behtar banane ke liye anonymous analytics (jaise cookies) ka upyog kar sakte hain.\n\nVideo Storage Nahi:\nSaveTikFast apne servers par koi video host ya store nahi karta. Sabhi file processing turant hoti hai."
-    },
-    "dmca": {
-      "title": "डीएमसीए नीति",
-      "content": "SaveTikFast dusron ke bauddhik sampada adhikaron ka samman karta hai.\n\nHum ek technical service provider ke roop mein kaam karte hain aur copyright content host nahi karte. Sabhi videos seedhe third-party servers (TikTok) se serve kiye jate hain.\n\nAgar aapko lagta hai ki aapka copyright kiya gaya kaam hamari seva par bina anumati ke dikhaya gaya hai, toh kripya ek formal DMCA notice bhejein: support@savetik-fast.xyz."
-    },
-    "disclaimer": {
-      "title": "Asvikaran (Disclaimer)",
-      "content": "1. Gair-Sambandhta:\nSaveTikFast ek swatantra utility tool hai aur TikTok Inc. ya ByteDance Ltd. se kisi bhi tarah se juda, authorized, endorsed ya officially connected NAHI hai.\n\n2. Trademarks:\n'TikTok' naam aur iske logos unke sambandhit malikon ke registered trademarks hain.\n\n3. Content:\nTikTok servers par host kiye gaye content par hamara koi niyantran nahi hai."
-    }
-  },
-  "footer": {
-    "rights": "© 2026 SaveTikFast. Sabhi adhikar surakshit hain."
-  },
-  "features": {
-    "title": "मुख्य विशेषताएं",
-    "no_watermark": {
-      "title": "बिना वॉटरमार्क",
-      "desc": "मूल HD गुणवत्ता में बिना वॉटरमार्क के TikTok वीडियो डाउनलोड करें। SaveTikFast स्वचालित रूप से TikTok लोगो हटा देता है, जो आपको SSSTik, SnapTik या TikMate से बेहतर साफ वीडियो देता है। Instagram, YouTube Shorts पर पुनः पोस्ट करने या अपनी गैलरी में सहेजने के लिए एकदम सही।"
-    },
-    "fast": {
-      "title": "बिजली की तेज़ी",
-      "desc": "ऑनलाइन सबसे तेज़ TikTok वीडियो डाउनलोडर। iPhone, Android, Samsung, Huawei, iPad, PC या Mac पर सिर्फ 3 सेकंड में कोई भी TikTok वीडियो सेव करें। हमारे सर्वर गति के लिए अनुकूलित हैं, जो हमें SaveFrom और MusicallyDown से तेज़ बनाता है।"
-    },
-    "quality": {
-      "title": "HD और 4K गुणवत्ता",
-      "desc": "उपलब्ध उच्चतम गुणवत्ता में TikTok वीडियो डाउनलोड करें - 720p, 1080p Full HD, 2K, और यहां तक कि 4K जब उपलब्ध हो। हम अन्य TikTok डाउनलोडर्स के विपरीत, संपीड़न के बिना मूल वीडियो गुणवत्ता को संरक्षित करते हैं।"
-    },
-    "device": {
-      "title": "सभी डिवाइस समर्थित",
-      "desc": "हर डिवाइस पर पूरी तरह से काम करता है - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC, और Chromebook। कोई ऐप इंस्टॉलेशन की आवश्यकता नहीं।"
-    },
-    "free": {
-      "title": "100% हमेशा के लिए मुफ़्त",
-      "desc": "बिना किसी छिपे शुल्क, बिना पंजीकरण और बिना दैनिक सीमा के असीमित TikTok वीडियो डाउनलोड। SaveTikFast पूरी तरह से मुफ़्त है और दुनिया भर के सभी उपयोगकर्ताओं के लिए हमेशा मुफ़्त रहेगा।"
-    },
-    "secure": {
-      "title": "निजी और सुरक्षित",
-      "desc": "आपकी गोपनीयता मायने रखती है। हम आपका डेटा संग्रहीत नहीं करते, लॉगिन की आवश्यकता नहीं होती, और आपके डाउनलोड को ट्रैक नहीं करते। SSL एन्क्रिप्शन के साथ सुरक्षित और गुमनाम TikTok वीडियो डाउनलोडिंग।"
-    },
-    "browser": {
-      "title": "सभी ब्राउज़र",
-      "desc": "Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, और UC Browser पर तुरंत काम करता है। कोई एक्सटेंशन या प्लगइन की आवश्यकता नहीं - बस पेस्ट करें और डाउनलोड करें।"
-    },
-    "batch": {
-      "title": "बैच डाउनलोड",
-      "desc": "कई TikTok वीडियो जल्दी से सेव करें। अपने पसंदीदा क्रिएटर के पूरे संग्रह को किसी भी अन्य टूल से तेज़ डाउनलोड करें। SSSTik या SnapTik से बेहतर बल्क डाउनलोडिंग।"
-    }
-  },
-  "how_to": {
-    "title": "बिना वॉटरमार्क के टिकटॉक वीडियो कैसे डाउनलोड करें",
-    "step1": "उस टिकटॉक वीडियो का लिंक कॉपी करें जिसे आप सेव करना चाहते हैं।",
-    "step2": "इस पेज के शीर्ष पर स्थित डाउनलोड बॉक्स में लिंक पेस्ट करें।",
-    "step3": "'डाउनलोड' बटन पर क्लिक करें और आपका वीडियो तुरंत सेव हो जाएगा।",
-    "step1_title": "लिंक कॉपी करें",
-    "step2_title": "URL पेस्ट करें",
-    "step3_title": "डाउनलोड"
-  },
-  "tools": {
-    "backToDownloader": "डाउनलोडर पर वापस जाएं",
     "meta": {
-      "title": "मुफ्त ऑनलाइन टूल्स – इमेज कम्प्रेसर, कनवर्टर और QR जनरेटर",
-      "description": "मुफ्त ब्राउज़र-आधारित टूल्स: इमेज कम्प्रेस करें, फॉर्मेट बदलें (WebP, JPG, PNG) और QR कोड बनाएं। कोई फाइल अपलोड या रजिस्ट्रेशन की जरूरत नहीं। 100% मुफ्त।"
+        "title": "SaveTikFast 2026 – सबसे अच्छा TikTok डाउनलोडर बिना वॉटरमार्क (4K)",
+        "description": "TikTok वीडियो मुफ्त में बिना वॉटरमार्क के Ultra HD/4K में डाउनलोड करें। 2026 का सबसे तेज़ TikTok Saver। iPhone, Android और PC पर MP4 और MP3 में सेव करें।"
+    },
+    "common": {
+        "select_language": "भाषा चुनें",
+        "toggle_theme": "थीम बदलें"
+    },
+    "nav": {
+        "home": "घर",
+        "about": "Hmare Bare Mein",
+        "blog": "ब्लॉग",
+        "contact": "Sampark Karein",
+        "terms": "Upyog Ki Shartein",
+        "privacy": "Gopniyata Niti",
+        "dmca": "डीएमसीए",
+        "disclaimer": "Asvikaran",
+        "tools": "औजार"
     },
     "hero": {
-      "title": "मुफ्त इमेज और QR टूल्स",
-      "desc": "इमेज कंप्रेस करें, फॉर्मेट बदलें और QR कोड बनाएं — सब कुछ आपके ब्राउज़र में लोकली प्रोसेस होता है। 100% निजी।"
+        "title": "टिकटॉक वीडियो डाउनलोडर",
+        "desc": "TikTok video bina watermark ke download karein. Tez, Muft aur Unlimited HD Quality."
     },
-    "tabs": {
-      "compressor": "इमेज कंप्रेसर",
-      "converter": "फॉर्मेट कन्वर्टर",
-      "qrcode": "QR जेनरेटर",
-      "engagement": "एंगेजमेंट कैलकुलेटर",
-      "money": "कमाई कैलकुलेटर",
-      "font": "फ़ॉन्ट जेनरेटर",
-      "hashtag": "हैशटैग जेनरेटर"
+    "downloader": {
+        "placeholder": "वीडियो लिंक यहाँ पेस्ट करें...",
+        "btn_download": "अभी डाउनलोड करें",
+        "btn_paste": "पेस्ट करें",
+        "btn_copy": "कॉपी करें",
+        "btn_clear": "साफ़ करें",
+        "processing": "प्रसंस्करण हो रहा है...",
+        "download_video": "वीडियो डाउनलोड करें",
+        "download_audio": "MP3 डाउनलोड करें",
+        "hd_quality": "बिना वॉटरमार्क के",
+        "download_nwm": "बिना वॉटरमार्क डाउनलोड",
+        "download_hd": "HD डाउनलोड",
+        "download_story_vid": "स्टोरी डाउनलोड (वीडियो)",
+        "download_story_img": "स्टोरी डाउनलोड (इमेज)",
+        "error_busy": "सेवा व्यस्त है, कृपया बाद में पुनः प्रयास करें।",
+        "download_zip": "सभी डाउनलोड (ZIP)",
+        "creating_zip": "ZIP बना रहा है...",
+        "save_image": "सेव करें",
+        "error_wrong_type_video": "अमान्य लिंक! कृपया वीडियो डाउनलोडर का उपयोग करें।",
+        "error_wrong_type_slideshow": "अमान्य लिंक! कृपया स्लाइडशो डाउनलोडर का उपयोग करें।",
+        "error_wrong_type_story": "अमान्य लिंक! कृपया स्टोरी डाउनलोडर का उपयोग करें।",
+        "error_invalid_link": "अमान्य लिंक। जाँचें और पुनः प्रयास करें।",
+        "check_new_tab": "एक नया टैब खुला — प्रतीक्षा करते समय इसे देखें!",
+        "preparing_download": "आपकी फ़ाइल तैयार की जा रही है...",
+        "countdown_msg": "डाउनलोड अपने आप शुरू होगा",
+        "modal_ad_text": "आपके लिए खास ऑफर — क्लेम करने के लिए टैप करें!",
+        "skip_download": "छोड़ें और अभी डाउनलोड करें",
+        "download_another": "एक और वीडियो डाउनलोड करें",
+        "thank_you_title": "डाउनलोड शुरू हो गया!",
+        "thank_you_msg": "अपना डाउनलोड फ़ोल्डर जांचें"
     },
-    "dropzone": {
-      "text": "इमेज को यहाँ ड्रैग करें",
-      "hint": "या चुनने के लिए क्लिक करें (JPG, PNG, WebP — अधिकतम 15MB)",
-      "hint_convert": "या चुनने के लिए क्लिक करें (JPG, PNG, WebP, GIF, BMP)"
+    "faq": {
+        "title": "अक्सर पूछे जाने वाले प्रश्न (FAQ)",
+        "q1": "बिना वॉटरमार्क के TikTok वीडियो कैसे डाउनलोड करें?",
+        "a1": "SaveTikFast के साथ बिना वॉटरमार्क के TikTok वीडियो डाउनलोड करना आसान है। बस ऐप से TikTok वीडियो लिंक कॉपी करें, इसे हमारे डाउनलोड बॉक्स में पेस्ट करें, और डाउनलोड बटन पर क्लिक करें। हमारी उन्नत तकनीक स्वचालित रूप से TikTok वॉटरमार्क हटा देती है, जो आपको एक साफ वीडियो फ़ाइल देती है। यह iPhone, Android, Samsung Galaxy, Huawei, iPad, Mac, और Windows PC सहित सभी डिवाइस पर काम करता है। आप Chrome, Safari, Firefox, या Edge जैसे किसी भी ब्राउज़र का उपयोग कर सकते हैं। SSSTik या SnapTik के विपरीत, SaveTikFast तत्काल प्रोसेसिंग के साथ उच्चतम गुणवत्ता आउटपुट प्रदान करता है।",
+        "q2": "क्या SaveTikFast का उपयोग पूरी तरह से मुफ़्त है?",
+        "a2": "हां, SaveTikFast 100% मुफ़्त है और हमेशा मुफ़्त रहेगा। कोई छिपी हुई फीस नहीं, कोई प्रीमियम सब्सक्रिप्शन नहीं, और कोई दैनिक डाउनलोड सीमा नहीं। आप असीमित TikTok वीडियो बिना वॉटरमार्क, MP3 में कन्वर्ट, स्टोरीज सेव, और स्लाइडशो डाउनलोड कर सकते हैं - सब कुछ पूरी तरह से मुफ़्त। हमें पंजीकरण या लॉगिन की आवश्यकता नहीं है। हमारी सेवा न्यूनतम विज्ञापनों द्वारा समर्थित है, जो हमें किसी भी डिवाइस पर दुनिया भर के लाखों उपयोगकर्ताओं को मुफ़्त TikTok डाउनलोड प्रदान करने की अनुमति देती है।",
+        "q3": "कौन से डिवाइस और ब्राउज़र समर्थित हैं?",
+        "a3": "SaveTikFast वस्तुतः हर डिवाइस और ब्राउज़र पर काम करता है। समर्थित डिवाइस में iPhone (iPhone 15, 14, 13 सहित सभी मॉडल), Android फोन (Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus), टैबलेट (iPad, Samsung Tab), और कंप्यूटर (MacBook, iMac, Windows PC, Chromebook) शामिल हैं। समर्थित ब्राउज़र में Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, और UC Browser शामिल हैं। किसी ऐप इंस्टॉलेशन की आवश्यकता नहीं - सब कुछ सीधे आपके वेब ब्राउज़र में काम करता है।",
+        "q4": "मैं किस वीडियो गुणवत्ता में डाउनलोड कर सकता हूं?",
+        "a4": "SaveTikFast उपलब्ध उच्चतम गुणवत्ता में TikTok वीडियो डाउनलोड करता है। इसमें 720p HD, 1080p Full HD, 2K, और यहां तक कि 4K रिज़ॉल्यूशन शामिल है जब मूल वीडियो इसका समर्थन करता है। हम कभी भी वीडियो गुणवत्ता को संपीड़ित या कम नहीं करते - आपको मूल TikTok अपलोड के समान ही गुणवत्ता मिलती है। यह SaveTikFast को TikMate, SaveFrom, या MusicallyDown जैसे अन्य डाउनलोडर्स से बेहतर बनाता है जो अक्सर वीडियो को संपीड़ित करते हैं।",
+        "q5": "क्या SaveTikFast का उपयोग सुरक्षित है?",
+        "a5": "बिल्कुल। SaveTikFast पूरी तरह से सुरक्षित और संरक्षित है। हम आपके कनेक्शन को सुरक्षित रखने के लिए SSL एन्क्रिप्शन का उपयोग करते हैं, आपके किसी भी व्यक्तिगत डेटा को संग्रहीत नहीं करते, और लॉगिन या पंजीकरण की आवश्यकता नहीं होती। आपके डाउनलोड किए गए वीडियो तुरंत प्रोसेस हो जाते हैं और हमारे सर्वर पर संग्रहीत नहीं होते। हम आपके डिवाइस पर कुछ भी इंस्टॉल नहीं करते। SaveTikFast पर 2024 से सुरक्षित TikTok वीडियो डाउनलोड के लिए लाखों उपयोगकर्ताओं का भरोसा है।",
+        "q6": "SaveTikFast SSSTik या SnapTik से कैसे बेहतर है?",
+        "a6": "SaveTikFast SSSTik, SnapTik, TikMate और अन्य TikTok डाउनलोडर्स पर कई लाभ प्रदान करता है। हमारी सेवा तेज़ है (डाउनलोड 3 सेकंड में पूर्ण होते हैं), बेहतर गुणवत्ता आउटपुट प्रदान करती है (4K तक), कम विज्ञापनों के साथ साफ इंटरफ़ेस है, सभी डिवाइस पर अधिक विश्वसनीय रूप से काम करती है, और MP3 रूपांतरण, स्टोरी डाउनलोड और स्लाइडशो निष्कर्षण जैसी अतिरिक्त सुविधाएं प्रदान करती है। कई उपयोगकर्ता अन्य डाउनलोडर्स के साथ समस्याओं का सामना करने के बाद SaveTikFast पर स्विच करते हैं।",
+        "q7": "क्या मैं iPhone पर TikTok वीडियो डाउनलोड कर सकता हूं?",
+        "a7": "हां, SaveTikFast के साथ iPhone पर TikTok वीडियो डाउनलोड करना आसान है। TikTok खोलें, वीडियो लिंक कॉपी करें, फिर Safari या Chrome खोलें और SaveTikFast पर जाएं। लिंक पेस्ट करें और डाउनलोड टैप करें। वीडियो सीधे आपके iPhone के Photos या Files ऐप में सहेजा जाएगा। यह iPhone 15, 14, 13, 12 और पुराने सहित सभी iPhone मॉडल पर काम करता है। कोई ऐप इंस्टॉलेशन की आवश्यकता नहीं - सब कुछ आपके ब्राउज़र में काम करता है।",
+        "q8": "क्या मैं निजी TikTok वीडियो डाउनलोड कर सकता हूं?",
+        "a8": "SaveTikFast केवल सार्वजनिक TikTok वीडियो डाउनलोड कर सकता है। निजी वीडियो (केवल क्रिएटर या अनुमोदित फ़ॉलोअर्स को दिखाई देने वाले) TikTok की गोपनीयता सेटिंग्स के कारण किसी भी ऑनलाइन टूल द्वारा डाउनलोड नहीं किए जा सकते। यदि आपके पास क्रिएटर की अनुमति है, तो उन्हें वीडियो को अस्थायी रूप से सार्वजनिक करने या TikTok की अंतर्निहित शेयरिंग सुविधाओं के माध्यम से सीधे आपके साथ साझा करने के लिए कहें।",
+        "q9": "Samsung या Android पर TikTok कैसे डाउनलोड करें?",
+        "a9": "Samsung Galaxy या किसी भी Android फोन पर TikTok वीडियो डाउनलोड करना सरल है। TikTok ऐप खोलें, जिस वीडियो को आप चाहते हैं उस पर शेयर टैप करें और लिंक कॉपी करें। फिर Chrome, Firefox या Samsung Internet ब्राउज़र खोलें और SaveTikFast पर जाएं। डाउनलोड बॉक्स में लिंक पेस्ट करें और डाउनलोड बटन टैप करें। वीडियो आपके Download या Gallery फ़ोल्डर में सहेजा जाएगा। यह Samsung, Huawei, Xiaomi, OPPO और Google Pixel सहित सभी Android डिवाइस पर काम करता है।",
+        "q10": "अन्य TikTok डाउनलोडर्स की तुलना में SaveTikFast क्यों चुनें?",
+        "a10": "SaveTikFast TikTok डाउनलोड के लिए सर्वोत्तम विकल्प है क्योंकि हम गति, गुणवत्ता और विश्वसनीयता को जोड़ते हैं। हम सबसे तेज़ डाउनलोड गति (3 सेकंड), उच्चतम वीडियो गुणवत्ता (4K तक), वॉटरमार्क हटाना, MP3 रूपांतरण, स्टोरी डाउनलोड और स्लाइडशो निष्कर्षण प्रदान करते हैं - सब एक मुफ़्त टूल में। हमारा साफ इंटरफ़ेस सभी डिवाइस और ब्राउज़र पर पूरी तरह से काम करता है। SSSTik, SnapTik, TikMate, SaveFrom और MusicallyDown के सर्वोत्तम विकल्प के रूप में लाखों उपयोगकर्ताओं का हम पर भरोसा है।"
     },
-    "btn": {
-      "download": "अभी डाउनलोड करें",
-      "downloadPng": "PNG डाउनलोड करें"
-    },
-    "compressor": {
-      "title": "ऑनलाइन इमेज कंप्रेसर",
-      "desc": "बिना गुणवत्ता खोए इमेज फ़ाइल का आकार कम करें। 15MB तक के JPG, PNG और WebP फॉर्मेट का समर्थन करता है।",
-      "quality": "कंप्रेशन गुणवत्ता",
-      "maxWidth": "अधिकतम चौड़ाई (px)",
-      "btn": "इमेज कंप्रेस करें",
-      "howto": {
-        "title": "ऑनलाइन इमेज कैसे कंप्रेस करें",
-        "step1": {
-          "title": "इमेज अपलोड करें",
-          "desc": "अपनी JPG, PNG, या WebP इमेज (15MB तक) को ड्रैग करें या चुनने के लिए क्लिक करें।"
+    "pages": {
+        "about": {
+            "title": "Hmare Bare Mein",
+            "content": "SaveTikFast mein aapka swagat hai, 2026 ka leading TikTok Downloader.\n\nHumne SaveTikFast ko ek lakshya ke saath banaya hai: TikTok videos ko bina watermark ke save karne ka sabse tez, surakshit aur bharosemand tarika pradan karna. Dusre tools ke vipreet, hum user experience ko prathmikta dete hain: koi pareshan karne wale ads nahi, koi registration nahi aur koi software installation nahi.\n\nHumari technology ye sunishchit karti hai ki aapko video ki original quality (4K tak) mile, wo bhi bina kisi logo ke."
         },
-        "step2": {
-          "title": "सेटिंग्स ठीक करें",
-          "desc": "अपनी पसंद का गुणवत्ता स्तर (10-100%) और अधिकतम चौड़ाई सेट करें।"
+        "contact": {
+            "title": "Sampark Karein",
+            "content": "Hum aapke feedback ki qadar karte hain aur madad ke liye yahan hain.\n\nAgar aapko koi technical dikkat aati hai, sudhaar ke liye sujhav hain, ya business queries hain, toh kripya hamari support team se sampark karein:\n\n📧 Email: support@savetik-fast.xyz\n\nHum 24 ghante ke bhitar sabhi sawalon ka jawab dene ki koshish karte hain."
         },
-        "step3": {
-          "title": "डाउनलोड करें",
-          "desc": "कंप्रेस पर क्लिक करें और अपनी ऑप्टिमाइज्ड इमेज तुरंत डाउनलोड करें।"
+        "terms": {
+            "title": "Upyog Ki Shartein",
+            "content": "SaveTikFast ka upyog karke, aap nimnlikhit sharton se sehmat hote hain:\n\n1. Niji Upyog:\nHamari seva niji aur gair-vyavsayik upyog ke liye hai. Aap offline dekhne ke liye video download kar sakte hain.\n\n2. Bauddhik Sampada (Intellectual Property):\nHum download kiye gaye content ke malik nahi hain. Sabhi adhikar TikTok par original creators ke hain. Aap sehmat hain ki content ka upyog copyright ka ullanghan karne ke liye nahi karenge.\n\n3. Zimmedari:\nSaveTikFast iske liye zimmedar nahi hai ki aap download kiye gaye material ka upyog kaise karte hain. User copyright ullanghan ke liye puri tarah zimmedar hai."
+        },
+        "privacy": {
+            "title": "Gopniyata Niti",
+            "content": "Aapki privacy hamare liye mahatvapurn hai.\n\nData Sangrah:\nHum naam ya email jaisi niji jankari ikatha nahi karte. Hum site ki performance behtar banane ke liye anonymous analytics (jaise cookies) ka upyog kar sakte hain.\n\nVideo Storage Nahi:\nSaveTikFast apne servers par koi video host ya store nahi karta. Sabhi file processing turant hoti hai."
+        },
+        "dmca": {
+            "title": "डीएमसीए नीति",
+            "content": "SaveTikFast dusron ke bauddhik sampada adhikaron ka samman karta hai.\n\nHum ek technical service provider ke roop mein kaam karte hain aur copyright content host nahi karte. Sabhi videos seedhe third-party servers (TikTok) se serve kiye jate hain.\n\nAgar aapko lagta hai ki aapka copyright kiya gaya kaam hamari seva par bina anumati ke dikhaya gaya hai, toh kripya ek formal DMCA notice bhejein: support@savetik-fast.xyz."
+        },
+        "disclaimer": {
+            "title": "Asvikaran (Disclaimer)",
+            "content": "1. Gair-Sambandhta:\nSaveTikFast ek swatantra utility tool hai aur TikTok Inc. ya ByteDance Ltd. se kisi bhi tarah se juda, authorized, endorsed ya officially connected NAHI hai.\n\n2. Trademarks:\n'TikTok' naam aur iske logos unke sambandhit malikon ke registered trademarks hain.\n\n3. Content:\nTikTok servers par host kiye gaye content par hamara koi niyantran nahi hai."
         }
-      },
-      "seo": {
-        "title": "इमेज कंप्रेस क्यों करें?",
-        "p1": "वेबसाइट परफॉरमेंस, तेज़ लोडिंग और कम बैंडविड्थ उपयोग के लिए इमेज कंप्रेशन अनिवार्य है। हमारा मुफ्त ऑनलाइन इमेज कंप्रेसर विजुअल क्वालिटी बनाए रखते हुए फ़ाइल का आकार कम करने के लिए उन्नत एल्गोरिदम का उपयोग करता है।",
-        "p2": "इमेज कंप्रेशन के लाभों में शामिल हैं:",
-        "benefit1": "वेबसाइट लोडिंग की तेज़ गति (SEO में सुधार)",
-        "benefit2": "स्टोरेज और बैंडविड्थ लागत में कमी",
-        "benefit3": "मोबाइल डिवाइस पर बेहतर यूजर एक्सपीरियंस",
-        "benefit4": "सोशल मीडिया शेयरिंग के लिए ऑप्टिमाइज्ड इमेज",
-        "p3": "सभी प्रोसेसिंग Web Workers का उपयोग करके आपके ब्राउज़र में होती है - आपकी इमेज कभी भी किसी सर्वर पर अपलोड नहीं की जाती हैं, जिससे पूर्ण गोपनीयता और सुरक्षा सुनिश्चित होती है।"
-      },
-      "faq": {
-        "title": "अक्सर पूछे जाने वाले प्रश्न",
-        "q1": "क्या मेरी इमेज सर्वर पर अपलोड होती है?",
-        "a1": "नहीं! सभी कंप्रेशन सीधे आपके ब्राउज़र में होता है। आपकी इमेज कभी भी आपके डिवाइस को नहीं छोड़ती हैं, जिससे पूर्ण गोपनीयता सुनिश्चित होती है।",
-        "q2": "कौन से फ़ाइल फॉर्मेट समर्थित हैं?",
-        "a2": "हम 15MB फ़ाइल आकार तक JPG/JPEG, PNG और WebP फॉर्मेट का समर्थन करते।",
-        "q3": "मैं फ़ाइल का आकार कितना कम कर सकता हूँ?",
-        "a3": "मूल इमेज और चुनी गई गुणवत्ता सेटिंग्स के आधार पर आमतौर पर 50-80% की कमी होती है।"
-      }
     },
-    "converter": {
-      "title": "इमेज फॉर्मेट कन्वर्टर",
-      "desc": "अपने ब्राउज़र में तुरंत JPG, PNG और WebP फॉर्मेट के बीच इमेज बदलें।",
-      "output": "आउटपुट फॉर्मेट",
-      "quality": "आउटपुट गुणवत्ता",
-      "btn": "इमेज कन्वर्ट करें",
-      "howto": {
-        "title": "इमेज फॉर्मेट कैसे बदलें",
-        "step1": {
-          "title": "इमेज चुनें",
-          "desc": "कोई भी इमेज फ़ाइल अपलोड करें (JPG, PNG, WebP, GIF, BMP समर्थित)।"
-        },
-        "step2": {
-          "title": "फॉर्मेट चुनें",
-          "desc": "अपना इच्छित आउटपुट फॉर्मेट (WebP, JPG या PNG) चुनें।"
-        },
-        "step3": {
-          "title": "कन्वर्ट और सेव करें",
-          "desc": "कन्वर्ट पर क्लिक करें और अपनी नई इमेज तुरंत डाउनलोड करें।"
-        }
-      },
-      "seo": {
-        "title": "इमेज फॉर्मेट को समझना",
-        "p1": "वेब परफॉरमेंस और गुणवत्ता के लिए सही इमेज फॉर्मेट चुनना महत्वपूर्ण है। यहाँ एक तुलना है:",
-        "webp": "Google द्वारा आधुनिक फॉर्मेट जो JPG/PNG की तुलना में समान गुणवत्ता के साथ 25-35% छोटा फ़ाइल आकार प्रदान करता है। वेब उपयोग के लिए सबसे अच्छा है।",
-        "jpg": "तस्वीरों और कई रंगों वाली जटिल इमेज के लिए आदर्श। इसमें 'लॉसी कंप्रेशन' का उपयोग होता है।",
-        "png": "पारदर्शिता या तीखे किनारों (लोगो, ग्राफिक्स) की आवश्यकता वाली इमेज के लिए उपयुक्त। इसमें 'लॉसलेस कंप्रेशन' का उपयोग होता है।",
-        "p2": "हमारा कन्वर्टर तत्काल, क्लाइंट-साइड रूपांतरण के लिए HTML5 Canvas API का उपयोग करता है। आपकी इमेज कभी आपके डिवाइस से बाहर नहीं जाती हैं।"
-      },
-      "faq": {
-        "title": "अक्सर पूछे जाने वाले प्रश्न",
-        "q1": "WebP में क्यों बदलें?",
-        "a1": "WebP समान गुणवत्ता के साथ JPG/PNG की तुलना में 25-35% छोटा फ़ाइल आकार प्रदान करता है, जिससे आपकी वेबसाइट तेज़ लोड होती है।",
-        "q2": "क्या इमेज की गुणवत्ता कम हो जाएगी?",
-        "a2": "आप क्वालिटी स्लाइडर से इसे नियंत्रित कर सकते हैं। उच्च मान अधिक गुणवत्ता बनाए रखते हैं लेकिन फ़ाइल का आकार बड़ा होता है।",
-        "q3": "क्या मैं एनिमेटेड GIF कन्वर्ट कर सकता हूँ?",
-        "a3": "वर्तमान में, एनिमेटेड GIF को एक स्थिर इमेज (पहली फ्रेम) में बदल दिया जाएगा।"
-      }
+    "footer": {
+        "rights": "© 2026 SaveTikFast. Sabhi adhikar surakshit hain."
     },
-    "qrcode": {
-      "title": "ऑनलाइन QR कोड जेनरेटर",
-      "desc": "URL, टेक्स्ट या किसी भी कंटेंट के लिए तुरंत हाई-रिजॉल्यूशन QR कोड जेनरेट करें।",
-      "input": "टेक्स्ट या URL",
-      "placeholder": "https://example.com या कोई टेक्स्ट",
-      "size": "QR कोड का आकार",
-      "color": "QR का रंग",
-      "btn": "QR कोड जेनरेट करें",
-      "howto": {
-        "title": "QR कोड कैसे जेनरेट करें",
-        "step1": {
-          "title": "कंटेंट दर्ज करें",
-          "desc": "अपना URL, टेक्स्ट, फ़ोन नंबर या कोई भी कंटेंट टाइप करें जिसे आप कोड करना चाहते हैं।"
-        },
-        "step2": {
-          "title": "कस्टमाइज करें",
-          "desc": "QR कोड के लिए अपना पसंदीदा आकार और रंग चुनें।"
-        },
-        "step3": {
-          "title": "जेनरेट और डाउनलोड",
-          "desc": "जेनरेट पर क्लिक करें और हाई-रिजॉल्यूशन QR कोड को PNG के रूप में डाउनलोड करें।"
-        }
-      },
-      "seo": {
-        "title": "QR कोड के उपयोग",
-        "p1": "QR कोड व्यवसायों और व्यक्तियों के लिए आवश्यक हो गए हैं। सामान्य उपयोग के उदाहरण:",
-        "use1": "वेबसाइट URL - उपयोगकर्ताओं को तुरंत आपकी वेबसाइट पर भेजें",
-        "use2": "बिजनेस कार्ड - संपर्क जानकारी डिजिटल रूप से साझा करें",
-        "use3": "प्रोडक्ट पैकेजिंग - मैनुअल या सपोर्ट पेज से लिंक करें",
-        "use4": "मार्केटिंग सामग्री - कैंपेन एंगेजमेंट ट्रैक करें",
-        "use5": "रेस्टोरेंट मेनू - कॉन्टैक्टलेस मेनू एक्सेस",
-        "use6": "इवेंट टिकट - तेज़ प्रवेश सत्यापन",
-        "p2": "हमारा QR जेनरेटर हाई-रिजॉल्यूशन कोड बनाता है जो किसी भी डिवाइस पर भरोसेमंद रूप से स्कैन होते हैं।"
-      },
-      "faq": {
-        "title": "अक्सर पूछे जाने वाले प्रश्न",
-        "q1": "मैं QR कोड में क्या कोड कर सकता हूँ?",
-        "a1": "URL, सादा टेक्स्ट, फ़ोन नंबर, ईमेल पते, WiFi क्रेडेंशियल और बहुत कुछ।",
-        "q2": "मुझे कौन सा आकार चुनना चाहिए?",
-        "a2": "डिजिटल उपयोग के लिए 256px अच्छा है। प्रिंट सामग्री के लिए 512px या 1024px चुनें।",
-        "q3": "क्या QR कोड एक्सपायर होते हैं?",
-        "a3": "नहीं! यहाँ जेनरेट किए गए QR कोड स्टेटिक हैं और कभी एक्सपायर नहीं होते। इनमें डेटा सीधे होता है।"
-      }
-    },
-    "engagement": {
-      "title": "TikTok एंगेजमेंट कैलकुलेटर",
-      "desc": "लाइक्स, कमेंट्स और शेयर के आधार पर अपने एंगेजमेंट रेट की गणना करें।",
-      "followers": "फ़ॉलोअर्स",
-      "likes": "लाइक्स",
-      "comments": "कमेंट्स",
-      "shares": "शेयर",
-      "btn": "अभी गणना करें",
-      "result": "एंगेजमेंट रेट",
-      "excellent": "शानदार! 🚀",
-      "good": "बढ़िया 👍",
-      "poor": "सुधार की जरूरत 📉"
-    },
-    "money": {
-      "title": "TikTok कमाई कैलकुलेटर",
-      "desc": "वीडियो व्यूज के आधार पर अपनी संभावित कमाई का अनुमान लगाएं।",
-      "views": "वीडियो व्यूज दर्ज करें",
-      "btn": "कमाई की गणना करें",
-      "result": "अनुमानित कमाई"
-    },
-    "font": {
-      "title": "TikTok फ़ॉन्ट जेनरेटर",
-      "desc": "अपनी प्रोफाइल और वीडियो विवरण के लिए अद्वितीय फ़ॉन्ट स्टाइल बनाएं।",
-      "placeholder": "यहाँ टेक्स्ट लिखें...",
-      "copy": "कॉपी करें"
-    },
-    "hashtag": {
-      "title": "TikTok हैशटैग जेनरेटर",
-      "desc": "अपने वीडियो के लिए ट्रेंडिंग हैशटैग खोजें और जेनरेट करें।",
-      "btn": "अभी जेनरेट करें",
-      "copy": "सब कॉपी करें"
-    },
-    "progress": {
-      "compressing": "इमेज कंप्रेस हो रही है...",
-      "converting": "इमेज कन्वर्ट हो रही है..."
-    },
-    "result": {
-      "success": "कंप्रेशन पूरा हुआ!",
-      "converted": "रूपांतरण पूरा हुआ!",
-      "qrReady": "आपका QR कोड तैयार है!"
-    },
-    "stats": {
-      "original": "मूल आकार",
-      "compressed": "कंप्रेस आकार",
-      "saved": "बचत",
-      "originalFormat": "मूल फॉर्मेट",
-      "newFormat": "नया फॉर्मेट",
-      "newSize": "नया आकार"
-    },
-    "preview": {
-      "before": "पहले",
-      "after": "बाद में",
-      "original": "मूल",
-      "converted": "कन्वर्टेड"
-    }
-  },
-  "slideshow_page": {
-    "meta_title": "TikTok Slideshow डाउनलोडर – HD में फोटो बिना वॉटरमार्क",
-    "meta_desc": "TikTok फोटो स्लाइडशो और कैरोसेल HD क्वालिटी में वॉटरमार्क के बिना डाउनलोड करें। किसी भी TikTok पोस्ट से सभी तस्वीरें तुरंत सेव करें। मुफ्त, तेज़, रजिस्ट्रेशन नहीं।",
-    "title": "TikTok स्लाइडशो डाउनलोडर",
-    "desc": "उच्च गुणवत्ता में फोटो हिंडोला सहेजें।",
-    "placeholder": "लिंक यहाँ पेस्ट करें...",
-    "btn_download": "छवियाँ डाउनलोड करें",
-    "about_title": "TikTok फोटो डाउनलोडर",
-    "about_content": "बिना वॉटरमार्क के मूल HD गुणवत्ता में TikTok फोटो स्लाइडशो सहेजें।",
     "features": {
-      "all": {
-        "title": "एक क्लिक में सभी फोटो",
-        "desc": "एक क्लिक से सभी स्लाइडशो छवियां डाउनलोड करें। SaveTikFast TikTok फोटो कैरोसेल से हर फोटो निकालता है और उन्हें एक सुविधाजनक ZIP फ़ाइल के रूप में सहेजता है। हर छवि को मैन्युअल रूप से सहेजने से तेज़।"
-      },
-      "quality": {
-        "title": "मूल रिज़ॉल्यूशन",
-        "desc": "स्लाइडशो फोटो को बिना किसी संपीड़न के पूर्ण मूल रिज़ॉल्यूशन में सहेजें। उच्चतम गुणवत्ता की छवियां प्राप्त करें बिल्कुल वैसे ही जैसे क्रिएटर ने TikTok पर अपलोड की थीं।"
-      },
-      "audio": {
-        "title": "बैकग्राउंड ऑडियो के साथ",
-        "desc": "TikTok स्लाइडशो को बैकग्राउंड म्यूजिक सहित डाउनलोड करें। छवियां और ऑडियो ट्रैक दोनों एक साथ प्राप्त करें। पूर्ण स्लाइडशो अनुभव को संरक्षित करने के लिए एकदम सही।"
-      },
-      "fast": {
-        "title": "बिजली की गति",
-        "desc": "सिर्फ 3 सेकंड में सभी स्लाइडशो फोटो निकालें। उपलब्ध सबसे तेज़ TikTok स्लाइडशो डाउनलोडर - SSSTik, SnapTik या किसी अन्य टूल से तेज़।"
-      },
-      "device": {
-        "title": "सार्वभौमिक संगतता",
-        "desc": "iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook पर काम करता है। Chrome, Safari, Firefox या Edge के साथ किसी भी डिवाइस पर TikTok स्लाइडशो डाउनलोड करें।"
-      },
-      "free": {
-        "title": "हमेशा मुफ़्त",
-        "desc": "बिना किसी लागत, बिना पंजीकरण और बिना दैनिक सीमा के असीमित स्लाइडशो डाउनलोड। SaveTikFast स्लाइडशो डाउनलोडर हमेशा के लिए पूरी तरह से मुफ़्त है।"
-      },
-      "nowatermark": {
-        "title": "बिना वॉटरमार्क",
-        "desc": "TikTok वॉटरमार्क के बिना स्लाइडशो छवियां डाउनलोड करें। आपकी गैलरी, Instagram, Pinterest या किसी अन्य प्लेटफ़ॉर्म के लिए तैयार साफ फोटो।"
-      },
-      "browser": {
-        "title": "कोई भी ब्राउज़र",
-        "desc": "कोई ऐप की आवश्यकता नहीं। Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet में सीधे TikTok स्लाइडशो डाउनलोड करें। मोबाइल और डेस्कटॉप ब्राउज़र पर काम करता है।"
-      }
+        "title": "मुख्य विशेषताएं",
+        "no_watermark": {
+            "title": "बिना वॉटरमार्क",
+            "desc": "मूल HD गुणवत्ता में बिना वॉटरमार्क के TikTok वीडियो डाउनलोड करें। SaveTikFast स्वचालित रूप से TikTok लोगो हटा देता है, जो आपको SSSTik, SnapTik या TikMate से बेहतर साफ वीडियो देता है। Instagram, YouTube Shorts पर पुनः पोस्ट करने या अपनी गैलरी में सहेजने के लिए एकदम सही।"
+        },
+        "fast": {
+            "title": "बिजली की तेज़ी",
+            "desc": "ऑनलाइन सबसे तेज़ TikTok वीडियो डाउनलोडर। iPhone, Android, Samsung, Huawei, iPad, PC या Mac पर सिर्फ 3 सेकंड में कोई भी TikTok वीडियो सेव करें। हमारे सर्वर गति के लिए अनुकूलित हैं, जो हमें SaveFrom और MusicallyDown से तेज़ बनाता है।"
+        },
+        "quality": {
+            "title": "HD और 4K गुणवत्ता",
+            "desc": "उपलब्ध उच्चतम गुणवत्ता में TikTok वीडियो डाउनलोड करें - 720p, 1080p Full HD, 2K, और यहां तक कि 4K जब उपलब्ध हो। हम अन्य TikTok डाउनलोडर्स के विपरीत, संपीड़न के बिना मूल वीडियो गुणवत्ता को संरक्षित करते हैं।"
+        },
+        "device": {
+            "title": "सभी डिवाइस समर्थित",
+            "desc": "हर डिवाइस पर पूरी तरह से काम करता है - iPhone 15, iPhone 14, Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, iPad, MacBook, Windows PC, और Chromebook। कोई ऐप इंस्टॉलेशन की आवश्यकता नहीं।"
+        },
+        "free": {
+            "title": "100% हमेशा के लिए मुफ़्त",
+            "desc": "बिना किसी छिपे शुल्क, बिना पंजीकरण और बिना दैनिक सीमा के असीमित TikTok वीडियो डाउनलोड। SaveTikFast पूरी तरह से मुफ़्त है और दुनिया भर के सभी उपयोगकर्ताओं के लिए हमेशा मुफ़्त रहेगा।"
+        },
+        "secure": {
+            "title": "निजी और सुरक्षित",
+            "desc": "आपकी गोपनीयता मायने रखती है। हम आपका डेटा संग्रहीत नहीं करते, लॉगिन की आवश्यकता नहीं होती, और आपके डाउनलोड को ट्रैक नहीं करते। SSL एन्क्रिप्शन के साथ सुरक्षित और गुमनाम TikTok वीडियो डाउनलोडिंग।"
+        },
+        "browser": {
+            "title": "सभी ब्राउज़र",
+            "desc": "Chrome, Safari, Firefox, Microsoft Edge, Opera, Brave, Samsung Internet, और UC Browser पर तुरंत काम करता है। कोई एक्सटेंशन या प्लगइन की आवश्यकता नहीं - बस पेस्ट करें और डाउनलोड करें।"
+        },
+        "batch": {
+            "title": "बैच डाउनलोड",
+            "desc": "कई TikTok वीडियो जल्दी से सेव करें। अपने पसंदीदा क्रिएटर के पूरे संग्रह को किसी भी अन्य टूल से तेज़ डाउनलोड करें। SSSTik या SnapTik से बेहतर बल्क डाउनलोडिंग।"
+        }
     },
     "how_to": {
-      "title": "कैसे डाउनलोड करें",
-      "step1": "TikTok लिंक कॉपी करें।",
-      "step2": "लिंक ऊपर पेस्ट करें।",
-      "step3": "डाउनलोड पर क्लिक करें।"
+        "title": "बिना वॉटरमार्क के टिकटॉक वीडियो कैसे डाउनलोड करें",
+        "step1": "उस टिकटॉक वीडियो का लिंक कॉपी करें जिसे आप सेव करना चाहते हैं।",
+        "step2": "इस पेज के शीर्ष पर स्थित डाउनलोड बॉक्स में लिंक पेस्ट करें।",
+        "step3": "'डाउनलोड' बटन पर क्लिक करें और आपका वीडियो तुरंत सेव हो जाएगा।",
+        "step1_title": "लिंक कॉपी करें",
+        "step2_title": "URL पेस्ट करें",
+        "step3_title": "डाउनलोड"
     },
-    "faq": {
-      "q1": "TikTok स्लाइडशो कैसे डाउनलोड करें?",
-      "a1": "SaveTikFast के साथ TikTok फोटो स्लाइडशो डाउनलोड करना आसान है। TikTok से स्लाइडशो लिंक कॉपी करें, इसे हमारे स्लाइडशो डाउनलोडर में पेस्ट करें और डाउनलोड पर क्लिक करें। सभी छवियां निकाली और एक साथ डाउनलोड की जाएंगी - व्यक्तिगत फोटो और सुविधाजनक ZIP फ़ाइल दोनों के रूप में। किसी भी ब्राउज़र का उपयोग करके iPhone, Android, Samsung, iPad, Mac, Windows पर काम करता है।",
-      "q2": "क्या मैं एक बार में सभी स्लाइडशो फोटो डाउनलोड कर सकता हूं?",
-      "a2": "हां! SaveTikFast एक क्लिक से सभी TikTok स्लाइडशो फोटो डाउनलोड करता है। प्रत्येक छवि को मैन्युअल रूप से सहेजने की आवश्यकता नहीं। हमारा टूल कैरोसेल से हर फोटो निकालता है और उन्हें एक साथ पैकेज करता है। कई छवियों वाले स्लाइडशो के लिए, हम आसान डाउनलोड के लिए ZIP फ़ाइल प्रदान करते हैं। अन्य तरीकों से बहुत तेज़।",
-      "q3": "क्या SaveTikFast स्लाइडशो ऑडियो भी डाउनलोड करता है?",
-      "a3": "हां, SaveTikFast TikTok स्लाइडशो को बैकग्राउंड म्यूजिक सहित डाउनलोड कर सकता है। आपको छवियां और स्लाइडशो के साथ चलने वाला ऑडियो ट्रैक दोनों मिलते हैं। यह पूर्ण स्लाइडशो अनुभव को बिल्कुल वैसे ही संरक्षित करता है जैसे क्रिएटर ने इरादा किया था।",
-      "q4": "डाउनलोड की गई स्लाइडशो छवियों की गुणवत्ता क्या है?",
-      "a4": "SaveTikFast TikTok स्लाइडशो फोटो को पूर्ण मूल रिज़ॉल्यूशन में निकालता है। हम छवि गुणवत्ता को संपीड़ित या कम नहीं करते। आपको बिल्कुल वही उच्च गुणवत्ता वाली फोटो मिलती हैं जो क्रिएटर ने अपलोड की थीं - सहेजने, साझा करने या प्रिंट करने के लिए एकदम सही।",
-      "q5": "क्या मैं iPhone पर TikTok स्लाइडशो डाउनलोड कर सकता हूं?",
-      "a5": "हां, iPhone पर TikTok स्लाइडशो डाउनलोड करना सरल है। TikTok से लिंक कॉपी करें, Safari या Chrome खोलें, SaveTikFast पर जाएं, लिंक पेस्ट करें और डाउनलोड करें। फोटो आपके Photos ऐप में सहेजी जाती हैं। बिना कोई ऐप इंस्टॉल किए सभी iPhone मॉडल पर काम करता है।",
-      "q6": "क्या स्लाइडशो डाउनलोडर मुफ़्त है?",
-      "a6": "हां, SaveTikFast स्लाइडशो डाउनलोडर 100% मुफ़्त है। बिना किसी लागत, सब्सक्रिप्शन या दैनिक सीमा के असीमित TikTok स्लाइडशो डाउनलोड करें। हमारी मुफ़्त सेवा iPhone, Android, Samsung, PC, Mac और Chrome, Safari, Firefox या किसी भी ब्राउज़र का उपयोग करने वाले सभी डिवाइस पर काम करती है।",
-      "q7": "क्या डाउनलोड की गई स्लाइडशो छवियां वॉटरमार्क के बिना हैं?",
-      "a7": "SaveTikFast जब संभव हो तो TikTok स्लाइडशो छवियों को वॉटरमार्क के बिना डाउनलोड करता है। आपको TikTok लोगो के बिना साफ फोटो मिलती हैं, जो आपकी गैलरी, Instagram, Pinterest या किसी भी प्लेटफ़ॉर्म के लिए तैयार हैं। सौंदर्य सामग्री सहेजने के लिए एकदम सही।",
-      "q8": "स्लाइडशो डाउनलोड के लिए SaveTikFast क्यों चुनें?",
-      "a8": "SaveTikFast सर्वोत्तम TikTok स्लाइडशो डाउनलोडर है क्योंकि हम सभी फोटो तुरंत निकालते हैं, मूल गुणवत्ता बनाए रखते हैं, ऑडियो शामिल करते हैं, और पूरी तरह से मुफ़्त असीमित डाउनलोड प्रदान करते हैं। हमारा टूल SSSTik, SnapTik या अन्य स्लाइडशो एक्सट्रैक्टर्स से तेज़ और अधिक विश्वसनीय रूप से काम करता है। सेकंडों में पूरे फोटो कैरोसेल डाउनलोड करें।"
-    }
-  },
-  "nav_menu": {
-    "slideshow": "स्लाइडशो",
-    "video": "वीडियो",
-    "mp3": "MP3 ऑडियो",
-    "stories": "स्टोरीज"
-  },
-  "mp3_page": {
-    "meta_title": "TikTok से MP3 कनवर्टर – 320kbps ऑडियो मुफ्त डाउनलोड",
-    "meta_desc": "TikTok वीडियो को 320kbps उच्च गुणवत्ता MP3 में बदलें। गाने और संगीत मुफ्त में ऑनलाइन निकालें। कोई ऐप या रजिस्ट्रेशन की जरूरत नहीं। सभी डिवाइस पर काम करता है।",
-    "title": "TikTok MP3 डाउनलोड",
-    "subtitle": "(केवल ऑडियो)",
-    "desc": "TikTok वीडियो को MP3 ऑडियो फाइलों में बदलें। 320kbps हाई क्वालिटी में गाने और संगीत निकालें।",
-    "placeholder": "ऑडियो निकालने के लिए वीडियो लिंक पेस्ट करें...",
-    "btn_download": "MP3 निकालें",
-    "about_title": "बेस्ट TikTok MP3 कनवर्टर 2026",
-    "about_content": "SaveTikFast MP3 आपको किसी भी TikTok वीडियो से तुरंत ऑडियो निकालने देता है। ट्रेंडिंग गाने और वायरल साउंड्स डाउनलोड करें।",
-    "features": {
-      "quality": {
-        "title": "HD ऑडियो 320kbps",
-        "desc": "TikTok वीडियो को स्टूडियो-क्वालिटी क्रिस्टल क्लियर 320kbps में MP3 में कन्वर्ट करें। ऑनलाइन उपलब्ध उच्चतम ऑडियो बिटरेट, उन संगीत प्रेमियों के लिए एकदम सही जो iPhone, Android या PC पर सर्वोत्तम ध्वनि चाहते हैं।"
-      },
-      "fast": {
-        "title": "तत्काल रूपांतरण",
-        "desc": "सिर्फ 2 सेकंड में TikTok से MP3 रूपांतरण। ऑनलाइन सबसे तेज़ TikTok ऑडियो एक्सट्रैक्टर - SSSTik MP3, SnapTik ऑडियो या किसी अन्य कन्वर्टर से तेज़। सभी डिवाइस पर तुरंत काम करता है।"
-      },
-      "ringtone": {
-        "title": "रिंगटोन के लिए तैयार",
-        "desc": "iPhone रिंगटोन और Android नोटिफिकेशन साउंड के लिए सही ऑडियो लंबाई। वायरल TikTok साउंड और ट्रेंडिंग ऑडियो क्लिप से कस्टम रिंगटोन बनाएं। किसी भी स्मार्टफोन पर सेट अप करना आसान।"
-      },
-      "device": {
-        "title": "सभी डिवाइस",
-        "desc": "iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC और ब्राउज़र वाले किसी भी डिवाइस पर TikTok ऑडियो एक्सट्रैक्ट करें। कोई ऐप डाउनलोड की आवश्यकता नहीं।"
-      },
-      "original": {
-        "title": "मूल ध्वनि",
-        "desc": "बिना संपीड़न या गुणवत्ता हानि के मूल TikTok ऑडियो गुणवत्ता को संरक्षित करता है। आपको ट्रेंडिंग गानों और वायरल ऑडियो सहित मूल वीडियो की समान ध्वनि मिलती है।"
-      },
-      "unlimited": {
-        "title": "मुफ़्त और असीमित",
-        "desc": "TikTok से MP3 रूपांतरण की कोई सीमा नहीं। जितने चाहें TikTok वीडियो को ऑडियो में कन्वर्ट करें - पूरी तरह से मुफ़्त, बिना पंजीकरण, बिना दैनिक प्रतिबंध।"
-      },
-      "secure": {
-        "title": "सुरक्षित और निजी",
-        "desc": "बिना डेटा संग्रह के सुरक्षित MP3 रूपांतरण। हम आपकी कन्वर्ट की गई फ़ाइलों को संग्रहीत नहीं करते और न ही आपकी गतिविधि को ट्रैक करते हैं। आपकी गोपनीयता 100% संरक्षित है।"
-      },
-      "nobapp": {
-        "title": "कोई ऐप की आवश्यकता नहीं",
-        "desc": "सीधे आपके ब्राउज़र में काम करता है - Chrome, Safari, Firefox, Edge, Opera। कोई ऐप इंस्टॉलेशन नहीं, कोई स्टोरेज स्पेस की आवश्यकता नहीं। TikTok MP3 डाउनलोडर ऐप्स से बेहतर।"
-      }
+    "tools": {
+        "backToDownloader": "डाउनलोडर पर वापस जाएं",
+        "meta": {
+            "title": "मुफ्त ऑनलाइन टूल्स – इमेज कम्प्रेसर, कनवर्टर और QR जनरेटर",
+            "description": "मुफ्त ब्राउज़र-आधारित टूल्स: इमेज कम्प्रेस करें, फॉर्मेट बदलें (WebP, JPG, PNG) और QR कोड बनाएं। कोई फाइल अपलोड या रजिस्ट्रेशन की जरूरत नहीं। 100% मुफ्त।"
+        },
+        "hero": {
+            "title": "मुफ्त इमेज और QR टूल्स",
+            "desc": "इमेज कंप्रेस करें, फॉर्मेट बदलें और QR कोड बनाएं — सब कुछ आपके ब्राउज़र में लोकली प्रोसेस होता है। 100% निजी।"
+        },
+        "tabs": {
+            "compressor": "इमेज कंप्रेसर",
+            "converter": "फॉर्मेट कन्वर्टर",
+            "qrcode": "QR जेनरेटर",
+            "engagement": "एंगेजमेंट कैलकुलेटर",
+            "money": "कमाई कैलकुलेटर",
+            "font": "फ़ॉन्ट जेनरेटर",
+            "hashtag": "हैशटैग जेनरेटर"
+        },
+        "dropzone": {
+            "text": "इमेज को यहाँ ड्रैग करें",
+            "hint": "या चुनने के लिए क्लिक करें (JPG, PNG, WebP — अधिकतम 15MB)",
+            "hint_convert": "या चुनने के लिए क्लिक करें (JPG, PNG, WebP, GIF, BMP)"
+        },
+        "btn": {
+            "download": "अभी डाउनलोड करें",
+            "downloadPng": "PNG डाउनलोड करें"
+        },
+        "compressor": {
+            "title": "ऑनलाइन इमेज कंप्रेसर",
+            "desc": "बिना गुणवत्ता खोए इमेज फ़ाइल का आकार कम करें। 15MB तक के JPG, PNG और WebP फॉर्मेट का समर्थन करता है।",
+            "quality": "कंप्रेशन गुणवत्ता",
+            "maxWidth": "अधिकतम चौड़ाई (px)",
+            "btn": "इमेज कंप्रेस करें",
+            "howto": {
+                "title": "ऑनलाइन इमेज कैसे कंप्रेस करें",
+                "step1": {
+                    "title": "इमेज अपलोड करें",
+                    "desc": "अपनी JPG, PNG, या WebP इमेज (15MB तक) को ड्रैग करें या चुनने के लिए क्लिक करें।"
+                },
+                "step2": {
+                    "title": "सेटिंग्स ठीक करें",
+                    "desc": "अपनी पसंद का गुणवत्ता स्तर (10-100%) और अधिकतम चौड़ाई सेट करें।"
+                },
+                "step3": {
+                    "title": "डाउनलोड करें",
+                    "desc": "कंप्रेस पर क्लिक करें और अपनी ऑप्टिमाइज्ड इमेज तुरंत डाउनलोड करें।"
+                }
+            },
+            "seo": {
+                "title": "इमेज कंप्रेस क्यों करें?",
+                "p1": "वेबसाइट परफॉरमेंस, तेज़ लोडिंग और कम बैंडविड्थ उपयोग के लिए इमेज कंप्रेशन अनिवार्य है। हमारा मुफ्त ऑनलाइन इमेज कंप्रेसर विजुअल क्वालिटी बनाए रखते हुए फ़ाइल का आकार कम करने के लिए उन्नत एल्गोरिदम का उपयोग करता है।",
+                "p2": "इमेज कंप्रेशन के लाभों में शामिल हैं:",
+                "benefit1": "वेबसाइट लोडिंग की तेज़ गति (SEO में सुधार)",
+                "benefit2": "स्टोरेज और बैंडविड्थ लागत में कमी",
+                "benefit3": "मोबाइल डिवाइस पर बेहतर यूजर एक्सपीरियंस",
+                "benefit4": "सोशल मीडिया शेयरिंग के लिए ऑप्टिमाइज्ड इमेज",
+                "p3": "सभी प्रोसेसिंग Web Workers का उपयोग करके आपके ब्राउज़र में होती है - आपकी इमेज कभी भी किसी सर्वर पर अपलोड नहीं की जाती हैं, जिससे पूर्ण गोपनीयता और सुरक्षा सुनिश्चित होती है।"
+            },
+            "faq": {
+                "title": "अक्सर पूछे जाने वाले प्रश्न",
+                "q1": "क्या मेरी इमेज सर्वर पर अपलोड होती है?",
+                "a1": "नहीं! सभी कंप्रेशन सीधे आपके ब्राउज़र में होता है। आपकी इमेज कभी भी आपके डिवाइस को नहीं छोड़ती हैं, जिससे पूर्ण गोपनीयता सुनिश्चित होती है।",
+                "q2": "कौन से फ़ाइल फॉर्मेट समर्थित हैं?",
+                "a2": "हम 15MB फ़ाइल आकार तक JPG/JPEG, PNG और WebP फॉर्मेट का समर्थन करते।",
+                "q3": "मैं फ़ाइल का आकार कितना कम कर सकता हूँ?",
+                "a3": "मूल इमेज और चुनी गई गुणवत्ता सेटिंग्स के आधार पर आमतौर पर 50-80% की कमी होती है।"
+            }
+        },
+        "converter": {
+            "title": "इमेज फॉर्मेट कन्वर्टर",
+            "desc": "अपने ब्राउज़र में तुरंत JPG, PNG और WebP फॉर्मेट के बीच इमेज बदलें।",
+            "output": "आउटपुट फॉर्मेट",
+            "quality": "आउटपुट गुणवत्ता",
+            "btn": "इमेज कन्वर्ट करें",
+            "howto": {
+                "title": "इमेज फॉर्मेट कैसे बदलें",
+                "step1": {
+                    "title": "इमेज चुनें",
+                    "desc": "कोई भी इमेज फ़ाइल अपलोड करें (JPG, PNG, WebP, GIF, BMP समर्थित)।"
+                },
+                "step2": {
+                    "title": "फॉर्मेट चुनें",
+                    "desc": "अपना इच्छित आउटपुट फॉर्मेट (WebP, JPG या PNG) चुनें।"
+                },
+                "step3": {
+                    "title": "कन्वर्ट और सेव करें",
+                    "desc": "कन्वर्ट पर क्लिक करें और अपनी नई इमेज तुरंत डाउनलोड करें।"
+                }
+            },
+            "seo": {
+                "title": "इमेज फॉर्मेट को समझना",
+                "p1": "वेब परफॉरमेंस और गुणवत्ता के लिए सही इमेज फॉर्मेट चुनना महत्वपूर्ण है। यहाँ एक तुलना है:",
+                "webp": "Google द्वारा आधुनिक फॉर्मेट जो JPG/PNG की तुलना में समान गुणवत्ता के साथ 25-35% छोटा फ़ाइल आकार प्रदान करता है। वेब उपयोग के लिए सबसे अच्छा है।",
+                "jpg": "तस्वीरों और कई रंगों वाली जटिल इमेज के लिए आदर्श। इसमें 'लॉसी कंप्रेशन' का उपयोग होता है।",
+                "png": "पारदर्शिता या तीखे किनारों (लोगो, ग्राफिक्स) की आवश्यकता वाली इमेज के लिए उपयुक्त। इसमें 'लॉसलेस कंप्रेशन' का उपयोग होता है।",
+                "p2": "हमारा कन्वर्टर तत्काल, क्लाइंट-साइड रूपांतरण के लिए HTML5 Canvas API का उपयोग करता है। आपकी इमेज कभी आपके डिवाइस से बाहर नहीं जाती हैं।"
+            },
+            "faq": {
+                "title": "अक्सर पूछे जाने वाले प्रश्न",
+                "q1": "WebP में क्यों बदलें?",
+                "a1": "WebP समान गुणवत्ता के साथ JPG/PNG की तुलना में 25-35% छोटा फ़ाइल आकार प्रदान करता है, जिससे आपकी वेबसाइट तेज़ लोड होती है।",
+                "q2": "क्या इमेज की गुणवत्ता कम हो जाएगी?",
+                "a2": "आप क्वालिटी स्लाइडर से इसे नियंत्रित कर सकते हैं। उच्च मान अधिक गुणवत्ता बनाए रखते हैं लेकिन फ़ाइल का आकार बड़ा होता है।",
+                "q3": "क्या मैं एनिमेटेड GIF कन्वर्ट कर सकता हूँ?",
+                "a3": "वर्तमान में, एनिमेटेड GIF को एक स्थिर इमेज (पहली फ्रेम) में बदल दिया जाएगा।"
+            }
+        },
+        "qrcode": {
+            "title": "ऑनलाइन QR कोड जेनरेटर",
+            "desc": "URL, टेक्स्ट या किसी भी कंटेंट के लिए तुरंत हाई-रिजॉल्यूशन QR कोड जेनरेट करें।",
+            "input": "टेक्स्ट या URL",
+            "placeholder": "https://example.com या कोई टेक्स्ट",
+            "size": "QR कोड का आकार",
+            "color": "QR का रंग",
+            "btn": "QR कोड जेनरेट करें",
+            "howto": {
+                "title": "QR कोड कैसे जेनरेट करें",
+                "step1": {
+                    "title": "कंटेंट दर्ज करें",
+                    "desc": "अपना URL, टेक्स्ट, फ़ोन नंबर या कोई भी कंटेंट टाइप करें जिसे आप कोड करना चाहते हैं।"
+                },
+                "step2": {
+                    "title": "कस्टमाइज करें",
+                    "desc": "QR कोड के लिए अपना पसंदीदा आकार और रंग चुनें।"
+                },
+                "step3": {
+                    "title": "जेनरेट और डाउनलोड",
+                    "desc": "जेनरेट पर क्लिक करें और हाई-रिजॉल्यूशन QR कोड को PNG के रूप में डाउनलोड करें।"
+                }
+            },
+            "seo": {
+                "title": "QR कोड के उपयोग",
+                "p1": "QR कोड व्यवसायों और व्यक्तियों के लिए आवश्यक हो गए हैं। सामान्य उपयोग के उदाहरण:",
+                "use1": "वेबसाइट URL - उपयोगकर्ताओं को तुरंत आपकी वेबसाइट पर भेजें",
+                "use2": "बिजनेस कार्ड - संपर्क जानकारी डिजिटल रूप से साझा करें",
+                "use3": "प्रोडक्ट पैकेजिंग - मैनुअल या सपोर्ट पेज से लिंक करें",
+                "use4": "मार्केटिंग सामग्री - कैंपेन एंगेजमेंट ट्रैक करें",
+                "use5": "रेस्टोरेंट मेनू - कॉन्टैक्टलेस मेनू एक्सेस",
+                "use6": "इवेंट टिकट - तेज़ प्रवेश सत्यापन",
+                "p2": "हमारा QR जेनरेटर हाई-रिजॉल्यूशन कोड बनाता है जो किसी भी डिवाइस पर भरोसेमंद रूप से स्कैन होते हैं।"
+            },
+            "faq": {
+                "title": "अक्सर पूछे जाने वाले प्रश्न",
+                "q1": "मैं QR कोड में क्या कोड कर सकता हूँ?",
+                "a1": "URL, सादा टेक्स्ट, फ़ोन नंबर, ईमेल पते, WiFi क्रेडेंशियल और बहुत कुछ।",
+                "q2": "मुझे कौन सा आकार चुनना चाहिए?",
+                "a2": "डिजिटल उपयोग के लिए 256px अच्छा है। प्रिंट सामग्री के लिए 512px या 1024px चुनें।",
+                "q3": "क्या QR कोड एक्सपायर होते हैं?",
+                "a3": "नहीं! यहाँ जेनरेट किए गए QR कोड स्टेटिक हैं और कभी एक्सपायर नहीं होते। इनमें डेटा सीधे होता है।"
+            }
+        },
+        "engagement": {
+            "title": "TikTok एंगेजमेंट कैलकुलेटर",
+            "desc": "लाइक्स, कमेंट्स और शेयर के आधार पर अपने एंगेजमेंट रेट की गणना करें।",
+            "followers": "फ़ॉलोअर्स",
+            "likes": "लाइक्स",
+            "comments": "कमेंट्स",
+            "shares": "शेयर",
+            "btn": "अभी गणना करें",
+            "result": "एंगेजमेंट रेट",
+            "excellent": "शानदार! 🚀",
+            "good": "बढ़िया 👍",
+            "poor": "सुधार की जरूरत 📉"
+        },
+        "money": {
+            "title": "TikTok कमाई कैलकुलेटर",
+            "desc": "वीडियो व्यूज के आधार पर अपनी संभावित कमाई का अनुमान लगाएं।",
+            "views": "वीडियो व्यूज दर्ज करें",
+            "btn": "कमाई की गणना करें",
+            "result": "अनुमानित कमाई"
+        },
+        "font": {
+            "title": "TikTok फ़ॉन्ट जेनरेटर",
+            "desc": "अपनी प्रोफाइल और वीडियो विवरण के लिए अद्वितीय फ़ॉन्ट स्टाइल बनाएं।",
+            "placeholder": "यहाँ टेक्स्ट लिखें...",
+            "copy": "कॉपी करें"
+        },
+        "hashtag": {
+            "title": "TikTok हैशटैग जेनरेटर",
+            "desc": "अपने वीडियो के लिए ट्रेंडिंग हैशटैग खोजें और जेनरेट करें।",
+            "btn": "अभी जेनरेट करें",
+            "copy": "सब कॉपी करें"
+        },
+        "progress": {
+            "compressing": "इमेज कंप्रेस हो रही है...",
+            "converting": "इमेज कन्वर्ट हो रही है..."
+        },
+        "result": {
+            "success": "कंप्रेशन पूरा हुआ!",
+            "converted": "रूपांतरण पूरा हुआ!",
+            "qrReady": "आपका QR कोड तैयार है!"
+        },
+        "stats": {
+            "original": "मूल आकार",
+            "compressed": "कंप्रेस आकार",
+            "saved": "बचत",
+            "originalFormat": "मूल फॉर्मेट",
+            "newFormat": "नया फॉर्मेट",
+            "newSize": "नया आकार"
+        },
+        "preview": {
+            "before": "पहले",
+            "after": "बाद में",
+            "original": "मूल",
+            "converted": "कन्वर्टेड"
+        }
     },
-    "how_to": {
-      "title": "TikTok को MP3 में कैसे बदलें",
-      "step1": "वीडियो खोजें। शेयर → लिंक कॉपी करें पर टैप करें।",
-      "step2": "ऊपर दिए गए बॉक्स में लिंक पेस्ट करें।",
-      "step3": "डाउनलोड करने के लिए 'MP3 निकालें' पर क्लिक करें।"
+    "slideshow_page": {
+        "meta_title": "TikTok Slideshow डाउनलोडर – HD में फोटो बिना वॉटरमार्क",
+        "meta_desc": "TikTok फोटो स्लाइडशो और कैरोसेल HD क्वालिटी में वॉटरमार्क के बिना डाउनलोड करें। किसी भी TikTok पोस्ट से सभी तस्वीरें तुरंत सेव करें। मुफ्त, तेज़, रजिस्ट्रेशन नहीं।",
+        "title": "TikTok स्लाइडशो डाउनलोडर",
+        "desc": "उच्च गुणवत्ता में फोटो हिंडोला सहेजें।",
+        "placeholder": "लिंक यहाँ पेस्ट करें...",
+        "btn_download": "छवियाँ डाउनलोड करें",
+        "about_title": "TikTok फोटो डाउनलोडर",
+        "about_content": "बिना वॉटरमार्क के मूल HD गुणवत्ता में TikTok फोटो स्लाइडशो सहेजें।",
+        "features": {
+            "all": {
+                "title": "एक क्लिक में सभी फोटो",
+                "desc": "एक क्लिक से सभी स्लाइडशो छवियां डाउनलोड करें। SaveTikFast TikTok फोटो कैरोसेल से हर फोटो निकालता है और उन्हें एक सुविधाजनक ZIP फ़ाइल के रूप में सहेजता है। हर छवि को मैन्युअल रूप से सहेजने से तेज़।"
+            },
+            "quality": {
+                "title": "मूल रिज़ॉल्यूशन",
+                "desc": "स्लाइडशो फोटो को बिना किसी संपीड़न के पूर्ण मूल रिज़ॉल्यूशन में सहेजें। उच्चतम गुणवत्ता की छवियां प्राप्त करें बिल्कुल वैसे ही जैसे क्रिएटर ने TikTok पर अपलोड की थीं।"
+            },
+            "audio": {
+                "title": "बैकग्राउंड ऑडियो के साथ",
+                "desc": "TikTok स्लाइडशो को बैकग्राउंड म्यूजिक सहित डाउनलोड करें। छवियां और ऑडियो ट्रैक दोनों एक साथ प्राप्त करें। पूर्ण स्लाइडशो अनुभव को संरक्षित करने के लिए एकदम सही।"
+            },
+            "fast": {
+                "title": "बिजली की गति",
+                "desc": "सिर्फ 3 सेकंड में सभी स्लाइडशो फोटो निकालें। उपलब्ध सबसे तेज़ TikTok स्लाइडशो डाउनलोडर - SSSTik, SnapTik या किसी अन्य टूल से तेज़।"
+            },
+            "device": {
+                "title": "सार्वभौमिक संगतता",
+                "desc": "iPhone, Samsung, Huawei, Xiaomi, iPad, MacBook, Windows PC, Chromebook पर काम करता है। Chrome, Safari, Firefox या Edge के साथ किसी भी डिवाइस पर TikTok स्लाइडशो डाउनलोड करें।"
+            },
+            "free": {
+                "title": "हमेशा मुफ़्त",
+                "desc": "बिना किसी लागत, बिना पंजीकरण और बिना दैनिक सीमा के असीमित स्लाइडशो डाउनलोड। SaveTikFast स्लाइडशो डाउनलोडर हमेशा के लिए पूरी तरह से मुफ़्त है।"
+            },
+            "nowatermark": {
+                "title": "बिना वॉटरमार्क",
+                "desc": "TikTok वॉटरमार्क के बिना स्लाइडशो छवियां डाउनलोड करें। आपकी गैलरी, Instagram, Pinterest या किसी अन्य प्लेटफ़ॉर्म के लिए तैयार साफ फोटो।"
+            },
+            "browser": {
+                "title": "कोई भी ब्राउज़र",
+                "desc": "कोई ऐप की आवश्यकता नहीं। Chrome, Safari, Firefox, Microsoft Edge, Opera, Samsung Internet में सीधे TikTok स्लाइडशो डाउनलोड करें। मोबाइल और डेस्कटॉप ब्राउज़र पर काम करता है।"
+            }
+        },
+        "how_to": {
+            "title": "कैसे डाउनलोड करें",
+            "step1": "TikTok लिंक कॉपी करें।",
+            "step2": "लिंक ऊपर पेस्ट करें।",
+            "step3": "डाउनलोड पर क्लिक करें।"
+        },
+        "faq": {
+            "q1": "TikTok स्लाइडशो कैसे डाउनलोड करें?",
+            "a1": "SaveTikFast के साथ TikTok फोटो स्लाइडशो डाउनलोड करना आसान है। TikTok से स्लाइडशो लिंक कॉपी करें, इसे हमारे स्लाइडशो डाउनलोडर में पेस्ट करें और डाउनलोड पर क्लिक करें। सभी छवियां निकाली और एक साथ डाउनलोड की जाएंगी - व्यक्तिगत फोटो और सुविधाजनक ZIP फ़ाइल दोनों के रूप में। किसी भी ब्राउज़र का उपयोग करके iPhone, Android, Samsung, iPad, Mac, Windows पर काम करता है।",
+            "q2": "क्या मैं एक बार में सभी स्लाइडशो फोटो डाउनलोड कर सकता हूं?",
+            "a2": "हां! SaveTikFast एक क्लिक से सभी TikTok स्लाइडशो फोटो डाउनलोड करता है। प्रत्येक छवि को मैन्युअल रूप से सहेजने की आवश्यकता नहीं। हमारा टूल कैरोसेल से हर फोटो निकालता है और उन्हें एक साथ पैकेज करता है। कई छवियों वाले स्लाइडशो के लिए, हम आसान डाउनलोड के लिए ZIP फ़ाइल प्रदान करते हैं। अन्य तरीकों से बहुत तेज़।",
+            "q3": "क्या SaveTikFast स्लाइडशो ऑडियो भी डाउनलोड करता है?",
+            "a3": "हां, SaveTikFast TikTok स्लाइडशो को बैकग्राउंड म्यूजिक सहित डाउनलोड कर सकता है। आपको छवियां और स्लाइडशो के साथ चलने वाला ऑडियो ट्रैक दोनों मिलते हैं। यह पूर्ण स्लाइडशो अनुभव को बिल्कुल वैसे ही संरक्षित करता है जैसे क्रिएटर ने इरादा किया था।",
+            "q4": "डाउनलोड की गई स्लाइडशो छवियों की गुणवत्ता क्या है?",
+            "a4": "SaveTikFast TikTok स्लाइडशो फोटो को पूर्ण मूल रिज़ॉल्यूशन में निकालता है। हम छवि गुणवत्ता को संपीड़ित या कम नहीं करते। आपको बिल्कुल वही उच्च गुणवत्ता वाली फोटो मिलती हैं जो क्रिएटर ने अपलोड की थीं - सहेजने, साझा करने या प्रिंट करने के लिए एकदम सही।",
+            "q5": "क्या मैं iPhone पर TikTok स्लाइडशो डाउनलोड कर सकता हूं?",
+            "a5": "हां, iPhone पर TikTok स्लाइडशो डाउनलोड करना सरल है। TikTok से लिंक कॉपी करें, Safari या Chrome खोलें, SaveTikFast पर जाएं, लिंक पेस्ट करें और डाउनलोड करें। फोटो आपके Photos ऐप में सहेजी जाती हैं। बिना कोई ऐप इंस्टॉल किए सभी iPhone मॉडल पर काम करता है।",
+            "q6": "क्या स्लाइडशो डाउनलोडर मुफ़्त है?",
+            "a6": "हां, SaveTikFast स्लाइडशो डाउनलोडर 100% मुफ़्त है। बिना किसी लागत, सब्सक्रिप्शन या दैनिक सीमा के असीमित TikTok स्लाइडशो डाउनलोड करें। हमारी मुफ़्त सेवा iPhone, Android, Samsung, PC, Mac और Chrome, Safari, Firefox या किसी भी ब्राउज़र का उपयोग करने वाले सभी डिवाइस पर काम करती है।",
+            "q7": "क्या डाउनलोड की गई स्लाइडशो छवियां वॉटरमार्क के बिना हैं?",
+            "a7": "SaveTikFast जब संभव हो तो TikTok स्लाइडशो छवियों को वॉटरमार्क के बिना डाउनलोड करता है। आपको TikTok लोगो के बिना साफ फोटो मिलती हैं, जो आपकी गैलरी, Instagram, Pinterest या किसी भी प्लेटफ़ॉर्म के लिए तैयार हैं। सौंदर्य सामग्री सहेजने के लिए एकदम सही।",
+            "q8": "स्लाइडशो डाउनलोड के लिए SaveTikFast क्यों चुनें?",
+            "a8": "SaveTikFast सर्वोत्तम TikTok स्लाइडशो डाउनलोडर है क्योंकि हम सभी फोटो तुरंत निकालते हैं, मूल गुणवत्ता बनाए रखते हैं, ऑडियो शामिल करते हैं, और पूरी तरह से मुफ़्त असीमित डाउनलोड प्रदान करते हैं। हमारा टूल SSSTik, SnapTik या अन्य स्लाइडशो एक्सट्रैक्टर्स से तेज़ और अधिक विश्वसनीय रूप से काम करता है। सेकंडों में पूरे फोटो कैरोसेल डाउनलोड करें।"
+        }
     },
-    "faq": {
-      "q1": "TikTok वीडियो को MP3 में कैसे कन्वर्ट करें?",
-      "a1": "SaveTikFast के साथ TikTok को MP3 में कन्वर्ट करना सरल है। TikTok वीडियो लिंक कॉपी करें, इसे हमारे MP3 कन्वर्टर में पेस्ट करें और कन्वर्ट पर क्लिक करें। ऑडियो तुरंत उच्च गुणवत्ता 320kbps MP3 प्रारूप में निकाला जाएगा। यह iPhone, Android, Samsung, PC, Mac और Chrome, Safari, Firefox या किसी भी ब्राउज़र का उपयोग करने वाले सभी डिवाइस पर काम करता है। हमारा TikTok से MP3 कन्वर्टर SSSTik या SnapTik ऑडियो एक्सट्रैक्टर्स की तुलना में तेज़ और बेहतर गुणवत्ता का है।",
-      "q2": "SaveTikFast MP3 कन्वर्टर किस ऑडियो गुणवत्ता प्रदान करता है?",
-      "a2": "SaveTikFast प्रीमियम 320kbps MP3 गुणवत्ता में TikTok ऑडियो निकालता है - MP3 फ़ाइलों के लिए उपलब्ध उच्चतम बिटरेट। यह संगीत प्लेबैक, रिंगटोन या ऑडियो प्रोजेक्ट के लिए एकदम सही स्टूडियो-गुणवत्ता क्रिस्टल क्लियर साउंड प्रदान करता है। हम मूल TikTok ऑडियो को बिना संपीड़न या गुणवत्ता हानि के संरक्षित करते हैं, उन अन्य कन्वर्टर्स के विपरीत जो बैंडविड्थ बचाने के लिए बिटरेट कम करते हैं।",
-      "q3": "क्या मैं TikTok ऑडियो को रिंगटोन के रूप में उपयोग कर सकता हूं?",
-      "a3": "हां! SaveTikFast से डाउनलोड किया गया TikTok ऑडियो रिंगटोन के लिए एकदम सही है। MP3 प्रारूप iPhone और Android दोनों रिंगटोन सेटिंग्स के साथ काम करता है। iPhone पर, कस्टम रिंगटोन सेट करने के लिए GarageBand या iTunes का उपयोग करें। Android पर, बस सेटिंग्स > साउंड > रिंगटोन पर जाएं और डाउनलोड किए गए MP3 को चुनें। वायरल TikTok साउंड और ट्रेंडिंग ऑडियो से अद्वितीय रिंगटोन बनाएं।",
-      "q4": "क्या TikTok से MP3 रूपांतरण मुफ़्त है?",
-      "a4": "बिल्कुल मुफ़्त। SaveTikFast MP3 कन्वर्टर में कोई शुल्क, सब्सक्रिप्शन या दैनिक सीमा नहीं है। बिना पंजीकरण के असीमित TikTok वीडियो को MP3 में कन्वर्ट करें। हमारी मुफ़्त सेवा सभी डिवाइस - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - पर Chrome, Safari और Firefox सहित किसी भी ब्राउज़र का उपयोग करके काम करती है।",
-      "q5": "MP3 रूपांतरण में कितना समय लगता है?",
-      "a5": "SaveTikFast लगभग 2-3 सेकंड में TikTok को MP3 में कन्वर्ट करता है। हम तेज़ ऑडियो निष्कर्षण के लिए अनुकूलित शक्तिशाली सर्वर का उपयोग करते हैं। यह हमें उपलब्ध सबसे तेज़ TikTok MP3 कन्वर्टर बनाता है - SSSTik MP3, SnapTik ऑडियो, TikMate या अन्य रूपांतरण टूल से काफी तेज़।",
-      "q6": "क्या मैं iPhone पर TikTok संगीत डाउनलोड कर सकता हूं?",
-      "a6": "हां, आप SaveTikFast का उपयोग करके आसानी से iPhone पर TikTok संगीत और ऑडियो डाउनलोड कर सकते हैं। TikTok लिंक कॉपी करें, Safari या Chrome खोलें, हमारे MP3 कन्वर्टर पर जाएं, लिंक पेस्ट करें और डाउनलोड टैप करें। MP3 फ़ाइल आपके Files ऐप में सहेजी जाएगी। वहां से, इसे Apple Music में जोड़ें, इसे रिंगटोन के रूप में उपयोग करें, या कहीं भी साझा करें। सभी iPhone मॉडल पर काम करता है।",
-      "q7": "क्या MP3 में पूरा ऑडियो ट्रैक शामिल है?",
-      "a7": "हां, SaveTikFast TikTok वीडियो से पूरा ऑडियो निकालता है - जिसमें बैकग्राउंड म्यूजिक, वॉयस, साउंड इफेक्ट्स और सभी ऑडियो तत्व शामिल हैं। पूर्ण-लंबाई ऑडियो को बिल्कुल वैसे ही संरक्षित किया जाता है जैसे यह मूल TikTok वीडियो में सुनाई देता है। ट्रेंडिंग गाने, वायरल साउंड और आपके पसंदीदा TikTok ऑडियो को सहेजने के लिए एकदम सही।",
-      "q8": "क्या SaveTikFast MP3 कन्वर्टर सुरक्षित है?",
-      "a8": "पूरी तरह से सुरक्षित। SaveTikFast MP3 कन्वर्टर सुरक्षित SSL एन्क्रिप्शन का उपयोग करता है, आपका डेटा या कन्वर्ट की गई फ़ाइलें संग्रहीत नहीं करता, लॉगिन की आवश्यकता नहीं होती, और आपके डिवाइस पर कुछ भी इंस्टॉल नहीं करता। हमने दुनिया भर के उपयोगकर्ताओं के लिए सुरक्षित रूप से लाखों TikTok वीडियो को MP3 में कन्वर्ट किया है। आपकी गोपनीयता और सुरक्षा हमारी प्राथमिकता है।",
-      "q9": "क्या मैं Android पर TikTok को MP3 में कन्वर्ट कर सकता हूं?",
-      "a9": "हां, TikTok से MP3 रूपांतरण सभी Android डिवाइस पर पूरी तरह से काम करता है। इसमें Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus और अन्य सभी Android फोन और टैबलेट शामिल हैं। SaveTikFast तक पहुंचने और किसी भी TikTok को तुरंत MP3 में कन्वर्ट करने के लिए बस Chrome, Firefox या Samsung Internet ब्राउज़र का उपयोग करें।",
-      "q10": "SaveTikFast सर्वोत्तम TikTok से MP3 कन्वर्टर क्यों है?",
-      "a10": "SaveTikFast हमारी बेहतर गति (2 सेकंड), उच्चतम ऑडियो गुणवत्ता (320kbps), सार्वभौमिक डिवाइस समर्थन और पूरी तरह से मुफ़्त सेवा के कारण सर्वोत्तम TikTok MP3 रूपांतरण प्रदान करता है। SSSTik, SnapTik या अन्य कन्वर्टर्स के विपरीत, हम परेशान करने वाले विज्ञापनों या डाउनलोड सीमाओं के बिना लगातार उच्च गुणवत्ता के परिणाम प्रदान करते हैं। लाखों उपयोगकर्ता अपनी TikTok ऑडियो आवश्यकताओं के लिए SaveTikFast पर भरोसा करते हैं।"
-    }
-  },
-  "story_page": {
-    "meta_title": "TikTok Story डाउनलोडर – फोटो और स्लाइडशो गुमनाम सेव करें",
-    "meta_desc": "TikTok Stories और Slideshows गुमनाम रूप से मुफ्त में डाउनलोड करें। एक्सपायर होने से पहले फोटो एल्बम और स्टोरी वीडियो सेव करें। तेज़, मुफ्त, कोई लॉगिन नहीं।",
-    "title": "TikTok Story डाउनलोड",
-    "desc": "एक्सपायर होने से पहले TikTok Stories और स्लाइडशो सेव करें।",
-    "placeholder": "Story लिंक पेस्ट करें...",
-    "btn_download": "Story सेव करें",
-    "about_title": "Story डाउनलोडर 2026",
-    "about_content": "SaveTikFast Story Downloader आपको 24 घंटे बाद गायब होने से पहले स्टोरीज और फोटो कैरोसेल सेव करने देता है।",
-    "features": {
-      "expire": {
-        "title": "गायब होने से पहले सहेजें",
-        "desc": "TikTok स्टोरीज को 24 घंटे बाद गायब होने से पहले डाउनलोड करें। अपने पसंदीदा क्रिएटर की स्टोरीज को फिर कभी न खोएं। SaveTikFast आपको समाप्त होने वाली सामग्री को अपने डिवाइस पर स्थायी रूप से सहेजने की सुविधा देता है।"
-      },
-      "quality": {
-        "title": "मूल गुणवत्ता",
-        "desc": "TikTok स्टोरीज को Full HD गुणवत्ता में सहेजें - बिल्कुल वैसे ही जैसे क्रिएटर ने अपलोड किया। कोई गुणवत्ता कमी नहीं, कोई संपीड़न नहीं। iPhone, Android या PC पर समान रिज़ॉल्यूशन प्राप्त करें।"
-      },
-      "anonymous": {
-        "title": "गुमनाम देखना",
-        "desc": "TikTok स्टोरीज को पूरी तरह से गुमनाम रूप से देखें और डाउनलोड करें। क्रिएटर को पता नहीं चलेगा कि आपने उनकी स्टोरी सहेजी है। 100% निजी और विवेकपूर्ण स्टोरी डाउनलोड।"
-      },
-      "fast": {
-        "title": "सुपर फास्ट",
-        "desc": "सिर्फ 2 सेकंड में कोई भी TikTok स्टोरी डाउनलोड करें। तत्काल स्टोरी सेविंग जो किसी भी अन्य ऑनलाइन TikTok स्टोरी डाउनलोडर से तेज़ काम करती है।"
-      },
-      "device": {
-        "title": "हर जगह काम करता है",
-        "desc": "iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows और किसी भी डिवाइस पर TikTok स्टोरीज सहेजें। Chrome, Safari, Firefox और सभी ब्राउज़र के साथ संगत।"
-      },
-      "nowatermark": {
-        "title": "बिना वॉटरमार्क",
-        "desc": "TikTok स्टोरीज को वॉटरमार्क या TikTok लोगो के बिना डाउनलोड करें। Instagram, Snapchat या WhatsApp पर सहेजने या साझा करने के लिए तैयार साफ स्टोरी डाउनलोड।"
-      },
-      "free": {
-        "title": "हमेशा के लिए मुफ़्त",
-        "desc": "बिना किसी लागत के असीमित TikTok स्टोरी डाउनलोड। कोई पंजीकरण नहीं, कोई शुल्क नहीं, कोई दैनिक सीमा नहीं। SaveTikFast स्टोरी डाउनलोडर 100% मुफ़्त है।"
-      },
-      "noapp": {
-        "title": "केवल ब्राउज़र",
-        "desc": "कोई ऐप इंस्टॉलेशन की आवश्यकता नहीं। अपने फोन या कंप्यूटर पर Chrome, Safari, Firefox, Edge से सीधे TikTok स्टोरीज डाउनलोड करें। ऐप्स से तेज़ और सुरक्षित।"
-      }
+    "nav_menu": {
+        "slideshow": "स्लाइडशो",
+        "video": "वीडियो",
+        "mp3": "MP3 ऑडियो",
+        "stories": "स्टोरीज"
     },
-    "how_to": {
-      "title": "TikTok Story कैसे डाउनलोड करें",
-      "step1": "Story खोलें, शेयर → लिंक कॉपी करें।",
-      "step2": "ऊपर लिंक पेस्ट करें।",
-      "step3": "'Story सेव करें' पर क्लिक करें।"
+    "mp3_page": {
+        "meta_title": "TikTok से MP3 कनवर्टर – 320kbps ऑडियो मुफ्त डाउनलोड",
+        "meta_desc": "TikTok वीडियो को 320kbps उच्च गुणवत्ता MP3 में बदलें। गाने और संगीत मुफ्त में ऑनलाइन निकालें। कोई ऐप या रजिस्ट्रेशन की जरूरत नहीं। सभी डिवाइस पर काम करता है।",
+        "title": "TikTok MP3 डाउनलोड",
+        "subtitle": "(केवल ऑडियो)",
+        "desc": "TikTok वीडियो को MP3 ऑडियो फाइलों में बदलें। 320kbps हाई क्वालिटी में गाने और संगीत निकालें।",
+        "placeholder": "ऑडियो निकालने के लिए वीडियो लिंक पेस्ट करें...",
+        "btn_download": "MP3 निकालें",
+        "about_title": "बेस्ट TikTok MP3 कनवर्टर 2026",
+        "about_content": "SaveTikFast MP3 आपको किसी भी TikTok वीडियो से तुरंत ऑडियो निकालने देता है। ट्रेंडिंग गाने और वायरल साउंड्स डाउनलोड करें।",
+        "features": {
+            "quality": {
+                "title": "HD ऑडियो 320kbps",
+                "desc": "TikTok वीडियो को स्टूडियो-क्वालिटी क्रिस्टल क्लियर 320kbps में MP3 में कन्वर्ट करें। ऑनलाइन उपलब्ध उच्चतम ऑडियो बिटरेट, उन संगीत प्रेमियों के लिए एकदम सही जो iPhone, Android या PC पर सर्वोत्तम ध्वनि चाहते हैं।"
+            },
+            "fast": {
+                "title": "तत्काल रूपांतरण",
+                "desc": "सिर्फ 2 सेकंड में TikTok से MP3 रूपांतरण। ऑनलाइन सबसे तेज़ TikTok ऑडियो एक्सट्रैक्टर - SSSTik MP3, SnapTik ऑडियो या किसी अन्य कन्वर्टर से तेज़। सभी डिवाइस पर तुरंत काम करता है।"
+            },
+            "ringtone": {
+                "title": "रिंगटोन के लिए तैयार",
+                "desc": "iPhone रिंगटोन और Android नोटिफिकेशन साउंड के लिए सही ऑडियो लंबाई। वायरल TikTok साउंड और ट्रेंडिंग ऑडियो क्लिप से कस्टम रिंगटोन बनाएं। किसी भी स्मार्टफोन पर सेट अप करना आसान।"
+            },
+            "device": {
+                "title": "सभी डिवाइस",
+                "desc": "iPhone, Samsung Galaxy, Google Pixel, Huawei, iPad, MacBook, Windows PC और ब्राउज़र वाले किसी भी डिवाइस पर TikTok ऑडियो एक्सट्रैक्ट करें। कोई ऐप डाउनलोड की आवश्यकता नहीं।"
+            },
+            "original": {
+                "title": "मूल ध्वनि",
+                "desc": "बिना संपीड़न या गुणवत्ता हानि के मूल TikTok ऑडियो गुणवत्ता को संरक्षित करता है। आपको ट्रेंडिंग गानों और वायरल ऑडियो सहित मूल वीडियो की समान ध्वनि मिलती है।"
+            },
+            "unlimited": {
+                "title": "मुफ़्त और असीमित",
+                "desc": "TikTok से MP3 रूपांतरण की कोई सीमा नहीं। जितने चाहें TikTok वीडियो को ऑडियो में कन्वर्ट करें - पूरी तरह से मुफ़्त, बिना पंजीकरण, बिना दैनिक प्रतिबंध।"
+            },
+            "secure": {
+                "title": "सुरक्षित और निजी",
+                "desc": "बिना डेटा संग्रह के सुरक्षित MP3 रूपांतरण। हम आपकी कन्वर्ट की गई फ़ाइलों को संग्रहीत नहीं करते और न ही आपकी गतिविधि को ट्रैक करते हैं। आपकी गोपनीयता 100% संरक्षित है।"
+            },
+            "nobapp": {
+                "title": "कोई ऐप की आवश्यकता नहीं",
+                "desc": "सीधे आपके ब्राउज़र में काम करता है - Chrome, Safari, Firefox, Edge, Opera। कोई ऐप इंस्टॉलेशन नहीं, कोई स्टोरेज स्पेस की आवश्यकता नहीं। TikTok MP3 डाउनलोडर ऐप्स से बेहतर।"
+            }
+        },
+        "how_to": {
+            "title": "TikTok को MP3 में कैसे बदलें",
+            "step1": "वीडियो खोजें। शेयर → लिंक कॉपी करें पर टैप करें।",
+            "step2": "ऊपर दिए गए बॉक्स में लिंक पेस्ट करें।",
+            "step3": "डाउनलोड करने के लिए 'MP3 निकालें' पर क्लिक करें।"
+        },
+        "faq": {
+            "q1": "TikTok वीडियो को MP3 में कैसे कन्वर्ट करें?",
+            "a1": "SaveTikFast के साथ TikTok को MP3 में कन्वर्ट करना सरल है। TikTok वीडियो लिंक कॉपी करें, इसे हमारे MP3 कन्वर्टर में पेस्ट करें और कन्वर्ट पर क्लिक करें। ऑडियो तुरंत उच्च गुणवत्ता 320kbps MP3 प्रारूप में निकाला जाएगा। यह iPhone, Android, Samsung, PC, Mac और Chrome, Safari, Firefox या किसी भी ब्राउज़र का उपयोग करने वाले सभी डिवाइस पर काम करता है। हमारा TikTok से MP3 कन्वर्टर SSSTik या SnapTik ऑडियो एक्सट्रैक्टर्स की तुलना में तेज़ और बेहतर गुणवत्ता का है।",
+            "q2": "SaveTikFast MP3 कन्वर्टर किस ऑडियो गुणवत्ता प्रदान करता है?",
+            "a2": "SaveTikFast प्रीमियम 320kbps MP3 गुणवत्ता में TikTok ऑडियो निकालता है - MP3 फ़ाइलों के लिए उपलब्ध उच्चतम बिटरेट। यह संगीत प्लेबैक, रिंगटोन या ऑडियो प्रोजेक्ट के लिए एकदम सही स्टूडियो-गुणवत्ता क्रिस्टल क्लियर साउंड प्रदान करता है। हम मूल TikTok ऑडियो को बिना संपीड़न या गुणवत्ता हानि के संरक्षित करते हैं, उन अन्य कन्वर्टर्स के विपरीत जो बैंडविड्थ बचाने के लिए बिटरेट कम करते हैं।",
+            "q3": "क्या मैं TikTok ऑडियो को रिंगटोन के रूप में उपयोग कर सकता हूं?",
+            "a3": "हां! SaveTikFast से डाउनलोड किया गया TikTok ऑडियो रिंगटोन के लिए एकदम सही है। MP3 प्रारूप iPhone और Android दोनों रिंगटोन सेटिंग्स के साथ काम करता है। iPhone पर, कस्टम रिंगटोन सेट करने के लिए GarageBand या iTunes का उपयोग करें। Android पर, बस सेटिंग्स > साउंड > रिंगटोन पर जाएं और डाउनलोड किए गए MP3 को चुनें। वायरल TikTok साउंड और ट्रेंडिंग ऑडियो से अद्वितीय रिंगटोन बनाएं।",
+            "q4": "क्या TikTok से MP3 रूपांतरण मुफ़्त है?",
+            "a4": "बिल्कुल मुफ़्त। SaveTikFast MP3 कन्वर्टर में कोई शुल्क, सब्सक्रिप्शन या दैनिक सीमा नहीं है। बिना पंजीकरण के असीमित TikTok वीडियो को MP3 में कन्वर्ट करें। हमारी मुफ़्त सेवा सभी डिवाइस - iPhone, Android, Samsung, Huawei, iPad, Mac, Windows PC - पर Chrome, Safari और Firefox सहित किसी भी ब्राउज़र का उपयोग करके काम करती है।",
+            "q5": "MP3 रूपांतरण में कितना समय लगता है?",
+            "a5": "SaveTikFast लगभग 2-3 सेकंड में TikTok को MP3 में कन्वर्ट करता है। हम तेज़ ऑडियो निष्कर्षण के लिए अनुकूलित शक्तिशाली सर्वर का उपयोग करते हैं। यह हमें उपलब्ध सबसे तेज़ TikTok MP3 कन्वर्टर बनाता है - SSSTik MP3, SnapTik ऑडियो, TikMate या अन्य रूपांतरण टूल से काफी तेज़।",
+            "q6": "क्या मैं iPhone पर TikTok संगीत डाउनलोड कर सकता हूं?",
+            "a6": "हां, आप SaveTikFast का उपयोग करके आसानी से iPhone पर TikTok संगीत और ऑडियो डाउनलोड कर सकते हैं। TikTok लिंक कॉपी करें, Safari या Chrome खोलें, हमारे MP3 कन्वर्टर पर जाएं, लिंक पेस्ट करें और डाउनलोड टैप करें। MP3 फ़ाइल आपके Files ऐप में सहेजी जाएगी। वहां से, इसे Apple Music में जोड़ें, इसे रिंगटोन के रूप में उपयोग करें, या कहीं भी साझा करें। सभी iPhone मॉडल पर काम करता है।",
+            "q7": "क्या MP3 में पूरा ऑडियो ट्रैक शामिल है?",
+            "a7": "हां, SaveTikFast TikTok वीडियो से पूरा ऑडियो निकालता है - जिसमें बैकग्राउंड म्यूजिक, वॉयस, साउंड इफेक्ट्स और सभी ऑडियो तत्व शामिल हैं। पूर्ण-लंबाई ऑडियो को बिल्कुल वैसे ही संरक्षित किया जाता है जैसे यह मूल TikTok वीडियो में सुनाई देता है। ट्रेंडिंग गाने, वायरल साउंड और आपके पसंदीदा TikTok ऑडियो को सहेजने के लिए एकदम सही।",
+            "q8": "क्या SaveTikFast MP3 कन्वर्टर सुरक्षित है?",
+            "a8": "पूरी तरह से सुरक्षित। SaveTikFast MP3 कन्वर्टर सुरक्षित SSL एन्क्रिप्शन का उपयोग करता है, आपका डेटा या कन्वर्ट की गई फ़ाइलें संग्रहीत नहीं करता, लॉगिन की आवश्यकता नहीं होती, और आपके डिवाइस पर कुछ भी इंस्टॉल नहीं करता। हमने दुनिया भर के उपयोगकर्ताओं के लिए सुरक्षित रूप से लाखों TikTok वीडियो को MP3 में कन्वर्ट किया है। आपकी गोपनीयता और सुरक्षा हमारी प्राथमिकता है।",
+            "q9": "क्या मैं Android पर TikTok को MP3 में कन्वर्ट कर सकता हूं?",
+            "a9": "हां, TikTok से MP3 रूपांतरण सभी Android डिवाइस पर पूरी तरह से काम करता है। इसमें Samsung Galaxy, Google Pixel, Huawei, Xiaomi, OPPO, OnePlus और अन्य सभी Android फोन और टैबलेट शामिल हैं। SaveTikFast तक पहुंचने और किसी भी TikTok को तुरंत MP3 में कन्वर्ट करने के लिए बस Chrome, Firefox या Samsung Internet ब्राउज़र का उपयोग करें।",
+            "q10": "SaveTikFast सर्वोत्तम TikTok से MP3 कन्वर्टर क्यों है?",
+            "a10": "SaveTikFast हमारी बेहतर गति (2 सेकंड), उच्चतम ऑडियो गुणवत्ता (320kbps), सार्वभौमिक डिवाइस समर्थन और पूरी तरह से मुफ़्त सेवा के कारण सर्वोत्तम TikTok MP3 रूपांतरण प्रदान करता है। SSSTik, SnapTik या अन्य कन्वर्टर्स के विपरीत, हम परेशान करने वाले विज्ञापनों या डाउनलोड सीमाओं के बिना लगातार उच्च गुणवत्ता के परिणाम प्रदान करते हैं। लाखों उपयोगकर्ता अपनी TikTok ऑडियो आवश्यकताओं के लिए SaveTikFast पर भरोसा करते हैं।"
+        }
     },
-    "faq": {
-      "q1": "TikTok स्टोरीज कैसे डाउनलोड करें?",
-      "a1": "TikTok स्टोरीज डाउनलोड करने के लिए, पहले TikTok से स्टोरी लिंक कॉपी करें (स्टोरी पर शेयर टैप करें)। फिर SaveTikFast पर जाएं, लिंक को हमारे स्टोरी डाउनलोडर में पेस्ट करें और डाउनलोड पर क्लिक करें। स्टोरी मूल HD गुणवत्ता में आपके डिवाइस पर सहेजी जाएगी। यह iPhone, Android, Samsung, iPad, Mac, PC पर Chrome, Safari, Firefox या किसी भी ब्राउज़र का उपयोग करके काम करता है। स्टोरीज को 24 घंटे बाद गायब होने से पहले सहेजें।",
-      "q2": "क्या मैं गुमनाम रूप से TikTok स्टोरीज डाउनलोड कर सकता हूं?",
-      "a2": "हां, SaveTikFast पूरी तरह से गुमनाम TikTok स्टोरी डाउनलोड की अनुमति देता है। क्रिएटर को कोई सूचना नहीं मिलेगी और न ही पता चलेगा कि आपने उनकी स्टोरी डाउनलोड की है। आपकी पहचान निजी रहती है। यह क्रिएटर के अकाउंट के साथ इंटरैक्ट किए बिना विवेकपूर्वक सामग्री सहेजने के लिए एकदम सही है।",
-      "q3": "क्या TikTok स्टोरीज डाउनलोड के बाद समाप्त हो जाती हैं?",
-      "a3": "नहीं, एक बार जब आप SaveTikFast के साथ TikTok स्टोरी डाउनलोड कर लेते हैं, तो यह स्थायी रूप से आपके डिवाइस पर सहेजी जाती है। भले ही TikTok स्टोरीज प्लेटफ़ॉर्म पर 24 घंटे बाद गायब हो जाती हैं, आपकी डाउनलोड की गई कॉपी हमेशा के लिए रहती है। समाप्त होने से पहले महत्वपूर्ण स्टोरीज सहेजें ताकि आप कभी भी सामग्री तक पहुंच न खोएं।",
-      "q4": "डाउनलोड की गई TikTok स्टोरीज की गुणवत्ता क्या है?",
-      "a4": "SaveTikFast TikTok स्टोरीज को पूर्ण मूल गुणवत्ता में डाउनलोड करता है - वही HD रिज़ॉल्यूशन जो क्रिएटर ने अपलोड किया। हम संपीड़ित या गुणवत्ता कम नहीं करते। आपकी डाउनलोड की गई स्टोरीज बिल्कुल वैसी ही दिखती हैं जैसी वे TikTok पर दिखती हैं, यादों को सहेजने या फिर से पोस्ट करने के लिए एकदम सही।",
-      "q5": "क्या मैं iPhone पर TikTok स्टोरीज डाउनलोड कर सकता हूं?",
-      "a5": "हां, iPhone पर TikTok स्टोरीज डाउनलोड करना आसान है। TikTok से स्टोरी लिंक कॉपी करें, Safari या Chrome खोलें, SaveTikFast पर जाएं, लिंक पेस्ट करें और डाउनलोड टैप करें। स्टोरीज सीधे आपके Photos या Files ऐप में सहेजी जाती हैं। यह बिना कोई ऐप इंस्टॉल किए iPhone 15, 14, 13, 12 और सभी मॉडल पर काम करता है।",
-      "q6": "क्या TikTok स्टोरी डाउनलोडर मुफ़्त है?",
-      "a6": "पूरी तरह से मुफ़्त। SaveTikFast स्टोरी डाउनलोडर में कोई लागत, प्रीमियम प्लान या डाउनलोड सीमा नहीं है। किसी भी डिवाइस - iPhone, Android, Samsung, PC, Mac - पर बिना किसी लागत के असीमित TikTok स्टोरीज सहेजें। कोई पंजीकरण या अकाउंट की आवश्यकता नहीं।",
-      "q7": "क्या मैं निजी TikTok स्टोरीज डाउनलोड कर सकता हूं?",
-      "a7": "SaveTikFast केवल सार्वजनिक TikTok स्टोरीज डाउनलोड कर सकता है। केवल विशिष्ट फ़ॉलोअर्स के साथ साझा की गई निजी स्टोरीज TikTok की गोपनीयता सुरक्षा के कारण बाहरी डाउनलोड टूल द्वारा एक्सेस नहीं की जा सकतीं। निजी सामग्री के लिए, आपको क्रिएटर की सीधी अनुमति की आवश्यकता होगी।",
-      "q8": "TikTok स्टोरीज के लिए SaveTikFast का उपयोग क्यों करें?",
-      "a8": "SaveTikFast सर्वोत्तम TikTok स्टोरी डाउनलोडर है क्योंकि हम तत्काल डाउनलोड, मूल HD गुणवत्ता, गुमनाम सेविंग और असीमित मुफ़्त एक्सेस प्रदान करते हैं। हमारा टूल सभी डिवाइस और ब्राउज़र पर विश्वसनीय रूप से काम करता है, जो इसे अन्य स्टोरी डाउनलोडर्स से बेहतर बनाता है। समाप्त होने वाली स्टोरीज को हमेशा के लिए गायब होने से पहले सहेजें।"
+    "story_page": {
+        "meta_title": "TikTok Story डाउनलोडर – फोटो और स्लाइडशो गुमनाम सेव करें",
+        "meta_desc": "TikTok Stories और Slideshows गुमनाम रूप से मुफ्त में डाउनलोड करें। एक्सपायर होने से पहले फोटो एल्बम और स्टोरी वीडियो सेव करें। तेज़, मुफ्त, कोई लॉगिन नहीं।",
+        "title": "TikTok Story डाउनलोड",
+        "desc": "एक्सपायर होने से पहले TikTok Stories और स्लाइडशो सेव करें।",
+        "placeholder": "Story लिंक पेस्ट करें...",
+        "btn_download": "Story सेव करें",
+        "about_title": "Story डाउनलोडर 2026",
+        "about_content": "SaveTikFast Story Downloader आपको 24 घंटे बाद गायब होने से पहले स्टोरीज और फोटो कैरोसेल सेव करने देता है।",
+        "features": {
+            "expire": {
+                "title": "गायब होने से पहले सहेजें",
+                "desc": "TikTok स्टोरीज को 24 घंटे बाद गायब होने से पहले डाउनलोड करें। अपने पसंदीदा क्रिएटर की स्टोरीज को फिर कभी न खोएं। SaveTikFast आपको समाप्त होने वाली सामग्री को अपने डिवाइस पर स्थायी रूप से सहेजने की सुविधा देता है।"
+            },
+            "quality": {
+                "title": "मूल गुणवत्ता",
+                "desc": "TikTok स्टोरीज को Full HD गुणवत्ता में सहेजें - बिल्कुल वैसे ही जैसे क्रिएटर ने अपलोड किया। कोई गुणवत्ता कमी नहीं, कोई संपीड़न नहीं। iPhone, Android या PC पर समान रिज़ॉल्यूशन प्राप्त करें।"
+            },
+            "anonymous": {
+                "title": "गुमनाम देखना",
+                "desc": "TikTok स्टोरीज को पूरी तरह से गुमनाम रूप से देखें और डाउनलोड करें। क्रिएटर को पता नहीं चलेगा कि आपने उनकी स्टोरी सहेजी है। 100% निजी और विवेकपूर्ण स्टोरी डाउनलोड।"
+            },
+            "fast": {
+                "title": "सुपर फास्ट",
+                "desc": "सिर्फ 2 सेकंड में कोई भी TikTok स्टोरी डाउनलोड करें। तत्काल स्टोरी सेविंग जो किसी भी अन्य ऑनलाइन TikTok स्टोरी डाउनलोडर से तेज़ काम करती है।"
+            },
+            "device": {
+                "title": "हर जगह काम करता है",
+                "desc": "iPhone 15, Samsung Galaxy, Google Pixel, Huawei, iPad, Mac, Windows और किसी भी डिवाइस पर TikTok स्टोरीज सहेजें। Chrome, Safari, Firefox और सभी ब्राउज़र के साथ संगत।"
+            },
+            "nowatermark": {
+                "title": "बिना वॉटरमार्क",
+                "desc": "TikTok स्टोरीज को वॉटरमार्क या TikTok लोगो के बिना डाउनलोड करें। Instagram, Snapchat या WhatsApp पर सहेजने या साझा करने के लिए तैयार साफ स्टोरी डाउनलोड।"
+            },
+            "free": {
+                "title": "हमेशा के लिए मुफ़्त",
+                "desc": "बिना किसी लागत के असीमित TikTok स्टोरी डाउनलोड। कोई पंजीकरण नहीं, कोई शुल्क नहीं, कोई दैनिक सीमा नहीं। SaveTikFast स्टोरी डाउनलोडर 100% मुफ़्त है।"
+            },
+            "noapp": {
+                "title": "केवल ब्राउज़र",
+                "desc": "कोई ऐप इंस्टॉलेशन की आवश्यकता नहीं। अपने फोन या कंप्यूटर पर Chrome, Safari, Firefox, Edge से सीधे TikTok स्टोरीज डाउनलोड करें। ऐप्स से तेज़ और सुरक्षित।"
+            }
+        },
+        "how_to": {
+            "title": "TikTok Story कैसे डाउनलोड करें",
+            "step1": "Story खोलें, शेयर → लिंक कॉपी करें।",
+            "step2": "ऊपर लिंक पेस्ट करें।",
+            "step3": "'Story सेव करें' पर क्लिक करें।"
+        },
+        "faq": {
+            "q1": "TikTok स्टोरीज कैसे डाउनलोड करें?",
+            "a1": "TikTok स्टोरीज डाउनलोड करने के लिए, पहले TikTok से स्टोरी लिंक कॉपी करें (स्टोरी पर शेयर टैप करें)। फिर SaveTikFast पर जाएं, लिंक को हमारे स्टोरी डाउनलोडर में पेस्ट करें और डाउनलोड पर क्लिक करें। स्टोरी मूल HD गुणवत्ता में आपके डिवाइस पर सहेजी जाएगी। यह iPhone, Android, Samsung, iPad, Mac, PC पर Chrome, Safari, Firefox या किसी भी ब्राउज़र का उपयोग करके काम करता है। स्टोरीज को 24 घंटे बाद गायब होने से पहले सहेजें।",
+            "q2": "क्या मैं गुमनाम रूप से TikTok स्टोरीज डाउनलोड कर सकता हूं?",
+            "a2": "हां, SaveTikFast पूरी तरह से गुमनाम TikTok स्टोरी डाउनलोड की अनुमति देता है। क्रिएटर को कोई सूचना नहीं मिलेगी और न ही पता चलेगा कि आपने उनकी स्टोरी डाउनलोड की है। आपकी पहचान निजी रहती है। यह क्रिएटर के अकाउंट के साथ इंटरैक्ट किए बिना विवेकपूर्वक सामग्री सहेजने के लिए एकदम सही है।",
+            "q3": "क्या TikTok स्टोरीज डाउनलोड के बाद समाप्त हो जाती हैं?",
+            "a3": "नहीं, एक बार जब आप SaveTikFast के साथ TikTok स्टोरी डाउनलोड कर लेते हैं, तो यह स्थायी रूप से आपके डिवाइस पर सहेजी जाती है। भले ही TikTok स्टोरीज प्लेटफ़ॉर्म पर 24 घंटे बाद गायब हो जाती हैं, आपकी डाउनलोड की गई कॉपी हमेशा के लिए रहती है। समाप्त होने से पहले महत्वपूर्ण स्टोरीज सहेजें ताकि आप कभी भी सामग्री तक पहुंच न खोएं।",
+            "q4": "डाउनलोड की गई TikTok स्टोरीज की गुणवत्ता क्या है?",
+            "a4": "SaveTikFast TikTok स्टोरीज को पूर्ण मूल गुणवत्ता में डाउनलोड करता है - वही HD रिज़ॉल्यूशन जो क्रिएटर ने अपलोड किया। हम संपीड़ित या गुणवत्ता कम नहीं करते। आपकी डाउनलोड की गई स्टोरीज बिल्कुल वैसी ही दिखती हैं जैसी वे TikTok पर दिखती हैं, यादों को सहेजने या फिर से पोस्ट करने के लिए एकदम सही।",
+            "q5": "क्या मैं iPhone पर TikTok स्टोरीज डाउनलोड कर सकता हूं?",
+            "a5": "हां, iPhone पर TikTok स्टोरीज डाउनलोड करना आसान है। TikTok से स्टोरी लिंक कॉपी करें, Safari या Chrome खोलें, SaveTikFast पर जाएं, लिंक पेस्ट करें और डाउनलोड टैप करें। स्टोरीज सीधे आपके Photos या Files ऐप में सहेजी जाती हैं। यह बिना कोई ऐप इंस्टॉल किए iPhone 15, 14, 13, 12 और सभी मॉडल पर काम करता है।",
+            "q6": "क्या TikTok स्टोरी डाउनलोडर मुफ़्त है?",
+            "a6": "पूरी तरह से मुफ़्त। SaveTikFast स्टोरी डाउनलोडर में कोई लागत, प्रीमियम प्लान या डाउनलोड सीमा नहीं है। किसी भी डिवाइस - iPhone, Android, Samsung, PC, Mac - पर बिना किसी लागत के असीमित TikTok स्टोरीज सहेजें। कोई पंजीकरण या अकाउंट की आवश्यकता नहीं।",
+            "q7": "क्या मैं निजी TikTok स्टोरीज डाउनलोड कर सकता हूं?",
+            "a7": "SaveTikFast केवल सार्वजनिक TikTok स्टोरीज डाउनलोड कर सकता है। केवल विशिष्ट फ़ॉलोअर्स के साथ साझा की गई निजी स्टोरीज TikTok की गोपनीयता सुरक्षा के कारण बाहरी डाउनलोड टूल द्वारा एक्सेस नहीं की जा सकतीं। निजी सामग्री के लिए, आपको क्रिएटर की सीधी अनुमति की आवश्यकता होगी।",
+            "q8": "TikTok स्टोरीज के लिए SaveTikFast का उपयोग क्यों करें?",
+            "a8": "SaveTikFast सर्वोत्तम TikTok स्टोरी डाउनलोडर है क्योंकि हम तत्काल डाउनलोड, मूल HD गुणवत्ता, गुमनाम सेविंग और असीमित मुफ़्त एक्सेस प्रदान करते हैं। हमारा टूल सभी डिवाइस और ब्राउज़र पर विश्वसनीय रूप से काम करता है, जो इसे अन्य स्टोरी डाउनलोडर्स से बेहतर बनाता है। समाप्त होने वाली स्टोरीज को हमेशा के लिए गायब होने से पहले सहेजें।"
+        }
+    },
+    "blog": {
+        "meta_title": "TikTok डाउनलोड गाइड 2026 – वीडियो, MP3, स्लाइडशो और स्टोरी",
+        "meta_desc": "2026 में TikTok कंटेंट डाउनलोड करने का पूरा गाइड। वॉटरमार्क के बिना वीडियो सेव करें, MP3 में कनवर्ट करें, iPhone, Android और PC पर स्लाइडशो डाउनलोड करें।",
+        "keywords": "वॉटरमार्क के बिना टिकटॉक वीडियो कैसे डाउनलोड करें 2026, टिकटॉक वीडियो डाउनलोडर आईफोन आईओएस 18, टिकटॉक वीडियो एंड्रॉइड 15 सेव करें, टिकटॉक से एमपी3 कनवर्टर ऑनलाइन मुफ्त, टिकटॉक स्लाइड शो फोटो डाउनलोड करें, टिकटॉक कहानियां समाप्त होने से पहले सेव करें, टिकटॉक डाउनलोडर बिना वॉटरमार्क एचडी 4K, सर्वश्रेष्ठ टिकटॉक सेवर क्रोम एक्सटेंशन विकल्प, विंडोज 11 पर टिकटॉक वीडियो डाउनलोड करें, मैक मैकओएस सोनोमा पर टिकटॉक सेव करें, टिकटॉक वीडियो डाउनलोड सैमसंग गैलेक्सी एस25, टिकटॉक एमपी3 डाउनलोड 320kbps, टिकटॉक स्लाइड शो डाउनलोडर 2026, टिकटॉक स्टोरी सेवर अनाम, ऐप के बिना टिकटॉक डाउनलोड करें, टिकटॉक वीडियो कन्वर्टर MP4, टिकटॉक ऑडियो म्यूजिक साउंड सेव करें, टिकटॉक डाउनलोडर फायरफॉक्स एज सफारी, टिकटॉक कैरोसेल फोटो डाउनलोड, टिकटॉक रीपोस्ट वीडियो सेवर, टिकटॉक युगल वीडियो डाउनलोड करें, टिकटॉक लाइव वीडियो 2026 सेव करें, टिकटॉक बैच डाउनलोडर मल्टीपल वीडियो, टिकटॉक एचडी क्वालिटी डाउनलोड 1080p, टिकटॉक वीडियो डाउनलोड Xiaomi वनप्लस, टिकटॉक को ऑफ़लाइन देखने के लिए सेव करें, टिकटॉक डाउनलोडर क्रोमबुक, टिकटॉक वीडियो सेवर आईपैड प्रो, टिकटॉक डाउनलोड करें ट्रेंडिंग वीडियो, टिकटॉक साउंड एक्सट्रैक्टर ऑनलाइन, टिकटॉक फोटो स्लाइड शो सेवर ज़िप, गुमनाम टिकटॉक वीडियो व्यूअर, टिकटॉक डाउनलोडर विंडोज 10 पीसी, बिना लॉगिन रजिस्ट्रेशन के टिकटॉक सेव करें, टिकटॉक वीडियो डाउनलोड अनलिमिटेड फ्री, टिकटॉक एमपी3 रिंगटोन मेकर, टिकटॉक स्लाइड शो सभी इमेज डाउनलोड, टिकटॉक स्टोरी डाउनलोडर 24 घंटे, टिकटॉक 4K वीडियो सेवर 2160p, स्नैपटिक एसएसएसटीकटोक का सबसे अच्छा विकल्प",
+        "title": "अल्टीमेट टिकटॉक डाउनलोड गाइड 2026",
+        "subtitle": "किसी भी डिवाइस पर टिकटॉक वीडियो, एमपी3 ऑडियो, स्लाइडशो और कहानियां डाउनलोड करने के बारे में आपको जो कुछ जानने की जरूरत है। नवीनतम तरीकों और युक्तियों के साथ 2026 के लिए अपडेट किया गया।",
+        "updated": "अंतिम अद्यतन: फ़रवरी",
+        "back_home": "डाउनलोडर पर वापस जाएँ",
+        "tools_heading": "अपना डाउनलोड प्रकार चुनें",
+        "try_now": "अब कोशिश करो",
+        "card_video_title": "वीडियो डाउनलोडर",
+        "card_video_desc": "HD/4K गुणवत्ता में वॉटरमार्क के बिना टिकटॉक वीडियो डाउनलोड करें। iPhone 16, Samsung Galaxy S25 और सभी डिवाइस पर काम करता है।",
+        "card_mp3_title": "एमपी3 कन्वर्टर",
+        "card_mp3_desc": "उच्च गुणवत्ता 320kbps में टिकटॉक वीडियो से ऑडियो निकालें। रिंगटोन और संगीत प्रेमियों के लिए बिल्कुल सही।",
+        "card_slideshow_title": "स्लाइड शो सेवर",
+        "card_slideshow_desc": "टिकटॉक स्लाइडशो और हिंडोला से सभी तस्वीरें एक ज़िप फ़ाइल के रूप में डाउनलोड करें। फ़ोटो डंप हमेशा के लिए रखें.",
+        "card_story_title": "कहानी डाउनलोडर",
+        "card_story_desc": "24 घंटे में गायब होने से पहले टिकटॉक कहानियों को सहेजें। बिना किसी सूचना के गुमनाम रूप से डाउनलोड करें।",
+        "section1_title": "2026 में टिकटॉक वीडियो कैसे डाउनलोड करें",
+        "section1_content": "<strong>बिना वॉटरमार्क के टिकटॉक वीडियो डाउनलोड करना</strong> इतना आसान कभी नहीं रहा। 2026 में, आपकी पसंदीदा टिकटॉक सामग्री को सहेजने के लिए SaveTikFast सबसे तेज़ और सबसे विश्वसनीय समाधान बना हुआ है। चाहे आप <strong>iOS 18 के साथ iPhone 16</strong>, <strong>Android 15 के साथ Samsung Galaxy S25</strong>, या <strong>Windows 11</strong> या <strong>macOS Sonoma</strong> चलाने वाले PC का उपयोग कर रहे हों, हमारा ऑनलाइन टूल सभी प्लेटफ़ॉर्म पर निर्बाध रूप से काम करता है।<br><br>अन्य वीडियो डाउनलोड प्लेटफ़ॉर्म के विपरीत, जिन्हें ऐप इंस्टॉलेशन या पंजीकरण की आवश्यकता होती है, SaveTikFast सीधे आपके ब्राउज़र में काम करता है। बस टिकटॉक वीडियो लिंक को कॉपी करें, इसे हमारे डाउनलोडर में पेस्ट करें और डाउनलोड पर क्लिक करें। आपका वीडियो कष्टप्रद टिकटॉक वॉटरमार्क के बिना <strong>HD या 4K क्वालिटी</strong> में सेव किया जाएगा।<br><br>हमारी सेवा <strong>Google Chrome 130</strong>, <strong>Safari 18</strong>, <strong>Mozilla Firefox</strong>, <strong>Microsoft Edge</strong> और यहां तक कि <strong>Xiaomi</strong>, <strong>OnePlus</strong> पर मोबाइल ब्राउज़र सहित सभी प्रमुख ब्राउज़रों का समर्थन करती है। <strong>ओप्पो</strong>, और <strong>हुआवेई</strong> डिवाइस।",
+        "section2_title": "टिकटॉक से एमपी3 रूपांतरण गाइड",
+        "section2_content": "<strong>TikTok को MP3 में बदलना</strong> चाहते हैं? हमारा ऑडियो एक्सट्रैक्टर किसी भी टिकटॉक वीडियो से 320kbps तक की उच्च गुणवत्ता में ध्वनि खींचता है। यह इसके लिए बिल्कुल सही है:<br><br>• ट्रेंडिंग टिकटॉक ध्वनियों से कस्टम रिंगटोन बनाना<br>• ऑफ़लाइन सुनने के लिए अपने पसंदीदा टिकटॉक गाने सहेजना<br>• अपनी सामग्री के लिए वॉयसओवर और ऑडियो क्लिप निकालना<br>• वायरल ध्वनियों और संगीत का संग्रह बनाना<br><br>एमपी3 कनवर्टर सभी उपकरणों पर काम करता है - नवीनतम <strong>आईफोन 16 प्रो मैक्स</strong> से लेकर बजट एंड्रॉइड फोन तक। किसी विशेष ऐप की आवश्यकता नहीं है, बस लिंक पेस्ट करें और अपनी ऑडियो फ़ाइल तुरंत डाउनलोड करें।",
+        "section3_title": "टिकटॉक स्लाइड शो और कहानियां डाउनलोड करना",
+        "section3_content": "<strong>टिकटॉक स्लाइडशो</strong> (जिसे फोटो कैरोसेल भी कहा जाता है) 2026 में अविश्वसनीय रूप से लोकप्रिय हो गए हैं। हमारा स्लाइड शो डाउनलोडर <strong>कैरोसेल से प्रत्येक छवि को मूल गुणवत्ता में सहेजता है, एक सुविधाजनक ज़िप फ़ाइल के रूप में पैक किया गया है। सौंदर्यपूर्ण फोटो डंप, ट्यूटोरियल और मीम्स को सहेजने के लिए बिल्कुल सही।<br><br><strong>टिकटॉक कहानियां</strong> 24 घंटों के बाद गायब हो जाती हैं, जिससे उन्हें सहेजना कठिन हो जाता है। हमारा स्टोरी डाउनलोडर <strong>100% गुमनाम रूप से</strong> काम करता है - निर्माता को कभी पता नहीं चलेगा कि आपने उनकी स्टोरी डाउनलोड की है। यह <strong>iPad Pro</strong>, <strong>Android टैबलेट</strong>, और <strong>Chromebooks</strong> सहित सभी उपकरणों पर काम करता है।<br><br>चाहे आप प्रेरणा के लिए सामग्री संग्रहीत कर रहे हों या यादें सहेजने के लिए, SaveTikFast ऑनलाइन उपलब्ध सबसे विश्वसनीय समाधान प्रदान करता है।",
+        "section4_title": "निजता एवं सुरक्षा",
+        "section4_content": "SaveTikFast में, हम आपकी<strong>गोपनीयता</strong>को गंभीरता से लेते हैं। कुछ डाउनलोड सेवाओं के विपरीत, जिनके लिए लॉगिन की आवश्यकता होती है या आपकी गतिविधि को ट्रैक करना पड़ता है:<br><br>• <strong>कोई पंजीकरण की आवश्यकता नहीं है</strong> - तुरंत डाउनलोड करना शुरू करें<br>• <strong>कोई टिकटॉक लॉगिन की आवश्यकता नहीं है</strong> - हम कभी भी आपके क्रेडेंशियल नहीं मांगते हैं<br>• <strong>कोई वीडियो संग्रहीत नहीं है</strong> - सभी प्रसंस्करण वास्तविक समय में होता है<br>• <strong>SSL एन्क्रिप्टेड</strong> - सभी डाउनलोड के लिए सुरक्षित कनेक्शन<br>• <strong>कोई ट्रैकिंग नहीं</strong> - आपका डाउनलोड इतिहास है कभी रिकॉर्ड नहीं किया गया<br><br>हमारी सेवा तेज़, मुफ़्त और पूरी तरह से गुमनाम होने के लिए डिज़ाइन की गई है। हम उपयोगकर्ता की गोपनीयता से समझौता किए बिना मूल्यवान उपकरण प्रदान करने में विश्वास करते हैं।",
+        "section5_title": "SaveTikFast क्यों चुनें?",
+        "section5_content": "टिकटॉक डाउनलोडर्स से भरे बाजार में, SaveTikFast कई कारणों से खड़ा है:<br><br>• <strong>सबसे तेज प्रोसेसिंग</strong> - डाउनलोड मिनटों में नहीं, बल्कि सेकंडों में शुरू होता है<br>• <strong>उच्चतम गुणवत्ता</strong> - उपलब्ध होने पर 4K रिज़ॉल्यूशन तक<br>• <strong>कोई वॉटरमार्क नहीं</strong> - साझा करने के लिए साफ-सुथरे वीडियो<br>• <strong>सभी सामग्री प्रकार</strong> - वीडियो, एमपी3, स्लाइड शो और कहानियां<br>• <strong>सार्वभौमिक अनुकूलता</strong> - हर डिवाइस और ब्राउज़र पर काम करता है<br>• <strong>हमेशा मुफ़्त</strong> - कोई प्रीमियम योजना नहीं, कोई छिपी हुई फीस नहीं<br>• <strong>नियमित अपडेट</strong> - 2026 और उससे आगे के लिए लगातार सुधार<br><br>चाहे आप एक सामग्री निर्माता, सोशल मीडिया मैनेजर हों, या सिर्फ टिकटॉक से प्यार करने वाले व्यक्ति हों, टिकटॉक सामग्री को डाउनलोड करने और सहेजने के लिए SaveTikFast आपका पसंदीदा समाधान है।",
+        "cta_title": "डाउनलोड करने के लिए तैयार हैं?",
+        "cta_desc": "अभी टिकटॉक वीडियो, एमपी3 ऑडियो, स्लाइडशो और कहानियां डाउनलोड करना शुरू करें। 100% निःशुल्क, कोई पंजीकरण आवश्यक नहीं।",
+        "cta_button": "डाउनलोड करना प्रारंभ करें",
+        "latest_posts": "नवीनतम पोस्ट",
+        "read_more": "और पढ़ें",
+        "share": "इस लेख को साझा करें:",
+        "related_posts_title": "संबंधित लेख",
+        "toc_title": "विषय सूची",
+        "copy_link": "लिंक कॉपी करें",
+        "link_copied": "कॉपी किया गया!"
+    },
+    "ios_page": {
+        "title": "आईओएस के लिए टिकटॉक डाउनलोडर",
+        "desc": "वॉटरमार्क के बिना सीधे अपने iPhone या iPad पर HD गुणवत्ता में टिकटॉक वीडियो डाउनलोड करें। iOS पर Safari का उपयोग करके वीडियो सहेजने का सबसे तेज़ तरीका।",
+        "placeholder": "अपने iPhone से टिकटॉक लिंक पेस्ट करें...",
+        "meta_title": "iPhone/iPad के लिए टिकटॉक डाउनलोडर - SaveTikFast",
+        "meta_desc": "iOS (iPhone और iPad) पर बिना वॉटरमार्क के टिकटॉक वीडियो को सेव करने का निःशुल्क टूल। किसी ऐप इंस्टॉलेशन की आवश्यकता नहीं है. तुरंत MP4 या MP3 फॉर्मेट में डाउनलोड करें।",
+        "faq": {
+            "q1": "मैं iPhone और iPad पर बिना वॉटरमार्क के टिकटॉक वीडियो कैसे डाउनलोड करूं?",
+            "a1": "अपने iPhone या iPad पर टिकटॉक खोलें, शेयर करें और लिंक कॉपी करें पर टैप करें। सफ़ारी या क्रोम ब्राउज़र खोलें, SaveTikFast पर जाएँ, टिकटॉक वीडियो URL पेस्ट करें और डाउनलोड पर टैप करें। वीडियो वॉटरमार्क के बिना एचडी गुणवत्ता में सीधे आपके फ़ोटो ऐप में सहेजता है। iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air और iOS 17 या iOS 18 चलाने वाले सभी iOS उपकरणों पर काम करता है।",
+            "q2": "क्या SaveTikFast बिना किसी ऐप को इंस्टॉल किए iPhone पर उपयोग के लिए मुफ़्त है?",
+            "a2": "हाँ, SaveTikFast iPhone और iPad उपयोगकर्ताओं के लिए 100% निःशुल्क है। ऐप स्टोर से किसी ऐप इंस्टॉलेशन की आवश्यकता नहीं है। हमारा टिकटॉक वीडियो डाउनलोडर सीधे आईओएस पर सफारी, क्रोम या फायरफॉक्स ब्राउज़र में काम करता है। वॉटरमार्क के बिना असीमित टिकटॉक वीडियो डाउनलोड करें, टिकटॉक को एमपी3 में बदलें, और टिकटॉक कहानियां सहेजें - सब कुछ पूरी तरह से मुफ्त, बिना किसी पंजीकरण या सदस्यता की आवश्यकता के।",
+            "q3": "क्या मैं अपने iPhone कैमरा रोल में HD 4K गुणवत्ता में टिकटॉक वीडियो सहेज सकता हूँ?",
+            "a3": "बिल्कुल। SaveTikFast 720p HD, 1080p फुल HD और 4K रिज़ॉल्यूशन सहित उपलब्ध उच्चतम गुणवत्ता में सीधे आपके iPhone फ़ोटो या फ़ाइल ऐप पर टिकटॉक वीडियो डाउनलोड करता है। हम कभी भी वीडियो को कंप्रेस नहीं करते। iOS उपकरणों पर SSSTik, SnapTik, या tikMate से बेहतर गुणवत्ता। बाद में देखने के लिए iPhone पर टिकटॉक सामग्री को ऑफ़लाइन सहेजने के लिए बिल्कुल सही।",
+            "q4": "iOS उपकरणों के लिए SaveTikFast सबसे अच्छा टिकटॉक डाउनलोडर क्यों है?",
+            "a4": "SaveTikFast 3-सेकंड डाउनलोड, वॉटरमार्क हटाने की कोई समस्या नहीं, HD और 4K समर्थन, MP3 ऑडियो निष्कर्षण, कहानी डाउनलोड और स्लाइड शो सेविंग के साथ iPhone और iPad के लिए सबसे तेज़ टिकटॉक वीडियो सेवर है। अन्य iOS टिकटॉक डाउनलोडर्स के विपरीत, हमें किसी ऐप इंस्टॉल, किसी लॉगिन और किसी Apple शॉर्टकट की आवश्यकता नहीं है। सभी iOS संस्करणों में Safari ब्राउज़र पर पूरी तरह से काम करता है।",
+            "q5": "मैं iPhone पर टिकटॉक वीडियो को एमपी3 ऑडियो में कैसे बदलूं?",
+            "a5": "अपने iPhone पर टिकटॉक वीडियो लिंक को कॉपी करें, Safari या Chrome खोलें, SaveTikFast MP3 कनवर्टर पेज पर जाएं, URL पेस्ट करें और Extract MP3 पर टैप करें। ऑडियो फ़ाइल आपके iPhone फ़ाइलें ऐप पर 320kbps गुणवत्ता में डाउनलोड होती है। टिकटॉक साउंड से आईफोन रिंगटोन बनाने, ट्रेंडिंग टिकटॉक म्यूजिक को सेव करने और आईओएस डिवाइस पर वायरल ऑडियो क्लिप निकालने के लिए बिल्कुल सही।"
+        }
+    },
+    "android_page": {
+        "title": "एंड्रॉइड के लिए टिकटॉक डाउनलोडर",
+        "desc": "सबसे अच्छा एंड्रॉइड टिकटॉक वीडियो सेवर! किसी भी टिकटॉक वीडियो को बिना वॉटरमार्क के सीधे अपने मोबाइल गैलरी में MP4 फॉर्मेट में डाउनलोड करें।",
+        "placeholder": "अपने एंड्रॉइड फोन से टिकटॉक लिंक पेस्ट करें...",
+        "meta_title": "एंड्रॉइड डिवाइस के लिए टिकटॉक डाउनलोडर - SaveTikFast",
+        "meta_desc": "बिना लोगो के किसी भी टिकटॉक वीडियो को अपने एंड्रॉइड फोन गैलरी में सेव करें। 100% मुफ़्त, कोई वॉटरमार्क नहीं, तेज़ और सुरक्षित। एचडी गुणवत्ता में डाउनलोड करें।",
+        "faq": {
+            "q1": "मैं वॉटरमार्क के बिना एंड्रॉइड पर टिकटॉक वीडियो कैसे डाउनलोड करूं?",
+            "a1": "अपने एंड्रॉइड फोन पर टिकटॉक खोलें, शेयर करें और लिंक कॉपी करें पर टैप करें। क्रोम, सैमसंग इंटरनेट, या फ़ायरफ़ॉक्स ब्राउज़र खोलें, SaveTikFast पर जाएँ, वीडियो URL पेस्ट करें और डाउनलोड पर टैप करें। टिकटॉक वीडियो आपके डाउनलोड फ़ोल्डर या गैलरी में बिना वॉटरमार्क के एचडी गुणवत्ता में सेव हो जाता है। सैमसंग गैलेक्सी S25, Google Pixel 9, Xiaomi, OPPO, OnePlus और Huawei डिवाइस पर काम करता है।",
+            "q2": "क्या SaveTikFast सभी एंड्रॉइड फोन और टैबलेट के साथ संगत है?",
+            "a2": "हां, SaveTikFast सैमसंग गैलेक्सी, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia और Android टैबलेट सहित हर Android डिवाइस पर काम करता है। एंड्रॉइड 12, 13, 14 और 15 के साथ संगत। बिना वॉटरमार्क के टिकटॉक वीडियो मुफ्त में डाउनलोड करने के लिए क्रोम, सैमसंग इंटरनेट, फायरफॉक्स या किसी भी मोबाइल ब्राउज़र का उपयोग करें। किसी एपीके इंस्टॉलेशन की आवश्यकता नहीं है.",
+            "q3": "क्या मैं टिकटॉक वीडियो को अपनी एंड्रॉइड गैलरी में एचडी 4K में सहेज सकता हूं?",
+            "a3": "बिल्कुल। SaveTikFast मूल HD, 1080p फुल HD और 4K गुणवत्ता में सीधे आपके एंड्रॉइड फोन गैलरी या डाउनलोड फ़ोल्डर में टिकटॉक वीडियो डाउनलोड करता है। हम बिना संपीड़न के मूल वीडियो गुणवत्ता को सुरक्षित रखते हैं। एसएसएसटीक, स्नैपटिक, या टिकमेट डाउनलोडर्स से बेहतर। सैमसंग गैलेक्सी, पिक्सेल, या Xiaomi उपकरणों पर टिकटॉक सामग्री को ऑफ़लाइन सहेजने के लिए बिल्कुल सही।",
+            "q4": "अन्य एंड्रॉइड टिकटॉक डाउनलोडर्स की तुलना में SaveTikFast को क्यों चुनें?",
+            "a4": "SaveTikFast 3-सेकंड प्रोसेसिंग, वॉटरमार्क-मुक्त डाउनलोड, एचडी और 4K वीडियो समर्थन, टिकटॉक एमपी3 कनवर्टर, स्टोरी सेवर और स्लाइड शो डाउनलोडर के साथ एंड्रॉइड के लिए सबसे तेज़ टिकटॉक डाउनलोडर है। किसी APK की आवश्यकता नहीं, किसी Google Play ऐप की आवश्यकता नहीं। बिना पंजीकरण के Samsung Galaxy, Google Pixel, Xiaomi, OPPO और सभी Android स्मार्टफ़ोन पर Chrome ब्राउज़र में काम करता है।",
+            "q5": "मैं अपने एंड्रॉइड फोन पर टिकटॉक से एमपी3 ऑडियो कैसे निकालूं?",
+            "a5": "अपने एंड्रॉइड डिवाइस पर टिकटॉक वीडियो लिंक को कॉपी करें, क्रोम या सैमसंग इंटरनेट ब्राउज़र खोलें, SaveTikFast MP3 कनवर्टर पर जाएं, URL पेस्ट करें और Extract MP3 पर टैप करें। आपके डाउनलोड फ़ोल्डर में उच्च गुणवत्ता वाले 320kbps प्रारूप में ऑडियो डाउनलोड। ट्रेंडिंग टिकटॉक गानों को सेव करने, एंड्रॉइड रिंगटोन बनाने और सैमसंग गैलेक्सी और पिक्सेल फोन पर वायरल ध्वनि निकालने के लिए बिल्कुल सही।"
+        }
+    },
+    "mac_page": {
+        "title": "मैक के लिए टिकटॉक डाउनलोडर",
+        "desc": "अपने मैकबुक या आईमैक पर वॉटरमार्क के बिना उच्च गुणवत्ता वाले टिकटॉक वीडियो डाउनलोड करें। सफ़ारी और क्रोम पर पूरी तरह से काम करता है।",
+        "placeholder": "मैक पर डाउनलोड करने के लिए यहां टिकटॉक लिंक ड्रॉप करें...",
+        "meta_title": "मैक/मैकबुक (एचडी) के लिए टिकटॉक वीडियो डाउनलोडर - SaveTikFast",
+        "meta_desc": "अपने मैक पर वॉटरमार्क के बिना आसानी से टिकटॉक वीडियो डाउनलोड करें। 4K गुणवत्ता में macOS Safari, Chrome और Firefox को सपोर्ट करने वाला मुफ़्त ऑनलाइन सेवर।",
+        "faq": {
+            "q1": "मैं मैक पर वॉटरमार्क के बिना टिकटॉक वीडियो कैसे डाउनलोड करूं?",
+            "a1": "अपने MacBook या iMac पर Safari, Chrome, या Firefox में टिकटॉक खोलें। एड्रेस बार से टिकटॉक वीडियो यूआरएल कॉपी करें, SaveTikFast पर जाएं, लिंक पेस्ट करें और डाउनलोड पर क्लिक करें। वीडियो आपके मैक डाउनलोड फ़ोल्डर में वॉटरमार्क के बिना एचडी या 4K गुणवत्ता में सहेजता है। मैकओएस सोनोमा, मैकओएस वेंचुरा, मैकबुक प्रो, मैकबुक एयर, आईमैक और मैक मिनी पर काम करता है।",
+            "q2": "क्या SaveTikFast macOS के लिए Safari और Chrome पर काम करता है?",
+            "a2": "हाँ, SaveTikFast Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge और ओपेरा सहित सभी Mac ब्राउज़र पर पूरी तरह से काम करता है। किसी ब्राउज़र एक्सटेंशन या प्लगइन इंस्टॉलेशन की आवश्यकता नहीं है। हमारा टिकटॉक वीडियो डाउनलोडर सीधे आपके ब्राउज़र में macOS सोनोमा, वेंचुरा और मोंटेरी पर चलता है। किसी भी मैक पर वॉटरमार्क के बिना असीमित टिकटॉक वीडियो पूरी तरह से मुफ्त डाउनलोड करें।",
+            "q3": "क्या मैं अपने मैकबुक पर टिकटॉक वीडियो को 4K गुणवत्ता में सहेज सकता हूँ?",
+            "a3": "बिल्कुल। SaveTikFast मैकबुक प्रो, मैकबुक एयर, आईमैक और मैक मिनी पर 720p, 1080p फुल एचडी, 2K और 4K रिज़ॉल्यूशन सहित उपलब्ध उच्चतम गुणवत्ता में टिकटॉक वीडियो डाउनलोड करता है। हम कभी भी वीडियो की गुणवत्ता को संपीड़ित या कम नहीं करते हैं। फ़ाइलें आपके डाउनलोड फ़ोल्डर में MP4 के रूप में सहेजी जाती हैं। प्रीमियम वीडियो गुणवत्ता चाहने वाले मैक उपयोगकर्ताओं के लिए SSSTik या SnapTik से बेहतर।",
+            "q4": "मैक कंप्यूटरों के लिए SaveTikFast सबसे अच्छा टिकटॉक डाउनलोडर क्यों है?",
+            "a4": "SaveTikFast तत्काल 3-सेकंड प्रोसेसिंग, वॉटरमार्क हटाने, 4K गुणवत्ता समर्थन, एमपी 3 ऑडियो निष्कर्षण, टिकटॉक स्टोरी सेविंग और स्लाइड शो डाउनलोडिंग के साथ मैक के लिए सबसे तेज़ टिकटॉक वीडियो डाउनलोडर है। MacOS पर किसी सॉफ़्टवेयर इंस्टॉलेशन की आवश्यकता नहीं है। बिना पंजीकरण या सदस्यता के मैकबुक प्रो, मैकबुक एयर, आईमैक और मैक मिनी पर सफारी और क्रोम ब्राउज़र में काम करता है।",
+            "q5": "मैं अपने मैक पर टिकटॉक को एमपी3 में कैसे बदलूं?",
+            "a5": "अपने मैक पर सफारी या क्रोम से टिकटॉक वीडियो यूआरएल कॉपी करें, SaveTikFast MP3 कनवर्टर पर जाएं, लिंक पेस्ट करें और एक्सट्रैक्ट एमपी3 पर क्लिक करें। ऑडियो फ़ाइल आपके मैक डाउनलोड फ़ोल्डर में स्टूडियो-क्वालिटी 320kbps एमपी3 प्रारूप में डाउनलोड होती है। ट्रेंडिंग टिकटॉक संगीत को सहेजने, प्लेलिस्ट बनाने और मैकबुक प्रो, मैकबुक एयर और आईमैक पर ध्वनि निकालने के लिए बिल्कुल सही।"
+        }
+    },
+    "pc_page": {
+        "title": "पीसी के लिए टिकटॉक डाउनलोडर",
+        "desc": "टिकटॉक वीडियो को सीधे अपने विंडोज पीसी या लैपटॉप में सेव करें। अत्यंत तेज़ गति में साफ़, वॉटरमार्क-मुक्त वीडियो प्राप्त करें।",
+        "placeholder": "अपने पीसी से टिकटॉक वीडियो लिंक पेस्ट करें...",
+        "meta_title": "विंडोज़ पीसी/लैपटॉप के लिए टिकटॉक डाउनलोडर - SaveTikFast",
+        "meta_desc": "विंडोज़ पीसी के लिए सबसे तेज़ टिकटॉक वीडियो डाउनलोडर। अपने कंप्यूटर पर वॉटरमार्क के बिना असीमित टिकटॉक वीडियो निःशुल्क सहेजें।",
+        "faq": {
+            "q1": "मैं वॉटरमार्क के बिना विंडोज पीसी पर टिकटॉक वीडियो कैसे डाउनलोड करूं?",
+            "a1": "अपने विंडोज पीसी या लैपटॉप पर क्रोम, एज या फायरफॉक्स में टिकटॉक खोलें। ब्राउज़र एड्रेस बार से टिकटॉक वीडियो यूआरएल कॉपी करें, SaveTikFast पर जाएं, लिंक पेस्ट करें और डाउनलोड पर क्लिक करें। वीडियो वॉटरमार्क के बिना एचडी या 4K गुणवत्ता में आपके पीसी डाउनलोड फ़ोल्डर में सहेजता है। विंडोज 11, विंडोज 10, डेस्कटॉप कंप्यूटर और डेल, एचपी, लेनोवो, एएसयूएस और एसर के लैपटॉप पर काम करता है।",
+            "q2": "क्या SaveTikFast विंडोज़ कंप्यूटर पर उपयोग के लिए निःशुल्क है?",
+            "a2": "हां, विंडोज पीसी उपयोगकर्ताओं के लिए SaveTikFast पूरी तरह से निःशुल्क है। किसी सॉफ़्टवेयर इंस्टॉलेशन या डेस्कटॉप एप्लिकेशन डाउनलोड की आवश्यकता नहीं है। हमारा टिकटॉक वीडियो डाउनलोडर सीधे विंडोज 11 और विंडोज 10 पर क्रोम, माइक्रोसॉफ्ट एज, फायरफॉक्स और ओपेरा ब्राउज़र में काम करता है। वॉटरमार्क के बिना असीमित टिकटॉक वीडियो डाउनलोड करें, एमपी3 में कनवर्ट करें, कहानियां सहेजें और स्लाइडशो मुफ्त में डाउनलोड करें।",
+            "q3": "क्या मैं अपने विंडोज पीसी पर टिकटॉक वीडियो को एचडी 4K गुणवत्ता में सहेज सकता हूं?",
+            "a3": "बिल्कुल। SaveTikFast 720p HD, 1080p फुल HD, 2K और 4K रिज़ॉल्यूशन सहित मूल गुणवत्ता में टिकटॉक वीडियो को सीधे आपके विंडोज पीसी डाउनलोड फ़ोल्डर में MP4 फ़ाइलों के रूप में डाउनलोड करता है। हम कभी भी गुणवत्ता को संकुचित या कम नहीं करते हैं। एसएसएसटीक, स्नैपटिक, या टिकमेट से बेहतर। Windows 11 या Windows 10 चलाने वाले डेस्कटॉप कंप्यूटर पर टिकटॉक सामग्री को सहेजने और संपादित करने के लिए बिल्कुल सही।",
+            "q4": "पीसी के लिए SaveTikFast सर्वश्रेष्ठ टिकटॉक डाउनलोडर क्यों है?",
+            "a4": "SaveTikFast 3-सेकंड प्रोसेसिंग, बिना वॉटरमार्क, HD और 4K सपोर्ट, MP3 कनवर्टर, स्टोरी डाउनलोडर और स्लाइड शो सेवर के साथ विंडोज पीसी के लिए सबसे तेज़ टिकटॉक वीडियो डाउनलोडर है। किसी डेस्कटॉप सॉफ़्टवेयर इंस्टालेशन की आवश्यकता नहीं है. बिना पंजीकरण या शुल्क के एचपी, डेल, लेनोवो, एएसयूएस के विंडोज 11, विंडोज 10 लैपटॉप और डेस्कटॉप पर क्रोम और एज ब्राउज़र में काम करता है।",
+            "q5": "मैं अपने विंडोज़ कंप्यूटर पर टिकटॉक को एमपी3 में कैसे परिवर्तित करूं?",
+            "a5": "अपने विंडोज पीसी पर क्रोम या एज से टिकटॉक वीडियो यूआरएल कॉपी करें, SaveTikFast MP3 कनवर्टर पेज पर जाएं, लिंक पेस्ट करें और एक्सट्रैक्ट एमपी3 पर क्लिक करें। ऑडियो आपके पीसी डाउनलोड फ़ोल्डर में उच्च गुणवत्ता वाले 320kbps एमपी3 प्रारूप में डाउनलोड होता है। टिकटॉक गाने सहेजने, विंडोज़ रिंगटोन बनाने, वायरल ऑडियो निकालने और अपने डेस्कटॉप कंप्यूटर पर संगीत संग्रह बनाने के लिए बिल्कुल सही।"
+        }
+    },
+    "seo_rich_content": {
+        "intro_title": "वॉटरमार्क के बिना सर्वश्रेष्ठ टिकटॉक वीडियो डाउनलोडर",
+        "intro_p1": "जब टिकटॉक वीडियो को सहजता से और घुसपैठ वाले वॉटरमार्क के बिना सहेजने की बात आती है, तो SaveTikFast बाज़ार में सबसे अच्छा विकल्प बनकर उभरता है। हमने इस शक्तिशाली ऑनलाइन डाउनलोडर को उपयोगकर्ता अनुभव को अपनी सर्वोच्च प्राथमिकता के रूप में विकसित किया है। हमारी वेबसाइट पर नेविगेट करना अविश्वसनीय रूप से सहज है; आपको केवल अपने इच्छित टिकटॉक वीडियो का लिंक पेस्ट करना होगा, और हमारे उन्नत सर्वर बिजली की तेज गति से बाकी काम संभाल लेंगे। SaveTikFast की विशिष्टता इसकी मजबूत वास्तुकला में निहित है, जो व्यस्त ट्रैफिक घंटों के दौरान भी विश्वसनीय डाउनलोड की गारंटी देता है। यह प्रभावशाली लोगों, विपणक और रोजमर्रा के उपयोगकर्ताओं के लिए एक अनिवार्य उपयोगिता है जो वायरल हिट के अपने व्यक्तिगत संग्रह को संग्रहित करना चाहते हैं। क्योंकि यह एक वेब-आधारित उपयोगिता है, यह तृतीय-पक्ष ऐप्स डाउनलोड करने से जुड़े जोखिमों को समाप्त करती है, आपकी सभी डाउनलोडिंग आवश्यकताओं के लिए एक सुरक्षित और निजी वातावरण प्रदान करती है। आप SaveTikFast को किसी भी डिवाइस से एक्सेस कर सकते हैं, चाहे आप घर पर डेस्कटॉप कंप्यूटर का उपयोग कर रहे हों या चलते-फिरते मोबाइल फोन का। हमारा मानना ​​है कि उच्च गुणवत्ता वाले मीडिया तक पहुंच सीधी और निःशुल्क होनी चाहिए। SaveTikFast को चुनकर, आप एक प्रीमियम, प्रतिबंध-मुक्त सेवा का विकल्प चुन रहे हैं जो लगातार आपकी गैलरी या हार्ड ड्राइव पर दोषरहित, वॉटरमार्क-मुक्त वीडियो वितरित करती है।",
+        "intro_p2": "SaveTikFast केवल एक साधारण वीडियो डाउनलोडर नहीं है; यह एक ऑल-इन-वन मीडिया एक्सट्रैक्शन पावरहाउस है जिसे विशेष रूप से टिकटॉक सामग्री के लिए तैयार किया गया है। हम समझते हैं कि टिकटॉक विभिन्न प्रारूपों को शामिल करने के लिए विकसित हुआ है, और हमारे टूल ने तदनुसार अनुकूलित किया है। यदि आपके पास वायरल ऑडियो ट्रैक वाला कोई वीडियो आता है जिसे आप रखना चाहते हैं, तो हमारा समर्पित एमपी3 डाउनलोडर आपको वीडियो से पूरी तरह अलग, क्रिस्टल-स्पष्ट गुणवत्ता में ऑडियो को रिप करने की अनुमति देता है। यह ध्वनि प्रभावों की तलाश करने वाले रचनाकारों या ऑफ़लाइन अपने पसंदीदा टिकटॉक धुनों का आनंद लेने के इच्छुक उपयोगकर्ताओं के लिए अविश्वसनीय रूप से उपयोगी है। इसके अलावा, हमारा प्लेटफ़ॉर्म तेजी से लोकप्रिय टिकटॉक फोटो स्लाइड शो के लिए पूर्ण समर्थन प्रदान करता है। केवल एक क्लिक से, आप स्लाइड शो से सभी छवियों को प्राचीन एचडी गुणवत्ता में डाउनलोड कर सकते हैं, जिससे आप मैन्युअल स्क्रीन कैप्चरिंग की परेशानी से बच जाएंगे। हम टिकटॉक स्टोरीज़ के गायब होने से पहले उन्हें डाउनलोड करने की आवश्यकता को भी पूरा करते हैं। हमारे स्टोरी डाउनलोडर के साथ, आप उन अस्थायी अपडेट को तुरंत अपने डिवाइस पर सहेज सकते हैं। इन सभी सुविधाओं को एक एकल, उपयोगकर्ता-अनुकूल इंटरफ़ेस में एकीकृत किया गया है। चाहे आपको MP4 वीडियो, MP3 ऑडियो, या JPG छवियों की आवश्यकता हो, SaveTikFast उन सभी को बेजोड़ गति के साथ प्रदान करता है, यह सुनिश्चित करते हुए कि आप अपनी पसंदीदा सामग्री से कभी न चूकें।",
+        "why_title": "SaveTikFast क्यों चुनें?",
+        "why_p1": "SaveTikFast में, हम समझते हैं कि आपका समय मूल्यवान है, यही कारण है कि हम तेज डाउनलोड गति और रॉक-सॉलिड विश्वसनीयता को प्राथमिकता देते हैं। हमारे मजबूत बैकएंड सिस्टम बिना किसी परेशानी के उच्च मात्रा में समवर्ती अनुरोधों को संभालने के लिए इंजीनियर किए गए हैं। जब आप डाउनलोड बटन दबाते हैं, तो हमारे सर्वर तुरंत टिकटॉक लिंक को प्रोसेस करते हैं, वॉटरमार्क हटा देते हैं और पलक झपकते ही फाइल आप तक पहुंचा देते हैं। आपको टूटे हुए लिंक, अंतहीन लोडिंग स्क्रीन या निराशाजनक टाइमआउट का सामना नहीं करना पड़ेगा। हम निर्बाध, निर्बाध डाउनलोडिंग अनुभव प्रदान करने के लिए अपने नेटवर्क की लगातार निगरानी और उन्नयन करते हैं जिस पर आप दिन-ब-दिन निर्भर रह सकते हैं।",
+        "why_p2": "जब आप SaveTikFast का उपयोग करते हैं तो गुणवत्ता से कभी समझौता नहीं किया जाता है। हमारा टूल सावधानीपूर्वक टिकटॉक के सर्वर से उच्चतम उपलब्ध रिज़ॉल्यूशन निकालता है, जिससे यह सुनिश्चित होता है कि आपके द्वारा सेव किए गए वीडियो उतने ही क्रिस्प और जीवंत दिखें जितने ऐप में दिखते हैं। चाहे वह फुल एचडी हो या 4K, अगर मूल निर्माता ने इसे उच्च गुणवत्ता में अपलोड किया है, तो आपको यह उच्च गुणवत्ता में मिलेगा। इसके अलावा, हमारा प्लेटफ़ॉर्म अद्वितीय डिवाइस समर्थन प्रदान करता है। चाहे आप विंडोज पीसी, मैकओएस लैपटॉप, एंड्रॉइड टैबलेट या आईओएस स्मार्टफोन का उपयोग करना पसंद करते हों, SaveTikFast सभी ऑपरेटिंग सिस्टमों पर त्रुटिपूर्ण ढंग से काम करता है। यह क्रोम, सफारी, फ़ायरफ़ॉक्स और एज सहित सभी प्रमुख वेब ब्राउज़रों के साथ पूरी तरह से संगत है।",
+        "why_p3": "SaveTikFast में आपकी गोपनीयता और सुरक्षा हमारे लिए अत्यंत महत्वपूर्ण है। हम एक सख्त नो-लॉग्स नीति के तहत काम करते हैं, जिसका अर्थ है कि हम आपके द्वारा डाउनलोड किए जाने वाले वीडियो को ट्रैक, स्टोर या मॉनिटर नहीं करते हैं। आपका उपयोग पूरी तरह से गुमनाम रहता है। इसके अतिरिक्त, आपके कनेक्शन को किसी भी संभावित खतरे से बचाने के लिए हमारी वेबसाइट उन्नत एसएसएल एन्क्रिप्शन से मजबूत है। चूँकि हमारी सेवा 100% वेब-आधारित है, इसलिए आपसे कभी भी संदिग्ध निष्पादन योग्य फ़ाइलें डाउनलोड करने या आक्रामक ब्राउज़र एक्सटेंशन इंस्टॉल करने के लिए नहीं कहा जाता है, जिससे मैलवेयर या वायरस का खतरा पूरी तरह समाप्त हो जाता है। आप मन की शांति के साथ अपने पसंदीदा टिकटॉक डाउनलोड कर सकते हैं, यह जानकर कि आपका डेटा सुरक्षित है।",
+        "guide_title": "किसी भी डिवाइस पर टिकटॉक वीडियो कैसे डाउनलोड करें",
+        "guide_p1": "अपने पसंदीदा टिकटॉक वीडियो डाउनलोड करने के लिए SaveTikFast का उपयोग करना एक अविश्वसनीय रूप से सरल प्रक्रिया है जिसे कोई भी कुछ ही सेकंड में सीख सकता है। सबसे पहले, अपने स्मार्टफोन पर टिकटॉक एप्लिकेशन खोलें या अपने कंप्यूटर ब्राउज़र पर टिकटॉक वेबसाइट पर जाएं। अपने फ़ीड में तब तक स्क्रॉल करें जब तक आपको वह वीडियो, स्लाइड शो या कहानी न मिल जाए जिसे आप सहेजना चाहते हैं। इसके बाद, 'शेयर' आइकन पर टैप करें, जो आमतौर पर स्क्रीन के दाईं ओर स्थित दाईं ओर इंगित करने वाले तीर द्वारा दर्शाया जाता है। पॉप अप होने वाले साझाकरण मेनू से, 'कॉपी लिंक' विकल्प चुनें। एक बार जब लिंक आपके क्लिपबोर्ड पर कॉपी हो जाए, तो अपना पसंदीदा वेब ब्राउज़र खोलें - चाहे वह क्रोम, सफारी, या फ़ायरफ़ॉक्स हो - और SaveTikFast वेबसाइट पर जाएँ। हमारे मुखपृष्ठ पर, आपको एक बड़ा इनपुट फ़ील्ड प्रमुखता से दिखाई देगा। कॉपी किए गए टिकटॉक लिंक को सीधे इस टेक्स्ट बॉक्स में पेस्ट करें। लिंक पेस्ट करने के बाद उसके ठीक बगल में 'डाउनलोड' बटन पर क्लिक करें। हमारा सिस्टम तुरंत लिंक पर कार्रवाई करेगा और, कुछ ही क्षणों में, आपको कई डाउनलोड विकल्प प्रस्तुत करेगा। आप वॉटरमार्क के बिना वीडियो डाउनलोड करना, एमपी3 के रूप में ऑडियो निकालना या स्लाइड शो से छवियों को सहेजना चुन सकते हैं। अपने इच्छित प्रारूप पर क्लिक करें, और फ़ाइल तुरंत आपके डिवाइस के स्थानीय संग्रहण में डाउनलोड होना शुरू हो जाएगी, ऑफ़लाइन देखने या साझा करने के लिए तैयार होगी।",
+        "comparison_title": "SaveTikFast vs Other Downloaders (SSSTik, SnapTik)",
+        "comparison_p1": "When you compare SaveTikFast to other popular alternatives like SnapTik, SSSTik, or TikMate, the advantages of our platform become immediately clear. SaveTikFast provides a superior, ad-light experience that doesn't overwhelm you with pop-ups, unlike many competitors. In terms of performance, our advanced conversion engines deliver watermark-free videos significantly faster than SnapTik, especially during peak internet hours. While SSSTik is a capable tool, SaveTikFast offers a more robust suite of features, handling not just standard videos but also complex multi-image slideshows and ephemeral Stories with absolute precision. Moreover, the audio quality of our MP3 downloads is consistently higher than what you get from TikMate. By focusing on speed, reliability, user experience, and comprehensive feature support, SaveTikFast has established itself as the premier choice for TikTok media downloading.",
+        "tips_title": "Tips for the Best Downloading Experience",
+        "tips_p1": "अपने SaveTikFast अनुभव का अधिकतम लाभ उठाने के लिए, कुछ व्यावहारिक युक्तियाँ हैं जिनका आप अनुसरण कर सकते हैं। मोबाइल उपयोगकर्ताओं के लिए, हम अत्यधिक अनुशंसा करते हैं कि जब भी आपको कोई पसंदीदा वीडियो मिले तो तुरंत पहुंच के लिए अपने स्मार्टफोन की होम स्क्रीन या ब्राउज़र पर हमारी वेबसाइट को बुकमार्क करें। यदि आप वीडियो संपादन या व्यावसायिक उपयोग के लिए सामग्री डाउनलोड कर रहे हैं, तो हमेशा सुनिश्चित करें कि आप दृश्य निष्ठा बनाए रखने के लिए उच्चतम उपलब्ध एचडी रिज़ॉल्यूशन विकल्प का चयन करें। धीमे इंटरनेट कनेक्शन वाले क्षेत्रों के उपयोगकर्ताओं के लिए, यदि आपको केवल ध्वनि की आवश्यकता है तो पहले एमपी3 ऑडियो संस्करण डाउनलोड करना बैंडविड्थ बचाने का एक शानदार तरीका हो सकता है। इसके अतिरिक्त, यदि कोई डाउनलोड तुरंत शुरू नहीं होता है, तो बस पृष्ठ को ताज़ा करने और लिंक को फिर से चिपकाने से आमतौर पर किसी भी अस्थायी नेटवर्क समस्या का समाधान हो जाता है। हमेशा याद रखें कि डाउनलोडिंग मुफ़्त और असीमित है, लेकिन आपको मूल सामग्री निर्माताओं के वीडियो को पुनः साझा करते या पुन: उपयोग करते समय उनके बौद्धिक संपदा अधिकारों का सम्मान करना चाहिए।",
+        "conclusion_title": "Start Downloading Your Favorite TikToks Today",
+        "conclusion_p1": "संक्षेप में, यदि आप टिकटॉक सामग्री को सहेजने का अंतिम, परेशानी मुक्त तरीका ढूंढ रहे हैं, तो SaveTikFast आपका निश्चित उत्तर है। हम बिजली की तेज गति, प्रीमियम एचडी गुणवत्ता और एमपी3 एक्सट्रैक्शन से लेकर स्टोरी डाउनलोडिंग तक सुविधाओं के एक व्यापक सूट को एक सुरक्षित और पूरी तरह से मुफ्त प्लेटफॉर्म में जोड़ते हैं। हमारा टूल सभी डिवाइसों पर पूरी तरह से काम करता है, यह सुनिश्चित करता है कि आप जब चाहें अपने पसंदीदा मीडिया तक पहुंच सकें। आज ही अपनी डिजिटल सामग्री पर नियंत्रण रखें। SaveTikFast पर जाएँ, अपना पहला लिंक पेस्ट करें, और जानें कि वॉटरमार्क-मुक्त टिकटॉक वीडियो को सीधे अपने डिवाइस पर सहेजना कितना अविश्वसनीय रूप से आसान है!"
     }
-  },
-  "blog": {
-    "meta_title": "TikTok डाउनलोड गाइड 2026 – वीडियो, MP3, स्लाइडशो और स्टोरी",
-    "meta_desc": "2026 में TikTok कंटेंट डाउनलोड करने का पूरा गाइड। वॉटरमार्क के बिना वीडियो सेव करें, MP3 में कनवर्ट करें, iPhone, Android और PC पर स्लाइडशो डाउनलोड करें।",
-    "keywords": "वॉटरमार्क के बिना टिकटॉक वीडियो कैसे डाउनलोड करें 2026, टिकटॉक वीडियो डाउनलोडर आईफोन आईओएस 18, टिकटॉक वीडियो एंड्रॉइड 15 सेव करें, टिकटॉक से एमपी3 कनवर्टर ऑनलाइन मुफ्त, टिकटॉक स्लाइड शो फोटो डाउनलोड करें, टिकटॉक कहानियां समाप्त होने से पहले सेव करें, टिकटॉक डाउनलोडर बिना वॉटरमार्क एचडी 4K, सर्वश्रेष्ठ टिकटॉक सेवर क्रोम एक्सटेंशन विकल्प, विंडोज 11 पर टिकटॉक वीडियो डाउनलोड करें, मैक मैकओएस सोनोमा पर टिकटॉक सेव करें, टिकटॉक वीडियो डाउनलोड सैमसंग गैलेक्सी एस25, टिकटॉक एमपी3 डाउनलोड 320kbps, टिकटॉक स्लाइड शो डाउनलोडर 2026, टिकटॉक स्टोरी सेवर अनाम, ऐप के बिना टिकटॉक डाउनलोड करें, टिकटॉक वीडियो कन्वर्टर MP4, टिकटॉक ऑडियो म्यूजिक साउंड सेव करें, टिकटॉक डाउनलोडर फायरफॉक्स एज सफारी, टिकटॉक कैरोसेल फोटो डाउनलोड, टिकटॉक रीपोस्ट वीडियो सेवर, टिकटॉक युगल वीडियो डाउनलोड करें, टिकटॉक लाइव वीडियो 2026 सेव करें, टिकटॉक बैच डाउनलोडर मल्टीपल वीडियो, टिकटॉक एचडी क्वालिटी डाउनलोड 1080p, टिकटॉक वीडियो डाउनलोड Xiaomi वनप्लस, टिकटॉक को ऑफ़लाइन देखने के लिए सेव करें, टिकटॉक डाउनलोडर क्रोमबुक, टिकटॉक वीडियो सेवर आईपैड प्रो, टिकटॉक डाउनलोड करें ट्रेंडिंग वीडियो, टिकटॉक साउंड एक्सट्रैक्टर ऑनलाइन, टिकटॉक फोटो स्लाइड शो सेवर ज़िप, गुमनाम टिकटॉक वीडियो व्यूअर, टिकटॉक डाउनलोडर विंडोज 10 पीसी, बिना लॉगिन रजिस्ट्रेशन के टिकटॉक सेव करें, टिकटॉक वीडियो डाउनलोड अनलिमिटेड फ्री, टिकटॉक एमपी3 रिंगटोन मेकर, टिकटॉक स्लाइड शो सभी इमेज डाउनलोड, टिकटॉक स्टोरी डाउनलोडर 24 घंटे, टिकटॉक 4K वीडियो सेवर 2160p, स्नैपटिक एसएसएसटीकटोक का सबसे अच्छा विकल्प",
-    "title": "अल्टीमेट टिकटॉक डाउनलोड गाइड 2026",
-    "subtitle": "किसी भी डिवाइस पर टिकटॉक वीडियो, एमपी3 ऑडियो, स्लाइडशो और कहानियां डाउनलोड करने के बारे में आपको जो कुछ जानने की जरूरत है। नवीनतम तरीकों और युक्तियों के साथ 2026 के लिए अपडेट किया गया।",
-    "updated": "अंतिम अद्यतन: फ़रवरी",
-    "back_home": "डाउनलोडर पर वापस जाएँ",
-    "tools_heading": "अपना डाउनलोड प्रकार चुनें",
-    "try_now": "अब कोशिश करो",
-    "card_video_title": "वीडियो डाउनलोडर",
-    "card_video_desc": "HD/4K गुणवत्ता में वॉटरमार्क के बिना टिकटॉक वीडियो डाउनलोड करें। iPhone 16, Samsung Galaxy S25 और सभी डिवाइस पर काम करता है।",
-    "card_mp3_title": "एमपी3 कन्वर्टर",
-    "card_mp3_desc": "उच्च गुणवत्ता 320kbps में टिकटॉक वीडियो से ऑडियो निकालें। रिंगटोन और संगीत प्रेमियों के लिए बिल्कुल सही।",
-    "card_slideshow_title": "स्लाइड शो सेवर",
-    "card_slideshow_desc": "टिकटॉक स्लाइडशो और हिंडोला से सभी तस्वीरें एक ज़िप फ़ाइल के रूप में डाउनलोड करें। फ़ोटो डंप हमेशा के लिए रखें.",
-    "card_story_title": "कहानी डाउनलोडर",
-    "card_story_desc": "24 घंटे में गायब होने से पहले टिकटॉक कहानियों को सहेजें। बिना किसी सूचना के गुमनाम रूप से डाउनलोड करें।",
-    "section1_title": "2026 में टिकटॉक वीडियो कैसे डाउनलोड करें",
-    "section1_content": "<strong>बिना वॉटरमार्क के टिकटॉक वीडियो डाउनलोड करना</strong> इतना आसान कभी नहीं रहा। 2026 में, आपकी पसंदीदा टिकटॉक सामग्री को सहेजने के लिए SaveTikFast सबसे तेज़ और सबसे विश्वसनीय समाधान बना हुआ है। चाहे आप <strong>iOS 18 के साथ iPhone 16</strong>, <strong>Android 15 के साथ Samsung Galaxy S25</strong>, या <strong>Windows 11</strong> या <strong>macOS Sonoma</strong> चलाने वाले PC का उपयोग कर रहे हों, हमारा ऑनलाइन टूल सभी प्लेटफ़ॉर्म पर निर्बाध रूप से काम करता है।<br><br>अन्य वीडियो डाउनलोड प्लेटफ़ॉर्म के विपरीत, जिन्हें ऐप इंस्टॉलेशन या पंजीकरण की आवश्यकता होती है, SaveTikFast सीधे आपके ब्राउज़र में काम करता है। बस टिकटॉक वीडियो लिंक को कॉपी करें, इसे हमारे डाउनलोडर में पेस्ट करें और डाउनलोड पर क्लिक करें। आपका वीडियो कष्टप्रद टिकटॉक वॉटरमार्क के बिना <strong>HD या 4K क्वालिटी</strong> में सेव किया जाएगा।<br><br>हमारी सेवा <strong>Google Chrome 130</strong>, <strong>Safari 18</strong>, <strong>Mozilla Firefox</strong>, <strong>Microsoft Edge</strong> और यहां तक कि <strong>Xiaomi</strong>, <strong>OnePlus</strong> पर मोबाइल ब्राउज़र सहित सभी प्रमुख ब्राउज़रों का समर्थन करती है। <strong>ओप्पो</strong>, और <strong>हुआवेई</strong> डिवाइस।",
-    "section2_title": "टिकटॉक से एमपी3 रूपांतरण गाइड",
-    "section2_content": "<strong>TikTok को MP3 में बदलना</strong> चाहते हैं? हमारा ऑडियो एक्सट्रैक्टर किसी भी टिकटॉक वीडियो से 320kbps तक की उच्च गुणवत्ता में ध्वनि खींचता है। यह इसके लिए बिल्कुल सही है:<br><br>• ट्रेंडिंग टिकटॉक ध्वनियों से कस्टम रिंगटोन बनाना<br>• ऑफ़लाइन सुनने के लिए अपने पसंदीदा टिकटॉक गाने सहेजना<br>• अपनी सामग्री के लिए वॉयसओवर और ऑडियो क्लिप निकालना<br>• वायरल ध्वनियों और संगीत का संग्रह बनाना<br><br>एमपी3 कनवर्टर सभी उपकरणों पर काम करता है - नवीनतम <strong>आईफोन 16 प्रो मैक्स</strong> से लेकर बजट एंड्रॉइड फोन तक। किसी विशेष ऐप की आवश्यकता नहीं है, बस लिंक पेस्ट करें और अपनी ऑडियो फ़ाइल तुरंत डाउनलोड करें।",
-    "section3_title": "टिकटॉक स्लाइड शो और कहानियां डाउनलोड करना",
-    "section3_content": "<strong>टिकटॉक स्लाइडशो</strong> (जिसे फोटो कैरोसेल भी कहा जाता है) 2026 में अविश्वसनीय रूप से लोकप्रिय हो गए हैं। हमारा स्लाइड शो डाउनलोडर <strong>कैरोसेल से प्रत्येक छवि को मूल गुणवत्ता में सहेजता है, एक सुविधाजनक ज़िप फ़ाइल के रूप में पैक किया गया है। सौंदर्यपूर्ण फोटो डंप, ट्यूटोरियल और मीम्स को सहेजने के लिए बिल्कुल सही।<br><br><strong>टिकटॉक कहानियां</strong> 24 घंटों के बाद गायब हो जाती हैं, जिससे उन्हें सहेजना कठिन हो जाता है। हमारा स्टोरी डाउनलोडर <strong>100% गुमनाम रूप से</strong> काम करता है - निर्माता को कभी पता नहीं चलेगा कि आपने उनकी स्टोरी डाउनलोड की है। यह <strong>iPad Pro</strong>, <strong>Android टैबलेट</strong>, और <strong>Chromebooks</strong> सहित सभी उपकरणों पर काम करता है।<br><br>चाहे आप प्रेरणा के लिए सामग्री संग्रहीत कर रहे हों या यादें सहेजने के लिए, SaveTikFast ऑनलाइन उपलब्ध सबसे विश्वसनीय समाधान प्रदान करता है।",
-    "section4_title": "निजता एवं सुरक्षा",
-    "section4_content": "SaveTikFast में, हम आपकी<strong>गोपनीयता</strong>को गंभीरता से लेते हैं। कुछ डाउनलोड सेवाओं के विपरीत, जिनके लिए लॉगिन की आवश्यकता होती है या आपकी गतिविधि को ट्रैक करना पड़ता है:<br><br>• <strong>कोई पंजीकरण की आवश्यकता नहीं है</strong> - तुरंत डाउनलोड करना शुरू करें<br>• <strong>कोई टिकटॉक लॉगिन की आवश्यकता नहीं है</strong> - हम कभी भी आपके क्रेडेंशियल नहीं मांगते हैं<br>• <strong>कोई वीडियो संग्रहीत नहीं है</strong> - सभी प्रसंस्करण वास्तविक समय में होता है<br>• <strong>SSL एन्क्रिप्टेड</strong> - सभी डाउनलोड के लिए सुरक्षित कनेक्शन<br>• <strong>कोई ट्रैकिंग नहीं</strong> - आपका डाउनलोड इतिहास है कभी रिकॉर्ड नहीं किया गया<br><br>हमारी सेवा तेज़, मुफ़्त और पूरी तरह से गुमनाम होने के लिए डिज़ाइन की गई है। हम उपयोगकर्ता की गोपनीयता से समझौता किए बिना मूल्यवान उपकरण प्रदान करने में विश्वास करते हैं।",
-    "section5_title": "SaveTikFast क्यों चुनें?",
-    "section5_content": "टिकटॉक डाउनलोडर्स से भरे बाजार में, SaveTikFast कई कारणों से खड़ा है:<br><br>• <strong>सबसे तेज प्रोसेसिंग</strong> - डाउनलोड मिनटों में नहीं, बल्कि सेकंडों में शुरू होता है<br>• <strong>उच्चतम गुणवत्ता</strong> - उपलब्ध होने पर 4K रिज़ॉल्यूशन तक<br>• <strong>कोई वॉटरमार्क नहीं</strong> - साझा करने के लिए साफ-सुथरे वीडियो<br>• <strong>सभी सामग्री प्रकार</strong> - वीडियो, एमपी3, स्लाइड शो और कहानियां<br>• <strong>सार्वभौमिक अनुकूलता</strong> - हर डिवाइस और ब्राउज़र पर काम करता है<br>• <strong>हमेशा मुफ़्त</strong> - कोई प्रीमियम योजना नहीं, कोई छिपी हुई फीस नहीं<br>• <strong>नियमित अपडेट</strong> - 2026 और उससे आगे के लिए लगातार सुधार<br><br>चाहे आप एक सामग्री निर्माता, सोशल मीडिया मैनेजर हों, या सिर्फ टिकटॉक से प्यार करने वाले व्यक्ति हों, टिकटॉक सामग्री को डाउनलोड करने और सहेजने के लिए SaveTikFast आपका पसंदीदा समाधान है।",
-    "cta_title": "डाउनलोड करने के लिए तैयार हैं?",
-    "cta_desc": "अभी टिकटॉक वीडियो, एमपी3 ऑडियो, स्लाइडशो और कहानियां डाउनलोड करना शुरू करें। 100% निःशुल्क, कोई पंजीकरण आवश्यक नहीं।",
-    "cta_button": "डाउनलोड करना प्रारंभ करें",
-    "latest_posts": "नवीनतम पोस्ट",
-    "read_more": "और पढ़ें",
-    "share": "इस लेख को साझा करें:",
-    "related_posts_title": "संबंधित लेख",
-    "toc_title": "विषय सूची",
-    "copy_link": "लिंक कॉपी करें",
-    "link_copied": "कॉपी किया गया!"
-  },
-  "ios_page": {
-    "title": "आईओएस के लिए टिकटॉक डाउनलोडर",
-    "desc": "वॉटरमार्क के बिना सीधे अपने iPhone या iPad पर HD गुणवत्ता में टिकटॉक वीडियो डाउनलोड करें। iOS पर Safari का उपयोग करके वीडियो सहेजने का सबसे तेज़ तरीका।",
-    "placeholder": "अपने iPhone से टिकटॉक लिंक पेस्ट करें...",
-    "meta_title": "iPhone/iPad के लिए टिकटॉक डाउनलोडर - SaveTikFast",
-    "meta_desc": "iOS (iPhone और iPad) पर बिना वॉटरमार्क के टिकटॉक वीडियो को सेव करने का निःशुल्क टूल। किसी ऐप इंस्टॉलेशन की आवश्यकता नहीं है. तुरंत MP4 या MP3 फॉर्मेट में डाउनलोड करें।",
-    "faq": {
-      "q1": "मैं iPhone और iPad पर बिना वॉटरमार्क के टिकटॉक वीडियो कैसे डाउनलोड करूं?",
-      "a1": "अपने iPhone या iPad पर टिकटॉक खोलें, शेयर करें और लिंक कॉपी करें पर टैप करें। सफ़ारी या क्रोम ब्राउज़र खोलें, SaveTikFast पर जाएँ, टिकटॉक वीडियो URL पेस्ट करें और डाउनलोड पर टैप करें। वीडियो वॉटरमार्क के बिना एचडी गुणवत्ता में सीधे आपके फ़ोटो ऐप में सहेजता है। iPhone 16, iPhone 15, iPhone 14, iPad Pro, iPad Air और iOS 17 या iOS 18 चलाने वाले सभी iOS उपकरणों पर काम करता है।",
-      "q2": "क्या SaveTikFast बिना किसी ऐप को इंस्टॉल किए iPhone पर उपयोग के लिए मुफ़्त है?",
-      "a2": "हाँ, SaveTikFast iPhone और iPad उपयोगकर्ताओं के लिए 100% निःशुल्क है। ऐप स्टोर से किसी ऐप इंस्टॉलेशन की आवश्यकता नहीं है। हमारा टिकटॉक वीडियो डाउनलोडर सीधे आईओएस पर सफारी, क्रोम या फायरफॉक्स ब्राउज़र में काम करता है। वॉटरमार्क के बिना असीमित टिकटॉक वीडियो डाउनलोड करें, टिकटॉक को एमपी3 में बदलें, और टिकटॉक कहानियां सहेजें - सब कुछ पूरी तरह से मुफ्त, बिना किसी पंजीकरण या सदस्यता की आवश्यकता के।",
-      "q3": "क्या मैं अपने iPhone कैमरा रोल में HD 4K गुणवत्ता में टिकटॉक वीडियो सहेज सकता हूँ?",
-      "a3": "बिल्कुल। SaveTikFast 720p HD, 1080p फुल HD और 4K रिज़ॉल्यूशन सहित उपलब्ध उच्चतम गुणवत्ता में सीधे आपके iPhone फ़ोटो या फ़ाइल ऐप पर टिकटॉक वीडियो डाउनलोड करता है। हम कभी भी वीडियो को कंप्रेस नहीं करते। iOS उपकरणों पर SSSTik, SnapTik, या tikMate से बेहतर गुणवत्ता। बाद में देखने के लिए iPhone पर टिकटॉक सामग्री को ऑफ़लाइन सहेजने के लिए बिल्कुल सही।",
-      "q4": "iOS उपकरणों के लिए SaveTikFast सबसे अच्छा टिकटॉक डाउनलोडर क्यों है?",
-      "a4": "SaveTikFast 3-सेकंड डाउनलोड, वॉटरमार्क हटाने की कोई समस्या नहीं, HD और 4K समर्थन, MP3 ऑडियो निष्कर्षण, कहानी डाउनलोड और स्लाइड शो सेविंग के साथ iPhone और iPad के लिए सबसे तेज़ टिकटॉक वीडियो सेवर है। अन्य iOS टिकटॉक डाउनलोडर्स के विपरीत, हमें किसी ऐप इंस्टॉल, किसी लॉगिन और किसी Apple शॉर्टकट की आवश्यकता नहीं है। सभी iOS संस्करणों में Safari ब्राउज़र पर पूरी तरह से काम करता है।",
-      "q5": "मैं iPhone पर टिकटॉक वीडियो को एमपी3 ऑडियो में कैसे बदलूं?",
-      "a5": "अपने iPhone पर टिकटॉक वीडियो लिंक को कॉपी करें, Safari या Chrome खोलें, SaveTikFast MP3 कनवर्टर पेज पर जाएं, URL पेस्ट करें और Extract MP3 पर टैप करें। ऑडियो फ़ाइल आपके iPhone फ़ाइलें ऐप पर 320kbps गुणवत्ता में डाउनलोड होती है। टिकटॉक साउंड से आईफोन रिंगटोन बनाने, ट्रेंडिंग टिकटॉक म्यूजिक को सेव करने और आईओएस डिवाइस पर वायरल ऑडियो क्लिप निकालने के लिए बिल्कुल सही।"
-    }
-  },
-  "android_page": {
-    "title": "एंड्रॉइड के लिए टिकटॉक डाउनलोडर",
-    "desc": "सबसे अच्छा एंड्रॉइड टिकटॉक वीडियो सेवर! किसी भी टिकटॉक वीडियो को बिना वॉटरमार्क के सीधे अपने मोबाइल गैलरी में MP4 फॉर्मेट में डाउनलोड करें।",
-    "placeholder": "अपने एंड्रॉइड फोन से टिकटॉक लिंक पेस्ट करें...",
-    "meta_title": "एंड्रॉइड डिवाइस के लिए टिकटॉक डाउनलोडर - SaveTikFast",
-    "meta_desc": "बिना लोगो के किसी भी टिकटॉक वीडियो को अपने एंड्रॉइड फोन गैलरी में सेव करें। 100% मुफ़्त, कोई वॉटरमार्क नहीं, तेज़ और सुरक्षित। एचडी गुणवत्ता में डाउनलोड करें।",
-    "faq": {
-      "q1": "मैं वॉटरमार्क के बिना एंड्रॉइड पर टिकटॉक वीडियो कैसे डाउनलोड करूं?",
-      "a1": "अपने एंड्रॉइड फोन पर टिकटॉक खोलें, शेयर करें और लिंक कॉपी करें पर टैप करें। क्रोम, सैमसंग इंटरनेट, या फ़ायरफ़ॉक्स ब्राउज़र खोलें, SaveTikFast पर जाएँ, वीडियो URL पेस्ट करें और डाउनलोड पर टैप करें। टिकटॉक वीडियो आपके डाउनलोड फ़ोल्डर या गैलरी में बिना वॉटरमार्क के एचडी गुणवत्ता में सेव हो जाता है। सैमसंग गैलेक्सी S25, Google Pixel 9, Xiaomi, OPPO, OnePlus और Huawei डिवाइस पर काम करता है।",
-      "q2": "क्या SaveTikFast सभी एंड्रॉइड फोन और टैबलेट के साथ संगत है?",
-      "a2": "हां, SaveTikFast सैमसंग गैलेक्सी, Google Pixel, Xiaomi Redmi, OPPO, OnePlus, Huawei, Motorola, Nokia और Android टैबलेट सहित हर Android डिवाइस पर काम करता है। एंड्रॉइड 12, 13, 14 और 15 के साथ संगत। बिना वॉटरमार्क के टिकटॉक वीडियो मुफ्त में डाउनलोड करने के लिए क्रोम, सैमसंग इंटरनेट, फायरफॉक्स या किसी भी मोबाइल ब्राउज़र का उपयोग करें। किसी एपीके इंस्टॉलेशन की आवश्यकता नहीं है.",
-      "q3": "क्या मैं टिकटॉक वीडियो को अपनी एंड्रॉइड गैलरी में एचडी 4K में सहेज सकता हूं?",
-      "a3": "बिल्कुल। SaveTikFast मूल HD, 1080p फुल HD और 4K गुणवत्ता में सीधे आपके एंड्रॉइड फोन गैलरी या डाउनलोड फ़ोल्डर में टिकटॉक वीडियो डाउनलोड करता है। हम बिना संपीड़न के मूल वीडियो गुणवत्ता को सुरक्षित रखते हैं। एसएसएसटीक, स्नैपटिक, या टिकमेट डाउनलोडर्स से बेहतर। सैमसंग गैलेक्सी, पिक्सेल, या Xiaomi उपकरणों पर टिकटॉक सामग्री को ऑफ़लाइन सहेजने के लिए बिल्कुल सही।",
-      "q4": "अन्य एंड्रॉइड टिकटॉक डाउनलोडर्स की तुलना में SaveTikFast को क्यों चुनें?",
-      "a4": "SaveTikFast 3-सेकंड प्रोसेसिंग, वॉटरमार्क-मुक्त डाउनलोड, एचडी और 4K वीडियो समर्थन, टिकटॉक एमपी3 कनवर्टर, स्टोरी सेवर और स्लाइड शो डाउनलोडर के साथ एंड्रॉइड के लिए सबसे तेज़ टिकटॉक डाउनलोडर है। किसी APK की आवश्यकता नहीं, किसी Google Play ऐप की आवश्यकता नहीं। बिना पंजीकरण के Samsung Galaxy, Google Pixel, Xiaomi, OPPO और सभी Android स्मार्टफ़ोन पर Chrome ब्राउज़र में काम करता है।",
-      "q5": "मैं अपने एंड्रॉइड फोन पर टिकटॉक से एमपी3 ऑडियो कैसे निकालूं?",
-      "a5": "अपने एंड्रॉइड डिवाइस पर टिकटॉक वीडियो लिंक को कॉपी करें, क्रोम या सैमसंग इंटरनेट ब्राउज़र खोलें, SaveTikFast MP3 कनवर्टर पर जाएं, URL पेस्ट करें और Extract MP3 पर टैप करें। आपके डाउनलोड फ़ोल्डर में उच्च गुणवत्ता वाले 320kbps प्रारूप में ऑडियो डाउनलोड। ट्रेंडिंग टिकटॉक गानों को सेव करने, एंड्रॉइड रिंगटोन बनाने और सैमसंग गैलेक्सी और पिक्सेल फोन पर वायरल ध्वनि निकालने के लिए बिल्कुल सही।"
-    }
-  },
-  "mac_page": {
-    "title": "मैक के लिए टिकटॉक डाउनलोडर",
-    "desc": "अपने मैकबुक या आईमैक पर वॉटरमार्क के बिना उच्च गुणवत्ता वाले टिकटॉक वीडियो डाउनलोड करें। सफ़ारी और क्रोम पर पूरी तरह से काम करता है।",
-    "placeholder": "मैक पर डाउनलोड करने के लिए यहां टिकटॉक लिंक ड्रॉप करें...",
-    "meta_title": "मैक/मैकबुक (एचडी) के लिए टिकटॉक वीडियो डाउनलोडर - SaveTikFast",
-    "meta_desc": "अपने मैक पर वॉटरमार्क के बिना आसानी से टिकटॉक वीडियो डाउनलोड करें। 4K गुणवत्ता में macOS Safari, Chrome और Firefox को सपोर्ट करने वाला मुफ़्त ऑनलाइन सेवर।",
-    "faq": {
-      "q1": "मैं मैक पर वॉटरमार्क के बिना टिकटॉक वीडियो कैसे डाउनलोड करूं?",
-      "a1": "अपने MacBook या iMac पर Safari, Chrome, या Firefox में टिकटॉक खोलें। एड्रेस बार से टिकटॉक वीडियो यूआरएल कॉपी करें, SaveTikFast पर जाएं, लिंक पेस्ट करें और डाउनलोड पर क्लिक करें। वीडियो आपके मैक डाउनलोड फ़ोल्डर में वॉटरमार्क के बिना एचडी या 4K गुणवत्ता में सहेजता है। मैकओएस सोनोमा, मैकओएस वेंचुरा, मैकबुक प्रो, मैकबुक एयर, आईमैक और मैक मिनी पर काम करता है।",
-      "q2": "क्या SaveTikFast macOS के लिए Safari और Chrome पर काम करता है?",
-      "a2": "हाँ, SaveTikFast Apple Safari, Google Chrome, Mozilla Firefox, Microsoft Edge और ओपेरा सहित सभी Mac ब्राउज़र पर पूरी तरह से काम करता है। किसी ब्राउज़र एक्सटेंशन या प्लगइन इंस्टॉलेशन की आवश्यकता नहीं है। हमारा टिकटॉक वीडियो डाउनलोडर सीधे आपके ब्राउज़र में macOS सोनोमा, वेंचुरा और मोंटेरी पर चलता है। किसी भी मैक पर वॉटरमार्क के बिना असीमित टिकटॉक वीडियो पूरी तरह से मुफ्त डाउनलोड करें।",
-      "q3": "क्या मैं अपने मैकबुक पर टिकटॉक वीडियो को 4K गुणवत्ता में सहेज सकता हूँ?",
-      "a3": "बिल्कुल। SaveTikFast मैकबुक प्रो, मैकबुक एयर, आईमैक और मैक मिनी पर 720p, 1080p फुल एचडी, 2K और 4K रिज़ॉल्यूशन सहित उपलब्ध उच्चतम गुणवत्ता में टिकटॉक वीडियो डाउनलोड करता है। हम कभी भी वीडियो की गुणवत्ता को संपीड़ित या कम नहीं करते हैं। फ़ाइलें आपके डाउनलोड फ़ोल्डर में MP4 के रूप में सहेजी जाती हैं। प्रीमियम वीडियो गुणवत्ता चाहने वाले मैक उपयोगकर्ताओं के लिए SSSTik या SnapTik से बेहतर।",
-      "q4": "मैक कंप्यूटरों के लिए SaveTikFast सबसे अच्छा टिकटॉक डाउनलोडर क्यों है?",
-      "a4": "SaveTikFast तत्काल 3-सेकंड प्रोसेसिंग, वॉटरमार्क हटाने, 4K गुणवत्ता समर्थन, एमपी 3 ऑडियो निष्कर्षण, टिकटॉक स्टोरी सेविंग और स्लाइड शो डाउनलोडिंग के साथ मैक के लिए सबसे तेज़ टिकटॉक वीडियो डाउनलोडर है। MacOS पर किसी सॉफ़्टवेयर इंस्टॉलेशन की आवश्यकता नहीं है। बिना पंजीकरण या सदस्यता के मैकबुक प्रो, मैकबुक एयर, आईमैक और मैक मिनी पर सफारी और क्रोम ब्राउज़र में काम करता है।",
-      "q5": "मैं अपने मैक पर टिकटॉक को एमपी3 में कैसे बदलूं?",
-      "a5": "अपने मैक पर सफारी या क्रोम से टिकटॉक वीडियो यूआरएल कॉपी करें, SaveTikFast MP3 कनवर्टर पर जाएं, लिंक पेस्ट करें और एक्सट्रैक्ट एमपी3 पर क्लिक करें। ऑडियो फ़ाइल आपके मैक डाउनलोड फ़ोल्डर में स्टूडियो-क्वालिटी 320kbps एमपी3 प्रारूप में डाउनलोड होती है। ट्रेंडिंग टिकटॉक संगीत को सहेजने, प्लेलिस्ट बनाने और मैकबुक प्रो, मैकबुक एयर और आईमैक पर ध्वनि निकालने के लिए बिल्कुल सही।"
-    }
-  },
-  "pc_page": {
-    "title": "पीसी के लिए टिकटॉक डाउनलोडर",
-    "desc": "टिकटॉक वीडियो को सीधे अपने विंडोज पीसी या लैपटॉप में सेव करें। अत्यंत तेज़ गति में साफ़, वॉटरमार्क-मुक्त वीडियो प्राप्त करें।",
-    "placeholder": "अपने पीसी से टिकटॉक वीडियो लिंक पेस्ट करें...",
-    "meta_title": "विंडोज़ पीसी/लैपटॉप के लिए टिकटॉक डाउनलोडर - SaveTikFast",
-    "meta_desc": "विंडोज़ पीसी के लिए सबसे तेज़ टिकटॉक वीडियो डाउनलोडर। अपने कंप्यूटर पर वॉटरमार्क के बिना असीमित टिकटॉक वीडियो निःशुल्क सहेजें।",
-    "faq": {
-      "q1": "मैं वॉटरमार्क के बिना विंडोज पीसी पर टिकटॉक वीडियो कैसे डाउनलोड करूं?",
-      "a1": "अपने विंडोज पीसी या लैपटॉप पर क्रोम, एज या फायरफॉक्स में टिकटॉक खोलें। ब्राउज़र एड्रेस बार से टिकटॉक वीडियो यूआरएल कॉपी करें, SaveTikFast पर जाएं, लिंक पेस्ट करें और डाउनलोड पर क्लिक करें। वीडियो वॉटरमार्क के बिना एचडी या 4K गुणवत्ता में आपके पीसी डाउनलोड फ़ोल्डर में सहेजता है। विंडोज 11, विंडोज 10, डेस्कटॉप कंप्यूटर और डेल, एचपी, लेनोवो, एएसयूएस और एसर के लैपटॉप पर काम करता है।",
-      "q2": "क्या SaveTikFast विंडोज़ कंप्यूटर पर उपयोग के लिए निःशुल्क है?",
-      "a2": "हां, विंडोज पीसी उपयोगकर्ताओं के लिए SaveTikFast पूरी तरह से निःशुल्क है। किसी सॉफ़्टवेयर इंस्टॉलेशन या डेस्कटॉप एप्लिकेशन डाउनलोड की आवश्यकता नहीं है। हमारा टिकटॉक वीडियो डाउनलोडर सीधे विंडोज 11 और विंडोज 10 पर क्रोम, माइक्रोसॉफ्ट एज, फायरफॉक्स और ओपेरा ब्राउज़र में काम करता है। वॉटरमार्क के बिना असीमित टिकटॉक वीडियो डाउनलोड करें, एमपी3 में कनवर्ट करें, कहानियां सहेजें और स्लाइडशो मुफ्त में डाउनलोड करें।",
-      "q3": "क्या मैं अपने विंडोज पीसी पर टिकटॉक वीडियो को एचडी 4K गुणवत्ता में सहेज सकता हूं?",
-      "a3": "बिल्कुल। SaveTikFast 720p HD, 1080p फुल HD, 2K और 4K रिज़ॉल्यूशन सहित मूल गुणवत्ता में टिकटॉक वीडियो को सीधे आपके विंडोज पीसी डाउनलोड फ़ोल्डर में MP4 फ़ाइलों के रूप में डाउनलोड करता है। हम कभी भी गुणवत्ता को संकुचित या कम नहीं करते हैं। एसएसएसटीक, स्नैपटिक, या टिकमेट से बेहतर। Windows 11 या Windows 10 चलाने वाले डेस्कटॉप कंप्यूटर पर टिकटॉक सामग्री को सहेजने और संपादित करने के लिए बिल्कुल सही।",
-      "q4": "पीसी के लिए SaveTikFast सर्वश्रेष्ठ टिकटॉक डाउनलोडर क्यों है?",
-      "a4": "SaveTikFast 3-सेकंड प्रोसेसिंग, बिना वॉटरमार्क, HD और 4K सपोर्ट, MP3 कनवर्टर, स्टोरी डाउनलोडर और स्लाइड शो सेवर के साथ विंडोज पीसी के लिए सबसे तेज़ टिकटॉक वीडियो डाउनलोडर है। किसी डेस्कटॉप सॉफ़्टवेयर इंस्टालेशन की आवश्यकता नहीं है. बिना पंजीकरण या शुल्क के एचपी, डेल, लेनोवो, एएसयूएस के विंडोज 11, विंडोज 10 लैपटॉप और डेस्कटॉप पर क्रोम और एज ब्राउज़र में काम करता है।",
-      "q5": "मैं अपने विंडोज़ कंप्यूटर पर टिकटॉक को एमपी3 में कैसे परिवर्तित करूं?",
-      "a5": "अपने विंडोज पीसी पर क्रोम या एज से टिकटॉक वीडियो यूआरएल कॉपी करें, SaveTikFast MP3 कनवर्टर पेज पर जाएं, लिंक पेस्ट करें और एक्सट्रैक्ट एमपी3 पर क्लिक करें। ऑडियो आपके पीसी डाउनलोड फ़ोल्डर में उच्च गुणवत्ता वाले 320kbps एमपी3 प्रारूप में डाउनलोड होता है। टिकटॉक गाने सहेजने, विंडोज़ रिंगटोन बनाने, वायरल ऑडियो निकालने और अपने डेस्कटॉप कंप्यूटर पर संगीत संग्रह बनाने के लिए बिल्कुल सही।"
-    }
-  }
 }

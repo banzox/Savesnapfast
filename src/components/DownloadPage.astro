@@ -297,6 +297,31 @@ if (!pagePrefix) {
 
     <FAQ t={t} items={faqItems} />
 
+    {t('seo_rich_content.intro_title') !== 'seo_rich_content.intro_title' && (
+        <section class="container shadow-box seo-content-section" style="margin-top: 3rem;">
+            <h2 class="section-title">{t('seo_rich_content.intro_title')}</h2>
+            <p>{t('seo_rich_content.intro_p1')}</p>
+            <p>{t('seo_rich_content.intro_p2')}</p>
+            
+            <h2 class="section-title">{t('seo_rich_content.why_title')}</h2>
+            <p>{t('seo_rich_content.why_p1')}</p>
+            <p>{t('seo_rich_content.why_p2')}</p>
+            <p>{t('seo_rich_content.why_p3')}</p>
+            
+            <h2 class="section-title">{t('seo_rich_content.guide_title')}</h2>
+            <p>{t('seo_rich_content.guide_p1')}</p>
+            
+            <h2 class="section-title">{t('seo_rich_content.comparison_title')}</h2>
+            <p>{t('seo_rich_content.comparison_p1')}</p>
+            
+            <h2 class="section-title">{t('seo_rich_content.tips_title')}</h2>
+            <p>{t('seo_rich_content.tips_p1')}</p>
+            
+            <h2 class="section-title">{t('seo_rich_content.conclusion_title')}</h2>
+            <p>{t('seo_rich_content.conclusion_p1')}</p>
+        </section>
+    )}
+
     {/* Ad Slot Bottom - after FAQ */}
     {enableAds && (
         <div class="ad-slot ad-slot-bottom">
@@ -444,6 +469,38 @@ if (!pagePrefix) {
     :global([data-theme="light"]) .about-section {
         background: #ffffff;
         border-color: rgba(0, 0, 0, 0.06);
+    }
+
+    .seo-content-section {
+        padding: 35px 30px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        margin-bottom: 2rem;
+    }
+
+    :global([data-theme="light"]) .seo-content-section {
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.06);
+    }
+
+    .seo-content-section h2 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-top: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .seo-content-section h2:first-child {
+        margin-top: 0;
+    }
+
+    .seo-content-section p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+        color: var(--text-dim);
+        margin-bottom: 1rem;
     }
 
     /* Ad Slots - Seamless integration */
