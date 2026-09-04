@@ -74,6 +74,30 @@ const escapeXml = (value) => value
 
 const toUrl = (pathname) => new URL(pathname || "/", SITE_ORIGIN).href;
 
+const DIST_DIR = path.resolve(__dirname, '../dist');
+
+function getHtmlAlternates(u) {
+  const parsed = new URL(u);
+  let p = parsed.pathname;
+  let directHtml;
+  if (p === '/' || p === '') {
+    directHtml = path.join(DIST_DIR, 'index.html');
+  } else {
+    if (p.startsWith('/')) p = p.slice(1);
+    directHtml = path.join(DIST_DIR, p + '.html');
+  }
+  if (!fs.existsSync(directHtml)) return new Map();
+  const html = fs.readFileSync(directHtml, 'utf8');
+  const page$ = cheerio.load(html);
+  const alts = new Map();
+  page$('link[rel="alternate"][hreflang]').each((_, el) => {
+    const hl = page$(el).attr('hreflang');
+    const href = page$(el).attr('href');
+    if (hl && href) alts.set(hl, href);
+  });
+  return alts;
+}
+
 function generateSitemap() {
   const today = new Date().toISOString().slice(0, 10);
   const items = [];
@@ -81,33 +105,19 @@ function generateSitemap() {
   // Core pages
   for (const slug of CORE_PAGES) {
     const xDefaultUrl = toUrl(slug ? `/${slug}` : "/");
-    const alternates = [
-      `<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(xDefaultUrl)}"/>`,
-      ...langCodes.map((l) => {
-        const p = l === defaultLang
-          ? (slug ? `/${slug}` : "/")
-          : (slug ? `/${l}/${slug}` : `/${l}`);
-        return `<xhtml:link rel="alternate" hreflang="${l}" href="${escapeXml(toUrl(p))}"/>`;
-      }),
-    ].join("");
-
-    items.push({ loc: xDefaultUrl, lastmod: today, alternates });
+    items.push({ loc: xDefaultUrl, lastmod: today });
 
     for (const lang of langCodes) {
       if (lang === defaultLang) continue;
       const localizedPath = slug ? `/${lang}/${slug}` : `/${lang}`;
-      items.push({ loc: toUrl(localizedPath), lastmod: today, alternates });
+      items.push({ loc: toUrl(localizedPath), lastmod: today });
     }
   }
 
   // English-only
   for (const slug of EN_ONLY_PAGES) {
     const url = toUrl(`/${slug}`);
-    items.push({
-      loc: url,
-      lastmod: today,
-      alternates: `<xhtml:link rel="alternate" hreflang="en" href="${escapeXml(url)}"/><xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(url)}"/>`,
-    });
+    items.push({ loc: url, lastmod: today });
   }
 
   // Blog posts
@@ -122,40 +132,16 @@ function generateSitemap() {
       ? post.data.pubDate.toISOString().slice(0, 10)
       : today;
 
-    let alternates = "";
-    if (post.slug.startsWith("best-time-to-post-on-tiktok-2026")) {
-      const enPostUrl = toUrl("/blog/best-time-to-post-on-tiktok-2026");
-      alternates = [
-        `<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(enPostUrl)}"/>`,
-        ...langCodes.map((l) => {
-          const p = l === defaultLang
-            ? "/blog/best-time-to-post-on-tiktok-2026"
-            : `/${l}/blog/best-time-to-post-on-tiktok-2026-${l}`;
-          return `<xhtml:link rel="alternate" hreflang="${l}" href="${escapeXml(toUrl(p))}"/>`;
-        }),
-      ].join("");
-    } else if (post.slug.startsWith("how-to-download-tiktok")) {
-      const enUrl = toUrl("/blog/how-to-download-tiktok-iphone");
-      const arUrl = toUrl("/ar/blog/how-to-download-tiktok-ar");
-      alternates = [
-        `<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(enUrl)}"/>`,
-        `<xhtml:link rel="alternate" hreflang="en" href="${escapeXml(enUrl)}"/>`,
-        `<xhtml:link rel="alternate" hreflang="ar" href="${escapeXml(arUrl)}"/>`,
-      ].join("");
-    } else {
-      alternates = `<xhtml:link rel="alternate" hreflang="en" href="${escapeXml(url)}"/><xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(url)}"/>`;
-    }
-
-    items.push({ loc: url, lastmod, alternates });
+    items.push({ loc: url, lastmod });
   }
 
   items.sort((a, b) => a.loc.localeCompare(b.loc));
 
   const xmlEntries = items.map((item) =>
-    `  <url>\n    <loc>${escapeXml(item.loc)}</loc>\n    <lastmod>${item.lastmod}</lastmod>\n    ${item.alternates}\n  </url>`
+    `  <url>\n    <loc>${escapeXml(item.loc)}</loc>\n    <lastmod>${item.lastmod}</lastmod>\n  </url>`
   ).join("\n");
 
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${xmlEntries}\n</urlset>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${xmlEntries}\n</urlset>`;
 }
 
 const rawXml = generateSitemap();
@@ -163,7 +149,6 @@ const rawXml = generateSitemap();
 // Assert XML structure
 assert(rawXml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'XML Header standard declaration');
 assert(rawXml.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'), 'Root xmlns schema 0.9 declaration');
-assert(rawXml.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'), 'Root xmlns:xhtml namespace declaration');
 assert(rawXml.endsWith('</urlset>'), 'Root </urlset> closed properly');
 
 // Parse with cheerio xmlMode
@@ -179,7 +164,6 @@ const sitemapUrlList = [];
 urlElements.each((idx, el) => {
   const loc = $(el).find('loc').text().trim();
   const lastmod = $(el).find('lastmod').text().trim();
-  const alternates = $(el).find('xhtml\\:link');
 
   sitemapUrlList.push(loc);
 
@@ -192,14 +176,13 @@ urlElements.each((idx, el) => {
   assert(loc === 'https://savetik-fast.xyz/' || !loc.endsWith('/'), `URL #${idx + 1} has no trailing slash: ${loc}`);
   assert(!loc.includes('savetik-fast.xyz/en/') && !loc.endsWith('savetik-fast.xyz/en'), `URL #${idx + 1} has no /en/ prefix: ${loc}`);
   assert(/^\d{4}-\d{2}-\d{2}$/.test(lastmod), `URL #${idx + 1} has valid YYYY-MM-DD lastmod: ${lastmod}`);
-  assert(alternates.length > 0, `URL #${idx + 1} has alternates: ${loc} (${alternates.length} tags)`);
 });
 
 console.log(`  ✓ 520 Sitemap URLs verified for clean schema, origin, and format.\n`);
 
 
-// 2. Bidirectional Reciprocity Matrix across 30 Languages
-console.log('--- 2. Testing Bidirectional Hreflang Reciprocity Matrix ---');
+// 2. Bidirectional Reciprocity Matrix across 30 Languages (from HTML head)
+console.log('--- 2. Testing Bidirectional Hreflang Reciprocity Matrix (from HTML output) ---');
 
 let hreflangPairsChecked = 0;
 
@@ -213,38 +196,22 @@ for (const slug of CORE_PAGES) {
       ? toUrl(slug ? `/${slug}` : "/")
       : toUrl(slug ? `/${lang}/${slug}` : `/${lang}`);
 
-    // Find the url node
-    let foundNode = null;
-    urlElements.each((_, el) => {
-      if ($(el).find('loc').text().trim() === pageUrl) {
-        foundNode = el;
-      }
+    const alternates = getHtmlAlternates(pageUrl);
+    assert(alternates.size >= 30, `Cluster [${clusterName}] page exists in HTML for lang [${lang}]: ${pageUrl}`);
+
+    pageMap.set(lang, {
+      url: pageUrl,
+      alternates
     });
 
-    assert(foundNode !== null, `Cluster [${clusterName}] page exists for lang [${lang}]: ${pageUrl}`);
+    // Check x-default
+    const xDefault = alternates.get('x-default');
+    const expectedXDefault = toUrl(slug ? `/${slug}` : "/");
+    assert(xDefault === expectedXDefault, `Cluster [${clusterName}] lang [${lang}] x-default tag`, `Got ${xDefault}, expected ${expectedXDefault}`);
 
-    if (foundNode) {
-      const alternates = new Map();
-      $(foundNode).find('xhtml\\:link').each((_, alt) => {
-        const hreflang = $(alt).attr('hreflang');
-        const href = $(alt).attr('href');
-        if (hreflang && href) alternates.set(hreflang, href);
-      });
-
-      pageMap.set(lang, {
-        url: pageUrl,
-        alternates
-      });
-
-      // Check x-default
-      const xDefault = alternates.get('x-default');
-      const expectedXDefault = toUrl(slug ? `/${slug}` : "/");
-      assert(xDefault === expectedXDefault, `Cluster [${clusterName}] lang [${lang}] x-default tag`, `Got ${xDefault}, expected ${expectedXDefault}`);
-
-      // Check self-referencing hreflang
-      const selfHref = alternates.get(lang);
-      assert(selfHref === pageUrl, `Cluster [${clusterName}] lang [${lang}] self hreflang`, `Got ${selfHref}, expected ${pageUrl}`);
-    }
+    // Check self-referencing hreflang
+    const selfHref = alternates.get(lang);
+    assert(selfHref === pageUrl, `Cluster [${clusterName}] lang [${lang}] self hreflang`, `Got ${selfHref}, expected ${pageUrl}`);
   }
 
   // Cross reciprocity: 30 x 30 = 900 pairs
@@ -270,79 +237,28 @@ for (const slug of CORE_PAGES) {
 console.log(`  ✓ Checked ${hreflangPairsChecked} pairwise hreflang combinations across 16 core page clusters.\n`);
 
 
-// 3. Blog Articles Hreflang Cluster Reciprocity
-console.log('--- 3. Testing Blog Articles Hreflang Clusters ---');
+// 3. Blog Articles Integrity in dist
+console.log('--- 3. Testing Blog Articles in dist ---');
 
-// Best time to post on TikTok 2026 (30 languages)
-const bestTimeMap = new Map();
-for (const lang of langCodes) {
-  const postUrl = lang === defaultLang
-    ? toUrl('/blog/best-time-to-post-on-tiktok-2026')
-    : toUrl(`/${lang}/blog/best-time-to-post-on-tiktok-2026-${lang}`);
+for (const post of posts) {
+  const isEn = post.data.lang === defaultLang;
+  const pathname = isEn ? `/blog/${post.slug}` : `/${post.data.lang}/blog/${post.slug}`;
+  const postUrl = toUrl(pathname);
+  
+  const parsed = new URL(postUrl);
+  let p = parsed.pathname.slice(1);
+  const htmlPath = path.join(DIST_DIR, p + '.html');
 
-  let foundNode = null;
-  urlElements.each((_, el) => {
-    if ($(el).find('loc').text().trim() === postUrl) {
-      foundNode = el;
-    }
-  });
-
-  assert(foundNode !== null, `Blog cluster [best-time] exists for lang [${lang}]: ${postUrl}`);
-
-  if (foundNode) {
-    const alternates = new Map();
-    $(foundNode).find('xhtml\\:link').each((_, alt) => {
-      const hreflang = $(alt).attr('hreflang');
-      const href = $(alt).attr('href');
-      if (hreflang && href) alternates.set(hreflang, href);
-    });
-    bestTimeMap.set(lang, { url: postUrl, alternates });
+  assert(fs.existsSync(htmlPath), `Blog post HTML exists in dist: ${pathname}`);
+  if (fs.existsSync(htmlPath)) {
+    const html = fs.readFileSync(htmlPath, 'utf8');
+    assert(html.includes('<title>'), `Blog post ${pathname} has <title> tag`);
+    assert(html.includes(`rel="canonical" href="${postUrl}"`), `Blog post ${pathname} has correct self canonical`);
+    assert(!html.includes('content="noindex"'), `Blog post ${pathname} is indexable`);
   }
 }
 
-// 30 x 30 reciprocity for best-time
-for (let i = 0; i < langCodes.length; i++) {
-  for (let j = 0; j < langCodes.length; j++) {
-    const langA = langCodes[i];
-    const langB = langCodes[j];
-    const dataA = bestTimeMap.get(langA);
-    const dataB = bestTimeMap.get(langB);
-
-    if (dataA && dataB) {
-      assert(dataA.alternates.get(langB) === dataB.url, `Blog [best-time] ${langA} -> ${langB}`);
-      assert(dataB.alternates.get(langA) === dataA.url, `Blog [best-time] ${langB} -> ${langA}`);
-    }
-  }
-}
-
-// How to download tiktok (en & ar bilateral cluster)
-const enHowTo = toUrl('/blog/how-to-download-tiktok-iphone');
-const arHowTo = toUrl('/ar/blog/how-to-download-tiktok-ar');
-
-let enHowToNode = null;
-let arHowToNode = null;
-urlElements.each((_, el) => {
-  const loc = $(el).find('loc').text().trim();
-  if (loc === enHowTo) enHowToNode = el;
-  if (loc === arHowTo) arHowToNode = el;
-});
-
-assert(enHowToNode !== null, 'Blog en how-to article exists');
-assert(arHowToNode !== null, 'Blog ar how-to article exists');
-
-if (enHowToNode && arHowToNode) {
-  const enAlts = new Map();
-  $(enHowToNode).find('xhtml\\:link').each((_, a) => enAlts.set($(a).attr('hreflang'), $(a).attr('href')));
-  const arAlts = new Map();
-  $(arHowToNode).find('xhtml\\:link').each((_, a) => arAlts.set($(a).attr('hreflang'), $(a).attr('href')));
-
-  assert(enAlts.get('ar') === arHowTo, 'How-To en -> ar alternate link');
-  assert(arAlts.get('en') === enHowTo, 'How-To ar -> en reciprocal link');
-  assert(enAlts.get('x-default') === enHowTo, 'How-To en x-default');
-  assert(arAlts.get('x-default') === enHowTo, 'How-To ar x-default');
-}
-
-console.log(`  ✓ Blog articles hreflang clusters verified.\n`);
+console.log(`  ✓ All ${posts.length} blog articles verified in dist.\n`);
 
 
 // 4. Edge Redirect Engine Stress Test (234 Cases)

@@ -1,7 +1,8 @@
 ---
-
+import { ADS_CONFIG } from "../config";
 ---
 
+{ADS_CONFIG.enableAdsterra && (
 <div class="native-ad-container" id="ad-container">
     <!-- الإعلان سيتم تحميله عند الظهور -->
 </div>
@@ -68,3 +69,4 @@
         max-width: 100% !important;
     }
 </style>
+)}

@@ -95,24 +95,11 @@ const sitemapEntries = [];
 
 // 1. Core pages (all 30 languages)
 for (const slug of CORE_SLUGS) {
-  // Build hreflang links for this slug across all 30 languages + x-default
-  const xDefaultUrl = toUrl(slug ? `/${slug}` : "/");
-  const alternates = [
-    `<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(xDefaultUrl)}"/>`,
-    ...langCodes.map(l => {
-      const p = l === defaultLang 
-        ? (slug ? `/${slug}` : "/")
-        : (slug ? `/${l}/${slug}` : `/${l}`);
-      return `<xhtml:link rel="alternate" hreflang="${l}" href="${escapeXml(toUrl(p))}"/>`;
-    })
-  ].join("");
-
   // Root EN URL
   const enUrl = toUrl(slug ? `/${slug}` : "/");
   sitemapEntries.push({
     loc: enUrl,
     lastmod: todayStr,
-    alternates
   });
 
   // Localized URLs for the other 29 languages
@@ -123,7 +110,6 @@ for (const slug of CORE_SLUGS) {
     sitemapEntries.push({
       loc: localizedUrl,
       lastmod: todayStr,
-      alternates
     });
   }
 }
@@ -134,47 +120,18 @@ for (const slug of EN_ONLY_SLUGS) {
   sitemapEntries.push({
     loc: enUrl,
     lastmod: todayStr,
-    alternates: `<xhtml:link rel="alternate" hreflang="en" href="${escapeXml(enUrl)}"/><xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(enUrl)}"/>`
   });
 }
 
 // 3. Blog posts
-// Group multi-language blog posts if any (e.g. best-time-to-post-on-tiktok-2026)
 for (const post of blogPosts) {
   const isEn = post.lang === defaultLang;
   const pathname = isEn ? `/blog/${post.slug}` : `/${post.lang}/blog/${post.slug}`;
   const url = toUrl(pathname);
-  
-  // If it's the 30-lang post "best-time-to-post-on-tiktok-2026", provide hreflangs
-  let alternates = '';
-  if (post.slug.startsWith('best-time-to-post-on-tiktok-2026')) {
-    const enPostUrl = toUrl('/blog/best-time-to-post-on-tiktok-2026');
-    const links = [
-      `<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(enPostUrl)}"/>`,
-      ...langCodes.map(l => {
-        const p = l === defaultLang
-          ? '/blog/best-time-to-post-on-tiktok-2026'
-          : `/${l}/blog/best-time-to-post-on-tiktok-2026-${l}`;
-        return `<xhtml:link rel="alternate" hreflang="${l}" href="${escapeXml(toUrl(p))}"/>`;
-      })
-    ];
-    alternates = links.join("");
-  } else if (post.slug.startsWith('how-to-download-tiktok')) {
-    const enUrl = toUrl('/blog/how-to-download-tiktok-iphone');
-    const arUrl = toUrl('/ar/blog/how-to-download-tiktok-ar');
-    alternates = [
-      `<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(enUrl)}"/>`,
-      `<xhtml:link rel="alternate" hreflang="en" href="${escapeXml(enUrl)}"/>`,
-      `<xhtml:link rel="alternate" hreflang="ar" href="${escapeXml(arUrl)}"/>`
-    ].join("");
-  } else {
-    alternates = `<xhtml:link rel="alternate" hreflang="en" href="${escapeXml(url)}"/><xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(url)}"/>`;
-  }
 
   sitemapEntries.push({
     loc: url,
     lastmod: post.pubDate,
-    alternates
   });
 }
 
@@ -183,8 +140,8 @@ sitemapEntries.sort((a, b) => a.loc.localeCompare(b.loc));
 
 console.log('Total Generated Sitemap URLs:', sitemapEntries.length);
 
-const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
-  sitemapEntries.map(e => `  <url>\n    <loc>${escapeXml(e.loc)}</loc>\n    <lastmod>${e.lastmod}</lastmod>\n    ${e.alternates}\n  </url>`).join('\n') +
+const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  sitemapEntries.map(e => `  <url>\n    <loc>${escapeXml(e.loc)}</loc>\n    <lastmod>${e.lastmod}</lastmod>\n  </url>`).join('\n') +
   `\n</urlset>`;
 
 console.log('Total XML characters:', xmlContent.length);

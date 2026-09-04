@@ -26,12 +26,11 @@ sitemapsToCheck.forEach(filePath => {
   }
 
   // Check root urlset & namespaces
-  if (!rawXml.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"') ||
-      !rawXml.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"')) {
-    console.error(`[ERROR] ${filePath}: Missing standard or xhtml namespaces in <urlset>`);
+  if (!rawXml.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')) {
+    console.error(`[ERROR] ${filePath}: Missing standard namespace in <urlset>`);
     totalErrors++;
   } else {
-    console.log(`[OK] ${filePath}: Root <urlset> namespaces valid`);
+    console.log(`[OK] ${filePath}: Root <urlset> namespace valid`);
   }
 
   const $ = cheerio.load(rawXml, { xmlMode: true });
@@ -52,7 +51,6 @@ sitemapsToCheck.forEach(filePath => {
   urlNodes.each((i, el) => {
     const loc = $(el).find('loc').text().trim();
     const lastmod = $(el).find('lastmod').text().trim();
-    const xhtmlLinks = $(el).find('xhtml\\:link, link');
 
     if (!loc) {
       console.error(`  [ERROR] Entry #${i} is missing <loc>`);
@@ -79,15 +77,10 @@ sitemapsToCheck.forEach(filePath => {
       console.error(`  [ERROR] Invalid <lastmod> on ${loc}: "${lastmod}"`);
       fileErrors++;
     }
-
-    if (xhtmlLinks.length === 0) {
-      console.error(`  [ERROR] No <xhtml:link> alternates on ${loc}`);
-      fileErrors++;
-    }
   });
 
   if (fileErrors === 0) {
-    console.log(`[OK] ${filePath}: All 520 entries passed strict schema, lastmod, and xhtml link validation!`);
+    console.log(`[OK] ${filePath}: All 520 entries passed strict schema and lastmod validation!`);
   } else {
     totalErrors += fileErrors;
   }

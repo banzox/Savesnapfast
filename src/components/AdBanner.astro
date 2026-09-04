@@ -1,7 +1,8 @@
 ---
-
+import { ADS_CONFIG } from "../config";
 ---
 
+{ADS_CONFIG.enableAdsterra && (
 <div class="ad-banner-grid">
     <!-- Native Ad Container -->
     <div class="native-ad-wrapper">
@@ -11,7 +12,7 @@
 </div>
 
 <script>
-    // Lazy Load Native Ads to skyrocket Lighthouse Mobile Score
+    // Lazy Load Native Ads to skyrocket Mobile Performance Score
     const initAd = () => {
         if ((window as any).adLoaded) return;
         (window as any).adLoaded = true;
@@ -71,3 +72,4 @@
         }
     }
 </style>
+)}
