@@ -325,6 +325,35 @@ async function simulateWorkerFetch(reqUrl, options = {}) {
     });
   }
 
+  // Force true 404 status for explicit 404 paths
+  const normalizedPath = url.pathname.replace(/\/+$/, '');
+  if (normalizedPath === '/404' || url.pathname === '/404.html') {
+    const asset = resolveStaticAsset('/404.html');
+    return {
+      status: 404,
+      headers: {
+        'content-type': 'text/html; charset=utf-8',
+        'x-robots-tag': 'noindex, follow',
+        'cache-control': 'public, max-age=3600',
+      },
+      body: asset.filePath ? fs.readFileSync(asset.filePath, 'utf8') : asset.content,
+    };
+  }
+
+  // Admin & ad frames handler
+  if (url.pathname.startsWith('/admin') || url.pathname.startsWith('/ad-')) {
+    const asset = resolveStaticAsset(url.pathname);
+    return {
+      status: asset.status,
+      headers: {
+        'content-type': asset.contentType,
+        'x-robots-tag': 'noindex, nofollow',
+        'cache-control': 'private, no-store',
+      },
+      body: asset.filePath ? fs.readFileSync(asset.filePath, 'utf8') : asset.content,
+    };
+  }
+
   // Canonical Redirects
   const destination = getCanonicalRedirect(url);
   if (destination) {

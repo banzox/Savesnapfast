@@ -59,6 +59,33 @@ export default {
             }));
         }
 
+        // Force true 404 status for explicit 404 paths (prevents soft-404 indexing errors in Google Search Console)
+        const normalizedPath = url.pathname.replace(/\/+$/, "");
+        if (normalizedPath === "/404" || url.pathname === "/404.html") {
+            const assetRes = await env.ASSETS.fetch(new Request(new URL("/404.html", request.url), request));
+            const headers = new Headers(assetRes.headers);
+            headers.set("X-Robots-Tag", "noindex, follow");
+            headers.set("Cache-Control", "public, max-age=3600");
+            return new Response(assetRes.body, {
+                status: 404,
+                statusText: "Not Found",
+                headers,
+            });
+        }
+
+        // Tag internal admin tools and ad frames with noindex, nofollow
+        if (url.pathname.startsWith("/admin") || url.pathname.startsWith("/ad-")) {
+            const assetRes = await env.ASSETS.fetch(request);
+            const headers = new Headers(assetRes.headers);
+            headers.set("X-Robots-Tag", "noindex, nofollow");
+            headers.set("Cache-Control", "private, no-store");
+            return new Response(assetRes.body, {
+                status: assetRes.status,
+                statusText: assetRes.statusText,
+                headers,
+            });
+        }
+
         const destination = getCanonicalRedirect(url);
 
         if (destination) {

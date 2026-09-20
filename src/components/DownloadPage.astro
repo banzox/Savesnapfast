@@ -60,10 +60,18 @@ const featureKeys = [
 const features = [];
 
 for (const key of featureKeys) {
-    const titleKey = getKey(`features.${key}.title`);
-    const descKey = getKey(`features.${key}.desc`);
-    const title = t(titleKey);
-    const desc = t(descKey);
+    let titleKey = getKey(`features.${key}.title`);
+    let descKey = getKey(`features.${key}.desc`);
+    let title = t(titleKey);
+    let desc = t(descKey);
+
+    // Fallback to core features if page-specific feature key is missing
+    if (!title || title === titleKey) {
+        titleKey = `features.${key}.title`;
+        descKey = `features.${key}.desc`;
+        title = t(titleKey);
+        desc = t(descKey);
+    }
 
     if (title && title !== titleKey) {
         let icon = "fas fa-star";
@@ -91,11 +99,19 @@ for (const key of featureKeys) {
 const howToSteps = [];
 let s = 1;
 while (true) {
-    const titleKey = getKey(`how_to.step${s}_title`);
-    const descKey = getKey(`how_to.step${s}`);
-    const desc = t(descKey);
+    let titleKey = getKey(`how_to.step${s}_title`);
+    let descKey = getKey(`how_to.step${s}`);
+    let desc = t(descKey);
 
-    if (!desc || desc === descKey) break;
+    if (!desc || desc === descKey) {
+        // Smart fallback to base how_to for device guides
+        if (pagePrefix && s <= 3) {
+            titleKey = `how_to.step${s}_title`;
+            descKey = `how_to.step${s}`;
+            desc = t(descKey);
+        }
+        if (!desc || desc === descKey) break;
+    }
 
     const stepTitle = t(titleKey) || `Step ${s}`;
     howToSteps.push({ title: stepTitle, desc });
@@ -103,7 +119,10 @@ while (true) {
 }
 
 const showHowTo = howToSteps.length > 0;
-const howToTitle = t(getKey("how_to.title"));
+let howToTitle = t(getKey("how_to.title"));
+if (!howToTitle || howToTitle === getKey("how_to.title")) {
+    howToTitle = t("how_to.title");
+}
 
 // --- About Section ---
 const aboutTitleKey = getKey("about_title");
@@ -115,8 +134,6 @@ if (pagePrefix.includes("mp3")) aboutIcon = "fas fa-headphones";
 if (pagePrefix.includes("story")) aboutIcon = "fas fa-photo-film";
 if (pagePrefix.includes("slideshow")) aboutIcon = "fas fa-layer-group";
 
-// --- Device page detection (allow indexation as they have unique platform instructions) ---
-const isDevicePage = false;
 
 // --- Meta Data ---
 // Smart fallback: Check if translated value is different from the key (means translation exists)
@@ -147,7 +164,7 @@ if (!pagePrefix) {
 }
 ---
 
-<Layout title={metaTitle} description={metaDesc} lang={lang} noindex={isDevicePage || noindex}>
+<Layout title={metaTitle} description={metaDesc} lang={lang} noindex={noindex}>
     <div class="main-wrapper">
         <article class="hero-section">
             <div class="hero-live-badge">
@@ -172,6 +189,26 @@ if (!pagePrefix) {
                         <span>
                             <i class="fas fa-layer-group accent-text" />{" "}
                             {heroTitleDesc}
+                        </span>
+                    ) : pagePrefix === "ios_page" ? (
+                        <span>
+                            <i class="fab fa-apple accent-text" />{" "}
+                            {heroTitleDesc || "TikTok Downloader for iOS"}
+                        </span>
+                    ) : pagePrefix === "android_page" ? (
+                        <span>
+                            <i class="fab fa-android accent-text" />{" "}
+                            {heroTitleDesc || "TikTok Downloader for Android"}
+                        </span>
+                    ) : pagePrefix === "mac_page" ? (
+                        <span>
+                            <i class="fas fa-laptop accent-text" />{" "}
+                            {heroTitleDesc || "TikTok Downloader for Mac"}
+                        </span>
+                    ) : pagePrefix === "pc_page" ? (
+                        <span>
+                            <i class="fas fa-desktop accent-text" />{" "}
+                            {heroTitleDesc || "TikTok Downloader for PC"}
                         </span>
                     ) : (
                         <span>
@@ -297,7 +334,21 @@ if (!pagePrefix) {
 
     <FAQ t={t} items={faqItems} />
 
-    {t('seo_rich_content.intro_title') !== 'seo_rich_content.intro_title' && (
+    {['ios_page', 'android_page', 'mac_page', 'pc_page'].includes(pagePrefix) && (
+        <section class="container shadow-box about-section" aria-labelledby="device-guide-title">
+            <div class="content-box">
+                <h2 id="device-guide-title">
+                    <i class={pagePrefix === 'ios_page' ? 'fab fa-apple accent-text' : pagePrefix === 'android_page' ? 'fab fa-android accent-text' : pagePrefix === 'mac_page' ? 'fas fa-laptop accent-text' : 'fas fa-desktop accent-text'} /> {t(`${pagePrefix}.guide_title`) !== `${pagePrefix}.guide_title` ? t(`${pagePrefix}.guide_title`) : heroTitleDesc}
+                </h2>
+                <p class="intro">{heroDesc}</p>
+                <div class="device-tips" style="margin-top: 1.25rem; line-height: 1.8; color: var(--text-dim);">
+                    <p>{t(`${pagePrefix}.guide_tip`)}</p>
+                </div>
+            </div>
+        </section>
+    )}
+
+    {!pagePrefix && t('seo_rich_content.intro_title') !== 'seo_rich_content.intro_title' && (
         <section class="container shadow-box seo-content-section" style="margin-top: 3rem;">
             <h2 class="section-title">{t('seo_rich_content.intro_title')}</h2>
             <p>{t('seo_rich_content.intro_p1')}</p>

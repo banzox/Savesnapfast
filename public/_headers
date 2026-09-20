@@ -60,3 +60,16 @@
   Cache-Control: public, max-age=3600, s-maxage=86400
   X-Robots-Tag: all
 
+/ad-*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: private, no-store
+
+/admin*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: private, no-store
+
+/404*
+  X-Robots-Tag: noindex, follow
+  Cache-Control: public, max-age=3600
+
+

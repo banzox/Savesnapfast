@@ -6,8 +6,9 @@ Allow: /_astro/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /admin
-
 # Query-string variants stay crawlable so Google can see the page's canonical
 # URL and consolidate them instead of reporting them as blocked URLs.
 
+# Sitemaps:
 Sitemap: https://savetik-fast.xyz/sitemap.xml
+Sitemap: https://savetik-fast.xyz/sitemap-0.xml

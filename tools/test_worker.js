@@ -49,6 +49,25 @@ async function testWorker() {
     assert.match(text, /Static Asset OK/);
     console.log('  ✓ Static asset pass-through verified');
 
+    // 6. /404 and /404.html return true 404 status with X-Robots-Tag: noindex, follow
+    for (const path404 of ['/404', '/404/', '/404.html']) {
+        const req404 = new Request('https://savetik-fast.xyz' + path404);
+        const res404 = await worker.fetch(req404, mockEnv, mockCtx);
+        assert.equal(res404.status, 404, `Expected 404 for ${path404}, got ${res404.status}`);
+        assert.equal(res404.headers.get('X-Robots-Tag'), 'noindex, follow');
+        assert.equal(res404.headers.get('Cache-Control'), 'public, max-age=3600');
+    }
+    console.log('  ✓ /404, /404/, and /404.html true 404 & X-Robots-Tag verified');
+
+    // 7. /admin* and /ad-* return X-Robots-Tag: noindex, nofollow and Cache-Control: private, no-store
+    for (const privPath of ['/admin', '/admin/dashboard', '/ad-native', '/ad-300x250']) {
+        const privReq = new Request('https://savetik-fast.xyz' + privPath);
+        const privRes = await worker.fetch(privReq, mockEnv, mockCtx);
+        assert.equal(privRes.headers.get('X-Robots-Tag'), 'noindex, nofollow', `Expected noindex, nofollow on ${privPath}`);
+        assert.equal(privRes.headers.get('Cache-Control'), 'private, no-store');
+    }
+    console.log('  ✓ /admin and /ad-* X-Robots-Tag: noindex, nofollow & Cache-Control verified');
+
     console.log('✓ All Worker tests passed successfully!');
 }
 
