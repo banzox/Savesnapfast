@@ -40,37 +40,7 @@ const robotsContent = is404
             crossorigin="anonymous"
         ></script>
 
-        {ADS_CONFIG.enableAdsterra && (
-        <script is:inline>
-            (function() {
-                let adsLoaded = false;
-                function loadAds() {
-                    if (adsLoaded) return;
-                    adsLoaded = true;
 
-                    const adsterra = document.createElement("script");
-                    adsterra.src = "https://ferocitycandour.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js";
-                    adsterra.async = true;
-                    adsterra.defer = true;
-                    document.head.appendChild(adsterra);
-                }
-
-                // Trigger loading on user interaction (scroll, click, mousemove, touchstart)
-                ["scroll", "mousemove", "touchstart", "click"].forEach(event => {
-                    window.addEventListener(event, loadAds, { once: true, passive: true });
-                });
-
-                // Fast Fallback: load ads 1.5s after DOM is ready if user hasn't interacted yet
-                if (document.readyState === 'complete' || document.readyState === 'interactive') {
-                    setTimeout(loadAds, 1500);
-                } else {
-                    document.addEventListener('DOMContentLoaded', () => {
-                        setTimeout(loadAds, 1500);
-                    });
-                }
-            })();
-        </script>
-        )}
 
 
 
@@ -419,5 +389,10 @@ const robotsContent = is404
                 document.addEventListener('astro:page-load', initScrollToTop);
             })();
         </script>
+
+        {ADS_CONFIG.enableAdsterra && (
+            <!-- Adsterra Social Bar: Inserted right above closing </body> tag -->
+            <script is:inline src="https://pl28502619.profitableratecpmnetwork.com/40/30/09/403009a90d32a66dcba80b1e5510e001.js"></script>
+        )}
     </body>
 </html>

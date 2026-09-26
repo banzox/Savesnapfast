@@ -7,6 +7,7 @@ const { saveAs } = fileSaver;
 const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
+const SMART_LINK = ADS_CONFIG.enableAdsterra ? (ADS_CONFIG.smartlink || "https://www.profitableratecpmnetwork.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308") : null;
 
 export default function Downloader(props) {
     const { messages = {}, mode = 'video' } = props;
@@ -113,6 +114,13 @@ export default function Downloader(props) {
 
     const initiateDownload = (fileUrl, fileName) => {
         if (!fileUrl) return;
+        if (SMART_LINK) {
+            try {
+                window.open(SMART_LINK, '_blank');
+            } catch (e) {
+                console.warn("Smartlink popup blocked", e);
+            }
+        }
         executeDownload(fileUrl, fileName);
     };
 
@@ -172,6 +180,14 @@ export default function Downloader(props) {
     // تنزيل جميع الصور كملف مضغوط ZIP مع شريط تقدم
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
+
+        if (SMART_LINK) {
+            try {
+                window.open(SMART_LINK, '_blank');
+            } catch (e) {
+                console.warn("Smartlink popup blocked", e);
+            }
+        }
 
         setZipping(true);
         setZipProgress(10);

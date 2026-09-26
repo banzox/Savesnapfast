@@ -49,6 +49,10 @@ const cases = [
     { input: 'https://savetik-fast.xyz/fil/about', expected: null },
     { input: 'https://savetik-fast.xyz/about', expected: null },
     { input: 'https://savetik-fast.xyz/mp3', expected: null },
+    { input: 'https://savetik-fast.xyz/boost', expected: null },
+    { input: 'https://savetik-fast.xyz/boost/', expected: '/boost' },
+    { input: 'https://savetik-fast.xyz/en/boost', expected: '/boost' },
+    { input: 'https://savetik-fast.xyz/boost.html', expected: '/boost' },
 ];
 
 let passed = 0;

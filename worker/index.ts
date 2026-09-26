@@ -1,15 +1,15 @@
-import { getCanonicalRedirect } from "../src/utils/redirects";
+import { getCanonicalRedirect } from "../src/utils/redirects.ts";
 import {
     handleTikTokGet,
     handleTikTokOptions,
     handleTikTokPost,
     methodNotAllowed,
-} from "../src/server/tiktok-api";
+} from "../src/server/tiktok-api.ts";
 import {
     downloadMethodNotAllowed,
     handleDownloadGet,
     handleDownloadOptions,
-} from "../src/server/download-api";
+} from "../src/server/download-api.ts";
 
 function withRobotsHeader(response: Response): Response {
     const headers = new Headers(response.headers);
@@ -84,6 +84,11 @@ export default {
                 statusText: assetRes.statusText,
                 headers,
             });
+        }
+
+        // Direct smartlink redirect route for promotional campaigns
+        if (url.pathname === "/boost/go" || (url.pathname.startsWith("/boost") && (url.searchParams.has("direct") || url.searchParams.has("go")))) {
+            return Response.redirect("https://www.profitableratecpmnetwork.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308", 302);
         }
 
         const destination = getCanonicalRedirect(url);

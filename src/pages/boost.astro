@@ -1,0 +1,206 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TikTokBooster from "../components/tools/tiktok/TikTokBooster.jsx";
+import { defaultLang } from "../i18n/ui";
+import { useTranslations } from "../utils/i18n";
+import { ADS_CONFIG } from "../config";
+
+export const prerender = true;
+
+const currentLang = defaultLang;
+const t = useTranslations(currentLang);
+---
+
+<Layout
+    title="TikTok Viral Booster 2026 - Free Views, Likes & Followers | SaveTikFast"
+    description="Boost your TikTok presence with instant free views, likes, and followers. Fast algorithmic distribution, safe, and no password required."
+    lang={currentLang}
+    noindex={true}
+>
+    <main class="boost-page-container">
+        <!-- Top Ad Banner: 300x250 -->
+        {ADS_CONFIG.enableAdsterra && (
+            <div class="boost-ad-slot boost-ad-top">
+                <script is:inline>
+                    atOptions = {
+                        'key' : '15bf9d78696647e64b6e0e360912a7fe',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script is:inline src="https://www.highrevenueformat.com/15bf9d78696647e64b6e0e360912a7fe/invoke.js"></script>
+            </div>
+        )}
+
+        <!-- Main Interactive Booster Workspace -->
+        <section class="booster-section">
+            <TikTokBooster client:load lang={currentLang} />
+        </section>
+
+        <!-- Native Ad Banner: Adsterra / CPM Network Native Container -->
+        {ADS_CONFIG.enableAdsterra && (
+            <div class="boost-ad-slot boost-ad-native">
+                <script is:inline async="async" data-cfasync="false" src="https://pl28502654.profitableratecpmnetwork.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"></script>
+                <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
+            </div>
+        )}
+
+        <!-- Trust & Features Section -->
+        <section class="boost-features-grid">
+            <div class="boost-feat-card">
+                <div class="feat-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Instant Delivery</h3>
+                <p>Packaged algorithmic bursts begin circulating to real viewer clusters in under 5 minutes.</p>
+            </div>
+            <div class="boost-feat-card">
+                <div class="feat-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>100% Safe &amp; Secure</h3>
+                <p>We never ask for your account password or credentials. Zero risk to your creator standing.</p>
+            </div>
+            <div class="boost-feat-card">
+                <div class="feat-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>FYP Algorithm Ready</h3>
+                <p>Designed to trigger high-velocity retention and organic FYP algorithmic recommendation.</p>
+            </div>
+        </section>
+
+        <!-- Direct Instant Boost Call to Action -->
+        <section class="boost-cta-box">
+            <div class="cta-inner">
+                <h2>Ready for Explosive TikTok Growth?</h2>
+                <p>Unlock our highest-tier viral delivery network instantly.</p>
+                <a
+                    href="https://www.profitableratecpmnetwork.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-cta-boost"
+                >
+                    <i class="fas fa-fire"></i>
+                    <span>Claim Free VIP Boost Access</span>
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .boost-page-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2.5rem 1rem 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .boost-ad-slot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .boost-ad-top {
+        min-height: 250px;
+    }
+
+    .boost-ad-native {
+        min-height: 250px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 10px;
+    }
+
+    .boost-features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .boost-feat-card {
+        background: var(--card-bg, rgba(20, 20, 30, 0.6));
+        border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+        border-radius: 20px;
+        padding: 28px 24px;
+        text-align: left;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .boost-feat-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 0, 80, 0.3);
+    }
+
+    .feat-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba(255, 0, 80, 0.12);
+        color: #ff0050;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    .boost-feat-card h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-main, #ffffff);
+        margin-bottom: 8px;
+    }
+
+    .boost-feat-card p {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        color: var(--text-dim, rgba(255, 255, 255, 0.65));
+        margin: 0;
+    }
+
+    .boost-cta-box {
+        background: linear-gradient(135deg, rgba(255, 0, 80, 0.12) 0%, rgba(0, 242, 234, 0.12) 100%);
+        border: 1px solid rgba(255, 0, 80, 0.3);
+        border-radius: 24px;
+        padding: 40px 24px;
+        text-align: center;
+        backdrop-filter: blur(12px);
+    }
+
+    .cta-inner h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 8px;
+    }
+
+    .cta-inner p {
+        color: var(--text-dim, rgba(255, 255, 255, 0.7));
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .btn-cta-boost {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 800;
+        padding: 16px 36px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(255, 0, 80, 0.4);
+        transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .btn-cta-boost:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(255, 0, 80, 0.6);
+    }
+</style>
