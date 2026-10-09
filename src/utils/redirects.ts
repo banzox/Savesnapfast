@@ -24,7 +24,7 @@ const LEGACY_SLUGS: Record<string, string> = {
 const CONTENT_SLUGS = new Set([
     "about", "blog", "contact", "disclaimer", "dmca", "editorial-policy",
     "mp3", "privacy", "slideshow", "story", "terms", "tools",
-    "ios", "android", "mac", "pc", "boost",
+    "ios", "android", "mac", "pc",
     ...Object.keys(LEGACY_SLUGS),
 ]);
 

@@ -51,13 +51,6 @@ const navItems = [
         activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/tools"),
     },
     {
-        id: "boost",
-        icon: "fas fa-rocket",
-        label: getNavLabel("nav.boost", "Boost"),
-        href: lang === "en" ? "/boost" : `/${lang}/boost`,
-        activeCheck: (path: string) => path.replace(/\/$/, "").endsWith("/boost"),
-    },
-    {
         id: "blog",
         icon: "fas fa-newspaper",
         label: getNavLabel("nav.blog", "Blog"),

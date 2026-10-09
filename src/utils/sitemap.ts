@@ -4,28 +4,28 @@ import { defaultLang, languages } from "../i18n/ui";
 const SITE_ORIGIN = "https://savetik-fast.xyz";
 const langCodes = Object.keys(languages);
 
-// All 16 standard content routes supported across all 30 languages
+// High-intent search and tool routes prioritized across all supported languages
 const CORE_PAGES = [
     "",
-    "about",
-    "blog",
-    "contact",
-    "disclaimer",
-    "dmca",
     "mp3",
-    "privacy",
     "slideshow",
     "story",
-    "terms",
     "tools",
     "ios",
     "android",
     "mac",
     "pc",
+    "blog",
 ];
 
-// English-only content pages
+// Canonical informational and legal pages (indexed in primary English version)
 const EN_ONLY_PAGES = [
+    "about",
+    "contact",
+    "disclaimer",
+    "dmca",
+    "privacy",
+    "terms",
     "editorial-policy",
 ];
 

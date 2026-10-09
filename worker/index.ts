@@ -86,11 +86,6 @@ export default {
             });
         }
 
-        // Direct smartlink redirect route for promotional campaigns
-        if (url.pathname === "/boost/go" || (url.pathname.startsWith("/boost") && (url.searchParams.has("direct") || url.searchParams.has("go")))) {
-            return Response.redirect("https://www.profitableratecpmnetwork.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308", 302);
-        }
-
         const destination = getCanonicalRedirect(url);
 
         if (destination) {
