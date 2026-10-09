@@ -68,14 +68,14 @@ async function testWorker() {
     }
     console.log('  ✓ /admin and /ad-* X-Robots-Tag: noindex, nofollow & Cache-Control verified');
 
-    // 8. /boost/go and /boost?direct=1 return 302 redirect to Smartlink
+    // 8. /boost/go and /boost?direct=1 do NOT redirect to Smartlink
     for (const boostRoute of ['/boost/go', '/boost?direct=1', '/boost?go=1']) {
         const boostReq = new Request('https://savetik-fast.xyz' + boostRoute);
         const boostRes = await worker.fetch(boostReq, mockEnv, mockCtx);
-        assert.equal(boostRes.status, 302, `Expected 302 on ${boostRoute}, got ${boostRes.status}`);
-        assert.equal(boostRes.headers.get('Location'), 'https://www.profitableratecpmnetwork.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308');
+        assert.notEqual(boostRes.status, 302, `Expected NO 302 redirect on ${boostRoute}`);
+        assert.notEqual(boostRes.headers.get('Location'), 'https://www.profitableratecpmnetwork.com/pjjsq7g4?key=d767025cc7e5239dd2334794b7167308');
     }
-    console.log('  ✓ /boost/go and /boost?direct=1 Smartlink 302 redirects verified');
+    console.log('  ✓ /boost/go and smartlinks correctly deactivated');
 
     console.log('✓ All Worker tests passed successfully!');
 }
