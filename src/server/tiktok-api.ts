@@ -133,6 +133,7 @@ async function callTikWMPost(videoUrl: string): Promise<{ code?: number; data?: 
             "Referer": "https://www.tikwm.com/",
         },
         body: body.toString(),
+        signal: AbortSignal.timeout(4500),
     });
     if (!tmRes.ok) return null;
     return await tmRes.json() as { code?: number; data?: Record<string, any> };
@@ -167,6 +168,7 @@ async function fetchUpstreamFallbacks(videoUrl: string): Promise<DownloadMetadat
                 "Referer": "https://lovetik.com/",
             },
             body: ltBody.toString(),
+            signal: AbortSignal.timeout(4500),
         });
         if (ltRes.ok) {
             const ltJson = await ltRes.json() as {
@@ -223,6 +225,7 @@ async function fetchUpstreamFallbacks(videoUrl: string): Promise<DownloadMetadat
                 "Accept": "application/json",
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             },
+            signal: AbortSignal.timeout(4000),
         });
         if (zellRes.ok) {
             const zJson = await zellRes.json() as { status?: boolean; result?: Record<string, any> };
@@ -261,6 +264,7 @@ async function fetchUpstreamFallbacks(videoUrl: string): Promise<DownloadMetadat
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             },
             body: tmBody.toString(),
+            signal: AbortSignal.timeout(4500),
         });
         if (tmRes.ok) {
             const tmJson = await tmRes.json() as {
