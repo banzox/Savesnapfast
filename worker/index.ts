@@ -61,6 +61,23 @@ export default {
 
         const normalizedPath = url.pathname.replace(/\/+$/, "");
 
+        // Gracefully serve sitemap.xml even if a user pastes the full URL into GSC's URL-prefix box
+        if (
+            normalizedPath.endsWith("/sitemap.xml") ||
+            normalizedPath.endsWith("/sitemap-0.xml") ||
+            normalizedPath.endsWith("/sitemap_index.xml")
+        ) {
+            const sitemapRes = await env.ASSETS.fetch(new Request(new URL("/sitemap.xml", request.url), request));
+            const headers = new Headers(sitemapRes.headers);
+            headers.set("Content-Type", "application/xml; charset=utf-8");
+            headers.set("X-Robots-Tag", "all");
+            headers.set("Cache-Control", "public, max-age=3600, s-maxage=86400");
+            return new Response(sitemapRes.body, {
+                status: 200,
+                headers,
+            });
+        }
+
         // Permanently retired /boost routes return HTTP 410 Gone so search engines immediately drop them
         if (normalizedPath === "/boost" || /^\/[a-z]{2,3}\/boost$/i.test(normalizedPath)) {
             const assetRes = await env.ASSETS.fetch(new Request(new URL("/404.html", request.url), request));
