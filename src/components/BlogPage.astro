@@ -1,7 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AdSenseSlot from "./AdSenseSlot.astro";
 import { useTranslations } from "../utils/i18n";
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
+import { ADS_CONFIG } from "../config";
 
 interface Props {
     lang: string;
@@ -10,15 +12,38 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-// Fetch and filter blog posts
-const allPosts = await getCollection('blog', ({ data }) => {
+const allPosts = await getCollection("blog", ({ data }) => {
     return data.lang === lang;
 });
 
-// Sort by date descending
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// Download type cards
+function formatPostDate(date: Date, locale: string): string {
+    const intlLocale = locale === "fil" ? "fil-PH" : locale === "no" ? "nb-NO" : locale;
+    try {
+        return new Intl.DateTimeFormat(intlLocale, {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+        }).format(date);
+    } catch {
+        return date.toISOString().slice(0, 10);
+    }
+}
+
+const guideSections = [1, 2, 3, 4, 5]
+    .map((n) => {
+        const titleKey = `blog.section${n}_title`;
+        const contentKey = `blog.section${n}_content`;
+        const title = t(titleKey);
+        const content = t(contentKey);
+        return {
+            title: title !== titleKey ? title : "",
+            content: content !== contentKey ? content : "",
+        };
+    })
+    .filter((sec) => sec.title && sec.content);
+
 const downloadCards = [
     {
         id: "video",
@@ -53,10 +78,9 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     title={t("blog.meta_title")}
     description={t("blog.meta_desc")}
     lang={lang}
-    keywords={t("blog.keywords")}
+    pageType="tool"
 >
     <div class="blog-container">
-        <!-- Hero Section -->
         <section class="blog-hero">
             <a href={homeHref} class="back-home">
                 <i class="fas fa-arrow-left"></i>
@@ -73,43 +97,62 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
             </p>
         </section>
 
-        <!-- Articles Grid -->
         <section class="posts-section">
             <h2 class="section-heading">{t("blog.latest_posts") || "Latest Articles"}</h2>
             <div class="posts-grid">
                 {
-                    posts.length > 0 ? (
-                        posts.map((post) => (
-                            <article class="post-card">
-                                {post.data.cover && (
-                                    <div class="post-card-image">
-                                        <img src={post.data.cover} alt={post.data.title} loading="lazy" />
-                                    </div>
-                                )}
-                                <div class="post-card-content">
-                                    <div class="post-card-meta">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        {new Intl.DateTimeFormat(lang === 'ar' ? 'ar-EG' : 'en-US').format(post.data.pubDate)}
-                                    </div>
-                                    <h3>{post.data.title}</h3>
-                                    <p>{post.data.description}</p>
-                                    <a href={lang === 'en' ? `/blog/${post.slug}` : `/${lang}/blog/${post.slug}`} class="read-more">
-                                        {t("blog.read_more") || "Read More"} <i class="fas fa-arrow-right"></i>
-                                    </a>
+                    posts.map((post) => (
+                        <article class="post-card">
+                            {post.data.cover && (
+                                <div class="post-card-image">
+                                    <img src={post.data.cover} alt={post.data.title} loading="lazy" />
                                 </div>
-                            </article>
-                        ))
-                    ) : (
-                        <div class="no-posts">
-                            <i class="fas fa-feather"></i>
-                            <p>No articles found in this language yet. Stay tuned!</p>
-                        </div>
-                    )
+                            )}
+                            <div class="post-card-content">
+                                <div class="post-card-meta">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <time datetime={post.data.pubDate.toISOString()}>
+                                        {formatPostDate(post.data.pubDate, lang)}
+                                    </time>
+                                </div>
+                                <h3>
+                                    <a
+                                        href={lang === "en" ? `/blog/${post.slug}` : `/${lang}/blog/${post.slug}`}
+                                        class="post-title-link"
+                                    >
+                                        {post.data.title}
+                                    </a>
+                                </h3>
+                                <p>{post.data.description}</p>
+                                <a
+                                    href={lang === "en" ? `/blog/${post.slug}` : `/${lang}/blog/${post.slug}`}
+                                    class="read-more"
+                                >
+                                    {t("blog.read_more") || "Read More"} <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    ))
                 }
             </div>
         </section>
 
-        <!-- Download Type Cards -->
+        <AdSenseSlot slot={ADS_CONFIG.adsenseSlots.midContent} />
+
+        {/* Comprehensive Localized Pillar Guide Sections */}
+        {guideSections.length > 0 && (
+            <section class="pillar-guide-section">
+                {guideSections.map((sec) => (
+                    <article class="pillar-guide-card">
+                        <h2>{sec.title}</h2>
+                        <div class="pillar-guide-body">
+                            <Fragment set:html={sec.content} />
+                        </div>
+                    </article>
+                ))}
+            </section>
+        )}
+
         <section class="cards-section">
             <h2 class="section-heading">{t("blog.tools_heading")}</h2>
             <div class="cards-grid">
@@ -135,7 +178,6 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="cta-section">
             <h2>{t("blog.cta_title")}</h2>
             <p>{t("blog.cta_desc")}</p>
@@ -147,7 +189,6 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     </div>
 </Layout>
 
-
 <style>
     .blog-container {
         max-width: 1100px;
@@ -155,7 +196,6 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
         padding: 0 20px;
     }
 
-    /* Hero */
     .blog-hero {
         text-align: center;
         padding: 3rem 1rem;
@@ -184,7 +224,7 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     }
 
     .blog-title {
-        font-size: 2.5rem;
+        font-size: clamp(1.9rem, 4vw, 2.5rem);
         font-weight: 800;
         margin-bottom: 1rem;
         background: linear-gradient(
@@ -197,13 +237,13 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     }
 
     .blog-title i {
-        margin-right: 10px;
+        margin-inline-end: 10px;
     }
 
     .blog-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         color: var(--text-dim);
-        max-width: 700px;
+        max-width: 720px;
         margin: 0 auto 1rem;
         line-height: 1.7;
     }
@@ -211,17 +251,16 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     .blog-date {
         color: var(--text-dim);
         font-size: 0.9rem;
-        opacity: 0.8;
+        opacity: 0.85;
     }
 
     .blog-date i {
-        margin-right: 6px;
+        margin-inline-end: 6px;
         color: var(--secondary);
     }
 
-    /* Cards Section */
     .cards-section {
-        margin: 3rem 0;
+        margin: 3.5rem 0;
     }
 
     .section-heading {
@@ -261,33 +300,33 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     }
 
     .download-card:hover {
-        transform: translateY(-8px);
+        transform: translateY(-6px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         border-color: var(--border-bright);
     }
 
     .card-icon {
-        width: 60px;
-        height: 60px;
+        width: 56px;
+        height: 56px;
         border-radius: 12px;
         background: var(--card-gradient);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         color: white;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     .download-card h3 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 700;
         margin-bottom: 10px;
     }
 
     .download-card p {
         color: var(--text-dim);
-        font-size: 0.95rem;
+        font-size: 0.94rem;
         line-height: 1.6;
         margin-bottom: 15px;
     }
@@ -301,23 +340,14 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
         font-size: 0.9rem;
     }
 
-    .card-cta i {
-        transition: transform 0.3s ease;
-    }
-
-    .download-card:hover .card-cta i {
-        transform: translateX(5px);
-    }
-
-    /* Posts Section */
     .posts-section {
-        margin: 3rem 0 5rem;
+        margin: 2.5rem 0 3.5rem;
     }
 
     .posts-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        gap: 28px;
     }
 
     .post-card {
@@ -331,7 +361,7 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     }
 
     .post-card:hover {
-        transform: translateY(-8px);
+        transform: translateY(-6px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         border-color: var(--secondary);
     }
@@ -349,11 +379,11 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     }
 
     .post-card:hover .post-card-image img {
-        transform: scale(1.1);
+        transform: scale(1.06);
     }
 
     .post-card-content {
-        padding: 25px;
+        padding: 24px;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
@@ -362,7 +392,7 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     .post-card-meta {
         font-size: 0.85rem;
         color: var(--text-dim);
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         display: flex;
         align-items: center;
         gap: 6px;
@@ -373,11 +403,19 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     }
 
     .post-card h3 {
-        font-size: 1.4rem;
+        font-size: 1.32rem;
         font-weight: 700;
-        margin-bottom: 15px;
-        line-height: 1.3;
+        margin-bottom: 12px;
+        line-height: 1.35;
+    }
+
+    .post-title-link {
         color: var(--text-main);
+        text-decoration: none;
+    }
+
+    .post-title-link:hover {
+        color: var(--secondary);
     }
 
     .post-card p {
@@ -400,33 +438,47 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
         font-weight: 700;
         text-decoration: none;
         font-size: 0.95rem;
-        transition: gap 0.3s;
     }
 
-    .read-more:hover {
-        gap: 12px;
+    .pillar-guide-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+        margin: 2.5rem 0 3.5rem;
     }
 
-    .no-posts {
-        grid-column: 1 / -1;
-        text-align: center;
-        padding: 60px;
+    .pillar-guide-card {
         background: var(--glass);
+        border: 1px solid var(--border);
         border-radius: 20px;
-        border: 1px dashed var(--border);
+        padding: 28px;
+        line-height: 1.75;
+    }
+
+    :global([data-theme="light"]) .pillar-guide-card {
+        background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+
+    .pillar-guide-card h2 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin: 0 0 14px;
+    }
+
+    .pillar-guide-body {
         color: var(--text-dim);
+        font-size: 0.96rem;
     }
 
-    .no-posts i {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        opacity: 0.3;
+    .pillar-guide-body :global(strong) {
+        color: var(--text-main);
     }
 
-    /* CTA */
     .cta-section {
         text-align: center;
-        padding: 60px 30px;
+        padding: 55px 30px;
         background: linear-gradient(
             135deg,
             var(--glass) 0%,
@@ -438,22 +490,22 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
     }
 
     .cta-section h2 {
-        font-size: 2rem;
+        font-size: 1.9rem;
         font-weight: 800;
-        margin-bottom: 15px;
+        margin-bottom: 14px;
     }
 
     .cta-section p {
         color: var(--text-dim);
-        margin-bottom: 25px;
-        font-size: 1.1rem;
+        margin-bottom: 24px;
+        font-size: 1.05rem;
     }
 
     .cta-btn {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        padding: 16px 40px;
+        padding: 15px 38px;
         background: linear-gradient(
             135deg,
             var(--primary) 0%,
@@ -463,63 +515,22 @@ const homeHref = lang === "en" ? "/" : `/${lang}`;
         text-decoration: none;
         border-radius: 12px;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         transition: all 0.3s ease;
         box-shadow: 0 10px 30px var(--primary-glow);
     }
 
-    .cta-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 40px var(--primary-glow);
-    }
-
-    /* Light Mode */
-    :global([data-theme="light"]) .download-card {
-        background: #ffffff;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
+    :global([data-theme="light"]) .download-card,
     :global([data-theme="light"]) .post-card {
         background: #ffffff;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
-    :global([data-theme="light"]) .no-posts {
-        background: #ffffff;
-    }
-
     :global([data-theme="light"]) .cta-section {
         background: linear-gradient(
             135deg,
             #ffffff 0%,
             rgba(37, 99, 235, 0.03) 100%
         );
-    }
-
-    :global([data-theme="light"]) .cta-section {
-        background: linear-gradient(
-            135deg,
-            #ffffff 0%,
-            rgba(37, 99, 235, 0.03) 100%
-        );
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-        .blog-title {
-            font-size: 1.8rem;
-        }
-
-        .blog-subtitle {
-            font-size: 1rem;
-        }
-
-        .cards-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .content-section {
-            padding: 25px;
-        }
     }
 </style>

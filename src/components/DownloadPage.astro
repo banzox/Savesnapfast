@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Downloader from "./Downloader.jsx";
 import FAQ from "./FAQ.astro";
+import AdSenseSlot from "./AdSenseSlot.astro";
 import { getTranslations, useTranslations } from "../utils/i18n";
 import { ADS_CONFIG } from "../config";
 
@@ -13,8 +14,9 @@ interface Props {
     noindex?: boolean;
 }
 
-const { lang, pagePrefix, mode, showAd = false, noindex = false } = Astro.props;
-const enableAds = showAd && ADS_CONFIG.enableAdsterra;
+const { lang, pagePrefix, mode, showAd = true, noindex = false } = Astro.props;
+const enableAdsterra = showAd && ADS_CONFIG.enableAdsterra;
+const enableAdSense = !noindex && ADS_CONFIG.enableAdSense;
 const t = useTranslations(lang);
 const translations = getTranslations(lang);
 
@@ -39,25 +41,63 @@ while (true) {
     i++;
 }
 
-// --- Dynamic Features Generation ---
+// --- Dynamic Features Generation (supports all page-specific and core feature keys) ---
 const featureKeys = [
+    "all",
     "no_watermark",
+    "nowatermark",
     "fast",
     "quality",
-    "device",
-    "unlimited",
-    "safe",
-    "anonymous",
-    "slides",
+    "audio",
+    "ringtone",
+    "original",
     "expire",
+    "anonymous",
+    "device",
+    "free",
+    "unlimited",
+    "secure",
+    "safe",
+    "browser",
+    "noapp",
+    "nobapp",
+    "batch",
+    "slides",
     "favorites",
     "trending",
-    "ringtone",
     "bulk",
-    "original",
     "format",
 ];
+
+const ICON_MAP: Record<string, string> = {
+    all: "fas fa-images",
+    no_watermark: "fas fa-magic",
+    nowatermark: "fas fa-magic",
+    fast: "fas fa-bolt",
+    quality: "fas fa-film",
+    audio: "fas fa-music",
+    ringtone: "fas fa-bell",
+    original: "fas fa-check-circle",
+    expire: "fas fa-clock",
+    anonymous: "fas fa-user-secret",
+    device: "fas fa-mobile-alt",
+    free: "fas fa-infinity",
+    unlimited: "fas fa-infinity",
+    secure: "fas fa-shield-alt",
+    safe: "fas fa-shield-alt",
+    browser: "fas fa-globe",
+    noapp: "fas fa-laptop-code",
+    nobapp: "fas fa-laptop-code",
+    batch: "fas fa-layer-group",
+    slides: "fas fa-layer-group",
+    favorites: "fas fa-heart",
+    trending: "fas fa-fire",
+    bulk: "fas fa-images",
+    format: "fas fa-file-image",
+};
+
 const features = [];
+const seenFeatureTitles = new Set<string>();
 
 for (const key of featureKeys) {
     let titleKey = getKey(`features.${key}.title`);
@@ -65,34 +105,23 @@ for (const key of featureKeys) {
     let title = t(titleKey);
     let desc = t(descKey);
 
-    // Fallback to core features if page-specific feature key is missing
-    if (!title || title === titleKey) {
+    // Fallback to core features only when no page-specific equivalent was already added
+    if ((!title || title === titleKey) && pagePrefix) {
         titleKey = `features.${key}.title`;
         descKey = `features.${key}.desc`;
         title = t(titleKey);
         desc = t(descKey);
     }
 
-    if (title && title !== titleKey) {
-        let icon = "fas fa-star";
-        if (key === "no_watermark") icon = "fas fa-magic";
-        if (key === "fast") icon = "fas fa-bolt";
-        if (key === "quality") icon = "fas fa-hd";
-        if (key === "device") icon = "fas fa-mobile-alt";
-        if (key === "unlimited") icon = "fas fa-infinity";
-        if (key === "safe") icon = "fas fa-shield-alt";
-        if (key === "anonymous") icon = "fas fa-user-secret";
-        if (key === "slides") icon = "fas fa-layer-group";
-        if (key === "expire") icon = "fas fa-clock";
-        if (key === "favorites") icon = "fas fa-heart";
-        if (key === "trending") icon = "fas fa-fire";
-        if (key === "ringtone") icon = "fas fa-bell";
-        if (key === "bulk") icon = "fas fa-images";
-        if (key === "original") icon = "fas fa-check-circle";
-        if (key === "format") icon = "fas fa-file-image";
-
-        features.push({ icon, title, desc });
+    if (title && title !== titleKey && desc && desc !== descKey && !seenFeatureTitles.has(title)) {
+        seenFeatureTitles.add(title);
+        features.push({
+            icon: ICON_MAP[key] || "fas fa-star",
+            title,
+            desc,
+        });
     }
+    if (features.length >= 8) break;
 }
 
 // --- How-To Section ---
@@ -104,7 +133,6 @@ while (true) {
     let desc = t(descKey);
 
     if (!desc || desc === descKey) {
-        // Smart fallback to base how_to for device guides
         if (pagePrefix && s <= 3) {
             titleKey = `how_to.step${s}_title`;
             descKey = `how_to.step${s}`;
@@ -113,7 +141,8 @@ while (true) {
         if (!desc || desc === descKey) break;
     }
 
-    const stepTitle = t(titleKey) || `Step ${s}`;
+    const rawStepTitle = t(titleKey);
+    const stepTitle = rawStepTitle && rawStepTitle !== titleKey ? rawStepTitle : `${s}`;
     howToSteps.push({ title: stepTitle, desc });
     s++;
 }
@@ -134,15 +163,12 @@ if (pagePrefix.includes("mp3")) aboutIcon = "fas fa-headphones";
 if (pagePrefix.includes("story")) aboutIcon = "fas fa-photo-film";
 if (pagePrefix.includes("slideshow")) aboutIcon = "fas fa-layer-group";
 
-
 // --- Meta Data ---
-// Smart fallback: Check if translated value is different from the key (means translation exists)
 const pageMetaTitleKey = getKey("meta_title");
 const pageMetaDescKey = getKey("meta_desc");
 const pageMetaTitle = t(pageMetaTitleKey);
 const pageMetaDesc = t(pageMetaDescKey);
 
-// Only use page-specific meta if translation exists (value !== key)
 const metaTitle =
     pageMetaTitle !== pageMetaTitleKey ? pageMetaTitle : t("meta.title");
 const metaDesc =
@@ -162,14 +188,16 @@ if (!pagePrefix) {
     heroDesc = t(`${pagePrefix}.desc`);
     if (pagePrefix === "mp3_page") heroOnColor = t(`${pagePrefix}.subtitle`);
 }
+
+const badgeLabel = `SaveTikFast • ${t("downloader.hd_quality")}`;
 ---
 
-<Layout title={metaTitle} description={metaDesc} lang={lang} noindex={noindex}>
+<Layout title={metaTitle} description={metaDesc} lang={lang} noindex={noindex} pageType="tool">
     <div class="main-wrapper">
         <article class="hero-section">
             <div class="hero-live-badge">
                 <span class="live-pulse"></span>
-                <span>⚡ 2026 Ultra Fast Downloader • No Watermark</span>
+                <span>⚡ {badgeLabel}</span>
             </div>
 
             <h1 class="hero-title">
@@ -193,22 +221,22 @@ if (!pagePrefix) {
                     ) : pagePrefix === "ios_page" ? (
                         <span>
                             <i class="fab fa-apple accent-text" />{" "}
-                            {heroTitleDesc || "TikTok Downloader for iOS"}
+                            {heroTitleDesc}
                         </span>
                     ) : pagePrefix === "android_page" ? (
                         <span>
                             <i class="fab fa-android accent-text" />{" "}
-                            {heroTitleDesc || "TikTok Downloader for Android"}
+                            {heroTitleDesc}
                         </span>
                     ) : pagePrefix === "mac_page" ? (
                         <span>
                             <i class="fas fa-laptop accent-text" />{" "}
-                            {heroTitleDesc || "TikTok Downloader for Mac"}
+                            {heroTitleDesc}
                         </span>
                     ) : pagePrefix === "pc_page" ? (
                         <span>
                             <i class="fas fa-desktop accent-text" />{" "}
-                            {heroTitleDesc || "TikTok Downloader for PC"}
+                            {heroTitleDesc}
                         </span>
                     ) : (
                         <span>
@@ -234,15 +262,20 @@ if (!pagePrefix) {
                         : t("downloader.placeholder")}
                 />
             </div>
-    </article>
+        </article>
 
-    {/* إعلان Adsterra Native بعد منطقة التحميل مباشرة لزيادة الأرباح */}
-    {enableAds && (
-        <div class="ad-slot ad-slot-top">
-            <script is:inline async="async" data-cfasync="false" src="https://pl28502654.profitableratecpmnetwork.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"></script>
-            <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
-        </div>
-    )}
+        {enableAdSense && (
+            <div class="container">
+                <AdSenseSlot slot={ADS_CONFIG.adsenseSlots.heroBottom} />
+            </div>
+        )}
+
+        {enableAdsterra && (
+            <div class="ad-slot ad-slot-top">
+                <script is:inline async="async" data-cfasync="false" src="https://pl28502654.profitableratecpmnetwork.com/2d1b844eacef7f58a020be44e8239ff9/invoke.js"></script>
+                <div id="container-2d1b844eacef7f58a020be44e8239ff9"></div>
+            </div>
+        )}
     </div>
 
     <section class="container features-grid" aria-label={t("features.title") || "Features"}>
@@ -287,18 +320,9 @@ if (!pagePrefix) {
         )
     }
 
-
-
-    {/* Ad Slot Mid - before FAQ */}
-    {enableAds && (
-        <div class="ad-slot ad-slot-mid">
-            <iframe
-                src="/ad-native"
-                style="width:100%;max-width:800px;height:250px;border:none;overflow:hidden;"
-                scrolling="no"
-                loading="lazy"
-                title="Advertisement"
-            ></iframe>
+    {enableAdSense && (
+        <div class="container">
+            <AdSenseSlot slot={ADS_CONFIG.adsenseSlots.midContent} />
         </div>
     )}
 
@@ -307,7 +331,7 @@ if (!pagePrefix) {
             <div class="toc-container">
                 <div class="toc-header">
                     <i class="fas fa-list-ul"></i>
-                    <h3 style="margin: 0; font-size: 1.2rem; color: var(--text-main);">{t("blog.toc_title") || "Table of Contents"}</h3>
+                    <h2 style="margin: 0; font-size: 1.2rem; color: var(--text-main);">{t("blog.toc_title") || "FAQ"}</h2>
                 </div>
                 <ul class="toc-list" style="list-style: none; padding: 0; margin: 0;">
                     {faqItems.map((item, idx) => (
@@ -324,11 +348,12 @@ if (!pagePrefix) {
 
     <FAQ t={t} items={faqItems} />
 
-    {['ios_page', 'android_page', 'mac_page', 'pc_page'].includes(pagePrefix) && (
+    {["ios_page", "android_page", "mac_page", "pc_page"].includes(pagePrefix) && (
         <section class="container shadow-box about-section" aria-labelledby="device-guide-title">
             <div class="content-box">
                 <h2 id="device-guide-title">
-                    <i class={pagePrefix === 'ios_page' ? 'fab fa-apple accent-text' : pagePrefix === 'android_page' ? 'fab fa-android accent-text' : pagePrefix === 'mac_page' ? 'fas fa-laptop accent-text' : 'fas fa-desktop accent-text'} /> {t(`${pagePrefix}.guide_title`) !== `${pagePrefix}.guide_title` ? t(`${pagePrefix}.guide_title`) : heroTitleDesc}
+                    <i class={pagePrefix === "ios_page" ? "fab fa-apple accent-text" : pagePrefix === "android_page" ? "fab fa-android accent-text" : pagePrefix === "mac_page" ? "fas fa-laptop accent-text" : "fas fa-desktop accent-text"} />{" "}
+                    {t(`${pagePrefix}.guide_title`) !== `${pagePrefix}.guide_title` ? t(`${pagePrefix}.guide_title`) : heroTitleDesc}
                 </h2>
                 <p class="intro">{heroDesc}</p>
                 <div class="device-tips" style="margin-top: 1.25rem; line-height: 1.8; color: var(--text-dim);">
@@ -338,48 +363,33 @@ if (!pagePrefix) {
         </section>
     )}
 
-    {!pagePrefix && t('seo_rich_content.intro_title') !== 'seo_rich_content.intro_title' && (
+    {!pagePrefix && t("seo_rich_content.intro_title") !== "seo_rich_content.intro_title" && (
         <section class="container shadow-box seo-content-section" style="margin-top: 3rem;">
-            <h2 class="section-title">{t('seo_rich_content.intro_title')}</h2>
-            <p>{t('seo_rich_content.intro_p1')}</p>
-            <p>{t('seo_rich_content.intro_p2')}</p>
-            
-            <h2 class="section-title">{t('seo_rich_content.why_title')}</h2>
-            <p>{t('seo_rich_content.why_p1')}</p>
-            <p>{t('seo_rich_content.why_p2')}</p>
-            <p>{t('seo_rich_content.why_p3')}</p>
-            
-            <h2 class="section-title">{t('seo_rich_content.guide_title')}</h2>
-            <p>{t('seo_rich_content.guide_p1')}</p>
-            
-            <h2 class="section-title">{t('seo_rich_content.comparison_title')}</h2>
-            <p>{t('seo_rich_content.comparison_p1')}</p>
-            
-            <h2 class="section-title">{t('seo_rich_content.tips_title')}</h2>
-            <p>{t('seo_rich_content.tips_p1')}</p>
-            
-            <h2 class="section-title">{t('seo_rich_content.conclusion_title')}</h2>
-            <p>{t('seo_rich_content.conclusion_p1')}</p>
+            <h2 class="section-title">{t("seo_rich_content.intro_title")}</h2>
+            <p>{t("seo_rich_content.intro_p1")}</p>
+            <p>{t("seo_rich_content.intro_p2")}</p>
+
+            <h2 class="section-title">{t("seo_rich_content.why_title")}</h2>
+            <p>{t("seo_rich_content.why_p1")}</p>
+            <p>{t("seo_rich_content.why_p2")}</p>
+            <p>{t("seo_rich_content.why_p3")}</p>
+
+            <h2 class="section-title">{t("seo_rich_content.guide_title")}</h2>
+            <p>{t("seo_rich_content.guide_p1")}</p>
+
+            <h2 class="section-title">{t("seo_rich_content.comparison_title")}</h2>
+            <p>{t("seo_rich_content.comparison_p1")}</p>
+
+            <h2 class="section-title">{t("seo_rich_content.tips_title")}</h2>
+            <p>{t("seo_rich_content.tips_p1")}</p>
+
+            <h2 class="section-title">{t("seo_rich_content.conclusion_title")}</h2>
+            <p>{t("seo_rich_content.conclusion_p1")}</p>
         </section>
     )}
-
-    {/* Ad Slot Bottom - after FAQ */}
-    {enableAds && (
-        <div class="ad-slot ad-slot-bottom">
-            <iframe
-                src="/ad-300x250"
-                style="width:100%;max-width:330px;height:270px;border:none;overflow:hidden;"
-                scrolling="no"
-                loading="lazy"
-                title="Advertisement"
-            ></iframe>
-        </div>
-    )}
-
 </Layout>
 
 <style>
-    /* Hero Section */
     .hero-section {
         text-align: center;
         width: 100%;
@@ -391,7 +401,7 @@ if (!pagePrefix) {
     }
 
     .hero-title {
-        font-size: clamp(1.2rem, 2.8vw, 1.85rem);
+        font-size: clamp(1.25rem, 2.8vw, 1.9rem);
         font-weight: 800;
         margin-bottom: 0.5rem;
         line-height: 1.3;
@@ -399,20 +409,20 @@ if (!pagePrefix) {
     }
 
     .hero-desc {
-        font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+        font-size: clamp(0.9rem, 1.6vw, 1.05rem);
         margin-bottom: 1.25rem;
-        max-width: 38rem;
+        max-width: 40rem;
         margin-left: auto;
         margin-right: auto;
         color: var(--text-dim);
-        line-height: 1.5;
+        line-height: 1.55;
     }
 
     .accent-text {
         color: var(--secondary);
     }
 
-    [data-theme='light'] .accent-text {
+    :global([data-theme="light"]) .accent-text {
         color: var(--primary);
     }
 
@@ -423,7 +433,6 @@ if (!pagePrefix) {
         margin-right: auto;
     }
 
-    /* How To Steps Grid */
     .steps-wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -544,7 +553,6 @@ if (!pagePrefix) {
         margin-bottom: 1rem;
     }
 
-    /* Ad Slots - Seamless integration */
     .ad-slot {
         display: flex;
         justify-content: center;
@@ -555,28 +563,5 @@ if (!pagePrefix) {
         padding: 0 15px;
         min-height: 100px;
         overflow: hidden;
-    }
-
-    .ad-slot-top {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .ad-slot-mid {
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-
-    .ad-slot-bottom {
-        margin-top: 20px;
-        margin-bottom: 40px;
-        min-height: 250px;
-    }
-
-    @media (max-width: 768px) {
-        .ad-slot {
-            padding: 0 10px;
-            margin: 15px auto;
-        }
     }
 </style>

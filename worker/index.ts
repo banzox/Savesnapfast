@@ -11,9 +11,9 @@ import {
     handleDownloadOptions,
 } from "../src/server/download-api.ts";
 
-function withRobotsHeader(response: Response): Response {
+function withRobotsHeader(response: Response, directive = "noindex, nofollow"): Response {
     const headers = new Headers(response.headers);
-    headers.set("X-Robots-Tag", "noindex, nofollow");
+    headers.set("X-Robots-Tag", directive);
     return new Response(response.body, {
         status: response.status,
         statusText: response.statusText,
@@ -59,8 +59,22 @@ export default {
             }));
         }
 
-        // Force true 404 status for explicit 404 paths (prevents soft-404 indexing errors in Google Search Console)
         const normalizedPath = url.pathname.replace(/\/+$/, "");
+
+        // Permanently retired /boost routes return HTTP 410 Gone so search engines immediately drop them
+        if (normalizedPath === "/boost" || /^\/[a-z]{2,3}\/boost$/i.test(normalizedPath)) {
+            const assetRes = await env.ASSETS.fetch(new Request(new URL("/404.html", request.url), request));
+            const headers = new Headers(assetRes.headers);
+            headers.set("X-Robots-Tag", "noindex, nofollow");
+            headers.set("Cache-Control", "public, max-age=86400");
+            return new Response(assetRes.body, {
+                status: 410,
+                statusText: "Gone",
+                headers,
+            });
+        }
+
+        // Force true 404 status for explicit 404 paths (prevents soft-404 indexing errors in Google Search Console)
         if (normalizedPath === "/404" || url.pathname === "/404.html") {
             const assetRes = await env.ASSETS.fetch(new Request(new URL("/404.html", request.url), request));
             const headers = new Headers(assetRes.headers);
@@ -92,6 +106,10 @@ export default {
             return Response.redirect(new URL(destination, request.url), 301);
         }
 
-        return env.ASSETS.fetch(request);
+        const assetRes = await env.ASSETS.fetch(request);
+        if (assetRes.status === 404) {
+            return withRobotsHeader(assetRes, "noindex, follow");
+        }
+        return assetRes;
     },
 } satisfies ExportedHandler<Env>;

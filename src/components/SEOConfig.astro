@@ -1,13 +1,11 @@
 ---
 /**
  * SEOConfig.astro
- * Advanced SEO component that programmatically generates:
- * 1. Canonical URL tag (absolute, using Astro.url)
- * 2. Dynamic hreflang tags for all 30 supported languages
+ * Generates:
+ * 1. Self-referencing Canonical URL tag (absolute, no trailing slash)
+ * 2. Dynamic hreflang tags for all 30 supported languages on multilingual routes
  * 3. Self-referencing hreflang for the current language
  * 4. x-default hreflang pointing to the English version
- *
- * All generated URLs are absolute (https://savetik-fast.xyz/...)
  */
 import { languages } from "../i18n/ui";
 
@@ -20,7 +18,6 @@ interface Props {
 const { noindex = false } = Astro.props;
 
 // --- 1. Extract the base slug (path without language prefix) ---
-// Strips trailing slash for clean comparison (trailingSlash: 'never')
 const rawPath = Astro.url.pathname.replace(/\.html$/, "");
 const pathname = rawPath.endsWith("/") && rawPath.length > 1
     ? rawPath.slice(0, -1)
@@ -33,26 +30,29 @@ const baseSlug = isLangPrefix
     : pathParts.join("/");
 
 // --- 2. Build canonical URL ---
-// Every indexable page gets a self-referencing canonical URL
-const canonicalURL = new URL(pathname, SITE_ORIGIN).href;
+const canonicalURL = new URL(pathname || "/", SITE_ORIGIN).href;
 
-
-// --- 3. Build hreflang entries for ALL languages (NO trailing slashes) ---
+// --- 3. Build hreflang entries for multilingual core routes ---
 const currentLang = isLangPrefix ? firstPart : "en";
 const isBlogPost = baseSlug && baseSlug.startsWith("blog/") && baseSlug !== "blog";
 const is404Page = pathname.includes("404") || baseSlug === "404";
-const hasLocalizedVersions = baseSlug !== "editorial-policy";
-// Blog articles are not automatically equivalent just because they share a
-// language section. Avoid pointing article hreflang entries at blog indexes.
-const skipHreflang = noindex || is404Page || isBlogPost || !hasLocalizedVersions;
+
+const EN_ONLY_LEGAL_PAGES = new Set([
+    "about",
+    "contact",
+    "disclaimer",
+    "dmca",
+    "privacy",
+    "terms",
+    "editorial-policy",
+]);
+const hasLocalizedIndexableVersions = !EN_ONLY_LEGAL_PAGES.has(baseSlug);
+
+// Skip hreflang on 404s, noindex pages, non-equivalent blog articles, and English-canonical legal pages
+const skipHreflang = noindex || is404Page || isBlogPost || !hasLocalizedIndexableVersions;
+
 const hreflangs = skipHreflang ? [] : Object.keys(languages).map((langCode) => {
-    // For blog posts, other languages should point to /[lang]/blog,
-    // but the current language must point to the exact canonical URL (baseSlug)
-    const isSelf = langCode === currentLang;
-    const slug = isBlogPost 
-        ? (isSelf ? baseSlug : "blog") 
-        : baseSlug;
-    
+    const slug = baseSlug;
     const langPath =
         langCode === "en"
             ? slug
@@ -68,14 +68,9 @@ const hreflangs = skipHreflang ? [] : Object.keys(languages).map((langCode) => {
     };
 });
 
-// --- 4. x-default always points to the English version of the same page ---
-// For English blog posts, it should point to the English blog post itself.
-// For translated blog posts, it should point to the English blog index.
-const xDefaultSlug = isBlogPost
-    ? (currentLang === "en" ? baseSlug : "blog")
-    : baseSlug;
+// --- 4. x-default points to the English version of the same page ---
 const xDefaultHref = new URL(
-    xDefaultSlug ? `/${xDefaultSlug}` : "/",
+    baseSlug ? `/${baseSlug}` : "/",
     SITE_ORIGIN,
 ).href;
 ---
@@ -83,7 +78,6 @@ const xDefaultHref = new URL(
 <!-- SEOConfig: Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
-{/* Add hreflang for all pages across all 30 languages (skipping only 404 pages) */}
 {!skipHreflang && (
     <>
         <!-- SEOConfig: hreflang x-default (English fallback) -->

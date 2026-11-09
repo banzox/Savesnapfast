@@ -1,0 +1,79 @@
+---
+import { ADS_CONFIG } from "../config";
+
+interface Props {
+    slot?: string;
+    format?: "auto" | "fluid" | "rectangle";
+    layout?: string;
+    label?: string;
+}
+
+const {
+    slot = "",
+    format = "auto",
+    layout,
+    label = "Advertisement",
+} = Astro.props;
+
+const activeSlot = slot.trim();
+const shouldRender = ADS_CONFIG.enableAdSense && Boolean(ADS_CONFIG.adsenseClient) && Boolean(activeSlot);
+---
+
+{shouldRender && (
+    <aside class="adsense-unit-wrapper" aria-label={label}>
+        <span class="adsense-unit-label">{label}</span>
+        <ins
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-client={ADS_CONFIG.adsenseClient}
+            data-ad-slot={activeSlot}
+            data-ad-format={format}
+            data-ad-layout={layout}
+            data-full-width-responsive="true"
+        ></ins>
+    </aside>
+)}
+
+{shouldRender && (
+    <script is:inline>
+        (function () {
+            function pushAdSenseUnits() {
+                var units = document.querySelectorAll('ins.adsbygoogle:not([data-adsbygoogle-status])');
+                if (!units.length) return;
+                units.forEach(function () {
+                    try {
+                        (window.adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {}
+                });
+            }
+            if (document.readyState === "complete" || document.readyState === "interactive") {
+                pushAdSenseUnits();
+            } else {
+                document.addEventListener("DOMContentLoaded", pushAdSenseUnits, { once: true });
+            }
+            document.addEventListener("astro:page-load", pushAdSenseUnits);
+        })();
+    </script>
+)}
+
+<style>
+    .adsense-unit-wrapper {
+        width: 100%;
+        max-width: 980px;
+        margin: 1.75rem auto;
+        padding: 0 1rem;
+        text-align: center;
+        overflow: hidden;
+    }
+    .adsense-unit-label {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-dim, rgba(255, 255, 255, 0.45));
+        margin-bottom: 0.35rem;
+    }
+    :global(ins.adsbygoogle[data-ad-status="unfilled"]) {
+        display: none !important;
+    }
+</style>

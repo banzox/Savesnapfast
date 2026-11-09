@@ -4,61 +4,82 @@ import { useTranslations } from "../utils/i18n";
 interface Props {
     lang?: string;
     noindex?: boolean;
+    pageType?: "tool" | "article" | "page";
+    articleData?: {
+        headline: string;
+        description: string;
+        image?: string;
+        datePublished: string;
+        dateModified?: string;
+        authorName: string;
+    };
 }
 
-const { lang = "en", noindex = false } = Astro.props;
+const { lang = "en", noindex = false, pageType = "tool", articleData } = Astro.props;
 const t = useTranslations(lang);
 
-const pathname = Astro.url.pathname.replace(/\.html$/, "");
+const rawPathname = Astro.url.pathname.replace(/\.html$/, "");
+const pathname = rawPathname.length > 1 && rawPathname.endsWith("/")
+    ? rawPathname.slice(0, -1)
+    : rawPathname;
 const pathParts = pathname.split("/").filter(Boolean);
 const siteOrigin = "https://savetik-fast.xyz";
+const canonicalPageUrl = new URL(pathname || "/", siteOrigin).href;
 
 // Identify language prefix
 const isLangPrefix = lang !== "en" && pathParts.length > 0 && pathParts[0] === lang;
 const breadcrumbParts = isLangPrefix ? pathParts.slice(1) : pathParts;
 const pageSlug = breadcrumbParts[breadcrumbParts.length - 1] || "";
 
-// Dynamically generate FAQ Schema matching specific page context
-let faqPrefix = "faq";
-if (pageSlug === "mp3") faqPrefix = "mp3_page.faq";
-else if (pageSlug === "story") faqPrefix = "story_page.faq";
-else if (pageSlug === "slideshow") faqPrefix = "slideshow_page.faq";
-else if (["ios", "android", "mac", "pc"].includes(pageSlug)) faqPrefix = `${pageSlug}_page.faq`;
+const isLegalOrInfoPage = [
+    "about", "privacy", "terms", "contact", "dmca", "disclaimer", "editorial-policy", "blog"
+].includes(pageSlug) || pageType !== "tool";
+
+// Dynamically generate FAQ Schema ONLY on pages that actually render those FAQs
+let faqPrefix = "";
+if (!isLegalOrInfoPage) {
+    if (pageSlug === "" || (breadcrumbParts.length === 0)) faqPrefix = "faq";
+    else if (pageSlug === "mp3") faqPrefix = "mp3_page.faq";
+    else if (pageSlug === "story") faqPrefix = "story_page.faq";
+    else if (pageSlug === "slideshow") faqPrefix = "slideshow_page.faq";
+    else if (["ios", "android", "mac", "pc"].includes(pageSlug)) faqPrefix = `${pageSlug}_page.faq`;
+}
 
 const faqSchemaItems = [];
-let i = 1;
-while (true) {
-    let q = t(`${faqPrefix}.q${i}`);
-    let a = t(`${faqPrefix}.a${i}`);
+if (faqPrefix) {
+    let i = 1;
+    while (true) {
+        let q = t(`${faqPrefix}.q${i}`);
+        let a = t(`${faqPrefix}.a${i}`);
 
-    // If page-specific prefix failed on the first question, try fallback to generic faq
-    if ((!q || q === `${faqPrefix}.q${i}` || !a || a === `${faqPrefix}.a${i}`) && faqPrefix !== "faq" && i === 1) {
-        faqPrefix = "faq";
-        q = t(`faq.q${i}`);
-        a = t(`faq.a${i}`);
+        if ((!q || q === `${faqPrefix}.q${i}` || !a || a === `${faqPrefix}.a${i}`) && faqPrefix !== "faq" && i === 1) {
+            faqPrefix = "faq";
+            q = t(`faq.q${i}`);
+            a = t(`faq.a${i}`);
+        }
+
+        if (!q || q === `${faqPrefix}.q${i}` || !a || a === `${faqPrefix}.a${i}`) {
+            break;
+        }
+
+        faqSchemaItems.push({
+            "@type": "Question",
+            name: q,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: a,
+            },
+        });
+        i++;
     }
-
-    // Stop if translation is missing (returns key) or empty
-    if (!q || q === `${faqPrefix}.q${i}` || !a || a === `${faqPrefix}.a${i}`) {
-        break;
-    }
-
-    faqSchemaItems.push({
-        "@type": "Question",
-        name: q,
-        acceptedAnswer: {
-            "@type": "Answer",
-            text: a,
-        },
-    });
-    i++;
 }
 
 const softwareAppSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "SaveTikFast",
-    url: "https://savetik-fast.xyz/",
+    url: canonicalPageUrl,
+    inLanguage: lang,
     description: t("meta.description"),
     applicationCategory: "MultimediaApplication",
     operatingSystem: "All",
@@ -73,43 +94,67 @@ const softwareAppSchema = {
     author: {
         "@type": "Organization",
         name: "SaveTikFast",
+        url: siteOrigin,
     },
 };
 
 const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "SaveTikFast",
-    "alternateName": ["SaveTik Fast", "Save Tik Fast", "TikTok Downloader"],
-    "url": "https://savetik-fast.xyz/",
-    "description": t("meta.description")
+    name: "SaveTikFast",
+    alternateName: ["SaveTik Fast", "Save Tik Fast", "TikTok Downloader"],
+    url: `${siteOrigin}/`,
+    inLanguage: lang,
+    description: t("meta.description"),
 };
 
 const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "SaveTikFast",
-    url: "https://savetik-fast.xyz/",
-    logo: "https://savetik-fast.xyz/og-image.png",
+    url: `${siteOrigin}/`,
+    logo: `${siteOrigin}/og-image.png`,
     sameAs: [],
     contactPoint: {
         "@type": "ContactPoint",
         email: "support@savetik-fast.xyz",
         contactType: "customer service",
         availableLanguage: [
-            "English",
-            "Arabic",
-            "Spanish",
-            "French",
-            "German",
-            "Portuguese",
-            "Russian",
-            "Chinese",
-            "Japanese",
-            "Korean",
+            "English", "Arabic", "Spanish", "French", "German",
+            "Portuguese", "Russian", "Chinese", "Japanese", "Korean",
         ],
     },
 };
+
+const articleSchema = articleData ? {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: articleData.headline,
+    description: articleData.description,
+    image: articleData.image
+        ? new URL(articleData.image, siteOrigin).href
+        : `${siteOrigin}/og-image.png`,
+    datePublished: articleData.datePublished,
+    dateModified: articleData.dateModified || articleData.datePublished,
+    inLanguage: lang,
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": canonicalPageUrl,
+    },
+    author: {
+        "@type": "Organization",
+        name: articleData.authorName || "SaveTikFast Editorial Team",
+        url: `${siteOrigin}/about`,
+    },
+    publisher: {
+        "@type": "Organization",
+        name: "SaveTikFast",
+        logo: {
+            "@type": "ImageObject",
+            url: `${siteOrigin}/og-image.png`,
+        },
+    },
+} : null;
 
 const itemListElement = [
     {
@@ -123,14 +168,14 @@ const itemListElement = [
 let currentPath = isLangPrefix ? `/${lang}` : "";
 breadcrumbParts.forEach((part, index) => {
     currentPath += `/${part}`;
-    
-    // Try to get translation if exists (e.g. nav.about -> About Us)
     let name = part.charAt(0).toUpperCase() + part.slice(1);
     const transName = t(`nav.${part}`);
     if (transName && transName !== `nav.${part}`) {
         name = transName;
-    } else if (part === 'mp3') {
+    } else if (part === "mp3") {
         name = "MP3";
+    } else if (articleData && index === breadcrumbParts.length - 1) {
+        name = articleData.headline;
     }
 
     itemListElement.push({
@@ -150,19 +195,25 @@ const breadcrumbSchema = {
 
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 
-{!noindex && (
-<script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)} />
+{!noindex && pageType === "tool" && !isLegalOrInfoPage && (
+    <script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)} />
+)}
+
+{!noindex && articleSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 )}
 
 {
-    !noindex && ["ios", "android", "mac", "pc"].includes(breadcrumbParts[breadcrumbParts.length - 1] || "") && (
+    !noindex && ["ios", "android", "mac", "pc"].includes(pageSlug) && (
         <script
             type="application/ld+json"
             set:html={JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "SoftwareApplication",
-                "name": `SaveTikFast for ${breadcrumbParts[breadcrumbParts.length - 1].toUpperCase()}`,
-                "operatingSystem": breadcrumbParts[breadcrumbParts.length - 1].toUpperCase(),
+                "name": `SaveTikFast for ${pageSlug.toUpperCase()}`,
+                "url": canonicalPageUrl,
+                "inLanguage": lang,
+                "operatingSystem": pageSlug.toUpperCase(),
                 "applicationCategory": "MultimediaApplication",
                 "offers": {
                     "@type": "Offer",
@@ -187,12 +238,5 @@ const breadcrumbSchema = {
     )
 }
 
-<script
-    type="application/ld+json"
-    set:html={JSON.stringify(breadcrumbSchema)}
-/>
-
-<script
-    type="application/ld+json"
-    set:html={JSON.stringify(organizationSchema)}
-/>
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />

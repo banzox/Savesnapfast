@@ -4,6 +4,9 @@ import { defaultLang, languages } from "../i18n/ui";
 const SITE_ORIGIN = "https://savetik-fast.xyz";
 const langCodes = Object.keys(languages);
 
+// Stable release date for static templates (avoids fake daily lastmod churn)
+const STATIC_RELEASE_DATE = "2026-11-09";
+
 // High-intent search and tool routes prioritized across all supported languages
 const CORE_PAGES = [
     "",
@@ -38,23 +41,39 @@ const escapeXml = (value: string) => value
 
 const toUrl = (pathname: string) => new URL(pathname || "/", SITE_ORIGIN).href;
 
+interface AlternateLink {
+    hreflang: string;
+    href: string;
+}
+
 interface SitemapItem {
     loc: string;
     lastmod: string;
+    alternates?: AlternateLink[];
 }
 
 export async function createSitemapXml() {
-    const today = new Date().toISOString().slice(0, 10);
     const items: SitemapItem[] = [];
 
-    // 1. Core pages across all 30 languages (16 * 30 = 480 URLs)
+    // 1. Core pages across all 30 languages (10 * 30 = 300 URLs) with bidirectional xhtml:link alternates
     for (const slug of CORE_PAGES) {
         const xDefaultUrl = toUrl(slug ? `/${slug}` : "/");
+
+        const alternates: AlternateLink[] = [
+            { hreflang: "x-default", href: xDefaultUrl },
+            ...langCodes.map((code) => ({
+                hreflang: code,
+                href: code === defaultLang
+                    ? xDefaultUrl
+                    : toUrl(slug ? `/${code}/${slug}` : `/${code}`),
+            })),
+        ];
 
         // Root English entry
         items.push({
             loc: xDefaultUrl,
-            lastmod: today,
+            lastmod: STATIC_RELEASE_DATE,
+            alternates,
         });
 
         // 29 Localized entries
@@ -63,21 +82,22 @@ export async function createSitemapXml() {
             const localizedPath = slug ? `/${lang}/${slug}` : `/${lang}`;
             items.push({
                 loc: toUrl(localizedPath),
-                lastmod: today,
+                lastmod: STATIC_RELEASE_DATE,
+                alternates,
             });
         }
     }
 
-    // 2. English-only pages (1 URL)
+    // 2. English-only canonical trust & legal pages (7 URLs)
     for (const slug of EN_ONLY_PAGES) {
         const url = toUrl(`/${slug}`);
         items.push({
             loc: url,
-            lastmod: today,
+            lastmod: STATIC_RELEASE_DATE,
         });
     }
 
-    // 3. Blog articles (39 URLs)
+    // 3. Blog articles
     const posts = await getCollection("blog");
     for (const post of posts) {
         const rawLang = (post.data.lang ? String(post.data.lang) : "").trim() || defaultLang;
@@ -90,7 +110,7 @@ export async function createSitemapXml() {
 
         const lastmod = post.data.pubDate instanceof Date && !isNaN(post.data.pubDate.getTime())
             ? post.data.pubDate.toISOString().slice(0, 10)
-            : today;
+            : STATIC_RELEASE_DATE;
 
         items.push({
             loc: url,
@@ -101,12 +121,18 @@ export async function createSitemapXml() {
     // Sort entries deterministically by URL
     items.sort((a, b) => a.loc.localeCompare(b.loc));
 
-    const xmlEntries = items.map((item) =>
-        `  <url>\n    <loc>${escapeXml(item.loc)}</loc>\n    <lastmod>${item.lastmod}</lastmod>\n  </url>`
-    ).join("\n");
+    const xmlEntries = items.map((item) => {
+        const altXml = item.alternates
+            ? "\n" + item.alternates.map((alt) =>
+                `    <xhtml:link rel="alternate" hreflang="${escapeXml(alt.hreflang)}" href="${escapeXml(alt.href)}" />`
+            ).join("\n")
+            : "";
+
+        return `  <url>\n    <loc>${escapeXml(item.loc)}</loc>\n    <lastmod>${item.lastmod}</lastmod>${altXml}\n  </url>`;
+    }).join("\n");
 
     return `<?xml version="1.0" encoding="UTF-8"?>\n` +
-        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
         `${xmlEntries}\n` +
         `</urlset>`;
 }
@@ -119,5 +145,3 @@ export async function sitemapResponse() {
         },
     });
 }
-
-

@@ -1,5 +1,6 @@
 ---
 import TextPage from "../components/TextPage.astro";
+import ContactForm from "../components/ContactForm.jsx";
 import { defaultLang } from "../i18n/ui";
 
 export const prerender = true;
@@ -12,20 +13,5 @@ const lang = defaultLang;
     contentKey="pages.contact.content"
     lang={lang}
 >
-    contact@savetik-fast.xyz
+    <ContactForm client:load />
 </TextPage>
-
-<style>
-    .contact-link-wrapper {
-        margin-top: 2rem;
-    }
-    .contact-email {
-        color: var(--primary);
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 1.1rem;
-    }
-    .contact-email:hover {
-        text-decoration: underline;
-    }
-</style>

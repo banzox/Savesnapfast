@@ -8,10 +8,19 @@ const loadJSZip = () => import('jszip');
 
 const WORKER_URL = "/api/tiktok";
 
+const resolveMediaUrl = (u) => {
+    if (!u || typeof u !== 'string') return '';
+    const trimmed = u.trim();
+    if (!trimmed) return '';
+    if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) return trimmed;
+    if (trimmed.startsWith('//')) return `https:${trimmed}`;
+    if (trimmed.startsWith('/')) return `https://www.tikwm.com${trimmed}`;
+    return trimmed;
+};
+
 export default function Downloader(props) {
     const { messages = {}, mode = 'video' } = props;
 
-    // دالة الترجمة مع دعم النصوص الافتراضية الذكية
     const t = (key, defaultText) => {
         const k = key.replace('downloader.', '');
         return messages[k] || defaultText;
@@ -25,12 +34,9 @@ export default function Downloader(props) {
     const [error, setError] = useState(null);
     const [result, setResult] = useState(null);
     const resultRef = useRef(null);
-    const [downloadPending, setDownloadPending] = useState(null);
-    const [countdown, setCountdown] = useState(0);
     const [downloadComplete, setDownloadComplete] = useState(false);
     const [copied, setCopied] = useState(false);
 
-    // التحقق من صحة رابط تيك توك
     const isTikTokUrl = (str) => {
         if (!str || typeof str !== 'string') return false;
         const clean = str.trim().toLowerCase();
@@ -44,7 +50,6 @@ export default function Downloader(props) {
 
     const isLinkValid = isTikTokUrl(url);
 
-    // --- دالة تنظيف وتسمية الملفات ---
     const sanitizeName = (name) => {
         if (!name) return 'TikTok_User';
         const cleaned = String(name)
@@ -98,10 +103,10 @@ export default function Downloader(props) {
         setCopied(false);
     };
 
-    // تنفيذ التنزيل الفعلي عبر البروكسي الداخلي
     const executeDownload = (fileUrl, fileName) => {
-        if (!fileUrl) return;
-        const downloadUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName)}`;
+        const resolved = resolveMediaUrl(fileUrl);
+        if (!resolved) return;
+        const downloadUrl = `/api/download?url=${encodeURIComponent(resolved)}&filename=${encodeURIComponent(fileName)}`;
         const link = document.createElement('a');
         link.href = downloadUrl;
         link.setAttribute('download', fileName);
@@ -116,25 +121,24 @@ export default function Downloader(props) {
         executeDownload(fileUrl, fileName);
     };
 
-    // التمرير السلس والذكي نحو النتائج
     const customSlowScroll = (targetId, duration = 900) => {
         const target = document.getElementById(targetId);
         if (!target) return;
 
         const rect = target.getBoundingClientRect();
         let targetPosition;
-        
+
         if (rect.height < window.innerHeight - 150) {
             targetPosition = rect.bottom + window.scrollY - window.innerHeight + 40;
         } else {
             targetPosition = rect.top + window.scrollY - 85;
         }
-        
+
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
         let startTime = null;
 
-        const easing = (t) => 1 - Math.pow(1 - t, 4);
+        const easing = (p) => 1 - Math.pow(1 - p, 4);
 
         const animation = (currentTime) => {
             if (startTime === null) startTime = currentTime;
@@ -162,14 +166,12 @@ export default function Downloader(props) {
         }
     }, [result]);
 
-    // إخفاء إشعار اكتمال التنزيل تلقائياً بعد 5 ثوانٍ
     useEffect(() => {
         if (!downloadComplete) return;
         const timer = setTimeout(() => setDownloadComplete(false), 5000);
         return () => clearTimeout(timer);
     }, [downloadComplete]);
 
-    // تنزيل جميع الصور كملف مضغوط ZIP مع شريط تقدم
     const downloadAllImages = async () => {
         if (!result || !result.images || result.images.length === 0) return;
 
@@ -187,7 +189,7 @@ export default function Downloader(props) {
             const imagePromises = result.images.map(async (imgUrl, index) => {
                 try {
                     const fileName = `slide_${index + 1}.jpg`;
-                    const proxyUrl = `/api/download?url=${encodeURIComponent(imgUrl)}&filename=${encodeURIComponent(fileName)}`;
+                    const proxyUrl = `/api/download?url=${encodeURIComponent(resolveMediaUrl(imgUrl))}&filename=${encodeURIComponent(fileName)}`;
                     const response = await fetch(proxyUrl);
                     if (!response.ok) throw new Error(`HTTP error ${response.status}`);
                     const blob = await response.blob();
@@ -197,7 +199,7 @@ export default function Downloader(props) {
                         setZipProgress(Math.round(10 + (fetchedCount / total) * 70));
                     }
                 } catch (e) {
-                    // تجاهل الأخطاء الفردية
+                    // ignore individual slide fetch error
                 }
             });
 
@@ -244,57 +246,76 @@ export default function Downloader(props) {
         setError(null);
         setResult(null);
 
-        const stageTimer1 = setTimeout(() => setLoadStage(2), 700);
-        const stageTimer2 = setTimeout(() => setLoadStage(3), 1400);
+        const stageTimer1 = setTimeout(() => setLoadStage(2), 650);
+        const stageTimer2 = setTimeout(() => setLoadStage(3), 1300);
 
         try {
             let res = null;
-            let rapidApiData = null;
+            let workerData = null;
 
-            // المستوى 1: طلب خادم الحافة (Edge Worker)
+            // Tier 1: Edge Worker API (fast cached multi-provider resolution)
             try {
-                const rapidRes = await fetch(WORKER_URL, {
+                const workerRes = await fetch(WORKER_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ url: cleanUrl })
                 });
-                if (rapidRes.ok) {
-                    const rData = await rapidRes.json();
-                    if (!rData.error && rData.author) {
-                        rapidApiData = rData;
+                if (workerRes.ok) {
+                    const rData = await workerRes.json();
+                    if (!rData.error && (rData.video || (rData.images && rData.images.length > 0))) {
+                        workerData = {
+                            ...rData,
+                            cover: resolveMediaUrl(rData.cover),
+                            video: resolveMediaUrl(rData.video),
+                            hdVideo: resolveMediaUrl(rData.hdVideo || rData.video),
+                            music: resolveMediaUrl(rData.music),
+                            images: Array.isArray(rData.images) ? rData.images.map(resolveMediaUrl).filter(Boolean) : []
+                        };
                     }
                 }
             } catch (e) {
                 console.warn("Worker fetch warning:", e);
             }
 
-            // المستوى 2: طلب TikWM المباشر
-            try {
-                const tmRes = await fetch(`https://tikwm.com/api/?url=${encodeURIComponent(cleanUrl)}`, {
-                    headers: { "Accept": "application/json" }
-                });
-                if (tmRes.ok) {
-                    const tmJson = await tmRes.json();
-                    if (tmJson.code === 0 && tmJson.data) {
-                        const v = tmJson.data;
-                        res = {
-                            provider: "tikwm_client",
-                            title: v.title || v.desc || "TikTok Video",
-                            author: v.author?.unique_id || v.author?.nickname || "User",
-                            cover: v.cover || v.origin_cover || "",
-                            video: v.play || v.wmplay || v.hdplay || "", 
-                            music: typeof v.music === 'string' ? v.music : (v.music?.play_url || v.music_info?.play || ""),
-                            images: Array.isArray(v.images) ? v.images : [],
-                            type: (v.images && v.images.length > 0) ? "image" : "video"
-                        };
+            const needsExtraLookup =
+                !workerData ||
+                (mode === 'mp3' && !workerData.music) ||
+                (mode === 'slideshow' && (!workerData.images || workerData.images.length === 0));
+
+            // Tier 2: Client-side TikWM fallback ONLY if Worker failed or missed mode-specific media
+            if (needsExtraLookup) {
+                try {
+                    const tmRes = await fetch(`https://www.tikwm.com/api/?url=${encodeURIComponent(cleanUrl)}&hd=1`, {
+                        headers: { "Accept": "application/json" }
+                    });
+                    if (tmRes.ok) {
+                        const tmJson = await tmRes.json();
+                        if (tmJson.code === 0 && tmJson.data) {
+                            const v = tmJson.data;
+                            const play = resolveMediaUrl(v.play || v.wmplay);
+                            const hdPlay = resolveMediaUrl(v.hdplay || play);
+                            res = {
+                                provider: "tikwm_client",
+                                title: v.title || v.desc || workerData?.title || "TikTok Video",
+                                author: v.author?.unique_id || v.author?.nickname || workerData?.author || "User",
+                                cover: resolveMediaUrl(v.origin_cover || v.cover) || workerData?.cover || "",
+                                video: play || hdPlay || workerData?.video || "",
+                                hdVideo: hdPlay || play || workerData?.hdVideo || "",
+                                music: resolveMediaUrl(typeof v.music === 'string' ? v.music : (v.music?.play_url || v.music_info?.play || "")) || workerData?.music || "",
+                                images: Array.isArray(v.images) ? v.images.map(resolveMediaUrl).filter(Boolean) : (workerData?.images || []),
+                                type: (v.images && v.images.length > 0) ? "image" : "video"
+                            };
+                        }
                     }
+                } catch (e) {
+                    console.warn("TikWM fetch warning:", e);
                 }
-            } catch (e) {
-                console.warn("TikWM fetch warning:", e);
+            } else {
+                res = workerData;
             }
 
-            // المستوى 3: طلب Zell API الاحتياطي
-            if (!res || !res.video) {
+            // Tier 3: Client-side Zell API fallback
+            if (!res || (!res.video && (!res.images || res.images.length === 0))) {
                 try {
                     const zellRes = await fetch(`https://apizell.web.id/download/tiktok?url=${encodeURIComponent(cleanUrl)}`, {
                         headers: { "Accept": "application/json" }
@@ -303,14 +324,17 @@ export default function Downloader(props) {
                         const zJson = await zellRes.json();
                         if (zJson.status && zJson.result) {
                             const r = zJson.result;
+                            const vid = Array.isArray(r.video) ? r.video[0] : (r.video?.url || r.video);
+                            const hdVid = Array.isArray(r.video) && r.video[1] ? r.video[1] : vid;
                             res = {
                                 provider: "zell_client",
-                                title: r.title || "TikTok Video",
-                                author: r.author?.nickname || r.author?.username || "User",
-                                cover: r.thumbnail || "",
-                                video: Array.isArray(r.video) ? r.video[0] : (r.video?.url || r.video),
-                                music: r.music?.url || r.music || "",
-                                images: Array.isArray(r.images) ? r.images : [],
+                                title: r.title || workerData?.title || "TikTok Video",
+                                author: r.author?.nickname || r.author?.username || workerData?.author || "User",
+                                cover: r.thumbnail || workerData?.cover || "",
+                                video: vid || workerData?.video || "",
+                                hdVideo: hdVid || vid || workerData?.hdVideo || "",
+                                music: (r.music?.url || r.music) || workerData?.music || "",
+                                images: Array.isArray(r.images) ? r.images : (workerData?.images || []),
                                 type: (r.images && r.images.length > 0) ? "image" : "video"
                             };
                         }
@@ -320,16 +344,11 @@ export default function Downloader(props) {
                 }
             }
 
-            if (res) {
-                if (rapidApiData) {
-                    res.author = rapidApiData.author || res.author;
-                    res.title = rapidApiData.title || res.title;
-                    if (!res.cover) res.cover = rapidApiData.cover;
-                    res.provider = `RapidAPI + ${res.provider}`;
-                }
-            } else if (rapidApiData && (rapidApiData.video || (rapidApiData.images && rapidApiData.images.length > 0))) {
-                res = rapidApiData;
-            } else {
+            if (!res && workerData) {
+                res = workerData;
+            }
+
+            if (!res || (!res.video && (!res.images || res.images.length === 0))) {
                 throw new Error(t('error_not_found', "Unable to fetch video links. Please ensure the video is public and try again."));
             }
 
@@ -351,8 +370,9 @@ export default function Downloader(props) {
         }
     };
 
-    const videoUrl = result?.video || result?.play || result?.url || result?.nowatermark;
-    const musicUrl = result?.music || result?.audio;
+    const videoUrl = resolveMediaUrl(result?.video || result?.play || result?.url || result?.nowatermark);
+    const hdVideoUrl = resolveMediaUrl(result?.hdVideo || videoUrl);
+    const musicUrl = resolveMediaUrl(result?.music || result?.audio);
     const images = result?.images && Array.isArray(result.images) && result.images.length > 0 ? result.images : null;
 
     const placeholderText = props.placeholder || t('placeholder', "Paste TikTok link here...");
@@ -360,7 +380,6 @@ export default function Downloader(props) {
     return (
         <div className="downloader-container">
             <div className="downloader-box">
-                {/* Inputs and Buttons */}
                 <div className="input-wrapper">
                     <input
                         type="url"
@@ -378,7 +397,6 @@ export default function Downloader(props) {
                     />
 
                     <div className="input-controls">
-                        {/* زر ذكي: لصق عند الفراغ، نسخ عند وجود نص */}
                         <button
                             type="button"
                             className={`action-btn ${url ? (copied ? 'copied-btn' : 'copy-btn') : 'paste-btn'}`}
@@ -390,7 +408,6 @@ export default function Downloader(props) {
                             <i className={`fas ${url ? (copied ? 'fa-check' : 'fa-copy') : 'fa-paste'}`}></i>
                         </button>
 
-                        {/* زر المسح - يظهر فقط عند وجود نص */}
                         {url && (
                             <button
                                 type="button"
@@ -406,7 +423,6 @@ export default function Downloader(props) {
                     </div>
                 </div>
 
-                {/* شارة التحقق الفوري من الرابط */}
                 {isLinkValid && !loading && !result && (
                     <div className="link-ready-badge">
                         <span className="pulse-dot"></span>
@@ -431,7 +447,6 @@ export default function Downloader(props) {
                     )}
                 </button>
 
-                {/* ─── Native Banner Promo (Visible below URL box) ─── */}
                 {ADS_CONFIG.enableAdsterra && (
                     <div id="main-sponsor-widget" style={{ width: '100%', overflow: 'hidden', minHeight: '250px', borderRadius: '14px', marginTop: '14px', transition: 'height 0.3s ease' }}>
                         <iframe 
@@ -464,7 +479,6 @@ export default function Downloader(props) {
             <div id="scroll-target" style={{ width: '100%', marginTop: '24px' }}>
                 <div id="result-area" role="region" aria-live="polite">
 
-                {/* ─── بطاقة التحميل المرحلية المتطورة ─── */}
                 {loading && (
                     <div className="skeleton-loading-card">
                         <div className="multi-stage-progress">
@@ -506,7 +520,6 @@ export default function Downloader(props) {
                     </div>
                 )}
                 
-                {/* ─── رسالة الخطأ العصرية ─── */}
                 {error && (
                     <div className="error-banner">
                         <div className="error-icon-wrapper">
@@ -526,14 +539,13 @@ export default function Downloader(props) {
                     </div>
                 )}
 
-                {/* ─── بطاقة النتيجة الفائقة الجودة (Result Card) ─── */}
                 {result && (
                     <div className="result-card">
                         <div className="result-header">
                             {result.cover && (!images || images.length === 0) && (
                                 <div className="result-preview-thumb">
                                     <img
-                                        src={result.cover}
+                                        src={resolveMediaUrl(result.cover)}
                                         alt={result.title || "TikTok preview"}
                                         loading="lazy"
                                         decoding="async"
@@ -581,7 +593,7 @@ export default function Downloader(props) {
                                         </button>
                                         <button 
                                             className="btn-download btn-hd" 
-                                            onClick={() => initiateDownload(videoUrl, generateProName(result.author + '_HD', 'mp4'))}
+                                            onClick={() => initiateDownload(hdVideoUrl || videoUrl, generateProName(result.author + '_HD', 'mp4'))}
                                         >
                                             <i className="fas fa-crown"></i>
                                             <span>{t('download_hd', "Download HD 1080p Ultra")}</span>
@@ -598,10 +610,10 @@ export default function Downloader(props) {
                                     </>
                                 )}
 
-                                {mode === 'mp3' && musicUrl && (
+                                {mode === 'mp3' && (musicUrl || videoUrl) && (
                                     <button 
                                         className="btn-download btn-audio" 
-                                        onClick={() => initiateDownload(musicUrl, generateProName(result.author, 'mp3'))}
+                                        onClick={() => initiateDownload(musicUrl || videoUrl, generateProName(result.author, musicUrl ? 'mp3' : 'mp4'))}
                                     >
                                         <i className="fas fa-music"></i>
                                         <span>{t('download_audio', "Download MP3 Audio (Original Sound)")}</span>
@@ -654,7 +666,6 @@ export default function Downloader(props) {
                                 )}
                             </div>
 
-                            {/* زر تنزيل فيديو آخر */}
                             <button
                                 onClick={() => { 
                                     setResult(null); 
@@ -671,7 +682,6 @@ export default function Downloader(props) {
                                 <span>{t('download_another', 'Download Another Video')}</span>
                             </button>
 
-                            {/* شبكة معرض الصور للسلايد شو */}
                             {(mode === 'slideshow' || (mode === 'video' && images)) && images && (
                                 <div className="slideshow-container">
                                     <div className="slideshow-header-info">
@@ -683,7 +693,7 @@ export default function Downloader(props) {
                                             <div key={index} className="slide-item">
                                                 <div className="slide-image-wrapper">
                                                     <img
-                                                        src={img}
+                                                        src={resolveMediaUrl(img)}
                                                         alt={`${t('slide_desc', 'TikTok Photo')} ${index + 1}`}
                                                         loading="lazy"
                                                         decoding="async"
@@ -710,7 +720,6 @@ export default function Downloader(props) {
                 </div>
             </div>
 
-            {/* ── Toast الإشعار عند بدء التحميل ── */}
             {downloadComplete && (
                 <div className="thank-you-toast">
                     <div className="toast-icon-badge">
@@ -738,4 +747,3 @@ export default function Downloader(props) {
         </div>
     );
 }
-

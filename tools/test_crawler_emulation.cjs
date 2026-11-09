@@ -325,6 +325,22 @@ async function simulateWorkerFetch(reqUrl, options = {}) {
     });
   }
 
+  // Retired /boost routes must return HTTP 410 Gone
+  const pathSegments = url.pathname.split('/').filter(Boolean);
+  if (
+    pathSegments[0] === 'boost' ||
+    (pathSegments.length === 2 && ALL_LANGUAGES.has(pathSegments[0]) && pathSegments[1] === 'boost')
+  ) {
+    return {
+      status: 410,
+      headers: {
+        'content-type': 'text/html; charset=utf-8',
+        'x-robots-tag': 'noindex, nofollow',
+      },
+      body: '<!doctype html><html><head><meta name="robots" content="noindex, nofollow"></head><body>410 Gone</body></html>',
+    };
+  }
+
   // Force true 404 status for explicit 404 paths
   const normalizedPath = url.pathname.replace(/\/+$/, '');
   if (normalizedPath === '/404' || url.pathname === '/404.html') {
@@ -809,6 +825,18 @@ async function runAudit() {
       fail('GET /sitemap.xml', 'sitemap.xml missing XML urlset/sitemapindex root element');
     } else {
       pass('GET /sitemap.xml content validity');
+    }
+  }
+
+  // 8.5 Retired /boost routes return HTTP 410 Gone with X-Robots-Tag: noindex, nofollow
+  for (const goneRoute of ['/boost', '/ar/boost', '/es/boost']) {
+    const res = await simulateWorkerFetch(`https://savetik-fast.xyz${goneRoute}`, {
+      headers: { 'User-Agent': USER_AGENTS.Googlebot },
+    });
+    if (res.status !== 410 || !String(res.headers['x-robots-tag']).includes('noindex')) {
+      fail(`410 Gone Check: ${goneRoute}`, `Expected 410 + noindex, got status=${res.status}`);
+    } else {
+      pass(`410 Gone Check: ${goneRoute}`);
     }
   }
 

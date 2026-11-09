@@ -1,144 +1,185 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-export default function ContactForm({ lang, messages }) {
-    const [status, setStatus] = useState('');
+export default function ContactForm({ messages = {} }) {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("Support Inquiry");
+    const [message, setMessage] = useState("");
+    const [status, setStatus] = useState("idle");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulating form submission
-        setStatus('submitting');
-        setTimeout(() => {
-            setStatus('success');
-        }, 1500);
+        const cleanSubject = encodeURIComponent(`[SaveTikFast] ${subject} - ${name}`);
+        const cleanBody = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        );
+        window.location.href = `mailto:support@savetik-fast.xyz?subject=${cleanSubject}&body=${cleanBody}`;
+        setStatus("success");
     };
 
     return (
         <div className="contact-form-container">
-            {status === 'success' ? (
-                <div className="success-message">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <p>{messages.success || "Message sent successfully!"}</p>
+            <h3>{messages.formTitle || "Send a Direct Message"}</h3>
+            {status === "success" ? (
+                <div className="success-message" role="status">
+                    <p>
+                        {messages.success ||
+                            "Your email client has been opened with your message addressed to support@savetik-fast.xyz."}
+                    </p>
+                    <button
+                        type="button"
+                        className="reset-btn"
+                        onClick={() => setStatus("idle")}
+                    >
+                        {messages.sendAnother || "Write Another Message"}
+                    </button>
                 </div>
             ) : (
                 <form onSubmit={handleSubmit} className="contact-form">
-                    <div className="form-group">
-                        <label htmlFor="name">{messages.name || "Name"}</label>
-                        <input type="text" id="name" name="name" required className="form-input" placeholder={messages.name} />
+                    <div className="form-row">
+                        <div className="form-group">
+                            <label htmlFor="contact-name">{messages.name || "Name"}</label>
+                            <input
+                                type="text"
+                                id="contact-name"
+                                name="name"
+                                required
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                className="form-input"
+                                placeholder={messages.name || "Your Name"}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="contact-email">{messages.email || "Email"}</label>
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                required
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="form-input"
+                                placeholder="you@example.com"
+                            />
+                        </div>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="email">{messages.email || "Email"}</label>
-                        <input type="email" id="email" name="email" required className="form-input" placeholder={messages.email} />
+                        <label htmlFor="contact-subject">{messages.subject || "Category"}</label>
+                        <select
+                            id="contact-subject"
+                            value={subject}
+                            onChange={(e) => setSubject(e.target.value)}
+                            className="form-input"
+                        >
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="DMCA / Copyright Notice">DMCA / Copyright Notice</option>
+                            <option value="Business & Advertising">Business &amp; Advertising</option>
+                        </select>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="message">{messages.message || "Message"}</label>
-                        <textarea id="message" name="message" required rows="5" className="form-input" placeholder={messages.message}></textarea>
+                        <label htmlFor="contact-message">{messages.message || "Message"}</label>
+                        <textarea
+                            id="contact-message"
+                            name="message"
+                            required
+                            rows="5"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            className="form-input"
+                            placeholder={messages.placeholder || "How can we help you?"}
+                        ></textarea>
                     </div>
 
-                    <button type="submit" className={`submit-btn ${status === 'submitting' ? 'loading' : ''}`} disabled={status === 'submitting'}>
-                        {status === 'submitting' ? (
-                            <span className="loader"></span>
-                        ) : (
-                            messages.submit || "Send Message"
-                        )}
+                    <button type="submit" className="submit-btn">
+                        {messages.submit || "Compose Email to Support"}
                     </button>
 
                     <p className="fallback-email">
-                        Or email us directly at <a href="mailto:contact@savetik-fast.xyz">contact@savetik-fast.xyz</a>
+                        Direct Support Email:{" "}
+                        <a href="mailto:support@savetik-fast.xyz">support@savetik-fast.xyz</a>
                     </p>
                 </form>
             )}
 
             <style>{`
                 .contact-form-container {
-                    max-width: 600px;
-                    margin: 2rem auto;
-                    background: var(--surface);
-                    padding: 2rem;
-                    border-radius: 8px;
+                    margin: 2.5rem 0 0.5rem;
+                    background: rgba(255, 255, 255, 0.03);
+                    padding: 1.75rem;
+                    border-radius: 16px;
                     border: 1px solid var(--border);
-                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                }
+                [data-theme="light"] .contact-form-container {
+                    background: #f8fafc;
+                }
+                .contact-form-container h3 {
+                    margin: 0 0 1.25rem;
+                    font-size: 1.3rem;
+                    color: var(--text-main);
+                }
+                .form-row {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                    gap: 1rem;
                 }
                 .form-group {
-                    margin-bottom: 1.5rem;
+                    margin-bottom: 1.15rem;
                 }
                 .form-group label {
                     display: block;
-                    margin-bottom: 0.5rem;
-                    font-weight: 500;
+                    margin-bottom: 0.45rem;
+                    font-weight: 600;
+                    font-size: 0.92rem;
                     color: var(--text-main);
                 }
                 .form-input {
                     width: 100%;
-                    padding: 0.75rem;
-                    border-radius: 0.5rem;
+                    padding: 0.75rem 0.9rem;
+                    border-radius: 10px;
                     border: 1px solid var(--border);
-                    background: var(--bg-main);
+                    background: var(--bg);
                     color: var(--text-main);
-                    font-size: 1rem;
-                    transition: all 0.2s;
+                    font-size: 0.98rem;
+                    font-family: inherit;
                 }
                 .form-input:focus {
                     outline: none;
-                    border-color: var(--primary);
-                    box-shadow: 0 0 0 3px var(--primary-light);
+                    border-color: var(--secondary);
                 }
-                .submit-btn {
+                .submit-btn, .reset-btn {
                     width: 100%;
-                    padding: 1rem;
-                    background: var(--primary);
-                    color: white;
+                    padding: 0.9rem 1.25rem;
+                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                    color: #ffffff;
                     border: none;
-                    border-radius: 0.5rem;
-                    font-weight: 600;
+                    border-radius: 10px;
+                    font-weight: 700;
                     font-size: 1rem;
                     cursor: pointer;
-                    transition: opacity 0.2s;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    transition: transform 0.2s ease, opacity 0.2s ease;
                 }
-                .submit-btn:hover {
-                    opacity: 0.9;
-                }
-                .submit-btn:disabled {
-                    opacity: 0.7;
-                    cursor: not-allowed;
+                .submit-btn:hover, .reset-btn:hover {
+                    opacity: 0.94;
+                    transform: translateY(-1px);
                 }
                 .success-message {
                     text-align: center;
-                    color: #10B981;
-                    padding: 2rem;
-                }
-                .icon {
-                    width: 3rem;
-                    height: 3rem;
-                    margin: 0 auto 1rem;
+                    padding: 1.25rem;
+                    border-radius: 12px;
+                    background: rgba(16, 185, 129, 0.1);
+                    border: 1px solid rgba(16, 185, 129, 0.3);
                 }
                 .fallback-email {
-                    margin-top: 1.5rem;
+                    margin-top: 1.1rem;
+                    margin-bottom: 0 !important;
                     text-align: center;
-                    font-size: 0.9rem;
-                    color: var(--text-secondary);
-                }
-                .fallback-email a {
-                    color: var(--primary);
-                    text-decoration: none;
-                }
-                .loader {
-                    border: 2px solid #f3f3f3;
-                    border-top: 2px solid white;
-                    border-radius: 4px;
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    animation: spin 1s linear infinite;
-                }
-                @keyframes spin {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(360deg); }
+                    font-size: 0.92rem;
+                    color: var(--text-dim);
                 }
             `}</style>
         </div>

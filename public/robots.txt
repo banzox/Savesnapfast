@@ -2,13 +2,10 @@ User-agent: *
 Allow: /
 Allow: /_astro/
 
-# These endpoints are not content pages and should not consume crawl budget.
+# API and internal administrative endpoints should not consume crawl budget.
 Disallow: /api/
 Disallow: /admin/
 Disallow: /admin
-# Query-string variants stay crawlable so Google can see the page's canonical
-# URL and consolidate them instead of reporting them as blocked URLs.
 
-# Sitemaps:
+# Canonical XML Sitemap
 Sitemap: https://savetik-fast.xyz/sitemap.xml
-Sitemap: https://savetik-fast.xyz/sitemap-0.xml

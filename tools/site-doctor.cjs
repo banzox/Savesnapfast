@@ -273,7 +273,7 @@ function checkNoindex() {
   const pagesToCheck = [
     'index.html', 'mp3.html', 'about.html', 'privacy.html',
     'ios.html', 'android.html', 'mac.html', 'pc.html',
-    'ar/ios.html', 'es/android.html', 'ar/about.html', 'fr/privacy.html'
+    'ar/ios.html', 'es/android.html', 'ar/tools.html', 'ar/blog.html'
   ];
 
   pagesToCheck.forEach(file => {
@@ -945,6 +945,99 @@ function checkTranslatedLegalCanonicals() {
   });
 }
 
+
+// ═════════════════════════════════════════════════════════════════════════════
+//  CHECK 13: Monetization Compliance & Unique Indexable Metadata
+// ═════════════════════════════════════════════════════════════════════════════
+function checkMonetizationAndDuplicates() {
+  sectionHeader('13. Monetization Compliance & Metadata Uniqueness');
+
+  const headersFile = readFileIfExists(path.join(PUBLIC_DIR, '_headers'));
+  if (headersFile) {
+    if (headersFile.includes('script-src') && headersFile.includes('https:')) {
+      addResult('monetization', 'PASS', 'public/_headers CSP permits Google AdSense / Ad Traffic Quality scripts ✓');
+    } else {
+      addResult('monetization', 'ERROR', 'public/_headers CSP blocks Google AdSense dynamic ad domains');
+    }
+  }
+
+  const adsTxt = readFileIfExists(path.join(PUBLIC_DIR, 'ads.txt'));
+  if (adsTxt && adsTxt.includes('pub-2779375554237684')) {
+    addResult('monetization', 'PASS', 'public/ads.txt verified with publisher ID ✓');
+  } else {
+    addResult('monetization', 'ERROR', 'public/ads.txt missing or invalid publisher ID');
+  }
+
+  if (!fs.existsSync(DIST_DIR)) return;
+
+  // Check 404 & localized legal pages do NOT load AdSense script
+  const html404 = readFileIfExists(path.join(DIST_DIR, '404.html'));
+  if (html404 && !html404.includes('adsbygoogle.js')) {
+    addResult('monetization', 'PASS', '404.html does not load adsbygoogle.js (Policy compliant) ✓');
+  } else if (html404) {
+    addResult('monetization', 'ERROR', '404.html loads adsbygoogle.js (AdSense Policy Violation!)');
+  }
+
+  const arAbout = readFileIfExists(path.join(DIST_DIR, 'ar/about.html'));
+  if (arAbout && arAbout.includes('content="noindex, follow"') && !arAbout.includes('hreflang=')) {
+    addResult('monetization', 'PASS', 'Localized legal boilerplate (ar/about.html) is noindex, follow with no conflicting hreflang ✓');
+  } else if (arAbout) {
+    addResult('monetization', 'ERROR', 'Localized legal boilerplate (ar/about.html) should be noindex, follow without hreflang');
+  }
+
+  // Scan all indexable HTML files in dist/ for duplicate <title> or <meta name="description">
+  function walkHtml(dir, list = []) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walkHtml(full, list);
+      else if (entry.name.endsWith('.html')) list.push(full);
+    }
+    return list;
+  }
+
+  const allHtml = walkHtml(DIST_DIR);
+  const titles = new Map();
+  const descs = new Map();
+  let dupTitles = 0;
+  let dupDescs = 0;
+  let indexableCount = 0;
+
+  for (const file of allHtml) {
+    const html = fs.readFileSync(file, 'utf8');
+    const robots = (html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']+)["']/i) || [])[1] || '';
+    if (robots.includes('noindex')) continue;
+    indexableCount++;
+
+    const rel = path.relative(DIST_DIR, file).replace(/\\/g, '/');
+    const title = (html.match(/<title>([^<]+)<\/title>/i) || [])[1]?.trim();
+    const desc = (html.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i) || [])[1]?.trim();
+
+    if (title) {
+      if (titles.has(title)) {
+        dupTitles++;
+        if (dupTitles <= 5) addResult('seo-uniqueness', 'ERROR', `Duplicate <title> on ${rel} and ${titles.get(title)}: "${title}"`);
+      } else {
+        titles.set(title, rel);
+      }
+    }
+    if (desc) {
+      if (descs.has(desc)) {
+        dupDescs++;
+        if (dupDescs <= 5) addResult('seo-uniqueness', 'ERROR', `Duplicate description on ${rel} and ${descs.get(desc)}`);
+      } else {
+        descs.set(desc, rel);
+      }
+    }
+  }
+
+  if (dupTitles === 0) {
+    addResult('seo-uniqueness', 'PASS', `Zero duplicate <title> tags across all ${indexableCount} indexable HTML pages ✓`);
+  }
+  if (dupDescs === 0) {
+    addResult('seo-uniqueness', 'PASS', `Zero duplicate <meta name="description"> tags across all ${indexableCount} indexable HTML pages ✓`);
+  }
+}
+
 // ═════════════════════════════════════════════════════════════════════════════
 //  MAIN EXECUTION
 // ═════════════════════════════════════════════════════════════════════════════
@@ -972,6 +1065,7 @@ function main() {
   checkSourceCode();
   checkPageParity();
   checkTranslatedLegalCanonicals();
+  checkMonetizationAndDuplicates();
 
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);
 

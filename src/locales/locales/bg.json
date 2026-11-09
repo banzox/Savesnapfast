@@ -23,7 +23,7 @@
     "tools": "Инструменти"
   },
   "hero": {
-    "title": "TikTok Video Downloader",
+    "title": "Изтегляне на TikTok видео",
     "desc": "Изтеглете TikTok видеоклипове без воден знак. Бързо, безплатно и неограничено HD качество."
   },
   "downloader": {
@@ -83,27 +83,27 @@
   "pages": {
     "about": {
       "title": "За нас",
-      "content": "Добре дошли в SaveTikFast, водещият TikTok Downloader за 2026 г.<br/><br/>Създадохме SaveTikFast с една цел: да осигурим най-бързото, най-висококачественото и най-надеждното изтегляне от TikTok в интернет без досадни водни знаци.<br/><br/>Нашият екип от разработчици забеляза, че повечето програми за изтегляне на TikTok са бавни, пълни с изскачащи прозорци или влошават качеството на видеото. Решихме да променим това. SaveTikFast обработва видеоклипове за милисекунди, като извлича директните връзки към CDN, за да ви даде точния оригинален файл в пълно Ultra HD качество.<br/><br/>Независимо дали трябва да запазите вирусен танц, урок по готвене, слайдшоу с множество изображения или да извлечете MP3 аудио за мелодия, SaveTikFast се справя с всичко безпроблемно на всички устройства."
+      "content": "SaveTikFast е независима уеб платформа за бързо и сигурно запазване на публични TikTok видеа без воден знак, извличане на MP3 аудио и изтегляне на фото слайдшоута.\n\nНашата мисия\nПредоставяме бърза, безплатна и удобна услуга директно в браузъра ви — без инсталиране на приложения и без регистрация.\n\nКонтакт\nЗа въпроси и обратна връзка пишете на support@savetik-fast.xyz."
     },
     "contact": {
       "title": "Свържете се с нас",
-      "content": "We value your feedback and are here to help.\n\nIf you encounter any technical issues, have suggestions for improvement, or have business inquiries, please reach out to our support team:\n\n📧 Email: support@savetik-fast.xyz\n\nWe aim to respond to all inquiries within 24 hours."
+      "content": "Свържете се с екипа на SaveTikFast при технически въпроси, предложения или сигнали за авторски права.\n\nИмейл за поддръжка\nsupport@savetik-fast.xyz\n\nВреме за отговор\nОтговаряме на всички запитвания в рамките на 24 часа в работни дни."
     },
     "terms": {
       "title": "Условия за ползване",
-      "content": "By using SaveTikFast, you agree to the following terms:\n\n1. Personal Use Only:\nOur service is intended for personal, non-commercial use. You may download videos for offline viewing and archiving purposes.\n\n2. Intellectual Property:\nWe do not own the content downloaded via our tool. All rights belong to the original creators on TikTok. You agree not to use the content in any way that infringes on copyright laws.\n\n3. Liability:\nSaveTikFast is not responsible for how you use the downloaded material. The user bears full responsibility for any copyright infringement or misuse.\n\n4. Changes:\nWe reserve the right to modify or discontinue services at any time."
+      "content": "Използвайки SaveTikFast (savetik-fast.xyz), вие се съгласявате със следните условия:\n\n1. Лична употреба\nУслугата е предназначена само за лично, некомерсиално архивиране на публично достъпно съдържание.\n\n2. Авторски права\nВсички видеа, аудио записи и изображения принадлежат на техните оригинални създатели. Потребителите носят отговорност за спазването на авторските права.\n\n3. Липса на хостинг\nSaveTikFast не съхранява и не хоства видео файлове на своите сървъри."
     },
     "privacy": {
       "title": "Политика за поверителност",
-      "content": "Your privacy is critical to us.\n\nData Collection:\nWe do not collect personal information like names, emails, or phone numbers. We may use anonymous analytics (like cookies) to improve site performance and user experience.\n\nNo Video Storage:\nSaveTikFast does not host or store any videos on its servers. All file processing is done instantly, and no history of your downloads is maintained.\n\nSecurity:\nOur website uses SSL encryption to ensure a secure connection while you browse and download."
+      "content": "Вашата поверителност е наш основен приоритет в SaveTikFast.\n\nСъбиране на данни\nНие не изискваме регистрация и не съхраняваме история на вашите изтегляния. Линковете се обработват временно в реално време.\n\nБисквитки и реклами\nИзползваме Google Analytics за анонимна статистика и Google AdSense за показване на реклами. Можете да управлявате рекламните настройки чрез Google Ads Settings.\n\nКонтакт\nsupport@savetik-fast.xyz"
     },
     "dmca": {
       "title": "Политика на DMCA",
-      "content": "SaveTikFast respects the intellectual property rights of others.\n\nWe operate as a technical service provider and do not host copyrighted content. All videos are served directly from third-party servers (TikTok).\n\nIf you believe that your copyrighted work has been displayed on our service without authorization, please send a formal DMCA notice to:\n\nEmail: support@savetik-fast.xyz\n\nPlease include the URL of the infringing content and proof of ownership. We will take immediate action to remove access to the content in question."
+      "content": "SaveTikFast зачита правата върху интелектуалната собственост и спазва изискванията на DMCA.\n\nНие не хостваме медийни файлове на нашите сървъри. Ако сте носител на авторски права и желаете блокиране на конкретен публичен URL адрес, изпратете официално уведомление с детайли до support@savetik-fast.xyz."
     },
     "disclaimer": {
       "title": "Отказ от отговорност",
-      "content": "1. Non-Affiliation:\nSaveTikFast is an independent utility tool and is NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with TikTok Inc., ByteDance Ltd., or any of their subsidiaries.\n\n2. Trademarks:\nThe names 'TikTok' and its logos are registered trademarks of their respective owners. We use them solely for identification and descriptive purposes.\n\n3. Content Responsibility:\nWe do not have control over the content hosted on TikTok servers and assume no liability for the videos downloaded by users."
+      "content": "1. Независима услуга\nSaveTikFast е независим уеб инструмент и НЕ е свързан, одобрен или асоцииран с TikTok Inc. или ByteDance Ltd.\n\n2. Отговорност на потребителя\nПотребителите носят пълна отговорност за законното използване на изтеглените материали съгласно приложимото законодателство."
     }
   },
   "footer": {

@@ -14,14 +14,69 @@ interface Props {
     lang?: string;
     keywords?: string;
     noindex?: boolean;
+    pageType?: "tool" | "article" | "page";
+    articleData?: {
+        headline: string;
+        description: string;
+        image?: string;
+        datePublished: string;
+        dateModified?: string;
+        authorName: string;
+    };
 }
 
-const { title, description, lang = "en", keywords, noindex = false } = Astro.props;
-const currentPageURL = new URL(Astro.url.pathname.replace(/\.html$/, ""), "https://savetik-fast.xyz").href;
+const {
+    title,
+    description,
+    lang = "en",
+    noindex = false,
+    pageType = "tool",
+    articleData,
+} = Astro.props;
+
+const cleanPathname = Astro.url.pathname.replace(/\.html$/, "");
+const normalizedPathname = cleanPathname.length > 1 && cleanPathname.endsWith("/")
+    ? cleanPathname.slice(0, -1)
+    : cleanPathname;
+const currentPageURL = new URL(normalizedPathname || "/", "https://savetik-fast.xyz").href;
 const is404 = noindex || Astro.url.pathname.includes("404");
 const robotsContent = is404
-    ? "noindex, follow" 
+    ? "noindex, follow"
     : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+
+const OG_LOCALE_MAP: Record<string, string> = {
+    en: "en_US",
+    ar: "ar_SA",
+    es: "es_ES",
+    pt: "pt_BR",
+    id: "id_ID",
+    fr: "fr_FR",
+    de: "de_DE",
+    it: "it_IT",
+    tr: "tr_TR",
+    ru: "ru_RU",
+    vi: "vi_VN",
+    th: "th_TH",
+    ja: "ja_JP",
+    ko: "ko_KR",
+    pl: "pl_PL",
+    nl: "nl_NL",
+    ro: "ro_RO",
+    ms: "ms_MY",
+    fil: "fil_PH",
+    uk: "uk_UA",
+    cs: "cs_CZ",
+    sv: "sv_SE",
+    hu: "hu_HU",
+    el: "el_GR",
+    da: "da_DK",
+    fi: "fi_FI",
+    no: "nb_NO",
+    bg: "bg_BG",
+    zh: "zh_CN",
+    hi: "hi_IN",
+};
+const ogLocale = OG_LOCALE_MAP[lang] || "en_US";
 ---
 
 <!doctype html>
@@ -29,24 +84,20 @@ const robotsContent = is404
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content={description} />
-        {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- AdSense account connection: this does not create an ad placement. -->
-        <script
-            async
-            is:inline
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2779375554237684"
-            crossorigin="anonymous"
-        ></script>
-
-
-
-
+        {/* AdSense strictly loaded ONLY on indexable publisher-content pages (never on 404/noindex or legal policy pages) */}
+        {!is404 && pageType !== "page" && ADS_CONFIG.enableAdSense && (
+            <script
+                async
+                is:inline
+                src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_CONFIG.adsenseClient}`}
+                crossorigin="anonymous"
+            ></script>
+        )}
 
         <!-- Google Analytics - Deferred loading for better FCP -->
         <script is:inline>
-            // Defer GA loading until after page becomes interactive
             window.addEventListener('load', function() {
                 setTimeout(function() {
                     var gs = document.createElement('script');
@@ -61,7 +112,6 @@ const robotsContent = is404
                 }, 100);
             });
 
-            // تسجيل الصفحات بدقة مع انتقالات Astro (ViewTransitions)
             document.addEventListener('astro:page-load', () => {
                 if (window.gtag) {
                     window.gtag('config', 'G-MK86W8GK18', { page_path: window.location.pathname });
@@ -103,7 +153,6 @@ const robotsContent = is404
                 max-width: 48rem;
                 margin: 0 auto;
             }
-            /* Font Display Optimization - Override FA fonts */
             @font-face {
                 font-display: swap !important;
             }
@@ -114,11 +163,12 @@ const robotsContent = is404
         <title>{title}</title>
         <ClientRouter />
 
-        <!-- Preconnect hints for critical resources only -->
+        <!-- Preconnect hints for critical resources -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+        {!is404 && <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />}
 
         <!-- Google Fonts - Asynchronously loaded with display=swap -->
         <link
@@ -156,7 +206,6 @@ const robotsContent = is404
             crossorigin
             onload="this.onload=null;this.rel='stylesheet'"
         />
-        <!-- Override Font Awesome font-display to swap -->
         <style is:inline>
             @font-face {
                 font-family: 'Font Awesome 6 Free';
@@ -184,7 +233,7 @@ const robotsContent = is404
 
         <SEOConfig noindex={is404} />
 
-        <Schema lang={lang} noindex={is404} />
+        <Schema lang={lang} noindex={is404} pageType={pageType} articleData={articleData} />
         <SEOHead lang={lang} />
 
         <meta name="robots" content={robotsContent} />
@@ -195,31 +244,16 @@ const robotsContent = is404
         <meta name="rating" content="general" />
 
         <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={pageType === "article" ? "article" : "website"} />
         <meta property="og:url" content={currentPageURL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
             property="og:image"
-            content="https://savetik-fast.xyz/og-image.png"
+            content={articleData?.image ? new URL(articleData.image, "https://savetik-fast.xyz").href : "https://savetik-fast.xyz/og-image.png"}
         />
         <meta property="og:site_name" content="SaveTikFast" />
-        <meta property="og:locale" content={
-            lang === "en" ? "en_US" :
-            lang === "ar" ? "ar_SA" :
-            lang === "zh" ? "zh_CN" :
-            lang === "fil" ? "fil_PH" :
-            lang === "uk" ? "uk_UA" :
-            lang === "vi" ? "vi_VN" :
-            lang === "hi" ? "hi_IN" :
-            lang === "ko" ? "ko_KR" :
-            lang === "ja" ? "ja_JP" :
-            lang === "th" ? "th_TH" :
-            lang === "pt" ? "pt_BR" :
-            lang === "ms" ? "ms_MY" :
-            lang === "id" ? "id_ID" :
-            `${lang}_${lang.toUpperCase()}`
-        } />
+        <meta property="og:locale" content={ogLocale} />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
@@ -228,15 +262,12 @@ const robotsContent = is404
         <meta name="twitter:description" content={description} />
         <meta
             name="twitter:image"
-            content="https://savetik-fast.xyz/og-image.png"
+            content={articleData?.image ? new URL(articleData.image, "https://savetik-fast.xyz").href : "https://savetik-fast.xyz/og-image.png"}
         />
 
         <link rel="manifest" href="/manifest.json" />
 
         <script is:inline>
-            // ===============================================
-            // UNIFIED THEME SYSTEM - Persistent across pages
-            // ===============================================
             (function () {
                 const THEME_KEY = "theme";
 
@@ -273,16 +304,13 @@ const robotsContent = is404
                             localStorage.setItem(THEME_KEY, theme);
                         } catch {}
                     }
-                    // Dispatch custom event for icon updates
                     window.dispatchEvent(
                         new CustomEvent("theme-changed", { detail: { theme } }),
                     );
                 }
 
-                // Apply immediately on first load
                 applyTheme(getTheme());
 
-                // Expose globally for Navbar toggle
                 window.__theme = {
                     getTheme,
                     applyTheme,
@@ -294,12 +322,10 @@ const robotsContent = is404
                     },
                 };
 
-                // Re-apply on View Transitions swap
                 document.addEventListener("astro:after-swap", () => {
                     applyTheme(getTheme(), false);
                 });
 
-                // Also handle before swap to prevent flash
                 document.addEventListener("astro:before-swap", (e) => {
                     const theme = getTheme();
                     if (theme === "light") {
@@ -313,7 +339,6 @@ const robotsContent = is404
         </script>
     </head>
     <body>
-        <!-- Cosmic Celestial Starry Sky Background -->
         <div class="stars-bg-container" aria-hidden="true">
             <div class="stars-layer stars-1"></div>
             <div class="stars-layer stars-2"></div>
@@ -328,16 +353,15 @@ const robotsContent = is404
 
         <Footer lang={lang} />
 
-        <!-- PART 3: Bulletproof Toggle Script -->
         <script is:inline>
             document.addEventListener("DOMContentLoaded", () => {
                 const btn = document.getElementById("menu-btn");
-                const sidebar = document.querySelector(".nav-links"); // Using class from Navbar
+                const sidebar = document.querySelector(".nav-links");
                 const overlay = document.getElementById("nav-overlay");
 
                 if (btn && sidebar) {
                     btn.addEventListener("click", (e) => {
-                        e.stopPropagation(); // Stop bubbling
+                        e.stopPropagation();
                         sidebar.classList.toggle("active");
                         btn.classList.toggle("active");
                         if (overlay) overlay.classList.toggle("active");
@@ -347,7 +371,6 @@ const robotsContent = is404
                                 : "";
                     });
 
-                    // Close on overlay click
                     if (overlay) {
                         overlay.addEventListener("click", () => {
                             sidebar.classList.remove("active");
@@ -359,7 +382,6 @@ const robotsContent = is404
                 }
             });
         </script>
-            <!-- Scroll to Top Button -->
         <button id="scrollToTop" aria-label="Scroll to top" title="Scroll to top">
             <i class="fas fa-arrow-up"></i>
         </button>
@@ -389,6 +411,5 @@ const robotsContent = is404
                 document.addEventListener('astro:page-load', initScrollToTop);
             })();
         </script>
-
     </body>
 </html>

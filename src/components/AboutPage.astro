@@ -1,13 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const { lang = "en" } = Astro.props;
+const { lang = "en", noindex = false } = Astro.props;
 ---
 
 <Layout
-    title="About SaveTikFast"
-    description="Learn how SaveTikFast works, our editorial focus, and our commitment to privacy and respectful use of public content."
+    title="About SaveTikFast – Independent TikTok Media Utility & Guides"
+    description="Learn how SaveTikFast works, our editorial standards, privacy architecture, and our commitment to respectful use of public TikTok content."
     lang={lang}
+    noindex={noindex}
+    pageType="page"
 >
     <section class="page-header">
         <div class="container"><h1>About SaveTikFast</h1></div>
@@ -15,34 +17,35 @@ const { lang = "en" } = Astro.props;
 
     <main class="content-section">
         <article class="text-content">
-            <p class="intro">SaveTikFast is an independent web utility and learning resource for people who want to organise references from public TikTok links. We build practical guides for creators and everyday users alongside tools that run in the browser.</p>
+            <p class="intro">SaveTikFast is an independent browser utility and educational resource built for creators, editors, and everyday users who want to organize references from public TikTok links cleanly and securely.</p>
 
             <h2>What we do</h2>
-            <p>Our service processes a public link supplied by a visitor and returns available formats for that request. We do not ask visitors to create an account to use the core tool. The format and quality available for a link can depend on the source material, the device, and changes made by the original platform.</p>
+            <p>Our service processes a public link supplied by a visitor and returns the available media streams (MP4 video, MP3 audio, or carousel images) for that request. Visitors never need to create an account, install browser extensions, or share social login credentials to use our tools. Available formats and resolutions depend on the original public post and platform delivery.</p>
+
+            <h2>Creator utilities &amp; browser-side privacy</h2>
+            <p>Alongside link processing, SaveTikFast offers a suite of client-side creator utilities — including image compression, format conversion (WebP, PNG, JPG), QR code generation, engagement diagnostics, and caption formatting — that execute locally inside your web browser without uploading personal files to remote storage.</p>
 
             <h2>Respect for creators and rights holders</h2>
-            <p>SaveTikFast is designed for material a visitor owns or is authorised to save. A public link does not itself grant permission to copy, republish, sell, or use someone else’s work commercially. Visitors are responsible for checking the creator’s permission, the platform rules, and the law that applies where they live.</p>
-            <p>We do not claim ownership of third-party videos, audio, images, trademarks, or accounts. We also provide a <a href="/dmca">DMCA process</a> for rights holders who need to report a concern.</p>
+            <p>SaveTikFast is intended for personal offline viewing, accessibility, research, and content that a visitor owns or has explicit permission to archive. A public URL does not automatically grant commercial redistribution rights. Visitors are responsible for respecting creator permissions, platform terms, and applicable copyright law.</p>
+            <p>We do not host or archive third-party videos, audio tracks, or user profiles on our servers, and we maintain a dedicated <a href="/dmca">DMCA Takedown Policy</a> for copyright owners.</p>
 
-            <h2>Privacy and security</h2>
-            <p>We aim to collect only the information needed to operate and protect the service. A link entered into the tool is processed for the requested action; it is not a public post or a user profile. Our <a href="/privacy">Privacy Policy</a> explains the information we process, the third-party services we use, and the choices available to visitors.</p>
-
-            <h2>Our editorial approach</h2>
-            <p>Our articles focus on practical topics such as creator permissions, content planning, accessibility, and responsible digital workflows. Each article is intended to answer a specific question with clear steps, examples, and limitations. We correct or retire information that is no longer useful, and we avoid presenting opinions, estimates, or platform features as guarantees.</p>
+            <h2>Privacy, security &amp; sustainable operation</h2>
+            <p>SaveTikFast runs over encrypted HTTPS edge infrastructure powered by Cloudflare Workers. Links submitted into the downloader are processed transiently in memory to fulfill your request. To keep SaveTikFast free for everyone worldwide without paywalls or subscriptions, indexable tool and guide pages are supported by clearly separated display advertising governed by our <a href="/privacy">Privacy Policy</a> and <a href="/editorial-policy">Editorial Policy</a>.</p>
 
             <h2>Contact and feedback</h2>
-            <p>Questions, correction requests, and product feedback are welcome at <a href="mailto:support@savetik-fast.xyz">support@savetik-fast.xyz</a>. For copyright notices, please include the relevant public URL and a description of the rights you hold so that we can review the request efficiently.</p>
+            <p>Questions, bug reports, correction requests, and rights-holder inquiries are welcome via our <a href="/contact">Contact page</a> or directly by email at <a href="mailto:support@savetik-fast.xyz">support@savetik-fast.xyz</a>. We review all support messages within 24 hours and prioritize copyright notices within 12 hours.</p>
         </article>
     </main>
 </Layout>
 
 <style>
-    .page-header { background: var(--surface); padding: 4rem 0; text-align: center; border-bottom: 1px solid var(--border); }
-    .page-header h1 { font-size: 2.5rem; font-weight: 800; margin: 0; }
-    .content-section { padding: 4rem 20px; }
-    .text-content { max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; color: var(--text-main); }
-    .intro { font-size: 1.2rem; color: var(--text-dim); }
-    h2 { font-size: 1.7rem; margin: 2.4rem 0 1rem; color: var(--secondary); }
-    p { margin: 0 0 1.35rem; }
+    .page-header { background: var(--surface); padding: 3.5rem 1.25rem; text-align: center; border-bottom: 1px solid var(--border); }
+    .page-header h1 { font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 800; margin: 0; }
+    .content-section { padding: 3.5rem 20px; }
+    .text-content { max-width: 820px; margin: 0 auto; font-size: 1.08rem; line-height: 1.8; color: var(--text-main); background: var(--glass); border: 1px solid var(--border); border-radius: 20px; padding: clamp(1.5rem, 4vw, 3rem); }
+    :global([data-theme="light"]) .text-content { background: #ffffff; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05); }
+    .intro { font-size: 1.18rem; color: var(--text-dim); }
+    h2 { font-size: 1.55rem; margin: 2.2rem 0 0.9rem; color: var(--secondary); }
+    p { margin: 0 0 1.25rem; }
     a { color: var(--secondary); }
 </style>

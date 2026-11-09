@@ -23,7 +23,7 @@
     "tools": "Mga gamit"
   },
   "hero": {
-    "title": "TikTok Video Downloader",
+    "title": "Pang-download ng TikTok Video",
     "desc": "Mag-download ng mga TikTok na video nang walang watermark. Mabilis, Libre, at Walang limitasyong Kalidad ng HD."
   },
   "downloader": {
@@ -83,27 +83,27 @@
   "pages": {
     "about": {
       "title": "Tungkol sa Amin",
-      "content": "Maligayang pagdating sa SaveTikFast, ang nangungunang TikTok Downloader para sa 2026.<br/><br/>Binuo namin ang SaveTikFast nang may isang layunin: upang magbigay ng pinakamabilis, pinakamataas na kalidad, at pinaka-maaasahang karanasan sa pag-download ng TikTok sa internet nang walang anumang nakakainis na watermark.<br/><br/>Napansin ng aming team ng mga developer na ang karamihan sa mga nangda-download ng TikTok ay mabagal, puno ng mga popup, o nagpapababa ng kalidad ng video. Nagpasya kaming baguhin iyon. Pinoproseso ng SaveTikFast ang mga video sa loob ng milliseconds, kinukuha ang mga direktang link ng CDN upang ibigay sa iyo ang eksaktong orihinal na file sa buong Ultra HD na kalidad.<br/><br/>Kailangan mo mang i-save ang isang viral dance, isang cooking tutorial, isang multi-image slideshow, o kunin ang MP3 audio para sa isang ringtone, pinangangasiwaan ng SaveTikFast ang lahat ng ito nang walang putol sa lahat ng device."
+      "content": "Ang SaveTikFast ay isang malayang web utility at gabay para sa mabilis at ligtas na pag-save ng mga pampublikong TikTok video nang walang watermark, MP3 audio, at mga photo slideshow.\n\nAming Misyon\nMaghatid ng mabilis, libre, at pribadong karanasan sa browser nang hindi nangangailangan ng pag-install ng app o paggawa ng account.\n\nMakipag-ugnayan\nsupport@savetik-fast.xyz"
     },
     "contact": {
       "title": "Makipag-ugnayan sa Amin",
-      "content": "We value your feedback and are here to help.\n\nIf you encounter any technical issues, have suggestions for improvement, or have business inquiries, please reach out to our support team:\n\n📧 Email: support@savetik-fast.xyz\n\nWe aim to respond to all inquiries within 24 hours."
+      "content": "May tanong, mungkahi, o ulat tungkol sa serbisyo ng SaveTikFast? Narito ang aming koponan upang tumulong.\n\nOpisyal na Email\nsupport@savetik-fast.xyz\n\nOras ng Pagtugon\nSumasagot kami sa loob ng 24 na oras sa mga araw ng trabaho."
     },
     "terms": {
       "title": "Mga Tuntunin ng Serbisyo",
-      "content": "By using SaveTikFast, you agree to the following terms:\n\n1. Personal Use Only:\nOur service is intended for personal, non-commercial use. You may download videos for offline viewing and archiving purposes.\n\n2. Intellectual Property:\nWe do not own the content downloaded via our tool. All rights belong to the original creators on TikTok. You agree not to use the content in any way that infringes on copyright laws.\n\n3. Liability:\nSaveTikFast is not responsible for how you use the downloaded material. The user bears full responsibility for any copyright infringement or misuse.\n\n4. Changes:\nWe reserve the right to modify or discontinue services at any time."
+      "content": "Sa paggamit ng SaveTikFast (savetik-fast.xyz), sumasang-ayon ka sa mga sumusunod na tuntunin:\n\n1. Personal na Paggamit Lamang\nAng aming tool ay nakalaan para sa personal at di-komersyal na offline na panonood ng pampublikong nilalaman.\n\n2. Karapatang-ari\nAng lahat ng video at audio ay nananatiling pag-aari ng mga orihinal na creator. Responsibilidad ng user na humingi ng pahintulot bago magbahagi muli.\n\n3. Walang Hosting ng Media\nHindi nag-iimbak ang SaveTikFast ng mga video sa aming mga server."
     },
     "privacy": {
       "title": "Patakaran sa Privacy",
-      "content": "Your privacy is critical to us.\n\nData Collection:\nWe do not collect personal information like names, emails, or phone numbers. We may use anonymous analytics (like cookies) to improve site performance and user experience.\n\nNo Video Storage:\nSaveTikFast does not host or store any videos on its servers. All file processing is done instantly, and no history of your downloads is maintained.\n\nSecurity:\nOur website uses SSL encryption to ensure a secure connection while you browse and download."
+      "content": "Pinahahalagahan ng SaveTikFast ang iyong privacy at seguridad.\n\nPangongolekta ng Impormasyon\nHindi kami humihingi ng login at hindi namin itinatala ang kasaysayan ng iyong mga na-download na link.\n\nCookies at Google AdSense\nGumagamit kami ng Google Analytics para sa istatistika ng trapiko at Google AdSense upang mapanatiling libre ang serbisyo. Maaari mong baguhin ang iyong mga kagustuhan sa Google Ads Settings.\n\nMakipag-ugnayan\nsupport@savetik-fast.xyz"
     },
     "dmca": {
       "title": "Patakaran ng DMCA",
-      "content": "SaveTikFast respects the intellectual property rights of others.\n\nWe operate as a technical service provider and do not host copyrighted content. All videos are served directly from third-party servers (TikTok).\n\nIf you believe that your copyrighted work has been displayed on our service without authorization, please send a formal DMCA notice to:\n\nEmail: support@savetik-fast.xyz\n\nPlease include the URL of the infringing content and proof of ownership. We will take immediate action to remove access to the content in question."
+      "content": "Iginagalang ng SaveTikFast ang mga karapatan sa intelektwal na ari-arian alinsunod sa Digital Millennium Copyright Act (DMCA).\n\nHindi kami nagho-host ng anumang video sa aming server. Kung ikaw ay may-ari ng copyright at nais magsumite ng kahilingan sa pag-block ng link, ipadala ang kumpletong detalye sa support@savetik-fast.xyz."
     },
     "disclaimer": {
       "title": "Disclaimer",
-      "content": "1. Non-Affiliation:\nSaveTikFast is an independent utility tool and is NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with TikTok Inc., ByteDance Ltd., or any of their subsidiaries.\n\n2. Trademarks:\nThe names 'TikTok' and its logos are registered trademarks of their respective owners. We use them solely for identification and descriptive purposes.\n\n3. Content Responsibility:\nWe do not have control over the content hosted on TikTok servers and assume no liability for the videos downloaded by users."
+      "content": "1. Walang Kaugnayan sa TikTok\nAng SaveTikFast ay isang independiyenteng tool at HINDI kaakibat, ineendorso, o konektado sa TikTok Inc. o ByteDance Ltd.\n\n2. Pananagutan ng Gumagamit\nAng gumagamit ay may buong responsibilidad sa pagsunod sa mga batas sa copyright sa kanilang bansa."
     }
   },
   "footer": {
@@ -311,7 +311,7 @@
       "desc": "I-compress ang mga imahe, i-convert ang mga format, at gumawa ng mga QR code — lahat ay nipo-process nang lokal sa iyong browser. 100% pribado."
     },
     "tabs": {
-      "compressor": "Image Compressor",
+      "compressor": "Pang-compress ng Larawan",
       "converter": "Imahe Converter",
       "qrcode": "Tagabuo ng QR Code",
       "engagement": "Engagement Calculator",
@@ -473,13 +473,13 @@
       "result": "Tantiya na Kita"
     },
     "font": {
-      "title": "TikTok Font Generator",
+      "title": "Generator ng TikTok Font",
       "desc": "Gumawa ng mga kakaibang font styles para sa iyong profile at video descriptions.",
       "placeholder": "I-type ang teksto rito...",
       "copy": "Kopyahin"
     },
     "hashtag": {
-      "title": "TikTok Hashtag Generator",
+      "title": "Generator ng TikTok Hashtag",
       "desc": "Hanapin at gumawa ng mga trending na hashtags para sa iyong mga video.",
       "btn": "Gumawa Ngayon",
       "copy": "Kopyahin Lahat"
@@ -580,19 +580,19 @@
     "meta_title": "TikTok Download Guide 2026 – Video, MP3, Slideshow at Story",
     "meta_desc": "Kumpletong gabay sa pag-download ng TikTok content sa 2026. I-save ang mga video nang walang watermark, i-convert sa MP3, i-download ang mga slideshow sa iPhone, Android at PC.",
     "keywords": "paano mag-download ng mga TikTok na video na walang watermark 2026, TikTok video downloader iPhone iOS 18, mag-save ng mga TikTok na video sa Android 15, TikTok to MP3 converter online nang libre, mag-download ng TikTok slideshow na mga larawan, mag-save ng mga kwento ng TikTok bago sila mag-expire, TikTok downloader walang watermark HD 4K, pinakamahusay na TikTok download TikTok na alternatibong mga video, sa Windows saver TikTok na mga alternatibong video macOS Sonoma, TikTok video download Samsung Galaxy S25, TikTok MP3 download 320kbps, TikTok slideshow downloader 2026, TikTok story saver anonymous, download TikTok without app, TikTok video converter MP4, i-save ang TikTok audio music sounds, TikTok downloader FirefoxTok Edgeous Safari, TikTok na TikTok na pag-download ng larawan sa TikTok Edge, TikTok na TikTok na video converter MP4 duet na video, i-save ang mga live na video ng TikTok 2026, TikTok batch downloader ng maraming video, TikTok HD quality download 1080p, TikTok video download Xiaomi OnePlus, i-save ang TikTok para sa offline na panonood, TikTok downloader Chromebook, TikTok video saver iPad Pro, i-download ang TikTok trending na mga video, TikTok sound extractor ng larawan online, TikTok sound extractor ng larawan online, TikTok sound extractor ng larawan online viewer, TikTok downloader Windows 10 PC, i-save ang TikTok nang walang login registration, TikTok video download na walang limitasyong libre, TikTok MP3 ringtone maker, TikTok slideshow all images download, TikTok story downloader 24 oras, TikTok 4K video saver 2160p, pinakamahusay na alternatibo sa SnapTik SSSTikTok",
-    "title": "Ultimate TikTok Download Guide 2026",
+    "title": "Kumpletong Gabay sa Pag-download ng TikTok 2026",
     "subtitle": "Lahat ng kailangan mong malaman tungkol sa pag-download ng mga TikTok na video, MP3 audio, mga slideshow, at mga kuwento sa anumang device. Na-update para sa 2026 gamit ang mga pinakabagong pamamaraan at tip.",
     "updated": "Huling Na-update: Pebrero",
     "back_home": "Bumalik sa Downloader",
     "tools_heading": "Piliin ang Iyong Uri ng Pag-download",
     "try_now": "Subukan Ngayon",
-    "card_video_title": "Video Downloader",
+    "card_video_title": "Pang-download ng Video",
     "card_video_desc": "Mag-download ng mga TikTok na video na walang watermark sa HD/4K na kalidad. Gumagana sa iPhone 16, Samsung Galaxy S25, at lahat ng device.",
     "card_mp3_title": "MP3 Converter",
     "card_mp3_desc": "I-extract ang audio mula sa mga TikTok na video sa mataas na kalidad na 320kbps. Perpekto para sa mga ringtone at mahilig sa musika.",
     "card_slideshow_title": "Slideshow Saver",
     "card_slideshow_desc": "I-download ang lahat ng larawan mula sa mga TikTok slideshow at carousel bilang ZIP file. Panatilihin ang mga pagtatambak ng larawan magpakailanman.",
-    "card_story_title": "Story Downloader",
+    "card_story_title": "Pang-save ng Story",
     "card_story_desc": "I-save ang mga kwento ng TikTok bago mawala ang mga ito sa loob ng 24 na oras. Mag-download nang hindi nagpapakilala nang walang abiso.",
     "section1_title": "Paano Mag-download ng Mga TikTok Video sa 2026",
     "section1_content": "<strong>Ang pag-download ng mga TikTok na video nang walang watermark</strong> ay hindi naging mas madali. Sa 2026, ang SaveTikFast ay nananatiling pinakamabilis at pinaka-maaasahang solusyon para sa pag-save ng iyong paboritong content ng TikTok. Gumagamit ka man ng <strong>iPhone 16 na may iOS 18</strong>, <strong>Samsung Galaxy S25 na may Android 15</strong>, o isang PC na nagpapatakbo ng <strong>Windows 11</strong> o <strong>macOS Sonoma</strong>, ang aming online na tool ay gumagana nang walang putol sa lahat ng platform.<br><br>Hindi tulad ng iba pang mga platform sa pag-download ng videoT na gumagana nang direkta sa pag-install ng app o mga browser. Kopyahin lang ang link ng TikTok video, i-paste ito sa aming downloader, at i-click ang pag-download. Ise-save ang iyong video sa <strong>HD o 4K na kalidad</strong> nang walang nakakainis na TikTok watermark.<br><br>Sinusuportahan ng aming serbisyo ang lahat ng pangunahing browser kabilang ang <strong>Google Chrome 130</strong>, <strong>Safari 18</strong>, <strong>Mozilla Firefox</strong>, <strong>MicrosoftXia</strong>, at kahit na sa mobile browser</strong> <strong>OnePlus</strong>, <strong>Oppo</strong>, at <strong>Huawei</strong> na device.",
